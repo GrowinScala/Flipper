@@ -21,5 +21,3 @@ Current versions: 0.0.1
 
 * Repo owner or admin
 * Other community or team contact
-
-*Cenas
