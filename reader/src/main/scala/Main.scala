@@ -6,8 +6,8 @@ object Main {
     val filepath: String = "/Users/Lucas Fischer/Documents/Flipper/reader/resources/test.pdf"
     val text = readPDF(filepath)
 
-//    println(makeJSONString(getMatchedValues(text, List("name", "age", "mail", "date","something"))))
-    println(getJSONFromForm(text))
+    println(makeJSONString(getSingleMatchedValue(text, List("name", "age", "mail", "date","something"))))
+//    println(getJSONFromForm(text))
 
   }
 }
