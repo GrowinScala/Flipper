@@ -12,7 +12,7 @@ object Extractor {
 
   //A Map of keywords -> regular expressions that were tailored to obtain better results
   val knownRegEx: Map[Keyword, Regex] = Map(
-    "name" -> new Regex("(?:name is|I'm|I am)\\s+((?:[A-Z]\\w+\\s?){1,2})"),
+    "name" -> new Regex("(?:name is|I'm|I am|(?:n|N)ame:)\\s+((?:[A-Z]\\w+\\s?){1,2})"),
     "age" -> "(?:I'm|I am)\\s+(\\d{1,2})".r,
     "mail" -> "((?:[a-z]|[0-9]|\\.|-|_)+@(?:[a-z]|\\.)+(?:pt|com|org|net|uk|co|eu))".r,
     "date" -> "((?:\\d{1,2}|\\d{4})(?:-|/)\\d{1,2}(?:-|/)(?:\\d{2}\\D|\\d{4}))".r
@@ -74,8 +74,10 @@ object Extractor {
     */
   def makeJSONString(listJSON: List[(Keyword, Set[String])]): String = {
     val str = listJSON.map(k =>
-      if (k._2.size > 1) "\"" + k._1 + "\":\"" + k._2.mkString("[", ", ", "]") + "\""
-      else "\"" + k._1 + "\": \"" + k._2.head + "\""
+      if(k._2.nonEmpty) {
+        if (k._2.size > 1) "\"" + k._1 + "\":\"" + k._2.mkString("[", ", ", "]") + "\""
+        else "\"" + k._1 + "\": \"" + k._2.head + "\""
+      }
     )
     str.mkString("{", ", ", "}")
   }
