@@ -12,7 +12,7 @@ object Extractor {
 
   //A Map of keywords -> regular expressions that were tailored to obtain better results
   val knownRegEx: Map[Keyword, Regex] = Map(
-    "name" -> new Regex("(?:name is|I'm|I am|(?:n|N)ame:)\\s+((?:[A-Z]\\w+\\s?){1,2})"),
+    "name" -> "(?:name is|I'm|I am|(?:n|N)ame:)\\s+((?:[A-Z]\\w+\\s?){1,2})".r,
     "age" -> "(?:I'm|I am)\\s+(\\d{1,2})".r,
     "mail" -> "((?:[a-z]|[0-9]|\\.|-|_)+@(?:[a-z]|\\.)+(?:pt|com|org|net|uk|co|eu))".r,
     "date" -> "((?:\\d{1,2}|\\d{4})(?:-|/)\\d{1,2}(?:-|/)(?:\\d{2}\\D|\\d{4}))".r
@@ -63,8 +63,7 @@ object Extractor {
 
       else (key, Set("ups")) //to be changed, here we need to manually search for the keywords in the text
     })
-    matched
-    //filterNewLines(matched).filter(_._2.nonEmpty)
+    filterNewLines(matched)
   }
 
   /**
@@ -78,6 +77,12 @@ object Extractor {
     */
   def getSingleMatchedValue(text: String, keywords: List[String], clientRegEx: Map[String, Regex] = Map()): List[(Keyword, Set[String])] = {
     getAllMatchedValues(text, keywords, clientRegEx).map(pair => (pair._1, Set(pair._2.head)))
+  }
+
+  def getAllObjects(text: String, keywords: List[String], clientRegEx: Map[String, Regex] = Map()): List[(Keyword, Set[String])] = {
+    val matchedValues = getAllMatchedValues(text, keywords, clientRegEx)
+    for (pair <- matchedValues; values <- pair._2) yield (pair._1, Set(values))
+    ???
   }
 
   /**
