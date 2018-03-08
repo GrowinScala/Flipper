@@ -63,7 +63,8 @@ object Extractor {
 
       else (key, Set("ups")) //to be changed, here we need to manually search for the keywords in the text
     })
-    filterNewLines(matched).filter(_._2.nonEmpty)
+    matched
+    //filterNewLines(matched).filter(_._2.nonEmpty)
   }
 
   /**
@@ -90,7 +91,7 @@ object Extractor {
       if (k._2.nonEmpty) {
         if (k._2.size > 1) "\"" + k._1 + "\":\"" + k._2.mkString("[", ", ", "]") + "\""
         else "\"" + k._1 + "\": \"" + k._2.head + "\""
-      }
+      } else "\"" + k._1 + "\": \"\""
     )
     str.mkString("{", ", ", "}")
   }
@@ -106,5 +107,17 @@ object Extractor {
       val setOfValues = pair._2
       (pair._1, setOfValues.map(_.replaceAll("[\\r\\n]", "").trim)) //remove all new line characters and trim all elements
     })
+  }
+
+  /**
+    * Method that gets all keywords and respective values from know form and returns a JSON string
+    *
+    * @param text - Text from the PDF extracted from readPDF method
+    * @return
+    */
+  def getJSONFromForm(text: String): String ={
+    val formRegex = "(.+):\\s+(.+)".r
+    val form= formRegex.findAllIn(text).matchData.map(l=>(l.group(1),Set(l.group(2)))).toList
+    makeJSONString(form)
   }
 }
