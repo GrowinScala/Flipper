@@ -57,6 +57,12 @@ object Extractor {
     }))
   }
 
+  /**
+    * Method that given a List of pairs of keywords and their respective values will create a string in JSON format
+    *
+    * @param listJSON - List of pairs of keywords and their respective values
+    * @return
+    */
   def makeJSONString(listJSON: List[(Keyword, Set[String])]): String = {
     val str = listJSON.map(k =>
       if (k._2.size > 1) "\"" + k._1 + "\":\"" + k._2.mkString("[", ", ", "]") + "\""
@@ -65,10 +71,16 @@ object Extractor {
     str.mkString("{", ", ", "}")
   }
 
+  /**
+    * Method that will remove all the new line characters from the list of values obtain from a keyword
+    *
+    * @param matchedValues - List of pairs of Keyword and the values obtained for that keyword
+    * @return The same list as passed by parameter but with no new line characters
+    */
   def filterNewLines(matchedValues: List[(Keyword, Set[String])]): List[(Keyword, Set[String])] = {
     matchedValues.map(pair => {
       val setOfValues = pair._2
-      (pair._1, setOfValues.map(value => value.filter(_ != '\n')))
+      (pair._1, setOfValues.map(_.replaceAll("[\\r\\n]", "").trim)) //remove all new line characters and trim all elements
     })
   }
 }
