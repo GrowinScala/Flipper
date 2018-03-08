@@ -12,9 +12,10 @@ object Extractor {
 
   //A Map of keywords -> regular expressions that were tailored to obtain better results
   val knownRegEx: Map[Keyword, Regex] = Map(
-    "name" -> new Regex("(?:name is)\\s+((?:[A-Z]\\w+\\s*){1,2})"),
+    "name" -> new Regex("(?:name is|I'm|I am)\\s+((?:[A-Z]\\w+\\s?){1,2})"),
     "age" -> "(?:I'm|I am)\\s+(\\d{1,2})".r,
-    "mail" -> "((?:[a-z]|[0-9]|\\.|-|_)+@(?:[a-z]|\\.)+(?:pt|com|org|net|uk|co|eu))".r
+    "mail" -> "((?:[a-z]|[0-9]|\\.|-|_)+@(?:[a-z]|\\.)+(?:pt|com|org|net|uk|co|eu))".r,
+    "date" -> "((?:\\d{1,2}|\\d{4})(?:-|/)\\d{1,2}(?:-|/)(?:\\d{2}\\D|\\d{4}))".r
   )
 
   /**
@@ -48,15 +49,20 @@ object Extractor {
     *                    use that regular expression instead of ours
     * @return a List containing pairs of Keywords and a Set (non-repeating) of values found for that keyword
     */
-  def getMatchedValues(text: String, keywords: List[String], clientRegEx: Map[String, String] = Map()): List[(Keyword, Set[String])] = {
-    filterNewLines(
-      keywords.map(key => {
-        //      if(clientRegEx.contains(key))
-        if (knownRegEx.contains(key)) //if we already know a good RegEx for this keyword, use it
-          (key, knownRegEx(key).findAllIn(text).matchData.map(_.group(1)).toSet)
-        else (key, Set("ups")) //to be changed, here we need to manually search for the keywords in the text
-      })
+  def getMatchedValues(text: String, keywords: List[String], clientRegEx: Map[String, String] = null): List[(Keyword, Set[String])] = {
+    filterNewLines(keywords.map(key => {
+      if (knownRegEx.contains(key)) //if we already know a good RegEx for this keyword, use it
+        (key, knownRegEx(key).findAllIn(text).matchData.map(_.group(1)).toSet)
+      else (key, Set("ups")) //to be changed, here we need to manually search for the keywords in the text
+    }))
+  }
+
+  def makeJSONString(listJSON: List[(Keyword, Set[String])]): String = {
+    val str = listJSON.map(k =>
+      if (k._2.size > 1) "\"" + k._1 + "\":\"" + k._2.mkString("[", ", ", "]") + "\""
+      else "\"" + k._1 + "\": \"" + k._2.head + "\""
     )
+    str.mkString("{", ", ", "}")
   }
 
   def filterNewLines(matchedValues: List[(Keyword, Set[String])]): List[(Keyword, Set[String])] = {
@@ -65,4 +71,4 @@ object Extractor {
       (pair._1, setOfValues.map(value => value.filter(_ != '\n')))
     })
   }
-}//sasda
+}
