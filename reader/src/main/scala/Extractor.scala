@@ -49,7 +49,7 @@ object Extractor {
     *                    use that regular expression instead of ours
     * @return a List containing pairs of Keywords and a Set (non-repeating) of values found for that keyword
     */
-  def getMatchedValues(text: String, keywords: List[String], clientRegEx: Map[String, Regex] = Map()): List[(Keyword, Set[String])] = {
+  def getAllMatchedValues(text: String, keywords: List[String], clientRegEx: Map[String, Regex] = Map()): List[(Keyword, Set[String])] = {
     val matched = keywords.map(key => {
 
       //If the client sent a custom RegEx to use on this key, use it
@@ -67,6 +67,19 @@ object Extractor {
   }
 
   /**
+    * Method that operates like getAllMatchedValues but instead returns only the first element it finds for a given
+    * keyword, representing a single JSON object
+    *
+    * @param text        - Text from the PDF extracted from readPDF method
+    * @param keywords    - List containing all the keywords we want to find values for
+    * @param clientRegEx - Optional parameter - If the client already has a predefined Regular Expression for a given key
+    * @return A string with JSON format representing a single object
+    */
+  def getSingleMatchedValue(text: String, keywords: List[String], clientRegEx: Map[String, Regex] = Map()): List[(Keyword, Set[String])] = {
+    getAllMatchedValues(text, keywords, clientRegEx).map(pair => (pair._1, Set(pair._2.head)))
+  }
+
+  /**
     * Method that given a List of pairs of keywords and their respective values will create a string in JSON format
     *
     * @param listJSON - List of pairs of keywords and their respective values
@@ -74,7 +87,7 @@ object Extractor {
     */
   def makeJSONString(listJSON: List[(Keyword, Set[String])]): String = {
     val str = listJSON.map(k =>
-      if(k._2.nonEmpty) {
+      if (k._2.nonEmpty) {
         if (k._2.size > 1) "\"" + k._1 + "\":\"" + k._2.mkString("[", ", ", "]") + "\""
         else "\"" + k._1 + "\": \"" + k._2.head + "\""
       }
