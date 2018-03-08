@@ -65,4 +65,4 @@ object Extractor {
       (pair._1, setOfValues.map(value => value.filter(_ != '\n')))
     })
   }
-}
+}//sasd
