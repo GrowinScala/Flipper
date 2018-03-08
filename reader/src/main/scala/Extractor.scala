@@ -49,12 +49,21 @@ object Extractor {
     *                    use that regular expression instead of ours
     * @return a List containing pairs of Keywords and a Set (non-repeating) of values found for that keyword
     */
-  def getMatchedValues(text: String, keywords: List[String], clientRegEx: Map[String, String] = null): List[(Keyword, Set[String])] = {
-    filterNewLines(keywords.map(key => {
-      if (knownRegEx.contains(key)) //if we already know a good RegEx for this keyword, use it
+  def getMatchedValues(text: String, keywords: List[String], clientRegEx: Map[String, Regex] = Map()): List[(Keyword, Set[String])] = {
+    val matched = keywords.map(key => {
+
+      //If the client sent a custom RegEx to use on this key, use it
+      if (clientRegEx.contains(key))
+        (key, clientRegEx(key).findAllIn(text).matchData.map(_.group(1)).toSet)
+
+      //if we already know a good RegEx for this keyword, use it
+      else if (knownRegEx.contains(key))
         (key, knownRegEx(key).findAllIn(text).matchData.map(_.group(1)).toSet)
+
+
       else (key, Set("ups")) //to be changed, here we need to manually search for the keywords in the text
-    }))
+    })
+    filterNewLines(matched).filter(_._2.nonEmpty)
   }
 
   /**
