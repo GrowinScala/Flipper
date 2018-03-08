@@ -52,9 +52,7 @@ object Extractor {
 
   def makeJSONString(listJSON:List[(Keyword,Set[String])]): String ={
     val str = listJSON.map( k =>
-      if(k._2.size>1){
-        "\""+k._1+"\":\""+k._2.mkString("[",", ","]")+"\""
-      }
+      if(k._2.size>1) "\""+k._1+"\":\""+k._2.mkString("[",", ","]")+"\""
       else "\""+k._1+"\": \""+k._2.head+"\""
     )
     println(str)
