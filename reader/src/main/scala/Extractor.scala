@@ -74,14 +74,23 @@ object Extractor {
     * @param text        - Text from the PDF extracted from readPDF method
     * @param keywords    - List containing all the keywords we want to find values for
     * @param clientRegEx - Optional parameter - If the client already has a predefined Regular Expression for a given key
-    * @return A string with JSON format representing a single object
+    * @return A List containing pairs of keywords with a single matched value
     */
   def getSingleMatchedValue(text: String, keywords: List[Keyword], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
     getAllMatchedValues(text, keywords, clientRegEx).map(pair => if (pair._2.nonEmpty) (pair._1, List(pair._2.head)) else (pair._1, List()))
   }
 
+  /**
+    * Method that will return a List of Matched Pairs. This method operates as getSingleMatcheValue, but instead
+    * of returning just one object, returns a list containing all of them
+    *
+    * @param text        - Text from the PDF extracted from readPDF method
+    * @param keywords    - List containing all the keywords we want to find values for
+    * @param clientRegEx - Optional parameter - If the client already has a predefined Regular Expression for a given key
+    * @return A List containing sublists of pairs of keywords with single matched values
+    */
   def getAllObjects(text: String, keywords: List[Keyword], clientRegEx: Map[Keyword, Regex] = Map()): List[MatchedPair] = {
-    def getListSizes(matchedValues: List[(Keyword, List[String])]): List[(Keyword, Int)] = {
+    def getListSizes(matchedValues: MatchedPair): List[(Keyword, Int)] = {
       for (m <- matchedValues) yield (m._1, m._2.size)
     }
 
@@ -91,7 +100,7 @@ object Extractor {
     val mappedValues = for (i <- 0 to mostfound._2; m <- matchedValues) yield {
       if (m._2.size > i)
         List(m._2(i))
-      else List("Not Defined")
+      else List("Not Defined") //change to List(null) or List() ??
     }
     mappedValues.zipWithIndex.map(pair => (keywords(pair._2 % keywords.length), pair._1)).toList.grouped(keywords.size).toList
   }
