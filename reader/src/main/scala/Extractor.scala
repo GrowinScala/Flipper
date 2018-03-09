@@ -9,7 +9,7 @@ import scala.util.matching.Regex
 object Extractor {
 
   type Keyword = String
-  type MatchedPair = List[(Keyword,List[String])]
+  type MatchedPair = List[(Keyword, List[String])]
 
   //A Map of keywords -> regular expressions that were tailored to obtain better results
   val knownRegEx: Map[Keyword, Regex] = Map(
@@ -62,7 +62,7 @@ object Extractor {
         (key, knownRegEx(key).findAllIn(text).matchData.map(_.group(1)).toList.distinct)
 
 
-      else findKeywordInText(key,text) //to be changed, here we need to manually search for the keywords in the text
+      else findKeywordInText(key, text) //to be changed, here we need to manually search for the keywords in the text
     })
     filterNewLines(matched)
   }
@@ -146,13 +146,17 @@ object Extractor {
     makeJSONString(form)
   }
 
-  def getListSizes(matchedValues:MatchedPair):List[(Keyword,Int)]={
-    for(m<-matchedValues)yield (m._1,m._2.size)
-  }
-
-  def findKeywordInText(keyword: Keyword,text:String):(Keyword, List[String])={
-    val keyRegex = new Regex("(?i)"+keyword+"\\s+(\\w+)")
-    (keyword,keyRegex.findAllIn(text).matchData.map(_.group(1)).toList.distinct)
+  /**
+    * Method that will try to find a value for a given keyword if we do not have any RegEx for that keyword
+    * (or the client didn't send any)
+    *
+    * @param keyword - The keyword to find the value for
+    * @param text    - The text in which to look for the value
+    * @return A pair containing the keyword and a list of values found for that keyword
+    */
+  def findKeywordInText(keyword: Keyword, text: String): (Keyword, List[String]) = {
+    val keyRegex = new Regex("(?i)" + keyword + "\\s+(\\w+)")
+    (keyword, keyRegex.findAllIn(text).matchData.map(_.group(1)).toList.distinct)
   }
 
 
