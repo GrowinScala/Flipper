@@ -79,11 +79,20 @@ object Extractor {
     getAllMatchedValues(text, keywords, clientRegEx).map(pair => if (pair._2.nonEmpty) (pair._1, List(pair._2.head)) else (pair._1, List()))
   }
 
-  def getAllObjects(text: String, keywords: List[String], clientRegEx: Map[String, Regex] = Map()): List[(Keyword, List[String])] = {
+  def getAllObjects(text: String, keywords: List[String], clientRegEx: Map[String, Regex] = Map()): List[List[(Keyword, List[String])]] = {
+    def getListSizes(matchedValues: List[(Keyword, List[String])]): List[(Keyword, Int)] = {
+      for (m <- matchedValues) yield (m._1, m._2.size)
+    }
+
     val matchedValues = getAllMatchedValues(text, keywords, clientRegEx)
-    for (pair <- matchedValues; values <- pair._2) yield (pair._1, Set(values))
-    //Implement that iterator idea that we had
-    ???
+    val mostfound = getListSizes(matchedValues).maxBy(_._2)
+
+    val mappedValues = for (i <- 0 to mostfound._2; m <- matchedValues) yield {
+      if (m._2.size > i)
+        List(m._2(i))
+      else List("Not Defined")
+    }
+    mappedValues.zipWithIndex.map(pair => (keywords(pair._2 % keywords.length), pair._1)).toList.grouped(keywords.size).toList
   }
 
   /**
