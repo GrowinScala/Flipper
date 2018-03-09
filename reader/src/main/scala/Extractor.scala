@@ -15,7 +15,9 @@ object Extractor {
     "name" -> "(?:name is|I'm|I am|(?:n|N)ame:)\\s+((?:[A-Z]\\w+\\s?){1,2})".r,
     "age" -> "(?:I'm|I am)\\s+(\\d{1,2})".r,
     "mail" -> "((?:[a-z]|[0-9]|\\.|-|_)+@(?:[a-z]|\\.)+(?:pt|com|org|net|uk|co|eu))".r,
-    "date" -> "((?:\\d{1,2}|\\d{4})(?:-|/)\\d{1,2}(?:-|/)(?:\\d{2}\\D|\\d{4}))".r
+    "date" -> "((?:\\d{1,2}|\\d{4})(?:-|/)\\d{1,2}(?:-|/)(?:\\d{2}\\D|\\d{4}))".r,
+    "phone" -> "(?:\\+44|\\(\\+44\\))\\s?(\\d{10})".r,
+    "birth" -> "(?:Date of birth)\\s+(\\d{1,2}\\s\\w+\\s\\d{4})".r
   )
 
   /**
@@ -28,6 +30,7 @@ object Extractor {
     try {
       val pdf = PDDocument.load(new File(filePath))
       val document = new PDFTextStripper
+
 
       val str = Normalizer.normalize(document.getText(pdf), Normalizer.Form.NFD)
         .replaceAll("[\\p{InCombiningDiacriticalMarks}]", "")
