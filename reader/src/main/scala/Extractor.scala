@@ -135,4 +135,10 @@ object Extractor {
     val form = formRegex.findAllIn(text).matchData.map(l => (l.group(1), List(l.group(2)))).toList
     makeJSONString(form)
   }
+
+  def getListSizes(matchedValues:List[(Keyword,List[String])]):List[(Keyword,Int)]={
+    for(m<-matchedValues)yield (m._1,m._2.size)
+  }
+
+
 }
