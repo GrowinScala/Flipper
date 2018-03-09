@@ -1,3 +1,4 @@
+import util.control.Breaks._
 import java.io.File
 import java.text.Normalizer
 import org.apache.pdfbox.pdmodel.PDDocument
@@ -16,7 +17,7 @@ object Extractor {
     "age" -> "(?:I'm|I am)\\s+(\\d{1,2})".r,
     "mail" -> "((?:[a-z]|[0-9]|\\.|-|_)+@(?:[a-z]|\\.)+(?:pt|com|org|net|uk|co|eu))".r,
     "date" -> "((?:\\d{1,2}|\\d{4})(?:-|/)\\d{1,2}(?:-|/)(?:\\d{2}\\D|\\d{4}))".r,
-    "phone" -> "(?:\\+44|\\(\\+44\\))\\s?(\\d{10})".r,
+    "phone" -> "(?:\\+44|\\(\\+44\\))\\s?(\\d{9,10})".r,
     "birth" -> "(?i)(?:Date of birth|birth date)\\s+((?:\\d{1,2}|\\d{4})(?:\\s|\\/|-)(?:\\w+|\\d{2})(?:\\s|\\/|-)(?:\\d{4}|\\d{1,2}\\D))".r,
     "gender" -> "(?i)(?:gender|sex)\\s+(?i)(Male|Female|f|m)".r,
     "zipcode" -> "(?i)((?:\\d|\\w){4}-(?:\\d|\\w){3})".r
@@ -42,7 +43,6 @@ object Extractor {
       case t: Throwable => t.printStackTrace() //we can remove this if we don't want the error message to appear
         null
     }
-
   }
 
   /**
@@ -115,14 +115,21 @@ object Extractor {
     * @param listJSON - List of pairs of keywords and their respective values
     * @return
     */
-  def makeJSONString(listJSON: MatchedPair): String = {
+  def makeJSONString(listJSON: MatchedPair, flag: String = "empty"): String = {
     val str = listJSON.map(k =>
       if (k._2.nonEmpty) {
         if (k._2.size > 1) "\"" + k._1 + "\":\"" + k._2.mkString("[", ", ", "]") + "\""
         else "\"" + k._1 + "\": \"" + k._2.head + "\""
-      } else "\"" + k._1 + "\": \"\""
+      } else {
+        if (flag == "empty") {
+          "\"" + k._1 + "\": \"\""
+        } else if (flag == "null") {
+          "\"" + k._1 + "\": \"null\""
+        }
+      }
     )
-    str.mkString("{", ", ", "}")
+    val pseudoJSON = str
+    if (flag == "remove") pseudoJSON.filter(_ != ()).mkString("{", ", ", "}") else pseudoJSON.mkString("{", ", ", "}")
   }
 
   /**
