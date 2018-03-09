@@ -159,5 +159,12 @@ object Extractor {
     (keyword, keyRegex.findAllIn(text).matchData.map(_.group(1)).toList.distinct)
   }
 
+//  val pageAmount = pdf.getNumberOfPages
+//  val page = pdf.getPage(0)
+//  val res = page.getResources
+//  val font = res.getFontNames
+//  val props = res.getPropertiesNames
+//  font.forEach(f=>println(res.getFont(f)))
+//  println("Props: "+props)
 
 }
