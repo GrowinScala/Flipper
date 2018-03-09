@@ -12,12 +12,14 @@ object Extractor {
 
   //A Map of keywords -> regular expressions that were tailored to obtain better results
   val knownRegEx: Map[Keyword, Regex] = Map(
-    "name" -> "(?:name is|I'm|I am|(?:n|N)ame:)\\s+((?:[A-Z]\\w+\\s?){1,2})".r,
+    "name" -> "(?:name is|I'm|I am|(?:n|N)ame:|(?:(?i)Personal Information))\\s+((?:[A-Z]\\w+\\s?){1,2})".r,
     "age" -> "(?:I'm|I am)\\s+(\\d{1,2})".r,
     "mail" -> "((?:[a-z]|[0-9]|\\.|-|_)+@(?:[a-z]|\\.)+(?:pt|com|org|net|uk|co|eu))".r,
     "date" -> "((?:\\d{1,2}|\\d{4})(?:-|/)\\d{1,2}(?:-|/)(?:\\d{2}\\D|\\d{4}))".r,
     "phone" -> "(?:\\+44|\\(\\+44\\))\\s?(\\d{10})".r,
-    "birth" -> "(?:Date of birth)\\s+(\\d{1,2}\\s\\w+\\s\\d{4})".r
+    "birth" -> "(?i)(?:Date of birth|birth date)\\s+((?:\\d{1,2}|\\d{4})(?:\\s|\\/|-)(?:\\w+|\\d{2})(?:\\s|\\/|-)(?:\\d{4}|\\d{1,2}\\D))".r,
+    "gender" -> "(?i)(?:gender|sex)\\s+(?i)(Male|Female|f|m)".r,
+    "zipcode" -> "(?i)((?:\\d|\\w){4}-(?:\\d|\\w){3})".r
   )
 
   /**
@@ -161,12 +163,12 @@ object Extractor {
     (keyword, keyRegex.findAllIn(text).matchData.map(_.group(1)).toList.distinct)
   }
 
-//  val pageAmount = pdf.getNumberOfPages
-//  val page = pdf.getPage(0)
-//  val res = page.getResources
-//  val font = res.getFontNames
-//  val props = res.getPropertiesNames
-//  font.forEach(f=>println(res.getFont(f)))
-//  println("Props: "+props)
+  //  val pageAmount = pdf.getNumberOfPages
+  //  val page = pdf.getPage(0)
+  //  val res = page.getResources
+  //  val font = res.getFontNames
+  //  val props = res.getPropertiesNames
+  //  font.forEach(f=>println(res.getFont(f)))
+  //  println("Props: "+props)
 
 }
