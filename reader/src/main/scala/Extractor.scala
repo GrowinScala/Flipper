@@ -1,6 +1,5 @@
 import java.io.File
 import java.text.Normalizer
-
 import org.apache.pdfbox.pdmodel.PDDocument
 import org.apache.pdfbox.text.PDFTextStripper
 
@@ -35,7 +34,7 @@ object Extractor {
       pdf.close()
       str
     } catch {
-      case t: Throwable => t.printStackTrace()
+      case t: Throwable => t.printStackTrace() //we can remove this if we don't want the error message to appear
         null
     }
 
