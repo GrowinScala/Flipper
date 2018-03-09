@@ -9,6 +9,7 @@ import scala.util.matching.Regex
 object Extractor {
 
   type Keyword = String
+  type MatchedPair = List[(Keyword, List[String])]
 
   //A Map of keywords -> regular expressions that were tailored to obtain better results
   val knownRegEx: Map[Keyword, Regex] = Map(
@@ -49,7 +50,7 @@ object Extractor {
     *                    use that regular expression instead of ours
     * @return a List containing pairs of Keywords and a List (non-repeating) of values found for that keyword
     */
-  def getAllMatchedValues(text: String, keywords: List[String], clientRegEx: Map[String, Regex] = Map()): List[(Keyword, List[String])] = {
+  def getAllMatchedValues(text: String, keywords: List[Keyword], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
     val matched = keywords.map(key => {
 
       //If the client sent a custom RegEx to use on this key, use it
@@ -73,14 +74,23 @@ object Extractor {
     * @param text        - Text from the PDF extracted from readPDF method
     * @param keywords    - List containing all the keywords we want to find values for
     * @param clientRegEx - Optional parameter - If the client already has a predefined Regular Expression for a given key
-    * @return A string with JSON format representing a single object
+    * @return A List containing pairs of keywords with a single matched value
     */
-  def getSingleMatchedValue(text: String, keywords: List[String], clientRegEx: Map[String, Regex] = Map()): List[(Keyword, List[String])] = {
+  def getSingleMatchedValue(text: String, keywords: List[Keyword], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
     getAllMatchedValues(text, keywords, clientRegEx).map(pair => if (pair._2.nonEmpty) (pair._1, List(pair._2.head)) else (pair._1, List()))
   }
 
-  def getAllObjects(text: String, keywords: List[String], clientRegEx: Map[String, Regex] = Map()): List[List[(Keyword, List[String])]] = {
-    def getListSizes(matchedValues: List[(Keyword, List[String])]): List[(Keyword, Int)] = {
+  /**
+    * Method that will return a List of Matched Pairs. This method operates as getSingleMatcheValue, but instead
+    * of returning just one object, returns a list containing all of them
+    *
+    * @param text        - Text from the PDF extracted from readPDF method
+    * @param keywords    - List containing all the keywords we want to find values for
+    * @param clientRegEx - Optional parameter - If the client already has a predefined Regular Expression for a given key
+    * @return A List containing sublists of pairs of keywords with single matched values
+    */
+  def getAllObjects(text: String, keywords: List[Keyword], clientRegEx: Map[Keyword, Regex] = Map()): List[MatchedPair] = {
+    def getListSizes(matchedValues: MatchedPair): List[(Keyword, Int)] = {
       for (m <- matchedValues) yield (m._1, m._2.size)
     }
 
@@ -90,7 +100,7 @@ object Extractor {
     val mappedValues = for (i <- 0 to mostfound._2; m <- matchedValues) yield {
       if (m._2.size > i)
         List(m._2(i))
-      else List("Not Defined")
+      else List("Not Defined") //change to List(null) or List() ??
     }
     mappedValues.zipWithIndex.map(pair => (keywords(pair._2 % keywords.length), pair._1)).toList.grouped(keywords.size).toList
   }
@@ -101,7 +111,7 @@ object Extractor {
     * @param listJSON - List of pairs of keywords and their respective values
     * @return
     */
-  def makeJSONString(listJSON: List[(Keyword, List[String])]): String = {
+  def makeJSONString(listJSON: MatchedPair): String = {
     val str = listJSON.map(k =>
       if (k._2.nonEmpty) {
         if (k._2.size > 1) "\"" + k._1 + "\":\"" + k._2.mkString("[", ", ", "]") + "\""
@@ -117,7 +127,7 @@ object Extractor {
     * @param matchedValues - List of pairs of Keyword and the values obtained for that keyword
     * @return The same list as passed by parameter but with no new line characters
     */
-  def filterNewLines(matchedValues: List[(Keyword, List[String])]): List[(Keyword, List[String])] = {
+  def filterNewLines(matchedValues: MatchedPair): MatchedPair = {
     matchedValues.map(pair => {
       val setOfValues = pair._2
       (pair._1, setOfValues.map(_.replaceAll("[\\r\\n]", "").trim)) //remove all new line characters and trim all elements
@@ -135,10 +145,5 @@ object Extractor {
     val form = formRegex.findAllIn(text).matchData.map(l => (l.group(1), List(l.group(2)))).toList
     makeJSONString(form)
   }
-
-  def getListSizes(matchedValues:List[(Keyword,List[String])]):List[(Keyword,Int)]={
-    for(m<-matchedValues)yield (m._1,m._2.size)
-  }
-
 
 }
