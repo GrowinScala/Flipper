@@ -7,6 +7,7 @@ import org.apache.pdfbox.pdmodel.PDDocument
 import org.apache.pdfbox.text.PDFTextStripper
 
 import scala.util.matching.Regex
+import OpenNLP._
 
 //noinspection ComparingLength
 object Extractor {
@@ -181,26 +182,22 @@ object Extractor {
     //TODO convert tags
     //TODO Change tag to be a List of tags
     //TODO Support different languages
-    
-    val inputStream = new FileInputStream("C:/Users/Lucas Fischer/Documents/Flipper/reader/resources/en-pos-maxent.bin")
-    val posModel = new POSModel(inputStream)
-    val wsTokenizer = WhitespaceTokenizer.INSTANCE
+    val (splittedWords, tags) = tokenizeText(text)
 
-    val splittedWords = wsTokenizer.tokenize(text)
-
-    val tagger = new POSTaggerME(posModel)
-    val tags = tagger.tag(splittedWords)
     lazy val arrLength = splittedWords.length
 
+    //Iterate through the words (that have been slipped by whitespaces)
+    //if we find a word that equal to the passed keyword
+    // then search from that point forward for a word whose POS tag matches the one passed by arguments
     val valuesList: List[String] = (for (i <- splittedWords.indices if splittedWords(i).toLowerCase == keyword.toLowerCase) yield {
-      if (i == arrLength) {
-        "ups" //TODO Change this
-      } else {
+      if (i < arrLength) {
         (for (j <- i + 1 until arrLength if tags(j) == tag) yield splittedWords(j)).head
+      } else {
+        null
       }
     }).toList
 
-    (keyword, valuesList)
+    (keyword, valuesList.filter(_ != null))
   }
 
   //  val pageAmount = pdf.getNumberOfPages
