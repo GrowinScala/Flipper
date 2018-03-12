@@ -1,5 +1,3 @@
-import java.io.FileNotFoundException
-
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
 import org.scalatest.Matchers._
@@ -40,6 +38,24 @@ class ExtractorSuite extends FunSuite {
   }
 
   /**
+    * Tests that passing an empty or null list to getAllMatchedValues will return an empty List
+    */
+  test("Get all matched values with empty keyword list") {
+    val nullValues = getAllMatchedValues(text, null)
+    val emptyValues = getAllMatchedValues(text, List())
+    assert(nullValues.isEmpty && emptyValues.isEmpty)
+  }
+
+  /**
+    * Tests that passing a null or empty text will return an empty list
+    */
+  test("Get all matched values with a null string") {
+    val nullValues = getAllMatchedValues(null, List(("name", "NNP"), ("age", "CD")))
+    val emptyValues = getAllMatchedValues("", List(("name", "NNP"), ("age", "CD")))
+    assert(nullValues.isEmpty && emptyValues.isEmpty)
+  }
+
+  /**
     * Tests if the result of calling getAllMatchedValues with a keyword that does not exist in the text is empty
     */
   test("Search for non-existing keyword") {
@@ -56,11 +72,47 @@ class ExtractorSuite extends FunSuite {
   }
 
   /**
+    * Tests that passing a empty or null text string to getSingleMatchedValue will return an empty list
+    */
+  test("Get single value with an empty or null text string") {
+    val nullText = getSingleMatchedValue(null, List(("name", "NNP"), ("age", "CD")))
+    val emptyText = getSingleMatchedValue("", List(("name", "NNP"), ("age", "CD")))
+    assert(nullText.isEmpty && emptyText.isEmpty)
+  }
+
+  /**
+    * Tests that passing a empty or null text string to getSingleMatchedValue will return an empty list
+    */
+  test("Get single value with an empty or null list") {
+    val nullText = getSingleMatchedValue(text, null)
+    val emptyText = getSingleMatchedValue(text, List())
+    assert(nullText.isEmpty && emptyText.isEmpty)
+  }
+
+  /**
     * Tests if getSingleMatchedValue returns an empty value list if the given keyword does not exist in the text
     */
   test("Search single value with an non-existing keyword") {
     val matchedValue = getSingleMatchedValue(text, List(("color", "NN")))
     assert(matchedValue.head._2.isEmpty)
+  }
+
+  /**
+    * Tests that passing an empty or null text to getAllObjects will return an empty list
+    */
+  test("Get all objects with null or empty text") {
+    val nullObjs = getAllObjects(null, List(("name", "NNP")))
+    val emptyObjs = getAllObjects("", List(("name", "NNP")))
+    assert(nullObjs.isEmpty && emptyObjs.isEmpty)
+  }
+
+  /**
+    * Tests that passing a null or empty list to getAllObjects will return an empty list
+    */
+  test("Get all objects with null or empty list") {
+    val nullObjs = getAllObjects(text, null)
+    val emptyObjs = getAllObjects(text, List())
+    assert(nullObjs.isEmpty && emptyObjs.isEmpty)
   }
 
   /**
@@ -76,6 +128,13 @@ class ExtractorSuite extends FunSuite {
       List(("name", List("Not Defined")))
     )
     pseudoJsonObjs should equal(expected)
+  }
+
+  /**
+    * Tests that making a JSON String with an empty or null list will return an empty JSON object ("{}")
+    */
+  test("Make JSON string with an empty list") {
+    assert(makeJSONString(List()) == "{}" && makeJSONString(null) == "{}")
   }
 
   /**

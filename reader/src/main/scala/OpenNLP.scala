@@ -17,7 +17,8 @@ object OpenNLP {
     * @return a pair of two arrays of string, wheres ._1 equals all the words separated by whitespaces
     *         and ._2 equals all the corresponding POS tag for each word
     */
-  def tokenizeText(text: String): (Array[String], Array[String]) = {
+  def tagText(text: String): (Array[String], Array[String]) = {
+    if (text == null) return (Array(), Array())
 
     //we can support English, Portuguese, Danish, German, Sami
     val filepath = detectLanguage(text) match {

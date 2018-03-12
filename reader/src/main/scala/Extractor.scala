@@ -59,10 +59,11 @@ object Extractor {
     * @return a List containing pairs of Keywords and a List (non-repeating) of values found for that keyword
     */
   def getAllMatchedValues(text: String, keywords: List[(Keyword, String)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
+    if (keywords == null || text == null || keywords.isEmpty || text == "") return List() //or null
     val matched = keywords.map(key => {
 
       //If the client sent a custom RegEx to use on this key, use it
-      if (clientRegEx.contains(key._1))
+      if (clientRegEx.contains(key._1) && clientRegEx != null)
         (key._1, clientRegEx(key._1).findAllIn(text).matchData.map(_.group(1)).toList.distinct)
 
       //if we already know a good RegEx for this keyword, use it
@@ -85,6 +86,7 @@ object Extractor {
     * @return A List containing pairs of keywords with a single matched value
     */
   def getSingleMatchedValue(text: String, keywords: List[(Keyword, String)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
+    if (keywords == null || text == null || keywords.isEmpty || text == "") return List() //or null
     getAllMatchedValues(text, keywords, clientRegEx).map(pair => if (pair._2.nonEmpty) (pair._1, List(pair._2.head)) else (pair._1, List()))
   }
 
@@ -98,6 +100,8 @@ object Extractor {
     * @return A List containing sublists of pairs of keywords with single matched values
     */
   def getAllObjects(text: String, keywords: List[(Keyword, String)], clientRegEx: Map[Keyword, Regex] = Map()): List[MatchedPair] = {
+    if (keywords == null || text == null || keywords.isEmpty || text == "") return List() //or null
+
     def getListSizes(matchedValues: MatchedPair): List[(Keyword, Int)] = {
       for (m <- matchedValues) yield (m._1, m._2.size)
     }
@@ -127,6 +131,8 @@ object Extractor {
     * @return
     */
   def makeJSONString(listJSON: MatchedPair, flag: String = "empty"): String = {
+    if (listJSON == null) return "{}"
+
     val str = listJSON.map(k =>
       if (k._2.nonEmpty) {
         if (k._2.size > 1) "\"" + k._1 + "\":\"" + k._2.mkString("[", ", ", "]") + "\""
@@ -180,7 +186,7 @@ object Extractor {
     */
   def findKeywordInText(keyword: Keyword, tag: String, text: String): (Keyword, List[String]) = {
     //TODO convert tags, the client could send Noun and we have to translate to NN, or force cliente to send the correct way
-    val (splittedWords, tags) = tokenizeText(text)
+    val (splittedWords, tags) = tagText(text)
 
     lazy val arrLength = splittedWords.length
 
