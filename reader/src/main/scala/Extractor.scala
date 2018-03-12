@@ -1,6 +1,9 @@
 import util.control.Breaks._
-import java.io.File
+import java.io.{File, FileInputStream}
 import java.text.Normalizer
+
+import opennlp.tools.postag.{POSModel, POSSample, POSTaggerME}
+import opennlp.tools.tokenize.WhitespaceTokenizer
 import org.apache.pdfbox.pdmodel.PDDocument
 import org.apache.pdfbox.text.PDFTextStripper
 
@@ -43,7 +46,6 @@ object Extractor {
       case t: Throwable => t.printStackTrace() //we can remove this if we don't want the error message to appear
         null
     }
-
   }
 
   /**
@@ -55,7 +57,7 @@ object Extractor {
     *                    use that regular expression instead of ours
     * @return a List containing pairs of Keywords and a List (non-repeating) of values found for that keyword
     */
-  def getAllMatchedValues(text: String, keywords: List[(Keyword,String)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
+  def getAllMatchedValues(text: String, keywords: List[(Keyword, String)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
     val matched = keywords.map(key => {
 
       //If the client sent a custom RegEx to use on this key, use it
@@ -67,7 +69,7 @@ object Extractor {
         (key._1, knownRegEx(key._1).findAllIn(text).matchData.map(_.group(1)).toList.distinct)
 
 
-      else findKeywordInText(key._1, text) //to be changed, here we need to manually search for the keywords in the text
+      else findKeywordInText(key._1, key._2, text) //to be changed, here we need to manually search for the keywords in the text
     })
     filterNewLines(matched)
   }
@@ -81,7 +83,7 @@ object Extractor {
     * @param clientRegEx - Optional parameter - If the client already has a predefined Regular Expression for a given key
     * @return A List containing pairs of keywords with a single matched value
     */
-  def getSingleMatchedValue(text: String, keywords: List[(Keyword,String)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
+  def getSingleMatchedValue(text: String, keywords: List[(Keyword, String)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
     getAllMatchedValues(text, keywords, clientRegEx).map(pair => if (pair._2.nonEmpty) (pair._1, List(pair._2.head)) else (pair._1, List()))
   }
 
@@ -94,7 +96,7 @@ object Extractor {
     * @param clientRegEx - Optional parameter - If the client already has a predefined Regular Expression for a given key
     * @return A List containing sublists of pairs of keywords with single matched values
     */
-  def getAllObjects(text: String, keywords: List[(Keyword,String)], clientRegEx: Map[Keyword, Regex] = Map()): List[MatchedPair] = {
+  def getAllObjects(text: String, keywords: List[(Keyword, String)], clientRegEx: Map[Keyword, Regex] = Map()): List[MatchedPair] = {
     def getListSizes(matchedValues: MatchedPair): List[(Keyword, Int)] = {
       for (m <- matchedValues) yield (m._1, m._2.size)
     }
@@ -173,17 +175,50 @@ object Extractor {
     * @param text    - The text in which to look for the value
     * @return A pair containing the keyword and a list of values found for that keyword
     */
-  def findKeywordInText(keyword: Keyword, text: String): (Keyword, List[String]) = {
-    val keyRegex = new Regex("(?i)" + keyword + "\\s+(\\w+)")
-    (keyword, keyRegex.findAllIn(text).matchData.map(_.group(1)).toList.distinct)
+  def findKeywordInText(keyword: Keyword, tag: String, text: String): (Keyword, List[String]) = {
+    //    val keyRegex = new Regex("(?i)" + keyword + "\\s+(\\w+)")
+    //    (keyword, keyRegex.findAllIn(text).matchData.map(_.group(1)).toList.distinct)
+
+    //TODO convert tags
+
+    val inputStream = new FileInputStream("C:/Users/Lucas Fischer/Documents/Flipper/reader/resources/en-pos-maxent.bin")
+    val posModel = new POSModel(inputStream)
+    val wsTokenizer = WhitespaceTokenizer.INSTANCE
+
+    val splittedWords = wsTokenizer.tokenize(text)
+
+    val tagger = new POSTaggerME(posModel)
+    val tags = tagger.tag(splittedWords)
+    lazy val arrLength = splittedWords.length
+
+    val valuesList: List[String] = (for (i <- splittedWords.indices if splittedWords(i).toLowerCase == keyword.toLowerCase) yield {
+      if (i == arrLength) {
+        "ups"
+      } else {
+        (for (j <- i + 1 until arrLength if tags(j) == tag) yield splittedWords(j)).head
+      }
+    }).toList
+
+
+    //THIS WORKS
+    //    for (i <- splittedWords.indices if splittedWords(i).toLowerCase == keyword.toLowerCase) {
+    //      if (i == arrLength) {
+    //        ???
+    //      } else {
+    //        for (j <- i + 1 until arrLength if tags(j) == tag) yield {
+    //          valuesList = valuesList :+ splittedWords(j)
+    //        }
+    //      }
+    //    }
+    (keyword, valuesList)
   }
 
-//  val pageAmount = pdf.getNumberOfPages
-//  val page = pdf.getPage(0)
-//  val res = page.getResources
-//  val font = res.getFontNames
-//  val props = res.getPropertiesNames
-//  font.forEach(f=>println(res.getFont(f)))
-//  println("Props: "+props)
+  //  val pageAmount = pdf.getNumberOfPages
+  //  val page = pdf.getPage(0)
+  //  val res = page.getResources
+  //  val font = res.getFontNames
+  //  val props = res.getPropertiesNames
+  //  font.forEach(f=>println(res.getFont(f)))
+  //  println("Props: "+props)
 
 }

@@ -3,8 +3,10 @@ object Main {
   import Extractor._
 
   def main(args: Array[String]): Unit = {
-    val filepath: String = "/Users/Margarida Reis/Documents/Flipper/reader/resources/test.pdf"
+    val filepath: String = "/Users/Lucas Fischer/Documents/Flipper/reader/resources/weightTest.pdf"
     val text = readPDF(filepath)
-    println(makeJSONString(getAllMatchedValues(text, List(("name","noun")))))
+    val objs = getAllObjects(text, List(("name", "NNP"), ("weight", "CD")))
+    objs.foreach(o => println(makeJSONString(o)))
+    //    println(getAllMatchedValues(text, List(("name", "NNP"), ("weight", "CD"))))
   }
 }
