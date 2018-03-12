@@ -1,14 +1,14 @@
-import util.control.Breaks._
 import java.io.{File, FileInputStream}
 import java.text.Normalizer
 
-import opennlp.tools.postag.{POSModel, POSSample, POSTaggerME}
+import opennlp.tools.postag.{POSModel, POSTaggerME}
 import opennlp.tools.tokenize.WhitespaceTokenizer
 import org.apache.pdfbox.pdmodel.PDDocument
 import org.apache.pdfbox.text.PDFTextStripper
 
 import scala.util.matching.Regex
 
+//noinspection ComparingLength
 object Extractor {
 
   type Keyword = String
@@ -179,7 +179,9 @@ object Extractor {
     */
   def findKeywordInText(keyword: Keyword, tag: String, text: String): (Keyword, List[String]) = {
     //TODO convert tags
-
+    //TODO Change tag to be a List of tags
+    //TODO Support different languages
+    
     val inputStream = new FileInputStream("C:/Users/Lucas Fischer/Documents/Flipper/reader/resources/en-pos-maxent.bin")
     val posModel = new POSModel(inputStream)
     val wsTokenizer = WhitespaceTokenizer.INSTANCE
@@ -192,7 +194,7 @@ object Extractor {
 
     val valuesList: List[String] = (for (i <- splittedWords.indices if splittedWords(i).toLowerCase == keyword.toLowerCase) yield {
       if (i == arrLength) {
-        "ups"
+        "ups" //TODO Change this
       } else {
         (for (j <- i + 1 until arrLength if tags(j) == tag) yield splittedWords(j)).head
       }
