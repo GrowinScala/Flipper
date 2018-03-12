@@ -179,9 +179,7 @@ object Extractor {
     * @return A pair containing the keyword and a list of values found for that keyword
     */
   def findKeywordInText(keyword: Keyword, tag: String, text: String): (Keyword, List[String]) = {
-    //TODO convert tags
-    //TODO Change tag to be a List of tags
-    //TODO Support different languages
+    //TODO convert tags, the client could send Noun and we have to translate to NN, or force cliente to send the correct way
     val (splittedWords, tags) = tokenizeText(text)
 
     lazy val arrLength = splittedWords.length
