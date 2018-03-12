@@ -18,7 +18,14 @@ object OpenNLP {
     *         and ._2 equals all the corresponding POS tag for each word
     */
   def tokenizeText(text: String): (Array[String], Array[String]) = {
-    val inputStream = new FileInputStream("C:/Users/Lucas Fischer/Documents/Flipper/reader/resources/en-pos-maxent.bin")
+
+    //we can support English, Portuguese, Danish, German, Sami
+    val filepath = detectLanguage(text) match {
+      case "por" => "C:/Users/Lucas Fischer/Documents/Flipper/reader/resources/pt-pos-maxent.bin"
+      case _ => "C:/Users/Lucas Fischer/Documents/Flipper/reader/resources/en-pos-maxent.bin"
+    }
+    //TODO Open NPL changes the POS tags according to the language used (the bin file above)
+    val inputStream = new FileInputStream(filepath)
     val posModel = new POSModel(inputStream)
     val wsTokenizer = WhitespaceTokenizer.INSTANCE
 
@@ -43,5 +50,16 @@ object OpenNLP {
     val trainedModel = new LanguageDetectorModel(file)
     val langDect = new LanguageDetectorME(trainedModel)
     langDect.predictLanguage(text).getLang
+  }
+
+
+  def translatePOSTag(tag: String): String = {
+    //TODO Open NLP returns different POS tags acording to the language used in the bin file
+    /**
+      * Should we try to translate a tag from one language to another ?
+      * In some cases this will fail, for example a portuguese conjunção does not exist in english
+      * Also there are about 70 POS tags for the english language
+      */
+    ???
   }
 }

@@ -193,7 +193,7 @@ object Extractor {
       if (i < arrLength) {
         (for (j <- i + 1 until arrLength if tags(j) == tag) yield splittedWords(j)).head
       } else {
-        null
+        null //In case the keyword found is the last word in the text we're not going to find a value for it
       }
     }).toList
 
