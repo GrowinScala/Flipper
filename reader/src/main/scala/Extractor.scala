@@ -169,16 +169,15 @@ object Extractor {
 
   /**
     * Method that will try to find a value for a given keyword if we do not have any RegEx for that keyword
-    * (or the client didn't send any)
+    * (or the client didn't send any).
+    * This method uses Apaches openNLP for determining the POS Tag (Part of Speech) to make sure we return a correct value
     *
     * @param keyword - The keyword to find the value for
     * @param text    - The text in which to look for the value
+    * @param tag     - The POS Tag of the value we want to return
     * @return A pair containing the keyword and a list of values found for that keyword
     */
   def findKeywordInText(keyword: Keyword, tag: String, text: String): (Keyword, List[String]) = {
-    //    val keyRegex = new Regex("(?i)" + keyword + "\\s+(\\w+)")
-    //    (keyword, keyRegex.findAllIn(text).matchData.map(_.group(1)).toList.distinct)
-
     //TODO convert tags
 
     val inputStream = new FileInputStream("C:/Users/Lucas Fischer/Documents/Flipper/reader/resources/en-pos-maxent.bin")
@@ -199,17 +198,6 @@ object Extractor {
       }
     }).toList
 
-
-    //THIS WORKS
-    //    for (i <- splittedWords.indices if splittedWords(i).toLowerCase == keyword.toLowerCase) {
-    //      if (i == arrLength) {
-    //        ???
-    //      } else {
-    //        for (j <- i + 1 until arrLength if tags(j) == tag) yield {
-    //          valuesList = valuesList :+ splittedWords(j)
-    //        }
-    //      }
-    //    }
     (keyword, valuesList)
   }
 
