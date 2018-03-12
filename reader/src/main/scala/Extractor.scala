@@ -113,7 +113,14 @@ object Extractor {
   /**
     * Method that given a List of pairs of keywords and their respective values will create a string in JSON format
     *
+    * This method receives an optional flag with information on how to return non existing values,
+    * this flag can be :
+    * "empty" (default) - returns an empty string
+    * "null" - returns the value null (in quotations, can be changed)
+    * "remove" - removes that specific field altogether
+    *
     * @param listJSON - List of pairs of keywords and their respective values
+    * @param flag     -Optional flag with information on how to return non-existing values
     * @return
     */
   def makeJSONString(listJSON: MatchedPair, flag: String = "empty"): String = {
