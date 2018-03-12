@@ -17,7 +17,7 @@ object Extractor {
     "age" -> "(?:I'm|I am)\\s+(\\d{1,2})".r,
     "mail" -> "((?:[a-z]|[0-9]|\\.|-|_)+@(?:[a-z]|\\.)+(?:pt|com|org|net|uk|co|eu))".r,
     "date" -> "((?:\\d{1,2}|\\d{4})(?:-|/)\\d{1,2}(?:-|/)(?:\\d{2}\\D|\\d{4}))".r,
-    "phone" -> "(?:\\+44|\\(\\+44\\))\\s?(\\d{9,10})".r,
+    "phone" -> "((?:\\+\\d{2,3}|\\(\\+\\d{2,3}\\))\\s?\\d{9,10})".r,
     "birth" -> "(?i)(?:Date of birth|birth date)\\s+((?:\\d{1,2}|\\d{4})(?:\\s|\\/|-)(?:\\w+|\\d{2})(?:\\s|\\/|-)(?:\\d{4}|\\d{1,2}\\D))".r,
     "gender" -> "(?i)(?:gender|sex)\\s+(?i)(Male|Female|f|m)".r,
     "zipcode" -> "(?i)((?:\\d|\\w){4}-(?:\\d|\\w){3})".r
@@ -43,6 +43,7 @@ object Extractor {
       case t: Throwable => t.printStackTrace() //we can remove this if we don't want the error message to appear
         null
     }
+
   }
 
   /**
@@ -54,19 +55,19 @@ object Extractor {
     *                    use that regular expression instead of ours
     * @return a List containing pairs of Keywords and a List (non-repeating) of values found for that keyword
     */
-  def getAllMatchedValues(text: String, keywords: List[Keyword], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
+  def getAllMatchedValues(text: String, keywords: List[(Keyword,String)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
     val matched = keywords.map(key => {
 
       //If the client sent a custom RegEx to use on this key, use it
-      if (clientRegEx.contains(key))
-        (key, clientRegEx(key).findAllIn(text).matchData.map(_.group(1)).toList.distinct)
+      if (clientRegEx.contains(key._1))
+        (key._1, clientRegEx(key._1).findAllIn(text).matchData.map(_.group(1)).toList.distinct)
 
       //if we already know a good RegEx for this keyword, use it
-      else if (knownRegEx.contains(key))
-        (key, knownRegEx(key).findAllIn(text).matchData.map(_.group(1)).toList.distinct)
+      else if (knownRegEx.contains(key._1))
+        (key._1, knownRegEx(key._1).findAllIn(text).matchData.map(_.group(1)).toList.distinct)
 
 
-      else findKeywordInText(key, text) //to be changed, here we need to manually search for the keywords in the text
+      else findKeywordInText(key._1, text) //to be changed, here we need to manually search for the keywords in the text
     })
     filterNewLines(matched)
   }
@@ -80,7 +81,7 @@ object Extractor {
     * @param clientRegEx - Optional parameter - If the client already has a predefined Regular Expression for a given key
     * @return A List containing pairs of keywords with a single matched value
     */
-  def getSingleMatchedValue(text: String, keywords: List[Keyword], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
+  def getSingleMatchedValue(text: String, keywords: List[(Keyword,String)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
     getAllMatchedValues(text, keywords, clientRegEx).map(pair => if (pair._2.nonEmpty) (pair._1, List(pair._2.head)) else (pair._1, List()))
   }
 
@@ -93,7 +94,7 @@ object Extractor {
     * @param clientRegEx - Optional parameter - If the client already has a predefined Regular Expression for a given key
     * @return A List containing sublists of pairs of keywords with single matched values
     */
-  def getAllObjects(text: String, keywords: List[Keyword], clientRegEx: Map[Keyword, Regex] = Map()): List[MatchedPair] = {
+  def getAllObjects(text: String, keywords: List[(Keyword,String)], clientRegEx: Map[Keyword, Regex] = Map()): List[MatchedPair] = {
     def getListSizes(matchedValues: MatchedPair): List[(Keyword, Int)] = {
       for (m <- matchedValues) yield (m._1, m._2.size)
     }
@@ -106,7 +107,7 @@ object Extractor {
         List(m._2(i))
       else List("Not Defined") //change to List(null) or List() ??
     }
-    mappedValues.zipWithIndex.map(pair => (keywords(pair._2 % keywords.length), pair._1)).toList.grouped(keywords.size).toList
+    mappedValues.zipWithIndex.map(pair => (keywords(pair._2 % keywords.length)._1, pair._1)).toList.grouped(keywords.size).toList
   }
 
   /**
@@ -170,12 +171,12 @@ object Extractor {
     (keyword, keyRegex.findAllIn(text).matchData.map(_.group(1)).toList.distinct)
   }
 
-  //  val pageAmount = pdf.getNumberOfPages
-  //  val page = pdf.getPage(0)
-  //  val res = page.getResources
-  //  val font = res.getFontNames
-  //  val props = res.getPropertiesNames
-  //  font.forEach(f=>println(res.getFont(f)))
-  //  println("Props: "+props)
+//  val pageAmount = pdf.getNumberOfPages
+//  val page = pdf.getPage(0)
+//  val res = page.getResources
+//  val font = res.getFontNames
+//  val props = res.getPropertiesNames
+//  font.forEach(f=>println(res.getFont(f)))
+//  println("Props: "+props)
 
 }
