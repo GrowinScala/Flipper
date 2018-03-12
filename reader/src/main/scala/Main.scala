@@ -7,6 +7,5 @@ object Main {
     val text = readPDF(filepath)
     val objs = getAllObjects(text, List(("name", "NNP"), ("weight", "CD")))
     objs.foreach(o => println(makeJSONString(o)))
-    //    println(getAllMatchedValues(text, List(("name", "NNP"), ("weight", "CD"))))
   }
 }
