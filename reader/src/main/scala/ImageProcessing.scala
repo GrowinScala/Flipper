@@ -9,6 +9,7 @@ import org.apache.pdfbox.rendering.PDFRenderer
 /**
   * Singleton Object that implements all the image processing functionalities
   */
+//noinspection TypeCheckCanBeMatch
 object ImageProcessing {
 
   /**
@@ -20,32 +21,34 @@ object ImageProcessing {
   def readImageText(file: File): String = {
     val instance = new Tesseract()
     try {
-      instance.doOCR(new File("/Users/Lucas Fischer/Downloads/img.png"))
+      instance.doOCR(file)
     } catch {
       case e: Exception => e.printStackTrace()
         null
     }
   }
 
-
-  def extractImgs(document:PDDocument): Unit ={
+  def extractImgs(document: PDDocument): List[File] = {
     val numPages = document.getNumberOfPages
-
-    val fileList:List[File] = for(i <- 0 until numPages) {
+    //Using a mutable List for return a List of files (images) found in the pdf document
+    //This was implemented mutably because pRes.getXObjectNames returns a Java Iterator[CosName] and there is no .map/.flatMap fucntion to it, only .forEach
+    var mutableFilesList: List[File] = List() //mutable
+    for (i <- 0 until numPages) {
       val page = document.getPage(i)
       val pRes = page.getResources
       pRes.getXObjectNames.forEach(r => {
         val o = pRes.getXObject(r)
-        if (o.isInstanceOf[PDImageXObject]){
-          val file = new File("./target/images/"+System.nanoTime() + ".png")
+        if (o.isInstanceOf[PDImageXObject]) {
+          val file = new File("./target/images/" + System.nanoTime() + ".png")
           ImageIO.write(o.asInstanceOf[PDImageXObject].getImage, "png", file)
-          file
+          mutableFilesList = mutableFilesList :+ file
         }
       })
     }
+    mutableFilesList
   }
 
-  def convertToImg(filePath: String)={
+  def convertToImg(filePath: String): Unit = {
     val pdf = PDDocument.load(new File(filePath))
     val catalog = pdf.getDocumentCatalog
     val renderer = new PDFRenderer(pdf)

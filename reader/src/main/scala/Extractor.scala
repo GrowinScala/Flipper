@@ -13,7 +13,9 @@ import scala.util.matching.Regex
 import OpenNLP._
 import ImageProcessing._
 
-//noinspection ComparingLength
+/**
+  * Singleton object that implements all the functionalities regarding the extraction of information from a PDF document
+  */
 object Extractor {
 
   type Keyword = String
@@ -42,7 +44,8 @@ object Extractor {
       val pdf = PDDocument.load(new File(filePath))
       val document = new PDFTextStripper
 
-      extractImgs(pdf)
+      val imagesList = extractImgs(pdf)
+      imagesList.foreach(f => println(readImageText(f)))
 
       val str = Normalizer.normalize(document.getText(pdf), Normalizer.Form.NFD)
         .replaceAll("[\\p{InCombiningDiacriticalMarks}]", "")
