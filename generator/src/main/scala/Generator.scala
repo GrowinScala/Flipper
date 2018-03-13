@@ -11,6 +11,12 @@ import org.apache.pdfbox.pdmodel.{PDDocument, PDPage, PDPageContentStream}
 object Generator {
 
 
+  /**
+    * Method that creates a pdf with the text given
+    *
+    * @param text - String containing the text to put in the pdf
+    * @return
+    */
   def createPDF(text:String):Unit={
     val document = new PDDocument()
     val page = new PDPage(PDRectangle.A4)
@@ -31,11 +37,17 @@ object Generator {
     document.close()
   }
 
-  def convertHTMLtoPDF(html:String): Unit ={
+  /**
+    * Method that given a file path of a html file, converts it in a pdf
+    *
+    * @param uri - String containing the URI for the file to be loaded
+    * @return
+    */
+  def convertHTMLtoPDF(uri:String): Unit ={
     val document = new Document()
-    val writer = PdfWriter.getInstance(document,new FileOutputStream("src/output/html.pdf"))
+    val writer = PdfWriter.getInstance(document,new FileOutputStream("html.pdf"))
     document.open()
-    XMLWorkerHelper.getInstance().parseXHtml(writer, document, new FileInputStream(html))
+    XMLWorkerHelper.getInstance().parseXHtml(writer, document, new FileInputStream(uri))
     document.close()
   }
 

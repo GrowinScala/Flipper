@@ -59,16 +59,4 @@ object ImageProcessing {
     }
     mutableFilesList
   }
-
-  //  /**
-  //    * TO BE USED IN THE FUTUREEEEEEEEEEEE
-  //    * @param filePath
-  //    */
-  //  def convertToImg(filePath: String): Unit = {
-  //    val pdf = PDDocument.load(new File(filePath))
-  //    val catalog = pdf.getDocumentCatalog
-  //    val renderer = new PDFRenderer(pdf)
-  //    val image = renderer.renderImage(0)
-  //    ImageIO.write(image, "png", new File("./target/images/Converted_" + System.nanoTime() + ".png"))
-  //  }
 }
