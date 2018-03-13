@@ -16,14 +16,14 @@ object Generator {
     val page = new PDPage(PDRectangle.A4)
     document.addPage(page)
 
-    val test = "I am trying to create a PDF file with a lot of text contents in the document. I am using PDFBox"
+//    val test = "I am trying to create a PDF file with a lot of text contents in the document. I am using PDFBox"
 
     val contentStream = new PDPageContentStream(document,page)
     contentStream.setFont(PDType1Font.HELVETICA_BOLD, 20)
 //    contentStream.setNonStrokingColor(Color.blue)
     contentStream.beginText()
     contentStream.newLineAtOffset(100, 700)
-    contentStream.showText(test)
+    contentStream.showText(text)
     contentStream.endText()
     contentStream.close()
 
