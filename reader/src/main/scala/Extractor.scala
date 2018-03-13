@@ -1,10 +1,17 @@
 import java.io.File
 import java.text.Normalizer
+import javax.imageio.ImageIO
+import java.awt.image.BufferedImage
+
+import opennlp.tools.postag.{POSModel, POSTaggerME}
+import opennlp.tools.tokenize.WhitespaceTokenizer
 import org.apache.pdfbox.pdmodel.PDDocument
+import org.apache.pdfbox.rendering.PDFRenderer
 import org.apache.pdfbox.text.PDFTextStripper
 
 import scala.util.matching.Regex
 import OpenNLP._
+import ImageProcessing._
 
 //noinspection ComparingLength
 object Extractor {
@@ -35,6 +42,7 @@ object Extractor {
       val pdf = PDDocument.load(new File(filePath))
       val document = new PDFTextStripper
 
+      extractImgs(pdf)
 
       val str = Normalizer.normalize(document.getText(pdf), Normalizer.Form.NFD)
         .replaceAll("[\\p{InCombiningDiacriticalMarks}]", "")
@@ -208,5 +216,4 @@ object Extractor {
   //  val props = res.getPropertiesNames
   //  font.forEach(f=>println(res.getFont(f)))
   //  println("Props: "+props)
-
 }

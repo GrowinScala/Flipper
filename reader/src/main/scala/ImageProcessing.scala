@@ -1,6 +1,10 @@
 import java.io.File
+import javax.imageio.ImageIO
 
 import net.sourceforge.tess4j.Tesseract
+import org.apache.pdfbox.pdmodel.PDDocument
+import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject
+import org.apache.pdfbox.rendering.PDFRenderer
 
 /**
   * Singleton Object that implements all the image processing functionalities
@@ -21,5 +25,31 @@ object ImageProcessing {
       case e: Exception => e.printStackTrace()
         null
     }
+  }
+
+
+  def extractImgs(document:PDDocument): Unit ={
+    val numPages = document.getNumberOfPages
+
+    val fileList:List[File] = for(i <- 0 until numPages) {
+      val page = document.getPage(i)
+      val pRes = page.getResources
+      pRes.getXObjectNames.forEach(r => {
+        val o = pRes.getXObject(r)
+        if (o.isInstanceOf[PDImageXObject]){
+          val file = new File("./target/images/"+System.nanoTime() + ".png")
+          ImageIO.write(o.asInstanceOf[PDImageXObject].getImage, "png", file)
+          file
+        }
+      })
+    }
+  }
+
+  def convertToImg(filePath: String)={
+    val pdf = PDDocument.load(new File(filePath))
+    val catalog = pdf.getDocumentCatalog
+    val renderer = new PDFRenderer(pdf)
+    val image = renderer.renderImage(0)
+    ImageIO.write(image, "png", new File("bitcoin-convertToImage-" + 0 + ".png"))
   }
 }

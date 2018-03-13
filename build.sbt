@@ -7,7 +7,8 @@ val basicSettings = Seq(
   libraryDependencies += "junit" % "junit" % "4.10" % Test,
   libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.0-SNAP10" % Test,
   libraryDependencies += "org.apache.opennlp" % "opennlp-tools" % "1.8.4",
-  libraryDependencies += "net.sourceforge.tess4j" % "tess4j" % "3.4.4"
+  libraryDependencies += "net.sourceforge.tess4j" % "tess4j" % "3.4.4",
+  //libraryDependencies += "com.levigo.jbig2" % "levigo-jbig2-imageio" % "2.0"
 )
 
 lazy val root = project.in(file(".")).aggregate(reader, generator, converter).settings(basicSettings)
