@@ -9,7 +9,7 @@ import org.apache.pdfbox.rendering.PDFRenderer
 /**
   * Singleton Object that implements all the image processing functionalities
   */
-//noinspection TypeCheckCanBeMatch
+//noinspection TypeCheckCanBeMatch,SpellCheckingInspection
 object ImageProcessing {
 
   /**
@@ -28,6 +28,13 @@ object ImageProcessing {
     }
   }
 
+  /**
+    * Method that receives a document (PDF File) and trys to extract all the images from that document
+    * This method writtes the image to the outter most "target" directory and also returns a list containg all the image files
+    *
+    * @param document - The PDF file to extract the images from
+    * @return A list of image files extracted from the PDF
+    */
   def extractImgs(document: PDDocument): List[File] = {
     val numPages = document.getNumberOfPages
     //Using a mutable List for return a List of files (images) found in the pdf document
@@ -48,11 +55,15 @@ object ImageProcessing {
     mutableFilesList
   }
 
-  def convertToImg(filePath: String): Unit = {
-    val pdf = PDDocument.load(new File(filePath))
-    val catalog = pdf.getDocumentCatalog
-    val renderer = new PDFRenderer(pdf)
-    val image = renderer.renderImage(0)
-    ImageIO.write(image, "png", new File("bitcoin-convertToImage-" + 0 + ".png"))
-  }
+  //  /**
+  //    * TO BE USED IN THE FUTUREEEEEEEEEEEE
+  //    * @param filePath
+  //    */
+  //  def convertToImg(filePath: String): Unit = {
+  //    val pdf = PDDocument.load(new File(filePath))
+  //    val catalog = pdf.getDocumentCatalog
+  //    val renderer = new PDFRenderer(pdf)
+  //    val image = renderer.renderImage(0)
+  //    ImageIO.write(image, "png", new File("bitcoin-convertToImage-" + 0 + ".png"))
+  //  }
 }
