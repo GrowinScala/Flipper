@@ -5,7 +5,7 @@ import opennlp.tools.postag.{POSModel, POSTaggerME}
 import opennlp.tools.tokenize.WhitespaceTokenizer
 
 /**
-  * Object that implements all the Open NLP functionalities
+  * Singleton Object that implements all the Open NLP functionalities
   */
 object OpenNLP {
 

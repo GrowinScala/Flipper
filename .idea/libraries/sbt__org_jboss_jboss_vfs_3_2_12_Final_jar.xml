@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: org.jboss:jboss-vfs:3.2.12.Final:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.jboss/jboss-vfs/jars/jboss-vfs-3.2.12.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.jboss/jboss-vfs/srcs/jboss-vfs-3.2.12.Final-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

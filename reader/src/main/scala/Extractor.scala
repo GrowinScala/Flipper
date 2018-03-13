@@ -1,8 +1,5 @@
-import java.io.{File, FileInputStream}
+import java.io.File
 import java.text.Normalizer
-
-import opennlp.tools.postag.{POSModel, POSTaggerME}
-import opennlp.tools.tokenize.WhitespaceTokenizer
 import org.apache.pdfbox.pdmodel.PDDocument
 import org.apache.pdfbox.text.PDFTextStripper
 
