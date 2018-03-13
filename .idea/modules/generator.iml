@@ -22,6 +22,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="sbt: commons-logging:commons-logging:1.2:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.itextpdf:itextpdf:5.5.10:jar" level="project" />
     <orderEntry type="library" name="sbt: org.slf4j:slf4j-api:1.7.25:jar" level="project" />
     <orderEntry type="library" name="sbt: org.slf4j:log4j-over-slf4j:1.7.25:jar" level="project" />
     <orderEntry type="library" name="sbt: org.slf4j:jul-to-slf4j:1.7.25:jar" level="project" />
@@ -51,5 +52,6 @@
     <orderEntry type="library" name="sbt: org.apache.pdfbox:fontbox:2.0.7:jar" level="project" />
     <orderEntry type="library" scope="TEST" name="sbt: junit:junit:4.10:jar" level="project" />
     <orderEntry type="library" scope="TEST" name="sbt: org.hamcrest:hamcrest-core:1.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.itextpdf.tool:xmlworker:5.5.10:jar" level="project" />
   </component>
 </module>

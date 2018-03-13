@@ -8,6 +8,8 @@ val basicSettings = Seq(
   libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.0-SNAP10" % Test,
   libraryDependencies += "org.apache.opennlp" % "opennlp-tools" % "1.8.4",
   libraryDependencies += "net.sourceforge.tess4j" % "tess4j" % "3.4.4",
+  libraryDependencies += "com.itextpdf.tool" % "xmlworker" % "5.5.10",
+  libraryDependencies += "com.itextpdf" % "itextpdf" % "5.5.10"
   //libraryDependencies += "com.levigo.jbig2" % "levigo-jbig2-imageio" % "2.0"
 )
 
