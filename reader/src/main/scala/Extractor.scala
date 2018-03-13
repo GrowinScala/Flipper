@@ -38,7 +38,7 @@ object Extractor {
       val document = new PDFTextStripper
 
       val imagesList = extractImgs(pdf)
-      //      imagesList.foreach(f => println(readImageText(f)))
+      //            imagesList.foreach(f => println(readImageText(f)))
       //If we want to add the images text to str, we can do so, although its not very precise
 
       val str = Normalizer.normalize(document.getText(pdf), Normalizer.Form.NFD)

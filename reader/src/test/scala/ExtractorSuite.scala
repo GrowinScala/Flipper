@@ -7,14 +7,14 @@ import Extractor._
 @RunWith(classOf[JUnitRunner])
 class ExtractorSuite extends FunSuite {
 
-  val filepath: String = "/Users/Lucas Fischer/Documents/Flipper/reader/resources/test.pdf"
+  val filepath: String = "./resources/test.pdf"
   val text: String = readPDF(filepath)
 
   /**
     * Tests if reading an existing file produces a non empty string
     */
   test("Read existing file") {
-    val filepath = "/Users/Lucas Fischer/Documents/Flipper/reader/resources/something.pdf" //change USER
+    val filepath = "./resources/something.pdf" //change USER
     assert(readPDF(filepath).nonEmpty)
   }
 
