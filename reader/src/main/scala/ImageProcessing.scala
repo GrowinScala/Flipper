@@ -51,7 +51,7 @@ object ImageProcessing {
       pRes.getXObjectNames.forEach(r => {
         val o = pRes.getXObject(r)
         if (o.isInstanceOf[PDImageXObject]) {
-          val file = new File("./target/images/" + System.nanoTime() + ".png")
+          val file = new File("./target/images/Page"+(i+1)+"_" + System.nanoTime() + ".png")
           ImageIO.write(o.asInstanceOf[PDImageXObject].getImage, "png", file)
           mutableFilesList = mutableFilesList :+ file
         }
@@ -69,6 +69,6 @@ object ImageProcessing {
   //    val catalog = pdf.getDocumentCatalog
   //    val renderer = new PDFRenderer(pdf)
   //    val image = renderer.renderImage(0)
-  //    ImageIO.write(image, "png", new File("bitcoin-convertToImage-" + 0 + ".png"))
+  //    ImageIO.write(image, "png", new File("./target/images/Converted_" + System.nanoTime() + ".png"))
   //  }
 }
