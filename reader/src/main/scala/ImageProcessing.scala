@@ -19,6 +19,8 @@ object ImageProcessing {
     * @return a String containing the images text
     */
   def readImageText(file: File): String = {
+    if (file == null) return ""
+
     val instance = new Tesseract()
     try {
       instance.doOCR(file)
@@ -36,6 +38,9 @@ object ImageProcessing {
     * @return A list of image files extracted from the PDF
     */
   def extractImgs(document: PDDocument): List[File] = {
+    if (document == null) return List()
+    //TODO Remove all the files in ./targer/images first
+
     val numPages = document.getNumberOfPages
     //Using a mutable List for return a List of files (images) found in the pdf document
     //This was implemented mutably because pRes.getXObjectNames returns a Java Iterator[CosName] and there is no .map/.flatMap fucntion to it, only .forEach
