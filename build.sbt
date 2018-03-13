@@ -9,9 +9,12 @@ val basicSettings = Seq(
   libraryDependencies += "org.apache.opennlp" % "opennlp-tools" % "1.8.4",
   libraryDependencies += "net.sourceforge.tess4j" % "tess4j" % "3.4.4",
   libraryDependencies += "com.itextpdf.tool" % "xmlworker" % "5.5.10",
-  libraryDependencies += "com.itextpdf" % "itextpdf" % "5.5.10"
+  libraryDependencies += "com.itextpdf" % "itextpdf" % "5.5.10",
+  libraryDependencies += "com.lihaoyi" %% "scalatags" % "0.6.7"
+  //TODO I THINK ITEXT IS A PAID SOFTWARE, WE NEED TO BE SURE
   //libraryDependencies += "com.levigo.jbig2" % "levigo-jbig2-imageio" % "2.0"
 )
+
 
 lazy val root = project.in(file(".")).aggregate(reader, generator, converter).settings(basicSettings)
 
