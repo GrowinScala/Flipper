@@ -1,14 +1,7 @@
 import java.io.File
 import java.text.Normalizer
-import javax.imageio.ImageIO
-import java.awt.image.BufferedImage
-
-import opennlp.tools.postag.{POSModel, POSTaggerME}
-import opennlp.tools.tokenize.WhitespaceTokenizer
 import org.apache.pdfbox.pdmodel.PDDocument
-import org.apache.pdfbox.rendering.PDFRenderer
 import org.apache.pdfbox.text.PDFTextStripper
-
 import scala.util.matching.Regex
 import OpenNLP._
 import ImageProcessing._
