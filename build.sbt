@@ -10,7 +10,8 @@ val basicSettings = Seq(
   libraryDependencies += "net.sourceforge.tess4j" % "tess4j" % "3.4.4",
   libraryDependencies += "com.itextpdf.tool" % "xmlworker" % "5.5.10",
   libraryDependencies += "com.itextpdf" % "itextpdf" % "5.5.10",
-  libraryDependencies += "com.lihaoyi" %% "scalatags" % "0.6.7"
+  libraryDependencies += "com.lihaoyi" %% "scalatags" % "0.6.7",
+  libraryDependencies += "org.json4s" %% "json4s-native" % "3.6.0-M2"
   //TODO I THINK ITEXT IS A PAID SOFTWARE, WE NEED TO BE SURE
   //libraryDependencies += "com.levigo.jbig2" % "levigo-jbig2-imageio" % "2.0"
 )

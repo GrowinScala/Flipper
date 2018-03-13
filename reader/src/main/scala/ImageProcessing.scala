@@ -51,7 +51,7 @@ object ImageProcessing {
       pRes.getXObjectNames.forEach(r => {
         val o = pRes.getXObject(r)
         if (o.isInstanceOf[PDImageXObject]) {
-          val file = new File("./target/images/Page"+(i+1)+"_" + System.nanoTime() + ".png")
+          val file = new File("./target/images/Page" + (i + 1) + "_" + System.nanoTime() + ".png")
           ImageIO.write(o.asInstanceOf[PDImageXObject].getImage, "png", file)
           mutableFilesList = mutableFilesList :+ file
         }

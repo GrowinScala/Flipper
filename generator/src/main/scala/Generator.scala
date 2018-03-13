@@ -1,35 +1,12 @@
-import java.awt.Color
 import java.io.{File, FileInputStream, FileOutputStream, PrintWriter}
-
 import com.itextpdf.text.Document
 import com.itextpdf.text.pdf.PdfWriter
 import com.itextpdf.tool.xml.XMLWorkerHelper
-import org.apache.pdfbox.pdmodel.common.PDRectangle
-import org.apache.pdfbox.pdmodel.font.PDType1Font
-import org.apache.pdfbox.pdmodel.{PDDocument, PDPage, PDPageContentStream}
+import org.json4s._
+import org.json4s.native.JsonMethods._
+import scalatags.Text.all._
 
 object Generator {
-
-
-  //  def createPDF(text: String): Unit = {
-  //    val document = new PDDocument()
-  //    val page = new PDPage(PDRectangle.A4)
-  //    document.addPage(page)
-  //
-  //    //    val test = "I am trying to create a PDF file with a lot of text contents in the document. I am using PDFBox"
-  //
-  //    val contentStream = new PDPageContentStream(document, page)
-  //    contentStream.setFont(PDType1Font.HELVETICA_BOLD, 20)
-  //    //    contentStream.setNonStrokingColor(Color.blue)
-  //    contentStream.beginText()
-  //    contentStream.newLineAtOffset(100, 700)
-  //    contentStream.showText(text)
-  //    contentStream.endText()
-  //    contentStream.close()
-  //
-  //    document.save("Blank_Document.pdf")
-  //    document.close()
-  //  }
 
   /**
     * Method that receives the URI of a html file and generates from it a pdf document
@@ -44,11 +21,19 @@ object Generator {
     document.close()
   }
 
+  //TODO ADD DOCUMENTATION
   def writeHTML(json: String): String = {
-    //    val pw = new PrintWriter(new File("index.html"))
-    //    pw.write(text.toString)
-    //    pw.close()
-    ???
+    val jsonMap = parse(json).values.asInstanceOf[Map[String, Any]]
+    val kvParagraph = jsonMap.map(pair => p(pair._1 + " : " + pair._2)).toList
+    val htmlString = html(
+      head(),
+      body(kvParagraph)
+    )
+    val filepath = "./target/htmlPages/" + System.nanoTime() + ".html"
+    val pw = new PrintWriter(new File(filepath))
+    pw.write(htmlString.toString)
+    pw.close()
+    filepath
   }
 
 }

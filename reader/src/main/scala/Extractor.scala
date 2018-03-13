@@ -205,12 +205,4 @@ object Extractor {
 
     (keyword, valuesList.filter(_ != null))
   }
-
-  //  val pageAmount = pdf.getNumberOfPages
-  //  val page = pdf.getPage(0)
-  //  val res = page.getResources
-  //  val font = res.getFontNames
-  //  val props = res.getPropertiesNames
-  //  font.forEach(f=>println(res.getFont(f)))
-  //  println("Props: "+props)
 }
