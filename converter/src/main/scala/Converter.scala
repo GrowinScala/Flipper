@@ -36,6 +36,20 @@ object Converter {
   }
 
   /**
+    * Method that converts a pdf file into a gif image
+    *
+    * @param filePath - String containing the URI to the pdf file
+    */
+  def convertPDFtoGIF(filePath: String): Unit = {
+    val pdf = PDDocument.load(new File(filePath))
+    val renderer = new PDFRenderer(pdf)
+    for (i <- 0 until pdf.getNumberOfPages) {
+      val image = renderer.renderImage(i)
+      ImageIO.write(image, "gif", new File("./target/images/Converted_Page"+i+"_" + System.nanoTime() + ".gif"))
+    }
+  }
+
+  /**
     * Method that converts a pdf file into a odf image
     *
     * @param filePath - String containing the URI to the pdf file
