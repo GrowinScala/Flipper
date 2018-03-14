@@ -11,14 +11,14 @@ import org.apache.pdfbox.pdmodel.PDDocument
 @RunWith(classOf[JUnitRunner])
 class ImageProcessingSuite extends FunSuite {
 
-  val filepath: String = "./resources/imgTester.pdf"
+  val filepath: String = "./reader/resources/imgTester.pdf"
   val pdf: PDDocument = PDDocument.load(new File(filepath))
 
   /**
     * Tests that extractImgs returns an empty list of images when reading a pdf with no images
     */
   test("extractImgs returns empty list") {
-    val fp = "./resources/test.pdf"
+    val fp = "./reader/resources/test.pdf"
     val pdf = PDDocument.load(new File(fp))
     assert(extractImgs(pdf).isEmpty)
   }
