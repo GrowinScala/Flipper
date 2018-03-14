@@ -35,7 +35,6 @@ class ExtractorSuite extends FunSuite {
     //    val expectedValue = List(("name", List("Margarida Reis", "Lucas", "Albertina", "Justino Alberto")), ("age", List(25, 21)))
     //    matchedValues should equal(expectedValue)
     assert(matchedValues.head._2.head == expectedValue)
-    //TODO FIX WORKING DIRECTORIES BUG
   }
 
   /**
@@ -45,7 +44,6 @@ class ExtractorSuite extends FunSuite {
     val nullValues = getAllMatchedValues(text, null)
     val emptyValues = getAllMatchedValues(text, List())
     assert(nullValues.isEmpty && emptyValues.isEmpty)
-    //TODO FIX WORKING DIRECTORIES BUG
   }
 
   /**
@@ -55,7 +53,6 @@ class ExtractorSuite extends FunSuite {
     val nullValues = getAllMatchedValues(null, List(("name", "NNP"), ("age", "CD")))
     val emptyValues = getAllMatchedValues("", List(("name", "NNP"), ("age", "CD")))
     assert(nullValues.isEmpty && emptyValues.isEmpty)
-    //TODO FIX WORKING DIRECTORIES BUG
   }
 
   /**
@@ -64,7 +61,6 @@ class ExtractorSuite extends FunSuite {
   test("Search for non-existing keyword") {
     val matchedValues = getAllMatchedValues(text, List(("color", "NN")))
     assert(matchedValues.head._2.isEmpty)
-    //TODO FIX WORKING DIRECTORIES BUG
   }
 
   /**
@@ -82,7 +78,6 @@ class ExtractorSuite extends FunSuite {
     val nullText = getSingleMatchedValue(null, List(("name", "NNP"), ("age", "CD")))
     val emptyText = getSingleMatchedValue("", List(("name", "NNP"), ("age", "CD")))
     assert(nullText.isEmpty && emptyText.isEmpty)
-    //TODO FIX WORKING DIRECTORIES BUG
   }
 
   /**
@@ -92,7 +87,6 @@ class ExtractorSuite extends FunSuite {
     val nullText = getSingleMatchedValue(text, null)
     val emptyText = getSingleMatchedValue(text, List())
     assert(nullText.isEmpty && emptyText.isEmpty)
-    //TODO FIX WORKING DIRECTORIES BUG
   }
 
   /**
@@ -101,7 +95,6 @@ class ExtractorSuite extends FunSuite {
   test("Search single value with an non-existing keyword") {
     val matchedValue = getSingleMatchedValue(text, List(("color", "NN")))
     assert(matchedValue.head._2.isEmpty)
-    //TODO FIX WORKING DIRECTORIES BUG
   }
 
   /**
@@ -111,7 +104,6 @@ class ExtractorSuite extends FunSuite {
     val nullObjs = getAllObjects(null, List(("name", "NNP")))
     val emptyObjs = getAllObjects("", List(("name", "NNP")))
     assert(nullObjs.isEmpty && emptyObjs.isEmpty)
-    //TODO FIX WORKING DIRECTORIES BUG
   }
 
   /**
@@ -121,7 +113,6 @@ class ExtractorSuite extends FunSuite {
     val nullObjs = getAllObjects(text, null)
     val emptyObjs = getAllObjects(text, List())
     assert(nullObjs.isEmpty && emptyObjs.isEmpty)
-    //TODO FIX WORKING DIRECTORIES BUG
   }
 
   /**
@@ -137,7 +128,6 @@ class ExtractorSuite extends FunSuite {
       List(("name", List("Not Defined")))
     )
     pseudoJsonObjs should equal(expected)
-    //TODO FIX WORKING DIRECTORIES BUG
   }
 
   /**
@@ -154,7 +144,6 @@ class ExtractorSuite extends FunSuite {
     val matchedValues = getAllMatchedValues(text, List(("name", "NNP"), ("age", "CD")))
     val expectedJSON = "{\"name\":\"[Margarida Reis, Lucas, Albertina, Justino Alberto]\", \"age\":\"[25, 21]\"}"
     assert(makeJSONString(matchedValues) == expectedJSON)
-    //TODO FIX WORKING DIRECTORIES BUG
   }
 
   /**
@@ -170,7 +159,6 @@ class ExtractorSuite extends FunSuite {
     )
     val matchedValues = getAllObjects(text, List(("name", "NNP"), ("age", "CD")))
     //    matchedValues.map(makeJSONString) should equal(expected)
-    //TODO FIX WORKING DIRECTORIES BUG
   }
 
 
