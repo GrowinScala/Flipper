@@ -22,47 +22,47 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="sbt: commons-logging:commons-logging:1.2:jar" level="project" />
-    <orderEntry type="module" module-name="reader" exported="" />
-    <orderEntry type="library" name="sbt: com.lihaoyi:sourcecode_2.12:0.1.4:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.lihaoyi:scalatags_2.12:0.6.7:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.itextpdf:itextpdf:5.5.10:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.slf4j:slf4j-api:1.7.25:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.slf4j:log4j-over-slf4j:1.7.25:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.slf4j:jul-to-slf4j:1.7.25:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.slf4j:jcl-over-slf4j:1.7.25:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.jboss.logging:jboss-logging:3.1.4.GA:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.jboss:jboss-vfs:3.2.12.Final:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.ghost4j:ghost4j:1.0.1:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.apache.xmlgraphics:xmlgraphics-commons:1.4:jar" level="project" />
-    <orderEntry type="library" name="sbt: net.sourceforge.tess4j:tess4j:3.4.4:jar" level="project" />
-    <orderEntry type="library" name="sbt: net.sourceforge.lept4j:lept4j:1.6.3:jar" level="project" />
-    <orderEntry type="library" name="sbt: net.java.dev.jna:jna:4.1.0:jar" level="project" />
-    <orderEntry type="library" name="sbt: log4j:log4j:1.2.17:jar" level="project" />
-    <orderEntry type="library" name="sbt: commons-io:commons-io:2.6:jar" level="project" />
-    <orderEntry type="library" name="sbt: commons-collections:commons-collections:3.2.1:jar" level="project" />
-    <orderEntry type="library" name="sbt: commons-beanutils:commons-beanutils:1.9.2:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.lowagie:itext:2.1.7:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.github.jai-imageio:jai-imageio-core:1.3.1:jar" level="project" />
-    <orderEntry type="library" name="sbt: ch.qos.logback:logback-core:1.2.3:jar" level="project" />
-    <orderEntry type="library" name="sbt: ch.qos.logback:logback-classic:1.2.3:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.apache.opennlp:opennlp-tools:1.8.4:jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="sbt: org.scalatest:scalatest_2.12:3.2.0-SNAP10:jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="sbt: org.scalactic:scalactic_2.12:3.2.0-SNAP10:jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="sbt: org.scala-lang:scala-reflect:2.12.4:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.scala-lang:scala-library:2.12.4:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.apache.pdfbox:pdfbox:2.0.7:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.apache.pdfbox:fontbox:2.0.7:jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="sbt: junit:junit:4.10:jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="sbt: org.hamcrest:hamcrest-core:1.1:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.itextpdf.tool:xmlworker:5.5.10:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.thoughtworks.paranamer:paranamer:2.8:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.json4s:json4s-ast_2.12:3.6.0-M2:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.json4s:json4s-core_2.12:3.6.0-M2:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.json4s:json4s-native_2.12:3.6.0-M2:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.json4s:json4s-scalap_2.12:3.6.0-M2:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.scala-lang.modules:scala-xml_2.12:1.0.6:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.odftoolkit:odfdom-java:0.8.7:jar" level="project" />
-    <orderEntry type="library" name="sbt: xerces:xercesImpl:2.9.1:jar" level="project" />
     <orderEntry type="library" name="sbt: xml-apis:xml-apis:1.3.04:jar" level="project" />
+    <orderEntry type="library" name="sbt: xerces:xercesImpl:2.9.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.odftoolkit:odfdom-java:0.8.7:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.scala-lang.modules:scala-xml_2.12:1.0.6:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.json4s:json4s-scalap_2.12:3.6.0-M2:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.json4s:json4s-native_2.12:3.6.0-M2:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.json4s:json4s-core_2.12:3.6.0-M2:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.json4s:json4s-ast_2.12:3.6.0-M2:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.thoughtworks.paranamer:paranamer:2.8:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.itextpdf.tool:xmlworker:5.5.10:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="sbt: org.hamcrest:hamcrest-core:1.1:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="sbt: junit:junit:4.10:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.apache.pdfbox:fontbox:2.0.7:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.apache.pdfbox:pdfbox:2.0.7:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.scala-lang:scala-library:2.12.4:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="sbt: org.scala-lang:scala-reflect:2.12.4:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="sbt: org.scalactic:scalactic_2.12:3.2.0-SNAP10:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="sbt: org.scalatest:scalatest_2.12:3.2.0-SNAP10:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.apache.opennlp:opennlp-tools:1.8.4:jar" level="project" />
+    <orderEntry type="library" name="sbt: ch.qos.logback:logback-classic:1.2.3:jar" level="project" />
+    <orderEntry type="library" name="sbt: ch.qos.logback:logback-core:1.2.3:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.github.jai-imageio:jai-imageio-core:1.3.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.lowagie:itext:2.1.7:jar" level="project" />
+    <orderEntry type="library" name="sbt: commons-beanutils:commons-beanutils:1.9.2:jar" level="project" />
+    <orderEntry type="library" name="sbt: commons-collections:commons-collections:3.2.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: commons-io:commons-io:2.6:jar" level="project" />
+    <orderEntry type="library" name="sbt: log4j:log4j:1.2.17:jar" level="project" />
+    <orderEntry type="library" name="sbt: net.java.dev.jna:jna:4.1.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: net.sourceforge.lept4j:lept4j:1.6.3:jar" level="project" />
+    <orderEntry type="library" name="sbt: net.sourceforge.tess4j:tess4j:3.4.4:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.apache.xmlgraphics:xmlgraphics-commons:1.4:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.ghost4j:ghost4j:1.0.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.jboss:jboss-vfs:3.2.12.Final:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.jboss.logging:jboss-logging:3.1.4.GA:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.slf4j:jcl-over-slf4j:1.7.25:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.slf4j:jul-to-slf4j:1.7.25:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.slf4j:log4j-over-slf4j:1.7.25:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.slf4j:slf4j-api:1.7.25:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.itextpdf:itextpdf:5.5.10:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.lihaoyi:scalatags_2.12:0.6.7:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.lihaoyi:sourcecode_2.12:0.1.4:jar" level="project" />
+    <orderEntry type="module" module-name="reader" exported="" />
   </component>
 </module>
