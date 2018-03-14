@@ -126,7 +126,7 @@ object Extractor {
   def makeJSONString(listJSON: MatchedPair, flag: String = "empty"): String = {
     if (listJSON == null) return "{}"
 
-    val str = listJSON.map(k =>
+    val pseudoJSON = listJSON.map(k =>
       if (k._2.nonEmpty) {
         if (k._2.size > 1) "\"" + k._1 + "\":\"" + k._2.mkString("[", ", ", "]") + "\""
         else "\"" + k._1 + "\": \"" + k._2.head + "\""
@@ -138,7 +138,6 @@ object Extractor {
         }
       }
     )
-    val pseudoJSON = str
     if (flag == "remove") pseudoJSON.filter(_ != ()).mkString("{", ", ", "}") else pseudoJSON.mkString("{", ", ", "}")
   }
 
