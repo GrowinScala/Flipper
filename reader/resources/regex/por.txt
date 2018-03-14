@@ -1,0 +1,1 @@
+nome;(?:nome|eu sou|chamo|informacao).+?\s((?:[A-Z]\w+\s?){1,2})
