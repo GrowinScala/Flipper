@@ -14,12 +14,18 @@ object Converter {
     * @param filePath - String containing the URI to the pdf file
     * @param fileType - String containing the file type to be converted into (Works with jpg, png and gif)
     */
-  def convertPDFtoIMG(filePath: String,fileType: String): Unit = {
-    val pdf = PDDocument.load(new File(filePath))
-    val renderer = new PDFRenderer(pdf)
-    for (i <- 0 until pdf.getNumberOfPages) {
-      val image = renderer.renderImage(i)
-      ImageIO.write(image, fileType, new File("./target/images/Converted_Page"+i+"_" + System.nanoTime() + "."+fileType))
+  def convertPDFtoIMG(filePath: String, fileType: String): Boolean = {
+    //TODO we believe ImageIO has a default for png when the fileType is incorrect, maybe create an Enum ?
+    try {
+      val pdf = PDDocument.load(new File(filePath))
+      val renderer = new PDFRenderer(pdf)
+      for (i <- 0 until pdf.getNumberOfPages) {
+        val image = renderer.renderImage(i)
+        ImageIO.write(image, fileType, new File("./target/images/Converted_Page" + i + "_" + System.nanoTime() + "." + fileType))
+      }
+      true
+    } catch {
+      case _: Exception => false
     }
   }
 
@@ -29,17 +35,22 @@ object Converter {
     *
     * @param filePath - String containing the URI to the pdf file
     */
-  def convertPDFtoODF(filePath:String): Unit ={
-    val text = readPDF(filePath,readImages = false)
-    val pdf = PDDocument.load(new File(filePath))
-    val imgFiles = extractImgs(pdf)
-    val odf = OdfTextDocument.newTextDocument()
-    odf.addText(text)
-    imgFiles.foreach(i => {
-      odf.newParagraph()
-      odf.newImage(i.toURI)
-    })
-    odf.save("test.odt")
+  def convertPDFtoODF(filePath: String): Boolean = {
+    try {
+      val text = readPDF(filePath, readImages = false)
+      val pdf = PDDocument.load(new File(filePath))
+      val imgFiles = extractImgs(pdf)
+      val odf = OdfTextDocument.newTextDocument()
+      odf.addText(text)
+      imgFiles.foreach(i => {
+        odf.newParagraph()
+        odf.newImage(i.toURI)
+      })
+      odf.save("test.odt")
+      true
+    } catch {
+      case _: Exception => false
+    }
   }
 
 }

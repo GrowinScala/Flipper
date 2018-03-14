@@ -199,7 +199,11 @@ object Extractor {
     // then search from that point forward for a word whose POS tag matches the one passed by arguments
     val valuesList: List[String] = (for (i <- splittedWords.indices if splittedWords(i).toLowerCase == keyword.toLowerCase) yield {
       if (i < arrLength) {
-        (for (j <- i + 1 until arrLength if tags(j) == tag) yield splittedWords(j)).head
+        for (j <- i + 1 until arrLength) {
+          println(tags(j))
+        }
+        val wordList = for (j <- i + 1 until arrLength if tags(j) == tag) yield splittedWords(j)
+        if (wordList.nonEmpty) wordList.head else null
       } else {
         null //In case the keyword found is the last word in the text we're not going to find a value for it
       }
