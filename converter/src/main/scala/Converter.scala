@@ -12,7 +12,7 @@ object Converter {
     * Method that converts a pdf file into a png image
     *
     * @param filePath - String containing the URI to the pdf file
-    * @param fileType - String containing the file type to be converted into (Works with jpg, png and gif)
+    * @param fileType - String containing the file type to be converted into (Works with jpg/jpeg, png and gif)
     */
   def convertPDFtoIMG(filePath: String, fileType: String): Boolean = {
     //    require(fileType == "png" || fileType == "jpg" || fileType == "gif" || fileType == "jpeg", "File type must be one of: \"png\", \"jpg\", \"gif\" ")

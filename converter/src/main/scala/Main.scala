@@ -4,7 +4,7 @@ object Main {
 
   def main(args: Array[String]): Unit = {
     val filepath: String = "/Users/Margarida Reis/Desktop/MegaTester.pdf"
-//    convertPDFtoIMG(filepath)
-    convertPDFtoODF(filepath)
+    convertPDFtoIMG(filepath,"jpeg")
+//    convertPDFtoODF(filepath)
   }
 }
