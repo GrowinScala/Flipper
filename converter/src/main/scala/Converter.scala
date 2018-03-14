@@ -11,49 +11,18 @@ object Converter {
     * Method that converts a pdf file into a png image
     *
     * @param filePath - String containing the URI to the pdf file
+    * @param fileType - String containing the file type to be converted into (Works with jpg, png and gif. More types need to be tested)
     */
-  def convertPDFtoPNG(filePath: String): Unit = {
+  def convertPDFtoIMG(filePath: String,fileType: String): Unit = {
     val pdf = PDDocument.load(new File(filePath))
     val renderer = new PDFRenderer(pdf)
     for (i <- 0 until pdf.getNumberOfPages) {
       val image = renderer.renderImage(i)
-      ImageIO.write(image, "png", new File("./target/images/Converted_Page"+i+"_" + System.nanoTime() + ".png"))
+      ImageIO.write(image, fileType, new File("./target/images/Converted_Page"+i+"_" + System.nanoTime() + "."+fileType))
     }
   }
 
-  /**
-    * Method that converts a pdf file into a jpg image
-    *
-    * @param filePath - String containing the URI to the pdf file
-    */
-  def convertPDFtoJPG(filePath: String): Unit = {
-    val pdf = PDDocument.load(new File(filePath))
-    val renderer = new PDFRenderer(pdf)
-    for (i <- 0 until pdf.getNumberOfPages) {
-      val image = renderer.renderImage(i)
-      ImageIO.write(image, "jpg", new File("./target/images/Converted_Page"+i+"_" + System.nanoTime() + ".jpg"))
-    }
-  }
 
-  /**
-    * Method that converts a pdf file into a gif image
-    *
-    * @param filePath - String containing the URI to the pdf file
-    */
-  def convertPDFtoGIF(filePath: String): Unit = {
-    val pdf = PDDocument.load(new File(filePath))
-    val renderer = new PDFRenderer(pdf)
-    for (i <- 0 until pdf.getNumberOfPages) {
-      val image = renderer.renderImage(i)
-      ImageIO.write(image, "gif", new File("./target/images/Converted_Page"+i+"_" + System.nanoTime() + ".gif"))
-    }
-  }
-
-  /**
-    * Method that converts a pdf file into a odf image
-    *
-    * @param filePath - String containing the URI to the pdf file
-    */
   def convertPDFtoODF(filePath:String): Unit ={
     //TODO find way to create a odf file from a pdf
   }
