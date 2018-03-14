@@ -32,12 +32,12 @@ object Extractor {
     * @param filePath - String containing the URI for the file to be loaded
     * @return A String containing all the text found in the document
     */
-  def readPDF(filePath: String): String = {
+  def readPDF(filePath: String,readImages: Boolean = true): String = {
     try {
       val pdf = PDDocument.load(new File(filePath))
       val document = new PDFTextStripper
 
-      val imagesList = extractImgs(pdf)
+      if(readImages) val imagesList = extractImgs(pdf)
 //                  imagesList.foreach(f => println(readImageText(f)))
       //If we want to add the images text to str, we can do so, although its not very precise
 

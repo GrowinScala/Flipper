@@ -30,11 +30,9 @@ object Converter {
     * @param filePath - String containing the URI to the pdf file
     */
   def convertPDFtoODF(filePath:String): Unit ={
-    //TODO find way to create a odf file from a pdf
-    val text = readPDF(filePath)
+    val text = readPDF(filePath,readImages = false)
     val pdf = PDDocument.load(new File(filePath))
     val imgFiles = extractImgs(pdf)
-
     val odf = OdfTextDocument.newTextDocument()
     odf.addText(text)
     imgFiles.foreach(i => {
