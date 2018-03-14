@@ -1,0 +1,8 @@
+Nome: Margarida Reis
+Idade: 25
+Data de Nascimento: 28/12/1992
+Morada : Rua Professor MArk Athias
+Codigo Postal: 1600-646 Lisboa
+CC: 13905952
+Nacionalidade: Porguesa
+Local de Nascimento: Lisboa

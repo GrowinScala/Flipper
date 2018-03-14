@@ -1,0 +1,8 @@
+nome;(?i)(?:nome|eu sou|chamo|informacao).+?\s((?:[A-Z]\w+\s?){1,2})
+idade;(?i)(?:tenho|idade).+?(\d{1,2})
+mail;((?:[a-z]|[0-9]|\.|-|_)+@(?:[a-z]|\.)+(?:pt|com|org|net|uk|co|eu))
+data;((?:\d{1,2}|\d{4})(?:-|/)\d{1,2}(?:-|/)(?:\d{2}\D|\d{4}))
+telefone;((?:\+\d{2,3}|\(\+\d{2,3}\))\s?\d{9,10})
+nascimento;(?i)(?:nascimento|nascido).+?((?:\d{1,2}|\d{4})(?:\s|\/|-)(?:\w+|\d{2})(?:\s|\/|-)(?:\d{4}|\d{1,2}\D))
+sexo;(?i)sexo.+?(feminino|masculino|m|f)
+codigopostal;(?i)(?:codigo postal).+?((?:\d){4}-(?:\d){3})
