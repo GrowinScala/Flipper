@@ -13,15 +13,16 @@ object Generator {
     *
     * @param htmlURI - The URI of the html document (It's location in the project directory)
     */
-  def convertHTMLtoPDF(htmlURI: String): Unit = {
+  def convertHTMLtoPDF(htmlURI: String): Boolean = {
     try {
       val document = new Document()
       val writer = PdfWriter.getInstance(document, new FileOutputStream("html.pdf")) //TODO change destination folder to something else
       document.open()
       XMLWorkerHelper.getInstance().parseXHtml(writer, document, new FileInputStream(htmlURI))
       document.close()
+      true
     } catch {
-      case e: Exception => e.printStackTrace()
+      case e: Exception => false
     }
   }
 
