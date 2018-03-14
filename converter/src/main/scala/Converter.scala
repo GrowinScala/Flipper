@@ -29,7 +29,6 @@ object Converter {
     }
   }
 
-
   /**
     * Method that creates a odf file with the information taken from a pdf (Note: does not maintain format)
     *

@@ -22,8 +22,8 @@ object OpenNLP {
 
     //we can support English, Portuguese, Danish, German, Sami
     val filepath = detectLanguage(text) match {
-      case "por" => "C:/Users/Lucas Fischer/Documents/Flipper/reader/resources/pt-pos-maxent.bin"
-      case _ => "C:/Users/Lucas Fischer/Documents/Flipper/reader/resources/en-pos-maxent.bin"
+      case "por" => "C:/Users/Margarida Reis/Documents/Flipper/reader/resources/pt-pos-maxent.bin"
+      case _ => "C:/Users/Margarida Reis/Documents/Flipper/reader/resources/en-pos-maxent.bin"
     }
     //TODO Open NPL changes the POS tags according to the language used (the bin file above)
     val inputStream = new FileInputStream(filepath)
@@ -47,7 +47,7 @@ object OpenNLP {
     *         The full list of ISO identifiers can be found in https://en.wikipedia.org/wiki/List_of_ISO_639-3_codes
     */
   def detectLanguage(text: String): String = {
-    val file = new File("/Users/Lucas Fischer/Documents/Flipper/reader/resources/langdetect-183.bin")
+    val file = new File("/Users/Margarida Reis/Documents/Flipper/reader/resources/langdetect-183.bin")
     val trainedModel = new LanguageDetectorModel(file)
     val langDect = new LanguageDetectorME(trainedModel)
     langDect.predictLanguage(text).getLang

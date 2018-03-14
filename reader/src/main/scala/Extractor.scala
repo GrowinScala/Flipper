@@ -5,6 +5,7 @@ import org.apache.pdfbox.text.PDFTextStripper
 import scala.util.matching.Regex
 import OpenNLP._
 import ImageProcessing._
+import scala.io.Source
 
 /**
   * Singleton object that implements all the functionalities regarding the extraction of information from a PDF document
@@ -14,17 +15,17 @@ object Extractor {
   type Keyword = String
   type MatchedPair = List[(Keyword, List[String])]
 
-  //A Map of keywords -> regular expressions that were tailored to obtain better results
-  val knownRegEx: Map[Keyword, Regex] = Map(
-    "name" -> "(?:name is|I'm|I am|(?:n|N)ame:|(?:(?i)Personal Information))\\s+((?:[A-Z]\\w+\\s?){1,2})".r,
-    "age" -> "(?:I'm|I am)\\s+(\\d{1,2})".r,
-    "mail" -> "((?:[a-z]|[0-9]|\\.|-|_)+@(?:[a-z]|\\.)+(?:pt|com|org|net|uk|co|eu))".r,
-    "date" -> "((?:\\d{1,2}|\\d{4})(?:-|/)\\d{1,2}(?:-|/)(?:\\d{2}\\D|\\d{4}))".r,
-    "phone" -> "((?:\\+\\d{2,3}|\\(\\+\\d{2,3}\\))\\s?\\d{9,10})".r,
-    "birth" -> "(?i)(?:Date of birth|birth date)\\s+((?:\\d{1,2}|\\d{4})(?:\\s|\\/|-)(?:\\w+|\\d{2})(?:\\s|\\/|-)(?:\\d{4}|\\d{1,2}\\D))".r,
-    "gender" -> "(?i)(?:gender|sex)\\s+(?i)(Male|Female|f|m)".r,
-    "zipcode" -> "(?i)((?:\\d|\\w){4}-(?:\\d|\\w){3})".r
-  )
+//  A Map of keywords -> regular expressions that were tailored to obtain better results
+//  val knownRegEx: Map[Keyword, Regex] = Map(
+//    "name" -> "(?:name is|I'm|I am|(?:n|N)ame:|(?:(?i)Personal Information))\\s+((?:[A-Z]\\w+\\s?){1,2})".r,
+//    "age" -> "(?:I'm|I am)\\s+(\\d{1,2})".r,
+//    "mail" -> "((?:[a-z]|[0-9]|\\.|-|_)+@(?:[a-z]|\\.)+(?:pt|com|org|net|uk|co|eu))".r,
+//    "date" -> "((?:\\d{1,2}|\\d{4})(?:-|/)\\d{1,2}(?:-|/)(?:\\d{2}\\D|\\d{4}))".r,
+//    "phone" -> "((?:\\+\\d{2,3}|\\(\\+\\d{2,3}\\))\\s?\\d{9,10})".r,
+//    "birth" -> "(?i)(?:Date of birth|birth date)\\s+((?:\\d{1,2}|\\d{4})(?:\\s|\\/|-)(?:\\w+|\\d{2})(?:\\s|\\/|-)(?:\\d{4}|\\d{1,2}\\D))".r,
+//    "gender" -> "(?i)(?:gender|sex)\\s+(?i)(Male|Female|f|m)".r,
+//    "zipcode" -> "(?i)((?:\\d|\\w){4}-(?:\\d|\\w){3})".r
+//  )
 
   /**
     * Method that given a file path (maybe change to a real file) will load that PDF file and read the text from it
@@ -37,10 +38,10 @@ object Extractor {
       val pdf = PDDocument.load(new File(filePath))
       val document = new PDFTextStripper
 
-      if (readImages) {
+      if(readImages) {
         val imagesList = extractImgs(pdf)
+//        imagesList.foreach(f => println(readImageText(f)))
       }
-      //                  imagesList.foreach(f => println(readImageText(f)))
       //If we want to add the images text to str, we can do so, although its not very precise
 
       val str = Normalizer.normalize(document.getText(pdf), Normalizer.Form.NFD)
@@ -64,6 +65,7 @@ object Extractor {
     */
   def getAllMatchedValues(text: String, keywords: List[(Keyword, String)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
     if (keywords == null || text == null || keywords.isEmpty || text == "") return List() //or null
+    val knownRegEx: Map[String,Regex] = importRegExFile(detectLanguage(text))
     val matched = keywords.map(key => {
 
       //If the client sent a custom RegEx to use on this key, use it
@@ -73,7 +75,6 @@ object Extractor {
       //if we already know a good RegEx for this keyword, use it
       else if (knownRegEx.contains(key._1))
         (key._1, knownRegEx(key._1).findAllIn(text).matchData.map(_.group(1)).toList.distinct)
-
 
       else findKeywordInText(key._1, key._2, text) //to be changed, here we need to manually search for the keywords in the text
     })
@@ -210,5 +211,21 @@ object Extractor {
     }).toList
 
     (keyword, valuesList.filter(_ != null))
+  }
+
+  /**
+    * Method that initializes the regular expretions from the given language identified in the pdf
+    *
+    * @param lang - String containing the language identified
+    * @return - A Map containing all RegEx defined for each keyword
+    */
+  def importRegExFile(lang:String): Map[Keyword,Regex] ={
+    val fileLines = Source.fromFile("./reader/resources/regex/"+lang+".txt").getLines
+
+    val regMap: Map[Keyword,Regex]= fileLines.map(l =>{
+      val splitLine = l.split(";")
+      splitLine(0) -> splitLine(1).r
+    }).toMap
+    regMap
   }
 }
