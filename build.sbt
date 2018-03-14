@@ -11,7 +11,8 @@ val basicSettings = Seq(
   libraryDependencies += "com.itextpdf.tool" % "xmlworker" % "5.5.10",
   libraryDependencies += "com.itextpdf" % "itextpdf" % "5.5.10",
   libraryDependencies += "com.lihaoyi" %% "scalatags" % "0.6.7",
-  libraryDependencies += "org.json4s" %% "json4s-native" % "3.6.0-M2"
+  libraryDependencies += "org.json4s" %% "json4s-native" % "3.6.0-M2",
+  libraryDependencies += "org.odftoolkit" % "odfdom-java" % "0.8.7"
   //TODO I THINK ITEXT IS A PAID SOFTWARE, WE NEED TO BE SURE
   //libraryDependencies += "com.levigo.jbig2" % "levigo-jbig2-imageio" % "2.0"
 )
@@ -23,4 +24,4 @@ lazy val reader = project.in(file("reader")).settings(basicSettings)
 
 lazy val generator = project.in(file("generator")).settings(basicSettings)
 
-lazy val converter = project.in(file("converter")).settings(basicSettings)
+lazy val converter = project.in(file("converter")).dependsOn(reader).settings(basicSettings)
