@@ -196,7 +196,6 @@ object Extractor {
         null //In case the keyword found is the last word in the text we're not going to find a value for it
       }
     }).toList
-
     (keyword, valuesList.filter(_ != null))
   }
 

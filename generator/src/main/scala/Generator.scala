@@ -49,5 +49,4 @@ object Generator {
       filepath
     } else "" //TODO Or change this to null ???
   }
-
 }

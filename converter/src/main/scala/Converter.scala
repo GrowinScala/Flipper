@@ -46,11 +46,10 @@ object Converter {
         odf.newParagraph()
         odf.newImage(i.toURI)
       })
-      odf.save("test.odt")
+      odf.save("test.odf")
       true
     } catch {
       case _: Exception => false
     }
   }
-
 }
