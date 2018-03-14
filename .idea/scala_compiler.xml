@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ScalaCompilerConfiguration">
-    <profile name="sbt 1" modules="flipper,root,converter,generator,reader" />
+    <profile name="sbt 1" modules="flipper,reader~1,reader,root,converter,generator,Flipper-reader" />
   </component>
 </project>

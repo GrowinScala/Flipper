@@ -37,8 +37,7 @@ object Extractor {
       pdf.close()
       str
     } catch {
-      case t: Throwable => t.printStackTrace() //we can remove this if we don't want the error message to appear
-        null
+      case t: Throwable => null //we can remove this if we don't want the error message to appear
     }
   }
 

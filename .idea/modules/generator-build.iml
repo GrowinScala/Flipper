@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id="generator-build" external.linked.project.path="$MODULE_DIR$/../../generator/project" external.root.project.path="$MODULE_DIR$/../.." external.system.id="SBT" sbt.imports="SUB:DOLLAR0027d868ab8a86fa62e2.`converter`, SUB:DOLLAR0027d868ab8a86fa62e2.`generator`, SUB:DOLLAR0027d868ab8a86fa62e2.`reader`, SUB:DOLLAR0027d868ab8a86fa62e2.`root`, _root_.sbt.Keys._, _root_.sbt._, _root_.sbt.plugins.IvyPlugin, _root_.sbt.plugins.JvmPlugin, _root_.sbt.plugins.CorePlugin, _root_.sbt.plugins.JUnitXmlReportPlugin, _root_.sbt.plugins.Giter8TemplatePlugin, _root_.scala.xml.{TopScope=&gt;SUB:DOLLARscope}" sbt.resolvers="https://repo1.maven.org/maven2/|maven|public, file:/C:/Users/Margarida%20Reis/.sbt/preloaded/|maven|local-preloaded, C:\Users\Margarida Reis\.ivy2\cache|ivy|Local cache" type="SBT_MODULE" version="4">
+<module external.linked.project.id="generator-build" external.linked.project.path="$MODULE_DIR$/../../generator/project" external.root.project.path="$MODULE_DIR$/../.." external.system.id="SBT" sbt.imports="SUB:DOLLARb71e9bbb3a1b98348bf5.`converter`, SUB:DOLLARb71e9bbb3a1b98348bf5.`generator`, SUB:DOLLARb71e9bbb3a1b98348bf5.`reader`, SUB:DOLLARb71e9bbb3a1b98348bf5.`root`, _root_.sbt.Keys._, _root_.sbt._, _root_.sbt.plugins.IvyPlugin, _root_.sbt.plugins.JvmPlugin, _root_.sbt.plugins.CorePlugin, _root_.sbt.plugins.JUnitXmlReportPlugin, _root_.sbt.plugins.Giter8TemplatePlugin, _root_.scala.xml.{TopScope=&gt;SUB:DOLLARscope}" sbt.resolvers="https://repo1.maven.org/maven2/|maven|public, file:/C:/Users/Lucas%20Fischer/.sbt/preloaded/|maven|local-preloaded, C:\Users\Lucas Fischer\.ivy2\cache|ivy|Local cache" type="SBT_MODULE" version="4">
   <component name="NewModuleRootManager">
     <output url="file://$MODULE_DIR$/../../generator/project/target/idea-classes" />
     <output-test url="file://$MODULE_DIR$/../../generator/project/target/idea-test-classes" />
@@ -11,7 +11,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="root-build" />
     <orderEntry type="module-library">
       <library name="sbt: sbt-and-plugins">
         <CLASSES>
@@ -100,5 +99,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module" module-name="root-build" />
   </component>
 </module>

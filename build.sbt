@@ -20,7 +20,6 @@ val basicSettings = Seq(
 
 lazy val root = project.in(file(".")).aggregate(reader, generator, converter).settings(basicSettings)
 
-//TODO sbt's having inconsistencies with working directories: on run its "." (root), on test its "./reader"
 lazy val reader = project.in(file("reader")).settings(basicSettings) //TODO Add fork in test := true, baseDirectory in test := file(".")
 
 lazy val generator = project.in(file("generator")).settings(basicSettings)
