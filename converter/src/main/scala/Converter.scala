@@ -31,7 +31,7 @@ object Converter {
   }
 
   /**
-    * Method that creates a odf file with the information taken from a pdf (Note: does not maintain format)
+    * Method that creates a odf file with the information taken from a pdf (Note: does not maintain image and text order)
     *
     * @param filePath - String containing the URI to the pdf file
     */
@@ -41,8 +41,12 @@ object Converter {
       val pdf = PDDocument.load(new File(filePath))
       val imgFiles = extractImgs(pdf)
       val odf = OdfTextDocument.newTextDocument()
-      odf.addText(text)
+      text.split("\n").foreach(l => odf.newParagraph(l))
       imgFiles.foreach(i => {
+        odf.newParagraph()
+        odf.newParagraph()
+        odf.newParagraph()
+        odf.newParagraph()
         odf.newParagraph()
         odf.newImage(i.toURI)
       })

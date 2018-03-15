@@ -10,7 +10,7 @@ import org.apache.pdfbox.pdmodel.PDDocument
 @RunWith(classOf[JUnitRunner])
 class ConverterSuite extends FunSuite {
 
-  val validPath: String = "./resources/cv.pdf"
+  val validPath: String = "./converter/resources/cv.pdf"
 
   /**
     * Tests that sending a invalid filePath and/or fileType (null, empty, non-existing) will return false
