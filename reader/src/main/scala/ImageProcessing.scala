@@ -1,10 +1,8 @@
 import java.io.File
 import javax.imageio.ImageIO
-
 import net.sourceforge.tess4j.Tesseract
 import org.apache.pdfbox.pdmodel.PDDocument
 import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject
-import org.apache.pdfbox.rendering.PDFRenderer
 
 /**
   * Singleton Object that implements all the image processing functionalities
@@ -52,6 +50,8 @@ object ImageProcessing {
         val o = pRes.getXObject(r)
         if (o.isInstanceOf[PDImageXObject]) {
           val file = new File("./target/images/Page" + (i + 1) + "_" + System.nanoTime() + ".png")
+          //          val image = o.asInstanceOf[PDImageXObject].getImage
+          //          saveGridImage(file, image)
           ImageIO.write(o.asInstanceOf[PDImageXObject].getImage, "png", file)
           mutableFilesList = mutableFilesList :+ file
         }
@@ -59,4 +59,42 @@ object ImageProcessing {
     }
     mutableFilesList
   }
+
+
+  //No improvment on OCR results :(
+  //  def saveGridImage(output: File, gridImage: BufferedImage): Unit = {
+  //    val iw = ImageIO.getImageWritersByFormatName("png")
+  //    while (iw.hasNext) {
+  //      val writer = iw.next
+  //      val writeParam = writer.getDefaultWriteParam
+  //      val typeSpecifier = ImageTypeSpecifier.createFromBufferedImageType(BufferedImage.TYPE_INT_RGB)
+  //      val metadata = writer.getDefaultImageMetadata(typeSpecifier, writeParam)
+  //
+  //      setDPI(metadata)
+  //      val stream = ImageIO.createImageOutputStream(output)
+  //      try {
+  //        writer.setOutput(stream)
+  //        writer.write(metadata, new IIOImage(gridImage, null, metadata), writeParam)
+  //      } finally {
+  //        stream.close()
+  //      }
+  //    }
+  //  }
+  //
+  //  def setDPI(metadata: IIOMetadata): Unit = {
+  //    val dotsPerMili = 1.0 * 1000 / 10 / 25.4
+  //    val horiz = new IIOMetadataNode("HorizontalPixelSize")
+  //    horiz.setAttribute("value", dotsPerMili.toString)
+  //
+  //    val vert = new IIOMetadataNode("VerticalPixelSize")
+  //    vert.setAttribute("value", dotsPerMili.toString)
+  //
+  //    val dim = new IIOMetadataNode("Dimension")
+  //    dim.appendChild(horiz)
+  //    dim.appendChild(vert)
+  //
+  //    val root = new IIOMetadataNode("javax_imageio_1.0")
+  //    root.appendChild(dim)
+  //    metadata.mergeTree("javax_imageio_1.0", root)
+  //  }
 }

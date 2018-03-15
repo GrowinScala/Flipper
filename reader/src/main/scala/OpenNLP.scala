@@ -20,7 +20,7 @@ object OpenNLP {
   def tagText(text: String): (Array[String], Array[String]) = {
     if (text == null) return (Array(), Array())
 
-    //we can support English, Portuguese, Danish, German, Sami
+    //we can support English, Portuguese, Danish, German, Swedish
     val filepath = detectLanguage(text) match {
       case "por" => "./reader/resources/pt-pos-maxent.bin"
       case _ => "./reader/resources/en-pos-maxent.bin"

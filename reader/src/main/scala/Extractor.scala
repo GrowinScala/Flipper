@@ -28,7 +28,7 @@ object Extractor {
 
       if (readImages) {
         val imagesList = extractImgs(pdf)
-        //        imagesList.foreach(f => println(readImageText(f)))
+//        imagesList.foreach(f => println(readImageText(f)))
       }
       //If we want to add the images text to str, we can do so, although its not very precise
 
@@ -104,7 +104,7 @@ object Extractor {
     val mappedValues = for (i <- 0 to mostfound._2; m <- matchedValues) yield {
       if (m._2.size > i)
         List(m._2(i))
-      else List("Not Defined") //change to List(null) or List() ??
+      else List("Not Defined") //TODO change to List(null) or List() ??
     }
     mappedValues.zipWithIndex.map(pair => (keywords(pair._2 % keywords.length)._1, pair._1)).toList.grouped(keywords.size).toList
   }
