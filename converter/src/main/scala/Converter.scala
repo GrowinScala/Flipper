@@ -31,7 +31,7 @@ object Converter {
   }
 
   /**
-    * Method that creates a odf file with the information taken from a pdf (Note: does not maintain full format)
+    * Method that creates a odf file with the information taken from a pdf (Note: does not maintain image and text order)
     *
     * @param filePath - String containing the URI to the pdf file
     */
