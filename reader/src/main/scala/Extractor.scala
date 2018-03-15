@@ -28,7 +28,7 @@ object Extractor {
 
       if (readImages) {
         val imagesList = extractImgs(pdf)
-//        imagesList.foreach(f => println(readImageText(f)))
+        //        imagesList.foreach(f => println(readImageText(f)))
       }
       //If we want to add the images text to str, we can do so, although its not very precise
 
@@ -52,7 +52,7 @@ object Extractor {
     */
   def getAllMatchedValues(text: String, keywords: List[(Keyword, String)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
     if (keywords == null || text == null || keywords.isEmpty || text == "") return List() //or null
-    val knownRegEx: Map[String, Regex] = importRegExFile(detectLanguage(text))
+    val knownRegEx: Map[String, Regex] = importRegExFile(detectLanguage(text)) //TODO Make sure the lang is only eng or por
     val matched = keywords.map(key => {
 
       //If the client sent a custom RegEx to use on this key, use it
@@ -60,7 +60,7 @@ object Extractor {
         (key._1, clientRegEx(key._1).findAllIn(text).matchData.map(_.group(1)).toList.distinct)
 
       //if we already know a good RegEx for this keyword, use it
-      else if (knownRegEx.contains(key._1))
+      else if (knownRegEx.contains(key._1) && knownRegEx != null)
         (key._1, knownRegEx(key._1).findAllIn(text).matchData.map(_.group(1)).toList.distinct)
 
       else findKeywordInText(key._1, key._2, text) //to be changed, here we need to manually search for the keywords in the text
@@ -99,10 +99,10 @@ object Extractor {
     }
 
     val matchedValues = getAllMatchedValues(text, keywords, clientRegEx)
-    val mostfound = getListSizes(matchedValues).maxBy(_._2)
+    val mostfound = getListSizes(matchedValues).maxBy(_._2) //Gets the size of the pair that has the most values
 
     val mappedValues = for (i <- 0 to mostfound._2; m <- matchedValues) yield {
-      if (m._2.size > i)
+      if (m._2.size > i) //Prevent array out of bounds exception
         List(m._2(i))
       else List("Not Defined") //TODO change to List(null) or List() ??
     }
@@ -176,7 +176,7 @@ object Extractor {
     * @return A pair containing the keyword and a list of values found for that keyword
     */
   def findKeywordInText(keyword: Keyword, tag: String, text: String): (Keyword, List[String]) = {
-    //TODO convert tags, the client could send Noun and we have to translate to NN, or force cliente to send the correct way
+    //TODO convert tags, the client could send Noun and we have to translate to NN, or force client to send the correct way
     val (splittedWords, tags) = tagText(text)
 
     lazy val arrLength = splittedWords.length

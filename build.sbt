@@ -20,7 +20,7 @@ val basicSettings = Seq(
 
 lazy val root = project.in(file(".")).aggregate(reader, generator, converter).settings(basicSettings)
 
-lazy val reader = project.in(file("reader")).settings(basicSettings) //TODO Add fork in test := true, baseDirectory in test := file(".")
+lazy val reader = project.in(file("reader")).settings(basicSettings)
 
 lazy val generator = project.in(file("generator")).settings(basicSettings)
 
