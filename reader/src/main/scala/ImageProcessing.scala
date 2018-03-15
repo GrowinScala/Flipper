@@ -37,7 +37,10 @@ object ImageProcessing {
     */
   def extractImgs(document: PDDocument): List[File] = {
     if (document == null) return List()
-    //TODO Remove all the files in ./targer/images first
+    //TODO Remove all the files in ./target/images first
+//    val dir = new File("./target/images")
+//    val files = dir.listFiles.filter(_.isFile).toList
+//    files.foreach(f => f.delete())
 
     val numPages = document.getNumberOfPages
     //Using a mutable List for return a List of files (images) found in the pdf document
