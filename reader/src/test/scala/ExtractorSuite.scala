@@ -176,7 +176,7 @@ class ExtractorSuite extends FunSuite {
       List(("name", List("Lucas"))),
       List(("name", List("Albertina"))),
       List(("name", List("Justino Alberto"))),
-      List(("name", List("Not Defined")))
+      List(("name", List()))
     )
     pseudoJsonObjs should equal(expected)
   }
@@ -185,7 +185,7 @@ class ExtractorSuite extends FunSuite {
     * Tests that making a JSON String with an empty list will return an empty JSON object ("{}")
     */
   test("Make JSON string with an empty list") {
-     assert(makeJSONString(List()) == "{}")
+    assert(makeJSONString(List()) == "{}")
   }
 
   /**
