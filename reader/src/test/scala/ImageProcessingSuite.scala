@@ -20,42 +20,38 @@ class ImageProcessingSuite extends FunSuite {
   test("extractImgs returns empty list") {
     val fp = "./reader/resources/test.pdf"
     val pdf = PDDocument.load(new File(fp))
-    assert(extractImgs(pdf).isEmpty)
+    assert(extractImgs(pdf).getOrElse(List()).isEmpty)
   }
 
   /**
-    * Tests that sending a null file to extractImgs with return an empty list
+    * Tests that sending a null file to extractImgs will result in a NullPointerException
     */
   test("extractImgs returns an empty list with a null file") {
-//    assertThrows[NullPointerException](
-//      extractImgs(null)
-//    )
-    assert(extractImgs(null).isEmpty)
+    assertThrows[NullPointerException] {
+      extractImgs(null)
+    }
   }
 
   /**
     * Tests that sending a file with, for example, two images, will return a list of files with size two
     */
   test("extractImgs returns correct number of images") {
-    assert(extractImgs(pdf).size == 2)
+    assert(extractImgs(pdf).getOrElse(List()).size == 2)
   }
 
   /**
-    * Tests that sending a null file to readImageText will return an empty string ("")
+    * Tests that sending a null file to readImageText will result in a NullPointerException
     */
   test("readImageText with a null file") {
-//    assertThrows[NullPointerException](
-//      readImageText(null)
-//    )
-    assert(readImageText(null) == "")
+    assert(readImageText(null).isEmpty)
   }
 
   /**
     * Tests that sending a image of Growin's logo will return a close guess of the text in the image
     */
   test("readImageText returns a close guess of the images text") {
-    val growinLogo = extractImgs(pdf).head
-    assert(readImageText(growinLogo).substring(0, 5) == "growi")
+    val growinLogo = extractImgs(pdf).getOrElse(List()).head
+    assert(readImageText(growinLogo).getOrElse("").substring(0, 5) == "growi")
   }
 
 }
