@@ -15,20 +15,21 @@ object Converter {
     * @param fileType - String containing the file type to be converted into (Works with jpg/jpeg, png and gif)
     */
   def convertPDFtoIMG(filePath: String, fileType: String): Boolean = {
-    if(fileType != "png" && fileType != "jpg" && fileType != "gif" && fileType != "jpeg") return  false
-//      TODO we believe ImageIO has a default for png when the fileType is incorrect, maybe create an Enum ?
-    try {
-      val pdf = PDDocument.load(new File(filePath))
-      val renderer = new PDFRenderer(pdf)
-      for (i <- 0 until pdf.getNumberOfPages) {
-        val image = renderer.renderImage(i)
-        ImageIO.write(image, fileType, new File("./target/images/Converted_Page" + i + "_" + System.nanoTime() + "." + fileType))
+    if (fileType != "png" && fileType != "jpg" && fileType != "gif" && fileType != "jpeg") false
+    else {
+      //      TODO we believe ImageIO has a default for png when the fileType is incorrect, maybe create an Enum ?
+      try {
+        val pdf = PDDocument.load(new File(filePath))
+        val renderer = new PDFRenderer(pdf)
+        for (i <- 0 until pdf.getNumberOfPages) {
+          val image = renderer.renderImage(i)
+          ImageIO.write(image, fileType, new File("./target/images/Converted_Page" + i + "_" + System.nanoTime() + "." + fileType))
+        }
+        true
+      } catch {
+        case _: Exception => false
       }
-      true
-    } catch {
-      case _: Exception => false
     }
-
   }
 
   /**

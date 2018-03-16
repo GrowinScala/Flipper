@@ -51,21 +51,23 @@ object Extractor {
     * @return a List containing pairs of Keywords and a List (non-repeating) of values found for that keyword
     */
   def getAllMatchedValues(text: String, keywords: List[(Keyword, String)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
-    if (keywords == null || text == null || keywords.isEmpty || text == "") return List() //or null
-    val knownRegEx: Map[String, Regex] = importRegExFile(detectLanguage(text)) //TODO Make sure the lang is only eng or por
-    val matched = keywords.map(key => {
+    if (keywords == null || text == null || keywords.isEmpty || text == "") List()
+    else {
+      val knownRegEx: Map[String, Regex] = importRegExFile(text)
+      val matched = keywords.map(key => {
 
-      //If the client sent a custom RegEx to use on this key, use it
-      if (clientRegEx.contains(key._1) && clientRegEx != null)
-        (key._1, clientRegEx(key._1).findAllIn(text).matchData.map(_.group(1)).toList.distinct)
+        //If the client sent a custom RegEx to use on this key, use it
+        if (clientRegEx.contains(key._1) && clientRegEx != null)
+          (key._1, clientRegEx(key._1).findAllIn(text).matchData.map(_.group(1)).toList.distinct)
 
-      //if we already know a good RegEx for this keyword, use it
-      else if (knownRegEx.contains(key._1) && knownRegEx != null)
-        (key._1, knownRegEx(key._1).findAllIn(text).matchData.map(_.group(1)).toList.distinct)
+        //if we already know a good RegEx for this keyword, use it
+        else if (knownRegEx.contains(key._1) && knownRegEx != null)
+          (key._1, knownRegEx(key._1).findAllIn(text).matchData.map(_.group(1)).toList.distinct)
 
-      else findKeywordInText(key._1, key._2, text) //to be changed, here we need to manually search for the keywords in the text
-    })
-    filterNewLines(matched)
+        else findKeywordInText(key._1, key._2, text) //to be changed, here we need to manually search for the keywords in the text
+      })
+      filterNewLines(matched)
+    }
   }
 
   /**
@@ -77,9 +79,10 @@ object Extractor {
     * @param clientRegEx - Optional parameter - If the client already has a predefined Regular Expression for a given key
     * @return A List containing pairs of keywords with a single matched value
     */
+  //TODO substituir por Options aqui ??
   def getSingleMatchedValue(text: String, keywords: List[(Keyword, String)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
-    if (keywords == null || text == null || keywords.isEmpty || text == "") return List() //or null
-    getAllMatchedValues(text, keywords, clientRegEx).map(pair => if (pair._2.nonEmpty) (pair._1, List(pair._2.head)) else (pair._1, List()))
+    if (keywords == null || text == null || keywords.isEmpty || text == "") List()
+    else getAllMatchedValues(text, keywords, clientRegEx).map(pair => if (pair._2.nonEmpty) (pair._1, List(pair._2.head)) else (pair._1, List()))
   }
 
   /**
@@ -92,21 +95,22 @@ object Extractor {
     * @return A List containing sublists of pairs of keywords with single matched values
     */
   def getAllObjects(text: String, keywords: List[(Keyword, String)], clientRegEx: Map[Keyword, Regex] = Map()): List[MatchedPair] = {
-    if (keywords == null || text == null || keywords.isEmpty || text == "") return List() //or null
+    if (keywords == null || text == null || keywords.isEmpty || text == "") List()
+    else {
+      def getListSizes(matchedValues: MatchedPair): List[(Keyword, Int)] = {
+        for (m <- matchedValues) yield (m._1, m._2.size)
+      }
 
-    def getListSizes(matchedValues: MatchedPair): List[(Keyword, Int)] = {
-      for (m <- matchedValues) yield (m._1, m._2.size)
+      val matchedValues = getAllMatchedValues(text, keywords, clientRegEx)
+      val mostfound = getListSizes(matchedValues).maxBy(_._2) //Gets the size of the pair that has the most values
+
+      val mappedValues = for (i <- 0 to mostfound._2; m <- matchedValues) yield {
+        if (m._2.size > i) //Prevent array out of bounds exception
+          List(m._2(i))
+        else List("Not Defined") //TODO change to List(null) or List() ??
+      }
+      mappedValues.zipWithIndex.map(pair => (keywords(pair._2 % keywords.length)._1, pair._1)).toList.grouped(keywords.size).toList
     }
-
-    val matchedValues = getAllMatchedValues(text, keywords, clientRegEx)
-    val mostfound = getListSizes(matchedValues).maxBy(_._2) //Gets the size of the pair that has the most values
-
-    val mappedValues = for (i <- 0 to mostfound._2; m <- matchedValues) yield {
-      if (m._2.size > i) //Prevent array out of bounds exception
-        List(m._2(i))
-      else List("Not Defined") //TODO change to List(null) or List() ??
-    }
-    mappedValues.zipWithIndex.map(pair => (keywords(pair._2 % keywords.length)._1, pair._1)).toList.grouped(keywords.size).toList
   }
 
   /**
@@ -123,21 +127,22 @@ object Extractor {
     * @return
     */
   def makeJSONString(listJSON: MatchedPair, flag: String = "empty"): String = {
-    if (listJSON == null) return "{}"
-
-    val pseudoJSON = listJSON.map(k =>
-      if (k._2.nonEmpty) {
-        if (k._2.size > 1) "\"" + k._1 + "\":\"" + k._2.mkString("[", ", ", "]") + "\""
-        else "\"" + k._1 + "\": \"" + k._2.head + "\""
-      } else {
-        if (flag == "empty") {
-          "\"" + k._1 + "\": \"\""
-        } else if (flag == "null") {
-          "\"" + k._1 + "\": \"null\""
+    if (listJSON == null) "{}"
+    else {
+      val pseudoJSON = listJSON.map(k =>
+        if (k._2.nonEmpty) {
+          if (k._2.size > 1) "\"" + k._1 + "\":\"" + k._2.mkString("[", ", ", "]") + "\""
+          else "\"" + k._1 + "\": \"" + k._2.head + "\""
+        } else {
+          if (flag == "empty") {
+            "\"" + k._1 + "\": \"\""
+          } else if (flag == "null") {
+            "\"" + k._1 + "\": \"null\""
+          }
         }
-      }
-    )
-    if (flag == "remove") pseudoJSON.filter(_ != ()).mkString("{", ", ", "}") else pseudoJSON.mkString("{", ", ", "}")
+      )
+      if (flag == "remove") pseudoJSON.filter(_ != ()).mkString("{", ", ", "}") else pseudoJSON.mkString("{", ", ", "}")
+    }
   }
 
   /**
@@ -187,9 +192,9 @@ object Extractor {
     val valuesList: List[String] = (for (i <- splittedWords.indices if splittedWords(i).toLowerCase == keyword.toLowerCase) yield {
       if (i < arrLength) {
         val wordList = for (j <- i + 1 until arrLength if tags(j) == tag) yield splittedWords(j)
-        if (wordList.nonEmpty) wordList.head else null
+        if (wordList.nonEmpty) wordList.head else ""
       } else {
-        null //In case the keyword found is the last word in the text we're not going to find a value for it
+        "" //In case the keyword found is the last word in the text we're not going to find a value for it
       }
     }).toList
 
@@ -202,10 +207,14 @@ object Extractor {
   /**
     * Method that initializes the regular expressions from the given language identified in the pdf
     *
-    * @param lang - String containing the language identified
+    * @param text - The text extracted from the pdf document
     * @return - A Map containing all RegEx defined for each keyword
     */
-  def importRegExFile(lang: String): Map[Keyword, Regex] = {
+  def importRegExFile(text: String): Map[Keyword, Regex] = {
+    val lang = detectLanguage(text) match {
+      case "por" => "por"
+      case _ => "eng"
+    }
     val fileLines = Source.fromFile("./reader/resources/regex/" + lang + ".txt").getLines
     fileLines.map(l => {
       val splitLine = l.split(";")

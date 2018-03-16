@@ -18,24 +18,25 @@ object OpenNLP {
     *         and ._2 equals all the corresponding POS tag for each word
     */
   def tagText(text: String): (Array[String], Array[String]) = {
-    if (text == null) return (Array(), Array())
+    if (text == null) (Array(), Array())
+    else {
+      //we can support English, Portuguese, Danish, German, Swedish
+      val filepath = detectLanguage(text) match {
+        case "por" => "./reader/resources/pt-pos-maxent.bin"
+        case _ => "./reader/resources/en-pos-maxent.bin"
+      }
+      //TODO Open NPL changes the POS tags according to the language used (the bin file above)
+      val inputStream = new FileInputStream(filepath)
+      val posModel = new POSModel(inputStream)
+      val wsTokenizer = WhitespaceTokenizer.INSTANCE
 
-    //we can support English, Portuguese, Danish, German, Swedish
-    val filepath = detectLanguage(text) match {
-      case "por" => "./reader/resources/pt-pos-maxent.bin"
-      case _ => "./reader/resources/en-pos-maxent.bin"
+      val splittedWords = wsTokenizer.tokenize(text)
+
+      val tagger = new POSTaggerME(posModel) //Instanciate the POSTagger
+      val tags = tagger.tag(splittedWords) //Tag all the words in the text
+
+      (splittedWords, tags)
     }
-    //TODO Open NPL changes the POS tags according to the language used (the bin file above)
-    val inputStream = new FileInputStream(filepath)
-    val posModel = new POSModel(inputStream)
-    val wsTokenizer = WhitespaceTokenizer.INSTANCE
-
-    val splittedWords = wsTokenizer.tokenize(text)
-
-    val tagger = new POSTaggerME(posModel) //Instanciate the POSTagger
-    val tags = tagger.tag(splittedWords) //Tag all the words in the text
-
-    (splittedWords, tags)
   }
 
   /**
@@ -54,13 +55,13 @@ object OpenNLP {
   }
 
 
-  def translatePOSTag(tag: String): String = {
-    //TODO Open NLP returns different POS tags acording to the language used in the bin file
-    /**
-      * Should we try to translate a tag from one language to another ?
-      * In some cases this will fail, for example a portuguese conjunção does not exist in english
-      * Also there are about 70 POS tags for the english language
-      */
-    ???
-  }
+  //  def translatePOSTag(tag: String): String = {
+  //    //TODO Open NLP returns different POS tags acording to the language used in the bin file
+  //    /**
+  //      * Should we try to translate a tag from one language to another ?
+  //      * In some cases this will fail, for example a portuguese conjunção does not exist in english
+  //      * Also there are about 70 POS tags for the english language
+  //      */
+  //    ???
+  //  }
 }
