@@ -254,5 +254,4 @@ object Extractor {
 
     start(0)
   }
-
 }
