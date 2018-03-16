@@ -56,8 +56,9 @@ object Extractor {
     * @return a List containing pairs of Keywords and a List (non-repeating) of values found for that keyword
     */
   def getAllMatchedValues(text: Option[String], keywords: List[(Keyword, String)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
+    require(keywords.nonEmpty, "The list of keywords should not be empty") //Should we do this?
     val textContent = text.getOrElse("")
-    if (keywords.isEmpty || textContent.isEmpty) List()
+    if (textContent.isEmpty) List()
     else {
       val knownRegEx: Map[String, Regex] = importRegExFile(textContent)
       val matched = keywords.map(key => {
@@ -85,9 +86,10 @@ object Extractor {
     * @param clientRegEx - Optional parameter - If the client already has a predefined Regular Expression for a given key
     * @return A List containing pairs of keywords with a single matched value
     */
-  //TODO substituir por Options aqui ??
-  def getSingleMatchedValue(text: String, keywords: List[(Keyword, String)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
-    if ( keywords.isEmpty || text == "") List()
+  def getSingleMatchedValue(text: Option[String], keywords: List[(Keyword, String)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
+    require(keywords.nonEmpty, "The list of keywords should not be empty")
+    val textContet = text.getOrElse("")
+    if (textContet.isEmpty) List()
     else getAllMatchedValues(text, keywords, clientRegEx).map(pair => if (pair._2.nonEmpty) (pair._1, List(pair._2.head)) else (pair._1, List()))
   }
 
@@ -100,8 +102,10 @@ object Extractor {
     * @param clientRegEx - Optional parameter - If the client already has a predefined Regular Expression for a given key
     * @return A List containing sublists of pairs of keywords with single matched values
     */
-  def getAllObjects(text: String, keywords: List[(Keyword, String)], clientRegEx: Map[Keyword, Regex] = Map()): List[MatchedPair] = {
-    if ( keywords.isEmpty || text == "") List()
+  def getAllObjects(text: Option[String], keywords: List[(Keyword, String)], clientRegEx: Map[Keyword, Regex] = Map()): List[MatchedPair] = {
+    require(keywords.nonEmpty, "The list of keywords should not be empty")
+    val textContent = text.getOrElse("")
+    if (textContent.isEmpty) List()
     else {
       def getListSizes(matchedValues: MatchedPair): List[(Keyword, Int)] = {
         for (m <- matchedValues) yield (m._1, m._2.size)
@@ -113,7 +117,7 @@ object Extractor {
       val mappedValues = for (i <- 0 to mostfound._2; m <- matchedValues) yield {
         if (m._2.size > i) //Prevent array out of bounds exception
           List(m._2(i))
-        else List("Not Defined") //TODO change to List(null) or List() ??
+        else List("Not Defined") //TODO change to List() ??
       }
       mappedValues.zipWithIndex.map(pair => (keywords(pair._2 % keywords.length)._1, pair._1)).toList.grouped(keywords.size).toList
     }
@@ -205,7 +209,7 @@ object Extractor {
     }).toList
 
     val badStr = " .,;:"
-    val cleanList: List[String] = valuesList.filter(_ != null).map(s => strClean(s,badStr))
+    val cleanList: List[String] = valuesList.filter(_ != null).map(s => strClean(s, badStr))
 
     (keyword, cleanList)
   }
@@ -229,10 +233,10 @@ object Extractor {
   }
 
   /**
-    *Method that takes 2 input strings, one to clean up and one with the possible characters to be remmoved.
+    * Method that takes 2 input strings, one to clean up and one with the possible characters to be remmoved.
     * This method removes all the unwanted characters in the begining and end of a string
     *
-    * @param s - String to clean up
+    * @param s   - String to clean up
     * @param bad - String with the characters to be rejected
     * @return - Clean string
     */
