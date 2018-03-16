@@ -44,7 +44,7 @@ object Extractor {
       Option(str)
     } catch {
       case t: FileNotFoundException => t.printStackTrace(); None
-      case _ => None
+      case _: Throwable => None
     }
   }
 

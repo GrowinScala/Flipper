@@ -42,12 +42,16 @@ class ExtractorSuite extends FunSuite {
   /**
     * Tests that passing an empty or null list to getAllMatchedValues will return an empty List
     */
-  test("Get all matched values with empty keyword list") {
+  test("Get all matched values with an empty keyword list") {
     assertThrows[IllegalArgumentException](
       getAllMatchedValues(text, List())
     )
   }
-  test("Get all matched values with null list"){
+
+  /**
+    * Tests calling getAllMatchedValues with a null list will result in a NullPointerException
+    */
+  test("Calling getAllMatchedValues with a null list") {
     assertThrows[NullPointerException](
       getAllMatchedValues(text, null)
     )
@@ -56,11 +60,15 @@ class ExtractorSuite extends FunSuite {
   /**
     * Tests that passing a null or empty text will return an empty list
     */
-  test("Get all matched values with a empty string") {
+  test("Get all matched values with an empty String") {
     val emptyValues = getAllMatchedValues(Option(""), List(("name", "NNP"), ("age", "CD")))
     assert(emptyValues.isEmpty)
   }
-  test("Get all matched values with null string"){
+
+  /**
+    * Tests that calling getAllMatchedValues with text parameter as null will result in a NullPointerException
+    */
+  test("Calling getAllMatchedValues with a null String") {
     assertThrows[NullPointerException](
       getAllMatchedValues(null, List(("name", "NNP"), ("age", "CD")))
     )
@@ -89,7 +97,11 @@ class ExtractorSuite extends FunSuite {
     val emptyText = getSingleMatchedValue(Option(""), List(("name", "NNP"), ("age", "CD")))
     assert(emptyText.isEmpty)
   }
-  test("Get single value with null text string"){
+
+  /**
+    * Tests that calling getSingleValue with text parameter as null will result in a NullPointerException
+    */
+  test("Calling getSingleValue with null text string") {
     assertThrows[NullPointerException](
       getSingleMatchedValue(null, List(("name", "NNP"), ("age", "CD")))
     )
@@ -103,7 +115,11 @@ class ExtractorSuite extends FunSuite {
       getSingleMatchedValue(text, List())
     )
   }
-  test("Get single value with an null list") {
+
+  /**
+    * Tests that calling getSingleValue with a null list will result in a NullPointerException
+    */
+  test("Calling getSingleValue with a null list") {
     assertThrows[NullPointerException] {
       getSingleMatchedValue(text, null)
     }
@@ -124,24 +140,32 @@ class ExtractorSuite extends FunSuite {
     val emptyObjs = getAllObjects(Option(""), List(("name", "NNP")))
     assert(emptyObjs.isEmpty)
   }
-  test("Calling get all objects with null text throws exception") {
+
+  /**
+    * Tests that calling getAllObjects with text parameter as null will result in a NullPointerException
+    */
+  test("Calling getAllObjects with null text throws exception") {
     assertThrows[NullPointerException] {
       getAllObjects(null, List(("name", "NNP")))
     }
   }
 
   /**
-    * Tests that passing a null or empty list to getAllObjects will return an empty list
+    * Tests that passing an empty list to getAllObjects will result in a IllegalArgumentException
     */
   test("Get all objects with null or empty list") {
     assertThrows[IllegalArgumentException] {
       getAllObjects(text, List())
     }
   }
-  test("Calling get all objects with null list throws exception") {
+
+  /**
+    * Tests that calling getAllObjects with a null list will result in a NullPointerException
+    */
+  test("Calling getAllObjects with null list throws exception") {
     assertThrows[NullPointerException] {
       getAllObjects(text, null)
-    } //Algo por aqui
+    }
   }
 
   /**
