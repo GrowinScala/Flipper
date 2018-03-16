@@ -121,7 +121,7 @@ object Extractor {
       val mappedValues = for (i <- 0 to mostfound._2; m <- matchedValues) yield {
         if (m._2.size > i) //Prevent array out of bounds exception
           List(m._2(i))
-        else List("Not Defined") //TODO change to List() ??
+        else List()
       }
       mappedValues.zipWithIndex.map(pair => (keywords(pair._2 % keywords.length)._1, pair._1)).toList.grouped(keywords.size).toList
     }
@@ -141,16 +141,25 @@ object Extractor {
     * @return
     */
   def makeJSONString(listJSON: MatchedPair, flag: String = "empty"): String = {
+    //    def isAllDigits(x: String) = x forall Character.isDigit //TODO when all the digits are numbers dont add the quotes ?
+
+    lazy val quote = "\""
+
     val pseudoJSON = listJSON.map(k =>
       if (k._2.nonEmpty) {
-        if (k._2.size > 1) "\"" + k._1 + "\":\"" + k._2.mkString("[", ", ", "]") + "\""
-        else "\"" + k._1 + "\": \"" + k._2.head + "\""
+
+        if (k._2.size > 1)
+          s"${quote + k._1 + quote} : ${quote + k._2.mkString("[", ", ", "]") + quote}"
+        else
+          s"${quote + k._1 + quote} : ${quote + k._2.head + quote}"
+
       } else {
-        if (flag == "empty") {
-          "\"" + k._1 + "\": \"\""
-        } else if (flag == "null") {
-          "\"" + k._1 + "\": \"null\""
-        }
+
+        if (flag == "empty")
+          s"${quote + k._1 + quote} : ${quote + quote}"
+        else if (flag == "null")
+          s"${quote + k._1 + quote} : null"
+
       }
     )
     if (flag == "remove") pseudoJSON.filter(_ != ()).mkString("{", ", ", "}") else pseudoJSON.mkString("{", ", ", "}")
@@ -197,7 +206,7 @@ object Extractor {
     //TODO convert tags, the client could send Noun and we have to translate to NN, or force client to send the correct way
     val (splittedWords, tags) = tagText(text)
 
-    lazy val arrLength = splittedWords.length
+    val arrLength = splittedWords.length
 
     //Iterate through the words (that have been slipped by whitespaces)
     //if we find a word that equal to the passed keyword
