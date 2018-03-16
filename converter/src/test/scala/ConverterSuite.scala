@@ -13,37 +13,50 @@ class ConverterSuite extends FunSuite {
   val validPath: String = "./converter/resources/cv.pdf"
 
   /**
-    * Tests that sending a invalid filePath and/or fileType (null, empty, non-existing) will return false
+    * Tests that sending a invalid filePath will return false
     */
-  test("convertPDFtoIMG with an invalid filePath and/or fileType") {
+  test("convertPDFtoIMG with an invalid filePath") {
     val testList = List(
-      convertPDFtoIMG(null, "png"),
       convertPDFtoIMG("", "png"),
-      convertPDFtoIMG("non-existing file path", "png"),
-      convertPDFtoIMG(validPath, null),
-      //      convertPDFtoIMG(validPath, ""),
-      //      convertPDFtoIMG(validPath, "non-existing")
+      convertPDFtoIMG("non-existing file path", "png")
     )
     assert(testList.forall(test => !test))
   }
 
-//  /**
-//    * Test that sending a null filepath return NullPointerException
-//    */
-//  test("convertPDFtoIMG with null filepath"){
-//    assertThrows[NullPointerException](
-//      convertPDFtoIMG(null, "png")
-//    )
-//  }
+  /**
+    * Test that sending an empty fileType returns IllegalArgumentException
+    */
+  test("convertPDFtoIMG with empty fileType"){
+    assertThrows[IllegalArgumentException](
+      convertPDFtoIMG(validPath,"")
+    )
+  }
 
-//  /**
-//    * Test that sending a null fileType returns NullPointerException
-//    */
-//  test("convertPDFtoIMG with null fileType"){
-//    assertThrows[NullPointerException](
-//      convertPDFtoIMG(validPath,null)
-//    )
-//  }
+  /**
+    * Test that sending an invalid fileType returns IllegalArgumentException
+    */
+  test("convertPDFtoImg with invalid filetype"){
+    assertThrows[IllegalArgumentException](
+      convertPDFtoIMG(validPath,"non-existing")
+    )
+  }
+
+  /**
+    * Test that sending a null filepath return false since the conversion was not successful
+    */
+  test("convertPDFtoIMG with null filepath"){
+    val res = convertPDFtoIMG(null, "png")
+    assert(!res)
+  }
+
+  /**
+    * Test that sending a null fileType returns IllegalArgumentException
+    */
+  test("convertPDFtoIMG with null fileType"){
+    assertThrows[IllegalArgumentException](
+      convertPDFtoIMG(validPath,null)
+    )
+  }
 
   /**
     * Tests that sending a valid filePath and fileType to convertPDFtoIMG will return true
@@ -64,15 +77,6 @@ class ConverterSuite extends FunSuite {
     assert(!nullPath && !emptyPath && !nonExistingPath)
   }
 
-//  /**
-//    * Test that sending null filePath returns NullPointerException
-//    */
-//  test("convertPDFtoODF with null filePath"){
-//    assertThrows[NullPointerException](
-//      convertPDFtoODF(null)
-//    )
-//  }
-
   /**
     * Tests that sending a valid filePath to convertPDFtoODF will return true
     * meaning it successfully converted the PDF to ODF
@@ -80,5 +84,4 @@ class ConverterSuite extends FunSuite {
   test("convertPDFtoODF with valid filePath") {
     assert(convertPDFtoODF(validPath))
   }
-
 }
