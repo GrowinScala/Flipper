@@ -52,7 +52,7 @@ object Extractor {
     */
   def getAllMatchedValues(text: String, keywords: List[(Keyword, String)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
     if (keywords == null || text == null || keywords.isEmpty || text == "") return List() //or null
-    val knownRegEx: Map[String, Regex] = importRegExFile(detectLanguage(text)) //TODO Make sure the lang is only eng or por
+    val knownRegEx: Map[String, Regex] = importRegExFile(text)
     val matched = keywords.map(key => {
 
       //If the client sent a custom RegEx to use on this key, use it
@@ -201,10 +201,14 @@ object Extractor {
   /**
     * Method that initializes the regular expressions from the given language identified in the pdf
     *
-    * @param lang - String containing the language identified
+    * @param text - The text extracted from the pdf document
     * @return - A Map containing all RegEx defined for each keyword
     */
-  def importRegExFile(lang: String): Map[Keyword, Regex] = {
+  def importRegExFile(text: String): Map[Keyword, Regex] = {
+    val lang = detectLanguage(text) match {
+      case "por" => "por"
+      case _ => "eng"
+    }
     val fileLines = Source.fromFile("./reader/resources/regex/" + lang + ".txt").getLines
     fileLines.map(l => {
       val splitLine = l.split(";")
