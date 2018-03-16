@@ -27,6 +27,24 @@ class ConverterSuite extends FunSuite {
     assert(testList.forall(test => !test))
   }
 
+//  /**
+//    * Test that sending a null filepath return NullPointerException
+//    */
+//  test("convertPDFtoIMG with null filepath"){
+//    assertThrows[NullPointerException](
+//      convertPDFtoIMG(null, "png")
+//    )
+//  }
+
+//  /**
+//    * Test that sending a null fileType returns NullPointerException
+//    */
+//  test("convertPDFtoIMG with null fileType"){
+//    assertThrows[NullPointerException](
+//      convertPDFtoIMG(validPath,null)
+//    )
+//  }
+
   /**
     * Tests that sending a valid filePath and fileType to convertPDFtoIMG will return true
     * This means that the method successfully converted the pdf to the specified file type
@@ -45,6 +63,15 @@ class ConverterSuite extends FunSuite {
     val nonExistingPath = convertPDFtoODF("non-existing path")
     assert(!nullPath && !emptyPath && !nonExistingPath)
   }
+
+//  /**
+//    * Test that sending null filePath returns NullPointerException
+//    */
+//  test("convertPDFtoODF with null filePath"){
+//    assertThrows[NullPointerException](
+//      convertPDFtoODF(null)
+//    )
+//  }
 
   /**
     * Tests that sending a valid filePath to convertPDFtoODF will return true

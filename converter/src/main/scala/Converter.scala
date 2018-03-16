@@ -33,7 +33,6 @@ object Converter {
     } catch {
       case e: Exception => e.printStackTrace(); false
     }
-
   }
 
   /**
@@ -51,7 +50,7 @@ object Converter {
       val imgFilesContent = imgFiles.getOrElse(List())
       val odf = OdfTextDocument.newTextDocument()
       textContent.split("\n").foreach(l => odf.newParagraph(l))
-      imgFilesContent.foreach(i => {
+      imgFiles.foreach(i => {
         odf.newParagraph()
         odf.newParagraph()
         odf.newParagraph()
