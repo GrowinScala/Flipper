@@ -61,7 +61,7 @@ object Converter {
       odf.save("test.odf")
       true
     } catch {
-      case e: Exception =>e.printStackTrace();false
+      case e: Exception => e.printStackTrace(); false
     }
   }
 }
