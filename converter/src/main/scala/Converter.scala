@@ -50,7 +50,7 @@ object Converter {
       val imgFilesContent = imgFiles.getOrElse(List())
       val odf = OdfTextDocument.newTextDocument()
       textContent.split("\n").foreach(l => odf.newParagraph(l))
-      imgFiles.foreach(i => {
+      imgFilesContent.foreach(i => {
         odf.newParagraph()
         odf.newParagraph()
         odf.newParagraph()
