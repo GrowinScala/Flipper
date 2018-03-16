@@ -65,7 +65,6 @@ object ImageProcessing {
     Option(mutableFilesList)
   }
 
-
   //No improvment on OCR results :(
   //  def saveGridImage(output: File, gridImage: BufferedImage): Unit = {
   //    val iw = ImageIO.getImageWritersByFormatName("png")

@@ -6,6 +6,9 @@ import org.odftoolkit.odfdom.doc.OdfTextDocument
 import Extractor._
 import ImageProcessing._
 
+/**
+  * Singleton object that implements the functions regarding the conversion of pdf into other file types
+  */
 object Converter {
 
   /**

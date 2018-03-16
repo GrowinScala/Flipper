@@ -7,6 +7,9 @@ import org.json4s._
 import org.json4s.native.JsonMethods._
 import scalatags.Text.all._
 
+/**
+  * Singleton object that implements the functions regarding the pdf file generation
+  */
 object Generator {
 
   /**

@@ -156,7 +156,6 @@ object Extractor {
     if (flag == "remove") pseudoJSON.filter(_ != ()).mkString("{", ", ", "}") else pseudoJSON.mkString("{", ", ", "}")
   }
 
-
   /**
     * Method that will remove all the new line characters from the list of values obtain from a keyword
     *
