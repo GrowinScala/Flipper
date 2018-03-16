@@ -27,6 +27,9 @@ class ImageProcessingSuite extends FunSuite {
     * Tests that sending a null file to extractImgs with return an empty list
     */
   test("extractImgs returns an empty list with a null file") {
+//    assertThrows[NullPointerException](
+//      extractImgs(null)
+//    )
     assert(extractImgs(null).isEmpty)
   }
 
@@ -41,6 +44,9 @@ class ImageProcessingSuite extends FunSuite {
     * Tests that sending a null file to readImageText will return an empty string ("")
     */
   test("readImageText with a null file") {
+//    assertThrows[NullPointerException](
+//      readImageText(null)
+//    )
     assert(readImageText(null) == "")
   }
 

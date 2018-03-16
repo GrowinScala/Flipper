@@ -18,6 +18,16 @@ class GeneratorSuite extends FunSuite {
     assert(nullJson == "" && emptyJson == "" && badJson1 == "" && badJson2 == "")
   }
 
+//  /**
+//    * Test the calling witeHTML with an invalid JSON String return NullPointerException
+//    */
+//  test("writeHTML with null JSON String") {
+//    assertThrows[NullPointerException](
+//      writeHTML(null)
+//    )
+//  }
+
+
   /**
     * Tests that calling writeHTML with a valid JSON String will return a valid URI for the generated html file
     */
@@ -35,6 +45,15 @@ class GeneratorSuite extends FunSuite {
     val nonExistingConvert = convertHTMLtoPDF("non-existing-uri")
     assert(!nullConvert && !emptyConvert && !nonExistingConvert)
   }
+
+//  /**
+//    * Test that calling convertHTMLtoPDF with null URI
+//    */
+//  test("convertHTMLtoPDF with null URI") {
+//    assertThrows[NullPointerException](
+//      convertHTMLtoPDF(null)
+//    )
+//  }
 
   /**
     * Tests that calling convertHTMltoPDF with a valid URI will return true saying the file was successfully created
