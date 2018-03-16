@@ -18,25 +18,22 @@ object OpenNLP {
     *         and ._2 equals all the corresponding POS tag for each word
     */
   def tagText(text: String): (Array[String], Array[String]) = {
-    if (text == null) (Array(), Array())
-    else {
-      //we can support English, Portuguese, Danish, German, Swedish
-      val filepath = detectLanguage(text) match {
-        case "por" => "./reader/resources/pt-pos-maxent.bin"
-        case _ => "./reader/resources/en-pos-maxent.bin"
-      }
-      //TODO Open NPL changes the POS tags according to the language used (the bin file above)
-      val inputStream = new FileInputStream(filepath)
-      val posModel = new POSModel(inputStream)
-      val wsTokenizer = WhitespaceTokenizer.INSTANCE
-
-      val splittedWords = wsTokenizer.tokenize(text)
-
-      val tagger = new POSTaggerME(posModel) //Instanciate the POSTagger
-      val tags = tagger.tag(splittedWords) //Tag all the words in the text
-
-      (splittedWords, tags)
+    //we can support English, Portuguese, Danish, German, Swedish
+    val filepath = detectLanguage(text) match {
+      case "por" => "./reader/resources/pt-pos-maxent.bin"
+      case _ => "./reader/resources/en-pos-maxent.bin"
     }
+    //TODO Open NPL changes the POS tags according to the language used (the bin file above)
+    val inputStream = new FileInputStream(filepath)
+    val posModel = new POSModel(inputStream)
+    val wsTokenizer = WhitespaceTokenizer.INSTANCE
+
+    val splittedWords = wsTokenizer.tokenize(text)
+
+    val tagger = new POSTaggerME(posModel) //Instanciate the POSTagger
+    val tags = tagger.tag(splittedWords) //Tag all the words in the text
+
+    (splittedWords, tags)
   }
 
   /**

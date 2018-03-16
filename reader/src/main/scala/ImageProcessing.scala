@@ -1,4 +1,5 @@
-import java.io.File
+import java.io.{File, IOException}
+
 import javax.imageio.ImageIO
 import net.sourceforge.tess4j.Tesseract
 import org.apache.pdfbox.pdmodel.PDDocument
@@ -14,18 +15,14 @@ object ImageProcessing {
     * Method that upon receiving a text file will try to read the text from it using Tess4J tesseract library
     *
     * @param file - The image file to read
-    * @return a String containing the images text
+    * @return an Option wrapping a String containing the images text. Returns None in case of exception
     */
-  def readImageText(file: File): String = {
-    if (file == null) ""
-    else {
-      val instance = new Tesseract()
-      try {
-        instance.doOCR(file)
-      } catch {
-        case e: Exception => e.printStackTrace()
-          null
-      }
+  def readImageText(file: File): Option[String] = {
+    val instance = new Tesseract()
+    try {
+      Option(instance.doOCR(file))
+    } catch {
+      case e: Exception => e.printStackTrace(); None
     }
   }
 
@@ -34,36 +31,38 @@ object ImageProcessing {
     * This method writtes the image to the outter most "target" directory and also returns a list containg all the image files
     *
     * @param document - The PDF file to extract the images from
-    * @return A list of image files extracted from the PDF
+    * @return An Option wrapping a list of image files extracted from the PDF. Returns None in case of exception
     */
-  def extractImgs(document: PDDocument): List[File] = {
-    if (document == null) List()
-    else {
-      //TODO Remove all the files in ./target/images first
-      //    val dir = new File("./target/images")
-      //    val files = dir.listFiles.filter(_.isFile).toList
-      //    files.foreach(f => f.delete())
+  def extractImgs(document: PDDocument): Option[List[File]] = {
 
-      val numPages = document.getNumberOfPages
-      //Using a mutable List for return a List of files (images) found in the pdf document
-      //This was implemented mutably because pRes.getXObjectNames returns a Java Iterator[CosName] and there is no .map/.flatMap fucntion to it, only .forEach
-      var mutableFilesList: List[File] = List() //mutable
-      for (i <- 0 until numPages) {
-        val page = document.getPage(i)
-        val pRes = page.getResources
-        pRes.getXObjectNames.forEach(r => {
-          val o = pRes.getXObject(r)
-          if (o.isInstanceOf[PDImageXObject]) {
-            val file = new File("./target/images/Page" + (i + 1) + "_" + System.nanoTime() + ".png")
-            //          val image = o.asInstanceOf[PDImageXObject].getImage
-            //          saveGridImage(file, image)
+    //TODO Remove all the files in ./target/images first
+    //    val dir = new File("./target/images")
+    //    val files = dir.listFiles.filter(_.isFile).toList
+    //    files.foreach(f => f.delete())
+
+    val numPages = document.getNumberOfPages
+    //Using a mutable List for return a List of files (images) found in the pdf document
+    //This was implemented mutably because pRes.getXObjectNames returns a Java Iterator[CosName] and there is no .map/.flatMap fucntion to it, only .forEach
+    var mutableFilesList: List[File] = List() //mutable
+    for (i <- 0 until numPages) {
+      val page = document.getPage(i)
+      val pRes = page.getResources
+      pRes.getXObjectNames.forEach(r => {
+        val o = pRes.getXObject(r)
+        if (o.isInstanceOf[PDImageXObject]) {
+          val file = new File("./target/images/Page" + (i + 1) + "_" + System.nanoTime() + ".png")
+          //          val image = o.asInstanceOf[PDImageXObject].getImage
+          //          saveGridImage(file, image)
+          try {
             ImageIO.write(o.asInstanceOf[PDImageXObject].getImage, "png", file)
-            mutableFilesList = mutableFilesList :+ file
+          } catch {
+            case io: IOException => io.printStackTrace(); None
           }
-        })
-      }
-      mutableFilesList
+          mutableFilesList = mutableFilesList :+ file
+        }
+      })
     }
+    Option(mutableFilesList)
   }
 
 

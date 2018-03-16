@@ -1,5 +1,3 @@
-import java.io.FileNotFoundException
-
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
 import org.scalatest.Matchers._

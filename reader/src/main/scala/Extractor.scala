@@ -23,10 +23,8 @@ object Extractor {
     * Method that given a file path (maybe change to a real file) will load that PDF file and read the text from it
     *
     * @param filePath - String containing the URI for the file to be loaded
-    * @throws FileNotFoundException if the file could not be found
     * @return An Option wrapping a String containing all the text found in the document. Returns None in case of Exception
     */
-  @throws[FileNotFoundException]
   def readPDF(filePath: String, readImages: Boolean = true): Option[String] = {
     try {
       val pdf = PDDocument.load(new File(filePath))
@@ -34,6 +32,7 @@ object Extractor {
 
       if (readImages) {
         val imagesList = extractImgs(pdf)
+        val imageListContent = imagesList.getOrElse(List())
         //        imagesList.foreach(f => println(readImageText(f)))
       }
       //If we want to add the images text to str, we can do so, although its not very precise
@@ -44,7 +43,7 @@ object Extractor {
       Option(str)
     } catch {
       case t: FileNotFoundException => t.printStackTrace(); None
-      case _: Throwable => None
+      case tr: Throwable => tr.printStackTrace(); None
     }
   }
 
