@@ -4,8 +4,8 @@ object Main {
   import OpenNLP._
 
   def main(args: Array[String]): Unit = {
-    val filepath: String = "./reader/resources/bla.pdf"
+    val filepath: String = "/Users/Margarida Reis/Desktop/weight.pdf"
     val text = readPDF(filepath)
-    println(getAllMatchedValues(text, List(("name", "NNP"), ("weight", "CD"), ("age", "CD"))))
+    println(getAllMatchedValues(text,List(("name","NNP"),("weight","CD"))))
   }
 }
