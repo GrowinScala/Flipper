@@ -34,16 +34,20 @@ object Generator {
     * @param json - The JSON string to be parsed
     * @return the URI of the created html file
     */
-  def writeHTML(json: String): String = {
-    val jsonMap = parse(json).values.asInstanceOf[Map[String, Any]] //parses JSON string to a Map[String, Any]
-    if (jsonMap.nonEmpty) {
-      val kvParagraph = jsonMap.map(pair => p(pair._1 + " : " + pair._2)).toList
-      val htmlString = html(head(), body(kvParagraph)) //generates the html code to go on the html file
-      val filepath = "./target/htmlPages/" + System.nanoTime() + ".html"
-      val pw = new PrintWriter(new File(filepath)) //prints the html code to the html file
-      pw.write(htmlString.toString)
-      pw.close()
-      filepath
-    } else ""
+  def writeHTML(json: String): Option[String] = {
+    try {
+      val jsonMap = parse(json).values.asInstanceOf[Map[String, Any]] //parses JSON string to a Map[String, Any]
+      if (jsonMap.nonEmpty) {
+        val kvParagraph = jsonMap.map(pair => p(pair._1 + " : " + pair._2)).toList
+        val htmlString = html(head(), body(kvParagraph)) //generates the html code to go on the html file
+        val filepath = "./target/htmlPages/" + System.nanoTime() + ".html"
+        val pw = new PrintWriter(new File(filepath)) //prints the html code to the html file
+        pw.write(htmlString.toString)
+        pw.close()
+        Option(filepath)
+      } else None
+    } catch {
+      case e: Exception => e.printStackTrace(); None
+    }
   }
 }

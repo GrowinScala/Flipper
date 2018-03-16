@@ -47,10 +47,8 @@ class OpenNLPSuite extends FunSuite {
     * Tests that passing a null value to tagText will return a pair of empty arrays
     */
   test("tagText on a null string") {
-//    assertThrows[NullPointerException](
-//      tagText(null)
-//    )
-    val (words, tags) = tagText(null)
-    assert(words.length == 0 && tags.length == 0)
+    assertThrows[NullPointerException](
+      tagText(null)
+    )
   }
 }
