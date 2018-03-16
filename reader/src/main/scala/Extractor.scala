@@ -1,10 +1,13 @@
-import java.io.File
+import java.io.{File, FileNotFoundException}
 import java.text.Normalizer
+
 import org.apache.pdfbox.pdmodel.PDDocument
 import org.apache.pdfbox.text.PDFTextStripper
+
 import scala.util.matching.Regex
 import OpenNLP._
 import ImageProcessing._
+
 import scala.io.Source
 
 /**
@@ -21,7 +24,8 @@ object Extractor {
     * @param filePath - String containing the URI for the file to be loaded
     * @return A String containing all the text found in the document
     */
-  def readPDF(filePath: String, readImages: Boolean = true): String = {
+  @throws[FileNotFoundException]
+  def readPDF(filePath: String, readImages: Boolean = true): Option[String] = {
     try {
       val pdf = PDDocument.load(new File(filePath))
       val document = new PDFTextStripper
@@ -35,9 +39,10 @@ object Extractor {
       val str = Normalizer.normalize(document.getText(pdf), Normalizer.Form.NFD)
         .replaceAll("[\\p{InCombiningDiacriticalMarks}]", "")
       pdf.close()
-      str
+      Option(str)
     } catch {
-      case t: Throwable => null //we can remove this if we don't want the error message to appear
+      case t: FileNotFoundException => t.printStackTrace(); None
+      case _ => None
     }
   }
 
@@ -50,21 +55,22 @@ object Extractor {
     *                    use that regular expression instead of ours
     * @return a List containing pairs of Keywords and a List (non-repeating) of values found for that keyword
     */
-  def getAllMatchedValues(text: String, keywords: List[(Keyword, String)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
-    if (keywords == null || text == null || keywords.isEmpty || text == "") List()
+  def getAllMatchedValues(text: Option[String], keywords: List[(Keyword, String)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
+    val textContent = text.getOrElse("")
+    if (keywords.isEmpty || textContent.isEmpty) List()
     else {
-      val knownRegEx: Map[String, Regex] = importRegExFile(text)
+      val knownRegEx: Map[String, Regex] = importRegExFile(textContent)
       val matched = keywords.map(key => {
 
         //If the client sent a custom RegEx to use on this key, use it
         if (clientRegEx.contains(key._1) && clientRegEx != null)
-          (key._1, clientRegEx(key._1).findAllIn(text).matchData.map(_.group(1)).toList.distinct)
+          (key._1, clientRegEx(key._1).findAllIn(textContent).matchData.map(_.group(1)).toList.distinct)
 
         //if we already know a good RegEx for this keyword, use it
         else if (knownRegEx.contains(key._1) && knownRegEx != null)
-          (key._1, knownRegEx(key._1).findAllIn(text).matchData.map(_.group(1)).toList.distinct)
+          (key._1, knownRegEx(key._1).findAllIn(textContent).matchData.map(_.group(1)).toList.distinct)
 
-        else findKeywordInText(key._1, key._2, text) //to be changed, here we need to manually search for the keywords in the text
+        else findKeywordInText(key._1, key._2, textContent) //to be changed, here we need to manually search for the keywords in the text
       })
       filterNewLines(matched)
     }
@@ -81,7 +87,7 @@ object Extractor {
     */
   //TODO substituir por Options aqui ??
   def getSingleMatchedValue(text: String, keywords: List[(Keyword, String)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
-    if (keywords == null || text == null || keywords.isEmpty || text == "") List()
+    if ( keywords.isEmpty || text == "") List()
     else getAllMatchedValues(text, keywords, clientRegEx).map(pair => if (pair._2.nonEmpty) (pair._1, List(pair._2.head)) else (pair._1, List()))
   }
 
@@ -95,7 +101,7 @@ object Extractor {
     * @return A List containing sublists of pairs of keywords with single matched values
     */
   def getAllObjects(text: String, keywords: List[(Keyword, String)], clientRegEx: Map[Keyword, Regex] = Map()): List[MatchedPair] = {
-    if (keywords == null || text == null || keywords.isEmpty || text == "") List()
+    if ( keywords.isEmpty || text == "") List()
     else {
       def getListSizes(matchedValues: MatchedPair): List[(Keyword, Int)] = {
         for (m <- matchedValues) yield (m._1, m._2.size)

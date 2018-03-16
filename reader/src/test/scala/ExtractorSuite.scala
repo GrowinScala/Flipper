@@ -115,6 +115,12 @@ class ExtractorSuite extends FunSuite {
     assert(nullObjs.isEmpty && emptyObjs.isEmpty)
   }
 
+  test("Calling get all objects with null throws exception") {
+    assertThrows[IllegalArgumentException] {
+      getAllObjects(text, null)
+    } //Algo por aqui
+  }
+
   /**
     * Tests if getAllObjects returns a list with the correct information
     */
