@@ -1,13 +1,10 @@
 import java.io.{File, FileNotFoundException}
 import java.text.Normalizer
-
 import org.apache.pdfbox.pdmodel.PDDocument
 import org.apache.pdfbox.text.PDFTextStripper
-
 import scala.util.matching.Regex
 import OpenNLP._
 import ImageProcessing._
-
 import scala.annotation.tailrec
 import scala.io.Source
 
@@ -59,7 +56,7 @@ object Extractor {
     */
   @throws[IllegalArgumentException]
   def getAllMatchedValues(text: Option[String], keywords: List[(Keyword, String)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
-    require(keywords.nonEmpty, "The list of keywords should not be empty") //Should we do this?
+    require(keywords.nonEmpty, "The list of keywords should not be empty")
     val textContent = text.getOrElse("")
     if (textContent.isEmpty) List()
     else {
@@ -71,7 +68,7 @@ object Extractor {
           (key._1, clientRegEx(key._1).findAllIn(textContent).matchData.map(_.group(1)).toList.distinct)
 
         //if we already know a good RegEx for this keyword, use it
-        else if (knownRegEx.contains(key._1) && knownRegEx != null)
+        else if (knownRegEx.contains(key._1))
           (key._1, knownRegEx(key._1).findAllIn(textContent).matchData.map(_.group(1)).toList.distinct)
 
         else findKeywordInText(key._1, key._2, textContent) //to be changed, here we need to manually search for the keywords in the text
@@ -166,7 +163,7 @@ object Extractor {
     * @param matchedValues - List of pairs of Keyword and the values obtained for that keyword
     * @return The same list as passed by parameter but with no new line characters
     */
-  def filterNewLines(matchedValues: MatchedPair): MatchedPair = {
+  private def filterNewLines(matchedValues: MatchedPair): MatchedPair = {
     matchedValues.map(pair => {
       val setOfValues = pair._2
       (pair._1, setOfValues.map(_.replaceAll("[\\r\\n]", "").trim)) //remove all new line characters and trim all elements

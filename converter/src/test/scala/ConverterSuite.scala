@@ -35,7 +35,7 @@ class ConverterSuite extends FunSuite {
   /**
     * Test that sending an invalid fileType returns IllegalArgumentException
     */
-  test("convertPDFtoImg with invalid filetype"){
+  test("convertPDFtoImg with invalid fileType"){
     assertThrows[IllegalArgumentException](
       convertPDFtoIMG(validPath,"non-existing")
     )
