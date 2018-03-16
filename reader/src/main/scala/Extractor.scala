@@ -8,6 +8,7 @@ import scala.util.matching.Regex
 import OpenNLP._
 import ImageProcessing._
 
+import scala.annotation.tailrec
 import scala.io.Source
 
 /**
@@ -22,7 +23,8 @@ object Extractor {
     * Method that given a file path (maybe change to a real file) will load that PDF file and read the text from it
     *
     * @param filePath - String containing the URI for the file to be loaded
-    * @return A String containing all the text found in the document
+    * @throws FileNotFoundException if the file could not be found
+    * @return An Option wrapping a String containing all the text found in the document. Returns None in case of Exception
     */
   @throws[FileNotFoundException]
   def readPDF(filePath: String, readImages: Boolean = true): Option[String] = {
@@ -53,8 +55,10 @@ object Extractor {
     * @param keywords    - List containing all the keywords we want to find values for
     * @param clientRegEx - Optional parameter - If the client already has a predefined Regular Expression for a given key
     *                    use that regular expression instead of ours
-    * @return a List containing pairs of Keywords and a List (non-repeating) of values found for that keyword
+    * @throws IllegalArgumentException If the keywords list is empty
+    * @return List containing pairs of Keywords and a List (non-repeating) of values found for that keyword
     */
+  @throws[IllegalArgumentException]
   def getAllMatchedValues(text: Option[String], keywords: List[(Keyword, String)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
     require(keywords.nonEmpty, "The list of keywords should not be empty") //Should we do this?
     val textContent = text.getOrElse("")
@@ -64,7 +68,7 @@ object Extractor {
       val matched = keywords.map(key => {
 
         //If the client sent a custom RegEx to use on this key, use it
-        if (clientRegEx.contains(key._1) && clientRegEx != null)
+        if (clientRegEx.contains(key._1)) //&& clientRegEx != null ??
           (key._1, clientRegEx(key._1).findAllIn(textContent).matchData.map(_.group(1)).toList.distinct)
 
         //if we already know a good RegEx for this keyword, use it
@@ -84,8 +88,10 @@ object Extractor {
     * @param text        - Text from the PDF extracted from readPDF method
     * @param keywords    - List containing all the keywords we want to find values for
     * @param clientRegEx - Optional parameter - If the client already has a predefined Regular Expression for a given key
+    * @throws IllegalArgumentException If the keywords list is empty
     * @return A List containing pairs of keywords with a single matched value
     */
+  @throws[IllegalArgumentException]
   def getSingleMatchedValue(text: Option[String], keywords: List[(Keyword, String)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
     require(keywords.nonEmpty, "The list of keywords should not be empty")
     val textContet = text.getOrElse("")
@@ -100,8 +106,10 @@ object Extractor {
     * @param text        - Text from the PDF extracted from readPDF method
     * @param keywords    - List containing all the keywords we want to find values for
     * @param clientRegEx - Optional parameter - If the client already has a predefined Regular Expression for a given key
+    * @throws IllegalArgumentException If the keywords list is empty
     * @return A List containing sublists of pairs of keywords with single matched values
     */
+  @throws[IllegalArgumentException]
   def getAllObjects(text: Option[String], keywords: List[(Keyword, String)], clientRegEx: Map[Keyword, Regex] = Map()): List[MatchedPair] = {
     require(keywords.nonEmpty, "The list of keywords should not be empty")
     val textContent = text.getOrElse("")
@@ -137,23 +145,21 @@ object Extractor {
     * @return
     */
   def makeJSONString(listJSON: MatchedPair, flag: String = "empty"): String = {
-    if (listJSON == null) "{}"
-    else {
-      val pseudoJSON = listJSON.map(k =>
-        if (k._2.nonEmpty) {
-          if (k._2.size > 1) "\"" + k._1 + "\":\"" + k._2.mkString("[", ", ", "]") + "\""
-          else "\"" + k._1 + "\": \"" + k._2.head + "\""
-        } else {
-          if (flag == "empty") {
-            "\"" + k._1 + "\": \"\""
-          } else if (flag == "null") {
-            "\"" + k._1 + "\": \"null\""
-          }
+    val pseudoJSON = listJSON.map(k =>
+      if (k._2.nonEmpty) {
+        if (k._2.size > 1) "\"" + k._1 + "\":\"" + k._2.mkString("[", ", ", "]") + "\""
+        else "\"" + k._1 + "\": \"" + k._2.head + "\""
+      } else {
+        if (flag == "empty") {
+          "\"" + k._1 + "\": \"\""
+        } else if (flag == "null") {
+          "\"" + k._1 + "\": \"null\""
         }
-      )
-      if (flag == "remove") pseudoJSON.filter(_ != ()).mkString("{", ", ", "}") else pseudoJSON.mkString("{", ", ", "}")
-    }
+      }
+    )
+    if (flag == "remove") pseudoJSON.filter(_ != ()).mkString("{", ", ", "}") else pseudoJSON.mkString("{", ", ", "}")
   }
+
 
   /**
     * Method that will remove all the new line characters from the list of values obtain from a keyword
@@ -172,11 +178,12 @@ object Extractor {
     * Method that gets all keywords and respective values from know form and returns a JSON string
     *
     * @param text - Text from the PDF extracted from readPDF method
-    * @return
+    * @return - A JSON String containing all the information in the text passed by arguments
     */
-  def getJSONFromForm(text: String): String = {
+  def getJSONFromForm(text: Option[String]): String = {
+    val textContent = text.getOrElse("")
     val formRegex = "(.+):\\s+(.+)".r
-    val form = formRegex.findAllIn(text).matchData.map(l => (l.group(1), List(l.group(2)))).toList
+    val form = formRegex.findAllIn(textContent).matchData.map(l => (l.group(1), List(l.group(2)))).toList
     makeJSONString(form)
   }
 
@@ -190,7 +197,7 @@ object Extractor {
     * @param tag     - The POS Tag of the value we want to return
     * @return A pair containing the keyword and a list of values found for that keyword
     */
-  def findKeywordInText(keyword: Keyword, tag: String, text: String): (Keyword, List[String]) = {
+  private def findKeywordInText(keyword: Keyword, tag: String, text: String): (Keyword, List[String]) = {
     //TODO convert tags, the client could send Noun and we have to translate to NN, or force client to send the correct way
     val (splittedWords, tags) = tagText(text)
 
@@ -209,7 +216,7 @@ object Extractor {
     }).toList
 
     val badStr = " .,;:"
-    val cleanList: List[String] = valuesList.filter(_ != null).map(s => strClean(s, badStr))
+    val cleanList: List[String] = valuesList.filter(_ != "").map(s => strClean(s, badStr))
 
     (keyword, cleanList)
   }
@@ -220,12 +227,12 @@ object Extractor {
     * @param text - The text extracted from the pdf document
     * @return - A Map containing all RegEx defined for each keyword
     */
-  def importRegExFile(text: String): Map[Keyword, Regex] = {
+  private def importRegExFile(text: String): Map[Keyword, Regex] = {
     val lang = detectLanguage(text) match {
       case "por" => "por"
       case _ => "eng"
     }
-    val fileLines = Source.fromFile("./reader/resources/regex/" + lang + ".txt").getLines
+    val fileLines = Source.fromFile("./reader/resources/regex/" + lang + ".txt").getLines //Should we try and catch a file not found exception here ?
     fileLines.map(l => {
       val splitLine = l.split(";")
       splitLine(0) -> splitLine(1).r
@@ -233,21 +240,21 @@ object Extractor {
   }
 
   /**
-    * Method that takes 2 input strings, one to clean up and one with the possible characters to be remmoved.
-    * This method removes all the unwanted characters in the begining and end of a string
+    * Method that takes 2 input strings, one to clean up and one with the possible characters to be removed.
+    * This method removes all the unwanted characters in the beginning and end of a string
     *
     * @param s   - String to clean up
     * @param bad - String with the characters to be rejected
     * @return - Clean string
     */
-  def strClean(s: String, bad: String): String = {
+  private def strClean(s: String, bad: String): String = {
 
-    @scala.annotation.tailrec def start(n: Int): String =
+    @tailrec def start(n: Int): String =
       if (n == s.length) ""
       else if (bad.indexOf(s.charAt(n)) < 0) end(n, s.length)
       else start(1 + n)
 
-    @scala.annotation.tailrec def end(a: Int, n: Int): String =
+    @tailrec def end(a: Int, n: Int): String =
       if (n <= a) s.substring(a, n)
       else if (bad.indexOf(s.charAt(n - 1)) < 0) s.substring(a, n)
       else end(a, n - 1)

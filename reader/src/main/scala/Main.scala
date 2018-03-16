@@ -4,8 +4,10 @@ object Main {
   import OpenNLP._
 
   def main(args: Array[String]): Unit = {
-    val filepath: String = "/Users/Margarida Reis/Desktop/weight.pdf"
+    val filepath: String = "./reader/resources/bla.pdf"
     val text = readPDF(filepath)
-    println(getAllMatchedValues(text,List(("name","NNP"),("weight","CD"))))
+    println(makeJSONString(List()))
+    //    getAllMatchedValues(text,List())
+    //    println(getAllMatchedValues(text,List(("name","NNP"),("weight","CD"))))
   }
 }
