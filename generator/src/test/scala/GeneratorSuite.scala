@@ -11,22 +11,20 @@ class GeneratorSuite extends FunSuite {
     * Tests that calling writeHTML with an invalid JSON String (null, empty, or badly formatted) will return an empty String
     */
   test("writeHTML with invalid JSON String") {
-    val nullJson = writeHTML(null)
     val emptyJson = writeHTML("")
     val badJson1 = writeHTML("{}")
     val badJson2 = writeHTML(""" {"name" :  """)
-    assert(nullJson == "" && emptyJson == "" && badJson1 == "" && badJson2 == "")
+    assert(emptyJson.isEmpty && badJson1.isEmpty && badJson2.isEmpty)
   }
 
-//  /**
-//    * Test the calling witeHTML with an invalid JSON String return NullPointerException
-//    */
-//  test("writeHTML with null JSON String") {
-//    assertThrows[NullPointerException](
-//      writeHTML(null)
-//    )
-//  }
-
+  /**
+    * Test the calling witeHTML with an invalid JSON String return NullPointerException
+    */
+  test("writeHTML with null JSON String") {
+    assertThrows[NullPointerException](
+      writeHTML(null)
+    )
+  }
 
   /**
     * Tests that calling writeHTML with a valid JSON String will return a valid URI for the generated html file
@@ -40,20 +38,19 @@ class GeneratorSuite extends FunSuite {
     * Tests that calling convertHTMLtoPDF with an invalid URI (null, empty, or non-existing) will return false
     */
   test("convertHTMLtoPDF with an invalid URI") {
-    val nullConvert = convertHTMLtoPDF(null)
     val emptyConvert = convertHTMLtoPDF("")
     val nonExistingConvert = convertHTMLtoPDF("non-existing-uri")
-    assert(!nullConvert && !emptyConvert && !nonExistingConvert)
+    assert(!emptyConvert && !nonExistingConvert)
   }
 
-//  /**
-//    * Test that calling convertHTMLtoPDF with null URI
-//    */
-//  test("convertHTMLtoPDF with null URI") {
-//    assertThrows[NullPointerException](
-//      convertHTMLtoPDF(null)
-//    )
-//  }
+  /**
+    * Test that calling convertHTMLtoPDF with null URI
+    */
+  test("convertHTMLtoPDF with null URI") {
+    assertThrows[NullPointerException](
+      convertHTMLtoPDF(null)
+    )
+  }
 
   /**
     * Tests that calling convertHTMltoPDF with a valid URI will return true saying the file was successfully created

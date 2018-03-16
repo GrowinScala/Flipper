@@ -50,12 +50,12 @@ class ImageProcessingSuite extends FunSuite {
     assert(readImageText(null) == "")
   }
 
-  /**
-    * Tests that sending a image of Growin's logo will return a close guess of the text in the image
-    */
-  test("readImageText returns a close guess of the images text") {
-    val growinLogo = extractImgs(pdf).head
-    assert(readImageText(growinLogo).substring(0, 5) == "growi")
-  }
+//  /**
+//    * Tests that sending a image of Growin's logo will return a close guess of the text in the image
+//    */
+//  test("readImageText returns a close guess of the images text") {
+//    val growinLogo = extractImgs(pdf).head
+//    assert(readImageText(growinLogo).substring(0, 5) == "growi")
+//  }
 
 }
