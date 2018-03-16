@@ -17,14 +17,15 @@ object ImageProcessing {
     * @return a String containing the images text
     */
   def readImageText(file: File): String = {
-    if (file == null) return ""
-
-    val instance = new Tesseract()
-    try {
-      instance.doOCR(file)
-    } catch {
-      case e: Exception => e.printStackTrace()
-        null
+    if (file == null) ""
+    else {
+      val instance = new Tesseract()
+      try {
+        instance.doOCR(file)
+      } catch {
+        case e: Exception => e.printStackTrace()
+          null
+      }
     }
   }
 
@@ -36,31 +37,33 @@ object ImageProcessing {
     * @return A list of image files extracted from the PDF
     */
   def extractImgs(document: PDDocument): List[File] = {
-    if (document == null) return List()
-    //TODO Remove all the files in ./target/images first
-//    val dir = new File("./target/images")
-//    val files = dir.listFiles.filter(_.isFile).toList
-//    files.foreach(f => f.delete())
+    if (document == null) List()
+    else {
+      //TODO Remove all the files in ./target/images first
+      //    val dir = new File("./target/images")
+      //    val files = dir.listFiles.filter(_.isFile).toList
+      //    files.foreach(f => f.delete())
 
-    val numPages = document.getNumberOfPages
-    //Using a mutable List for return a List of files (images) found in the pdf document
-    //This was implemented mutably because pRes.getXObjectNames returns a Java Iterator[CosName] and there is no .map/.flatMap fucntion to it, only .forEach
-    var mutableFilesList: List[File] = List() //mutable
-    for (i <- 0 until numPages) {
-      val page = document.getPage(i)
-      val pRes = page.getResources
-      pRes.getXObjectNames.forEach(r => {
-        val o = pRes.getXObject(r)
-        if (o.isInstanceOf[PDImageXObject]) {
-          val file = new File("./target/images/Page" + (i + 1) + "_" + System.nanoTime() + ".png")
-          //          val image = o.asInstanceOf[PDImageXObject].getImage
-          //          saveGridImage(file, image)
-          ImageIO.write(o.asInstanceOf[PDImageXObject].getImage, "png", file)
-          mutableFilesList = mutableFilesList :+ file
-        }
-      })
+      val numPages = document.getNumberOfPages
+      //Using a mutable List for return a List of files (images) found in the pdf document
+      //This was implemented mutably because pRes.getXObjectNames returns a Java Iterator[CosName] and there is no .map/.flatMap fucntion to it, only .forEach
+      var mutableFilesList: List[File] = List() //mutable
+      for (i <- 0 until numPages) {
+        val page = document.getPage(i)
+        val pRes = page.getResources
+        pRes.getXObjectNames.forEach(r => {
+          val o = pRes.getXObject(r)
+          if (o.isInstanceOf[PDImageXObject]) {
+            val file = new File("./target/images/Page" + (i + 1) + "_" + System.nanoTime() + ".png")
+            //          val image = o.asInstanceOf[PDImageXObject].getImage
+            //          saveGridImage(file, image)
+            ImageIO.write(o.asInstanceOf[PDImageXObject].getImage, "png", file)
+            mutableFilesList = mutableFilesList :+ file
+          }
+        })
+      }
+      mutableFilesList
     }
-    mutableFilesList
   }
 
 

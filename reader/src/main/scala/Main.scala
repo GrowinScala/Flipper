@@ -4,11 +4,8 @@ object Main {
   import OpenNLP._
 
   def main(args: Array[String]): Unit = {
-    val filepath: String = "/Users/Lucas Fischer/Desktop/test.pdf"
+    val filepath: String = "./reader/resources/bla.pdf"
     val text = readPDF(filepath)
-    var pair = tagText(text)
-    for (i <- pair._1.indices) {
-      println("Palavra : " + pair._1(i) + " - Tag : " + pair._2(i))
-    }
+    println(getAllMatchedValues(text, List(("name", "NNP"), ("weight", "CD"), ("age", "CD"))))
   }
 }
