@@ -10,37 +10,19 @@ class GeneratorSuite extends FunSuite {
   /**
     * Tests that calling writeHTML with an invalid JSON String (null, empty, or badly formatted) will return an empty String
     */
-  test("writeHTML with invalid JSON String") {
-    val nullJson = writeHTML(null)
-    val emptyJson = writeHTML("")
-    val badJson1 = writeHTML("{}")
-    val badJson2 = writeHTML(""" {"name" :  """)
-    assert(nullJson.isEmpty && emptyJson.isEmpty && badJson1.isEmpty && badJson2.isEmpty)
+  test("Calling convertJSONtoPDF with invalid JSON String") {
+    val nullJson = convertJSONtoPDF(null)
+    val emptyJson = convertJSONtoPDF("")
+    val badJson1 = convertJSONtoPDF("{}")
+    val badJson2 = convertJSONtoPDF(""" {"name" :  """)
+    assert(!nullJson && !emptyJson && !badJson1 && !badJson2)
   }
 
   /**
     * Tests that calling writeHTML with a valid JSON String will return a valid URI for the generated html file
     */
-  test("writeHTML with a valid JSON String") {
-    val validURI = writeHTML(""" {"name":"Lucas"}  """)
-    assert(validURI.getOrElse("") != "" && validURI.getOrElse("").endsWith(".html"))
-  }
-
-  /**
-    * Tests that calling convertHTMLtoPDF with an invalid URI (null, empty, or non-existing) will return false
-    */
-  test("convertHTMLtoPDF with an invalid URI") {
-    val nullConvert = convertHTMLtoPDF(null)
-    val emptyConvert = convertHTMLtoPDF("")
-    val nonExistingConvert = convertHTMLtoPDF("non-existing-uri")
-    assert(!nullConvert && !emptyConvert && !nonExistingConvert)
-  }
-
-  /**
-    * Tests that calling convertHTMltoPDF with a valid URI will return true saying the file was successfully created
-    */
-  test("convertHTMLtoPDF with a valid URI") {
-    val validURI = convertHTMLtoPDF(writeHTML(""" {"name":"Lucas"} """).getOrElse(""))
+  test("calling convertJSONtoPDF with a valid JSON String") {
+    val validURI = convertJSONtoPDF(""" {"name":"Lucas"}  """)
     assert(validURI)
   }
 }

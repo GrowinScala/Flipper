@@ -12,20 +12,23 @@ object Generator {
   /**
     * Method that receives the URI of a html file and generates from it a pdf document
     *
-    * @param htmlURI - The URI of the html document (It's location in the project directory)
-    * @return a Boolean saying if the convertion from HTML to PDF was successful or not
+    * @param json - The Json string to be converted into a PDF document
+    * @return a Boolean saying if the conversion from HTML to PDF was successful or not
     */
-  def convertHTMLtoPDF(htmlURI: String): Boolean = {
-    try {
-      val document = new Document()
-      val writer = PdfWriter.getInstance(document, new FileOutputStream("html.pdf")) //TODO change destination folder to something else
-      document.open()
-      XMLWorkerHelper.getInstance().parseXHtml(writer, document, new FileInputStream(htmlURI))
-      document.close()
-      true
-    } catch {
-      case e: Exception => e.printStackTrace(); false
-    }
+  def convertJSONtoPDF(json: String): Boolean = {
+    val htmlURI = writeHTML(json).getOrElse("")
+    if (htmlURI.nonEmpty) {
+      try {
+        val document = new Document()
+        val writer = PdfWriter.getInstance(document, new FileOutputStream("html.pdf")) //TODO change destination folder to something else
+        document.open()
+        XMLWorkerHelper.getInstance().parseXHtml(writer, document, new FileInputStream(htmlURI))
+        document.close()
+        true
+      } catch {
+        case e: Exception => e.printStackTrace(); false
+      }
+    } else false
   }
 
   /**
@@ -34,7 +37,7 @@ object Generator {
     * @param json - The JSON string to be parsed
     * @return the URI of the created html file
     */
-  def writeHTML(json: String): Option[String] = {
+  private def writeHTML(json: String): Option[String] = {
     try {
       val jsonMap = parse(json).values.asInstanceOf[Map[String, Any]] //parses JSON string to a Map[String, Any]
       if (jsonMap.nonEmpty) {
