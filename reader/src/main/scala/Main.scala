@@ -1,13 +1,11 @@
 object Main {
 
   import Extractor._
-  import OpenNLP._
 
   def main(args: Array[String]): Unit = {
-    val filepath: String = "./reader/resources/bla.pdf"
+    val filepath: String = "./reader/resources/test.pdf"
     val text = readPDF(filepath)
-    println(makeJSONString(List()))
-    //    getAllMatchedValues(text,List())
-    //    println(getAllMatchedValues(text,List(("name","NNP"),("weight","CD"))))
+    val objs = getAllObjects(text, List(("name", "NNP"), ("weight", "CD")))
+    objs.foreach(o => println(makeJSONString(o)))
   }
 }
