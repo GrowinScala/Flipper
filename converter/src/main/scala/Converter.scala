@@ -43,7 +43,8 @@ object Converter {
       val pdf = PDDocument.load(new File(filePath))
       val imgFiles = extractImgs(pdf)
       val odf = OdfTextDocument.newTextDocument()
-      text.split("\n").foreach(l => odf.newParagraph(l))
+      val textContent = text.getOrElse("")
+      textContent.split("\n").foreach(l => odf.newParagraph(l))
       imgFiles.foreach(i => {
         odf.newParagraph()
         odf.newParagraph()
