@@ -25,7 +25,7 @@ class ExtractorSuite extends FunSuite {
     */
   test("Read non existing file") {
     val fp = "Not a valid URI"
-    assert(readPDF(fp) == None)
+    assert(readPDF(fp).isEmpty)
   }
 
   /**
@@ -184,20 +184,19 @@ class ExtractorSuite extends FunSuite {
   }
 
   /**
-    * Tests that making a JSON String with an empty or null list will return an empty JSON object ("{}")
+    * Tests that making a JSON String with an empty list will return an empty JSON object ("{}")
     */
   test("Make JSON string with an empty list") {
-    assert(makeJSONString(List()) == "{}" && makeJSONString(null) == "{}")
+     assert(makeJSONString(List()) == "{}")
   }
 
-
   /**
-    * Test if the matched values with the given keywords generate the correct JSON string
+    * Tests that making a JSON String with an null list will return NullPointerException
     */
-  test("Make JSON String") {
-    val matchedValues = getAllMatchedValues(text, List(("name", "NNP"), ("age", "CD")))
-    val expectedJSON = "{\"name\":\"[Margarida Reis, Lucas, Albertina, Justino Alberto]\", \"age\":\"[25, 21]\"}"
-    assert(makeJSONString(matchedValues) == expectedJSON)
+  test("Make JSON string with null list") {
+    assertThrows[NullPointerException](
+      makeJSONString(null)
+    )
   }
 
   /**
