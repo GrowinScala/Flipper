@@ -38,7 +38,7 @@ object ImageProcessing {
     //TODO Remove all the files in ./target/images first
     //    val dir = new File("./target/images")
     //    val files = dir.listFiles.filter(_.isFile).toList
-    //    files.foreach(f => f.delete())
+    //    files.foreach(_.delete)
 
     val numPages = document.getNumberOfPages
     //Using a mutable List for return a List of files (images) found in the pdf document

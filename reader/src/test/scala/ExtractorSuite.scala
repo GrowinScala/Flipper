@@ -202,13 +202,13 @@ class ExtractorSuite extends FunSuite {
     */
   test("Get All JSON Objects") {
     val expected = List(
-      "{\"name\": \"Margarida Reis\", \"age\": \"25\"}",
-      "{\"name\": \"Lucas\", \"age\": \"21\"}",
-      "{\"name\": \"Albertina\", \"age\": \"Not Defined\"}",
-      "{\"name\": \"Justino Alberto\", \"age\": \"Not Defined\"}",
-      "{\"name\": \"Not Defined\", \"age\": \"Not Defined\"}"
+      "{\"name\" : \"Margarida Reis\", \"age\" : \"25\"}",
+      "{\"name\" : \"Lucas\", \"age\" : \"21\"}",
+      "{\"name\" : \"Albertina\", \"age\" : \"\"}",
+      "{\"name\" : \"Justino Alberto\", \"age\" : \"\"}",
+      "{\"name\" : \"\", \"age\" : \"\"}"
     )
     val matchedValues = getAllObjects(text, List(("name", "NNP"), ("age", "CD")))
-    //    matchedValues.map(makeJSONString) should equal(expected)
+    matchedValues.map(mp => makeJSONString(mp)) should equal(expected)
   }
 }

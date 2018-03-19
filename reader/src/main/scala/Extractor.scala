@@ -60,7 +60,7 @@ object Extractor {
     val textContent = text.getOrElse("")
     if (textContent.isEmpty) List()
     else {
-      val knownRegEx: Map[String, Regex] = importRegExFile(textContent)
+      val knownRegEx: Map[String, Regex] = importRegExFile(textContent) //load correct RegEx map
       val matched = keywords.map(key => {
 
         //If the client sent a custom RegEx to use on this key, use it
@@ -90,8 +90,8 @@ object Extractor {
   @throws[IllegalArgumentException]
   def getSingleMatchedValue(text: Option[String], keywords: List[(Keyword, String)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
     require(keywords.nonEmpty, "The list of keywords should not be empty")
-    val textContet = text.getOrElse("")
-    if (textContet.isEmpty) List()
+    val textContent = text.getOrElse("")
+    if (textContent.isEmpty) List()
     else getAllMatchedValues(text, keywords, clientRegEx).map(pair => if (pair._2.nonEmpty) (pair._1, List(pair._2.head)) else (pair._1, List()))
   }
 
@@ -116,9 +116,9 @@ object Extractor {
       }
 
       val matchedValues = getAllMatchedValues(text, keywords, clientRegEx)
-      val mostfound = getListSizes(matchedValues).maxBy(_._2) //Gets the size of the pair that has the most values
+      val mostFound = getListSizes(matchedValues).maxBy(_._2) //Gets the size of the pair that has the most values
 
-      val mappedValues = for (i <- 0 to mostfound._2; m <- matchedValues) yield {
+      val mappedValues = for (i <- 0 to mostFound._2; m <- matchedValues) yield {
         if (m._2.size > i) //Prevent array out of bounds exception
           List(m._2(i))
         else List()
@@ -141,7 +141,7 @@ object Extractor {
     * @return
     */
   def makeJSONString(listJSON: MatchedPair, flag: String = "empty"): String = {
-    //    def isAllDigits(x: String) = x forall Character.isDigit //TODO when all the digits are numbers dont add the quotes ?
+    //    def isAllDigits(x: String) = x forall Character.isDigit //TODO when all the characters are numbers dont add the quotes ?
 
     lazy val quote = "\""
 
