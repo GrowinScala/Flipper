@@ -36,11 +36,6 @@ object ImageProcessing {
     */
   def extractImgs(document: PDDocument): Option[List[File]] = {
 
-    //TODO Remove all the files in ./target/images first
-    //    val dir = new File("./target/images")
-    //    val files = dir.listFiles.filter(_.isFile).toList
-    //    files.foreach(_.delete)
-
     /**
       * Internal method that iterates over the pages in a pdf document
       *
