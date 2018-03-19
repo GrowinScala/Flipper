@@ -51,7 +51,6 @@ object OpenNLP {
     langDect.predictLanguage(text).getLang
   }
 
-
   //  def translatePOSTag(tag: String): String = {
   //    //TODO Open NLP returns different POS tags acording to the language used in the bin file
   //    /**
