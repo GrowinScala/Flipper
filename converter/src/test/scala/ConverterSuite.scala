@@ -17,35 +17,17 @@ class ConverterSuite extends FunSuite {
     */
   test("convertPDFtoIMG with an invalid filePath") {
     val testList = List(
-      convertPDFtoIMG("", "png"),
-      convertPDFtoIMG("non-existing file path", "png")
+      convertPDFtoIMG("", FileType.png),
+      convertPDFtoIMG("non-existing file path", FileType.png)
     )
     assert(testList.forall(test => !test))
-  }
-
-  /**
-    * Test that sending an empty fileType returns IllegalArgumentException
-    */
-  test("convertPDFtoIMG with empty fileType"){
-    assertThrows[IllegalArgumentException](
-      convertPDFtoIMG(validPath,"")
-    )
-  }
-
-  /**
-    * Test that sending an invalid fileType returns IllegalArgumentException
-    */
-  test("convertPDFtoImg with invalid fileType"){
-    assertThrows[IllegalArgumentException](
-      convertPDFtoIMG(validPath,"non-existing")
-    )
   }
 
   /**
     * Test that sending a null filepath return false since the conversion was not successful
     */
   test("convertPDFtoIMG with null filepath"){
-    val res = convertPDFtoIMG(null, "png")
+    val res = convertPDFtoIMG(null, FileType.png)
     assert(!res)
   }
 
@@ -63,7 +45,7 @@ class ConverterSuite extends FunSuite {
     * This means that the method successfully converted the pdf to the specified file type
     */
   test("convertPDFtoIMG with a valid filePath and fileType") {
-    assert(convertPDFtoIMG(validPath, "png"))
+    assert(convertPDFtoIMG(validPath, FileType.png))
   }
 
   /**

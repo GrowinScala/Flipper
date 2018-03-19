@@ -6,8 +6,7 @@ object Main {
 
   def main(args: Array[String]): Unit = {
     val filepath: String = "/Users/Margarida Reis/Desktop/MegaTester.pdf"
-    convertPDFtoIMG(filepath,"bmp")
+    convertPDFtoIMG(filepath, FileType.jpeg)
 //    convertPDFtoODF(filepath)
-//    ImageIO.getWriterFormatNames.foreach(println)
   }
 }

@@ -6,6 +6,13 @@ import org.odftoolkit.odfdom.doc.OdfTextDocument
 import Extractor._
 import ImageProcessing._
 
+
+object FileType extends Enumeration{
+  val png = Value("png")
+  val jpg = Value("jpg")
+  val jpeg = Value("jpeg")
+  val gif = Value("gif")
+}
 /**
   * Singleton object that implements the functions regarding the conversion of pdf into other file types
   */
@@ -15,13 +22,13 @@ object Converter {
     * Method that converts a pdf file into a png image
     *
     * @param filePath - String containing the URI to the pdf file
-    * @param fileType - String containing the file type to be converted into (Works with jpg/jpeg, png, bmp, tiff and gif) (And More)
+    * @param fileType - FileType with one of the possible file types of the Enum FileType to be converted into
     * @return - A Boolean saying if the conversion was successful
     * @throws IllegalArgumentException if the specified fileType did not equal the supported file types
     */
   @throws[IllegalArgumentException]
-  def convertPDFtoIMG(filePath: String, fileType: String): Boolean = {
-    require(fileType == "png" || fileType == "jpg" || fileType == "gif" || fileType == "jpeg" || fileType == "bmp" || fileType == "tiff", "File type must be one of png, jpg, gif, bmp or jpeg")
+  def convertPDFtoIMG(filePath: String, fileType: FileType.Value): Boolean = {
+    require(fileType != null, "File type must be one of png, jpg, gif or jpeg")
     //    if (fileType != "png" && fileType != "jpg" && fileType != "gif" && fileType != "jpeg") false
 
     //      TODO we believe ImageIO has a default for png when the fileType is incorrect, maybe create an Enum ?
@@ -30,7 +37,7 @@ object Converter {
       val renderer = new PDFRenderer(pdf)
       for (i <- 0 until pdf.getNumberOfPages) {
         val image = renderer.renderImage(i)
-        ImageIO.write(image, fileType, new File("./target/images/Converted_Page" + i + "_" + System.nanoTime() + "." + fileType))
+        ImageIO.write(image, fileType.toString, new File("./target/images/Converted_Page" + i + "_" + System.nanoTime() + "." + fileType.toString))
       }
       true
     } catch {
