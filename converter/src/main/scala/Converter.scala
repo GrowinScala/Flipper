@@ -15,13 +15,13 @@ object Converter {
     * Method that converts a pdf file into a png image
     *
     * @param filePath - String containing the URI to the pdf file
-    * @param fileType - String containing the file type to be converted into (Works with jpg/jpeg, png and gif)
+    * @param fileType - String containing the file type to be converted into (Works with jpg/jpeg, png, bmp and gif)
     * @return - A Boolean saying if the conversion was successful
     * @throws IllegalArgumentException if the specified fileType did not equal the supported file types
     */
   @throws[IllegalArgumentException]
   def convertPDFtoIMG(filePath: String, fileType: String): Boolean = {
-    require(fileType == "png" || fileType == "jpg" || fileType == "gif" || fileType == "jpeg", "File type must be one of png, jpg, gif or jpeg")
+    require(fileType == "png" || fileType == "jpg" || fileType == "gif" || fileType == "jpeg" || fileType == "bmp", "File type must be one of png, jpg, gif, bmp or jpeg")
     //    if (fileType != "png" && fileType != "jpg" && fileType != "gif" && fileType != "jpeg") false
 
     //      TODO we believe ImageIO has a default for png when the fileType is incorrect, maybe create an Enum ?
