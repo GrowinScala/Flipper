@@ -1,3 +1,5 @@
+import javax.imageio.ImageIO
+
 object Main {
 
   import Converter._
@@ -6,5 +8,6 @@ object Main {
     val filepath: String = "/Users/Margarida Reis/Desktop/MegaTester.pdf"
     convertPDFtoIMG(filepath,"bmp")
 //    convertPDFtoODF(filepath)
+//    ImageIO.getWriterFormatNames.foreach(println)
   }
 }
