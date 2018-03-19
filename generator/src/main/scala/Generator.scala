@@ -27,6 +27,7 @@ object Generator {
         document.open()
         XMLWorkerHelper.getInstance().parseXHtml(writer, document, new FileInputStream(htmlURI))
         document.close()
+        cleanHTMLDir()
         true
       } catch {
         case e: Exception => e.printStackTrace(); false
@@ -55,5 +56,14 @@ object Generator {
     } catch {
       case e: Exception => e.printStackTrace(); None
     }
+  }
+
+  /**
+    * Method that deletes all the files in the htmlPages directory
+    */
+  private def cleanHTMLDir(){
+    val dir = new File("./target/htmlPages")
+    val files = dir.listFiles.filter(_.isFile).toList
+    files.foreach(_.delete)
   }
 }
