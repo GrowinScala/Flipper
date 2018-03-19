@@ -1,8 +1,6 @@
 import java.io.File
-
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.Matchers._
 import org.scalatest.junit.JUnitRunner
 import ImageProcessing._
 import org.apache.pdfbox.pdmodel.PDDocument
@@ -14,6 +12,12 @@ class ImageProcessingSuite extends FunSuite {
   val filepath: String = "./reader/resources/imgTester.pdf"
   val pdf: PDDocument = PDDocument.load(new File(filepath))
 
+  private def cleanImageDir(){
+    val dir = new File("./target/images")
+    val files = dir.listFiles.filter(_.isFile).toList
+    files.foreach(_.delete)
+  }
+
   /**
     * Tests that extractImgs returns an empty list of images when reading a pdf with no images
     */
@@ -21,6 +25,7 @@ class ImageProcessingSuite extends FunSuite {
     val fp = "./reader/resources/test.pdf"
     val pdf = PDDocument.load(new File(fp))
     assert(extractImgs(pdf).getOrElse(List()).isEmpty)
+    cleanImageDir()
   }
 
   /**
@@ -29,6 +34,7 @@ class ImageProcessingSuite extends FunSuite {
   test("extractImgs returns an empty list with a null file") {
     assertThrows[NullPointerException] {
       extractImgs(null)
+      cleanImageDir()
     }
   }
 
@@ -37,6 +43,7 @@ class ImageProcessingSuite extends FunSuite {
     */
   test("extractImgs returns correct number of images") {
     assert(extractImgs(pdf).getOrElse(List()).size == 2)
+    cleanImageDir()
   }
 
   /**
@@ -52,6 +59,7 @@ class ImageProcessingSuite extends FunSuite {
   test("readImageText returns a close guess of the images text") {
     val growinLogo = extractImgs(pdf).getOrElse(List()).head
     assert(readImageText(growinLogo).getOrElse("").substring(0, 5) == "growi")
+    cleanImageDir()
   }
 
 }

@@ -60,10 +60,20 @@ object Converter {
         odf.newParagraph()
         odf.newImage(i.toURI)
       })
-      odf.save("test.odf")
+      odf.save("test.odt")
+      cleanImageDir()
       true
     } catch {
       case e: Exception => e.printStackTrace(); false
     }
+  }
+
+  /**
+    * Method that deletes all files from the image folder
+    */
+  private def cleanImageDir(){
+    val dir = new File("./target/images")
+    val files = dir.listFiles.filter(_.isFile).toList
+    files.foreach(_.delete)
   }
 }

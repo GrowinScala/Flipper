@@ -48,7 +48,7 @@ class ConverterSuite extends FunSuite {
     * Tests that sending an invalid filePath (null, empty, non-existing) to convertPDFtoODF
     * will return false
     */
-  test("convertPDFtoODF with invalid filePath") {
+  test("convertPDFtoODT with invalid filePath") {
     val nullPath = convertPDFtoODT(null)
     val emptyPath = convertPDFtoODT("")
     val nonExistingPath = convertPDFtoODT("non-existing path")

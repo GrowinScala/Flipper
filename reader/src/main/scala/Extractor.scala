@@ -38,6 +38,7 @@ object Extractor {
       //If we want to add the images text to str, we can do so, although its not very precise
 
       pdf.close()
+      cleanImageDir()
       Option(str)
     } catch {
       case t: FileNotFoundException => t.printStackTrace(); None
@@ -265,5 +266,14 @@ object Extractor {
       else end(a, n - 1)
 
     start(0)
+  }
+
+  /**
+    * Method that deletes all files from the image folder
+    */
+  private def cleanImageDir(){
+    val dir = new File("./target/images")
+    val files = dir.listFiles.filter(_.isFile).toList
+    files.foreach(_.delete)
   }
 }
