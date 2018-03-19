@@ -1,5 +1,3 @@
-import javax.imageio.ImageIO
-
 object Main {
 
   import Converter._

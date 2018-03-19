@@ -7,12 +7,6 @@ import Extractor._
 import ImageProcessing._
 
 
-object FileType extends Enumeration{
-  val png = Value("png")
-  val jpg = Value("jpg")
-  val jpeg = Value("jpeg")
-  val gif = Value("gif")
-}
 /**
   * Singleton object that implements the functions regarding the conversion of pdf into other file types
   */
@@ -29,9 +23,7 @@ object Converter {
   @throws[IllegalArgumentException]
   def convertPDFtoIMG(filePath: String, fileType: FileType.Value): Boolean = {
     require(fileType != null, "File type must be one of png, jpg, gif or jpeg")
-    //    if (fileType != "png" && fileType != "jpg" && fileType != "gif" && fileType != "jpeg") false
 
-    //      TODO we believe ImageIO has a default for png when the fileType is incorrect, maybe create an Enum ?
     try {
       val pdf = PDDocument.load(new File(filePath))
       val renderer = new PDFRenderer(pdf)
@@ -51,7 +43,7 @@ object Converter {
     * @param filePath - String containing the URI to the pdf file
     * @return - A Boolean saying if the conversion was successful
     */
-  def convertPDFtoODF(filePath: String): Boolean = {
+  def convertPDFtoODT(filePath: String): Boolean = {
     try {
       val text = readPDF(filePath, readImages = false)
       val textContent = text.getOrElse("")

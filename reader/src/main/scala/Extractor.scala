@@ -27,15 +27,16 @@ object Extractor {
       val pdf = PDDocument.load(new File(filePath))
       val document = new PDFTextStripper
 
+      val str = Normalizer.normalize(document.getText(pdf), Normalizer.Form.NFD)
+        .replaceAll("[\\p{InCombiningDiacriticalMarks}]", "")
+
       if (readImages) {
         val imagesList = extractImgs(pdf)
         val imageListContent = imagesList.getOrElse(List())
-        //        imagesList.foreach(f => println(readImageText(f)))
+        imageListContent.foreach(f => println(readImageText(f)))
       }
       //If we want to add the images text to str, we can do so, although its not very precise
 
-      val str = Normalizer.normalize(document.getText(pdf), Normalizer.Form.NFD)
-        .replaceAll("[\\p{InCombiningDiacriticalMarks}]", "")
       pdf.close()
       Option(str)
     } catch {
@@ -141,7 +142,7 @@ object Extractor {
     * @return
     */
   def makeJSONString(listJSON: MatchedPair, flag: String = "empty"): String = {
-    //    def isAllDigits(x: String) = x forall Character.isDigit //TODO when all the characters are numbers dont add the quotes ?
+    //    def isAllDigits(x: String) = x forall Character.isDigit //TODO when all the characters are numbers dont add the quotes
 
     lazy val quote = "\""
 

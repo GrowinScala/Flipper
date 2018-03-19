@@ -1,9 +1,10 @@
 import java.io.{File, IOException}
-
 import javax.imageio.ImageIO
 import net.sourceforge.tess4j.Tesseract
-import org.apache.pdfbox.pdmodel.PDDocument
+import org.apache.pdfbox.cos.COSName
+import org.apache.pdfbox.pdmodel.{PDDocument, PDResources}
 import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject
+import java.util.Iterator
 
 /**
   * Singleton Object that implements all the image processing functionalities
@@ -40,28 +41,47 @@ object ImageProcessing {
     //    val files = dir.listFiles.filter(_.isFile).toList
     //    files.foreach(_.delete)
 
-    val numPages = document.getNumberOfPages
-    //Using a mutable List for return a List of files (images) found in the pdf document
-    //This was implemented mutably because pRes.getXObjectNames returns a Java Iterator[CosName] and there is no .map/.flatMap fucntion to it, only .forEach
-    var mutableFilesList: List[File] = List() //mutable
-    for (i <- 0 until numPages) {
-      val page = document.getPage(i)
-      val pRes = page.getResources
-      pRes.getXObjectNames.forEach(r => {
-        val o = pRes.getXObject(r)
-        if (o.isInstanceOf[PDImageXObject]) {
-          val file = new File("./target/images/Page" + (i + 1) + "_" + System.nanoTime() + ".png")
-          //          val image = o.asInstanceOf[PDImageXObject].getImage
-          //          saveGridImage(file, image)
-          try {
-            ImageIO.write(o.asInstanceOf[PDImageXObject].getImage, "png", file)
-          } catch {
+    /**
+      * Internal method that iterates over the pages in a pdf document
+      *
+      * @param numPages - The number of pages in a given pdf document
+      * @return a List containg all the image files found in a given pdf document
+      */
+    def iteratePages(numPages: Int): List[File] = {
+      if (numPages == -1) Nil //stop condition
+      else {
+        val page = document.getPage(numPages)
+        val pageResources = page.getResources
+        val iterator = pageResources.getXObjectNames
+        getFilesList(iterator.iterator(), pageResources) ::: iteratePages(numPages - 1)
+      }
+    }
+
+    /**
+      * Internal method that iterates over the page resources object names, in order to find the images in a specific page
+      *
+      * @param iterator      - Java Iterator to Iterate over the object names
+      * @param pageResources - Resoucers of the specified page in wich to obtain the types of resources (images, text, graphs, etc.)
+      * @return a List containing all the image files found in a specific page of a given pdf document
+      */
+    def getFilesList(iterator: Iterator[COSName], pageResources: PDResources): List[File] = {
+      if (!iterator.hasNext) Nil //stop condition
+      else {
+        val nextIter = iterator.next
+        val obj = pageResources.getXObject(nextIter)
+        if (obj.isInstanceOf[PDImageXObject]) {
+          val file = new File("./target/images/GeneratedImage_" + System.nanoTime() + ".png")
+          try
+            ImageIO.write(obj.asInstanceOf[PDImageXObject].getImage, "png", file)
+          catch {
             case io: IOException => io.printStackTrace(); None
           }
-          mutableFilesList = mutableFilesList :+ file
-        }
-      })
+          List(file) ::: getFilesList(iterator, pageResources)
+        } else Nil
+      }
     }
+
+    val mutableFilesList: List[File] = iteratePages(document.getNumberOfPages - 1)
     Option(mutableFilesList)
   }
 

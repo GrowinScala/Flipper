@@ -1,11 +1,7 @@
-import java.io.File
-
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.Matchers._
 import org.scalatest.junit.JUnitRunner
 import Converter._
-import org.apache.pdfbox.pdmodel.PDDocument
 
 @RunWith(classOf[JUnitRunner])
 class ConverterSuite extends FunSuite {
@@ -26,7 +22,7 @@ class ConverterSuite extends FunSuite {
   /**
     * Test that sending a null filepath return false since the conversion was not successful
     */
-  test("convertPDFtoIMG with null filepath"){
+  test("convertPDFtoIMG with null filepath") {
     val res = convertPDFtoIMG(null, FileType.png)
     assert(!res)
   }
@@ -34,9 +30,9 @@ class ConverterSuite extends FunSuite {
   /**
     * Test that sending a null fileType returns IllegalArgumentException
     */
-  test("convertPDFtoIMG with null fileType"){
+  test("convertPDFtoIMG with null fileType") {
     assertThrows[IllegalArgumentException](
-      convertPDFtoIMG(validPath,null)
+      convertPDFtoIMG(validPath, null)
     )
   }
 
@@ -53,9 +49,9 @@ class ConverterSuite extends FunSuite {
     * will return false
     */
   test("convertPDFtoODF with invalid filePath") {
-    val nullPath = convertPDFtoODF(null)
-    val emptyPath = convertPDFtoODF("")
-    val nonExistingPath = convertPDFtoODF("non-existing path")
+    val nullPath = convertPDFtoODT(null)
+    val emptyPath = convertPDFtoODT("")
+    val nonExistingPath = convertPDFtoODT("non-existing path")
     assert(!nullPath && !emptyPath && !nonExistingPath)
   }
 
@@ -64,6 +60,6 @@ class ConverterSuite extends FunSuite {
     * meaning it successfully converted the PDF to ODF
     */
   test("convertPDFtoODF with valid filePath") {
-    assert(convertPDFtoODF(validPath))
+    assert(convertPDFtoODT(validPath))
   }
 }

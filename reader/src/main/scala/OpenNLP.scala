@@ -23,7 +23,6 @@ object OpenNLP {
       case "por" => "./reader/resources/pt-pos-maxent.bin"
       case _ => "./reader/resources/en-pos-maxent.bin"
     }
-    //TODO Open NPL changes the POS tags according to the language used (the bin file above)
     val inputStream = new FileInputStream(filepath)
     val posModel = new POSModel(inputStream)
     val wsTokenizer = WhitespaceTokenizer.INSTANCE
@@ -51,13 +50,13 @@ object OpenNLP {
     langDect.predictLanguage(text).getLang
   }
 
-  //  def translatePOSTag(tag: String): String = {
-  //    //TODO Open NLP returns different POS tags acording to the language used in the bin file
-  //    /**
-  //      * Should we try to translate a tag from one language to another ?
-  //      * In some cases this will fail, for example a portuguese conjunção does not exist in english
-  //      * Also there are about 70 POS tags for the english language
-  //      */
-  //    ???
-  //  }
+  def translatePOSTag(tag: String): String = {
+    /**
+      * Should we try to translate a tag from one language to another ?
+      * In some cases this will fail, for example a portuguese conjunção does not exist in english
+      * Also there are about 70 POS tags for the english language
+      */
+    //TODO Implement translatePOSTag
+    ???
+  }
 }
