@@ -32,7 +32,7 @@ object OpenNLP {
     val tagger = new POSTaggerME(posModel) //Instanciate the POSTagger
     val tags = tagger.tag(splittedWords) //Tag all the words in the text
 
-    (splittedWords, tags)
+    (splittedWords, tags.map(translatePOSTag))
   }
 
   /**
@@ -50,13 +50,24 @@ object OpenNLP {
     langDect.predictLanguage(text).getLang
   }
 
+  /**
+    * Method that translates the received tag into one of the created standard POS tags
+    *
+    * @param tag - The POS tag to translate
+    * @return a String containing the translated POS tag
+    */
   def translatePOSTag(tag: String): String = {
-    /**
-      * Should we try to translate a tag from one language to another ?
-      * In some cases this will fail, for example a portuguese conjunção does not exist in english
-      * Also there are about 70 POS tags for the english language
-      */
-    //TODO Implement translatePOSTag
-    ???
+    tag match {
+      case "adj" | "JJ" => "ADJ" //Adjective
+      case "prop" | "NNP" => "PN" //Proper noun
+      case "n" | "NN" => "N" //noun
+      case "NNS" => "NPLR" //plural noun
+      case "v-inf" | "VB" => "VB" //verb base form
+      case "v-ger" | "VBG" => "VBG" //verb gerund
+      case "v-pcp" | "VBN" => "VBN" //verb past participle
+      case "num" | "CD" => "NUM" //Number
+      case "adv" | "RB" => "ADV" //Adverb
+      case _ => tag
+    }
   }
 }
