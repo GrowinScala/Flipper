@@ -143,7 +143,12 @@ object Extractor {
     * @return
     */
   def makeJSONString(listJSON: MatchedPair, flag: String = "empty"): String = {
-    def isAllDigits(x: String) = x forall Character.isDigit
+    def isAllDigits(x: String) = try {
+      x.toDouble
+      true
+    } catch {
+      case e: Exception => false
+    }
 
     lazy val quote = "\""
 
