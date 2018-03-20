@@ -51,6 +51,19 @@ object Generator {
   }
 
   /**
+    * Method that receives a JSON string to be parsed and converted into a HTML file, and then into a PDF file.
+    * This method overload implements the user decision to send an additional config file specifying simple styling details to be implemented
+    *
+    * @param json   - The Json string to be converted into a PDF document
+    * @param config - The config specifying simple styling details to be implemented in the PDF conversion
+    * @return a Boolean saying if the conversion from JSON to PDF was successful or not
+    */
+  def convertJSONtoPDF(json: String, config: Config): Boolean = {
+    val htmlURI = writeHTML(json, config).getOrElse("")
+    convertHTMLToPDF(htmlURI)
+  }
+
+  /**
     * Method that implements the conversion from a HTML file to a PDF file.
     * This method is called by all convertJSONtoPDF overloads
     *
@@ -109,6 +122,26 @@ object Generator {
     * @return An Option wrapping the URI of the created HTML file. Returns None in case of exception when parsing the JSON String
     */
   private def writeHTML(json: String, cssString: String): Option[String] = {
+    createHtml(json, cssString)
+  }
+
+  /**
+    * Method that calls createHTML.
+    * This method overload implements the user decision to send an additional Config object containing simple styling details
+    *
+    * @param json   - The JSON string to be parsed
+    * @param config - The Config object containing simple styling details
+    * @return An Option wrapping the URI of the created HTML file. Returns None in case of exception when parsing the JSON String
+    */
+  private def writeHTML(json: String, config: Config): Option[String] = {
+    val cssString =
+      "body{" +
+        "font-weight: " + config.fontWeight + ";" +
+        " color: " + config.textColor + ";" +
+        " font-family: " + config.fontFamily + ";" +
+        " text-align: " + config.textAlignment + ";" +
+        "font-size: " + config.fontSize + "pt;" +
+        "}"
     createHtml(json, cssString)
   }
 

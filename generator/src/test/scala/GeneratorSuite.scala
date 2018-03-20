@@ -29,6 +29,7 @@ class GeneratorSuite extends FunSuite {
     val validURI = convertJSONtoPDF(""" {"name":"Lucas"}  """)
     val validCSSFile = convertJSONtoPDF(""" {"name":"Lucas"}  """, new File("test.css"))
     val validCSSString = convertJSONtoPDF(""" {"name":"Lucas"}  """, "p { color : green }")
-    assert(validURI && validCSSFile && validCSSString)
+    val validConfig = convertJSONtoPDF(""" {"name":"Lucas"}  """, Config("green"))
+    assert(validURI && validCSSFile && validCSSString && validConfig)
   }
 }
