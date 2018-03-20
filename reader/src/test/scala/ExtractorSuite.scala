@@ -202,8 +202,8 @@ class ExtractorSuite extends FunSuite {
     */
   test("Get All JSON Objects") {
     val expected = List(
-      "{\"name\" : \"Margarida Reis\", \"age\" : \"25\"}",
-      "{\"name\" : \"Lucas\", \"age\" : \"21\"}",
+      "{\"name\" : \"Margarida Reis\", \"age\" : 25}",
+      "{\"name\" : \"Lucas\", \"age\" : 21}",
       "{\"name\" : \"Albertina\", \"age\" : \"\"}",
       "{\"name\" : \"Justino Alberto\", \"age\" : \"\"}",
       "{\"name\" : \"\", \"age\" : \"\"}"

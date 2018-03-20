@@ -143,17 +143,24 @@ object Extractor {
     * @return
     */
   def makeJSONString(listJSON: MatchedPair, flag: String = "empty"): String = {
-    //    def isAllDigits(x: String) = x forall Character.isDigit //TODO when all the characters are numbers dont add the quotes
+    def isAllDigits(x: String) = x forall Character.isDigit
 
     lazy val quote = "\""
 
     val pseudoJSON = listJSON.map(k =>
       if (k._2.nonEmpty) {
 
-        if (k._2.size > 1)
-          s"${quote + k._1 + quote} : ${quote + k._2.mkString("[", ", ", "]") + quote}"
-        else
-          s"${quote + k._1 + quote} : ${quote + k._2.head + quote}"
+        if (k._2.size > 1) {
+          val left = s"${quote + k._1 + quote} : "
+          val right = "[" + k._2.map(str => if (isAllDigits(str)) str + ", " else s"${quote + str + quote}, ").mkString + "]"
+          (left + right).replaceAll(", ]", "]") //Remove trailing commas
+        } else {
+          lazy val headValue = k._2.head
+          if (isAllDigits(headValue))
+            s"${quote + k._1 + quote} : $headValue"
+          else
+            s"${quote + k._1 + quote} : ${quote + headValue + quote}"
+        }
 
       } else {
 
@@ -271,7 +278,7 @@ object Extractor {
   /**
     * Method that deletes all files from the image folder
     */
-  private def cleanImageDir(){
+  private def cleanImageDir() {
     val dir = new File("./target/images")
     val files = dir.listFiles.filter(_.isFile).toList
     files.foreach(_.delete)
