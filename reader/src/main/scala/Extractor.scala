@@ -35,7 +35,7 @@ object Extractor {
         val imagesList = extractImgs(pdf)
         val imageListContent = imagesList.getOrElse(List())
         //        imageListContent.foreach(f => println(readImageText(f)))
-        imageListContent.foreach(f => checkText(readImageText(f).getOrElse("")))
+//        imageListContent.foreach(f => correctText(readImageText(f).getOrElse("")))
       }
       //If we want to add the images text to str, we can do so, although its not very precise
 
