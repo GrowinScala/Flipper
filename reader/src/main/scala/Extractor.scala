@@ -32,12 +32,10 @@ object Extractor {
         .replaceAll("[\\p{InCombiningDiacriticalMarks}]", "")
 
       if (readImages) {
-        val imagesList = extractImgs(pdf)
-        val imageListContent = imagesList.getOrElse(List())
-        //        imageListContent.foreach(f => println(readImageText(f)))
-//        imageListContent.foreach(f => correctText(readImageText(f).getOrElse("")))
+        val imageList = extractImgs(pdf).getOrElse(List())
+        val imageTexts = imageList.map(img => readImageText(img).getOrElse("")).mkString
+        //        println(correctText(imageTexts))
       }
-      //If we want to add the images text to str, we can do so, although its not very precise
 
       pdf.close()
       cleanImageDir()
