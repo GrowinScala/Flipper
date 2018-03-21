@@ -6,6 +6,9 @@ import OpenNLP.detectLanguage
 import org.languagetool.rules.RuleMatch
 import scala.annotation.tailrec
 
+/**
+  * Singleton object that handles all the operations regarding spell checking
+  */
 object SpellChecker {
 
 
