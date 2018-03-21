@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: org.languagetool:language-en:4.0:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.languagetool/language-en/jars/language-en-4.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.languagetool/language-en/srcs/language-en-4.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

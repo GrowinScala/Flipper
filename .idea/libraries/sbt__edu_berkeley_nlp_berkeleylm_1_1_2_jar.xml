@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: edu.berkeley.nlp:berkeleylm:1.1.2:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/edu.berkeley.nlp/berkeleylm/jars/berkeleylm-1.1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/edu.berkeley.nlp/berkeleylm/srcs/berkeleylm-1.1.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

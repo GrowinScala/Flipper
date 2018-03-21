@@ -11,3 +11,4 @@ object POSTag extends Enumeration {
   val NUM = Value("NUM")
   val ADV = Value("ADV")
 }
+//TODO Support more POS tags

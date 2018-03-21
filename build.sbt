@@ -12,7 +12,9 @@ val basicSettings = Seq(
   libraryDependencies += "com.itextpdf" % "itextpdf" % "5.5.10",
   libraryDependencies += "com.lihaoyi" %% "scalatags" % "0.6.7",
   libraryDependencies += "org.json4s" %% "json4s-native" % "3.6.0-M2",
-  libraryDependencies += "org.odftoolkit" % "odfdom-java" % "0.8.7"
+  libraryDependencies += "org.odftoolkit" % "odfdom-java" % "0.8.7",
+  libraryDependencies += "org.languagetool" % "language-en" % "4.0",
+  libraryDependencies += "org.languagetool" % "language-pt" % "4.0"
 )
 
 

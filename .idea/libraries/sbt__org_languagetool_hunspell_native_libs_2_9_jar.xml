@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: org.languagetool:hunspell-native-libs:2.9:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.languagetool/hunspell-native-libs/jars/hunspell-native-libs-2.9.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.languagetool/hunspell-native-libs/srcs/hunspell-native-libs-2.9-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

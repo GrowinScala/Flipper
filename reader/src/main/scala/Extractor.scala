@@ -7,6 +7,7 @@ import OpenNLP._
 import ImageProcessing._
 import scala.annotation.tailrec
 import scala.io.Source
+import SpellChecker._
 
 /**
   * Singleton object that implements all the functionalities regarding the extraction of information from a PDF document
@@ -33,7 +34,8 @@ object Extractor {
       if (readImages) {
         val imagesList = extractImgs(pdf)
         val imageListContent = imagesList.getOrElse(List())
-        imageListContent.foreach(f => println(readImageText(f)))
+        //        imageListContent.foreach(f => println(readImageText(f)))
+        imageListContent.foreach(f => checkText(readImageText(f).getOrElse("")))
       }
       //If we want to add the images text to str, we can do so, although its not very precise
 
@@ -57,7 +59,7 @@ object Extractor {
     * @return List containing pairs of Keywords and a List (non-repeating) of values found for that keyword
     */
   @throws[IllegalArgumentException]
-  def getAllMatchedValues(text: Option[String], keywords: List[(Keyword, String)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
+  def getAllMatchedValues(text: Option[String], keywords: List[(Keyword, POSTag.Value)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
     require(keywords.nonEmpty, "The list of keywords should not be empty")
     val textContent = text.getOrElse("")
     if (textContent.isEmpty) List()
@@ -90,7 +92,7 @@ object Extractor {
     * @return A List containing pairs of keywords with a single matched value
     */
   @throws[IllegalArgumentException]
-  def getSingleMatchedValue(text: Option[String], keywords: List[(Keyword, String)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
+  def getSingleMatchedValue(text: Option[String], keywords: List[(Keyword, POSTag.Value)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
     require(keywords.nonEmpty, "The list of keywords should not be empty")
     val textContent = text.getOrElse("")
     if (textContent.isEmpty) List()
@@ -108,7 +110,7 @@ object Extractor {
     * @return A List containing sublists of pairs of keywords with single matched values
     */
   @throws[IllegalArgumentException]
-  def getAllObjects(text: Option[String], keywords: List[(Keyword, String)], clientRegEx: Map[Keyword, Regex] = Map()): List[MatchedPair] = {
+  def getAllObjects(text: Option[String], keywords: List[(Keyword, POSTag.Value)], clientRegEx: Map[Keyword, Regex] = Map()): List[MatchedPair] = {
     require(keywords.nonEmpty, "The list of keywords should not be empty")
     val textContent = text.getOrElse("")
     if (textContent.isEmpty) List()
@@ -215,7 +217,7 @@ object Extractor {
     * @param tag     - The POS Tag of the value we want to return
     * @return A pair containing the keyword and a list of values found for that keyword
     */
-  private def findKeywordInText(keyword: Keyword, tag: String, text: String): (Keyword, List[String]) = {
+  private def findKeywordInText(keyword: Keyword, tag: POSTag.Value, text: String): (Keyword, List[String]) = {
     val (splittedWords, tags) = tagText(text)
     tags.foreach(println)
 
@@ -226,7 +228,7 @@ object Extractor {
     // then search from that point forward for a word whose POS tag matches the one passed by arguments
     val valuesList: List[String] = (for (i <- splittedWords.indices if splittedWords(i).toLowerCase == keyword.toLowerCase) yield {
       if (i < arrLength) {
-        val wordList = for (j <- i + 1 until arrLength if tags(j) == tag.toUpperCase) yield splittedWords(j)
+        val wordList = for (j <- i + 1 until arrLength if tags(j) == tag.toString) yield splittedWords(j)
         if (wordList.nonEmpty) wordList.head else ""
       } else {
         "" //In case the keyword found is the last word in the text we're not going to find a value for it

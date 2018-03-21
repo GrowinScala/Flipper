@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: org.carrot2:morfologik-stemming:2.1.4:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.carrot2/morfologik-stemming/bundles/morfologik-stemming-2.1.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.carrot2/morfologik-stemming/srcs/morfologik-stemming-2.1.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

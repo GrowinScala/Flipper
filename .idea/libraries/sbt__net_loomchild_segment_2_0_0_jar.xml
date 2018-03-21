@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: net.loomchild:segment:2.0.0:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/net.loomchild/segment/jars/segment-2.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/net.loomchild/segment/srcs/segment-2.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
