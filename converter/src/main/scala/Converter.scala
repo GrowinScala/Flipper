@@ -110,7 +110,7 @@ object Converter {
             newPar.setFont(new Font(fontType, StyleTypeDefinitions.FontStyle.REGULAR, Integer.parseInt(fontSize), color))
           }
         // Image
-        case "img" => {
+        case "img" =>
           val img = imgs.last
           println(imgs.size)
           println(img.toURI)
@@ -118,7 +118,6 @@ object Converter {
           odt.addParagraph("")
           odt.newImage(img.toURI)
           odt.addParagraph("")
-        }
         // Else
         case _ =>
       }
