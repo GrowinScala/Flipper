@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: org.unbescape:unbescape:1.1.5.RELEASE:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.unbescape/unbescape/jars/unbescape-1.1.5.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.unbescape/unbescape/srcs/unbescape-1.1.5.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

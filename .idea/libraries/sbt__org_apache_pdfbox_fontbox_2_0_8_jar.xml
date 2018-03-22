@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: org.apache.pdfbox:fontbox:2.0.8:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.pdfbox/fontbox/bundles/fontbox-2.0.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.pdfbox/fontbox/srcs/fontbox-2.0.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

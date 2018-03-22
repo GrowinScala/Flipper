@@ -14,7 +14,10 @@ val basicSettings = Seq(
   libraryDependencies += "org.json4s" %% "json4s-native" % "3.6.0-M2",
   libraryDependencies += "org.odftoolkit" % "odfdom-java" % "0.8.7",
   libraryDependencies += "org.languagetool" % "language-en" % "4.0",
-  libraryDependencies += "org.languagetool" % "language-pt" % "4.0"
+  libraryDependencies += "org.languagetool" % "language-pt" % "4.0",
+  libraryDependencies += "net.htmlparser.jericho" % "jericho-html" % "3.4",
+  libraryDependencies += "org.odftoolkit" % "simple-odf" % "0.6.6",
+  libraryDependencies += "net.sf.cssbox" % "pdf2dom" % "1.7"
 )
 
 

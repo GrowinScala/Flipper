@@ -16,9 +16,11 @@
             <option value="$PROJECT_DIR$/reader/project" />
           </set>
         </option>
+        <option name="resolveSbtClassifiers" value="true" />
         <option name="sbtVersion" value="1.1.1" />
         <option name="useAutoImport" value="true" />
         <option name="useOurOwnAutoImport" value="true" />
+        <option name="useSbtShell" value="true" />
       </SbtProjectSettings>
     </option>
   </component>

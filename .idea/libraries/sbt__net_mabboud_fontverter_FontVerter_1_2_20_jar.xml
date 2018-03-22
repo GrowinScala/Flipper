@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: net.mabboud.fontverter:FontVerter:1.2.20:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/net.mabboud.fontverter/FontVerter/jars/FontVerter-1.2.20.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/net.mabboud.fontverter/FontVerter/srcs/FontVerter-1.2.20-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

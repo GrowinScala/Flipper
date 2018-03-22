@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Flipper-reader.iml" filepath="$PROJECT_DIR$/.idea/modules/Flipper-reader.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/converter.iml" filepath="$PROJECT_DIR$/.idea/modules/converter.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/converter-build.iml" filepath="$PROJECT_DIR$/.idea/modules/converter-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/flipper.iml" filepath="$PROJECT_DIR$/.idea/modules/flipper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/flipper-build.iml" filepath="$PROJECT_DIR$/.idea/modules/flipper-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/generator.iml" filepath="$PROJECT_DIR$/.idea/modules/generator.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/generator-build.iml" filepath="$PROJECT_DIR$/.idea/modules/generator-build.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/reader-build~1.iml" filepath="$PROJECT_DIR$/.idea/modules/reader-build~1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/reader.iml" filepath="$PROJECT_DIR$/.idea/modules/reader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/reader-build.iml" filepath="$PROJECT_DIR$/.idea/modules/reader-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/root.iml" filepath="$PROJECT_DIR$/.idea/modules/root.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/root-build.iml" filepath="$PROJECT_DIR$/.idea/modules/root-build.iml" />
     </modules>
