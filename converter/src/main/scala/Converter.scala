@@ -32,7 +32,7 @@ object Converter {
       val renderer = new PDFRenderer(pdf)
       for (i <- 0 until pdf.getNumberOfPages) {
         val image = renderer.renderImage(i)
-        ImageIO.write(image, fileType.toString, new File("./target/images/Converted_Page" + i + "_" + System.nanoTime() + "." + fileType.toString))
+        ImageIO.write(image, fileType.toString, new File("./target/PDFtoIMG/Converted_Page" + i + "_" + System.nanoTime() + "." + fileType.toString))
       }
       true
     } catch {
@@ -50,6 +50,7 @@ object Converter {
     try {
       convertPDFtoHTML(filePath)
       convertHTMLtoODT(filePath)
+      cleanImageDir()
       true
     } catch {
       case e: Exception => e.printStackTrace(); false
@@ -79,6 +80,15 @@ object Converter {
     */
   private def convertHTMLtoODT(filePath:String) = {
 
+    /**
+      * Auxiliary method that iterates through the html lines, parses the information and returns the converted odt file
+      *
+      * @param lines - the html remaining lines to be read
+      * @param prevLine - the previous line read
+      * @param imgList - the remaining images that need to be added to the odt file
+      * @param document - current state of the odt document
+      * @return - the document with all the information extracted from the html
+      */
     def recFunc(lines:List[String], prevLine:String, imgList:List[File], document: TextDocument): TextDocument ={
       val regexLine = "<(/body|div class=\"page\"|div class=\"p\"|img).*(?:>|)".r
       val regexPara = ".*<.*style=\"top:(\\d+).*font-family:(.*);font-size:(\\d+).*\">(.*)</div>".r
@@ -91,11 +101,8 @@ object Converter {
 
       group match {
         case "div class=\"page\"" =>
-          if(line.contains("page_0")) recFunc(lines.tail,lines.head,imgList,document)
-          else {
-            document.addPageBreak()
-            recFunc(lines.tail,lines.head,imgList,document)
-          }
+          if(line.contains("page_0")) { } else { document.addPageBreak() }
+          recFunc(lines.tail,lines.head,imgList,document)
         case "div class=\"p\"" =>
           val regexPara(top,fontType,fontSize,text) = line
           val colorStr = if(line.contains("color")){ regexColo.findFirstMatchIn(line).map(_.group(1)).mkString("") } else {"#000000"}
@@ -116,10 +123,14 @@ object Converter {
             recFunc(lines.tail,lines.head,imgList,document)
           }
         case "img" =>
-          document.addParagraph("")
-          document.newImage(imgList.head.toURI)
-          document.addParagraph("")
-          recFunc(lines.tail,lines.head,imgList.tail,document)
+          if(imgList.nonEmpty) {
+            document.addParagraph("")
+            document.newImage(imgList.head.toURI)
+            document.addParagraph("")
+            recFunc(lines.tail,lines.head,imgList.tail,document)
+          } else {
+            recFunc(lines.tail,lines.head,imgList,document)
+          }
         case "/body" => document
         case _ => recFunc(lines.tail,lines.head,imgList,document)
       }
@@ -138,7 +149,6 @@ object Converter {
     val newOdt = recFunc(htmlLines,"",imgs,TextDocument.newTextDocument())
 
     newOdt.save("out.odt")
-    cleanImageDir()
   }
 
   /**
