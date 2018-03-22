@@ -59,7 +59,7 @@ class ConverterSuite extends FunSuite {
     * Tests that sending a valid filePath to convertPDFtoODF will return true
     * meaning it successfully converted the PDF to ODF
     */
-  test("convertPDFtoODF with valid filePath") {
+  test("convertPDFtoODT with valid filePath") {
     assert(convertPDFtoODT(validPath))
   }
 }

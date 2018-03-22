@@ -128,7 +128,6 @@ object Converter {
 
     val bufferedSource = Source.fromFile(new File("out.html"))
     val htmlLines = bufferedSource.getLines.toList
-    val odt= TextDocument.newTextDocument()
     bufferedSource.close()
     val pdf = PDDocument.load(new File(filePath))
     extractImgs(pdf)
@@ -136,10 +135,9 @@ object Converter {
     val dir = new File("./target/images")
     val imgs = dir.listFiles.filter(_.isFile).toList.reverse
 
-    val newOdt = recFunc(htmlLines,"",imgs,odt)
+    val newOdt = recFunc(htmlLines,"",imgs,TextDocument.newTextDocument())
 
     newOdt.save("out.odt")
-    odt.close()
     cleanImageDir()
   }
 
