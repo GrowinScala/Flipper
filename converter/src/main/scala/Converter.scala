@@ -41,7 +41,7 @@ object Converter {
   }
 
   /**
-    * Method that creates a odf file with the information taken from a pdf (Note: does not maintain image and text order)
+    * Method that creates a odf file with the information taken from a pdf (Note: does not maintain full formating)
     *
     * @param filePath - String containing the URI to the pdf file
     * @return - A Boolean saying if the conversion was successful
@@ -56,7 +56,12 @@ object Converter {
     }
   }
 
-  def convertPDFtoHTML(filePath:String): Unit ={
+  /**
+    * Method that creates a html file with the information from a pdf
+    *
+    * @param filePath - String containing the URI to the pdf file
+    */
+  private def convertPDFtoHTML(filePath:String) = {
     val outfile = "out.html"
     val config = PDFDomTreeConfig.createDefaultConfig
     val document = PDDocument.load(new File(filePath))
@@ -67,7 +72,12 @@ object Converter {
     document.close()
   }
 
-  def convertHTMLtoODT(filePath:String): Unit ={
+  /**
+    * Method that creates a odt file from a html previously converted from a pdf
+    *
+    * @param filePath - String containg the URI from the original pdf file
+    */
+  private def convertHTMLtoODT(filePath:String) = {
 
     def recFunc(lines:List[String], prevLine:String, imgList:List[File], document: TextDocument): TextDocument ={
       val regexLine = "<(/body|div class=\"page\"|div class=\"p\"|img).*(?:>|)".r
