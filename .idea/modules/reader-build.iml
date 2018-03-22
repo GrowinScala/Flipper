@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id="reader-build" external.linked.project.path="$MODULE_DIR$/../../reader/project" external.root.project.path="$MODULE_DIR$/../.." external.system.id="SBT" sbt.imports="SUB:DOLLAR28108096c33fd1e05211.`converter`, SUB:DOLLAR28108096c33fd1e05211.`generator`, SUB:DOLLAR28108096c33fd1e05211.`reader`, SUB:DOLLAR28108096c33fd1e05211.`root`, _root_.org.jetbrains.sbt.IdeaShellPlugin.autoImport._, _root_.sbt.Keys._, _root_.sbt._, _root_.sbt.plugins.IvyPlugin, _root_.sbt.plugins.JvmPlugin, _root_.sbt.plugins.CorePlugin, _root_.sbt.plugins.JUnitXmlReportPlugin, _root_.sbt.plugins.Giter8TemplatePlugin, _root_.org.jetbrains.sbt.StructurePlugin, _root_.org.jetbrains.sbt.IdeaShellPlugin, _root_.scala.xml.{TopScope=&gt;SUB:DOLLARscope}" sbt.resolvers="https://repo1.maven.org/maven2/|maven|public, file:/C:/Users/Margarida%20Reis/.sbt/preloaded/|maven|local-preloaded, C:\Users\Margarida Reis\.ivy2\cache|ivy|Local cache" type="SBT_MODULE" version="4">
+<module external.linked.project.id="reader-build" external.linked.project.path="$MODULE_DIR$/../../reader/project" external.root.project.path="$MODULE_DIR$/../.." external.system.id="SBT" sbt.imports="SUB:DOLLAR69240df8dbe158f7318d.`converter`, SUB:DOLLAR69240df8dbe158f7318d.`generator`, SUB:DOLLAR69240df8dbe158f7318d.`reader`, SUB:DOLLAR69240df8dbe158f7318d.`root`, _root_.sbt.Keys._, _root_.sbt._, _root_.sbt.plugins.IvyPlugin, _root_.sbt.plugins.JvmPlugin, _root_.sbt.plugins.CorePlugin, _root_.sbt.plugins.JUnitXmlReportPlugin, _root_.sbt.plugins.Giter8TemplatePlugin, _root_.scala.xml.{TopScope=&gt;SUB:DOLLARscope}" sbt.resolvers="https://repo1.maven.org/maven2/|maven|public, file:/C:/Users/Margarida%20Reis/.sbt/preloaded/|maven|local-preloaded, C:\Users\Margarida Reis\.ivy2\cache|ivy|Local cache" type="SBT_MODULE" version="4">
   <component name="NewModuleRootManager">
     <output url="file://$MODULE_DIR$/../../reader/project/target/idea-classes" />
     <output-test url="file://$MODULE_DIR$/../../reader/project/target/idea-test-classes" />
@@ -15,8 +15,6 @@
     <orderEntry type="module-library">
       <library name="sbt: sbt-and-plugins">
         <CLASSES>
-          <root url="jar://$USER_HOME$/.ivy2/cache/scala_2.12/sbt_1.0/org.jetbrains/sbt-idea-shell/jars/sbt-idea-shell-2017.2.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/scala_2.12/sbt_1.0/org.jetbrains/sbt-structure-extractor/jars/sbt-structure-extractor-2017.2.jar!/" />
           <root url="jar://$USER_HOME$/.sbt/boot/scala-2.12.4/lib/jline.jar!/" />
           <root url="jar://$USER_HOME$/.sbt/boot/scala-2.12.4/lib/scala-compiler.jar!/" />
           <root url="jar://$USER_HOME$/.sbt/boot/scala-2.12.4/lib/scala-library.jar!/" />

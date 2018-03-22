@@ -20,7 +20,6 @@
         <option name="sbtVersion" value="1.1.1" />
         <option name="useAutoImport" value="true" />
         <option name="useOurOwnAutoImport" value="true" />
-        <option name="useSbtShell" value="true" />
       </SbtProjectSettings>
     </option>
   </component>
