@@ -61,7 +61,7 @@ object Converter {
     *
     * @param filePath - String containing the URI to the pdf file
     */
-  def convertPDFtoHTML(filePath:String) = {
+  private def convertPDFtoHTML(filePath:String) = {
     val outfile = "out.html"
     val config = PDFDomTreeConfig.createDefaultConfig
     val document = PDDocument.load(new File(filePath))
