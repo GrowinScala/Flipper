@@ -1,4 +1,5 @@
 import java.io.{File, IOException}
+
 import javax.imageio.ImageIO
 import net.sourceforge.tess4j.Tesseract
 import org.apache.pdfbox.cos.COSName
@@ -19,6 +20,26 @@ object ImageProcessing {
     * @return an Option wrapping a String containing the images text. Returns None in case of exception
     */
   def readImageText(file: File): Option[String] = {
+    //    val api = new TessBaseAPI()
+    //    if (api.Init("./tessdata", "eng") != 0) {
+    //      System.err.println("Could not initialize tesseract.")
+    //      System.exit(1)
+    //      None
+    //    }
+    //
+    //    //Load image using Leptonica library
+    //    val image = pixRead(file.getPath)
+    //    val betterx = image.xres(300)
+    //    val betterimg = betterx.yres(300)
+    //    api.SetImage(betterimg)
+    //    val outText = api.GetUTF8Text()
+    //    val returnOption = Option(outText.getString)
+    //
+    //    api.End()
+    //    outText.deallocate()
+    //    pixDestroy(image)
+    //    returnOption
+
     val instance = new Tesseract()
     try {
       Option(instance.doOCR(file))

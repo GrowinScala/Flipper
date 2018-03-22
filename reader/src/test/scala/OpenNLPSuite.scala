@@ -29,7 +29,7 @@ class OpenNLPSuite extends FunSuite {
     val text = "An example of possible results"
     val (words, tags) = tagText(text)
     val expectedWords = Array("An", "example", "of", "possible", "results")
-    val expectedTags = Array("DT", "NN", "IN", "JJ", "NNS")
+    val expectedTags = Array("DT", "N", "IN", "ADJ", "NPLR")
 
     words should equal(expectedWords)
     tags should equal(expectedTags)
