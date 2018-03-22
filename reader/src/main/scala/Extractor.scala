@@ -35,7 +35,7 @@ object Extractor {
         val imageList = extractImgs(pdf).getOrElse(List())
         val imageTexts = imageList.map(img => readImageText(img).getOrElse("")).mkString
         println(imageTexts)
-        //        println(correctText(imageTexts))
+        println(correctText(imageTexts))
       }
 
       pdf.close()

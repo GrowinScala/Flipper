@@ -1,16 +1,16 @@
-import java.io.{File, IOException}
-
+import java.io.{File, FileInputStream, IOException}
 import javax.imageio.ImageIO
 import net.sourceforge.tess4j.Tesseract
 import org.apache.pdfbox.cos.COSName
 import org.apache.pdfbox.pdmodel.{PDDocument, PDResources}
 import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject
 import java.util.Iterator
+import com.sksamuel.scrimage.Image
+import com.sksamuel.scrimage.nio.PngWriter
 
 /**
   * Singleton Object that implements all the image processing functionalities
   */
-//noinspection TypeCheckCanBeMatch,SpellCheckingInspection
 object ImageProcessing {
 
   /**
@@ -20,32 +20,20 @@ object ImageProcessing {
     * @return an Option wrapping a String containing the images text. Returns None in case of exception
     */
   def readImageText(file: File): Option[String] = {
-    //    val api = new TessBaseAPI()
-    //    if (api.Init("./tessdata", "eng") != 0) {
-    //      System.err.println("Could not initialize tesseract.")
-    //      System.exit(1)
-    //      None
-    //    }
-    //
-    //    //Load image using Leptonica library
-    //    val image = pixRead(file.getPath)
-    //    val betterx = image.xres(300)
-    //    val betterimg = betterx.yres(300)
-    //    api.SetImage(betterimg)
-    //    val outText = api.GetUTF8Text()
-    //    val returnOption = Option(outText.getString)
-    //
-    //    api.End()
-    //    outText.deallocate()
-    //    pixDestroy(image)
-    //    returnOption
-
-    val instance = new Tesseract()
+    val image = Image.fromStream(new FileInputStream(file)) //Create Scrimage Image from a file input stream
+    val resized = image.scaleToWidth(2000) //scale the image to be 2000 px wide
+    val instance = new Tesseract() //Initialize Tesseract
     try {
-      Option(instance.doOCR(file))
+      //Obtain the processed image file
+      val resizedFile = resized.output(new File("./target/tempImages/temp_" + System.nanoTime() + ".png"))(PngWriter.MaxCompression)
+      val extractedText = Option(instance.doOCR(resizedFile)) //Apply the OCR to the processed image
+      cleanImageDir()
+      extractedText
+      //      Option(instance.doOCR(file))
     } catch {
       case e: Exception => e.printStackTrace(); None
     }
+
   }
 
   /**
@@ -101,40 +89,12 @@ object ImageProcessing {
     Option(mutableFilesList)
   }
 
-  //No improvment on OCR results :(
-  //  def saveGridImage(output: File, gridImage: BufferedImage): Unit = {
-  //    val iw = ImageIO.getImageWritersByFormatName("png")
-  //    while (iw.hasNext) {
-  //      val writer = iw.next
-  //      val writeParam = writer.getDefaultWriteParam
-  //      val typeSpecifier = ImageTypeSpecifier.createFromBufferedImageType(BufferedImage.TYPE_INT_RGB)
-  //      val metadata = writer.getDefaultImageMetadata(typeSpecifier, writeParam)
-  //
-  //      setDPI(metadata)
-  //      val stream = ImageIO.createImageOutputStream(output)
-  //      try {
-  //        writer.setOutput(stream)
-  //        writer.write(metadata, new IIOImage(gridImage, null, metadata), writeParam)
-  //      } finally {
-  //        stream.close()
-  //      }
-  //    }
-  //  }
-  //
-  //  def setDPI(metadata: IIOMetadata): Unit = {
-  //    val dotsPerMili = 1.0 * 1000 / 10 / 25.4
-  //    val horiz = new IIOMetadataNode("HorizontalPixelSize")
-  //    horiz.setAttribute("value", dotsPerMili.toString)
-  //
-  //    val vert = new IIOMetadataNode("VerticalPixelSize")
-  //    vert.setAttribute("value", dotsPerMili.toString)
-  //
-  //    val dim = new IIOMetadataNode("Dimension")
-  //    dim.appendChild(horiz)
-  //    dim.appendChild(vert)
-  //
-  //    val root = new IIOMetadataNode("javax_imageio_1.0")
-  //    root.appendChild(dim)
-  //    metadata.mergeTree("javax_imageio_1.0", root)
-  //  }
+  /**
+    * Method that deletes all files from the image folder
+    */
+  private def cleanImageDir() {
+    val dir = new File("./target/tempImages")
+    val files = dir.listFiles.filter(_.isFile).toList
+    files.foreach(_.delete)
+  }
 }
