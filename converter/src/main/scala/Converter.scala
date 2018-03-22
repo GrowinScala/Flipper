@@ -68,62 +68,67 @@ object Converter {
   }
 
   def convertHTMLtoODT(filePath:String): Unit ={
-    val bufferedSource = Source.fromFile(new File("out.html"))
-    val htmlLines = bufferedSource.getLines.toList
-    val pdf = PDDocument.load(new File(filePath))
-    val odt= TextDocument.newTextDocument()
-    val regexLine = "<(/body|div class=\"page\"|div class=\"p\"|img).*(?:>|)".r
-    val regexPara = ".*<.*style=\"top:(\\d+).*font-family:(.*);font-size:(\\d+).*\">(.*)</div>".r
-    val regexColo = ".*;color:(.{7});.*".r
-    extractImgs(pdf)
-    pdf.close()
-    bufferedSource.close()
-    val dir = new File("./target/images")
-    var imgs = dir.listFiles.filter(_.isFile).toList //TODO Make recusrsive
 
-    for(i <- htmlLines.indices){
-      val line = htmlLines(i)
+    def recFunc(lines:List[String], prevLine:String, imgList:List[File], document: TextDocument): TextDocument ={
+      val regexLine = "<(/body|div class=\"page\"|div class=\"p\"|img).*(?:>|)".r
+      val regexPara = ".*<.*style=\"top:(\\d+).*font-family:(.*);font-size:(\\d+).*\">(.*)</div>".r
+      val regexColo = ".*;color:(.{7});.*".r
+
+      val line = lines.head
       val group = regexLine.findAllIn(line).matchData.map(_.group(1)).toList.mkString("")
-      val parTotal:Int = Iterators.size(odt.getParagraphIterator)
-      val par = odt.getParagraphByIndex(parTotal-1,false)
+      val parTotal:Int = Iterators.size(document.getParagraphIterator)
+      val par = document.getParagraphByIndex(parTotal-1,false)
 
       group match {
-        // New Page
-        case "div class=\"page\"" => if(line.contains("page_0")){ } else { odt.addPageBreak() }
-        // Text Paragraph
+        case "div class=\"page\"" =>
+          if(line.contains("page_0")) recFunc(lines.tail,lines.head,imgList,document)
+          else {
+            document.addPageBreak()
+            recFunc(lines.tail,lines.head,imgList,document)
+          }
         case "div class=\"p\"" =>
-          val prevLine = htmlLines(i-1)
           val regexPara(top,fontType,fontSize,text) = line
           val colorStr = if(line.contains("color")){ regexColo.findFirstMatchIn(line).map(_.group(1)).mkString("") } else {"#000000"}
           val color = Color.valueOf(colorStr)
           if(prevLine.contains("div class=\"p\"")){
             val regexPara(topP,_,_,_) = prevLine
             if(topP.toInt < top.toInt){
-              val newPar = odt.addParagraph(text)
+              val newPar = document.addParagraph(text)
               newPar.setFont(new Font(fontType, StyleTypeDefinitions.FontStyle.REGULAR, Integer.parseInt(fontSize), color))
-            }
-            else{
+              recFunc(lines.tail,lines.head,imgList,document)
+            } else {
               par.appendTextContent(" "+text)
+              recFunc(lines.tail,lines.head,imgList,document)
             }
           } else {
-            val newPar = odt.addParagraph(text)
+            val newPar = document.addParagraph(text)
             newPar.setFont(new Font(fontType, StyleTypeDefinitions.FontStyle.REGULAR, Integer.parseInt(fontSize), color))
+            recFunc(lines.tail,lines.head,imgList,document)
           }
-        // Image
         case "img" =>
-          val img = imgs.last
-          println(imgs.size)
-          println(img.toURI)
-          imgs = imgs.dropRight(1)
-          odt.addParagraph("")
-          odt.newImage(img.toURI)
-          odt.addParagraph("")
-        // Else
-        case _ =>
+          document.addParagraph("")
+          document.newImage(imgList.head.toURI)
+          document.addParagraph("")
+          recFunc(lines.tail,lines.head,imgList.tail,document)
+        case "/body" => document
+        case _ => recFunc(lines.tail,lines.head,imgList,document)
       }
+
     }
 
-    odt.save("out.odt")
+    val bufferedSource = Source.fromFile(new File("out.html"))
+    val htmlLines = bufferedSource.getLines.toList
+    val odt= TextDocument.newTextDocument()
+    bufferedSource.close()
+    val pdf = PDDocument.load(new File(filePath))
+    extractImgs(pdf)
+    pdf.close()
+    val dir = new File("./target/images")
+    val imgs = dir.listFiles.filter(_.isFile).toList.reverse
+
+    val newOdt = recFunc(htmlLines,"",imgs,odt)
+
+    newOdt.save("out.odt")
     odt.close()
     cleanImageDir()
   }
