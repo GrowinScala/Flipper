@@ -80,6 +80,15 @@ object Converter {
     */
   private def convertHTMLtoODT(filePath:String) = {
 
+    /**
+      * Auxiliary method that iterates through the html lines, parses the information and returns the converted odt file
+      *
+      * @param lines - the html remaining lines to be read
+      * @param prevLine - the previous line read
+      * @param imgList - the remaining images that need to be added to the odt file
+      * @param document - current state of the odt document
+      * @return - the document with all the information extracted from the html
+      */
     def recFunc(lines:List[String], prevLine:String, imgList:List[File], document: TextDocument): TextDocument ={
       val regexLine = "<(/body|div class=\"page\"|div class=\"p\"|img).*(?:>|)".r
       val regexPara = ".*<.*style=\"top:(\\d+).*font-family:(.*);font-size:(\\d+).*\">(.*)</div>".r
