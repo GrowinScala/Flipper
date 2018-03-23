@@ -1,7 +1,7 @@
-import java.awt.image.BufferedImage
 import java.io.{File, FileInputStream, IOException}
-import javax.imageio.ImageIO
+import java.util
 
+import javax.imageio.ImageIO
 import net.sourceforge.tess4j.Tesseract
 import org.apache.pdfbox.cos.COSName
 import org.apache.pdfbox.pdmodel.{PDDocument, PDResources}
@@ -9,7 +9,7 @@ import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject
 import java.util.Iterator
 
 import com.sksamuel.scrimage.nio.PngWriter
-import com.sksamuel.scrimage.Image
+import com.sksamuel.scrimage.{Filter, Image}
 import com.sksamuel.scrimage.filter._
 
 /**
@@ -25,12 +25,15 @@ object ImageProcessing {
     */
   def readImageText(file: File): Option[String] = {
     val image = Image.fromStream(new FileInputStream(file)) //Create Scrimage Image from a file input stream
-    val resized = image.scaleToWidth((image.width*2.0).toInt) //scale the image to be 100% wider
+    val resized = image.scaleToWidth((image.width * 2.0).toInt) //scale the image to be 100% wider
     val instance = new Tesseract() //Initialize Tesseract
 //    val hist = computeHistoram(image)
 //    val threshold =  (hist.foldLeft(0.0)(_ + _) / hist.length).toInt
 //    println(threshold)
     val filterBW = ThresholdFilter(150) //Filter the image to black and white
+    val filterInv = InvertFilter
+    val dir = new File("./target/tempImages")
+    if (!dir.exists) dir.mkdir
     try {
       //Obtain the processed image file
       val resizedFile = resized.filter(filterBW).output(new File("./target/tempImages/temp_" + System.nanoTime() + ".png"))(PngWriter.MaxCompression)
@@ -72,7 +75,7 @@ object ImageProcessing {
       * Internal method that iterates over the page resources object names, in order to find the images in a specific page
       *
       * @param iterator      - Java Iterator to Iterate over the object names
-      * @param pageResources - Resoucers of the specified page in wich to obtain the types of resources (images, text, graphs, etc.)
+      * @param pageResources - Resources of the specified page in wich to obtain the types of resources (images, text, graphs, etc.)
       * @return a List containing all the image files found in a specific page of a given pdf document
       */
     def getFilesList(iterator: Iterator[COSName], pageResources: PDResources): List[File] = {
@@ -81,7 +84,9 @@ object ImageProcessing {
         val nextIter = iterator.next
         val obj = pageResources.getXObject(nextIter)
         if (obj.isInstanceOf[PDImageXObject]) {
+          val dir = new File("./target/images")
           val file = new File("./target/images/GeneratedImage_" + System.nanoTime() + ".png")
+          if (!dir.exists) dir.mkdir
           try
             ImageIO.write(obj.asInstanceOf[PDImageXObject].getImage, "png", file)
           catch {

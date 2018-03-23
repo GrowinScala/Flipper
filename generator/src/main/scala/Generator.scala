@@ -168,6 +168,8 @@ object Generator {
             s"$left <style> $cssString </style> $right" //creates the desired HTML code with a <style> tag containing the user-sent css
           }
 
+        val dir = new File("./target/htmlPages")
+        if (!dir.exists) dir.mkdir
         val filePath = "./target/htmlPages/" + System.nanoTime() + ".html"
         val pw = new PrintWriter(new File(filePath)) //prints the HTML code to the html file
         pw.write(htmlString)
