@@ -30,6 +30,8 @@ object Converter {
     try {
       val pdf = PDDocument.load(new File(filePath))
       val renderer = new PDFRenderer(pdf)
+      val dir = new File("./target/PDFtoIMG")
+      if (!dir.exists) dir.mkdir
       for (i <- 0 until pdf.getNumberOfPages) {
         val image = renderer.renderImage(i)
         ImageIO.write(image, fileType.toString, new File("./target/PDFtoIMG/Converted_Page" + i + "_" + System.nanoTime() + "." + fileType.toString))
@@ -62,7 +64,7 @@ object Converter {
     *
     * @param filePath - String containing the URI to the pdf file
     */
-  private def convertPDFtoHTML(filePath:String) = {
+  private def convertPDFtoHTML(filePath: String) = {
     val outfile = "out.html"
     val config = PDFDomTreeConfig.createDefaultConfig
     val document = PDDocument.load(new File(filePath))
@@ -78,61 +80,67 @@ object Converter {
     *
     * @param filePath - String containg the URI from the original pdf file
     */
-  private def convertHTMLtoODT(filePath:String) = {
+  private def convertHTMLtoODT(filePath: String) = {
 
     /**
       * Auxiliary method that iterates through the html lines, parses the information and returns the converted odt file
       *
-      * @param lines - the html remaining lines to be read
+      * @param lines    - the html remaining lines to be read
       * @param prevLine - the previous line read
-      * @param imgList - the remaining images that need to be added to the odt file
+      * @param imgList  - the remaining images that need to be added to the odt file
       * @param document - current state of the odt document
       * @return - the document with all the information extracted from the html
       */
-    def recFunc(lines:List[String], prevLine:String, imgList:List[File], document: TextDocument): TextDocument ={
+    def recFunc(lines: List[String], prevLine: String, imgList: List[File], document: TextDocument): TextDocument = {
       val regexLine = "<(/body|div class=\"page\"|div class=\"p\"|img).*(?:>|)".r
       val regexPara = ".*<.*style=\"top:(\\d+).*font-family:(.*);font-size:(\\d+).*\">(.*)</div>".r
       val regexColo = ".*;color:(.{7});.*".r
 
       val line = lines.head
       val group = regexLine.findAllIn(line).matchData.map(_.group(1)).toList.mkString("")
-      val parTotal:Int = Iterators.size(document.getParagraphIterator)
-      val par = document.getParagraphByIndex(parTotal-1,false)
+      val parTotal: Int = Iterators.size(document.getParagraphIterator)
+      val par = document.getParagraphByIndex(parTotal - 1, false)
 
       group match {
         case "div class=\"page\"" =>
-          if(line.contains("page_0")) { } else { document.addPageBreak() }
-          recFunc(lines.tail,lines.head,imgList,document)
+          if (line.contains("page_0")) {} else {
+            document.addPageBreak()
+          }
+          recFunc(lines.tail, lines.head, imgList, document)
         case "div class=\"p\"" =>
-          val regexPara(top,fontType,fontSize,text) = line
-          val colorStr = if(line.contains("color")){ regexColo.findFirstMatchIn(line).map(_.group(1)).mkString("") } else {"#000000"}
+          val regexPara(top, fontType, fontSize, text) = line
+          val colorStr = if (line.contains("color")) {
+            regexColo.findFirstMatchIn(line).map(_.group(1)).mkString("")
+          } else {
+            "#000000"
+          }
           val color = Color.valueOf(colorStr)
-          if(prevLine.contains("div class=\"p\"")){
-            val regexPara(topP,_,_,_) = prevLine
-            if(topP.toInt < top.toInt){
+          if (prevLine.contains("div class=\"p\"")) {
+            val regexPara(topP, _, _, _) = prevLine
+            if (topP.toInt < top.toInt) {
               val newPar = document.addParagraph(text)
               newPar.setFont(new Font(fontType, StyleTypeDefinitions.FontStyle.REGULAR, Integer.parseInt(fontSize), color))
-              recFunc(lines.tail,lines.head,imgList,document)
+              recFunc(lines.tail, lines.head, imgList, document)
             } else {
-              par.appendTextContent(" "+text)
-              recFunc(lines.tail,lines.head,imgList,document)
+              par.appendTextContent(" " + text)
+              recFunc(lines.tail, lines.head, imgList, document)
             }
           } else {
             val newPar = document.addParagraph(text)
             newPar.setFont(new Font(fontType, StyleTypeDefinitions.FontStyle.REGULAR, Integer.parseInt(fontSize), color))
-            recFunc(lines.tail,lines.head,imgList,document)
+            recFunc(lines.tail, lines.head, imgList, document)
           }
         case "img" =>
-          if(imgList.nonEmpty) {
+          if (imgList.nonEmpty) {
             document.addParagraph("")
             document.newImage(imgList.head.toURI)
             document.addParagraph("")
-            recFunc(lines.tail,lines.head,imgList.tail,document)
+            recFunc(lines.tail, lines.head, imgList.tail, document)
           } else {
-            recFunc(lines.tail,lines.head,imgList,document)
+            recFunc(lines.tail, lines.head, imgList, document)
           }
         case "/body" => document
-        case _ => recFunc(lines.tail,lines.head,imgList,document)
+        case _ => recFunc(lines.tail, lines.head, imgList, document)
       }
 
     }
@@ -146,7 +154,7 @@ object Converter {
     val dir = new File("./target/images")
     val imgs = dir.listFiles.filter(_.isFile).toList.reverse
 
-    val newOdt = recFunc(htmlLines,"",imgs,TextDocument.newTextDocument())
+    val newOdt = recFunc(htmlLines, "", imgs, TextDocument.newTextDocument())
 
     newOdt.save("out.odt")
   }
@@ -154,7 +162,7 @@ object Converter {
   /**
     * Method that deletes all files from the image folder
     */
-  private def cleanImageDir(){
+  private def cleanImageDir() {
     val dir = new File("./target/images")
     val files = dir.listFiles.filter(_.isFile).toList
     files.foreach(_.delete)

@@ -3,7 +3,7 @@ object Main {
   import Extractor._
 
   def main(args: Array[String]): Unit = {
-    val filepath: String = "./reader/resources/images.pdf"
+    val filepath: String = "./reader/resources/imgTester.pdf"
     val text = readPDF(filepath)
     //    val objs = getAllObjects(text, List(("name", POSTag.PN), ("weight", POSTag.NUM)))
     //    objs.foreach(println)
