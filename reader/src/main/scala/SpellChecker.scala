@@ -38,11 +38,10 @@ object SpellChecker {
           outputText
       else {
         lazy val currentRule = rules.head
-        //TODO Maybe just replace if currentRule.getShortMessage is "Spelling Mistake", "Wrong Article" or "Possible Typo"
         val textSegment =
           if (currentRule.getSuggestedReplacements.isEmpty)
           //In case the spellchecker found an error but has no suggestion for it, leave it be
-            originalText.substring(currentRule.getFromPos, currentRule.getToPos)
+            originalText.substring(lastPos, currentRule.getToPos)
           else
             originalText.substring(lastPos, currentRule.getFromPos) + currentRule.getSuggestedReplacements.get(0)
 
