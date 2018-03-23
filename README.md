@@ -20,7 +20,7 @@ Flipper is an open-source PDF library written in Scala and that can be integrate
  
 ### Project structure ###
 
-Flipper is divided into 3 different modules that can be used individually: Reader, Generator and Converter.
+Flipper is divided into 3 different modules that can be used individually: **Reader**, **Generator** and **Converter**.
 
 
 ```
@@ -30,7 +30,8 @@ Flipper/
         ├── reader    ; PDF parser to JSON
         └── build.sbt ; Project config file
 ```
-You can find the individual README.md files here:
+
+You can find the individual **README.md** files here:
 * Reader (Put links here)
 * Generator
 * Converter
@@ -43,12 +44,43 @@ You can find the individual README.md files here:
 
 This part of the documentation will guide you on the simple process of setting up Flipper for yourself.
 
-* Summary of set up
-* Configuration
-* Dependencies
-* How to run tests
-* Deployment instructions
+* [Summary of set up](#summary-of-set-up)
+* [Configuration](#configuration)
+* [Dependencies](#dependencies)
+* [How to test Flipper](#how-to-test-flipper)
+* [Deployment instructions](#deployment-instructions)
 
+<br/>
+
+###Summary of set up
+
+To be implemented
+
+<br/>
+
+###Configuration
+
+To be implemented
+
+<br/>
+
+###Dependencies
+
+To be implemented
+
+<br/>
+
+###How to test Flipper
+
+To be implemented
+
+<br/>
+
+###Deployment instructions
+
+To be implemented
+
+<br/>
  
 ---
 
