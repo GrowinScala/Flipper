@@ -52,31 +52,31 @@ This part of the documentation will guide you on the simple process of setting u
 
 <br/>
 
-###Summary of set up
+### Summary of set up
 
 To be implemented
 
 <br/>
 
-###Configuration
+### Configuration
 
 To be implemented
 
 <br/>
 
-###Dependencies
+### Dependencies
 
 To be implemented
 
 <br/>
 
-###How to test Flipper
+### How to test Flipper
 
 To be implemented
 
 <br/>
 
-###Deployment instructions
+### Deployment instructions
 
 To be implemented
 
