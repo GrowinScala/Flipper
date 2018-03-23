@@ -7,13 +7,13 @@ The present file documents the Generator module.
 
 * [Module Structure](#module-structure)
 * [Main Features](#main-features)
-* [Main Methods](#main-methods)
+* [Main Methods / Examples](#main-methods-/-examples)
 * [Dependencies](#dependencies)
  
  
  ---
   
-  ### Module Structure ### 
+### Module Structure ### 
   
    to be implemented 
 ---
@@ -25,7 +25,7 @@ to be implemented
  
 ---
 
-### Main Methods ###
+### Main Methods / Examples ###
 
 to be implemented
 
