@@ -32,10 +32,10 @@ Flipper/
 ```
 
 You can find the individual **README.md** files here:
-* Reader (Put links here)
-* Generator
-* Converter
-
+* [Reader](./reader/README.md)
+* [Generator](./generator/README.md)
+* [Converter](./converter/README.md)
+ 
  
 ---
 
