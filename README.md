@@ -91,7 +91,7 @@ Flipper is an Open-Source project developed at Growin Insights in our offices in
  
  * Valter Fernandes  &nbsp; &nbsp;- vfernandes@growin.pt
  * Margarida Reis   &nbsp; &nbsp; &nbsp; - mreis@growin.pt
- * Lucas Fischer    &nbsp; &nbsp; &nbsp; &nbsp; - lfischer@growin.pt
+ * Lucas Fischer    &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - lfischer@growin.pt
 
 Or visit our website: [www.growin.pt](https://www.growin.pt/)
 
