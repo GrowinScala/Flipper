@@ -45,7 +45,7 @@ be called by simply passing the JSON String, by passing the JSON String and a CS
 String, and a CSS String, by passing the JSON String and a Config. The Config is a class implemented that 
 contains some configurations for the PDF file, these are text color, font size, text alignment, font family
 and font weight. This function returns a Boolean saying if the conversion was successful and the output file 
-shows in /**/.
+shows in **`./`**.
  
 ```scala
     import Generator.convertJSONtoPDF
