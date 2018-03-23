@@ -29,7 +29,9 @@ JPG, PNG and GIF or an Apache Open Document file, ODT. This module is divided in
 Java's **_ImageIO_** we are able to transform each individual page of the document into an image type. 
 
 * **Convert PDF into an Open Document** - This feature is accomplished by first transforming the PDF into
-an HTML file using **__**
+an HTML file using **_Apache's PDFBox_** and then reading each individual line of the HTML and 
+parsing it to extract the format of the original file and inputing it into a new ODT using 
+the **_ODF Toolkit Project_**.
 
 
  
