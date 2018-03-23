@@ -7,12 +7,12 @@ The present file documents the Converter module.
 
 * [Module Structure](#module-structure)
 * [Main Features](#main-features)
-* [Main Methods](#main-methods)
+* [Main Methods / Examples](#main-methods-/-examples)
 * [Dependencies](#dependencies)
  
  
 ---
-  ### Module Structure ### 
+### Module Structure ### 
   
    ```
    Converter/
@@ -37,7 +37,7 @@ the **_ODF Toolkit Project_**.
  
 ---
 
-### Main Methods ###
+### Main Methods / Examples ###
 
 to be implemented
 

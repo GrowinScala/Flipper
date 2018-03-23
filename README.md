@@ -31,7 +31,7 @@ Flipper/
         └── build.sbt ; Project config file
 ```
 
-You can find the individual **README.md** files here:
+You can find the individual **README.md** files with examples and documentation here:
 * [Reader](./reader/README.md)
 * [Generator](./generator/README.md)
 * [Converter](./converter/README.md)
