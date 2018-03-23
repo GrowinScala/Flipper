@@ -25,9 +25,9 @@ Flipper is divided into 3 different modules that can be used individually: Reade
 
 ```
 Flipper/
-        ├── converter/ ; PDF to other file types module
+        ├── converter ; PDF to other file types module
         ├── generator ; JSON to PDF module
-        ├── reader	; PDF parser to JSON
+        ├── reader    ; PDF parser to JSON
         └── build.sbt ; Project config file
 ```
 You can find the individual README.md files here:
@@ -57,9 +57,9 @@ This part of the documentation will guide you on the simple process of setting u
 Flipper is an Open-Source project developed at Growin Insights in our offices in Lisbon.
  <br/> If you have any questions, you can contact:
  
- * Valter Fernandes (insert email here ?)
- * Margarida Reis
- * Lucas Fischer
+ * Valter Fernandes  &nbsp; &nbsp;- vfernandes@growin.pt
+ * Margarida Reis   &nbsp; &nbsp; &nbsp; - mreis@growin.pt
+ * Lucas Fischer    &nbsp; &nbsp; &nbsp; &nbsp; - lfischer@growin.pt
 
 Or visit our website: [www.growin.pt](https://www.growin.pt/)
 
