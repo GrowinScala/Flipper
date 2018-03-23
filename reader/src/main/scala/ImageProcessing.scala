@@ -1,13 +1,10 @@
 import java.io.{File, FileInputStream, IOException}
-import java.util
-
 import javax.imageio.ImageIO
 import net.sourceforge.tess4j.Tesseract
 import org.apache.pdfbox.cos.COSName
 import org.apache.pdfbox.pdmodel.{PDDocument, PDResources}
 import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject
 import java.util.Iterator
-
 import com.sksamuel.scrimage.nio.PngWriter
 import com.sksamuel.scrimage.{Filter, Image}
 import com.sksamuel.scrimage.filter._
@@ -31,7 +28,6 @@ object ImageProcessing {
 //    val threshold =  (hist.foldLeft(0.0)(_ + _) / hist.length).toInt
 //    println(threshold)
     val filterBW = ThresholdFilter(150) //Filter the image to black and white
-    val filterInv = InvertFilter
     val dir = new File("./target/tempImages")
     if (!dir.exists) dir.mkdir
     try {
@@ -114,7 +110,7 @@ object ImageProcessing {
     * Method that calculates the luminance of a Pixel
     *
     * @param rgb - color in rgb of a pixel
-    * @return - the luminace in that pixel
+    * @return - the luminance in that pixel
     */
   private def luminance(rgb:Int):Int={
     val r = (rgb >> 16) & 0xFF
