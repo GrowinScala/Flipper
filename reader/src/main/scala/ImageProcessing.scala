@@ -1,12 +1,15 @@
 import java.io.{File, FileInputStream, IOException}
 import javax.imageio.ImageIO
+
 import net.sourceforge.tess4j.Tesseract
 import org.apache.pdfbox.cos.COSName
 import org.apache.pdfbox.pdmodel.{PDDocument, PDResources}
 import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject
 import java.util.Iterator
-import com.sksamuel.scrimage.Image
+
 import com.sksamuel.scrimage.nio.PngWriter
+import com.sksamuel.scrimage.{Filter, Image}
+import com.sksamuel.scrimage.filter._
 
 /**
   * Singleton Object that implements all the image processing functionalities
@@ -21,15 +24,16 @@ object ImageProcessing {
     */
   def readImageText(file: File): Option[String] = {
     val image = Image.fromStream(new FileInputStream(file)) //Create Scrimage Image from a file input stream
-    val resized = image.scaleToWidth(2000) //scale the image to be 2000 px wide
+    val resized = image.scaleToWidth((image.width*2.0).toInt) //scale the image to be 100% wider
     val instance = new Tesseract() //Initialize Tesseract
+    val filterBW = ThresholdFilter(150) //Filter the image to black and white
+    val filterInv = InvertFilter
     try {
       //Obtain the processed image file
-      val resizedFile = resized.output(new File("./target/tempImages/temp_" + System.nanoTime() + ".png"))(PngWriter.MaxCompression)
+      val resizedFile = resized.filter(filterBW).output(new File("./target/tempImages/temp_" + System.nanoTime() + ".png"))(PngWriter.MaxCompression)
       val extractedText = Option(instance.doOCR(resizedFile)) //Apply the OCR to the processed image
-      cleanImageDir()
+//      cleanImageDir()
       extractedText
-      //      Option(instance.doOCR(file))
     } catch {
       case e: Exception => e.printStackTrace(); None
     }
