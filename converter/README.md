@@ -16,7 +16,7 @@ The present file documents the Converter module.
   
    ```
    Converter/
-             └── Converter.scala ; PDF to other file types module
+             └── Converter.scala ; Handles the conversion of PDF into other file types
    ```
 ---
 
@@ -37,14 +37,16 @@ original PDF as much as possible.
 
 ### Main Methods / Examples ###
 
-to be implemented
+This section contains some examples of the features described above as well as a brief API documentation 
+for the module in order for you to find what you need.
+<br/>
 
 * #### Converting a PDF into an image type ####
 
 To convert the PDF document using Flipper you have to pass the document path and the type of file into which 
-you want to convert the original to **`convertPDFtoIMG`** (found in **Converter.scala**), the file type is chosen 
-from an ENUM which contains the following: png, jpg, jpeg and gif. The output image files of this function
-will appear in **`./target/PDFtoIMG`**, and it returns a Boolean saying if the conversion was successful.
+you want to convert the original to **`convertPDFtoIMG`** (found in **Converter.scala**), the file type is 
+chosen from an ENUM which contains the following: png, jpg, jpeg and gif. The output image files will appear 
+in **`./target/PDFtoIMG`**, and the function returns a Boolean saying if the conversion was successful.
 
 ```scala
     import Converter.convertPDFtoIMG
@@ -57,8 +59,8 @@ will appear in **`./target/PDFtoIMG`**, and it returns a Boolean saying if the c
  * #### Converting a PDF into an Open Document file ####
  
  To convert the PDF document to an ODT document you only have to pass the path of the file you want to convert 
- to **`convertPDFtoODT`** (found in **Converter.scala**). the output of the function will appear in **`./`**, and
- it returns a Boolean saying if the conversion was successful. 
+ to **`convertPDFtoODT`** (found in **Converter.scala**). the output will appear in **`./`**, and the functin
+ returns a Boolean saying if the conversion was successful. 
  
  ```scala
      import Converter.convertPDFtoODT
@@ -66,7 +68,6 @@ will appear in **`./target/PDFtoIMG`**, and it returns a Boolean saying if the c
      val filePath = "./path/to/pdf/document"
      val success = convertPDFtoODT(filePath)
  ```
- 
 ---
 
 ### Dependencies ### 
