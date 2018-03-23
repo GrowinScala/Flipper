@@ -43,9 +43,8 @@ to be implemented
 
 To convert the PDF document using Flipper you have to pass the document path and the type of file into which 
 you want to convert the original to **`convertPDFtoIMG`** (found in **Converter.scala**), the file type is chosen 
-from an ENUM which contains the following: png, jpg, jpeg and gif. The output image file of this function
-will go into the PDFtoIMG folder in the target folder of the project. The function returns a Boolean saying 
-if the conversion was successful.
+from an ENUM which contains the following: png, jpg, jpeg and gif. The output image files of this function
+will appear in **`./target/PDFtoIMG`**, and it returns a Boolean saying if the conversion was successful.
 
 ```scala
     import Converter.convertPDFtoIMG
@@ -54,6 +53,19 @@ if the conversion was successful.
     val fileType = FileType.jpg
     val success = convertPDFtoIMG(filePath, fileType)
 ```
+ 
+ * #### Converting a PDF into an Open Document file ####
+ 
+ To convert the PDF document to an ODT document you only have to pass the path of the file you want to convert 
+ to **`convertPDFtoODT`** (found in **Converter.scala**). the output of the function will appear in **`./`**, and
+ it returns a Boolean saying if the conversion was successful. 
+ 
+ ```scala
+     import Converter.convertPDFtoODT
+     
+     val filePath = "./path/to/pdf/document"
+     val success = convertPDFtoODT(filePath)
+ ```
  
 ---
 
