@@ -18,9 +18,11 @@ val basicSettings = Seq(
   libraryDependencies += "net.htmlparser.jericho" % "jericho-html" % "3.4",
   libraryDependencies += "org.odftoolkit" % "simple-odf" % "0.6.6",
   libraryDependencies += "net.sf.cssbox" % "pdf2dom" % "1.7",
-  libraryDependencies += "com.sksamuel.scrimage" %% "scrimage-core" % "3.0.0-alpha4"
+  libraryDependencies += "com.sksamuel.scrimage" %% "scrimage-core" % "3.0.0-alpha4",
+  libraryDependencies += "com.sksamuel.scrimage" %% "scrimage-filters" % "3.0.0-alpha4"
 
-  //If we want to add back JavaCPP Tesseract presets (same results as Tess4J)
+
+//If we want to add back JavaCPP Tesseract presets (same results as Tess4J)
   //We need to add this lines and also add a file "javacpp.sbt" to ./project with addSbtPlugin("org.bytedeco" % "sbt-javacpp" % "1.13") inside it
   //  addSbtPlugin("org.bytedeco" % "sbt-javacpp" % "1.13"),
   //  javaCppPresetLibs ++= Seq("tesseract" -> "3.05.01"),
