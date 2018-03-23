@@ -1,7 +1,7 @@
 # Flipper
 ### What is Flipper? ###
 
-Flipper is an open-source PDF library written in Scala and that can be integrated in any Java/Scala environment developed by the good people at Growin Insights. It has some really usefull features such as: 
+Flipper is an open-source PDF library written in Scala and that can be integrated in any Java/Scala environment developed by the good people at Growin. It has some really usefull features such as: 
 * **Parsing a PDF document and returning a JSON object** - Flipper is able to parse the text in a PDF document,
  as well as recognize text in images inside the PDF document,
  and return a JSON object with the extracted information. You simply specify the type of value you want to obtain
@@ -86,7 +86,7 @@ To be implemented
 
 ### Who do I talk to? ###
 
-Flipper is an Open-Source project developed at Growin Insights in our offices in Lisbon.
+Flipper is an Open-Source project developed at Growin in our offices in Lisbon.
  <br/> If you have any questions, you can contact:
  
  * Valter Fernandes  &nbsp; &nbsp;- vfernandes@growin.pt
