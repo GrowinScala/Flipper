@@ -15,7 +15,13 @@ The present file documents the Reader module.
  
  ### Module Structure ### 
  
-  to be implemented 
+  ```
+  Reader/
+         ├── Extractor.scala       ; Handles the PDF parsing and JSON generation
+         ├── ImageProcessing.scala ; Handles processing the image and extract its text
+         ├── OpenNLP.scala         ; Handles the NLP (natural language processing) functionalities
+         └── SpellChecker.scala    ; Handles the spellchecking operations to improve the OCR's accuracy
+  ```
 ---
 
 ### Main Features ### 
@@ -31,7 +37,7 @@ to extract all of the text information inside the PDF doc.
 to be returned in the JSON object the user has to send a List containing keywords that he/she
 wants to find values for. **Example** if we were to pass in a list containing only a **"Name"** 
 keyword Flipper would do it's best to find a value (in this case a name) for that keyword, and
- in this particular case would return `{"name" : <name that was found>}`.
+ in this particular case would return `{"name" : <name that was found> }`.
  
 * **Extracting text from images** - Using **_Tess4J_** and **_Scrimage_** Flipper is also able
 to extract text from images applying an OCR (optical character recognition) with great accuracy in
@@ -50,7 +56,18 @@ in order for you to find what you need.
 ### Extracting text from the PDF doc and its images ###
 
 To extract the text from a PDF document using Flipper simply pass the document path
-to 
+to **`readPDF`** (found in **Extractor.scala**).
+
+```scala
+    import Extractor.readPDF
+    
+    val filePath = "./path/to/pdf/document"
+    val extractedText = readPDF(filePath)
+
+```
+
+
+
  
 ---
 
