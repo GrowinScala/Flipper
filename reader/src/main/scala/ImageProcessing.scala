@@ -1,13 +1,10 @@
 import java.io.{File, FileInputStream, IOException}
-import java.util
-
 import javax.imageio.ImageIO
 import net.sourceforge.tess4j.Tesseract
 import org.apache.pdfbox.cos.COSName
 import org.apache.pdfbox.pdmodel.{PDDocument, PDResources}
 import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject
 import java.util.Iterator
-
 import com.sksamuel.scrimage.nio.PngWriter
 import com.sksamuel.scrimage.{Filter, Image}
 import com.sksamuel.scrimage.filter._
@@ -27,15 +24,17 @@ object ImageProcessing {
     val image = Image.fromStream(new FileInputStream(file)) //Create Scrimage Image from a file input stream
     val resized = image.scaleToWidth((image.width * 2.0).toInt) //scale the image to be 100% wider
     val instance = new Tesseract() //Initialize Tesseract
+//    val hist = computeHistogram(image)
+//    val threshold =  (hist.foldLeft(0.0)(_ + _) / hist.length).toInt
+//    println(threshold)
     val filterBW = ThresholdFilter(150) //Filter the image to black and white
-    val filterInv = InvertFilter
     val dir = new File("./target/tempImages")
     if (!dir.exists) dir.mkdir
     try {
       //Obtain the processed image file
       val resizedFile = resized.filter(filterBW).output(new File("./target/tempImages/temp_" + System.nanoTime() + ".png"))(PngWriter.MaxCompression)
       val extractedText = Option(instance.doOCR(resizedFile)) //Apply the OCR to the processed image
-      //      cleanImageDir()
+      cleanImageDir()
       extractedText
     } catch {
       case e: Exception => e.printStackTrace(); None
@@ -106,4 +105,29 @@ object ImageProcessing {
     val files = dir.listFiles.filter(_.isFile).toList
     files.foreach(_.delete)
   }
+
+  /**
+    * Method that calculates the luminance of a Pixel
+    *
+    * @param rgb - color in rgb of a pixel
+    * @return - the luminance in that pixel
+    */
+  private def luminance(rgb:Int):Int={
+    val r = (rgb >> 16) & 0xFF
+    val g = (rgb >> 8) & 0xFF
+    val b = rgb & 0xFF
+    (r+b+g)/3
+  }
+
+  /**
+    * Method to compute the histogram of an image
+    *
+    * @param img - the image whose histogram is computed
+    * @return - the values of the histogram in a list of int
+    */
+  private def computeHistogram(img:Image):List[Int] = {
+    val hist = img.iterator.map(p => luminance(p.argb)).toList
+    hist
+  }
+
 }
