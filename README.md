@@ -7,7 +7,7 @@ Flipper is an open-source PDF library written in Scala and that can be integrate
  and return a JSON object with the extracted information. You simply specify the type of value you want to obtain
  for a given keyword (A noun, a verb, a number etc.), and Flipper will do the rest!
  
- * **Convert JSON to PDF** - Flipper does not content it self with just parsing a PDF file, that's easy!
+ * **Convert JSON to PDF** - Flipper does not content itself with just parsing a PDF file, that's easy!
  Flipper also converts a given JSON object to a PDF document. You can also customize the outputted document
  with CSS.
  
