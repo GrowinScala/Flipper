@@ -153,8 +153,7 @@ object Generator {
     * @param cssString - A String containing all the desired CSS to be included in the HTML (to then be transformed to pdf)
     * @return An Option wrapping the URI of the created HTML file. Returns None in case of exception when parsing the JSON String
     */
-  private def createHtml(json: String, cssString: String = ""
-                        ): Option[String] = {
+  private def createHtml(json: String, cssString: String = ""): Option[String] = {
     try {
       val jsonMap = parse(json).values.asInstanceOf[Map[String, Any]] //parses JSON string to a Map[String, Any]
       if (jsonMap.nonEmpty) {
