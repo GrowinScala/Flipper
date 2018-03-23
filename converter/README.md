@@ -5,11 +5,16 @@ The present file documents the Converter module.
 
 ### Table of contents ###
 
+* [Module Structure](#module-structure)
 * [Main Features](#main-features)
-* [Dependencies](#dependencies)
 * [Main Methods](#main-methods)
+* [Dependencies](#dependencies)
  
  
+---
+  ### Module Structure ### 
+  
+   to be implemented 
 ---
 
 ### Main Features ### 
