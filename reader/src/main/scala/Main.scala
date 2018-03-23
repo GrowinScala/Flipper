@@ -5,6 +5,7 @@ object Main {
   def main(args: Array[String]): Unit = {
     val filepath: String = "./reader/resources/imgTester.pdf"
     val text = readPDF(filepath)
+    getJSONObjects(text, List(("name", POSTag.PN), ("weight", POSTag.NUM))).foreach(println)
     //    val objs = getAllObjects(text, List(("name", POSTag.PN), ("weight", POSTag.NUM)))
     //    objs.foreach(println)
     //    objs.foreach(o => println(makeJSONString(o)))

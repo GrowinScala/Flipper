@@ -31,16 +31,17 @@ object Extractor {
       val str = Normalizer.normalize(document.getText(pdf), Normalizer.Form.NFD)
         .replaceAll("[\\p{InCombiningDiacriticalMarks}]", "")
 
-      if (readImages) {
-        val imageList = extractImgs(pdf).getOrElse(List())
-        val imageTexts = imageList.map(img => readImageText(img).getOrElse("")).mkString
-        println(imageTexts)
-        println(correctText(imageTexts))
-      }
+      val imgText =
+        if (readImages) {
+          val imageList = extractImgs(pdf).getOrElse(List())
+          val imageTexts = imageList.map(img => readImageText(img).getOrElse("")).mkString
+
+          correctText(imageTexts)
+        } else ""
 
       pdf.close()
       cleanImageDir()
-      Option(str)
+      Option(imgText + str)
     } catch {
       case t: FileNotFoundException => t.printStackTrace(); None
       case tr: Throwable => tr.printStackTrace(); None
@@ -128,6 +129,23 @@ object Extractor {
       }
       mappedValues.zipWithIndex.map(pair => (keywords(pair._2 % keywords.length)._1, pair._1)).toList.grouped(keywords.size).toList
     }
+  }
+
+
+  /**
+    * Method that encapsulates the entire process of finding values for the given keywords list and converting the MatchedPair type to a JSON Object
+    *
+    * @param text        - Text from the PDF extracted from readPDF method
+    * @param keywords    - List containing all the keywords we want to find values for
+    * @param clientRegEx - Optional parameter - If the client already has a predefined Regular Expression for a given key
+    * @throws IllegalArgumentException If the keywords list is empty
+    * @return a List of Strings representing a JSON object for each MatchedPair type
+    */
+  @throws[IllegalArgumentException]
+  def getJSONObjects(text: Option[String], keywords: List[(Keyword, POSTag.Value)], clientRegEx: Map[Keyword, Regex] = Map()): List[String] = {
+    require(keywords.nonEmpty, "The list of keywords should not be empty")
+    val objs = getAllObjects(text, keywords, clientRegEx)
+    objs.map(makeJSONString(_))
   }
 
   /**

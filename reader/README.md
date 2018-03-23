@@ -37,7 +37,8 @@ to extract text from images applying an OCR (optical character recognition) with
 
 ### Main Methods ###
 
-oaijs
+In this section we will show some examples of the features above as well as a short API documentation for this module
+in order for you to find what you need.
 
  
 ---
