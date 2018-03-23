@@ -75,6 +75,31 @@ The most straight-forward way to use this module's API is to call `getJSONObject
 to supply this method with the **text** you want to extract data from and a **List of keywords** for which
 you want to obtain values.
 
+<br/>
+
+The keywords list is a pair of Keywords and a POSTag.Value, this is because Flipper is using a 
+Natural Language Processor (**_Apache's OpenNLP_**) for improving the odds of finding a useful 
+value for a given keyword. This POS tag simply tells Flipper what kinda of value you want to obtain
+for a given keyword, the possible POSTags can be found bellow:
+
+
+| POS Tag        | Meaning                |
+|:--------------:|:----------------------:|
+| ADJ            | Adjective              |
+| PN             | Proper Noun            |
+| N              | Noun                   |
+| NPLR           | Plural Noun            |
+| VB             | Verb - Base Form       |
+| VBN            | Verb - Past Participle |
+| VBG            | Verb - Gerund          |
+| NUM            | Number                 |
+| ADV            | Adverb                 |
+
+
+You can now implement the following snippet:
+
+
+
 ```scala
     import Extractor.{readPDF, getJSONObjects}
     
