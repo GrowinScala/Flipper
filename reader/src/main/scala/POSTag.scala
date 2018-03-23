@@ -8,6 +8,7 @@ object POSTag extends Enumeration {
   val NPLR = Value("NPLR")
   val VB = Value("VB")
   val VBN = Value("VBN")
+  val VBG = Value("VBG")
   val NUM = Value("NUM")
   val ADV = Value("ADV")
 }
