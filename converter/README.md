@@ -41,8 +41,8 @@ to be implemented
 
 * #### Converting a PDF into an image type ####
 
-To convert the PDF document using Flipper you have to pass the document path and the type of file you want to
-convert the original into to **`convertPDFtoIMG`** (found in **Converter.scala**), the file type is chosen 
+To convert the PDF document using Flipper you have to pass the document path and the type of file into which 
+you want to convert the original to **`convertPDFtoIMG`** (found in **Converter.scala**), the file type is chosen 
 from an ENUM which contains the following: png, jpg, jpeg and gif. The output image file of this function
 will go into the PDFtoIMG folder in the target folder of the project. The function returns a Boolean saying 
 if the conversion was successful.
