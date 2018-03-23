@@ -108,16 +108,72 @@ You can now implement the following snippet:
     val keywords = List( ("name", POSTag.N), ("age", POSTag.NUM) )
     
     val jsonObjs : List[String] = getJSONObjects(extractedText, keywords)
+    
+    //jsonObjs -> List( "{ "name" : "John Doe" , "age" : 21 }" , "{ "name" : "Jane Doe" , "age" : 22 }" )
 ```
+
+You can also send an optional flag to `getJSONObjects` specifying how you want the JSON to be outputed when a keyword has no value:
+
+Possibilities:
+
+* "empty" (Default) &nbsp; &nbsp;- `{ "name" : "John Doe", "age": "" }`
+* "null" &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - `{ "name" : "John Doe", "age": null }`
+* "remove" &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - `{ "name" : "John Doe" }`
 
 This would return you a List of JSON objects in the form of Strings. Flipper also provides
 a more in-depth API in case you want a List of keywords and the values found for them instead of a JSON object
 which we will see next.
+
+* #### Getting a List of keywords and all the values found for them ####
+
+In case you want to obtain a List Keywords with all the values found for that keyword, Flipper provides you
+with that possibility through **`getAllMatchedValues`**.
+
+```scala
+    import Extractor.{readPDF, getAllMatchedValues}
+    
+    val filePath = "./path/to/pdf/document"
+    val extractedText = readPDF(filePath)
+    val keywords = List( ("name", POSTag.N), ("age", POSTag.NUM) )
+    
+    val matchedValues = getAllMatchedValues(extractedText, keywords) 
+    //matchedValues -> List( ("name", List("John Doe", "Jane Doe")), ("age", List("21", "22") )
+```
+
+* #### Getting just a single value for each keyword ####
+
+This method works exactly like the one above but instead of returning every value found for a keyword, returns only one.
+
+```scala
+    import Extractor.{readPDF, getSingleMatchedValue}
+    
+    val filePath = "./path/to/pdf/document"
+    val extractedText = readPDF(filePath)
+    val keywords = List( ("name", POSTag.N), ("age", POSTag.NUM) )
+    
+    val matchedValues = getSingleMatchedValue(extractedText, keywords) 
+    //matchedValues -> List( ("name", List("John Doe")), ("age", List("21") )
+```
+
+* #### Getting all possible pre-JSON objects for the values found ####
+
+This method returns a List containing all the possible pre-JSOn objects for the values found for 
+the given keywords
+
+```scala
+    import Extractor.{readPDF, getAllObjects}
+    
+    val filePath = "./path/to/pdf/document"
+    val extractedText = readPDF(filePath)
+    val keywords = List( ("name", POSTag.N), ("age", POSTag.NUM) )
+    
+    val matchedValues = getAllObjects(extractedText, keywords) 
+    //matchedValues -> List( List(("name", List("John Doe")), ("age", List("21")), List( ("name", "Jane Doe"), ("age", List("22")) ))
+```
  
 ---
 
 ### Dependencies ### 
 
-asdjaosd
-
+To be implemented
  

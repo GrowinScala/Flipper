@@ -142,10 +142,10 @@ object Extractor {
     * @return a List of Strings representing a JSON object for each MatchedPair type
     */
   @throws[IllegalArgumentException]
-  def getJSONObjects(text: Option[String], keywords: List[(Keyword, POSTag.Value)], clientRegEx: Map[Keyword, Regex] = Map()): List[String] = {
+  def getJSONObjects(text: Option[String], keywords: List[(Keyword, POSTag.Value)], flag: String = "empty", clientRegEx: Map[Keyword, Regex] = Map()): List[String] = {
     require(keywords.nonEmpty, "The list of keywords should not be empty")
     val objs = getAllObjects(text, keywords, clientRegEx)
-    objs.map(makeJSONString(_))
+    objs.map(makeJSONString(_, flag))
   }
 
   /**
@@ -236,7 +236,6 @@ object Extractor {
     */
   private def findKeywordInText(keyword: Keyword, tag: POSTag.Value, text: String): (Keyword, List[String]) = {
     val (splittedWords, tags) = tagText(text)
-    tags.foreach(println)
 
     val arrLength = splittedWords.length
 
