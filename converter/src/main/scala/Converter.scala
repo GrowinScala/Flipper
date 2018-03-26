@@ -9,6 +9,7 @@ import org.odftoolkit.odfdom.`type`.Color
 import org.odftoolkit.simple.TextDocument
 import org.odftoolkit.simple.style.{Font, StyleTypeDefinitions}
 import scala.io.Source
+import FileHandler._
 
 /**
   * Singleton object that implements the functions regarding the conversion of pdf into other file types
@@ -45,13 +46,13 @@ object Converter {
   /**
     * Method that creates a odf file with the information taken from a pdf (Note: does not maintain full formatting)
     *
-    * @param filePath - String containing the URI to the pdf file
+    * @param file - The PDF file to be converted
     * @return - A Boolean saying if the conversion was successful
     */
-  def convertPDFtoODT(filePath: String): Boolean = {
+  def convertPDFtoODT(file: File): Boolean = {
     try {
-      convertPDFtoHTML(filePath)
-      convertHTMLtoODT(filePath)
+      convertPDFtoHTML(file)
+      convertHTMLtoODT(file)
       cleanImageDir()
       true
     } catch {
@@ -62,25 +63,30 @@ object Converter {
   /**
     * Method that creates a html file with the information from a pdf
     *
-    * @param filePath - String containing the URI to the pdf file
+    * @param file - The PDF file to be converted
     */
-  private def convertPDFtoHTML(filePath: String): Unit = {
+  private def convertPDFtoHTML(file: File): Unit = {
     val outfile = "out.html"
     val config = PDFDomTreeConfig.createDefaultConfig
-    val document = PDDocument.load(new File(filePath))
-    val parser = new PDFDomTree(config)
-    val output = new PrintWriter(outfile, "utf-8")
-    parser.writeText(document, output)
-    output.close()
-    document.close()
+    val documentOption = loadPDF(file)
+    documentOption match {
+      case Some(document) =>
+        val parser = new PDFDomTree(config)
+        val output = new PrintWriter(outfile, "utf-8")
+        parser.writeText(document, output)
+        output.close()
+        document.close()
+      case _ => throw new Exception("The file was not found or PDDocument could not load the specified file")
+    }
+
   }
 
   /**
     * Method that creates a odt file from a html previously converted from a pdf
     *
-    * @param filePath - String containing the URI from the original pdf file
+    * @param file - The PDF file to be converted
     */
-  private def convertHTMLtoODT(filePath: String): Unit = {
+  private def convertHTMLtoODT(file: File): Unit = {
 
     /**
       * Auxiliary method that iterates through the html lines, parses the information and returns the converted odt file
@@ -148,15 +154,20 @@ object Converter {
     val bufferedSource = Source.fromFile(new File("out.html"))
     val htmlLines = bufferedSource.getLines.toList
     bufferedSource.close()
-    val pdf = PDDocument.load(new File(filePath))
-    extractImgs(pdf)
-    pdf.close()
-    val dir = new File("./target/images")
-    val imgs = dir.listFiles.filter(_.isFile).toList.reverse
+    val documentOption = loadPDF(file)
+    documentOption match {
+      case Some(pdf) =>
+        extractImgs(pdf)
+        pdf.close()
+        val dir = new File("./target/images")
+        val imgs = dir.listFiles.filter(_.isFile).toList.reverse
 
-    val newOdt = recFunc(htmlLines, "", imgs, TextDocument.newTextDocument())
+        val newOdt = recFunc(htmlLines, "", imgs, TextDocument.newTextDocument())
 
-    newOdt.save("out.odt")
+        newOdt.save("out.odt")
+      case _ => throw new Exception("The file was not found or PDDocument could not load the specified file")
+    }
+
   }
 
   /**

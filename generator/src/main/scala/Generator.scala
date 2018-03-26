@@ -5,7 +5,6 @@ import com.itextpdf.tool.xml.XMLWorkerHelper
 import org.json4s._
 import org.json4s.native.JsonMethods._
 import scalatags.Text.all._
-import scala.io.Source
 import FileHandler._
 
 /**
@@ -158,7 +157,7 @@ object Generator {
     try {
       val jsonMap = parse(json).values.asInstanceOf[Map[String, Any]] //parses JSON string to a Map[String, Any]
       if (jsonMap.nonEmpty) {
-        val kvParagraph = jsonMap.map{case(key,value) => p(key + " : " + value)}.toList
+        val kvParagraph = jsonMap.map { case (k, v) => p(k + " : " + v) }.toList
 
         val htmlString =
           if (cssString.isEmpty) html(head(), body(kvParagraph)).toString //generate html code with no css
