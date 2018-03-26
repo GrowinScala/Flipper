@@ -59,24 +59,24 @@ object Extractor {
   @throws[IllegalArgumentException]
   def getAllMatchedValues(text: Option[String], keywords: List[(Keyword, POSTag.Value)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
     require(keywords.nonEmpty, "The list of keywords should not be empty")
-    val textContent = text.getOrElse("")
-    if (textContent.isEmpty) List()
-    else {
-      val knownRegEx: Map[String, Regex] = importRegExFile(textContent) //load correct RegEx map
-      val matched:MatchedPair = keywords.map{case(key,tag) =>
+    text match {
+      case Some("") => List()
+      case Some(t) =>
+        val knownRegEx: Map[String, Regex] = importRegExFile(t) //load correct RegEx map
+        val matched:MatchedPair = keywords.map{case(key,tag) =>
+          //If the client sent a custom RegEx to use on this key, use it
+          if (clientRegEx.contains(key)) //&& clientRegEx != null ??
+            (key, clientRegEx(key).findAllIn(t).matchData.map(_.group(1)).toList.distinct)
 
-        //If the client sent a custom RegEx to use on this key, use it
-        if (clientRegEx.contains(key)) //&& clientRegEx != null ??
-          (key, clientRegEx(key).findAllIn(textContent).matchData.map(_.group(1)).toList.distinct)
+          //if we already know a good RegEx for this keyword, use it
+          else if (knownRegEx.contains(key))
+            (key, knownRegEx(key).findAllIn(t).matchData.map(_.group(1)).toList.distinct)
 
-        //if we already know a good RegEx for this keyword, use it
-        else if (knownRegEx.contains(key))
-          (key, knownRegEx(key).findAllIn(textContent).matchData.map(_.group(1)).toList.distinct)
-
-        else findKeywordInText(key, tag, textContent) //to be changed, here we need to manually search for the keywords in the text
-      }
-
-      filterNewLines(matched)
+          else findKeywordInText(key, tag, t) //to be changed, here we need to manually search for the keywords in the text
+        }
+        filterNewLines(matched)
+      case None => List()
+      case _ => ??? //TODO throw NullPointerException??
     }
   }
 
@@ -119,23 +119,29 @@ object Extractor {
   @throws[IllegalArgumentException]
   def getAllObjects(text: Option[String], keywords: List[(Keyword, POSTag.Value)], clientRegEx: Map[Keyword, Regex] = Map()): List[MatchedPair] = {
     require(keywords.nonEmpty, "The list of keywords should not be empty")
-    val textContent = text.getOrElse("")
-    if (textContent.isEmpty) List()
-    else {
-      def getListSizes(matchedValues: MatchedPair): List[(Keyword, Int)] = {
-        for ((key,listMatched) <- matchedValues) yield (key, listMatched.size)
-      }
+    text match {
+      case Some("") => List()
+      case Some(_) => {
+        def getListSizes(matchedValues: MatchedPair): List[(Keyword, Int)] = {
+          for ((key, listMatched) <- matchedValues) yield (key, listMatched.size)
+        }
 
-      val matchedValues = getAllMatchedValues(text, keywords, clientRegEx)
-      val (_,mostFound) = getListSizes(matchedValues).maxBy{case(_,sizes:Int) => sizes} //Gets the size of the pair that has the most values
+        val matchedValues = getAllMatchedValues(text, keywords, clientRegEx)
+        val (_, mostFound) = getListSizes(matchedValues).maxBy {
+          case (_, sizes: Int) => sizes
+          case _ => 0
+        } //Gets the size of the pair that has the most values
 
-      val mappedValues = for (i <- 0 to mostFound; (_,listMatched) <- matchedValues) yield {
-        if (listMatched.size > i) //Prevent array out of bounds exception
-          List(listMatched(i))
-        else List()
+        val mappedValues = for (i <- 0 to mostFound; (_, listMatched) <- matchedValues) yield {
+          if (listMatched.size > i) //Prevent array out of bounds exception
+            List(listMatched(i))
+          else List()
+        }
+        val keywordList = keywords.map { case (key, _) => key }
+        mappedValues.zipWithIndex.map { case (key, values) => (keywordList(values % keywords.length), key) }.toList.grouped(keywords.size).toList
       }
-      val keywordList = keywords.map{case(key,_)=>key}
-      mappedValues.zipWithIndex.map{case(key,values) => (keywordList(values % keywords.length), key)}.toList.grouped(keywords.size).toList
+      case None => List()
+      case _ => ??? //TODO throw nullPointerException?
     }
   }
 
@@ -173,7 +179,7 @@ object Extractor {
     def isAllDigits(x: String) = try {
       x.toDouble; true
     } catch {
-      case e: Exception => false
+      case _: Exception => false
     }
 
     lazy val quote = "\""
