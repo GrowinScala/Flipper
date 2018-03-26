@@ -1,3 +1,5 @@
+package Converter
+
 /**
   * Enumeration for the supported file type conversions in Converter.scala convertPDFtoIMG
   */

@@ -1,3 +1,5 @@
+package Generator
+
 /**
   * Config case class implemented for the user to be able to specify certain styling details in the generated PDF
   *
@@ -14,5 +16,3 @@ case class Config(
                    fontFamily: String = "",
                    fontWeight: String = ""
                  )
-
-//TODO should we be fail-safe like CSS/HTML is or should we prevent the user for for example setting the font size to "-a"?

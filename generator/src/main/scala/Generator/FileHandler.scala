@@ -1,4 +1,7 @@
+package Generator
+
 import java.io.File
+
 import scala.io.{BufferedSource, Source}
 
 /**

@@ -1,11 +1,13 @@
+package Generator
+
 import java.io._
+
 import com.itextpdf.text.Document
 import com.itextpdf.text.pdf.PdfWriter
 import com.itextpdf.tool.xml.XMLWorkerHelper
 import org.json4s._
 import org.json4s.native.JsonMethods._
 import scalatags.Text.all._
-import FileHandler._
 
 /**
   * Singleton object that implements the functions regarding the pdf file generation
@@ -127,10 +129,10 @@ object Generator {
 
   /**
     * Method that calls createHTML.
-    * This method overload implements the user decision to send an additional Config object containing simple styling details
+    * This method overload implements the user decision to send an additional Generator.Config object containing simple styling details
     *
     * @param json   - The JSON string to be parsed
-    * @param config - The Config object containing simple styling details
+    * @param config - The Generator.Config object containing simple styling details
     * @return An Option wrapping the URI of the created HTML file. Returns None in case of exception when parsing the JSON String
     */
   private def writeHTML(json: String, config: Config): Option[String] = {

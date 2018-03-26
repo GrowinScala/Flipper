@@ -42,7 +42,7 @@ there will be some example on how to call this method.
 
 To generate a PDF file from a JSON String you need to call the **`convertJSONtoPDF`** function. This function can
 be called by simply passing the JSON String, by passing the JSON String and a CSS file, by passing the JSON 
-String, and a CSS String, by passing the JSON String and a Config. The Config is a class implemented that 
+String, and a CSS String, by passing the JSON String and a Generator.Config. The Generator.Config is a class implemented that 
 contains some configurations for the PDF file, these are text color, font size, text alignment, font family
 and font weight. This function returns a Boolean saying if the conversion was successful and the output file 
 shows in **`./`**.

@@ -3,7 +3,8 @@ import java.io.File
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
 import org.scalatest.junit.JUnitRunner
-import Converter._
+import Converter.Converter._
+import Converter.FileType
 
 @RunWith(classOf[JUnitRunner])
 class ConverterSuite extends FunSuite {
