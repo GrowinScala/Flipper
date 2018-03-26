@@ -3,7 +3,7 @@ object Main {
   import Extractor._
 
   def main(args: Array[String]): Unit = {
-    val filepath: String = "./reader/resources/weightTest.pdf"
+    val filepath: String = "./reader/resources/MegaTester.pdf"
     val text = readPDF(filepath)
     getJSONObjects(text, List(("name", POSTag.PN), ("weight", POSTag.NUM)), "null").foreach(println)
 //        val objs = getAllObjects(text, List(("name", POSTag.PN), ("weight", POSTag.NUM)))

@@ -12,10 +12,12 @@ class ImageProcessingSuite extends FunSuite {
   val filepath: String = "./reader/resources/imgTester.pdf"
   val pdf: PDDocument = PDDocument.load(new File(filepath))
 
-  private def cleanImageDir(){
+  private def cleanImageDir() {
     val dir = new File("./target/images")
-    val files = dir.listFiles.filter(_.isFile).toList
-    files.foreach(_.delete)
+    if (dir.exists) {
+      val files = dir.listFiles.filter(_.isFile).toList
+      files.foreach(_.delete)
+    }
   }
 
   /**
