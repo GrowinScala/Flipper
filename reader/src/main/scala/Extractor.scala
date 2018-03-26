@@ -93,7 +93,6 @@ object Extractor {
   @throws[IllegalArgumentException]
   def getSingleMatchedValue(text: Option[String], keywords: List[(Keyword, POSTag.Value)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
     require(keywords.nonEmpty, "The list of keywords should not be empty")
-    //TODO: example of a way to avoid using too many java-like ifs.
     text match {
       case Some(_) =>
         getAllMatchedValues(text, keywords, clientRegEx).map { case (keyword, value) =>
@@ -121,7 +120,7 @@ object Extractor {
     require(keywords.nonEmpty, "The list of keywords should not be empty")
     text match {
       case Some("") => List()
-      case Some(_) => {
+      case Some(_) =>
         def getListSizes(matchedValues: MatchedPair): List[(Keyword, Int)] = {
           for ((key, listMatched) <- matchedValues) yield (key, listMatched.size)
         }
@@ -131,7 +130,6 @@ object Extractor {
           case (_, sizes: Int) => sizes
           case _ => 0
         } //Gets the size of the pair that has the most values
-
         val mappedValues = for (i <- 0 to mostFound; (_, listMatched) <- matchedValues) yield {
           if (listMatched.size > i) //Prevent array out of bounds exception
             List(listMatched(i))
@@ -139,7 +137,6 @@ object Extractor {
         }
         val keywordList = keywords.map { case (key, _) => key }
         mappedValues.zipWithIndex.map { case (key, values) => (keywordList(values % keywords.length), key) }.toList.grouped(keywords.size).toList
-      }
       case None => List()
       case _ => ??? //TODO throw nullPointerException?
     }
@@ -185,30 +182,31 @@ object Extractor {
     lazy val quote = "\""
 
     val pseudoJSON = listJSON.map { case (key, matchedList) =>
-      if (matchedList.nonEmpty) {
-
-        if (matchedList.size > 1) {
-          val left = s"${quote + key + quote} : "
-          val right = "[" + matchedList.map(str => if (isAllDigits(str)) str + ", " else s"${quote + str + quote}, ").mkString + "]"
-          (left + right).replaceAll(", ]", "]") //Remove trailing commas
-        } else {
-          lazy val headValue = matchedList.head
-          if (isAllDigits(headValue))
-            s"${quote + key + quote} : $headValue"
-          else
-            s"${quote + key + quote} : ${quote + headValue + quote}"
-        }
-
-      } else {
-
-        if (flag == "empty")
-          s"${quote + key + quote} : ${quote + quote}"
-        else if (flag == "null")
-          s"${quote + key + quote} : null"
-
+      matchedList match{
+        case List(_) =>
+          if (matchedList.size > 1) {
+            val left = s"${quote + key + quote} : "
+            val right = "[" + matchedList.map(str => if (isAllDigits(str)) str + ", " else s"${quote + str + quote}, ").mkString + "]"
+            (left + right).replaceAll(", ]", "]") //Remove trailing commas
+          } else {
+            lazy val headValue = matchedList.head
+            if (isAllDigits(headValue))
+              s"${quote + key + quote} : $headValue"
+            else
+              s"${quote + key + quote} : ${quote + headValue + quote}"
+          }
+        case _ =>
+          flag match {
+            case "empty" => s"${quote + key + quote} : ${quote + quote}"
+            case "null" => s"${quote + key + quote} : null"
+          }
       }
     }
-    if (flag == "remove") pseudoJSON.filter(_ != ()).mkString("{", ", ", "}") else pseudoJSON.mkString("{", ", ", "}")
+
+    flag match {
+      case "remove" => pseudoJSON.filter(_ != ()).mkString("{", ", ", "}")
+      case _ => pseudoJSON.mkString("{", ", ", "}")
+    }
   }
 
   /**
