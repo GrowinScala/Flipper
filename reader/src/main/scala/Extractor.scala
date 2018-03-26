@@ -4,6 +4,7 @@ import org.apache.pdfbox.pdmodel.PDDocument
 import org.apache.pdfbox.text.PDFTextStripper
 import scala.util.matching.Regex
 import OpenNLP._
+import FileHandler._
 import ImageProcessing._
 import scala.annotation.tailrec
 import scala.io.Source
@@ -21,33 +22,29 @@ object Extractor {
   /**
     * Method that given a file path (maybe change to a real file) will load that PDF file and read the text from it
     *
-    * @param filePath - String containing the URI for the file to be loaded
+    * @param file - File to be loaded and parsed
     * @return An Option wrapping a String containing all the text found in the document. Returns None in case of Exception
     */
-  def readPDF(filePath: String, readImages: Boolean = true): Option[String] = {
-    //TODO: Try catch is a bit scava. But, considering you use multiple external libraries made in java it is an acceptable safety measure. Can you confirm that case "tr" happens? In either case get the file handling done somewhere else and get rid of the "try-catch" in the "logical" implementation.
-    try {
-      //TODO: It's not 100% mandatory but using type annotations especially where types are not obvious or come from external classes helps
-      val pdf: PDDocument = PDDocument.load(new File(filePath))
-      val document: PDFTextStripper = new PDFTextStripper
+  def readPDF(file: File, readImages: Boolean = true): Option[String] = {
+    val pdfOption = loadPDF(file)
+    pdfOption match {
+      case Some(pdf) =>
+        val document: PDFTextStripper = new PDFTextStripper
+        val str = Normalizer.normalize(document.getText(pdf), Normalizer.Form.NFD)
+          .replaceAll("[\\p{InCombiningDiacriticalMarks}]", "")
 
-      val str = Normalizer.normalize(document.getText(pdf), Normalizer.Form.NFD)
-        .replaceAll("[\\p{InCombiningDiacriticalMarks}]", "")
+        val imgText =
+          if (readImages) {
+            val imageList = extractImgs(pdf).getOrElse(List())
+            val imageTexts = imageList.map(img => readImageText(img).getOrElse("")).mkString
 
-      val imgText =
-        if (readImages) {
-          val imageList = extractImgs(pdf).getOrElse(List())
-          val imageTexts = imageList.map(img => readImageText(img).getOrElse("")).mkString
+            correctText(imageTexts)
+          } else ""
 
-          correctText(imageTexts)
-        } else ""
-
-      pdf.close()
-      cleanImageDir()
-      Option(imgText + str)
-    } catch {
-      case t: FileNotFoundException => t.printStackTrace(); None
-      case tr: Throwable => tr.printStackTrace(); None
+        pdf.close()
+        cleanImageDir()
+        Option(imgText + str)
+      case _ => None
     }
   }
 
