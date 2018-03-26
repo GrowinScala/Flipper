@@ -34,7 +34,8 @@ class ExtractorSuite extends FunSuite {
     val expectedValue = "Margarida Reis"
     //    val expectedValue = List(("name", List("Margarida Reis", "Lucas", "Albertina", "Justino Alberto")), ("age", List(25, 21)))
     //    matchedValues should equal(expectedValue)
-    assert(matchedValues.head._2.head == expectedValue)
+    if (matchedValues.isEmpty) fail("getAllMatchedValues returned an empty List")
+    else assert(matchedValues.head._2.head == expectedValue)
   }
 
   /**
@@ -77,7 +78,8 @@ class ExtractorSuite extends FunSuite {
     */
   test("Search for non-existing keyword") {
     val matchedValues = getAllMatchedValues(text, List(("color", POSTag.N)))
-    assert(matchedValues.head._2.isEmpty)
+    if (matchedValues.isEmpty) fail("Matched value came back as an Empty List")
+    else assert(matchedValues.head._2.isEmpty)
   }
 
   /**
@@ -128,7 +130,8 @@ class ExtractorSuite extends FunSuite {
     */
   test("Search single value with an non-existing keyword") {
     val matchedValue = getSingleMatchedValue(text, List(("color", POSTag.N)))
-    assert(matchedValue.head._2.isEmpty)
+    if (matchedValue.isEmpty) fail("Matched value came back as an Empty List")
+    else assert(matchedValue.head._2.isEmpty)
   }
 
   /**
@@ -178,7 +181,8 @@ class ExtractorSuite extends FunSuite {
       List(("name", List("Justino Alberto"))),
       List(("name", List()))
     )
-    pseudoJsonObjs should equal(expected)
+    if (pseudoJsonObjs.isEmpty) fail("getAllObjects returned an empty List")
+    else pseudoJsonObjs should equal(expected)
   }
 
   /**
@@ -209,6 +213,7 @@ class ExtractorSuite extends FunSuite {
       "{\"name\" : \"\", \"age\" : \"\"}"
     )
     val matchedValues = getAllObjects(text, List(("name", POSTag.PN), ("age", POSTag.NUM)))
-    matchedValues.map(mp => makeJSONString(mp)) should equal(expected)
+    if (matchedValues.isEmpty) fail("getAllObjects returned an empty List")
+    else matchedValues.map(mp => makeJSONString(mp)) should equal(expected)
   }
 }

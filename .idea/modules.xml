@@ -4,8 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/converter.iml" filepath="$PROJECT_DIR$/.idea/modules/converter.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/converter-build.iml" filepath="$PROJECT_DIR$/.idea/modules/converter-build.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/flipper.iml" filepath="$PROJECT_DIR$/.idea/modules/flipper.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/flipper-build.iml" filepath="$PROJECT_DIR$/.idea/modules/flipper-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/generator.iml" filepath="$PROJECT_DIR$/.idea/modules/generator.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/generator-build.iml" filepath="$PROJECT_DIR$/.idea/modules/generator-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/reader.iml" filepath="$PROJECT_DIR$/.idea/modules/reader.iml" />

@@ -303,7 +303,7 @@ object Extractor {
     */
   private def cleanImageDir() {
     val dir = new File("./target/images")
-    if(dir.exists) {
+    if (dir.exists) {
       val files = dir.listFiles.filter(_.isFile).toList
       files.foreach(_.delete)
     }

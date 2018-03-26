@@ -20,14 +20,6 @@ val basicSettings = Seq(
   libraryDependencies += "net.sf.cssbox" % "pdf2dom" % "1.7",
   libraryDependencies += "com.sksamuel.scrimage" %% "scrimage-core" % "3.0.0-alpha4",
   libraryDependencies += "com.sksamuel.scrimage" %% "scrimage-filters" % "3.0.0-alpha4"
-
-
-//If we want to add back JavaCPP Tesseract presets (same results as Tess4J)
-  //We need to add this lines and also add a file "javacpp.sbt" to ./project with addSbtPlugin("org.bytedeco" % "sbt-javacpp" % "1.13") inside it
-  //  addSbtPlugin("org.bytedeco" % "sbt-javacpp" % "1.13"),
-  //  javaCppPresetLibs ++= Seq("tesseract" -> "3.05.01"),
-  //  libraryDependencies += "org.bytedeco.javacpp-presets" % "leptonica" % "1.74.4-1.4",
-  //  libraryDependencies += "org.bytedeco.javacpp-presets" % "leptonica-platform" % "1.74.4-1.4"
 )
 
 

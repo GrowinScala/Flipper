@@ -1,15 +1,14 @@
 import java.io.{File, PrintWriter}
-
-import com.google.common.collect.Iterators
 import javax.imageio.ImageIO
 import org.apache.pdfbox.pdmodel.PDDocument
 import org.apache.pdfbox.rendering.PDFRenderer
+import ImageProcessing._
+import com.google.common.collect.Iterators
 import org.fit.pdfdom.{PDFDomTree, PDFDomTreeConfig}
 import org.odftoolkit.odfdom.`type`.Color
 import org.odftoolkit.simple.TextDocument
 import org.odftoolkit.simple.style.{Font, StyleTypeDefinitions}
 import scala.io.Source
-import ImageProcessing._
 
 /**
   * Singleton object that implements the functions regarding the conversion of pdf into other file types
@@ -165,7 +164,7 @@ object Converter {
     */
   private def cleanImageDir() {
     val dir = new File("./target/images")
-    if(dir.exists) {
+    if (dir.exists) {
       val files = dir.listFiles.filter(_.isFile).toList
       files.foreach(_.delete)
     }
