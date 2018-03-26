@@ -2,22 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5115832d-4669-4625-b348-c310af38a585" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/generator/src/main/scala/Generator/Config.scala" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/reader/src/test/scala/FileHandlerSuite.scala" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/converter/src/main/scala/Converter.scala" afterPath="$PROJECT_DIR$/converter/src/main/scala/Converter/Converter.scala" />
-      <change beforePath="$PROJECT_DIR$/converter/src/main/scala/FileType.scala" afterPath="$PROJECT_DIR$/converter/src/main/scala/Converter/FileType.scala" />
-      <change beforePath="$PROJECT_DIR$/converter/src/main/scala/Main.scala" afterPath="$PROJECT_DIR$/converter/src/main/scala/Main.scala" />
-      <change beforePath="$PROJECT_DIR$/converter/src/test/scala/ConverterSuite.scala" afterPath="$PROJECT_DIR$/converter/src/test/scala/ConverterSuite.scala" />
-      <change beforePath="$PROJECT_DIR$/generator/README.md" afterPath="$PROJECT_DIR$/generator/README.md" />
-      <change beforePath="$PROJECT_DIR$/generator/src/main/scala/Config.scala" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/generator/src/main/scala/FileHandler.scala" afterPath="$PROJECT_DIR$/generator/src/main/scala/Generator/FileHandler.scala" />
-      <change beforePath="$PROJECT_DIR$/generator/src/main/scala/Generator.scala" afterPath="$PROJECT_DIR$/generator/src/main/scala/Generator/Generator.scala" />
-      <change beforePath="$PROJECT_DIR$/generator/src/main/scala/Main.scala" afterPath="$PROJECT_DIR$/generator/src/main/scala/Main.scala" />
-      <change beforePath="$PROJECT_DIR$/generator/src/test/scala/GeneratorSuite.scala" afterPath="$PROJECT_DIR$/generator/src/test/scala/GeneratorSuite.scala" />
-      <change beforePath="$PROJECT_DIR$/html.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reader/src/main/scala/Extraction/Extractor.scala" afterPath="$PROJECT_DIR$/reader/src/main/scala/Extraction/Extractor.scala" />
+      <change beforePath="$PROJECT_DIR$/reader/src/test/scala/ExtractorSuite.scala" afterPath="$PROJECT_DIR$/reader/src/test/scala/ExtractorSuite.scala" />
       <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/test-classes/ExtractorSuite.class" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/test-classes/ExtractorSuite.class" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/test-classes/ImageProcessingSuite.class" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/test-classes/ImageProcessingSuite.class" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/test-classes/OpenNLPSuite.class" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/test-classes/OpenNLPSuite.class" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -45,95 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ExtractorSuite.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reader/src/test/scala/ExtractorSuite.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="16" column="67" lean-forward="true" selection-start-line="16" selection-start-column="67" selection-end-line="16" selection-end-column="67" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Generator.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/generator/src/main/scala/Generator/Generator.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="180" column="26" lean-forward="true" selection-start-line="180" selection-start-column="26" selection-end-line="180" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/generator/src/main/scala/Main.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="19" lean-forward="true" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Converter.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/converter/src/main/scala/Converter/Converter.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2531">
-              <caret line="28" column="6" lean-forward="true" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
-              <folding>
-                <element signature="e#19#53#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileType.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/converter/src/main/scala/Converter/FileType.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileHandler.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/generator/src/main/scala/Generator/FileHandler.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Config.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/generator/src/main/scala/Generator/Config.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" column="11" lean-forward="false" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reader/src/main/scala/Main.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Extractor.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Extractor.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/reader/src/main/scala/Extraction/Extractor.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="766">
-              <caret line="312" column="3" lean-forward="false" selection-start-line="312" selection-start-column="3" selection-end-line="312" selection-end-column="3" />
+            <state relative-caret-position="412">
+              <caret line="129" column="21" lean-forward="true" selection-start-line="129" selection-start-column="21" selection-end-line="129" selection-end-column="21" />
               <folding>
                 <element signature="e#20#39#0" expanded="true" />
               </folding>
@@ -141,12 +46,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageProcessingSuite.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reader/src/test/scala/ImageProcessingSuite.scala">
+      <file leaf-file-name="ExtractorSuite.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/reader/src/test/scala/ExtractorSuite.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="23" column="94" lean-forward="true" selection-start-line="23" selection-start-column="94" selection-end-line="23" selection-end-column="94" />
-              <folding />
+            <state relative-caret-position="21">
+              <caret line="160" column="0" lean-forward="false" selection-start-line="159" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileHandler.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/reader/src/main/scala/Extraction/FileHandler.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+              <folding>
+                <element signature="e#20#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileHandlerSuite.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/reader/src/test/scala/FileHandlerSuite.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -182,7 +113,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/reader/src/test/scala/ExtractorSuite.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/ImageProcessing.scala" />
         <option value="$PROJECT_DIR$/generator/src/main/scala/FileHandler.scala" />
         <option value="$PROJECT_DIR$/generator/src/main/scala/Generator.scala" />
@@ -197,13 +127,15 @@
         <option value="$PROJECT_DIR$/reader/src/main/scala/utils/ImageProcessing.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/Extractor.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/utils/POSTag.scala" />
-        <option value="$PROJECT_DIR$/reader/src/main/scala/Extraction/Extractor.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/Main.scala" />
-        <option value="$PROJECT_DIR$/generator/src/main/scala/Generator/Generator.scala" />
         <option value="$PROJECT_DIR$/generator/src/main/scala/Generator/FileHandler.scala" />
         <option value="$PROJECT_DIR$/generator/src/main/scala/Generator/Config.scala" />
         <option value="$PROJECT_DIR$/converter/src/main/scala/Converter/Converter.scala" />
         <option value="$PROJECT_DIR$/converter/src/main/scala/Converter/FileType.scala" />
+        <option value="$PROJECT_DIR$/generator/src/main/scala/Generator/Generator.scala" />
+        <option value="$PROJECT_DIR$/reader/src/test/scala/ExtractorSuite.scala" />
+        <option value="$PROJECT_DIR$/reader/src/test/scala/FileHandlerSuite.scala" />
+        <option value="$PROJECT_DIR$/reader/src/main/scala/Extraction/Extractor.scala" />
       </list>
     </option>
   </component>
@@ -241,60 +173,25 @@
             <path>
               <item name="flipper" type="b2602c69:ProjectViewProjectNode" />
               <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="converter" type="462c0819:PsiDirectoryNode" />
+              <item name="reader" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="flipper" type="b2602c69:ProjectViewProjectNode" />
               <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="converter" type="462c0819:PsiDirectoryNode" />
+              <item name="reader" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="flipper" type="b2602c69:ProjectViewProjectNode" />
               <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="converter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="converter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="converter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="Converter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
+              <item name="reader" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="flipper" type="b2602c69:ProjectViewProjectNode" />
               <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
+              <item name="reader" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
@@ -302,11 +199,35 @@
             <path>
               <item name="flipper" type="b2602c69:ProjectViewProjectNode" />
               <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
+              <item name="reader" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="Generator" type="462c0819:PsiDirectoryNode" />
+              <item name="Extraction" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flipper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
+              <item name="reader" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flipper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
+              <item name="reader" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flipper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
+              <item name="reader" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -342,7 +263,33 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/reader/src/main/scala/Extractor.scala</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/flipper-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/flipper-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-compile-internal.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-compile.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-optional.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-plugin.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-pom.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-provided.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-runtime-internal.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-runtime.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-scala-tool.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-test-internal.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-test.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/$global/streams/export</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/streams/compile/exportedProducts/$global/streams/export</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/$global/streams/export</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/streams/compile/managedClasspath/$global/streams/export</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/$global/streams/export</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/reader/src/main/scala/Extraction/Extractor.scala</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/reader/src/main/scala/utils/ImageProcessing.scala</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -350,6 +297,7 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -357,6 +305,12 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="true" />
           <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/config-classes/$4a07ecdb7e5fc5ba9385$.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/config-classes/$4a07ecdb7e5fc5ba9385.cache</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/config-classes/$4a07ecdb7e5fc5ba9385.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/config-classes/$58c645b5e940d86b2177$.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/config-classes/$58c645b5e940d86b2177.cache</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/config-classes/$58c645b5e940d86b2177.class</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Restored" />
@@ -450,7 +404,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ExtractorSuite">
+  <component name="RunManager" selected="JUnit.FileHandlerSuite">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -472,13 +426,13 @@
       <module name="" />
       <envs />
     </configuration>
-    <configuration name="ConverterSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ExtractorSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="converter" />
+      <module name="reader" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ConverterSuite" />
+      <option name="MAIN_CLASS_NAME" value="ExtractorSuite" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -492,13 +446,13 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="ExtractorSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FileHandlerSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="reader" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ExtractorSuite" />
+      <option name="MAIN_CLASS_NAME" value="FileHandlerSuite" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -634,18 +588,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.ImageProcessingSuite" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.ConverterSuite" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.GeneratorSuite" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.OpenNLPSuite" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ExtractorSuite" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.GeneratorSuite" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.OpenNLPSuite" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ExtractorSuite" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.FileHandlerSuite" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ExtractorSuite" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ImageProcessingSuite" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.OpenNLPSuite" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.GeneratorSuite" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ConverterSuite" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.FileHandlerSuite" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ExtractorSuite" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ImageProcessingSuite" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.OpenNLPSuite" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.GeneratorSuite" />
       </list>
     </recent_temporary>
   </component>
@@ -803,7 +757,21 @@
       <option name="project" value="LOCAL" />
       <updated>1522076699675</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added new packages to generator and converter module">
+      <created>1522077613741</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1522077613741</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Updates">
+      <created>1522078118137</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1522078118137</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -819,17 +787,17 @@
     <history-entry file="ExtractorSuite - 2018.03.26 at 16h 01m 44s.xml">
       <configuration name="ExtractorSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GeneratorSuite - 2018.03.26 at 15h 11m 19s.xml">
-      <configuration name="GeneratorSuite" configurationId="JUnit" />
+    <history-entry file="FileHandlerSuite - 2018.03.26 at 16h 35m 18s.xml">
+      <configuration name="FileHandlerSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ImageProcessingSuite - 2018.03.26 at 15h 12m 06s.xml">
-      <configuration name="ImageProcessingSuite" configurationId="JUnit" />
+    <history-entry file="FileHandlerSuite - 2018.03.26 at 16h 41m 20s.xml">
+      <configuration name="FileHandlerSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FileHandlerSuite - 2018.03.26 at 16h 41m 52s.xml">
+      <configuration name="FileHandlerSuite" configurationId="JUnit" />
     </history-entry>
     <history-entry file="ImageProcessingSuite - 2018.03.26 at 16h 00m 37s.xml">
       <configuration name="ImageProcessingSuite" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="OpenNLPSuite - 2018.03.26 at 15h 12m 19s.xml">
-      <configuration name="OpenNLPSuite" configurationId="JUnit" />
     </history-entry>
     <history-entry file="OpenNLPSuite - 2018.03.26 at 15h 12m 48s.xml">
       <configuration name="OpenNLPSuite" configurationId="JUnit" />
@@ -920,7 +888,9 @@
     <MESSAGE value="Refactoring Converter.scala try-catches" />
     <MESSAGE value="Refactored project to improve try-catches implementation" />
     <MESSAGE value="Added new packages to reader module" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new packages to reader module" />
+    <MESSAGE value="Added new packages to generator and converter module" />
+    <MESSAGE value="Updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1047,17 +1017,7 @@
         <state relative-caret-position="493">
           <caret line="99" column="23" lean-forward="true" selection-start-line="99" selection-start-column="23" selection-end-line="99" selection-end-column="23" />
           <folding>
-            <element signature="e#15#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/main/scala/Extraction/FileHandler.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="32" column="6" lean-forward="true" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
-          <folding>
-            <element signature="e#20#39#0" expanded="true" />
+            <element signature="e#15#49#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1070,62 +1030,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/test/scala/ImageProcessingSuite.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="23" column="94" lean-forward="true" selection-start-line="23" selection-start-column="94" selection-end-line="23" selection-end-column="94" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/main/scala/Main.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/main/scala/Extraction/Extractor.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="766">
-          <caret line="312" column="3" lean-forward="false" selection-start-line="312" selection-start-column="3" selection-end-line="312" selection-end-column="3" />
-          <folding>
-            <element signature="e#20#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/test/scala/ExtractorSuite.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="67" lean-forward="true" selection-start-line="16" selection-start-column="67" selection-end-line="16" selection-end-column="67" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/generator/src/main/scala/Config.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator/src/main/scala/Generator/Config.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="11" lean-forward="false" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator/src/main/scala/Main.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="19" lean-forward="true" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -1140,11 +1048,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/converter/src/main/scala/Converter/Converter.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2531">
-          <caret line="28" column="6" lean-forward="true" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+        <state relative-caret-position="147">
+          <caret line="97" column="24" lean-forward="false" selection-start-line="97" selection-start-column="24" selection-end-line="97" selection-end-column="24" />
           <folding>
-            <element signature="e#19#53#0" expanded="true" />
+            <element signature="e#19#53#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/src/main/scala/Main.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="19" lean-forward="true" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/src/main/scala/Generator/Generator.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1156,11 +1080,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generator/src/main/scala/Generator/Generator.scala">
+    <entry file="file://$PROJECT_DIR$/generator/src/main/scala/Generator/Config.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="180" column="26" lean-forward="true" selection-start-line="180" selection-start-column="26" selection-end-line="180" selection-end-column="26" />
+        <state relative-caret-position="231">
+          <caret line="11" column="11" lean-forward="false" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/main/scala/Main.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/test/scala/ImageProcessingSuite.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="23" column="94" lean-forward="true" selection-start-line="23" selection-start-column="94" selection-end-line="23" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/main/scala/Extraction/FileHandler.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+          <folding>
+            <element signature="e#20#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/test/scala/ExtractorSuite.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="160" column="0" lean-forward="false" selection-start-line="159" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/test/scala/FileHandlerSuite.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/main/scala/Extraction/Extractor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="129" column="21" lean-forward="true" selection-start-line="129" selection-start-column="21" selection-end-line="129" selection-end-column="21" />
+          <folding>
+            <element signature="e#20#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

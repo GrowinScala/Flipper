@@ -57,10 +57,12 @@ object Extractor {
     * @param clientRegEx - Optional parameter - If the client already has a predefined Regular Expression for a given key
     *                    use that regular expression instead of ours
     * @throws IllegalArgumentException If the keywords list is empty
+    * @throws NullPointerException     - If the text parameter was passed as null
     * @return List containing pairs of Keywords and a List (non-repeating) of values found for that keyword
     */
   @throws[IllegalArgumentException]
-  def getAllMatchedValues(text: Option[String], keywords: List[(Keyword, POSTag.Value)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair= {
+  @throws[NullPointerException]
+  def getAllMatchedValues(text: Option[String], keywords: List[(Keyword, POSTag.Value)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
     require(keywords.nonEmpty, "The list of keywords should not be empty")
     text match {
       case Some("") => List()
@@ -116,9 +118,11 @@ object Extractor {
     * @param keywords    - List containing all the keywords we want to find values for
     * @param clientRegEx - Optional parameter - If the client already has a predefined Regular Expression for a given key
     * @throws IllegalArgumentException If the keywords list is empty
+    * @throws NullPointerException     If the text parameter was passed as null
     * @return A List containing sub-lists of pairs of keywords with single matched values
     */
   @throws[IllegalArgumentException]
+  @throws[NullPointerException]
   def getAllObjects(text: Option[String], keywords: List[(Keyword, POSTag.Value)], clientRegEx: Map[Keyword, Regex] = Map()): List[MatchedPair] = {
     require(keywords.nonEmpty, "The list of keywords should not be empty")
     text match {
@@ -310,16 +314,5 @@ object Extractor {
       else end(a, n - 1)
 
     start(0)
-  }
-
-  /**
-    * Method that deletes all files from the image folder
-    */
-  private def cleanImageDir() {
-    val dir = new File("./target/images")
-    if (dir.exists) {
-      val files = dir.listFiles.filter(_.isFile).toList
-      files.foreach(_.delete)
-    }
   }
 }
