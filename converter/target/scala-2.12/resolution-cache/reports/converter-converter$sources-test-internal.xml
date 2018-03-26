@@ -7,10 +7,10 @@
 		revision="0.1"
 		conf="test-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20180323173124"/>
+		date="20180326112404"/>
 	<dependencies>
 		<module organisation="reader" name="reader_2.12">
-			<revision name="0.1" status="integration" pubdate="20180323173021" resolver="inter-project" artresolver="inter-project" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="42">
+			<revision name="0.1" status="integration" pubdate="20180326112333" resolver="inter-project" artresolver="inter-project" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="42">
 				<metadata-artifact status="failed" details="" size="0" time="0" searched="false"/>
 				<caller organisation="converter" name="converter$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="0.1" rev-constraint-default="0.1" rev-constraint-dynamic="0.1" callerrev="0.1"/>
 				<artifacts>

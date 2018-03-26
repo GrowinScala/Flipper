@@ -99,12 +99,11 @@ class ExtractorSuite extends FunSuite {
   }
 
   /**
-    * Tests that calling getSingleValue with text parameter as null will result in a NullPointerException
+    * Tests that calling getSingleValue with text parameter as null will result in an empty List
     */
   test("Calling getSingleValue with null text string") {
-    assertThrows[NullPointerException](
-      getSingleMatchedValue(null, List(("name", POSTag.PN), ("age", POSTag.NUM)))
-    )
+    val nullText = getSingleMatchedValue(null, List(("name", POSTag.PN), ("age", POSTag.NUM)))
+    assert(nullText.isEmpty)
   }
 
   /**

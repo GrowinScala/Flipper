@@ -69,18 +69,19 @@ object Extractor {
     if (textContent.isEmpty) List()
     else {
       val knownRegEx: Map[String, Regex] = importRegExFile(textContent) //load correct RegEx map
-      val matched = keywords.map(key => {
+      val matched:MatchedPair = keywords.map{case(key,tag) => {
 
         //If the client sent a custom RegEx to use on this key, use it
-        if (clientRegEx.contains(key._1)) //&& clientRegEx != null ??
-          (key._1, clientRegEx(key._1).findAllIn(textContent).matchData.map(_.group(1)).toList.distinct)
+        if (clientRegEx.contains(key)) //&& clientRegEx != null ??
+          (key, clientRegEx(key).findAllIn(textContent).matchData.map(_.group(1)).toList.distinct)
 
         //if we already know a good RegEx for this keyword, use it
-        else if (knownRegEx.contains(key._1))
-          (key._1, knownRegEx(key._1).findAllIn(textContent).matchData.map(_.group(1)).toList.distinct)
+        else if (knownRegEx.contains(key))
+          (key, knownRegEx(key).findAllIn(textContent).matchData.map(_.group(1)).toList.distinct)
 
-        else findKeywordInText(key._1, key._2, textContent) //to be changed, here we need to manually search for the keywords in the text
-      })
+        else findKeywordInText(key, tag, textContent) //to be changed, here we need to manually search for the keywords in the text
+      }}
+
       filterNewLines(matched)
     }
   }
@@ -129,18 +130,19 @@ object Extractor {
     if (textContent.isEmpty) List()
     else {
       def getListSizes(matchedValues: MatchedPair): List[(Keyword, Int)] = {
-        for (m <- matchedValues) yield (m._1, m._2.size)
+        for ((key,listMatched) <- matchedValues) yield (key, listMatched.size)
       }
 
       val matchedValues = getAllMatchedValues(text, keywords, clientRegEx)
-      val mostFound = getListSizes(matchedValues).maxBy(_._2) //Gets the size of the pair that has the most values
+      val (_,mostFound) = getListSizes(matchedValues).maxBy{case(_,sizes:Int) => sizes} //Gets the size of the pair that has the most values
 
-      val mappedValues = for (i <- 0 to mostFound._2; m <- matchedValues) yield {
-        if (m._2.size > i) //Prevent array out of bounds exception
-          List(m._2(i))
+      val mappedValues = for (i <- 0 to mostFound; (_,listMatched) <- matchedValues) yield {
+        if (listMatched.size > i) //Prevent array out of bounds exception
+          List(listMatched(i))
         else List()
       }
-      mappedValues.zipWithIndex.map(pair => (keywords(pair._2 % keywords.length)._1, pair._1)).toList.grouped(keywords.size).toList
+//      val (keywordList,_) = keywords
+      mappedValues.zipWithIndex.map{case(key,values) => (keywords(values % keywords.length)._1, key)}.toList.grouped(keywords.size).toList
     }
   }
 
@@ -184,30 +186,30 @@ object Extractor {
 
     lazy val quote = "\""
 
-    val pseudoJSON = listJSON.map(k =>
-      if (k._2.nonEmpty) {
+    val pseudoJSON = listJSON.map { case (key, matchedList) =>
+      if (matchedList.nonEmpty) {
 
-        if (k._2.size > 1) {
-          val left = s"${quote + k._1 + quote} : "
-          val right = "[" + k._2.map(str => if (isAllDigits(str)) str + ", " else s"${quote + str + quote}, ").mkString + "]"
+        if (matchedList.size > 1) {
+          val left = s"${quote + key + quote} : "
+          val right = "[" + matchedList.map(str => if (isAllDigits(str)) str + ", " else s"${quote + str + quote}, ").mkString + "]"
           (left + right).replaceAll(", ]", "]") //Remove trailing commas
         } else {
-          lazy val headValue = k._2.head
+          lazy val headValue = matchedList.head
           if (isAllDigits(headValue))
-            s"${quote + k._1 + quote} : $headValue"
+            s"${quote + key + quote} : $headValue"
           else
-            s"${quote + k._1 + quote} : ${quote + headValue + quote}"
+            s"${quote + key + quote} : ${quote + headValue + quote}"
         }
 
       } else {
 
         if (flag == "empty")
-          s"${quote + k._1 + quote} : ${quote + quote}"
+          s"${quote + key + quote} : ${quote + quote}"
         else if (flag == "null")
-          s"${quote + k._1 + quote} : null"
+          s"${quote + key + quote} : null"
 
       }
-    )
+    }
     if (flag == "remove") pseudoJSON.filter(_ != ()).mkString("{", ", ", "}") else pseudoJSON.mkString("{", ", ", "}")
   }
 
@@ -218,10 +220,10 @@ object Extractor {
     * @return The same list as passed by parameter but with no new line characters
     */
   private def filterNewLines(matchedValues: MatchedPair): MatchedPair = {
-    matchedValues.map(pair => {
-      val setOfValues = pair._2
-      (pair._1, setOfValues.map(_.replaceAll("[\\r\\n]", "").trim)) //remove all new line characters and trim all elements
-    })
+    matchedValues.map{case(key,matchedList) => {
+      val setOfValues = matchedList
+      (key, setOfValues.map(_.replaceAll("[\\r\\n]", "").trim)) //remove all new line characters and trim all elements
+    }}
   }
 
   /**
