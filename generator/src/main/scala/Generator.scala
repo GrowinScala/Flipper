@@ -158,7 +158,7 @@ object Generator {
     try {
       val jsonMap = parse(json).values.asInstanceOf[Map[String, Any]] //parses JSON string to a Map[String, Any]
       if (jsonMap.nonEmpty) {
-        val kvParagraph = jsonMap.map(pair => p(pair._1 + " : " + pair._2)).toList
+        val kvParagraph = jsonMap.map{case(key,value) => p(key + " : " + value)}.toList
 
         val htmlString =
           if (cssString.isEmpty) html(head(), body(kvParagraph)).toString //generate html code with no css
