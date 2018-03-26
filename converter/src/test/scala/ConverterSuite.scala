@@ -1,3 +1,5 @@
+import java.io.File
+
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
 import org.scalatest.junit.JUnitRunner
@@ -6,15 +8,15 @@ import Converter._
 @RunWith(classOf[JUnitRunner])
 class ConverterSuite extends FunSuite {
 
-  val validPath: String = "./converter/resources/cv.pdf"
+  val validFile = new File("./converter/resources/cv.pdf")
 
   /**
     * Tests that sending a invalid filePath will return false
     */
   test("convertPDFtoIMG with an invalid filePath") {
     val testList = List(
-      convertPDFtoIMG("", FileType.png),
-      convertPDFtoIMG("non-existing file path", FileType.png)
+      convertPDFtoIMG(new File(""), FileType.png),
+      convertPDFtoIMG(new File("non-existing file path"), FileType.png)
     )
     assert(testList.forall(test => !test))
   }
@@ -32,7 +34,7 @@ class ConverterSuite extends FunSuite {
     */
   test("convertPDFtoIMG with null fileType") {
     assertThrows[IllegalArgumentException](
-      convertPDFtoIMG(validPath, null)
+      convertPDFtoIMG(validFile, null)
     )
   }
 
@@ -41,7 +43,7 @@ class ConverterSuite extends FunSuite {
     * This means that the method successfully converted the pdf to the specified file type
     */
   test("convertPDFtoIMG with a valid filePath and fileType") {
-    assert(convertPDFtoIMG(validPath, FileType.png))
+    assert(convertPDFtoIMG(validFile, FileType.png))
   }
 
   /**
@@ -50,8 +52,8 @@ class ConverterSuite extends FunSuite {
     */
   test("convertPDFtoODT with invalid filePath") {
     val nullPath = convertPDFtoODT(null)
-    val emptyPath = convertPDFtoODT("")
-    val nonExistingPath = convertPDFtoODT("non-existing path")
+    val emptyPath = convertPDFtoODT(new File(""))
+    val nonExistingPath = convertPDFtoODT(new File("non-existing path"))
     assert(!nullPath && !emptyPath && !nonExistingPath)
   }
 
@@ -60,6 +62,6 @@ class ConverterSuite extends FunSuite {
     * meaning it successfully converted the PDF to ODF
     */
   test("convertPDFtoODT with valid filePath") {
-    assert(convertPDFtoODT(validPath))
+    assert(convertPDFtoODT(validFile))
   }
 }

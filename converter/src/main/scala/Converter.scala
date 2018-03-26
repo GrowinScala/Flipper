@@ -19,28 +19,33 @@ object Converter {
   /**
     * Method that converts a pdf file into a png image
     *
-    * @param filePath - String containing the URI to the pdf file
+    * @param file     - The PDF file to be converted
     * @param fileType - FileType with one of the possible file types of the Enum FileType to be converted into
     * @return - A Boolean saying if the conversion was successful
     * @throws IllegalArgumentException if the specified fileType did not equal the supported file types
     */
   @throws[IllegalArgumentException]
-  def convertPDFtoIMG(filePath: String, fileType: FileType.Value): Boolean = {
+  def convertPDFtoIMG(file: File, fileType: FileType.Value): Boolean = {
     require(fileType != null, "File type must be one of png, jpg, gif or jpeg")
 
-    try {
-      val pdf = PDDocument.load(new File(filePath))
-      val renderer = new PDFRenderer(pdf)
-      val dir = new File("./target/PDFtoIMG")
-      if (!dir.exists) dir.mkdir
-      for (i <- 0 until pdf.getNumberOfPages) {
-        val image = renderer.renderImage(i)
-        ImageIO.write(image, fileType.toString, new File("./target/PDFtoIMG/Converted_Page" + i + "_" + System.nanoTime() + "." + fileType.toString))
-      }
-      true
-    } catch {
-      case e: Exception => e.printStackTrace(); false
+    val pdfOption = loadPDF(file)
+    pdfOption match {
+      case Some(pdf) =>
+        val renderer = new PDFRenderer(pdf)
+        val dir = new File("./target/PDFtoIMG")
+        if (!dir.exists) dir.mkdir
+        try {
+          for (i <- 0 until pdf.getNumberOfPages) {
+            val image = renderer.renderImage(i)
+            ImageIO.write(image, fileType.toString, new File("./target/PDFtoIMG/Converted_Page" + i + "_" + System.nanoTime() + "." + fileType.toString))
+          }
+          true
+        } catch {
+          case e: Exception => e.printStackTrace(); false
+        }
+      case _ => false
     }
+
   }
 
   /**
@@ -50,14 +55,7 @@ object Converter {
     * @return - A Boolean saying if the conversion was successful
     */
   def convertPDFtoODT(file: File): Boolean = {
-    try {
-      convertPDFtoHTML(file)
-      convertHTMLtoODT(file)
-      cleanImageDir()
-      true
-    } catch {
-      case e: Exception => e.printStackTrace(); false
-    }
+    convertPDFtoHTML(file) && convertHTMLtoODT(file) && cleanImageDir()
   }
 
   /**
@@ -65,7 +63,7 @@ object Converter {
     *
     * @param file - The PDF file to be converted
     */
-  private def convertPDFtoHTML(file: File): Unit = {
+  private def convertPDFtoHTML(file: File): Boolean = {
     val outfile = "out.html"
     val config = PDFDomTreeConfig.createDefaultConfig
     val documentOption = loadPDF(file)
@@ -76,7 +74,8 @@ object Converter {
         parser.writeText(document, output)
         output.close()
         document.close()
-      case _ => throw new Exception("The file was not found or PDDocument could not load the specified file")
+        true
+      case _ => false
     }
 
   }
@@ -86,7 +85,7 @@ object Converter {
     *
     * @param file - The PDF file to be converted
     */
-  private def convertHTMLtoODT(file: File): Unit = {
+  private def convertHTMLtoODT(file: File): Boolean = {
 
     /**
       * Auxiliary method that iterates through the html lines, parses the information and returns the converted odt file
@@ -165,7 +164,8 @@ object Converter {
         val newOdt = recFunc(htmlLines, "", imgs, TextDocument.newTextDocument())
 
         newOdt.save("out.odt")
-      case _ => throw new Exception("The file was not found or PDDocument could not load the specified file")
+        true
+      case _ => false
     }
 
   }
@@ -173,11 +173,12 @@ object Converter {
   /**
     * Method that deletes all files from the image folder
     */
-  private def cleanImageDir() {
+  private def cleanImageDir(): Boolean = {
     val dir = new File("./target/images")
     if (dir.exists) {
       val files = dir.listFiles.filter(_.isFile).toList
       files.foreach(_.delete)
     }
+    true //should we send false if the foulder does not exist?
   }
 }
