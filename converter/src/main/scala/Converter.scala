@@ -43,7 +43,7 @@ object Converter {
   }
 
   /**
-    * Method that creates a odf file with the information taken from a pdf (Note: does not maintain full formating)
+    * Method that creates a odf file with the information taken from a pdf (Note: does not maintain full formatting)
     *
     * @param filePath - String containing the URI to the pdf file
     * @return - A Boolean saying if the conversion was successful
@@ -64,7 +64,7 @@ object Converter {
     *
     * @param filePath - String containing the URI to the pdf file
     */
-  private def convertPDFtoHTML(filePath: String) = {
+  private def convertPDFtoHTML(filePath: String): Unit = {
     val outfile = "out.html"
     val config = PDFDomTreeConfig.createDefaultConfig
     val document = PDDocument.load(new File(filePath))
@@ -78,9 +78,9 @@ object Converter {
   /**
     * Method that creates a odt file from a html previously converted from a pdf
     *
-    * @param filePath - String containg the URI from the original pdf file
+    * @param filePath - String containing the URI from the original pdf file
     */
-  private def convertHTMLtoODT(filePath: String) = {
+  private def convertHTMLtoODT(filePath: String): Unit = {
 
     /**
       * Auxiliary method that iterates through the html lines, parses the information and returns the converted odt file

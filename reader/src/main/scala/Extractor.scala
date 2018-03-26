@@ -51,11 +51,10 @@ object Extractor {
     }
   }
 
-  //TODO: Methods documentation should not refer to other methods even if in their final usage they actually use their outputs (param text)
   /**
     * Method that will iterate through a list of given keywords and will try to obtain a value for that keyword
     *
-    * @param text        - Text from the PDF extracted from readPDF method
+    * @param text        - Text in which to look for values for the specified keywords
     * @param keywords    - List containing all the keywords we want to find values for
     * @param clientRegEx - Optional parameter - If the client already has a predefined Regular Expression for a given key
     *                    use that regular expression instead of ours
@@ -85,12 +84,11 @@ object Extractor {
     }
   }
 
-  //TODO: Methods documentation should not refer to other methods even if in their final usage they actually use their outputs (param text)
   /**
-    * Method that operates like getAllMatchedValues but instead returns only the first element it finds for a given
+    * Method that will iterate through a list of given keywords and will try to obtain only the first value it finds for a given
     * keyword, representing a single JSON object
     *
-    * @param text        - Text from the PDF extracted from readPDF method
+    * @param text        - Text in which to look for values for the specified keywords
     * @param keywords    - List containing all the keywords we want to find values for
     * @param clientRegEx - Optional parameter - If the client already has a predefined Regular Expression for a given key
     * @throws IllegalArgumentException If the keywords list is empty
@@ -102,7 +100,7 @@ object Extractor {
     //TODO: example of a way to avoid using too many java-like ifs.
     text match {
       case Some(_) =>
-        getAllMatchedValues(text, keywords, clientRegEx).map{ case (keyword, value) =>
+        getAllMatchedValues(text, keywords, clientRegEx).map { case (keyword, value) =>
           value.headOption match {
             case Some(entry) => (keyword, List(entry))
             case None => (keyword, List())
@@ -113,14 +111,14 @@ object Extractor {
   }
 
   /**
-    * Method that will return a List of Matched Pairs. This method operates as getSingleMatcheValue, but instead
-    * of returning just one object, returns a list containing all of them
+    * Method that will iterate through a list of given keywords and will try to obtain a list containing
+    * sub-lists that have all keywords and only one value for each of them (representing a single JSON object for each of the sub-lists)
     *
-    * @param text        - Text from the PDF extracted from readPDF method
+    * @param text        - Text in which to look for values for the specified keywords
     * @param keywords    - List containing all the keywords we want to find values for
     * @param clientRegEx - Optional parameter - If the client already has a predefined Regular Expression for a given key
     * @throws IllegalArgumentException If the keywords list is empty
-    * @return A List containing sublists of pairs of keywords with single matched values
+    * @return A List containing sub-lists of pairs of keywords with single matched values
     */
   @throws[IllegalArgumentException]
   def getAllObjects(text: Option[String], keywords: List[(Keyword, POSTag.Value)], clientRegEx: Map[Keyword, Regex] = Map()): List[MatchedPair] = {
@@ -148,7 +146,7 @@ object Extractor {
   /**
     * Method that encapsulates the entire process of finding values for the given keywords list and converting the MatchedPair type to a JSON Object
     *
-    * @param text        - Text from the PDF extracted from readPDF method
+    * @param text        - Text in which to look for values for the specified keywords
     * @param keywords    - List containing all the keywords we want to find values for
     * @param clientRegEx - Optional parameter - If the client already has a predefined Regular Expression for a given key
     * @throws IllegalArgumentException If the keywords list is empty
@@ -212,6 +210,19 @@ object Extractor {
   }
 
   /**
+    * Method that gets all keywords and respective values from know form and returns a JSON string
+    *
+    * @param text - Text in which to look for key-value pairs
+    * @return - A JSON String containing all the information in the text passed by arguments
+    */
+  def getJSONFromForm(text: Option[String]): String = {
+    val textContent = text.getOrElse("")
+    val formRegex = "(.+):\\s+(.+)".r
+    val form = formRegex.findAllIn(textContent).matchData.map(l => (l.group(1), List(l.group(2)))).toList
+    makeJSONString(form)
+  }
+
+  /**
     * Method that will remove all the new line characters from the list of values obtain from a keyword
     *
     * @param matchedValues - List of pairs of Keyword and the values obtained for that keyword
@@ -222,19 +233,6 @@ object Extractor {
       val setOfValues = pair._2
       (pair._1, setOfValues.map(_.replaceAll("[\\r\\n]", "").trim)) //remove all new line characters and trim all elements
     })
-  }
-
-  /**
-    * Method that gets all keywords and respective values from know form and returns a JSON string
-    *
-    * @param text - Text from the PDF extracted from readPDF method
-    * @return - A JSON String containing all the information in the text passed by arguments
-    */
-  def getJSONFromForm(text: Option[String]): String = {
-    val textContent = text.getOrElse("")
-    val formRegex = "(.+):\\s+(.+)".r
-    val form = formRegex.findAllIn(textContent).matchData.map(l => (l.group(1), List(l.group(2)))).toList
-    makeJSONString(form)
   }
 
   /**
