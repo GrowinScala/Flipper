@@ -135,6 +135,7 @@ object Extractor {
         else List()
       }
 //      val (keywordList,_) = keywords
+      //TODO take of keyword._1
       mappedValues.zipWithIndex.map{case(key,values) => (keywords(values % keywords.length)._1, key)}.toList.grouped(keywords.size).toList
     }
   }
