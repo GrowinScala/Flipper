@@ -14,8 +14,10 @@ class ImageProcessingSuite extends FunSuite {
 
   private def cleanImageDir(){
     val dir = new File("./target/images")
-    val files = dir.listFiles.filter(_.isFile).toList
-    files.foreach(_.delete)
+    if(dir.exists) {
+      val files = dir.listFiles.filter(_.isFile).toList
+      files.foreach(_.delete)
+    }
   }
 
   /**
