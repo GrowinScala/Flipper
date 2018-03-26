@@ -6,6 +6,7 @@ import org.json4s._
 import org.json4s.native.JsonMethods._
 import scalatags.Text.all._
 import scala.io.Source
+import FileHandler._
 
 /**
   * Singleton object that implements the functions regarding the pdf file generation
@@ -104,12 +105,12 @@ object Generator {
     * @return An Option wrapping the URI of the created HTML file. Returns None in case of exception when parsing the JSON String
     */
   private def writeHTML(json: String, cssFile: File): Option[String] = {
-    try {
-      val bufferedSource = Source.fromFile(cssFile)
-      val cssStr = bufferedSource.getLines.mkString
-      createHtml(json, cssStr)
-    } catch {
-      case e: Exception => e.printStackTrace(); None
+    val bufferedSourceOption = loadCSSFile(cssFile)
+    bufferedSourceOption match {
+      case Some(bufferedSource) =>
+        val cssStr = bufferedSource.getLines.mkString
+        createHtml(json, cssStr)
+      case _ => None
     }
   }
 

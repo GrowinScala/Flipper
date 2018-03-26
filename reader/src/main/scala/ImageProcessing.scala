@@ -22,8 +22,9 @@ object ImageProcessing {
     */
   def readImageText(file: File): Option[String] = {
     val imageOption = loadImage(file) //Create Scrimage Image from a file input stream
-    imageOption match {
 
+    imageOption match {
+        
       case Some(image) =>
         val resized = image.scaleToWidth((image.width * 2.0).toInt) //scale the image to be 100% wider
       val instance = new Tesseract() //Initialize Tesseract
