@@ -21,16 +21,17 @@ object ImageProcessing {
     * @return an Option wrapping a String containing the images text. Returns None in case of exception
     */
   def readImageText(file: File): Option[String] = {
-    val image = Image.fromStream(new FileInputStream(file)) //Create Scrimage Image from a file input stream
-    val resized = image.scaleToWidth((image.width * 2.0).toInt) //scale the image to be 100% wider
-    val instance = new Tesseract() //Initialize Tesseract
-    //    val hist = computeHistogram(image)
-    //    val threshold =  (hist.foldLeft(0.0)(_ + _) / hist.length).toInt
-    //    println(threshold)
-    val filterBW = ThresholdFilter(150) //Filter the image to black and white
-    val dir = new File("./target/tempImages")
-    if (!dir.exists) dir.mkdir
     try {
+      val image = Image.fromStream(new FileInputStream(file)) //Create Scrimage Image from a file input stream
+      val resized = image.scaleToWidth((image.width * 2.0).toInt) //scale the image to be 100% wider
+      val instance = new Tesseract() //Initialize Tesseract
+      //    val hist = computeHistogram(image)
+      //    val threshold =  (hist.foldLeft(0.0)(_ + _) / hist.length).toInt
+      //    println(threshold)
+      val filterBW = ThresholdFilter(150) //Filter the image to black and white
+      val dir = new File("./target/tempImages")
+      if (!dir.exists) dir.mkdir
+
       //Obtain the processed image file
       val resizedFile = resized.filter(filterBW).output(new File("./target/tempImages/temp_" + System.nanoTime() + ".png"))(PngWriter.MaxCompression)
       val extractedText = Option(instance.doOCR(resizedFile)) //Apply the OCR to the processed image
@@ -108,7 +109,7 @@ object ImageProcessing {
     }
   }
 
-//  /**
+  //  /**
   //    * Method that calculates the luminance of a Pixel
   //    *
   //    * @param rgb - color in rgb of a pixel
