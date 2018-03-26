@@ -10,13 +10,14 @@ import scala.io.Source
 import SpellChecker._
 
 /**
-  * Singleton object that implements all the functionalities regarding the extraction of information from a PDF document
+  * Singleton object that implements all the functionality regarding the extraction of information from a PDF document
   */
 object Extractor {
 
   type Keyword = String
   type MatchedPair = List[(Keyword, List[String])]
 
+  //TODO: Yep. I'd probably get rid of the "filePath" and would use an input of the "java.io.File". Allows you to get rid of "file-not-found" errors which might be caused by the user etc.
   /**
     * Method that given a file path (maybe change to a real file) will load that PDF file and read the text from it
     *
@@ -24,9 +25,11 @@ object Extractor {
     * @return An Option wrapping a String containing all the text found in the document. Returns None in case of Exception
     */
   def readPDF(filePath: String, readImages: Boolean = true): Option[String] = {
+    //TODO: Try catch is a bit scava. But, considering you use multiple external libraries made in java it is an acceptable safety measure. Can you confirm that case "tr" happens? In either case get the file handling done somewhere else and get rid of the "try-catch" in the "logical" implementation.
     try {
-      val pdf = PDDocument.load(new File(filePath))
-      val document = new PDFTextStripper
+      //TODO: It's not 100% mandatory but using type annotations especially where types are not obvious or come from external classes helps
+      val pdf: PDDocument = PDDocument.load(new File(filePath))
+      val document: PDFTextStripper = new PDFTextStripper
 
       val str = Normalizer.normalize(document.getText(pdf), Normalizer.Form.NFD)
         .replaceAll("[\\p{InCombiningDiacriticalMarks}]", "")
@@ -48,6 +51,7 @@ object Extractor {
     }
   }
 
+  //TODO: Methods documentation should not refer to other methods even if in their final usage they actually use their outputs (param text)
   /**
     * Method that will iterate through a list of given keywords and will try to obtain a value for that keyword
     *
@@ -81,6 +85,7 @@ object Extractor {
     }
   }
 
+  //TODO: Methods documentation should not refer to other methods even if in their final usage they actually use their outputs (param text)
   /**
     * Method that operates like getAllMatchedValues but instead returns only the first element it finds for a given
     * keyword, representing a single JSON object
@@ -94,9 +99,17 @@ object Extractor {
   @throws[IllegalArgumentException]
   def getSingleMatchedValue(text: Option[String], keywords: List[(Keyword, POSTag.Value)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
     require(keywords.nonEmpty, "The list of keywords should not be empty")
-    val textContent = text.getOrElse("")
-    if (textContent.isEmpty) List()
-    else getAllMatchedValues(text, keywords, clientRegEx).map(pair => if (pair._2.nonEmpty) (pair._1, List(pair._2.head)) else (pair._1, List()))
+    //TODO: example of a way to avoid using too many java-like ifs.
+    text match {
+      case Some(_) =>
+        getAllMatchedValues(text, keywords, clientRegEx).map{ case (keyword, value) =>
+          value.headOption match {
+            case Some(entry) => (keyword, List(entry))
+            case None => (keyword, List())
+          }
+        }
+      case _ => List()
+    }
   }
 
   /**
