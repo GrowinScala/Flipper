@@ -1,3 +1,5 @@
+package utils
+
 import java.io.{File, FileInputStream}
 
 import opennlp.tools.langdetect.{LanguageDetectorME, LanguageDetectorModel}

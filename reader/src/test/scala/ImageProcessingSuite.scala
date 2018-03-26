@@ -2,7 +2,7 @@ import java.io.File
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
 import org.scalatest.junit.JUnitRunner
-import ImageProcessing._
+import utils.ImageProcessing._
 import org.apache.pdfbox.pdmodel.PDDocument
 
 //noinspection ComparingLength

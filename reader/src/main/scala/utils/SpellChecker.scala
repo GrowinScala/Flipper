@@ -1,10 +1,12 @@
+package utils
+
 import org.languagetool.JLanguageTool
-import org.languagetool.language.BritishEnglish
-import org.languagetool.language.PortugalPortuguese
-import collection.JavaConverters._
-import OpenNLP.detectLanguage
+import org.languagetool.language.{BritishEnglish, PortugalPortuguese}
 import org.languagetool.rules.RuleMatch
+import utils.OpenNLP.detectLanguage
+
 import scala.annotation.tailrec
+import scala.collection.JavaConverters._
 
 /**
   * Singleton object that handles all the operations regarding spell checking

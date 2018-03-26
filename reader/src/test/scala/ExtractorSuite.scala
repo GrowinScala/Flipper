@@ -4,7 +4,8 @@ import org.junit.runner.RunWith
 import org.scalatest.FunSuite
 import org.scalatest.Matchers._
 import org.scalatest.junit.JUnitRunner
-import Extractor._
+import Extraction.Extractor._
+import utils.POSTag
 
 @RunWith(classOf[JUnitRunner])
 class ExtractorSuite extends FunSuite {

@@ -1,6 +1,8 @@
-import java.io.File
-import com.sksamuel.scrimage.Image
+package Extraction
 
+import java.io.File
+
+import com.sksamuel.scrimage.Image
 import org.apache.pdfbox.pdmodel.PDDocument
 
 /**
@@ -34,6 +36,17 @@ object FileHandler {
       Option(Image.fromFile(file))
     } catch {
       case e: Exception => e.printStackTrace(); None
+    }
+  }
+
+  /**
+    * Method that deletes all files from the image folder
+    */
+   private[Extraction] def cleanImageDir() {
+    val dir = new File("./target/images")
+    if (dir.exists) {
+      val files = dir.listFiles.filter(_.isFile).toList
+      files.foreach(_.delete)
     }
   }
 

@@ -1,3 +1,5 @@
+package utils
+
 /**
   * Enumeration for the standard POS tags which translate to both Portuguese and English
   */

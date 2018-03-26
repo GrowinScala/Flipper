@@ -1,13 +1,16 @@
+package Extraction
+
 import java.io.File
 import java.text.Normalizer
+import utils.ImageProcessing._
+import utils.SpellChecker._
+import utils.OpenNLP._
+import utils.POSTag
 import org.apache.pdfbox.text.PDFTextStripper
 import scala.util.matching.Regex
-import OpenNLP._
 import FileHandler._
-import ImageProcessing._
 import scala.annotation.tailrec
 import scala.io.Source
-import SpellChecker._
 
 /**
   * Singleton object that implements all the functionality regarding the extraction of information from a PDF document
@@ -63,17 +66,17 @@ object Extractor {
       case Some("") => List()
       case Some(t) =>
         val knownRegEx: Map[String, Regex] = importRegExFile(t) //load correct RegEx map
-        val matched:MatchedPair = keywords.map{case(key,tag) =>
-          //If the client sent a custom RegEx to use on this key, use it
-          if (clientRegEx.contains(key)) //&& clientRegEx != null ??
-            (key, clientRegEx(key).findAllIn(t).matchData.map(_.group(1)).toList.distinct)
+      val matched: MatchedPair = keywords.map { case (key, tag) =>
+        //If the client sent a custom RegEx to use on this key, use it
+        if (clientRegEx.contains(key)) //&& clientRegEx != null ??
+          (key, clientRegEx(key).findAllIn(t).matchData.map(_.group(1)).toList.distinct)
 
-          //if we already know a good RegEx for this keyword, use it
-          else if (knownRegEx.contains(key))
-            (key, knownRegEx(key).findAllIn(t).matchData.map(_.group(1)).toList.distinct)
+        //if we already know a good RegEx for this keyword, use it
+        else if (knownRegEx.contains(key))
+          (key, knownRegEx(key).findAllIn(t).matchData.map(_.group(1)).toList.distinct)
 
-          else findKeywordInText(key, tag, t) //to be changed, here we need to manually search for the keywords in the text
-        }
+        else findKeywordInText(key, tag, t) //to be changed, here we need to manually search for the keywords in the text
+      }
         filterNewLines(matched)
       case None => List()
       case _ => ??? //TODO throw NullPointerException??
@@ -130,11 +133,11 @@ object Extractor {
           case (_, sizes: Int) => sizes
           case _ => 0
         } //Gets the size of the pair that has the most values
-        val mappedValues = for (i <- 0 to mostFound; (_, listMatched) <- matchedValues) yield {
-          if (listMatched.size > i) //Prevent array out of bounds exception
-            List(listMatched(i))
-          else List()
-        }
+      val mappedValues = for (i <- 0 to mostFound; (_, listMatched) <- matchedValues) yield {
+        if (listMatched.size > i) //Prevent array out of bounds exception
+          List(listMatched(i))
+        else List()
+      }
         val keywordList = keywords.map { case (key, _) => key }
         mappedValues.zipWithIndex.map { case (key, values) => (keywordList(values % keywords.length), key) }.toList.grouped(keywords.size).toList
       case None => List()
@@ -182,7 +185,7 @@ object Extractor {
     lazy val quote = "\""
 
     val pseudoJSON = listJSON.map { case (key, matchedList) =>
-      matchedList match{
+      matchedList match {
         case List(_) =>
           if (matchedList.size > 1) {
             val left = s"${quote + key + quote} : "
@@ -229,7 +232,7 @@ object Extractor {
     * @return The same list as passed by parameter but with no new line characters
     */
   private def filterNewLines(matchedValues: MatchedPair): MatchedPair = {
-    matchedValues.map{case(key,matchedList) =>
+    matchedValues.map { case (key, matchedList) =>
       val setOfValues = matchedList
       (key, setOfValues.map(_.replaceAll("[\\r\\n]", "").trim)) //remove all new line characters and trim all elements
     }
@@ -307,16 +310,5 @@ object Extractor {
       else end(a, n - 1)
 
     start(0)
-  }
-
-  /**
-    * Method that deletes all files from the image folder
-    */
-  private def cleanImageDir() {
-    val dir = new File("./target/images")
-    if (dir.exists) {
-      val files = dir.listFiles.filter(_.isFile).toList
-      files.foreach(_.delete)
-    }
   }
 }
