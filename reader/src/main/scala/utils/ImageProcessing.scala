@@ -9,6 +9,7 @@ import com.sksamuel.scrimage.nio.PngWriter
 import javax.imageio.ImageIO
 import net.sourceforge.tess4j.Tesseract
 import org.apache.pdfbox.cos.COSName
+import org.apache.pdfbox.pdmodel.{PDDocument, PDResources}
 import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject
 import org.apache.pdfbox.pdmodel.{PDDocument, PDResources}
 

@@ -60,7 +60,7 @@ object Extractor {
     * @return List containing pairs of Keywords and a List (non-repeating) of values found for that keyword
     */
   @throws[IllegalArgumentException]
-  def getAllMatchedValues(text: Option[String], keywords: List[(Keyword, POSTag.Value)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
+  def getAllMatchedValues(text: Option[String], keywords: List[(Keyword, POSTag.Value)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair= {
     require(keywords.nonEmpty, "The list of keywords should not be empty")
     text match {
       case Some("") => List()
@@ -79,7 +79,7 @@ object Extractor {
       }
         filterNewLines(matched)
       case None => List()
-      case _ => ??? //TODO throw NullPointerException??
+      case _ => throw new NullPointerException
     }
   }
 
@@ -98,10 +98,10 @@ object Extractor {
     require(keywords.nonEmpty, "The list of keywords should not be empty")
     text match {
       case Some(_) =>
-        getAllMatchedValues(text, keywords, clientRegEx).map { case (keyword, value) =>
-          value.headOption match {
-            case Some(entry) => (keyword, List(entry))
-            case None => (keyword, List())
+        getAllMatchedValues(text, keywords, clientRegEx).map { case (k, v) =>
+          v.headOption match {
+            case Some(entry) => (k, List(entry))
+            case None => (k, List())
           }
         }
       case _ => List()
@@ -141,7 +141,7 @@ object Extractor {
         val keywordList = keywords.map { case (key, _) => key }
         mappedValues.zipWithIndex.map { case (key, values) => (keywordList(values % keywords.length), key) }.toList.grouped(keywords.size).toList
       case None => List()
-      case _ => ??? //TODO throw nullPointerException?
+      case _ => throw new NullPointerException
     }
   }
 
@@ -310,5 +310,16 @@ object Extractor {
       else end(a, n - 1)
 
     start(0)
+  }
+
+  /**
+    * Method that deletes all files from the image folder
+    */
+  private def cleanImageDir() {
+    val dir = new File("./target/images")
+    if (dir.exists) {
+      val files = dir.listFiles.filter(_.isFile).toList
+      files.foreach(_.delete)
+    }
   }
 }
