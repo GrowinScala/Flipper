@@ -1,6 +1,5 @@
-import java.io.{File, FileNotFoundException}
+import java.io.File
 import java.text.Normalizer
-import org.apache.pdfbox.pdmodel.PDDocument
 import org.apache.pdfbox.text.PDFTextStripper
 import scala.util.matching.Regex
 import OpenNLP._
@@ -18,7 +17,6 @@ object Extractor {
   type Keyword = String
   type MatchedPair = List[(Keyword, List[String])]
 
-  //TODO: Yep. I'd probably get rid of the "filePath" and would use an input of the "java.io.File". Allows you to get rid of "file-not-found" errors which might be caused by the user etc.
   /**
     * Method that given a file path (maybe change to a real file) will load that PDF file and read the text from it
     *
@@ -171,8 +169,7 @@ object Extractor {
     */
   def makeJSONString(listJSON: MatchedPair, flag: String = "empty"): String = {
     def isAllDigits(x: String) = try {
-      x.toDouble
-      true
+      x.toDouble; true
     } catch {
       case e: Exception => false
     }

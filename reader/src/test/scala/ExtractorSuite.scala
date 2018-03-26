@@ -1,3 +1,5 @@
+import java.io.File
+
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
 import org.scalatest.Matchers._
@@ -7,22 +9,22 @@ import Extractor._
 @RunWith(classOf[JUnitRunner])
 class ExtractorSuite extends FunSuite {
 
-  val filepath: String = "./reader/resources/test.pdf"
-  val text: Option[String] = readPDF(filepath)
+  val file = new File("./reader/resources/test.pdf")
+  val text: Option[String] = readPDF(file)
 
   /**
     * Tests if reading an existing file produces a non empty string
     */
   test("Read existing file") {
-    val filepath = "./reader/resources/something.pdf" //change USER
-    assert(readPDF(filepath).nonEmpty)
+    val file = new File("./reader/resources/something.pdf") //change USER
+    assert(readPDF(file).nonEmpty)
   }
 
   /**
     * Tests if reading from a non existing file produces the expected result (null)
     */
   test("Read non existing file") {
-    val fp = "Not a valid URI"
+    val fp = new File("Not a valid URI")
     assert(readPDF(fp).isEmpty)
   }
 
