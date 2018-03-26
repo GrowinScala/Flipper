@@ -63,7 +63,7 @@ object Extractor {
     if (textContent.isEmpty) List()
     else {
       val knownRegEx: Map[String, Regex] = importRegExFile(textContent) //load correct RegEx map
-      val matched:MatchedPair = keywords.map{case(key,tag) => {
+      val matched:MatchedPair = keywords.map{case(key,tag) =>
 
         //If the client sent a custom RegEx to use on this key, use it
         if (clientRegEx.contains(key)) //&& clientRegEx != null ??
@@ -74,7 +74,7 @@ object Extractor {
           (key, knownRegEx(key).findAllIn(textContent).matchData.map(_.group(1)).toList.distinct)
 
         else findKeywordInText(key, tag, textContent) //to be changed, here we need to manually search for the keywords in the text
-      }}
+      }
 
       filterNewLines(matched)
     }
@@ -134,9 +134,8 @@ object Extractor {
           List(listMatched(i))
         else List()
       }
-//      val (keywordList,_) = keywords
-      //TODO take of keyword._1
-      mappedValues.zipWithIndex.map{case(key,values) => (keywords(values % keywords.length)._1, key)}.toList.grouped(keywords.size).toList
+      val keywordList = keywords.map{case(key,_)=>key}
+      mappedValues.zipWithIndex.map{case(key,values) => (keywordList(values % keywords.length), key)}.toList.grouped(keywords.size).toList
     }
   }
 
@@ -226,10 +225,10 @@ object Extractor {
     * @return The same list as passed by parameter but with no new line characters
     */
   private def filterNewLines(matchedValues: MatchedPair): MatchedPair = {
-    matchedValues.map{case(key,matchedList) => {
+    matchedValues.map{case(key,matchedList) =>
       val setOfValues = matchedList
       (key, setOfValues.map(_.replaceAll("[\\r\\n]", "").trim)) //remove all new line characters and trim all elements
-    }}
+    }
   }
 
   /**
