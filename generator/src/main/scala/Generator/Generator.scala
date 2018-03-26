@@ -6,6 +6,7 @@ import com.itextpdf.text.Document
 import com.itextpdf.text.pdf.PdfWriter
 import com.itextpdf.tool.xml.XMLWorkerHelper
 import org.json4s._
+import FileHandler._
 import org.json4s.native.JsonMethods._
 import scalatags.Text.all._
 
