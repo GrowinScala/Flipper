@@ -31,28 +31,11 @@ class ImageProcessingSuite extends FunSuite {
   }
 
   /**
-    * Tests that sending a null file to extractImgs will result in a NullPointerException
-    */
-  test("extractImgs returns an empty list with a null file") {
-    assertThrows[NullPointerException] {
-      extractImgs(null)
-      cleanImageDir()
-    }
-  }
-
-  /**
     * Tests that sending a file with, for example, two images, will return a list of files with size two
     */
   test("extractImgs returns correct number of images") {
     assert(extractImgs(pdf).getOrElse(List()).size == 2)
     cleanImageDir()
-  }
-
-  /**
-    * Tests that sending a null file to readImageText will result in a NullPointerException
-    */
-  test("readImageText with a null file") {
-    assert(readImageText(null).isEmpty)
   }
 
   /**

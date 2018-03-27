@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5115832d-4669-4625-b348-c310af38a585" name="Default" comment="">
+    <list default="true" id="5115832d-4669-4625-b348-c310af38a585" name="Default" comment="Refactored ConverterSuite.scala to remove file handling tests (now on reader/FileHandlerSuite.scala)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/converter/src/test/scala/ConverterSuite.scala" afterPath="$PROJECT_DIR$/converter/src/test/scala/ConverterSuite.scala" />
-      <change beforePath="$PROJECT_DIR$/reader/src/test/scala/ExtractorSuite.scala" afterPath="$PROJECT_DIR$/reader/src/test/scala/ExtractorSuite.scala" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/test-classes/ExtractorSuite.class" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/test-classes/ExtractorSuite.class" />
+      <change beforePath="$PROJECT_DIR$/reader/src/test/scala/ImageProcessingSuite.scala" afterPath="$PROJECT_DIR$/reader/src/test/scala/ImageProcessingSuite.scala" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -43,11 +41,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConverterSuite.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ConverterSuite.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/converter/src/test/scala/ConverterSuite.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="294">
               <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageProcessingSuite.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/reader/src/test/scala/ImageProcessingSuite.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="535">
+              <caret line="38" column="3" lean-forward="false" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -122,6 +130,7 @@
         <option value="$PROJECT_DIR$/reader/src/main/scala/utils/ImageProcessing.scala" />
         <option value="$PROJECT_DIR$/reader/src/test/scala/ExtractorSuite.scala" />
         <option value="$PROJECT_DIR$/converter/src/test/scala/ConverterSuite.scala" />
+        <option value="$PROJECT_DIR$/reader/src/test/scala/ImageProcessingSuite.scala" />
       </list>
     </option>
   </component>
@@ -579,7 +588,14 @@
       <option name="project" value="LOCAL" />
       <updated>1522139766496</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Refactored ConverterSuite.scala to remove file handling tests (now on reader/FileHandlerSuite.scala)">
+      <created>1522140072780</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1522140072780</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -668,7 +684,8 @@
     <MESSAGE value="Merged with margarida" />
     <MESSAGE value="Implemented FileHandlerSuite.scala" />
     <MESSAGE value="Refactored ExtractorSuite.scala to remove NullPointerException tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored ExtractorSuite.scala to remove NullPointerException tests" />
+    <MESSAGE value="Refactored ConverterSuite.scala to remove file handling tests (now on reader/FileHandlerSuite.scala)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored ConverterSuite.scala to remove file handling tests (now on reader/FileHandlerSuite.scala)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -793,14 +810,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/test/scala/ImageProcessingSuite.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="23" column="94" lean-forward="true" selection-start-line="23" selection-start-column="94" selection-end-line="23" selection-end-column="94" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.12.4-sources.jar!/scala/collection/TraversableOnce.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -908,6 +917,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/test/scala/ImageProcessingSuite.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="38" column="3" lean-forward="false" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="3" />
           <folding />
         </state>
       </provider>
