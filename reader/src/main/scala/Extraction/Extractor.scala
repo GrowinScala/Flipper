@@ -126,7 +126,7 @@ object Extractor {
   def getAllObjects(text: Option[String], keywords: List[(Keyword, POSTag.Value)], clientRegEx: Map[Keyword, Regex] = Map()): List[MatchedPair] = {
     require(keywords.nonEmpty, "The list of keywords should not be empty")
     text match {
-      case Some(_) => //TODO SHOULD THIS METHOD BE PRIVATE ??? IF NOT THEN WE NEED TO CHECK ""
+      case Some(t) => //TODO IF NOT THEN WE NEED TO CHECK ""
         def getListSizes(matchedValues: MatchedPair): List[(Keyword, Int)] = {
           for ((key, listMatched) <- matchedValues) yield (key, listMatched.size)
         }
