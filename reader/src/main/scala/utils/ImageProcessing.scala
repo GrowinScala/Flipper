@@ -38,7 +38,7 @@ import org.apache.pdfbox.pdmodel.{PDDocument, PDResources}
 
         //Obtain the processed image file
         val resizedFile = resized.filter(filterBW).output(new File("./target/tempImages/temp_" + System.nanoTime() + ".png"))(PngWriter.MaxCompression)
-        val extractedText = Option(instance.doOCR(resizedFile)) //Apply the OCR to the processed image
+        val extractedText = Some(instance.doOCR(resizedFile)) //Apply the OCR to the processed image
         cleanImageDir()
         extractedText
 
@@ -98,7 +98,7 @@ import org.apache.pdfbox.pdmodel.{PDDocument, PDResources}
     }
 
     val mutableFilesList: List[File] = iteratePages(document.getNumberOfPages - 1)
-    Option(mutableFilesList)
+    Some(mutableFilesList)
   }
 
   /**

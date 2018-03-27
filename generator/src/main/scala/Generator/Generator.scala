@@ -176,7 +176,7 @@ object Generator {
         val pw = new PrintWriter(new File(filePath)) //prints the HTML code to the html file
         pw.write(htmlString)
         pw.close()
-        Option(filePath)
+        Some(filePath)
       } else None
     } catch {
       case e: Exception => e.printStackTrace(); None
