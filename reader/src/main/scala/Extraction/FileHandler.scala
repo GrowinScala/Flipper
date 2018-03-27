@@ -18,7 +18,7 @@ object FileHandler {
     */
   def loadPDF(file: File): Option[PDDocument] = {
     try {
-      Option(PDDocument.load(file))
+      Some(PDDocument.load(file))
     } catch {
       case e: Exception => e.printStackTrace(); None
     }
@@ -32,7 +32,7 @@ object FileHandler {
     */
   def loadImage(file: File): Option[Image] = {
     try {
-      Option(Image.fromFile(file))
+      Some(Image.fromFile(file))
     } catch {
       case e: Exception => e.printStackTrace(); None
     }
