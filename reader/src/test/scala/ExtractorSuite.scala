@@ -126,7 +126,6 @@ class ExtractorSuite extends FunSuite {
     assert(makeJSONString(List()) == "{}")
   }
 
-
   /**
     * Tests if the matched values with the given keywords generates the correct JSON strings for all the expected objects
     */
