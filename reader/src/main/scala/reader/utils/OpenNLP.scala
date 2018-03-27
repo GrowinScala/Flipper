@@ -1,4 +1,4 @@
-package utils
+package reader.utils
 
 import java.io.{File, FileInputStream}
 
@@ -9,7 +9,7 @@ import opennlp.tools.tokenize.WhitespaceTokenizer
 /**
   * Singleton Object that implements all the Open NLP functionalities
   */
-object OpenNLP {
+private[reader] object OpenNLP {
 
   /**
     * Method that receives a text and tokenizes it by whitespaces

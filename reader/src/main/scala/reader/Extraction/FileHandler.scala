@@ -1,4 +1,4 @@
-package Extraction
+package reader.Extraction
 
 import java.io.File
 import com.sksamuel.scrimage.Image
@@ -7,7 +7,7 @@ import org.apache.pdfbox.pdmodel.PDDocument
 /**
   * Singleton object that handles all operations regarding file input
   */
-object FileHandler {
+private[reader] object FileHandler {
 
 
   /**
@@ -41,7 +41,7 @@ object FileHandler {
   /**
     * Method that deletes all files from the image folder
     */
-   private[Extraction] def cleanImageDir() {
+  private[Extraction] def cleanImageDir() {
     val dir = new File("./target/images")
     if (dir.exists) {
       val files = dir.listFiles.filter(_.isFile).toList

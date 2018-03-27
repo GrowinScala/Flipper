@@ -1,8 +1,10 @@
+package reader.utils
+
 import java.io.File
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
 import org.scalatest.junit.JUnitRunner
-import utils.ImageProcessing._
+import reader.utils.ImageProcessing._
 import org.apache.pdfbox.pdmodel.PDDocument
 
 //noinspection ComparingLength
