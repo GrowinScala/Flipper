@@ -1,10 +1,16 @@
 package parser.extraction;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
+import scala.Array;
 import scala.Option;
 import parser.utils.POSTag;
 import scala.Some;
+import scala.Tuple2;
+import scala.collection.mutable.WrappedArray;
+import scala.collection.mutable.WrappedArray$;
+import scala.util.matching.Regex;
 
 import java.io.File;
 import java.util.List;
@@ -43,16 +49,29 @@ public class ExtractorJava {
 
 
     public List<Map<String, List<String>>> getAllMatchedValues(String text,
-                                                               List<Map<String, POSTag>> keywords) {
+                                                               Map<String, POSTag> keywords) {
         return getAllMatchedValues(text, keywords, new HashMap<>());
     }
 
     public List<Map<String, List<String>>> getAllMatchedValues(String text,
-                                                               List<Map<String, POSTag>> keywords,
+                                                               Map<String, POSTag> keywords,
                                                                Map<String, String> clientRegEx) {
 
         Option<String> textOpt = text != null ? Some.apply(text) : Option.apply(null);
+        List<Tuple2<String, POSTag>> scalaKeywords = new ArrayList<>();
+        List<Tuple2<String, Regex>> scalaClientRegEx = new ArrayList<>();
 
+        for (Map.Entry<String, POSTag> entry : keywords.entrySet()) {
+            scalaKeywords.add(new Tuple2<>(entry.getKey(), entry.getValue()));
+        }
+
+        for (Map.Entry<String, String> entry : clientRegEx.entrySet()) {
+            Regex r = new Regex(entry.getValue(), null); //TODO probably not null
+
+            scalaClientRegEx.add(new Tuple2<>(entry.getKey(), r));
+        }
+        //TODO FIX THIS
+//        return Extractor.getAllMatchedValues(textOpt,scalaKeywords,scalaClientRegEx);
 
         return null;
     }

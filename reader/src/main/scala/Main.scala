@@ -7,6 +7,8 @@ object Main {
   def main(args: Array[String]): Unit = {
     val filepath = new File("./reader/resources/MegaTester.pdf")
     val text = readPDF(filepath)
+
+
     //    getJSONObjects(text, List(("name", POSTag.PN), ("weight", POSTag.NUM)), "null").foreach(println)
     //        val objs = getAllObjects(text, List(("name", POSTag.PN), ("weight", POSTag.NUM)))
     //    println(objs)
