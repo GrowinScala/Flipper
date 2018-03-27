@@ -59,28 +59,29 @@ object Extractor {
     * @param clientRegEx - Optional parameter - If the client already has a predefined Regular Expression for a given key
     *                    use that regular expression instead of ours
     * @throws IllegalArgumentException If the keywords list is empty
-    * @throws NullPointerException     - If the text parameter was passed as null
     * @return List containing pairs of Keywords and a List (non-repeating) of values found for that keyword
     */
   @throws[IllegalArgumentException]
-  @throws[NullPointerException]
   def getAllMatchedValues(text: Option[String], keywords: List[(Keyword, POSTag.Value)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
     require(keywords.nonEmpty, "The list of keywords should not be empty")
     text match {
       case Some(t) =>
-        val knownRegEx: Map[String, Regex] = importRegExFile(t) //load correct RegEx map
-      val matched: MatchedPair = keywords.map { case (key, tag) =>
-        //If the client sent a custom RegEx to use on this key, use it
-        if (clientRegEx.contains(key)) //&& clientRegEx != null ??
-          (key, clientRegEx(key).findAllIn(t).matchData.map(_.group(1)).toList.distinct)
+        if(t.nonEmpty) {
+          val knownRegEx: Map[String, Regex] = importRegExFile(t) //load correct RegEx map
+          val matched: MatchedPair = keywords.map { case (key, tag) =>
+            //If the client sent a custom RegEx to use on this key, use it
+            if (clientRegEx.contains(key)) //&& clientRegEx != null ??
+              (key, clientRegEx(key).findAllIn(t).matchData.map(_.group(1)).toList.distinct)
 
-        //if we already know a good RegEx for this keyword, use it
-        else if (knownRegEx.contains(key))
-          (key, knownRegEx(key).findAllIn(t).matchData.map(_.group(1)).toList.distinct)
+            //if we already know a good RegEx for this keyword, use it
+            else if (knownRegEx.contains(key))
+              (key, knownRegEx(key).findAllIn(t).matchData.map(_.group(1)).toList.distinct)
 
-        else findKeywordInText(key, tag, t) //to be changed, here we need to manually search for the keywords in the text
-      }
-        filterNewLines(matched)
+            else findKeywordInText(key, tag, t) //to be changed, here we need to manually search for the keywords in the text
+          }
+          filterNewLines(matched)
+        }
+        else{ List() }
       case None => List()
     }
   }
@@ -118,30 +119,30 @@ object Extractor {
     * @param keywords    - List containing all the keywords we want to find values for
     * @param clientRegEx - Optional parameter - If the client already has a predefined Regular Expression for a given key
     * @throws IllegalArgumentException If the keywords list is empty
-    * @throws NullPointerException     If the text parameter was passed as null
     * @return A List containing sub-lists of pairs of keywords with single matched values
     */
   @throws[IllegalArgumentException]
-  @throws[NullPointerException]
   def getAllObjects(text: Option[String], keywords: List[(Keyword, POSTag.Value)], clientRegEx: Map[Keyword, Regex] = Map()): List[MatchedPair] = {
     require(keywords.nonEmpty, "The list of keywords should not be empty")
     text match {
-      case Some(t) => //TODO IF NOT THEN WE NEED TO CHECK ""
+      case Some(t) =>
         def getListSizes(matchedValues: MatchedPair): List[(Keyword, Int)] = {
           for ((key, listMatched) <- matchedValues) yield (key, listMatched.size)
         }
-
-        val matchedValues = getAllMatchedValues(text, keywords, clientRegEx)
-        val (_, mostFound) = getListSizes(matchedValues).maxBy {
-          case (_, sizes: Int) => sizes //Alterei aqui
-        } //Gets the size of the pair that has the most values
-      val mappedValues = for (i <- 0 to mostFound; (_, listMatched) <- matchedValues) yield {
-        if (listMatched.size > i) //Prevent array out of bounds exception
-          List(listMatched(i))
-        else List()
-      }
-        val keywordList = keywords.map { case (key, _) => key }
-        mappedValues.zipWithIndex.map { case (key, values) => (keywordList(values % keywords.length), key) }.toList.grouped(keywords.size).toList
+        if (t.nonEmpty) {
+          val matchedValues = getAllMatchedValues(text, keywords, clientRegEx)
+          val (_, mostFound) = getListSizes(matchedValues).maxBy {
+            case (_, sizes: Int) => sizes
+          } //Gets the size of the pair that has the most values
+          val mappedValues = for (i <- 0 to mostFound; (_, listMatched) <- matchedValues) yield {
+            if (listMatched.size > i) //Prevent array out of bounds exception
+              List(listMatched(i))
+            else List()
+          }
+          val keywordList = keywords.map { case (key, _) => key }
+          mappedValues.zipWithIndex.map { case (key, values) => (keywordList(values % keywords.length), key) }.toList.grouped(keywords.size).toList
+        }
+        else{ List() }
       case None => List()
     }
   }
