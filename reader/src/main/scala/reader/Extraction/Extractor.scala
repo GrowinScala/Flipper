@@ -1,11 +1,11 @@
-package Extraction
+package reader.Extraction
 
 import java.io.File
 import java.text.Normalizer
-import utils.ImageProcessing._
-import utils.SpellChecker._
-import utils.OpenNLP._
-import utils.POSTag
+import reader.utils.ImageProcessing._
+import reader.utils.SpellChecker._
+import reader.utils.OpenNLP._
+import reader.utils.POSTag
 import org.apache.pdfbox.text.PDFTextStripper
 import scala.util.matching.Regex
 import FileHandler._

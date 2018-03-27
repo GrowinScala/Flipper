@@ -1,9 +1,9 @@
-package utils
+package reader.utils
 
 import java.io.{File, IOException}
 import java.util.Iterator
 
-import Extraction.FileHandler._
+import reader.Extraction.FileHandler._
 import com.sksamuel.scrimage.filter._
 import com.sksamuel.scrimage.nio.PngWriter
 import javax.imageio.ImageIO
@@ -16,7 +16,7 @@ import org.apache.pdfbox.pdmodel.{PDDocument, PDResources}
 /**
   * Singleton Object that implements all the image processing functionalities
   */
- object ImageProcessing {
+ private[reader] object ImageProcessing {
 
   /**
     * Method that upon receiving a text file will try to read the text from it using Tess4J tesseract library
