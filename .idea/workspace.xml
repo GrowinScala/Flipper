@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5115832d-4669-4625-b348-c310af38a585" name="Default" comment="Refactor empty string">
+    <list default="true" id="5115832d-4669-4625-b348-c310af38a585" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/reader/src/main/scala/Extraction/Extractor.scala" afterPath="$PROJECT_DIR$/reader/src/main/scala/Extraction/Extractor.scala" />
+      <change beforePath="$PROJECT_DIR$/reader/src/test/scala/ExtractorSuite.scala" afterPath="$PROJECT_DIR$/reader/src/test/scala/ExtractorSuite.scala" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -31,10 +31,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Extractor.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Extractor.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/reader/src/main/scala/Extraction/Extractor.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
+            <state relative-caret-position="543">
               <caret line="137" column="77" lean-forward="true" selection-start-line="137" selection-start-column="77" selection-end-line="137" selection-end-column="77" />
               <folding>
                 <element signature="e#6706#7700#0" expanded="false" />
@@ -44,11 +44,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="ExtractorSuite.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/reader/src/test/scala/ExtractorSuite.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2099">
+              <caret line="136" column="39" lean-forward="true" selection-start-line="136" selection-start-column="39" selection-end-line="136" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="FileHandlerSuite.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/reader/src/test/scala/FileHandlerSuite.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="559">
-              <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+            <state relative-caret-position="120">
+              <caret line="28" column="42" lean-forward="true" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -140,13 +150,13 @@
         <option value="$PROJECT_DIR$/reader/src/test/scala/FileHandlerSuite.scala" />
         <option value="$PROJECT_DIR$/generator/src/main/scala/Generator/Generator.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/utils/ImageProcessing.scala" />
-        <option value="$PROJECT_DIR$/reader/src/test/scala/ExtractorSuite.scala" />
         <option value="$PROJECT_DIR$/converter/src/test/scala/ConverterSuite.scala" />
         <option value="$PROJECT_DIR$/reader/src/test/scala/ImageProcessingSuite.scala" />
         <option value="$PROJECT_DIR$/reader/src/test/scala/OpenNLPSuite.scala" />
         <option value="$PROJECT_DIR$/generator/src/test/scala/GeneratorSuite.scala" />
         <option value="$PROJECT_DIR$/generator/src/test/scala/FileHandlerSuite.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/Extraction/Extractor.scala" />
+        <option value="$PROJECT_DIR$/reader/src/test/scala/ExtractorSuite.scala" />
       </list>
     </option>
   </component>
@@ -687,18 +697,22 @@
       <option name="project" value="LOCAL" />
       <updated>1522144845267</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Refactor empty string">
+      <created>1522145697756</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1522145697756</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ExtractorSuite - 2018.03.27 at 09h 34m 16s.xml">
-      <configuration name="ExtractorSuite" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ExtractorSuite - 2018.03.27 at 11h 13m 28s.xml">
       <configuration name="ExtractorSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FileHandlerSuite - 2018.03.26 at 16h 35m 18s.xml">
-      <configuration name="FileHandlerSuite" configurationId="JUnit" />
+    <history-entry file="ExtractorSuite - 2018.03.27 at 11h 23m 37s.xml">
+      <configuration name="ExtractorSuite" configurationId="JUnit" />
     </history-entry>
     <history-entry file="FileHandlerSuite - 2018.03.26 at 16h 41m 20s.xml">
       <configuration name="FileHandlerSuite" configurationId="JUnit" />
@@ -713,6 +727,9 @@
       <configuration name="FileHandlerSuite" configurationId="JUnit" />
     </history-entry>
     <history-entry file="FileHandlerSuite - 2018.03.27 at 09h 48m 38s.xml">
+      <configuration name="FileHandlerSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FileHandlerSuite - 2018.03.27 at 11h 20m 23s.xml">
       <configuration name="FileHandlerSuite" configurationId="JUnit" />
     </history-entry>
     <history-entry file="ImageProcessingSuite - 2018.03.26 at 16h 00m 37s.xml">
@@ -736,7 +753,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.49570355" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="sbt" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1194,14 +1211,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/test/scala/ExtractorSuite.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2360">
-          <caret line="124" column="46" lean-forward="true" selection-start-line="124" selection-start-column="46" selection-end-line="124" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/reader/src/main/scala/Main.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -1210,22 +1219,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/test/scala/FileHandlerSuite.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/reader/src/main/scala/Extraction/Extractor.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
+        <state relative-caret-position="543">
           <caret line="137" column="77" lean-forward="true" selection-start-line="137" selection-start-column="77" selection-end-line="137" selection-end-column="77" />
           <folding>
             <element signature="e#6706#7700#0" expanded="false" />
             <element signature="e#7704#9578#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/test/scala/FileHandlerSuite.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="28" column="42" lean-forward="true" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/test/scala/ExtractorSuite.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2099">
+          <caret line="136" column="39" lean-forward="true" selection-start-line="136" selection-start-column="39" selection-end-line="136" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>

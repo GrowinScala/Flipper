@@ -32,7 +32,7 @@ class ExtractorSuite extends FunSuite {
   }
 
   /**
-    * Tests that passing a null or empty text will return an empty list
+    * Tests that passing an empty text will return an empty list
     */
   test("Get all matched values with an empty String") {
     val emptyValues = getAllMatchedValues(Option(""), List(("name", POSTag.PN), ("age", POSTag.NUM)))
@@ -58,16 +58,16 @@ class ExtractorSuite extends FunSuite {
   }
 
   /**
-    * Tests that passing a empty or null text string to getSingleMatchedValue will return an empty list
+    * Tests that passing an empty text string to getSingleMatchedValue will return an empty list
     */
-  test("Get single value with an empty or null text string") {
+  test("Get single value with an empty text string") {
     val emptyText = getSingleMatchedValue(Option(""), List(("name", POSTag.PN), ("age", POSTag.NUM)))
     assert(emptyText.isEmpty)
   }
 
 
   /**
-    * Tests that passing a empty or null text string to getSingleMatchedValue will return an empty list
+    * Tests that passing an empty text string to getSingleMatchedValue will return an empty list
     */
   test("Get single value with an empty list") {
     assertThrows[IllegalArgumentException](
@@ -86,9 +86,9 @@ class ExtractorSuite extends FunSuite {
   }
 
   /**
-    * Tests that passing an empty or null text to getAllObjects will return an empty list
+    * Tests that passing an empty text to getAllObjects will return an empty list
     */
-  test("Get all objects with null or empty text") {
+  test("Get all objects with empty text") {
     val emptyObjs = getAllObjects(Option(""), List(("name", POSTag.PN)))
     assert(emptyObjs.isEmpty)
   }
@@ -97,7 +97,7 @@ class ExtractorSuite extends FunSuite {
   /**
     * Tests that passing an empty list to getAllObjects will result in a IllegalArgumentException
     */
-  test("Get all objects with null or empty list") {
+  test("Get all objects with empty list") {
     assertThrows[IllegalArgumentException] {
       getAllObjects(text, List())
     }
