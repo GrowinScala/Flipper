@@ -133,8 +133,7 @@ object Extractor {
 
         val matchedValues = getAllMatchedValues(text, keywords, clientRegEx)
         val (_, mostFound) = getListSizes(matchedValues).maxBy {
-          case (_, sizes: Int) => sizes
-          case _ => 0
+          case (_, sizes: Int) => sizes //Alterei aqui
         } //Gets the size of the pair that has the most values
       val mappedValues = for (i <- 0 to mostFound; (_, listMatched) <- matchedValues) yield {
         if (listMatched.size > i) //Prevent array out of bounds exception
