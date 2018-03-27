@@ -44,7 +44,9 @@ object Extractor {
 
         pdf.close()
         cleanImageDir()
-        Option(imgText + str)
+        val joinedText = imgText + str
+        if (joinedText.nonEmpty) Some(joinedText)
+        else None
       case _ => None
     }
   }
@@ -65,7 +67,6 @@ object Extractor {
   def getAllMatchedValues(text: Option[String], keywords: List[(Keyword, POSTag.Value)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
     require(keywords.nonEmpty, "The list of keywords should not be empty")
     text match {
-      case Some("") => List()
       case Some(t) =>
         val knownRegEx: Map[String, Regex] = importRegExFile(t) //load correct RegEx map
       val matched: MatchedPair = keywords.map { case (key, tag) =>
@@ -81,7 +82,6 @@ object Extractor {
       }
         filterNewLines(matched)
       case None => List()
-      case _ => throw new NullPointerException
     }
   }
 
@@ -126,8 +126,7 @@ object Extractor {
   def getAllObjects(text: Option[String], keywords: List[(Keyword, POSTag.Value)], clientRegEx: Map[Keyword, Regex] = Map()): List[MatchedPair] = {
     require(keywords.nonEmpty, "The list of keywords should not be empty")
     text match {
-      case Some("") => List()
-      case Some(_) =>
+      case Some(_) => //TODO SHOULD THIS METHOD BE PRIVATE ??? IF NOT THEN WE NEED TO CHECK ""
         def getListSizes(matchedValues: MatchedPair): List[(Keyword, Int)] = {
           for ((key, listMatched) <- matchedValues) yield (key, listMatched.size)
         }
@@ -145,7 +144,6 @@ object Extractor {
         val keywordList = keywords.map { case (key, _) => key }
         mappedValues.zipWithIndex.map { case (key, values) => (keywordList(values % keywords.length), key) }.toList.grouped(keywords.size).toList
       case None => List()
-      case _ => throw new NullPointerException
     }
   }
 
