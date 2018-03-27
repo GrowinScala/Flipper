@@ -1,17 +1,16 @@
-package reader.utils
+package ReaderConverter.utils
 
 import org.languagetool.JLanguageTool
 import org.languagetool.language.{BritishEnglish, PortugalPortuguese}
 import org.languagetool.rules.RuleMatch
-import reader.utils.OpenNLP.detectLanguage
-
+import ReaderConverter.utils.OpenNLP.detectLanguage
 import scala.annotation.tailrec
 import scala.collection.JavaConverters._
 
 /**
   * Singleton object that handles all the operations regarding spell checking
   */
-private[reader] object SpellChecker {
+private[ReaderConverter] object SpellChecker {
 
 
   /**

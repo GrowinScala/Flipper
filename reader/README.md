@@ -61,11 +61,13 @@ To extract the text from a PDF document using Flipper simply pass the document p
 to **`readPDF`** (found in **Extractor.scala**).
 
 ```scala
-    import Extractor.readPDF
+    import ReaderConverter.Extraction.Extractor._
+    import java.io.File
     
-    val filePath = "./path/to/pdf/document"
+    val filePath = new File("./path/to/pdf/document")
     val extractedText = readPDF(filePath)
 ```
+
 You now have the have the extracted text, wrapped in an `Option[String]` to prevent `null`'s
 in case the file does not exist.
 
@@ -101,10 +103,12 @@ You can now implement the following snippet:
 
 
 ```scala
-    import Extractor.{readPDF, getJSONObjects}
+    import ReaderConverter.Extraction.Extractor.{readPDF, getJSONObjects}
+    import java.io.File
+    import ReaderConverter.utils.POSTag
     
-    val filePath = "./path/to/pdf/document"
-    val extractedText = readPDF(filePath)
+    val file = new File("./path/to/pdf/document")
+    val extractedText = readPDF(file)
     val keywords = List( ("name", POSTag.N), ("age", POSTag.NUM) )
     
     val jsonObjs : List[String] = getJSONObjects(extractedText, keywords)
@@ -130,10 +134,12 @@ In case you want to obtain a List Keywords with all the values found for that ke
 with that possibility through **`getAllMatchedValues`**.
 
 ```scala
-    import Extractor.{readPDF, getAllMatchedValues}
+    import ReaderConverter.Extraction.Extractor.{readPDF, getAllMatchedValues}
+    import java.io.File
+    import ReaderConverter.utils.POSTag
     
-    val filePath = "./path/to/pdf/document"
-    val extractedText = readPDF(filePath)
+    val file = new File("./path/to/pdf/document")
+    val extractedText = readPDF(file)
     val keywords = List( ("name", POSTag.N), ("age", POSTag.NUM) )
     
     val matchedValues = getAllMatchedValues(extractedText, keywords) 
@@ -145,10 +151,12 @@ with that possibility through **`getAllMatchedValues`**.
 This method works exactly like the one above but instead of returning every value found for a keyword, returns only one.
 
 ```scala
-    import Extractor.{readPDF, getSingleMatchedValue}
+    import ReaderConverter.Extraction.Extractor.{readPDF, getSingleMatchedValue}
+    import java.io.File
+    import ReaderConverter.utils.POSTag
     
-    val filePath = "./path/to/pdf/document"
-    val extractedText = readPDF(filePath)
+    val file = new File("./path/to/pdf/document")
+    val extractedText = readPDF(file)
     val keywords = List( ("name", POSTag.N), ("age", POSTag.NUM) )
     
     val matchedValues = getSingleMatchedValue(extractedText, keywords) 
@@ -161,9 +169,11 @@ This method returns a List containing all the possible pre-JSOn objects for the 
 the given keywords
 
 ```scala
-    import Extractor.{readPDF, getAllObjects}
+    import ReaderConverter.Extraction.Extractor.{readPDF, getAllObjects}
+    import java.io.File
+    import ReaderConverter.utils.POSTag
     
-    val filePath = "./path/to/pdf/document"
+    val filePath = new File("./path/to/pdf/document")
     val extractedText = readPDF(filePath)
     val keywords = List( ("name", POSTag.N), ("age", POSTag.NUM) )
     

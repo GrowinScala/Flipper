@@ -1,22 +1,21 @@
-package reader.utils
+package ReaderConverter.utils
 
 import java.io.{File, IOException}
 import java.util.Iterator
 
-import reader.Extraction.FileHandler._
+import ReaderConverter.Extraction.FileHandler._
 import com.sksamuel.scrimage.filter._
 import com.sksamuel.scrimage.nio.PngWriter
 import javax.imageio.ImageIO
 import net.sourceforge.tess4j.Tesseract
 import org.apache.pdfbox.cos.COSName
-import org.apache.pdfbox.pdmodel.{PDDocument, PDResources}
 import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject
 import org.apache.pdfbox.pdmodel.{PDDocument, PDResources}
 
 /**
   * Singleton Object that implements all the image processing functionalities
   */
- private[reader] object ImageProcessing {
+private[ReaderConverter] object ImageProcessing {
 
   /**
     * Method that upon receiving a text file will try to read the text from it using Tess4J tesseract library
@@ -28,7 +27,7 @@ import org.apache.pdfbox.pdmodel.{PDDocument, PDResources}
     val imageOption = loadImage(file) //Create Scrimage Image from a file input stream
 
     imageOption match {
-        
+
       case Some(image) =>
         val resized = image.scaleToWidth((image.width * 2.0).toInt) //scale the image to be 100% wider
       val instance = new Tesseract() //Initialize Tesseract

@@ -1,4 +1,4 @@
-package reader.Extraction
+package ReaderConverter.Extraction
 
 import java.io.File
 import com.sksamuel.scrimage.Image
@@ -7,7 +7,7 @@ import org.apache.pdfbox.pdmodel.PDDocument
 /**
   * Singleton object that handles all operations regarding file input
   */
-private[reader] object FileHandler {
+private[ReaderConverter] object FileHandler {
 
 
   /**

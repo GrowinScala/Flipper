@@ -2,7 +2,7 @@ import java.io.File
 
 object Main {
 
-  import reader.Extraction.Extractor._
+  import ReaderConverter.Extraction.Extractor._
 
   def main(args: Array[String]): Unit = {
     val filepath = new File("./reader/resources/MegaTester.pdf")

@@ -7,7 +7,7 @@ import scala.io.{BufferedSource, Source}
 /**
   * Singleton object that handles all operations regarding file input
   */
-object FileHandler {
+private[Generator] object FileHandler {
 
   /**
     * Method that loads a CSS file from the file passed by arguments

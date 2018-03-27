@@ -1,10 +1,10 @@
-package reader.utils
+package ReaderConverter.utils
 
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
 import org.scalatest.Matchers._
 import org.scalatest.junit.JUnitRunner
-import reader.utils.OpenNLP._
+import ReaderConverter.utils.OpenNLP._
 
 @RunWith(classOf[JUnitRunner])
 class OpenNLPSuite extends FunSuite {

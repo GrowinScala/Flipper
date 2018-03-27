@@ -1,10 +1,10 @@
-package reader.utils
+package ReaderConverter.utils
 
 import java.io.File
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
 import org.scalatest.junit.JUnitRunner
-import reader.utils.ImageProcessing._
+import ReaderConverter.utils.ImageProcessing._
 import org.apache.pdfbox.pdmodel.PDDocument
 
 //noinspection ComparingLength
