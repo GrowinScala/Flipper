@@ -9,7 +9,7 @@ package Generator
   * @param fontFamily    - The desired font to be used in the displayed text. Ex:. "Arial"; "Times New Roman"
   * @param fontWeight    - The desired font weight to be used in the displayed text. Ex:. "bold"; "italic"
   */
-case class Config(
+private[Generator] case class Config(
                    textColor: String = "",
                    fontSize: Double = -1.0,
                    textAlignment: String = "",

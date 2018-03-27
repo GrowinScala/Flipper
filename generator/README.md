@@ -48,14 +48,14 @@ and font weight. This function returns a Boolean saying if the conversion was su
 shows in **`./`**.
  
 ```scala
-    import Generator.convertJSONtoPDF
+    import Generator.Generator.convertJSONtoPDF
     
     val json = """ {"name": "FirstName LastName", "age" : 25 } """
     val success = convertJSONtoPDF(json)
 ```
 
 ```scala
-    import Generator.convertJSONtoPDF
+    import Generator.Generator.convertJSONtoPDF
     import java.io.File
     
     val json = """ {"name": "FirstName LastName", "age" : 25 }"""
@@ -64,7 +64,7 @@ shows in **`./`**.
 ```
 
 ```scala
-    import Generator.convertJSONtoPDF
+    import Generator.Generator.convertJSONtoPDF
    
     val json = """ {"name": "FirstName LastName", "age" : 25 }"""
     val cssString = "p { color: green; } "
@@ -72,7 +72,8 @@ shows in **`./`**.
 ```
 
 ```scala
-    import Generator.convertJSONtoPDF
+    import Generator.Generator.convertJSONtoPDF
+    import Generator.Config
     
     val json = """ {"name": "FirstName LastName", "age" : 25 }"""
     val config = Config("green",12,"center","Arial","bold")

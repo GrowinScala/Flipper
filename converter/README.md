@@ -49,12 +49,15 @@ chosen from an ENUM which contains the following: png, jpg, jpeg and gif. The ou
 in **`./target/PDFtoIMG`**, and the function returns a Boolean saying if the conversion was successful.
 
 ```scala
-    import Converter.convertPDFtoIMG
+    import java.io.File
+    import ReaderConverter.conversion.Converter._
+    import ReaderConverter.conversion.FileType
     
-    val filePath = "./path/to/pdf/document"
+    val file = new File("./path/to/pdf/document")
     val fileType = FileType.jpg
-    val success = convertPDFtoIMG(filePath, fileType)
+    val success = convertPDFtoIMG(file, fileType)
 ```
+
  
  * #### Converting a PDF into an Open Document file ####
  
@@ -63,11 +66,13 @@ in **`./target/PDFtoIMG`**, and the function returns a Boolean saying if the con
  returns a Boolean saying if the conversion was successful. 
  
  ```scala
-     import Converter.convertPDFtoODT
+     import java.io.File
+     import ReaderConverter.conversion.Converter._
      
-     val filePath = "./path/to/pdf/document"
-     val success = convertPDFtoODT(filePath)
+     val file = new File("./path/to/pdf/document")
+     val success = convertPDFtoODT(file)
  ```
+ 
 ---
 
 ### Dependencies ### 

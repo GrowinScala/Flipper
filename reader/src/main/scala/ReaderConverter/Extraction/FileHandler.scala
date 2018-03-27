@@ -1,4 +1,4 @@
-package Extraction
+package ReaderConverter.Extraction
 
 import java.io.File
 import com.sksamuel.scrimage.Image
@@ -7,7 +7,7 @@ import org.apache.pdfbox.pdmodel.PDDocument
 /**
   * Singleton object that handles all operations regarding file input
   */
-object FileHandler {
+private[ReaderConverter] object FileHandler {
 
 
   /**
@@ -18,7 +18,7 @@ object FileHandler {
     */
   def loadPDF(file: File): Option[PDDocument] = {
     try {
-      Option(PDDocument.load(file))
+      Some(PDDocument.load(file))
     } catch {
       case e: Exception => e.printStackTrace(); None
     }
@@ -32,7 +32,7 @@ object FileHandler {
     */
   def loadImage(file: File): Option[Image] = {
     try {
-      Option(Image.fromFile(file))
+      Some(Image.fromFile(file))
     } catch {
       case e: Exception => e.printStackTrace(); None
     }
@@ -41,7 +41,7 @@ object FileHandler {
   /**
     * Method that deletes all files from the image folder
     */
-   private[Extraction] def cleanImageDir() {
+  private[Extraction] def cleanImageDir() {
     val dir = new File("./target/images")
     if (dir.exists) {
       val files = dir.listFiles.filter(_.isFile).toList

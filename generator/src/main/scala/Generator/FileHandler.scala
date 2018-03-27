@@ -7,7 +7,7 @@ import scala.io.{BufferedSource, Source}
 /**
   * Singleton object that handles all operations regarding file input
   */
-object FileHandler {
+private[Generator] object FileHandler {
 
   /**
     * Method that loads a CSS file from the file passed by arguments
@@ -17,7 +17,7 @@ object FileHandler {
     */
   def loadCSSFile(file: File): Option[BufferedSource] = {
     try {
-      Option(Source.fromFile(file))
+      Some(Source.fromFile(file))
     } catch {
       case e: Exception => e.printStackTrace(); None
     }

@@ -1,4 +1,4 @@
-package utils
+package ReaderConverter.utils
 
 /**
   * Enumeration for the standard POS tags which translate to both Portuguese and English
@@ -14,4 +14,5 @@ object POSTag extends Enumeration {
   val NUM = Value("NUM")
   val ADV = Value("ADV")
 }
+
 //TODO Support more POS tags
