@@ -1,4 +1,4 @@
-package Generator
+package generator
 
 import java.io.File
 
@@ -7,7 +7,7 @@ import scala.io.{BufferedSource, Source}
 /**
   * Singleton object that handles all operations regarding file input
   */
-private[Generator] object FileHandler {
+private[generator] object FileHandler {
 
   /**
     * Method that loads a CSS file from the file passed by arguments
