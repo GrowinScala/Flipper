@@ -1,13 +1,12 @@
 import java.io.File
 
-import ReaderConverter.conversion.FileType
-import ReaderConverter.conversion.Converter._
+import parser.conversion.FileType
+import parser.conversion.Converter._
 
 object Main {
 
-
   def main(args: Array[String]): Unit = {
-    val filepath = new File("/Users/Margarida Reis/Desktop/MegaTester.pdf")
+    val filepath = new File("./converter/resources/cv.pdf")
     convertPDFtoIMG(filepath, FileType.jpeg)
     convertPDFtoODT(filepath)
   }
