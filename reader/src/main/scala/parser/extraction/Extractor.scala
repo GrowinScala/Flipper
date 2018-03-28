@@ -66,7 +66,7 @@ object Extractor {
     require(keywords.nonEmpty, "The list of keywords should not be empty")
     text match {
       case Some(t) =>
-        if(t.nonEmpty) {
+        if (t.nonEmpty) {
           val knownRegEx: Map[String, Regex] = importRegExFile(t) //load correct RegEx map
           val matched: MatchedPair = keywords.map { case (key, tag) =>
             //If the client sent a custom RegEx to use on this key, use it
@@ -81,7 +81,9 @@ object Extractor {
           }
           filterNewLines(matched)
         }
-        else{ List() }
+        else {
+          List()
+        }
       case None => List()
     }
   }
@@ -129,6 +131,7 @@ object Extractor {
         def getListSizes(matchedValues: MatchedPair): List[(Keyword, Int)] = {
           for ((key, listMatched) <- matchedValues) yield (key, listMatched.size)
         }
+
         if (t.nonEmpty) {
           val matchedValues = getAllMatchedValues(text, keywords, clientRegEx)
           val (_, mostFound) = getListSizes(matchedValues).maxBy {
@@ -142,7 +145,9 @@ object Extractor {
           val keywordList = keywords.map { case (key, _) => key }
           mappedValues.zipWithIndex.map { case (key, values) => (keywordList(values % keywords.length), key) }.toList.grouped(keywords.size).toList
         }
-        else{ List() }
+        else {
+          List()
+        }
       case None => List()
     }
   }
@@ -153,6 +158,7 @@ object Extractor {
     *
     * @param text        - Text in which to look for values for the specified keywords
     * @param keywords    - List containing all the keywords we want to find values for
+    * @param flag        - Optional flag with information on how to return non-existing values
     * @param clientRegEx - Optional parameter - If the client already has a predefined Regular Expression for a given key
     * @throws IllegalArgumentException If the keywords list is empty
     * @return a List of Strings representing a JSON object for each MatchedPair type
@@ -174,7 +180,7 @@ object Extractor {
     * "remove" - removes that specific field altogether
     *
     * @param listJSON - List of pairs of keywords and their respective values
-    * @param flag     -Optional flag with information on how to return non-existing values
+    * @param flag     - Optional flag with information on how to return non-existing values
     * @return
     */
   def makeJSONString(listJSON: MatchedPair, flag: String = "empty"): String = {
