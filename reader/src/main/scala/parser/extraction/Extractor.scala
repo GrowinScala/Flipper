@@ -181,7 +181,7 @@ object Extractor {
     *
     * @param listJSON - List of pairs of keywords and their respective values
     * @param flag     - Optional flag with information on how to return non-existing values
-    * @return
+    * @return a JSON string
     */
   def makeJSONString(listJSON: MatchedPair, flag: String = "empty"): String = {
     def isAllDigits(x: String) = try {
@@ -194,17 +194,24 @@ object Extractor {
 
     val pseudoJSON = listJSON.map { case (key, matchedList) =>
       matchedList match {
-        case List(_) =>
-          if (matchedList.size > 1) {
-            val left = s"${quote + key + quote} : "
-            val right = "[" + matchedList.map(str => if (isAllDigits(str)) str + ", " else s"${quote + str + quote}, ").mkString + "]"
-            (left + right).replaceAll(", ]", "]") //Remove trailing commas
+        case _: List[String] =>
+          if (matchedList.nonEmpty) {
+            if (matchedList.size > 1) {
+              val left = s"${quote + key + quote} : "
+              val right = "[" + matchedList.map(str => if (isAllDigits(str)) str + ", " else s"${quote + str + quote}, ").mkString + "]"
+              (left + right).replaceAll(", ]", "]") //Remove trailing commas
+            } else {
+              lazy val headValue = matchedList.head
+              if (isAllDigits(headValue))
+                s"${quote + key + quote} : $headValue"
+              else
+                s"${quote + key + quote} : ${quote + headValue + quote}"
+            }
           } else {
-            lazy val headValue = matchedList.head
-            if (isAllDigits(headValue))
-              s"${quote + key + quote} : $headValue"
-            else
-              s"${quote + key + quote} : ${quote + headValue + quote}"
+            flag match {
+              case "empty" => s"${quote + key + quote} : ${quote + quote}"
+              case "null" => s"${quote + key + quote} : null"
+            }
           }
         case _ =>
           flag match {
