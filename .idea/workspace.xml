@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Flipper:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="5115832d-4669-4625-b348-c310af38a585" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/converter/README.md" afterPath="$PROJECT_DIR$/converter/README.md" />
-      <change beforePath="$PROJECT_DIR$/generator/README.md" afterPath="$PROJECT_DIR$/generator/README.md" />
-      <change beforePath="$PROJECT_DIR$/generator/html.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out.odt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/classes/Main$.class" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/classes/Main$.class" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/classes/generator/Generator$.class" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/classes/generator/Generator$.class" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/Main$.class" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/classes/Main$.class" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/extraction/Extractor$.class" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/extraction/Extractor$.class" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/extraction/Extractor.class" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/extraction/Extractor.class" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/utils/ImageProcessing$.class" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/utils/ImageProcessing$.class" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/utils/OpenNLP$.class" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/utils/OpenNLP$.class" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/test-classes/parser/extraction/ExtractorSuite.class" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/test-classes/parser/extraction/ExtractorSuite.class" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/test-classes/parser/extraction/FileHandlerSuite.class" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/test-classes/parser/extraction/FileHandlerSuite.class" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/test-classes/parser/utils/ImageProcessingSuite.class" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/test-classes/parser/utils/ImageProcessingSuite.class" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -35,90 +44,45 @@
     </projectState>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/converter/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="2310">
-                <caret line="110" column="56" lean-forward="false" selection-start-line="110" selection-start-column="56" selection-end-line="110" selection-end-column="56" />
-                <folding>
-                  <marker date="1522318317565" expanded="true" signature="2253:2344" ph="..." />
-                  <marker date="1522318317565" expanded="true" signature="2266:2344" ph="..." />
-                  <marker date="1522318317565" expanded="true" signature="2283:2284" ph="..." />
-                  <marker date="1522318317565" expanded="true" signature="2283:2295" ph="..." />
-                  <marker date="1522318317565" expanded="true" signature="2283:2344" ph="..." />
-                  <marker date="1522318317565" expanded="true" signature="2488:2545" ph="..." />
-                  <marker date="1522318317565" expanded="true" signature="2488:2584" ph="..." />
-                  <marker date="1522318317565" expanded="true" signature="2665:2861" ph="{...}" />
-                  <marker date="1522318317565" expanded="true" signature="3280:3334" ph="..." />
-                  <marker date="1522318317565" expanded="true" signature="3473:3571" ph="..." />
-                  <marker date="1522318317565" expanded="true" signature="3655:3839" ph="{...}" />
-                </folding>
-              </first_editor>
-              <second_editor />
+    <leaf>
+      <file leaf-file-name="Extractor.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="451">
+              <caret line="303" column="20" lean-forward="false" selection-start-line="303" selection-start-column="20" selection-end-line="303" selection-end-column="20" />
+              <folding>
+                <element signature="e#27#46#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reader/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="357">
-                <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="91" selection-end-column="3" />
-                <folding>
-                  <marker date="1522316383975" expanded="true" signature="3010:3063" ph="..." />
-                  <marker date="1522316383975" expanded="true" signature="3039:3050" ph="..." />
-                  <marker date="1522316383975" expanded="true" signature="3191:3247" ph="..." />
-                  <marker date="1522316383975" expanded="true" signature="3191:3248" ph="..." />
-                  <marker date="1522316383975" expanded="true" signature="3329:3506" ph="{...}" />
-                  <marker date="1522316383975" expanded="true" signature="3496:3506" ph="{}" />
-                  <marker date="1522316383975" expanded="true" signature="5002:5033" ph="..." />
-                  <marker date="1522316383975" expanded="true" signature="5281:5447" ph="/.../" />
-                  <marker date="1522316383975" expanded="true" signature="5482:5539" ph="..." />
-                  <marker date="1522316383975" expanded="true" signature="5482:5571" ph="..." />
-                  <marker date="1522316383975" expanded="true" signature="5482:5601" ph="..." />
-                  <marker date="1522316383975" expanded="true" signature="5482:5628" ph="..." />
-                  <marker date="1522316383975" expanded="true" signature="5709:6330" ph="{...}" />
-                  <marker date="1522316383975" expanded="true" signature="6127:6319" ph="//..." />
-                  <marker date="1522316383975" expanded="true" signature="7284:7397" ph="..." />
-                  <marker date="1522316383975" expanded="true" signature="7290:7397" ph="..." />
-                  <marker date="1522316383975" expanded="true" signature="7637:7811" ph="/.../" />
-                  <marker date="1522316383975" expanded="true" signature="7846:7992" ph="..." />
-                  <marker date="1522316383975" expanded="true" signature="8073:8721" ph="{...}" />
-                  <marker date="1522316383975" expanded="true" signature="8501:8705" ph="//..." />
-                  <marker date="1522316383975" expanded="true" signature="8501:8710" ph="//..." />
-                  <marker date="1522316383975" expanded="true" signature="8944:9059" ph="..." />
-                  <marker date="1522316383975" expanded="true" signature="8950:9059" ph="..." />
-                  <marker date="1522316383975" expanded="true" signature="9301:9457" ph="/.../" />
-                  <marker date="1522316383975" expanded="true" signature="9492:9638" ph="..." />
-                  <marker date="1522316383975" expanded="true" signature="9719:10353" ph="{...}" />
-                  <marker date="1522316383975" expanded="true" signature="10149:10336" ph="//..." />
-                  <marker date="1522316383975" expanded="true" signature="10149:10342" ph="//..." />
-                  <marker date="1522316383975" expanded="true" signature="10586:10681" ph="..." />
-                  <marker date="1522316383975" expanded="true" signature="10586:10693" ph="..." />
-                  <marker date="1522316383975" expanded="true" signature="10592:10681" ph="..." />
-                  <marker date="1522316383975" expanded="true" signature="10935:11146" ph="/.../" />
-                  <marker date="1522316383975" expanded="true" signature="11181:11327" ph="..." />
-                  <marker date="1522316383975" expanded="true" signature="11408:12097" ph="{...}" />
-                  <marker date="1522316383975" expanded="true" signature="11830:12086" ph="//..." />
-                </folding>
-              </first_editor>
-              <second_editor />
+      <file leaf-file-name="ImageProcessing.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/utils/ImageProcessing.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="436">
+              <caret line="92" column="11" lean-forward="true" selection-start-line="92" selection-start-column="11" selection-end-line="92" selection-end-column="11" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="567">
-                <caret line="27" column="9" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="9" />
-                <folding />
-              </first_editor>
-              <second_editor />
+      <file leaf-file-name="Generator.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/Generator.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="331">
+              <caret line="173" column="34" lean-forward="false" selection-start-line="173" selection-start-column="29" selection-end-line="173" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Converter.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/converter/src/main/scala/parser/conversion/Converter.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="438">
+              <caret line="58" column="9" lean-forward="false" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -148,8 +112,13 @@
       <find>loadCSS</find>
       <find>reader.</find>
       <find>make</find>
-      <find>println</find>
       <find>reader.C</find>
+      <find>println</find>
+      <find>print</find>
+      <find>some</find>
+      <find>Image</find>
+      <find>mkdi</find>
+      <find>mkdir</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -169,9 +138,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/reader/src/test/scala/ImageProcessingSuite.scala" />
-        <option value="$PROJECT_DIR$/reader/src/test/scala/OpenNLPSuite.scala" />
-        <option value="$PROJECT_DIR$/generator/src/test/scala/GeneratorSuite.scala" />
         <option value="$PROJECT_DIR$/generator/src/test/scala/FileHandlerSuite.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/Extraction/FileHandler.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/Extraction/Extractor.scala" />
@@ -205,21 +171,24 @@
         <option value="$PROJECT_DIR$/converter/src/main/scala/Main.scala" />
         <option value="$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/java/parser/extraction/Extractor.java" />
-        <option value="$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala" />
-        <option value="$PROJECT_DIR$/reader/src/main/scala/Main.scala" />
         <option value="$PROJECT_DIR$/generator/src/main/java/Generator/Generator.java" />
         <option value="$PROJECT_DIR$/generator/src/main/java/generator/Generator.java" />
-        <option value="$PROJECT_DIR$/generator/src/main/java/generator/GeneratorJava.java" />
         <option value="$PROJECT_DIR$/generator/src/main/scala/generator/Config.scala" />
         <option value="$PROJECT_DIR$/generator/src/main/java/GenMain.java" />
         <option value="$PROJECT_DIR$/converter/src/main/java/ConMain.java" />
         <option value="$PROJECT_DIR$/converter/src/main/java/parser/conversion/ConverterJava.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/reader/src/main/java/parser/extraction/ExtractorJava.java" />
-        <option value="$PROJECT_DIR$/reader/src/main/java/MainJava.java" />
         <option value="$PROJECT_DIR$/reader/README.md" />
         <option value="$PROJECT_DIR$/generator/README.md" />
         <option value="$PROJECT_DIR$/converter/README.md" />
+        <option value="$PROJECT_DIR$/generator/src/main/java/generator/GeneratorJava.java" />
+        <option value="$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala" />
+        <option value="$PROJECT_DIR$/reader/src/main/java/MainJava.java" />
+        <option value="$PROJECT_DIR$/reader/src/main/scala/Main.scala" />
+        <option value="$PROJECT_DIR$/reader/src/main/scala/parser/utils/ImageProcessing.scala" />
+        <option value="$PROJECT_DIR$/generator/src/main/scala/generator/Generator.scala" />
+        <option value="$PROJECT_DIR$/converter/src/main/scala/parser/conversion/Converter.scala" />
       </list>
     </option>
   </component>
@@ -244,6 +213,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -289,46 +262,20 @@
             <path>
               <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
               <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="converter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="converter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="conversion" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
               <item name="reader" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
   </component>
   <component name="RecentsManager">
@@ -353,7 +300,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MainJava">
+  <component name="RunManager" selected="JUnit.ExtractorSuite">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -561,10 +508,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.MainJava" />
-        <item index="1" class="java.lang.String" itemvalue="Application.GenMain" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ExtractorSuite" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ExtractorSuite" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="2" class="java.lang.String" itemvalue="Application.MainJava" />
+        <item index="3" class="java.lang.String" itemvalue="Application.GenMain" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.ImageProcessingSuite" />
       </list>
     </recent_temporary>
@@ -933,16 +880,31 @@
       <option name="project" value="LOCAL" />
       <updated>1522317720120</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="All readmes updated">
+      <created>1522318344650</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1522318344650</updated>
+    </task>
+    <task id="LOCAL-00041" summary="updating extractor">
+      <created>1522327361802</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1522327361802</updated>
+    </task>
+    <task id="LOCAL-00042" summary="mkdirs">
+      <created>1522334793920</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1522334793920</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ConverterSuite - 2018.03.27 at 12h 31m 34s.xml">
-      <configuration name="ConverterSuite" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ConverterSuite - 2018.03.27 at 13h 46m 17s.xml">
-      <configuration name="ConverterSuite" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ExtractorSuite - 2018.03.27 at 12h 39m 36s.xml">
       <configuration name="ExtractorSuite" configurationId="JUnit" />
     </history-entry>
@@ -950,6 +912,12 @@
       <configuration name="ExtractorSuite" configurationId="JUnit" />
     </history-entry>
     <history-entry file="ExtractorSuite - 2018.03.28 at 15h 16m 52s.xml">
+      <configuration name="ExtractorSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ExtractorSuite - 2018.03.29 at 13h 37m 50s.xml">
+      <configuration name="ExtractorSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ExtractorSuite - 2018.03.29 at 15h 32m 48s.xml">
       <configuration name="ExtractorSuite" configurationId="JUnit" />
     </history-entry>
     <history-entry file="ImageProcessingSuite - 2018.03.27 at 13h 58m 47s.xml">
@@ -974,12 +942,12 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873806" sideWeight="0.496875" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="sbt" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.50208336" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873806" sideWeight="0.503125" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.49791667" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -987,7 +955,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19375" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19375" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="sbt-shell-toolwindow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1042,10 +1010,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactoring Converter.scala try-catches" />
-    <MESSAGE value="Refactored project to improve try-catches implementation" />
-    <MESSAGE value="Added new packages to reader module" />
-    <MESSAGE value="Added new packages to generator and converter module" />
     <MESSAGE value="Merged with margarida" />
     <MESSAGE value="Implemented FileHandlerSuite.scala" />
     <MESSAGE value="Refactored ExtractorSuite.scala to remove NullPointerException tests" />
@@ -1067,25 +1031,21 @@
     <MESSAGE value="Updating reader/README.md" />
     <MESSAGE value="reader/README.md updated" />
     <MESSAGE value="generator/README.md updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="generator/README.md updated" />
+    <MESSAGE value="All readmes updated" />
+    <MESSAGE value="update" />
+    <MESSAGE value="updating extractor" />
+    <MESSAGE value="mkdirs" />
+    <option name="LAST_COMMIT_MESSAGE" value="mkdirs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalatest/scalatest_2.12/srcs/scalatest_2.12-3.2.0-SNAP10-sources.jar!/org/scalatest/FunSuite.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="1559" column="6" lean-forward="false" selection-start-line="1559" selection-start-column="6" selection-end-line="1559" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/FileHandler.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="6" column="3" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1096,21 +1056,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/FileHandlerSuite.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/GeneratorSuite.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1118,37 +1063,8 @@
     <entry file="file://$PROJECT_DIR$/converter/src/main/scala/ReaderConverter/Converter/FileType.scala" />
     <entry file="file://$PROJECT_DIR$/converter/src/main/scala/Main.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#19#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/utils/OpenNLP.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="13" column="5" lean-forward="false" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/utils/ImageProcessing.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="10" column="34" lean-forward="false" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/converter/src/test/scala/parser/conversion/ConverterSuite.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#27#46#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="200">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1178,7 +1094,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="18" column="6" lean-forward="false" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1259,22 +1174,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/main/scala/Main.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="38" lean-forward="false" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1813">
-          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1283,34 +1182,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/generator/src/main/java/generator/Generator.java" />
-    <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/Generator.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="55" column="2" lean-forward="true" selection-start-line="55" selection-start-column="2" selection-end-line="62" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator/src/main/java/generator/GeneratorJava.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="32" column="6" lean-forward="false" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
-          <folding>
-            <element signature="e#507#508#0" expanded="true" />
-            <element signature="e#562#563#0" expanded="true" />
-            <element signature="e#1129#1130#0" expanded="true" />
-            <element signature="e#1193#1194#0" expanded="true" />
-            <element signature="e#2481#2482#0" expanded="true" />
-            <element signature="e#2544#2545#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/generator/src/main/scala/Main.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="9" selection-end-column="101" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1318,93 +1193,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="664">
           <caret line="54" column="48" lean-forward="false" selection-start-line="54" selection-start-column="48" selection-end-line="54" selection-end-column="48" />
-          <folding>
-            <element signature="e#22#59#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/converter/src/main/scala/parser/conversion/Converter.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/converter/src/main/java/ConMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator/src/main/java/GenMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/main/java/MainJava.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="19" column="38" lean-forward="false" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="180" column="5" lean-forward="false" selection-start-line="180" selection-start-column="5" selection-end-line="180" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/main/java/parser/extraction/ExtractorJava.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="210" column="52" lean-forward="false" selection-start-line="210" selection-start-column="52" selection-end-line="210" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#regexToScala#0;class#ExtractorJava#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="567">
-            <caret line="27" column="9" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="9" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/converter/src/main/java/ConMain.java" />
+    <entry file="file://$PROJECT_DIR$/generator/src/main/java/GenMain.java" />
     <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/Config.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/converter/src/main/java/parser/conversion/ConverterJava.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1413,21 +1210,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="378">
             <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-            <folding>
-              <marker date="1522317895460" expanded="true" signature="2299:2359" ph="..." />
-              <marker date="1522317895460" expanded="true" signature="2300:2359" ph="..." />
-              <marker date="1522317895460" expanded="true" signature="2772:2836" ph="..." />
-              <marker date="1522317895460" expanded="true" signature="2773:2836" ph="..." />
-              <marker date="1522317895460" expanded="true" signature="3049:3073" ph="..." />
-              <marker date="1522317895460" expanded="true" signature="3154:3356" ph="{...}" />
-              <marker date="1522317895460" expanded="true" signature="3387:3436" ph="..." />
-              <marker date="1522317895460" expanded="true" signature="3517:3781" ph="{...}" />
-              <marker date="1522317895460" expanded="true" signature="3812:3836" ph="..." />
-              <marker date="1522317895460" expanded="true" signature="3917:4185" ph="{...}" />
-              <marker date="1522317895460" expanded="true" signature="4216:4269" ph="..." />
-              <marker date="1522317895460" expanded="true" signature="4350:5190" ph="{...}" />
-              <marker date="1522317895460" expanded="true" signature="4350:5196" ph="{...}" />
-            </folding>
           </first_editor>
           <second_editor />
         </state>
@@ -1437,15 +1219,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/converter/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="777">
+            <caret line="37" column="33" lean-forward="true" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+            <folding>
+              <marker date="1522318317565" expanded="true" signature="2253:2344" ph="..." />
+              <marker date="1522318317565" expanded="true" signature="2266:2344" ph="..." />
+              <marker date="1522318317565" expanded="true" signature="2283:2284" ph="..." />
+              <marker date="1522318317565" expanded="true" signature="2283:2295" ph="..." />
+              <marker date="1522318317565" expanded="true" signature="2283:2344" ph="..." />
+              <marker date="1522318317565" expanded="true" signature="2488:2545" ph="..." />
+              <marker date="1522318317565" expanded="true" signature="2488:2584" ph="..." />
+              <marker date="1522318317565" expanded="true" signature="2665:2861" ph="{...}" />
+              <marker date="1522318317565" expanded="true" signature="3280:3334" ph="..." />
+              <marker date="1522318317565" expanded="true" signature="3473:3571" ph="..." />
+              <marker date="1522318317565" expanded="true" signature="3655:3839" ph="{...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/reader/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="357">
-            <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="91" selection-end-column="3" />
+          <first_editor relative-caret-position="105">
+            <caret line="68" column="9" lean-forward="true" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="9" />
             <folding>
               <marker date="1522316383975" expanded="true" signature="3010:3063" ph="..." />
               <marker date="1522316383975" expanded="true" signature="3039:3050" ph="..." />
@@ -1488,26 +1292,135 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/converter/README.md">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="2310">
-            <caret line="110" column="56" lean-forward="false" selection-start-line="110" selection-start-column="56" selection-end-line="110" selection-end-column="56" />
-            <folding>
-              <marker date="1522318317565" expanded="true" signature="2253:2344" ph="..." />
-              <marker date="1522318317565" expanded="true" signature="2266:2344" ph="..." />
-              <marker date="1522318317565" expanded="true" signature="2283:2284" ph="..." />
-              <marker date="1522318317565" expanded="true" signature="2283:2295" ph="..." />
-              <marker date="1522318317565" expanded="true" signature="2283:2344" ph="..." />
-              <marker date="1522318317565" expanded="true" signature="2488:2545" ph="..." />
-              <marker date="1522318317565" expanded="true" signature="2488:2584" ph="..." />
-              <marker date="1522318317565" expanded="true" signature="2665:2861" ph="{...}" />
-              <marker date="1522318317565" expanded="true" signature="3280:3334" ph="..." />
-              <marker date="1522318317565" expanded="true" signature="3473:3571" ph="..." />
-              <marker date="1522318317565" expanded="true" signature="3655:3839" ph="{...}" />
-            </folding>
+          <first_editor relative-caret-position="567">
+            <caret line="27" column="9" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="9" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/src/main/java/generator/GeneratorJava.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/main/java/parser/extraction/ExtractorJava.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-997">
+          <caret line="210" column="52" lean-forward="false" selection-start-line="210" selection-start-column="52" selection-end-line="210" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/converter/src/test/scala/parser/conversion/ConverterSuite.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="11" column="61" lean-forward="false" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/FileHandlerSuite.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/GeneratorSuite.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="19" column="14" lean-forward="false" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/main/java/MainJava.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="65" lean-forward="false" selection-start-line="10" selection-start-column="65" selection-end-line="10" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/net.sourceforge.tess4j/tess4j/srcs/tess4j-3.4.4-sources.jar!/net/sourceforge/tess4j/Tesseract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="226" column="19" lean-forward="true" selection-start-line="226" selection-start-column="19" selection-end-line="226" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/converter/src/main/java/parser/conversion/ConverterJava.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="51" lean-forward="false" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="110" column="17" lean-forward="false" selection-start-line="110" selection-start-column="15" selection-end-line="110" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/main/scala/Main.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/utils/OpenNLP.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="15" column="25" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="303" column="20" lean-forward="false" selection-start-line="303" selection-start-column="20" selection-end-line="303" selection-end-column="20" />
+          <folding>
+            <element signature="e#27#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/converter/src/main/scala/parser/conversion/Converter.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="58" column="9" lean-forward="false" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/Generator.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="173" column="34" lean-forward="false" selection-start-line="173" selection-start-column="29" selection-end-line="173" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/utils/ImageProcessing.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="92" column="11" lean-forward="true" selection-start-line="92" selection-start-column="11" selection-end-line="92" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1517,10 +1430,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>Flipper:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1569,7 +1484,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

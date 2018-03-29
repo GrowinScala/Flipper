@@ -33,7 +33,7 @@ private[parser] object ImageProcessing {
       val instance = new Tesseract() //Initialize Tesseract
       val filterBW = ThresholdFilter(150) //Filter the image to black and white
       val dir = new File("./target/tempImages")
-        if (!dir.exists) dir.mkdir
+        if (!dir.exists) dir.mkdirs
 
         //Obtain the processed image file
         val resizedFile = resized.filter(filterBW).output(new File("./target/tempImages/temp_" + System.nanoTime() + ".png"))(PngWriter.MaxCompression)
@@ -85,7 +85,7 @@ private[parser] object ImageProcessing {
         if (obj.isInstanceOf[PDImageXObject]) {
           val dir = new File("./target/images")
           val file = new File("./target/images/GeneratedImage_" + System.nanoTime() + ".png")
-          if (!dir.exists) dir.mkdir
+          if (!dir.exists) dir.mkdirs
           try
             ImageIO.write(obj.asInstanceOf[PDImageXObject].getImage, "png", file)
           catch {
