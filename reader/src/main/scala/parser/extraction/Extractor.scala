@@ -297,8 +297,10 @@ object Extractor {
       case "por" => "por"
       case _ => "eng"
     }
-    val file = getClass.getResource("/regex/"+lang+".txt")
-    val fileLines = Source.fromFile(file.toURI).getLines //Should we try and catch a file not found exception here ?
+    val file = getClass.getResourceAsStream("/regex/" + lang + ".txt")
+    //    val file = getClass.getResource("/regex/"+lang+".txt")
+    //    val fileLines = Source.fromFile(file.toURI).getLines //Should we try and catch a file not found exception here ?
+    val fileLines = Source.fromInputStream(file).getLines
     fileLines.map(l => {
       val splitLine = l.split(";")
       splitLine(0) -> splitLine(1).r
