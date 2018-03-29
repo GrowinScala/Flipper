@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5115832d-4669-4625-b348-c310af38a585" name="Default" comment="">
+    <list default="true" id="5115832d-4669-4625-b348-c310af38a585" name="Default" comment="generator/README.md updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/generator/README.md" afterPath="$PROJECT_DIR$/generator/README.md" />
       <change beforePath="$PROJECT_DIR$/reader/README.md" afterPath="$PROJECT_DIR$/reader/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -31,71 +32,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="ExtractorJava.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reader/src/main/java/parser/extraction/ExtractorJava.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="210" column="52" lean-forward="false" selection-start-line="210" selection-start-column="52" selection-end-line="210" selection-end-column="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#regexToScala#0;class#ExtractorJava#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Extractor.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="180" column="5" lean-forward="false" selection-start-line="180" selection-start-column="5" selection-end-line="180" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/reader/README.md">
+        <entry file="file://$PROJECT_DIR$/generator/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="252">
-                <caret line="93" column="131" lean-forward="false" selection-start-line="93" selection-start-column="131" selection-end-line="93" selection-end-column="131" />
+              <first_editor relative-caret-position="652">
+                <caret line="146" column="14" lean-forward="false" selection-start-line="146" selection-start-column="14" selection-end-line="146" selection-end-column="14" />
                 <folding>
-                  <marker date="1522316036155" expanded="true" signature="3000:3053" ph="..." />
-                  <marker date="1522316036155" expanded="true" signature="3029:3040" ph="..." />
-                  <marker date="1522316036155" expanded="true" signature="3181:3237" ph="..." />
-                  <marker date="1522316036155" expanded="true" signature="3181:3238" ph="..." />
-                  <marker date="1522316036155" expanded="true" signature="3319:3496" ph="{...}" />
-                  <marker date="1522316036155" expanded="true" signature="3486:3496" ph="{}" />
-                  <marker date="1522316036155" expanded="true" signature="4992:5023" ph="..." />
-                  <marker date="1522316036155" expanded="true" signature="5271:5437" ph="/.../" />
-                  <marker date="1522316036155" expanded="true" signature="5472:5529" ph="..." />
-                  <marker date="1522316036155" expanded="true" signature="5472:5561" ph="..." />
-                  <marker date="1522316036155" expanded="true" signature="5472:5591" ph="..." />
-                  <marker date="1522316036155" expanded="true" signature="5472:5618" ph="..." />
-                  <marker date="1522316036155" expanded="true" signature="5699:6320" ph="{...}" />
-                  <marker date="1522316036155" expanded="true" signature="6117:6309" ph="//..." />
-                  <marker date="1522316036155" expanded="true" signature="7274:7387" ph="..." />
-                  <marker date="1522316036155" expanded="true" signature="7280:7387" ph="..." />
-                  <marker date="1522316036155" expanded="true" signature="7627:7801" ph="/.../" />
-                  <marker date="1522316036155" expanded="true" signature="7836:7982" ph="..." />
-                  <marker date="1522316036155" expanded="true" signature="8063:8711" ph="{...}" />
-                  <marker date="1522316036155" expanded="true" signature="8491:8695" ph="//..." />
-                  <marker date="1522316036155" expanded="true" signature="8491:8700" ph="//..." />
-                  <marker date="1522316036155" expanded="true" signature="8934:9049" ph="..." />
-                  <marker date="1522316036155" expanded="true" signature="8940:9049" ph="..." />
-                  <marker date="1522316036155" expanded="true" signature="9291:9447" ph="/.../" />
-                  <marker date="1522316036155" expanded="true" signature="9482:9628" ph="..." />
-                  <marker date="1522316036155" expanded="true" signature="9709:10343" ph="{...}" />
-                  <marker date="1522316036155" expanded="true" signature="10139:10326" ph="//..." />
-                  <marker date="1522316036155" expanded="true" signature="10139:10332" ph="//..." />
-                  <marker date="1522316036155" expanded="true" signature="10576:10671" ph="..." />
-                  <marker date="1522316036155" expanded="true" signature="10576:10683" ph="..." />
-                  <marker date="1522316036155" expanded="true" signature="10582:10671" ph="..." />
-                  <marker date="1522316036155" expanded="true" signature="10925:11136" ph="/.../" />
-                  <marker date="1522316036155" expanded="true" signature="11171:11317" ph="..." />
-                  <marker date="1522316036155" expanded="true" signature="11398:12087" ph="{...}" />
-                  <marker date="1522316036155" expanded="true" signature="11820:12076" ph="//..." />
+                  <marker date="1522317673832" expanded="true" signature="2299:2359" ph="..." />
+                  <marker date="1522317673832" expanded="true" signature="2300:2359" ph="..." />
+                  <marker date="1522317673832" expanded="true" signature="2772:2836" ph="..." />
+                  <marker date="1522317673832" expanded="true" signature="2773:2836" ph="..." />
+                  <marker date="1522317673832" expanded="true" signature="3049:3073" ph="..." />
+                  <marker date="1522317673832" expanded="true" signature="3154:3356" ph="{...}" />
+                  <marker date="1522317673832" expanded="true" signature="3387:3436" ph="..." />
+                  <marker date="1522317673832" expanded="true" signature="3517:3781" ph="{...}" />
+                  <marker date="1522317673832" expanded="true" signature="3812:3836" ph="..." />
+                  <marker date="1522317673832" expanded="true" signature="3917:4185" ph="{...}" />
+                  <marker date="1522317673832" expanded="true" signature="4216:4269" ph="..." />
+                  <marker date="1522317673832" expanded="true" signature="4350:5190" ph="{...}" />
+                  <marker date="1522317673832" expanded="true" signature="4350:5196" ph="{...}" />
                 </folding>
               </first_editor>
               <second_editor />
@@ -103,14 +59,64 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainJava.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reader/src/main/java/MainJava.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="19" column="38" lean-forward="false" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/reader/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="441">
+                <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="91" selection-end-column="3" />
+                <folding>
+                  <marker date="1522316383975" expanded="true" signature="3010:3063" ph="..." />
+                  <marker date="1522316383975" expanded="true" signature="3039:3050" ph="..." />
+                  <marker date="1522316383975" expanded="true" signature="3191:3247" ph="..." />
+                  <marker date="1522316383975" expanded="true" signature="3191:3248" ph="..." />
+                  <marker date="1522316383975" expanded="true" signature="3329:3506" ph="{...}" />
+                  <marker date="1522316383975" expanded="true" signature="3496:3506" ph="{}" />
+                  <marker date="1522316383975" expanded="true" signature="5002:5033" ph="..." />
+                  <marker date="1522316383975" expanded="true" signature="5281:5447" ph="/.../" />
+                  <marker date="1522316383975" expanded="true" signature="5482:5539" ph="..." />
+                  <marker date="1522316383975" expanded="true" signature="5482:5571" ph="..." />
+                  <marker date="1522316383975" expanded="true" signature="5482:5601" ph="..." />
+                  <marker date="1522316383975" expanded="true" signature="5482:5628" ph="..." />
+                  <marker date="1522316383975" expanded="true" signature="5709:6330" ph="{...}" />
+                  <marker date="1522316383975" expanded="true" signature="6127:6319" ph="//..." />
+                  <marker date="1522316383975" expanded="true" signature="7284:7397" ph="..." />
+                  <marker date="1522316383975" expanded="true" signature="7290:7397" ph="..." />
+                  <marker date="1522316383975" expanded="true" signature="7637:7811" ph="/.../" />
+                  <marker date="1522316383975" expanded="true" signature="7846:7992" ph="..." />
+                  <marker date="1522316383975" expanded="true" signature="8073:8721" ph="{...}" />
+                  <marker date="1522316383975" expanded="true" signature="8501:8705" ph="//..." />
+                  <marker date="1522316383975" expanded="true" signature="8501:8710" ph="//..." />
+                  <marker date="1522316383975" expanded="true" signature="8944:9059" ph="..." />
+                  <marker date="1522316383975" expanded="true" signature="8950:9059" ph="..." />
+                  <marker date="1522316383975" expanded="true" signature="9301:9457" ph="/.../" />
+                  <marker date="1522316383975" expanded="true" signature="9492:9638" ph="..." />
+                  <marker date="1522316383975" expanded="true" signature="9719:10353" ph="{...}" />
+                  <marker date="1522316383975" expanded="true" signature="10149:10336" ph="//..." />
+                  <marker date="1522316383975" expanded="true" signature="10149:10342" ph="//..." />
+                  <marker date="1522316383975" expanded="true" signature="10586:10681" ph="..." />
+                  <marker date="1522316383975" expanded="true" signature="10586:10693" ph="..." />
+                  <marker date="1522316383975" expanded="true" signature="10592:10681" ph="..." />
+                  <marker date="1522316383975" expanded="true" signature="10935:11146" ph="/.../" />
+                  <marker date="1522316383975" expanded="true" signature="11181:11327" ph="..." />
+                  <marker date="1522316383975" expanded="true" signature="11408:12097" ph="{...}" />
+                  <marker date="1522316383975" expanded="true" signature="11830:12086" ph="//..." />
+                </folding>
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="567">
+                <caret line="27" column="9" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="9" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -194,7 +200,6 @@
         <option value="$PROJECT_DIR$/converter/src/main/scala/ReaderConverter/conversion/Converter.scala" />
         <option value="$PROJECT_DIR$/converter/src/test/scala/ReaderConverter/conversion/ConverterSuite.scala" />
         <option value="$PROJECT_DIR$/converter/README.md" />
-        <option value="$PROJECT_DIR$/generator/README.md" />
         <option value="$PROJECT_DIR$/converter/src/main/scala/ReaderConverter/Converter/FileType.scala" />
         <option value="$PROJECT_DIR$/converter/src/main/scala/Main.scala" />
         <option value="$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala" />
@@ -212,6 +217,7 @@
         <option value="$PROJECT_DIR$/reader/src/main/java/parser/extraction/ExtractorJava.java" />
         <option value="$PROJECT_DIR$/reader/src/main/java/MainJava.java" />
         <option value="$PROJECT_DIR$/reader/README.md" />
+        <option value="$PROJECT_DIR$/generator/README.md" />
       </list>
     </option>
   </component>
@@ -281,42 +287,42 @@
             <path>
               <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
               <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="reader" type="462c0819:PsiDirectoryNode" />
+              <item name="generator" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
               <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="reader" type="462c0819:PsiDirectoryNode" />
+              <item name="generator" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
               <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="reader" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="reader" type="462c0819:PsiDirectoryNode" />
+              <item name="generator" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
               <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="reader" type="462c0819:PsiDirectoryNode" />
+              <item name="generator" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="extraction" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
               <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="reader" type="462c0819:PsiDirectoryNode" />
+              <item name="generator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="generator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
+              <item name="generator" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
@@ -324,31 +330,16 @@
             <path>
               <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
               <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="reader" type="462c0819:PsiDirectoryNode" />
+              <item name="generator" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="parser" type="462c0819:PsiDirectoryNode" />
+              <item name="generator" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
               <item name="Flipper" type="462c0819:PsiDirectoryNode" />
               <item name="reader" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="parser" type="462c0819:PsiDirectoryNode" />
-              <item name="extraction" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="reader" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="parser" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -956,7 +947,14 @@
       <option name="project" value="LOCAL" />
       <updated>1522315886161</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="reader/README.md updated">
+      <created>1522316047043</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1522316047043</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -997,7 +995,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="sbt" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1010,7 +1008,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19375" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19375" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="sbt-shell-toolwindow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1065,7 +1063,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactoring Generator.scala try-catches" />
     <MESSAGE value="Refactoring Converter.scala try-catches" />
     <MESSAGE value="Refactored project to improve try-catches implementation" />
     <MESSAGE value="Added new packages to reader module" />
@@ -1090,7 +1087,8 @@
     <MESSAGE value="Updating README's" />
     <MESSAGE value="Updating reader/README.md" />
     <MESSAGE value="reader/README.md updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="reader/README.md updated" />
+    <MESSAGE value="generator/README.md updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="generator/README.md updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1150,16 +1148,6 @@
               <marker date="1522150205192" expanded="true" signature="1910:1995" ph="..." />
               <marker date="1522150205192" expanded="true" signature="2506:2569" ph="..." />
             </folding>
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1575">
-            <caret line="75" column="27" lean-forward="false" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="27" />
           </first_editor>
           <second_editor />
         </state>
@@ -1364,13 +1352,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/Config.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="66" lean-forward="false" selection-start-line="19" selection-start-column="66" selection-end-line="19" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/converter/src/main/scala/parser/conversion/FileType.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1407,24 +1388,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="777">
-            <caret line="37" column="1" lean-forward="true" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/reader/src/main/java/MainJava.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="19" column="38" lean-forward="false" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="38" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/converter/src/main/java/parser/conversion/ConverterJava.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="180" column="5" lean-forward="false" selection-start-line="180" selection-start-column="5" selection-end-line="180" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1439,63 +1425,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="180" column="5" lean-forward="false" selection-start-line="180" selection-start-column="5" selection-end-line="180" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/converter/src/main/java/parser/conversion/ConverterJava.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="567">
+            <caret line="27" column="9" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="9" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/reader/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="252">
-            <caret line="93" column="131" lean-forward="false" selection-start-line="93" selection-start-column="131" selection-end-line="93" selection-end-column="131" />
+          <first_editor relative-caret-position="441">
+            <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="91" selection-end-column="3" />
             <folding>
-              <marker date="1522316036155" expanded="true" signature="3000:3053" ph="..." />
-              <marker date="1522316036155" expanded="true" signature="3029:3040" ph="..." />
-              <marker date="1522316036155" expanded="true" signature="3181:3237" ph="..." />
-              <marker date="1522316036155" expanded="true" signature="3181:3238" ph="..." />
-              <marker date="1522316036155" expanded="true" signature="3319:3496" ph="{...}" />
-              <marker date="1522316036155" expanded="true" signature="3486:3496" ph="{}" />
-              <marker date="1522316036155" expanded="true" signature="4992:5023" ph="..." />
-              <marker date="1522316036155" expanded="true" signature="5271:5437" ph="/.../" />
-              <marker date="1522316036155" expanded="true" signature="5472:5529" ph="..." />
-              <marker date="1522316036155" expanded="true" signature="5472:5561" ph="..." />
-              <marker date="1522316036155" expanded="true" signature="5472:5591" ph="..." />
-              <marker date="1522316036155" expanded="true" signature="5472:5618" ph="..." />
-              <marker date="1522316036155" expanded="true" signature="5699:6320" ph="{...}" />
-              <marker date="1522316036155" expanded="true" signature="6117:6309" ph="//..." />
-              <marker date="1522316036155" expanded="true" signature="7274:7387" ph="..." />
-              <marker date="1522316036155" expanded="true" signature="7280:7387" ph="..." />
-              <marker date="1522316036155" expanded="true" signature="7627:7801" ph="/.../" />
-              <marker date="1522316036155" expanded="true" signature="7836:7982" ph="..." />
-              <marker date="1522316036155" expanded="true" signature="8063:8711" ph="{...}" />
-              <marker date="1522316036155" expanded="true" signature="8491:8695" ph="//..." />
-              <marker date="1522316036155" expanded="true" signature="8491:8700" ph="//..." />
-              <marker date="1522316036155" expanded="true" signature="8934:9049" ph="..." />
-              <marker date="1522316036155" expanded="true" signature="8940:9049" ph="..." />
-              <marker date="1522316036155" expanded="true" signature="9291:9447" ph="/.../" />
-              <marker date="1522316036155" expanded="true" signature="9482:9628" ph="..." />
-              <marker date="1522316036155" expanded="true" signature="9709:10343" ph="{...}" />
-              <marker date="1522316036155" expanded="true" signature="10139:10326" ph="//..." />
-              <marker date="1522316036155" expanded="true" signature="10139:10332" ph="//..." />
-              <marker date="1522316036155" expanded="true" signature="10576:10671" ph="..." />
-              <marker date="1522316036155" expanded="true" signature="10576:10683" ph="..." />
-              <marker date="1522316036155" expanded="true" signature="10582:10671" ph="..." />
-              <marker date="1522316036155" expanded="true" signature="10925:11136" ph="/.../" />
-              <marker date="1522316036155" expanded="true" signature="11171:11317" ph="..." />
-              <marker date="1522316036155" expanded="true" signature="11398:12087" ph="{...}" />
-              <marker date="1522316036155" expanded="true" signature="11820:12076" ph="//..." />
+              <marker date="1522316383975" expanded="true" signature="3010:3063" ph="..." />
+              <marker date="1522316383975" expanded="true" signature="3039:3050" ph="..." />
+              <marker date="1522316383975" expanded="true" signature="3191:3247" ph="..." />
+              <marker date="1522316383975" expanded="true" signature="3191:3248" ph="..." />
+              <marker date="1522316383975" expanded="true" signature="3329:3506" ph="{...}" />
+              <marker date="1522316383975" expanded="true" signature="3496:3506" ph="{}" />
+              <marker date="1522316383975" expanded="true" signature="5002:5033" ph="..." />
+              <marker date="1522316383975" expanded="true" signature="5281:5447" ph="/.../" />
+              <marker date="1522316383975" expanded="true" signature="5482:5539" ph="..." />
+              <marker date="1522316383975" expanded="true" signature="5482:5571" ph="..." />
+              <marker date="1522316383975" expanded="true" signature="5482:5601" ph="..." />
+              <marker date="1522316383975" expanded="true" signature="5482:5628" ph="..." />
+              <marker date="1522316383975" expanded="true" signature="5709:6330" ph="{...}" />
+              <marker date="1522316383975" expanded="true" signature="6127:6319" ph="//..." />
+              <marker date="1522316383975" expanded="true" signature="7284:7397" ph="..." />
+              <marker date="1522316383975" expanded="true" signature="7290:7397" ph="..." />
+              <marker date="1522316383975" expanded="true" signature="7637:7811" ph="/.../" />
+              <marker date="1522316383975" expanded="true" signature="7846:7992" ph="..." />
+              <marker date="1522316383975" expanded="true" signature="8073:8721" ph="{...}" />
+              <marker date="1522316383975" expanded="true" signature="8501:8705" ph="//..." />
+              <marker date="1522316383975" expanded="true" signature="8501:8710" ph="//..." />
+              <marker date="1522316383975" expanded="true" signature="8944:9059" ph="..." />
+              <marker date="1522316383975" expanded="true" signature="8950:9059" ph="..." />
+              <marker date="1522316383975" expanded="true" signature="9301:9457" ph="/.../" />
+              <marker date="1522316383975" expanded="true" signature="9492:9638" ph="..." />
+              <marker date="1522316383975" expanded="true" signature="9719:10353" ph="{...}" />
+              <marker date="1522316383975" expanded="true" signature="10149:10336" ph="//..." />
+              <marker date="1522316383975" expanded="true" signature="10149:10342" ph="//..." />
+              <marker date="1522316383975" expanded="true" signature="10586:10681" ph="..." />
+              <marker date="1522316383975" expanded="true" signature="10586:10693" ph="..." />
+              <marker date="1522316383975" expanded="true" signature="10592:10681" ph="..." />
+              <marker date="1522316383975" expanded="true" signature="10935:11146" ph="/.../" />
+              <marker date="1522316383975" expanded="true" signature="11181:11327" ph="..." />
+              <marker date="1522316383975" expanded="true" signature="11408:12097" ph="{...}" />
+              <marker date="1522316383975" expanded="true" signature="11830:12086" ph="//..." />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/Config.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="652">
+            <caret line="146" column="14" lean-forward="false" selection-start-line="146" selection-start-column="14" selection-end-line="146" selection-end-column="14" />
+            <folding>
+              <marker date="1522317673832" expanded="true" signature="2299:2359" ph="..." />
+              <marker date="1522317673832" expanded="true" signature="2300:2359" ph="..." />
+              <marker date="1522317673832" expanded="true" signature="2772:2836" ph="..." />
+              <marker date="1522317673832" expanded="true" signature="2773:2836" ph="..." />
+              <marker date="1522317673832" expanded="true" signature="3049:3073" ph="..." />
+              <marker date="1522317673832" expanded="true" signature="3154:3356" ph="{...}" />
+              <marker date="1522317673832" expanded="true" signature="3387:3436" ph="..." />
+              <marker date="1522317673832" expanded="true" signature="3517:3781" ph="{...}" />
+              <marker date="1522317673832" expanded="true" signature="3812:3836" ph="..." />
+              <marker date="1522317673832" expanded="true" signature="3917:4185" ph="{...}" />
+              <marker date="1522317673832" expanded="true" signature="4216:4269" ph="..." />
+              <marker date="1522317673832" expanded="true" signature="4350:5190" ph="{...}" />
+              <marker date="1522317673832" expanded="true" signature="4350:5196" ph="{...}" />
             </folding>
           </first_editor>
           <second_editor />

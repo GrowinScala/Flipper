@@ -18,7 +18,7 @@ The present file documents the Reader module.
   ```
   reader/
          ├── java/parser/extraction/
-         |                          └── ExtractorJava.java     ; Java interface for the API
+         |                          └── ExtractorJava.java     ; Java interface for this module's API
          └── scala/parser/
                          ├── extraction/
                          |              ├── Extractor.scala    ; Handles the PDF parsing and JSON generation
