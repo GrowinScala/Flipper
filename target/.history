@@ -1,2 +1,15 @@
 test
 reader/test
+gradle build
+console
+gradle build
+build
+console
+assembly
+sbt assembly
+package
+compile
+run
+package
+compile
+package
