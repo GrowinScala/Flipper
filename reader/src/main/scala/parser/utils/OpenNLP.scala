@@ -22,11 +22,11 @@ private[parser] object OpenNLP {
   def tagText(text: String): (Array[String], Array[String]) = {
     //we can support English, Portuguese, Danish, German, Swedish
     val filepath = detectLanguage(text) match {
-      case "por" => "./reader/resources/pt-pos-maxent.bin"
-      case _ => "./reader/resources/en-pos-maxent.bin"
+      case "por" => getClass.getResource("/pt-pos-maxent.bin")
+      case _ => getClass.getResource("/en-pos-maxent.bin")
     }
-    val inputStream = new FileInputStream(filepath)
-    val posModel = new POSModel(inputStream)
+//    val inputStream = new FileInputStream(filepath)
+    val posModel = new POSModel(filepath)
     val wsTokenizer = WhitespaceTokenizer.INSTANCE
 
     val splittedWords = wsTokenizer.tokenize(text)
@@ -46,7 +46,8 @@ private[parser] object OpenNLP {
     *         The full list of ISO identifiers can be found in https://en.wikipedia.org/wiki/List_of_ISO_639-3_codes
     */
   def detectLanguage(text: String): String = {
-    val file = new File("./reader/resources/langdetect-183.bin")
+    val file = getClass.getResource("/langdetect-183.bin")
+//    val file = new File("./reader/resources/langdetect-183.bin")
     val trainedModel = new LanguageDetectorModel(file)
     val langDect = new LanguageDetectorME(trainedModel)
     langDect.predictLanguage(text).getLang

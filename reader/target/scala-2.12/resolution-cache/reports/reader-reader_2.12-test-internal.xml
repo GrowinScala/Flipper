@@ -7,15 +7,15 @@
 		revision="0.1"
 		conf="test-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20180326110100"/>
+		date="20180328091331"/>
 	<dependencies>
 		<module organisation="org.scalatest" name="scalatest_2.12">
 			<revision name="3.2.0-SNAP10" status="release" pubdate="20180125080537" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scalatest.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="88">
 				<license name="the Apache License, ASL Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="no" details="" size="4795" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.scalatest\scalatest_2.12\ivy-3.2.0-SNAP10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scalatest/scalatest_2.12/3.2.0-SNAP10/scalatest_2.12-3.2.0-SNAP10.pom"/>
+				<metadata-artifact status="no" details="" size="4795" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.scalatest\scalatest_2.12\ivy-3.2.0-SNAP10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scalatest/scalatest_2.12/3.2.0-SNAP10/scalatest_2.12-3.2.0-SNAP10.pom"/>
 				<caller organisation="reader" name="reader_2.12" conf="test, compile, provided, test-internal, runtime, optional" rev="3.2.0-SNAP10" rev-constraint-default="3.2.0-SNAP10" rev-constraint-dynamic="3.2.0-SNAP10" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="scalatest_2.12" type="bundle" ext="jar" status="no" details="" size="8931065" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.scalatest\scalatest_2.12\bundles\scalatest_2.12-3.2.0-SNAP10.jar">
+					<artifact name="scalatest_2.12" type="bundle" ext="jar" status="no" details="" size="8931065" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.scalatest\scalatest_2.12\bundles\scalatest_2.12-3.2.0-SNAP10.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scalatest/scalatest_2.12/3.2.0-SNAP10/scalatest_2.12-3.2.0-SNAP10.jar"/>
 					</artifact>
 				</artifacts>
@@ -24,10 +24,10 @@
 		<module organisation="org.scalactic" name="scalactic_2.12">
 			<revision name="3.2.0-SNAP10" status="release" pubdate="20180125080244" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scalatest.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="89">
 				<license name="the Apache License, ASL Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="no" details="" size="3009" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.scalactic\scalactic_2.12\ivy-3.2.0-SNAP10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scalactic/scalactic_2.12/3.2.0-SNAP10/scalactic_2.12-3.2.0-SNAP10.pom"/>
+				<metadata-artifact status="no" details="" size="3009" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.scalactic\scalactic_2.12\ivy-3.2.0-SNAP10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scalactic/scalactic_2.12/3.2.0-SNAP10/scalactic_2.12-3.2.0-SNAP10.pom"/>
 				<caller organisation="org.scalatest" name="scalatest_2.12" conf="default, compile, runtime, master" rev="3.2.0-SNAP10" rev-constraint-default="3.2.0-SNAP10" rev-constraint-dynamic="3.2.0-SNAP10" callerrev="3.2.0-SNAP10"/>
 				<artifacts>
-					<artifact name="scalactic_2.12" type="bundle" ext="jar" status="no" details="" size="1619438" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.scalactic\scalactic_2.12\bundles\scalactic_2.12-3.2.0-SNAP10.jar">
+					<artifact name="scalactic_2.12" type="bundle" ext="jar" status="no" details="" size="1619438" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.scalactic\scalactic_2.12\bundles\scalactic_2.12-3.2.0-SNAP10.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scalactic/scalactic_2.12/3.2.0-SNAP10/scalactic_2.12-3.2.0-SNAP10.jar"/>
 					</artifact>
 				</artifacts>
@@ -36,12 +36,12 @@
 		<module organisation="org.scala-lang" name="scala-reflect">
 			<revision name="2.12.4" status="release" pubdate="20171011032224" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.4/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="90">
 				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
-				<metadata-artifact status="no" details="" size="2814" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.scala-lang\scala-reflect\ivy-2.12.4.xml" searched="false" origin-is-local="false" origin-location="file:/C:/Users/Lucas Fischer/.sbt/preloaded/org.scala-lang/scala-reflect/2.12.4/ivys/ivy.xml"/>
+				<metadata-artifact status="no" details="" size="2814" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.scala-lang\scala-reflect\ivy-2.12.4.xml" searched="false" origin-is-local="false" origin-location="file:/C:/Users/Margarida Reis/.sbt/preloaded/org.scala-lang/scala-reflect/2.12.4/ivys/ivy.xml"/>
 				<caller organisation="org.scalatest" name="scalatest_2.12" conf="default, compile, runtime, master" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="3.2.0-SNAP10"/>
 				<caller organisation="org.scalactic" name="scalactic_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="3.2.0-SNAP10"/>
 				<artifacts>
-					<artifact name="scala-reflect" type="jar" ext="jar" status="no" details="" size="3587892" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.12.4.jar">
-						<origin-location is-local="false" location="file:/C:/Users/Lucas Fischer/.sbt/preloaded/org.scala-lang/scala-reflect/2.12.4/jars/scala-reflect.jar"/>
+					<artifact name="scala-reflect" type="jar" ext="jar" status="no" details="" size="3587892" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.12.4.jar">
+						<origin-location is-local="false" location="file:/C:/Users/Margarida Reis/.sbt/preloaded/org.scala-lang/scala-reflect/2.12.4/jars/scala-reflect.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
@@ -49,10 +49,10 @@
 		<module organisation="com.sksamuel.scrimage" name="scrimage-filters_2.12">
 			<revision name="3.0.0-alpha4" status="release" pubdate="20170914131224" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/sksamuel/scrimage" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="85">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="3559" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.sksamuel.scrimage\scrimage-filters_2.12\ivy-3.0.0-alpha4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/sksamuel/scrimage/scrimage-filters_2.12/3.0.0-alpha4/scrimage-filters_2.12-3.0.0-alpha4.pom"/>
+				<metadata-artifact status="no" details="" size="3559" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.sksamuel.scrimage\scrimage-filters_2.12\ivy-3.0.0-alpha4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/sksamuel/scrimage/scrimage-filters_2.12/3.0.0-alpha4/scrimage-filters_2.12-3.0.0-alpha4.pom"/>
 				<caller organisation="reader" name="reader_2.12" conf="test, compile, provided, test-internal, runtime, optional" rev="3.0.0-alpha4" rev-constraint-default="3.0.0-alpha4" rev-constraint-dynamic="3.0.0-alpha4" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="scrimage-filters_2.12" type="jar" ext="jar" status="no" details="" size="6790074" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.sksamuel.scrimage\scrimage-filters_2.12\jars\scrimage-filters_2.12-3.0.0-alpha4.jar">
+					<artifact name="scrimage-filters_2.12" type="jar" ext="jar" status="no" details="" size="6790074" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.sksamuel.scrimage\scrimage-filters_2.12\jars\scrimage-filters_2.12-3.0.0-alpha4.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/sksamuel/scrimage/scrimage-filters_2.12/3.0.0-alpha4/scrimage-filters_2.12-3.0.0-alpha4.jar"/>
 					</artifact>
 				</artifacts>
@@ -61,11 +61,11 @@
 		<module organisation="com.sksamuel.scrimage" name="scrimage-core_2.12">
 			<revision name="3.0.0-alpha4" status="release" pubdate="20170914131203" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/sksamuel/scrimage" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="75">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="4577" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.sksamuel.scrimage\scrimage-core_2.12\ivy-3.0.0-alpha4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/sksamuel/scrimage/scrimage-core_2.12/3.0.0-alpha4/scrimage-core_2.12-3.0.0-alpha4.pom"/>
+				<metadata-artifact status="no" details="" size="4577" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.sksamuel.scrimage\scrimage-core_2.12\ivy-3.0.0-alpha4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/sksamuel/scrimage/scrimage-core_2.12/3.0.0-alpha4/scrimage-core_2.12-3.0.0-alpha4.pom"/>
 				<caller organisation="com.sksamuel.scrimage" name="scrimage-filters_2.12" conf="default, compile, runtime, master" rev="3.0.0-alpha4" rev-constraint-default="3.0.0-alpha4" rev-constraint-dynamic="3.0.0-alpha4" callerrev="3.0.0-alpha4"/>
 				<caller organisation="reader" name="reader_2.12" conf="test, compile, provided, test-internal, runtime, optional" rev="3.0.0-alpha4" rev-constraint-default="3.0.0-alpha4" rev-constraint-dynamic="3.0.0-alpha4" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="scrimage-core_2.12" type="jar" ext="jar" status="no" details="" size="516969" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.sksamuel.scrimage\scrimage-core_2.12\jars\scrimage-core_2.12-3.0.0-alpha4.jar">
+					<artifact name="scrimage-core_2.12" type="jar" ext="jar" status="no" details="" size="516969" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.sksamuel.scrimage\scrimage-core_2.12\jars\scrimage-core_2.12-3.0.0-alpha4.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/sksamuel/scrimage/scrimage-core_2.12/3.0.0-alpha4/scrimage-core_2.12-3.0.0-alpha4.jar"/>
 					</artifact>
 				</artifacts>
@@ -74,10 +74,10 @@
 		<module organisation="ar.com.hjg" name="pngj">
 			<revision name="2.1.0" status="release" pubdate="20140506132225" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://pngj.googlecode.com/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="84">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="3417" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\ar.com.hjg\pngj\ivy-2.1.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/ar/com/hjg/pngj/2.1.0/pngj-2.1.0.pom"/>
+				<metadata-artifact status="no" details="" size="3417" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\ar.com.hjg\pngj\ivy-2.1.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/ar/com/hjg/pngj/2.1.0/pngj-2.1.0.pom"/>
 				<caller organisation="com.sksamuel.scrimage" name="scrimage-core_2.12" conf="default, compile, runtime, master" rev="2.1.0" rev-constraint-default="2.1.0" rev-constraint-dynamic="2.1.0" callerrev="3.0.0-alpha4"/>
 				<artifacts>
-					<artifact name="pngj" type="jar" ext="jar" status="no" details="" size="167436" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\ar.com.hjg\pngj\jars\pngj-2.1.0.jar">
+					<artifact name="pngj" type="jar" ext="jar" status="no" details="" size="167436" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\ar.com.hjg\pngj\jars\pngj-2.1.0.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/ar/com/hjg/pngj/2.1.0/pngj-2.1.0.jar"/>
 					</artifact>
 				</artifacts>
@@ -86,10 +86,10 @@
 		<module organisation="com.drewnoakes" name="metadata-extractor">
 			<revision name="2.10.1" status="release" pubdate="20170215230049" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://drewnoakes.com/code/exif/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="82">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="3670" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.drewnoakes\metadata-extractor\ivy-2.10.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/drewnoakes/metadata-extractor/2.10.1/metadata-extractor-2.10.1.pom"/>
+				<metadata-artifact status="no" details="" size="3670" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.drewnoakes\metadata-extractor\ivy-2.10.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/drewnoakes/metadata-extractor/2.10.1/metadata-extractor-2.10.1.pom"/>
 				<caller organisation="com.sksamuel.scrimage" name="scrimage-core_2.12" conf="default, compile, runtime, master" rev="2.10.1" rev-constraint-default="2.10.1" rev-constraint-dynamic="2.10.1" callerrev="3.0.0-alpha4"/>
 				<artifacts>
-					<artifact name="metadata-extractor" type="jar" ext="jar" status="no" details="" size="492760" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.drewnoakes\metadata-extractor\jars\metadata-extractor-2.10.1.jar">
+					<artifact name="metadata-extractor" type="jar" ext="jar" status="no" details="" size="492760" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.drewnoakes\metadata-extractor\jars\metadata-extractor-2.10.1.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/drewnoakes/metadata-extractor/2.10.1/metadata-extractor-2.10.1.jar"/>
 					</artifact>
 				</artifacts>
@@ -98,10 +98,10 @@
 		<module organisation="com.adobe.xmp" name="xmpcore">
 			<revision name="5.1.3" status="release" pubdate="20160902155941" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.adobe.com/devnet/xmp.html" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="83">
 				<license name="The BSD License" url="http://www.adobe.com/devnet/xmp/library/eula-xmp-library-java.html"/>
-				<metadata-artifact status="no" details="" size="2596" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.adobe.xmp\xmpcore\ivy-5.1.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/adobe/xmp/xmpcore/5.1.3/xmpcore-5.1.3.pom"/>
+				<metadata-artifact status="no" details="" size="2596" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.adobe.xmp\xmpcore\ivy-5.1.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/adobe/xmp/xmpcore/5.1.3/xmpcore-5.1.3.pom"/>
 				<caller organisation="com.drewnoakes" name="metadata-extractor" conf="compile, runtime" rev="5.1.3" rev-constraint-default="5.1.3" rev-constraint-dynamic="5.1.3" callerrev="2.10.1"/>
 				<artifacts>
-					<artifact name="xmpcore" type="jar" ext="jar" status="no" details="" size="91822" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.adobe.xmp\xmpcore\jars\xmpcore-5.1.3.jar">
+					<artifact name="xmpcore" type="jar" ext="jar" status="no" details="" size="91822" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.adobe.xmp\xmpcore\jars\xmpcore-5.1.3.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/adobe/xmp/xmpcore/5.1.3/xmpcore-5.1.3.jar"/>
 					</artifact>
 				</artifacts>
@@ -110,10 +110,10 @@
 		<module organisation="com.twelvemonkeys.imageio" name="imageio-jpeg">
 			<revision name="3.3.2" status="release" pubdate="20170202203946" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="80">
 				<license name="The BSD License" url="https://github.com/haraldk/TwelveMonkeys#license"/>
-				<metadata-artifact status="no" details="" size="6414" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.twelvemonkeys.imageio\imageio-jpeg\ivy-3.3.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twelvemonkeys/imageio/imageio-jpeg/3.3.2/imageio-jpeg-3.3.2.pom"/>
+				<metadata-artifact status="no" details="" size="6414" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.twelvemonkeys.imageio\imageio-jpeg\ivy-3.3.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twelvemonkeys/imageio/imageio-jpeg/3.3.2/imageio-jpeg-3.3.2.pom"/>
 				<caller organisation="com.sksamuel.scrimage" name="scrimage-core_2.12" conf="default, compile, runtime, master" rev="3.3.2" rev-constraint-default="3.3.2" rev-constraint-dynamic="3.3.2" callerrev="3.0.0-alpha4"/>
 				<artifacts>
-					<artifact name="imageio-jpeg" type="jar" ext="jar" status="no" details="" size="82067" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.twelvemonkeys.imageio\imageio-jpeg\jars\imageio-jpeg-3.3.2.jar">
+					<artifact name="imageio-jpeg" type="jar" ext="jar" status="no" details="" size="82067" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.twelvemonkeys.imageio\imageio-jpeg\jars\imageio-jpeg-3.3.2.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/twelvemonkeys/imageio/imageio-jpeg/3.3.2/imageio-jpeg-3.3.2.jar"/>
 					</artifact>
 				</artifacts>
@@ -122,10 +122,10 @@
 		<module organisation="com.twelvemonkeys.imageio" name="imageio-metadata">
 			<revision name="3.3.2" status="release" pubdate="20170202203742" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="81">
 				<license name="The BSD License" url="https://github.com/haraldk/TwelveMonkeys#license"/>
-				<metadata-artifact status="no" details="" size="6215" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.twelvemonkeys.imageio\imageio-metadata\ivy-3.3.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twelvemonkeys/imageio/imageio-metadata/3.3.2/imageio-metadata-3.3.2.pom"/>
+				<metadata-artifact status="no" details="" size="6215" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.twelvemonkeys.imageio\imageio-metadata\ivy-3.3.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twelvemonkeys/imageio/imageio-metadata/3.3.2/imageio-metadata-3.3.2.pom"/>
 				<caller organisation="com.twelvemonkeys.imageio" name="imageio-jpeg" conf="compile, runtime" rev="3.3.2" rev-constraint-default="3.3.2" rev-constraint-dynamic="3.3.2" callerrev="3.3.2"/>
 				<artifacts>
-					<artifact name="imageio-metadata" type="jar" ext="jar" status="no" details="" size="73636" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.twelvemonkeys.imageio\imageio-metadata\jars\imageio-metadata-3.3.2.jar">
+					<artifact name="imageio-metadata" type="jar" ext="jar" status="no" details="" size="73636" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.twelvemonkeys.imageio\imageio-metadata\jars\imageio-metadata-3.3.2.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/twelvemonkeys/imageio/imageio-metadata/3.3.2/imageio-metadata-3.3.2.jar"/>
 					</artifact>
 				</artifacts>
@@ -134,10 +134,10 @@
 		<module organisation="com.twelvemonkeys.imageio" name="imageio-core">
 			<revision name="3.3.2" status="release" pubdate="20170202203728" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="76">
 				<license name="The BSD License" url="https://github.com/haraldk/TwelveMonkeys#license"/>
-				<metadata-artifact status="no" details="" size="6157" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.twelvemonkeys.imageio\imageio-core\ivy-3.3.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twelvemonkeys/imageio/imageio-core/3.3.2/imageio-core-3.3.2.pom"/>
+				<metadata-artifact status="no" details="" size="6157" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.twelvemonkeys.imageio\imageio-core\ivy-3.3.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twelvemonkeys/imageio/imageio-core/3.3.2/imageio-core-3.3.2.pom"/>
 				<caller organisation="com.sksamuel.scrimage" name="scrimage-core_2.12" conf="default, compile, runtime, master" rev="3.3.2" rev-constraint-default="3.3.2" rev-constraint-dynamic="3.3.2" callerrev="3.0.0-alpha4"/>
 				<artifacts>
-					<artifact name="imageio-core" type="jar" ext="jar" status="no" details="" size="67659" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.twelvemonkeys.imageio\imageio-core\jars\imageio-core-3.3.2.jar">
+					<artifact name="imageio-core" type="jar" ext="jar" status="no" details="" size="67659" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.twelvemonkeys.imageio\imageio-core\jars\imageio-core-3.3.2.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/twelvemonkeys/imageio/imageio-core/3.3.2/imageio-core-3.3.2.jar"/>
 					</artifact>
 				</artifacts>
@@ -146,13 +146,13 @@
 		<module organisation="com.twelvemonkeys.common" name="common-image">
 			<revision name="3.3.2" status="release" pubdate="20170202203652" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="79">
 				<license name="The BSD License" url="https://github.com/haraldk/TwelveMonkeys#license"/>
-				<metadata-artifact status="no" details="" size="4654" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.twelvemonkeys.common\common-image\ivy-3.3.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twelvemonkeys/common/common-image/3.3.2/common-image-3.3.2.pom"/>
+				<metadata-artifact status="no" details="" size="4654" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.twelvemonkeys.common\common-image\ivy-3.3.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twelvemonkeys/common/common-image/3.3.2/common-image-3.3.2.pom"/>
 				<caller organisation="com.sksamuel.scrimage" name="scrimage-core_2.12" conf="default, compile, runtime, master" rev="3.3.2" rev-constraint-default="3.3.2" rev-constraint-dynamic="3.3.2" callerrev="3.0.0-alpha4"/>
 				<caller organisation="com.twelvemonkeys.imageio" name="imageio-jpeg" conf="compile, runtime" rev="3.3.2" rev-constraint-default="3.3.2" rev-constraint-dynamic="3.3.2" callerrev="3.3.2"/>
 				<caller organisation="com.twelvemonkeys.imageio" name="imageio-metadata" conf="compile, runtime" rev="3.3.2" rev-constraint-default="3.3.2" rev-constraint-dynamic="3.3.2" callerrev="3.3.2"/>
 				<caller organisation="com.twelvemonkeys.imageio" name="imageio-core" conf="compile, runtime" rev="3.3.2" rev-constraint-default="3.3.2" rev-constraint-dynamic="3.3.2" callerrev="3.3.2"/>
 				<artifacts>
-					<artifact name="common-image" type="jar" ext="jar" status="no" details="" size="86054" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.twelvemonkeys.common\common-image\jars\common-image-3.3.2.jar">
+					<artifact name="common-image" type="jar" ext="jar" status="no" details="" size="86054" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.twelvemonkeys.common\common-image\jars\common-image-3.3.2.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/twelvemonkeys/common/common-image/3.3.2/common-image-3.3.2.jar"/>
 					</artifact>
 				</artifacts>
@@ -161,14 +161,14 @@
 		<module organisation="com.twelvemonkeys.common" name="common-io">
 			<revision name="3.3.2" status="release" pubdate="20170202203638" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="78">
 				<license name="The BSD License" url="https://github.com/haraldk/TwelveMonkeys#license"/>
-				<metadata-artifact status="no" details="" size="4532" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.twelvemonkeys.common\common-io\ivy-3.3.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twelvemonkeys/common/common-io/3.3.2/common-io-3.3.2.pom"/>
+				<metadata-artifact status="no" details="" size="4532" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.twelvemonkeys.common\common-io\ivy-3.3.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twelvemonkeys/common/common-io/3.3.2/common-io-3.3.2.pom"/>
 				<caller organisation="com.sksamuel.scrimage" name="scrimage-core_2.12" conf="default, compile, runtime, master" rev="3.3.2" rev-constraint-default="3.3.2" rev-constraint-dynamic="3.3.2" callerrev="3.0.0-alpha4"/>
 				<caller organisation="com.twelvemonkeys.imageio" name="imageio-jpeg" conf="compile, runtime" rev="3.3.2" rev-constraint-default="3.3.2" rev-constraint-dynamic="3.3.2" callerrev="3.3.2"/>
 				<caller organisation="com.twelvemonkeys.common" name="common-image" conf="compile, runtime" rev="3.3.2" rev-constraint-default="3.3.2" rev-constraint-dynamic="3.3.2" callerrev="3.3.2"/>
 				<caller organisation="com.twelvemonkeys.imageio" name="imageio-metadata" conf="compile, runtime" rev="3.3.2" rev-constraint-default="3.3.2" rev-constraint-dynamic="3.3.2" callerrev="3.3.2"/>
 				<caller organisation="com.twelvemonkeys.imageio" name="imageio-core" conf="compile, runtime" rev="3.3.2" rev-constraint-default="3.3.2" rev-constraint-dynamic="3.3.2" callerrev="3.3.2"/>
 				<artifacts>
-					<artifact name="common-io" type="jar" ext="jar" status="no" details="" size="90802" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.twelvemonkeys.common\common-io\jars\common-io-3.3.2.jar">
+					<artifact name="common-io" type="jar" ext="jar" status="no" details="" size="90802" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.twelvemonkeys.common\common-io\jars\common-io-3.3.2.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/twelvemonkeys/common/common-io/3.3.2/common-io-3.3.2.jar"/>
 					</artifact>
 				</artifacts>
@@ -177,13 +177,13 @@
 		<module organisation="com.twelvemonkeys.common" name="common-lang">
 			<revision name="3.3.2" status="release" pubdate="20170202203605" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="77">
 				<license name="The BSD License" url="https://github.com/haraldk/TwelveMonkeys#license"/>
-				<metadata-artifact status="no" details="" size="4232" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.twelvemonkeys.common\common-lang\ivy-3.3.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twelvemonkeys/common/common-lang/3.3.2/common-lang-3.3.2.pom"/>
+				<metadata-artifact status="no" details="" size="4232" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.twelvemonkeys.common\common-lang\ivy-3.3.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twelvemonkeys/common/common-lang/3.3.2/common-lang-3.3.2.pom"/>
 				<caller organisation="com.sksamuel.scrimage" name="scrimage-core_2.12" conf="default, compile, runtime, master" rev="3.3.2" rev-constraint-default="3.3.2" rev-constraint-dynamic="3.3.2" callerrev="3.0.0-alpha4"/>
 				<caller organisation="com.twelvemonkeys.imageio" name="imageio-jpeg" conf="compile, runtime" rev="3.3.2" rev-constraint-default="3.3.2" rev-constraint-dynamic="3.3.2" callerrev="3.3.2"/>
 				<caller organisation="com.twelvemonkeys.imageio" name="imageio-metadata" conf="compile, runtime" rev="3.3.2" rev-constraint-default="3.3.2" rev-constraint-dynamic="3.3.2" callerrev="3.3.2"/>
 				<caller organisation="com.twelvemonkeys.imageio" name="imageio-core" conf="compile, runtime" rev="3.3.2" rev-constraint-default="3.3.2" rev-constraint-dynamic="3.3.2" callerrev="3.3.2"/>
 				<artifacts>
-					<artifact name="common-lang" type="jar" ext="jar" status="no" details="" size="121071" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.twelvemonkeys.common\common-lang\jars\common-lang-3.3.2.jar">
+					<artifact name="common-lang" type="jar" ext="jar" status="no" details="" size="121071" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.twelvemonkeys.common\common-lang\jars\common-lang-3.3.2.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/twelvemonkeys/common/common-lang/3.3.2/common-lang-3.3.2.jar"/>
 					</artifact>
 				</artifacts>
@@ -192,10 +192,10 @@
 		<module organisation="net.sf.cssbox" name="pdf2dom">
 			<revision name="1.7" status="release" pubdate="20180130114223" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://cssbox.sourceforge.net/pdf2dom" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="61">
 				<license name="GNU Lesser General Public License 3.0" url="http://www.gnu.org/licenses/lgpl-3.0.txt"/>
-				<metadata-artifact status="no" details="" size="4953" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\net.sf.cssbox\pdf2dom\ivy-1.7.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/sf/cssbox/pdf2dom/1.7/pdf2dom-1.7.pom"/>
+				<metadata-artifact status="no" details="" size="4953" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\net.sf.cssbox\pdf2dom\ivy-1.7.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/sf/cssbox/pdf2dom/1.7/pdf2dom-1.7.pom"/>
 				<caller organisation="reader" name="reader_2.12" conf="test, compile, provided, test-internal, runtime, optional" rev="1.7" rev-constraint-default="1.7" rev-constraint-dynamic="1.7" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="pdf2dom" type="jar" ext="jar" status="no" details="" size="61889" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\net.sf.cssbox\pdf2dom\jars\pdf2dom-1.7.jar">
+					<artifact name="pdf2dom" type="jar" ext="jar" status="no" details="" size="61889" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\net.sf.cssbox\pdf2dom\jars\pdf2dom-1.7.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/net/sf/cssbox/pdf2dom/1.7/pdf2dom-1.7.jar"/>
 					</artifact>
 				</artifacts>
@@ -204,10 +204,10 @@
 		<module organisation="net.mabboud.fontverter" name="FontVerter">
 			<revision name="1.2.20" status="release" pubdate="20170706010629" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/m-abboud/FontVerter" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="71">
 				<license name="GNU Lesser General Public License 3.0" url="http://www.gnu.org/licenses/lgpl-3.0.txt"/>
-				<metadata-artifact status="no" details="" size="4362" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\net.mabboud.fontverter\FontVerter\ivy-1.2.20.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/mabboud/fontverter/FontVerter/1.2.20/FontVerter-1.2.20.pom"/>
+				<metadata-artifact status="no" details="" size="4362" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\net.mabboud.fontverter\FontVerter\ivy-1.2.20.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/mabboud/fontverter/FontVerter/1.2.20/FontVerter-1.2.20.pom"/>
 				<caller organisation="net.sf.cssbox" name="pdf2dom" conf="default, compile, runtime, master" rev="1.2.20" rev-constraint-default="1.2.20" rev-constraint-dynamic="1.2.20" callerrev="1.7"/>
 				<artifacts>
-					<artifact name="FontVerter" type="jar" ext="jar" status="no" details="" size="326914" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\net.mabboud.fontverter\FontVerter\jars\FontVerter-1.2.20.jar">
+					<artifact name="FontVerter" type="jar" ext="jar" status="no" details="" size="326914" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\net.mabboud.fontverter\FontVerter\jars\FontVerter-1.2.20.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/net/mabboud/fontverter/FontVerter/1.2.20/FontVerter-1.2.20.jar"/>
 					</artifact>
 				</artifacts>
@@ -217,10 +217,10 @@
 			<revision name="0.9.9" status="release" pubdate="20140925085338" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/ronmamo/reflections" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="72">
 				<license name="WTFPL" url="http://www.wtfpl.net/"/>
 				<license name="The New BSD License" url="http://www.opensource.org/licenses/bsd-license.html"/>
-				<metadata-artifact status="no" details="" size="4294" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.reflections\reflections\ivy-0.9.9.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/reflections/reflections/0.9.9/reflections-0.9.9.pom"/>
+				<metadata-artifact status="no" details="" size="4294" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.reflections\reflections\ivy-0.9.9.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/reflections/reflections/0.9.9/reflections-0.9.9.pom"/>
 				<caller organisation="net.mabboud.fontverter" name="FontVerter" conf="compile, runtime" rev="0.9.9" rev-constraint-default="0.9.9" rev-constraint-dynamic="0.9.9" callerrev="1.2.20"/>
 				<artifacts>
-					<artifact name="reflections" type="jar" ext="jar" status="no" details="" size="141744" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.9.jar">
+					<artifact name="reflections" type="jar" ext="jar" status="no" details="" size="141744" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.9.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/reflections/reflections/0.9.9/reflections-0.9.9.jar"/>
 					</artifact>
 				</artifacts>
@@ -229,10 +229,10 @@
 		<module organisation="com.google.code.findbugs" name="annotations">
 			<revision name="2.0.1" status="release" pubdate="20120729231801" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://findbugs.sourceforge.net/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="74">
 				<license name="GNU Lesser Public License" url="http://www.gnu.org/licenses/lgpl.html"/>
-				<metadata-artifact status="no" details="" size="2541" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.google.code.findbugs\annotations\ivy-2.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/code/findbugs/annotations/2.0.1/annotations-2.0.1.pom"/>
+				<metadata-artifact status="no" details="" size="2541" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.google.code.findbugs\annotations\ivy-2.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/code/findbugs/annotations/2.0.1/annotations-2.0.1.pom"/>
 				<caller organisation="org.reflections" name="reflections" conf="compile, runtime" rev="2.0.1" rev-constraint-default="2.0.1" rev-constraint-dynamic="2.0.1" callerrev="0.9.9"/>
 				<artifacts>
-					<artifact name="annotations" type="jar" ext="jar" status="no" details="" size="74557" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.google.code.findbugs\annotations\jars\annotations-2.0.1.jar">
+					<artifact name="annotations" type="jar" ext="jar" status="no" details="" size="74557" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.google.code.findbugs\annotations\jars\annotations-2.0.1.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/code/findbugs/annotations/2.0.1/annotations-2.0.1.jar"/>
 					</artifact>
 				</artifacts>
@@ -243,10 +243,10 @@
 				<license name="MPL 1.1" url="http://www.mozilla.org/MPL/MPL-1.1.html"/>
 				<license name="LGPL 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
 				<license name="Apache License 2.0" url="http://www.apache.org/licenses/"/>
-				<metadata-artifact status="no" details="" size="3235" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.javassist\javassist\ivy-3.18.2-GA.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/javassist/javassist/3.18.2-GA/javassist-3.18.2-GA.pom"/>
+				<metadata-artifact status="no" details="" size="3235" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.javassist\javassist\ivy-3.18.2-GA.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/javassist/javassist/3.18.2-GA/javassist-3.18.2-GA.pom"/>
 				<caller organisation="org.reflections" name="reflections" conf="compile, runtime" rev="3.18.2-GA" rev-constraint-default="3.18.2-GA" rev-constraint-dynamic="3.18.2-GA" callerrev="0.9.9"/>
 				<artifacts>
-					<artifact name="javassist" type="bundle" ext="jar" status="no" details="" size="714524" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.18.2-GA.jar">
+					<artifact name="javassist" type="bundle" ext="jar" status="no" details="" size="714524" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.18.2-GA.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/javassist/javassist/3.18.2-GA/javassist-3.18.2-GA.jar"/>
 					</artifact>
 				</artifacts>
@@ -255,19 +255,19 @@
 		<module organisation="org.apache.pdfbox" name="pdfbox">
 			<revision name="2.0.8" status="release" pubdate="20171030183251" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master, default, default(compile)" position="69">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="8013" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.apache.pdfbox\pdfbox\ivy-2.0.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/pdfbox/pdfbox/2.0.8/pdfbox-2.0.8.pom"/>
+				<metadata-artifact status="no" details="" size="8013" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.apache.pdfbox\pdfbox\ivy-2.0.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/pdfbox/pdfbox/2.0.8/pdfbox-2.0.8.pom"/>
 				<caller organisation="net.sf.cssbox" name="pdf2dom" conf="default, compile, runtime, master" rev="2.0.8" rev-constraint-default="2.0.8" rev-constraint-dynamic="2.0.8" callerrev="1.7"/>
 				<caller organisation="reader" name="reader_2.12" conf="test, compile, provided, test-internal, runtime, optional" rev="2.0.7" rev-constraint-default="2.0.7" rev-constraint-dynamic="2.0.7" callerrev="0.1"/>
 				<caller organisation="net.mabboud.fontverter" name="FontVerter" conf="compile, runtime" rev="2.0.0" rev-constraint-default="2.0.0" rev-constraint-dynamic="2.0.0" callerrev="1.2.20"/>
 				<artifacts>
-					<artifact name="pdfbox" type="bundle" ext="jar" status="no" details="" size="2485070" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.apache.pdfbox\pdfbox\bundles\pdfbox-2.0.8.jar">
+					<artifact name="pdfbox" type="bundle" ext="jar" status="no" details="" size="2485070" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.apache.pdfbox\pdfbox\bundles\pdfbox-2.0.8.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/pdfbox/pdfbox/2.0.8/pdfbox-2.0.8.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 			<revision name="2.0.7" status="release" pubdate="20170717181455" resolver="sbt-chain" artresolver="sbt-chain" evicted="latest-revision" evicted-reason="" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="-1">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="7946" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.apache.pdfbox\pdfbox\ivy-2.0.7.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/pdfbox/pdfbox/2.0.7/pdfbox-2.0.7.pom"/>
+				<metadata-artifact status="no" details="" size="7946" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.apache.pdfbox\pdfbox\ivy-2.0.7.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/pdfbox/pdfbox/2.0.7/pdfbox-2.0.7.pom"/>
 				<evicted-by rev="2.0.8"/>
 				<caller organisation="reader" name="reader_2.12" conf="test, compile, provided, test-internal, runtime, optional" rev="2.0.7" rev-constraint-default="2.0.7" rev-constraint-dynamic="2.0.7" callerrev="0.1"/>
 				<artifacts>
@@ -283,18 +283,18 @@
 		<module organisation="org.apache.pdfbox" name="fontbox">
 			<revision name="2.0.8" status="release" pubdate="20171030182750" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://pdfbox.apache.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="70">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="6831" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.apache.pdfbox\fontbox\ivy-2.0.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/pdfbox/fontbox/2.0.8/fontbox-2.0.8.pom"/>
+				<metadata-artifact status="no" details="" size="6831" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.apache.pdfbox\fontbox\ivy-2.0.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/pdfbox/fontbox/2.0.8/fontbox-2.0.8.pom"/>
 				<caller organisation="org.apache.pdfbox" name="pdfbox" conf="default, compile, runtime, master" rev="2.0.7" rev-constraint-default="2.0.7" rev-constraint-dynamic="2.0.7" callerrev="2.0.7"/>
 				<caller organisation="org.apache.pdfbox" name="pdfbox" conf="compile, runtime" rev="2.0.8" rev-constraint-default="2.0.8" rev-constraint-dynamic="2.0.8" callerrev="2.0.8"/>
 				<artifacts>
-					<artifact name="fontbox" type="bundle" ext="jar" status="no" details="" size="1483772" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.apache.pdfbox\fontbox\bundles\fontbox-2.0.8.jar">
+					<artifact name="fontbox" type="bundle" ext="jar" status="no" details="" size="1483772" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.apache.pdfbox\fontbox\bundles\fontbox-2.0.8.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/pdfbox/fontbox/2.0.8/fontbox-2.0.8.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 			<revision name="2.0.7" status="release" pubdate="20170717181053" resolver="sbt-chain" artresolver="sbt-chain" evicted="latest-revision" evicted-reason="" homepage="http://pdfbox.apache.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="-1">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="6831" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.apache.pdfbox\fontbox\ivy-2.0.7.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/pdfbox/fontbox/2.0.7/fontbox-2.0.7.pom"/>
+				<metadata-artifact status="no" details="" size="6831" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.apache.pdfbox\fontbox\ivy-2.0.7.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/pdfbox/fontbox/2.0.7/fontbox-2.0.7.pom"/>
 				<evicted-by rev="2.0.8"/>
 				<caller organisation="org.apache.pdfbox" name="pdfbox" conf="default, compile, runtime, master" rev="2.0.7" rev-constraint-default="2.0.7" rev-constraint-dynamic="2.0.7" callerrev="2.0.7"/>
 				<artifacts>
@@ -304,10 +304,10 @@
 		<module organisation="net.sf.cssbox" name="cssbox">
 			<revision name="4.14" status="release" pubdate="20180130093053" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://cssbox.sourceforge.net/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="62">
 				<license name="GNU Lesser General Public License 3.0" url="http://www.gnu.org/licenses/lgpl-3.0.txt"/>
-				<metadata-artifact status="no" details="" size="4028" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\net.sf.cssbox\cssbox\ivy-4.14.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/sf/cssbox/cssbox/4.14/cssbox-4.14.pom"/>
+				<metadata-artifact status="no" details="" size="4028" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\net.sf.cssbox\cssbox\ivy-4.14.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/sf/cssbox/cssbox/4.14/cssbox-4.14.pom"/>
 				<caller organisation="net.sf.cssbox" name="pdf2dom" conf="default, compile, runtime, master" rev="4.14" rev-constraint-default="4.14" rev-constraint-dynamic="4.14" callerrev="1.7"/>
 				<artifacts>
-					<artifact name="cssbox" type="jar" ext="jar" status="no" details="" size="270878" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\net.sf.cssbox\cssbox\jars\cssbox-4.14.jar">
+					<artifact name="cssbox" type="jar" ext="jar" status="no" details="" size="270878" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\net.sf.cssbox\cssbox\jars\cssbox-4.14.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/net/sf/cssbox/cssbox/4.14/cssbox-4.14.jar"/>
 					</artifact>
 				</artifacts>
@@ -316,10 +316,10 @@
 		<module organisation="net.sf.cssbox" name="jstyleparser">
 			<revision name="3.2" status="release" pubdate="20180129220845" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://cssbox.sourceforge.net/jstyleparser" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="66">
 				<license name="GNU Lesser General Public License 3.0" url="http://www.gnu.org/licenses/lgpl-3.0.txt"/>
-				<metadata-artifact status="no" details="" size="4596" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\net.sf.cssbox\jstyleparser\ivy-3.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/sf/cssbox/jstyleparser/3.2/jstyleparser-3.2.pom"/>
+				<metadata-artifact status="no" details="" size="4596" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\net.sf.cssbox\jstyleparser\ivy-3.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/sf/cssbox/jstyleparser/3.2/jstyleparser-3.2.pom"/>
 				<caller organisation="net.sf.cssbox" name="cssbox" conf="compile, runtime" rev="3.2" rev-constraint-default="3.2" rev-constraint-dynamic="3.2" callerrev="4.14"/>
 				<artifacts>
-					<artifact name="jstyleparser" type="jar" ext="jar" status="no" details="" size="551003" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\net.sf.cssbox\jstyleparser\jars\jstyleparser-3.2.jar">
+					<artifact name="jstyleparser" type="jar" ext="jar" status="no" details="" size="551003" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\net.sf.cssbox\jstyleparser\jars\jstyleparser-3.2.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/net/sf/cssbox/jstyleparser/3.2/jstyleparser-3.2.jar"/>
 					</artifact>
 				</artifacts>
@@ -328,10 +328,10 @@
 		<module organisation="org.unbescape" name="unbescape">
 			<revision name="1.1.5.RELEASE" status="release" pubdate="20170601222441" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.unbescape.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="68">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="3278" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.unbescape\unbescape\ivy-1.1.5.RELEASE.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/unbescape/unbescape/1.1.5.RELEASE/unbescape-1.1.5.RELEASE.pom"/>
+				<metadata-artifact status="no" details="" size="3278" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.unbescape\unbescape\ivy-1.1.5.RELEASE.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/unbescape/unbescape/1.1.5.RELEASE/unbescape-1.1.5.RELEASE.pom"/>
 				<caller organisation="net.sf.cssbox" name="jstyleparser" conf="compile, runtime" rev="1.1.5.RELEASE" rev-constraint-default="1.1.5.RELEASE" rev-constraint-dynamic="1.1.5.RELEASE" callerrev="3.2"/>
 				<artifacts>
-					<artifact name="unbescape" type="jar" ext="jar" status="no" details="" size="165305" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.unbescape\unbescape\jars\unbescape-1.1.5.RELEASE.jar">
+					<artifact name="unbescape" type="jar" ext="jar" status="no" details="" size="165305" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.unbescape\unbescape\jars\unbescape-1.1.5.RELEASE.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/unbescape/unbescape/1.1.5.RELEASE/unbescape-1.1.5.RELEASE.jar"/>
 					</artifact>
 				</artifacts>
@@ -340,10 +340,10 @@
 		<module organisation="org.antlr" name="antlr4-runtime">
 			<revision name="4.5.3" status="release" pubdate="20160331003535" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="67">
 				<license name="The BSD License" url="http://www.antlr.org/license.html"/>
-				<metadata-artifact status="no" details="" size="3429" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.antlr\antlr4-runtime\ivy-4.5.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/antlr/antlr4-runtime/4.5.3/antlr4-runtime-4.5.3.pom"/>
+				<metadata-artifact status="no" details="" size="3429" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.antlr\antlr4-runtime\ivy-4.5.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/antlr/antlr4-runtime/4.5.3/antlr4-runtime-4.5.3.pom"/>
 				<caller organisation="net.sf.cssbox" name="jstyleparser" conf="compile, runtime" rev="4.5.3" rev-constraint-default="4.5.3" rev-constraint-dynamic="4.5.3" callerrev="3.2"/>
 				<artifacts>
-					<artifact name="antlr4-runtime" type="jar" ext="jar" status="no" details="" size="302248" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.antlr\antlr4-runtime\jars\antlr4-runtime-4.5.3.jar">
+					<artifact name="antlr4-runtime" type="jar" ext="jar" status="no" details="" size="302248" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.antlr\antlr4-runtime\jars\antlr4-runtime-4.5.3.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/antlr/antlr4-runtime/4.5.3/antlr4-runtime-4.5.3.jar"/>
 					</artifact>
 				</artifacts>
@@ -352,10 +352,10 @@
 		<module organisation="net.sourceforge.nekohtml" name="nekohtml">
 			<revision name="1.9.22" status="release" pubdate="20150417134242" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://nekohtml.sourceforge.net/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="63">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="2727" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\net.sourceforge.nekohtml\nekohtml\ivy-1.9.22.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/sourceforge/nekohtml/nekohtml/1.9.22/nekohtml-1.9.22.pom"/>
+				<metadata-artifact status="no" details="" size="2727" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\net.sourceforge.nekohtml\nekohtml\ivy-1.9.22.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/sourceforge/nekohtml/nekohtml/1.9.22/nekohtml-1.9.22.pom"/>
 				<caller organisation="net.sf.cssbox" name="cssbox" conf="compile, runtime" rev="1.9.22" rev-constraint-default="1.9.22" rev-constraint-dynamic="1.9.22" callerrev="4.14"/>
 				<artifacts>
-					<artifact name="nekohtml" type="jar" ext="jar" status="no" details="" size="125315" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\net.sourceforge.nekohtml\nekohtml\jars\nekohtml-1.9.22.jar">
+					<artifact name="nekohtml" type="jar" ext="jar" status="no" details="" size="125315" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\net.sourceforge.nekohtml\nekohtml\jars\nekohtml-1.9.22.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/net/sourceforge/nekohtml/nekohtml/1.9.22/nekohtml-1.9.22.jar"/>
 					</artifact>
 				</artifacts>
@@ -364,20 +364,20 @@
 		<module organisation="xerces" name="xercesImpl">
 			<revision name="2.11.0" status="release" pubdate="20130220202006" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://xerces.apache.org/xerces2-j/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="64">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="4432" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\xerces\xercesImpl\ivy-2.11.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/xerces/xercesImpl/2.11.0/xercesImpl-2.11.0.pom"/>
+				<metadata-artifact status="no" details="" size="4432" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\xerces\xercesImpl\ivy-2.11.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/xerces/xercesImpl/2.11.0/xercesImpl-2.11.0.pom"/>
 				<caller organisation="org.odftoolkit" name="simple-odf" conf="default, compile, runtime, master" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="0.6.6"/>
 				<caller organisation="org.odftoolkit" name="odfdom-java" conf="default, compile, runtime, master" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="0.8.7"/>
 				<caller organisation="net.sourceforge.nekohtml" name="nekohtml" conf="compile, runtime" rev="2.11.0" rev-constraint-default="2.11.0" rev-constraint-dynamic="2.11.0" callerrev="1.9.22"/>
 				<caller organisation="net.sf.cssbox" name="cssbox" conf="compile, runtime" rev="2.11.0" rev-constraint-default="2.11.0" rev-constraint-dynamic="2.11.0" callerrev="4.14"/>
 				<artifacts>
-					<artifact name="xercesImpl" type="jar" ext="jar" status="no" details="" size="1367760" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar">
+					<artifact name="xercesImpl" type="jar" ext="jar" status="no" details="" size="1367760" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/xerces/xercesImpl/2.11.0/xercesImpl-2.11.0.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 			<revision name="2.9.1" status="release" pubdate="20081001231919" resolver="sbt-chain" artresolver="sbt-chain" evicted="latest-revision" evicted-reason="" homepage="http://xerces.apache.org/xerces2-j" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="-1">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="3233" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\xerces\xercesImpl\ivy-2.9.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/xerces/xercesImpl/2.9.1/xercesImpl-2.9.1.pom"/>
+				<metadata-artifact status="no" details="" size="3233" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\xerces\xercesImpl\ivy-2.9.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/xerces/xercesImpl/2.9.1/xercesImpl-2.9.1.pom"/>
 				<evicted-by rev="2.11.0"/>
 				<caller organisation="org.odftoolkit" name="simple-odf" conf="default, compile, runtime, master" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="0.6.6"/>
 				<caller organisation="org.odftoolkit" name="odfdom-java" conf="default, compile, runtime, master" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="0.8.7"/>
@@ -390,18 +390,18 @@
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<license name="The SAX License" url="http://www.saxproject.org/copying.html"/>
 				<license name="The W3C License" url="http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/java-binding.zip"/>
-				<metadata-artifact status="no" details="" size="3290" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\xml-apis\xml-apis\ivy-1.4.01.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.pom"/>
+				<metadata-artifact status="no" details="" size="3290" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\xml-apis\xml-apis\ivy-1.4.01.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.pom"/>
 				<caller organisation="xerces" name="xercesImpl" conf="compile, runtime" rev="1.3.04" rev-constraint-default="1.3.04" rev-constraint-dynamic="1.3.04" callerrev="2.9.1"/>
 				<caller organisation="xerces" name="xercesImpl" conf="compile, runtime" rev="1.4.01" rev-constraint-default="1.4.01" rev-constraint-dynamic="1.4.01" callerrev="2.11.0"/>
 				<caller organisation="net.sf.cssbox" name="cssbox" conf="compile, runtime" rev="1.4.01" rev-constraint-default="1.4.01" rev-constraint-dynamic="1.4.01" callerrev="4.14"/>
 				<artifacts>
-					<artifact name="xml-apis" type="jar" ext="jar" status="no" details="" size="220536" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar">
+					<artifact name="xml-apis" type="jar" ext="jar" status="no" details="" size="220536" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 			<revision name="1.3.04" status="release" pubdate="20061222133752" resolver="sbt-chain" artresolver="sbt-chain" evicted="latest-revision" evicted-reason="" homepage="http://xml.apache.org/commons/components/external/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="-1">
-				<metadata-artifact status="no" details="" size="2974" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\xml-apis\xml-apis\ivy-1.3.04.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.pom"/>
+				<metadata-artifact status="no" details="" size="2974" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\xml-apis\xml-apis\ivy-1.3.04.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.pom"/>
 				<evicted-by rev="1.4.01"/>
 				<caller organisation="xerces" name="xercesImpl" conf="compile, runtime" rev="1.3.04" rev-constraint-default="1.3.04" rev-constraint-dynamic="1.3.04" callerrev="2.9.1"/>
 				<artifacts>
@@ -411,10 +411,10 @@
 		<module organisation="org.odftoolkit" name="simple-odf">
 			<revision name="0.6.6" status="release" pubdate="20110812061109" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://odftoolkit.org/projects/simple/pages/Home" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="60">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="3857" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.odftoolkit\simple-odf\ivy-0.6.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/odftoolkit/simple-odf/0.6.6/simple-odf-0.6.6.pom"/>
+				<metadata-artifact status="no" details="" size="3857" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.odftoolkit\simple-odf\ivy-0.6.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/odftoolkit/simple-odf/0.6.6/simple-odf-0.6.6.pom"/>
 				<caller organisation="reader" name="reader_2.12" conf="test, compile, provided, test-internal, runtime, optional" rev="0.6.6" rev-constraint-default="0.6.6" rev-constraint-dynamic="0.6.6" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="simple-odf" type="jar" ext="jar" status="no" details="" size="455458" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.odftoolkit\simple-odf\jars\simple-odf-0.6.6.jar">
+					<artifact name="simple-odf" type="jar" ext="jar" status="no" details="" size="455458" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.odftoolkit\simple-odf\jars\simple-odf-0.6.6.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/odftoolkit/simple-odf/0.6.6/simple-odf-0.6.6.jar"/>
 					</artifact>
 				</artifacts>
@@ -425,10 +425,10 @@
 				<license name="GNU Lesser General Public License (LGPL)" url="http://www.gnu.org/licenses/lgpl.txt"/>
 				<license name="Apache License" url="http://www.apache.org/licenses/"/>
 				<license name="Eclipse Public License (EPL)" url="http://www.eclipse.org/legal/epl-v10.html"/>
-				<metadata-artifact status="no" details="" size="3630" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\net.htmlparser.jericho\jericho-html\ivy-3.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/htmlparser/jericho/jericho-html/3.4/jericho-html-3.4.pom"/>
+				<metadata-artifact status="no" details="" size="3630" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\net.htmlparser.jericho\jericho-html\ivy-3.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/htmlparser/jericho/jericho-html/3.4/jericho-html-3.4.pom"/>
 				<caller organisation="reader" name="reader_2.12" conf="test, compile, provided, test-internal, runtime, optional" rev="3.4" rev-constraint-default="3.4" rev-constraint-dynamic="3.4" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="jericho-html" type="jar" ext="jar" status="no" details="" size="238398" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\net.htmlparser.jericho\jericho-html\jars\jericho-html-3.4.jar">
+					<artifact name="jericho-html" type="jar" ext="jar" status="no" details="" size="238398" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\net.htmlparser.jericho\jericho-html\jars\jericho-html-3.4.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/net/htmlparser/jericho/jericho-html/3.4/jericho-html-3.4.jar"/>
 					</artifact>
 				</artifacts>
@@ -437,10 +437,10 @@
 		<module organisation="org.languagetool" name="language-pt">
 			<revision name="4.0" status="release" pubdate="20171229093429" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.languagetool.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="57">
 				<license name="GNU Lesser General Public License" url="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt"/>
-				<metadata-artifact status="no" details="" size="4536" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.languagetool\language-pt\ivy-4.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/languagetool/language-pt/4.0/language-pt-4.0.pom"/>
+				<metadata-artifact status="no" details="" size="4536" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.languagetool\language-pt\ivy-4.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/languagetool/language-pt/4.0/language-pt-4.0.pom"/>
 				<caller organisation="reader" name="reader_2.12" conf="test, compile, provided, test-internal, runtime, optional" rev="4.0" rev-constraint-default="4.0" rev-constraint-dynamic="4.0" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="language-pt" type="jar" ext="jar" status="no" details="" size="4087371" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.languagetool\language-pt\jars\language-pt-4.0.jar">
+					<artifact name="language-pt" type="jar" ext="jar" status="no" details="" size="4087371" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.languagetool\language-pt\jars\language-pt-4.0.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/languagetool/language-pt/4.0/language-pt-4.0.jar"/>
 					</artifact>
 				</artifacts>
@@ -451,10 +451,10 @@
 				<license name="GNU Lesser General Public License" url="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt"/>
 				<license name="Mozilla Public License" url="http://www.mozilla.org/MPL/1.1/"/>
 				<license name="GNU General Public License" url="http://www.gnu.org/licenses/gpl-2.0.html"/>
-				<metadata-artifact status="no" details="" size="3692" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.languagetool\hunspell-native-libs\ivy-2.9.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/languagetool/hunspell-native-libs/2.9/hunspell-native-libs-2.9.pom"/>
+				<metadata-artifact status="no" details="" size="3692" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.languagetool\hunspell-native-libs\ivy-2.9.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/languagetool/hunspell-native-libs/2.9/hunspell-native-libs-2.9.pom"/>
 				<caller organisation="org.languagetool" name="language-pt" conf="default, compile, runtime, master" rev="2.9" rev-constraint-default="2.9" rev-constraint-dynamic="2.9" callerrev="4.0"/>
 				<artifacts>
-					<artifact name="hunspell-native-libs" type="jar" ext="jar" status="no" details="" size="1367661" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.languagetool\hunspell-native-libs\jars\hunspell-native-libs-2.9.jar">
+					<artifact name="hunspell-native-libs" type="jar" ext="jar" status="no" details="" size="1367661" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.languagetool\hunspell-native-libs\jars\hunspell-native-libs-2.9.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/languagetool/hunspell-native-libs/2.9/hunspell-native-libs-2.9.jar"/>
 					</artifact>
 				</artifacts>
@@ -463,10 +463,10 @@
 		<module organisation="org.languagetool" name="language-en">
 			<revision name="4.0" status="release" pubdate="20171229093110" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.languagetool.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="33">
 				<license name="GNU Lesser General Public License" url="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt"/>
-				<metadata-artifact status="no" details="" size="5032" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.languagetool\language-en\ivy-4.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/languagetool/language-en/4.0/language-en-4.0.pom"/>
+				<metadata-artifact status="no" details="" size="5032" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.languagetool\language-en\ivy-4.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/languagetool/language-en/4.0/language-en-4.0.pom"/>
 				<caller organisation="reader" name="reader_2.12" conf="test, compile, provided, test-internal, runtime, optional" rev="4.0" rev-constraint-default="4.0" rev-constraint-dynamic="4.0" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="language-en" type="jar" ext="jar" status="no" details="" size="4041966" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.languagetool\language-en\jars\language-en-4.0.jar">
+					<artifact name="language-en" type="jar" ext="jar" status="no" details="" size="4041966" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.languagetool\language-en\jars\language-en-4.0.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/languagetool/language-en/4.0/language-en-4.0.jar"/>
 					</artifact>
 				</artifacts>
@@ -475,10 +475,10 @@
 		<module organisation="edu.washington.cs.knowitall" name="opennlp-chunk-models">
 			<revision name="1.5" status="release" pubdate="20120607185936" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://opennlp.apache.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="56">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="3606" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\edu.washington.cs.knowitall\opennlp-chunk-models\ivy-1.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/edu/washington/cs/knowitall/opennlp-chunk-models/1.5/opennlp-chunk-models-1.5.pom"/>
+				<metadata-artifact status="no" details="" size="3606" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\edu.washington.cs.knowitall\opennlp-chunk-models\ivy-1.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/edu/washington/cs/knowitall/opennlp-chunk-models/1.5/opennlp-chunk-models-1.5.pom"/>
 				<caller organisation="org.languagetool" name="language-en" conf="default, compile, runtime, master" rev="1.5" rev-constraint-default="1.5" rev-constraint-dynamic="1.5" callerrev="4.0"/>
 				<artifacts>
-					<artifact name="opennlp-chunk-models" type="jar" ext="jar" status="no" details="" size="2563111" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\edu.washington.cs.knowitall\opennlp-chunk-models\jars\opennlp-chunk-models-1.5.jar">
+					<artifact name="opennlp-chunk-models" type="jar" ext="jar" status="no" details="" size="2563111" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\edu.washington.cs.knowitall\opennlp-chunk-models\jars\opennlp-chunk-models-1.5.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/edu/washington/cs/knowitall/opennlp-chunk-models/1.5/opennlp-chunk-models-1.5.jar"/>
 					</artifact>
 				</artifacts>
@@ -487,10 +487,10 @@
 		<module organisation="edu.washington.cs.knowitall" name="opennlp-postag-models">
 			<revision name="1.5" status="release" pubdate="20120607185845" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://opennlp.apache.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="55">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="3608" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\edu.washington.cs.knowitall\opennlp-postag-models\ivy-1.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/edu/washington/cs/knowitall/opennlp-postag-models/1.5/opennlp-postag-models-1.5.pom"/>
+				<metadata-artifact status="no" details="" size="3608" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\edu.washington.cs.knowitall\opennlp-postag-models\ivy-1.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/edu/washington/cs/knowitall/opennlp-postag-models/1.5/opennlp-postag-models-1.5.pom"/>
 				<caller organisation="org.languagetool" name="language-en" conf="default, compile, runtime, master" rev="1.5" rev-constraint-default="1.5" rev-constraint-dynamic="1.5" callerrev="4.0"/>
 				<artifacts>
-					<artifact name="opennlp-postag-models" type="jar" ext="jar" status="no" details="" size="5699943" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\edu.washington.cs.knowitall\opennlp-postag-models\jars\opennlp-postag-models-1.5.jar">
+					<artifact name="opennlp-postag-models" type="jar" ext="jar" status="no" details="" size="5699943" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\edu.washington.cs.knowitall\opennlp-postag-models\jars\opennlp-postag-models-1.5.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/edu/washington/cs/knowitall/opennlp-postag-models/1.5/opennlp-postag-models-1.5.jar"/>
 					</artifact>
 				</artifacts>
@@ -499,10 +499,10 @@
 		<module organisation="edu.washington.cs.knowitall" name="opennlp-tokenize-models">
 			<revision name="1.5" status="release" pubdate="20120607185800" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://opennlp.apache.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="54">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="3614" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\edu.washington.cs.knowitall\opennlp-tokenize-models\ivy-1.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/edu/washington/cs/knowitall/opennlp-tokenize-models/1.5/opennlp-tokenize-models-1.5.pom"/>
+				<metadata-artifact status="no" details="" size="3614" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\edu.washington.cs.knowitall\opennlp-tokenize-models\ivy-1.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/edu/washington/cs/knowitall/opennlp-tokenize-models/1.5/opennlp-tokenize-models-1.5.pom"/>
 				<caller organisation="org.languagetool" name="language-en" conf="default, compile, runtime, master" rev="1.5" rev-constraint-default="1.5" rev-constraint-dynamic="1.5" callerrev="4.0"/>
 				<artifacts>
-					<artifact name="opennlp-tokenize-models" type="jar" ext="jar" status="no" details="" size="442008" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\edu.washington.cs.knowitall\opennlp-tokenize-models\jars\opennlp-tokenize-models-1.5.jar">
+					<artifact name="opennlp-tokenize-models" type="jar" ext="jar" status="no" details="" size="442008" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\edu.washington.cs.knowitall\opennlp-tokenize-models\jars\opennlp-tokenize-models-1.5.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/edu/washington/cs/knowitall/opennlp-tokenize-models/1.5/opennlp-tokenize-models-1.5.jar"/>
 					</artifact>
 				</artifacts>
@@ -511,11 +511,11 @@
 		<module organisation="org.languagetool" name="languagetool-core">
 			<revision name="4.0" status="release" pubdate="20171229093047" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.languagetool.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="34">
 				<license name="GNU Lesser General Public License" url="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt"/>
-				<metadata-artifact status="no" details="" size="6763" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.languagetool\languagetool-core\ivy-4.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/languagetool/languagetool-core/4.0/languagetool-core-4.0.pom"/>
+				<metadata-artifact status="no" details="" size="6763" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.languagetool\languagetool-core\ivy-4.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/languagetool/languagetool-core/4.0/languagetool-core-4.0.pom"/>
 				<caller organisation="org.languagetool" name="language-pt" conf="default, compile, runtime, master" rev="4.0" rev-constraint-default="4.0" rev-constraint-dynamic="4.0" callerrev="4.0"/>
 				<caller organisation="org.languagetool" name="language-en" conf="default, compile, runtime, master" rev="4.0" rev-constraint-default="4.0" rev-constraint-dynamic="4.0" callerrev="4.0"/>
 				<artifacts>
-					<artifact name="languagetool-core" type="jar" ext="jar" status="no" details="" size="570028" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.languagetool\languagetool-core\jars\languagetool-core-4.0.jar">
+					<artifact name="languagetool-core" type="jar" ext="jar" status="no" details="" size="570028" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.languagetool\languagetool-core\jars\languagetool-core-4.0.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/languagetool/languagetool-core/4.0/languagetool-core-4.0.jar"/>
 					</artifact>
 				</artifacts>
@@ -525,10 +525,10 @@
 			<revision name="2.3.0" status="release" pubdate="20170731122724" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="53">
 				<license name="CDDL 1.1" url="https://oss.oracle.com/licenses/CDDL+GPL-1.1"/>
 				<license name="GPL2 w/ CPE" url="https://oss.oracle.com/licenses/CDDL+GPL-1.1"/>
-				<metadata-artifact status="no" details="" size="3837" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\javax.xml.bind\jaxb-api\ivy-2.3.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javax/xml/bind/jaxb-api/2.3.0/jaxb-api-2.3.0.pom"/>
+				<metadata-artifact status="no" details="" size="3837" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\javax.xml.bind\jaxb-api\ivy-2.3.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javax/xml/bind/jaxb-api/2.3.0/jaxb-api-2.3.0.pom"/>
 				<caller organisation="org.languagetool" name="languagetool-core" conf="compile, runtime" rev="2.3.0" rev-constraint-default="2.3.0" rev-constraint-dynamic="2.3.0" callerrev="4.0"/>
 				<artifacts>
-					<artifact name="jaxb-api" type="jar" ext="jar" status="no" details="" size="125632" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\javax.xml.bind\jaxb-api\jars\jaxb-api-2.3.0.jar">
+					<artifact name="jaxb-api" type="jar" ext="jar" status="no" details="" size="125632" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\javax.xml.bind\jaxb-api\jars\jaxb-api-2.3.0.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/javax/xml/bind/jaxb-api/2.3.0/jaxb-api-2.3.0.jar"/>
 					</artifact>
 				</artifacts>
@@ -537,10 +537,10 @@
 		<module organisation="com.fasterxml.jackson.core" name="jackson-databind">
 			<revision name="2.8.4" status="release" pubdate="20161014045229" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/FasterXML/jackson" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="50">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="8225" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\ivy-2.8.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.8.4/jackson-databind-2.8.4.pom"/>
+				<metadata-artifact status="no" details="" size="8225" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\ivy-2.8.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.8.4/jackson-databind-2.8.4.pom"/>
 				<caller organisation="org.languagetool" name="languagetool-core" conf="compile, runtime" rev="2.8.4" rev-constraint-default="2.8.4" rev-constraint-dynamic="2.8.4" callerrev="4.0"/>
 				<artifacts>
-					<artifact name="jackson-databind" type="bundle" ext="jar" status="no" details="" size="1234984" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.8.4.jar">
+					<artifact name="jackson-databind" type="bundle" ext="jar" status="no" details="" size="1234984" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.8.4.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.8.4/jackson-databind-2.8.4.jar"/>
 					</artifact>
 				</artifacts>
@@ -549,10 +549,10 @@
 		<module organisation="com.fasterxml.jackson.core" name="jackson-core">
 			<revision name="2.8.4" status="release" pubdate="20161014044821" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/FasterXML/jackson-core" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="52">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="7486" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\ivy-2.8.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.8.4/jackson-core-2.8.4.pom"/>
+				<metadata-artifact status="no" details="" size="7486" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\ivy-2.8.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.8.4/jackson-core-2.8.4.pom"/>
 				<caller organisation="com.fasterxml.jackson.core" name="jackson-databind" conf="compile, runtime" rev="2.8.4" rev-constraint-default="2.8.4" rev-constraint-dynamic="2.8.4" callerrev="2.8.4"/>
 				<artifacts>
-					<artifact name="jackson-core" type="bundle" ext="jar" status="no" details="" size="281079" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.8.4.jar">
+					<artifact name="jackson-core" type="bundle" ext="jar" status="no" details="" size="281079" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.8.4.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.8.4/jackson-core-2.8.4.jar"/>
 					</artifact>
 				</artifacts>
@@ -561,10 +561,10 @@
 		<module organisation="com.fasterxml.jackson.core" name="jackson-annotations">
 			<revision name="2.8.0" status="release" pubdate="20160704062053" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/FasterXML/jackson" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="51">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="7030" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\ivy-2.8.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.8.0/jackson-annotations-2.8.0.pom"/>
+				<metadata-artifact status="no" details="" size="7030" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\ivy-2.8.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.8.0/jackson-annotations-2.8.0.pom"/>
 				<caller organisation="com.fasterxml.jackson.core" name="jackson-databind" conf="compile, runtime" rev="2.8.0" rev-constraint-default="2.8.0" rev-constraint-dynamic="2.8.0" callerrev="2.8.4"/>
 				<artifacts>
-					<artifact name="jackson-annotations" type="bundle" ext="jar" status="no" details="" size="55784" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.8.0.jar">
+					<artifact name="jackson-annotations" type="bundle" ext="jar" status="no" details="" size="55784" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.8.0.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.8.0/jackson-annotations-2.8.0.jar"/>
 					</artifact>
 				</artifacts>
@@ -573,10 +573,10 @@
 		<module organisation="edu.berkeley.nlp" name="berkeleylm">
 			<revision name="1.1.2" status="release" pubdate="20121006153647" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://code.google.com/p/berkeleylm/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="49">
 				<license name="Apache License 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="3044" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\edu.berkeley.nlp\berkeleylm\ivy-1.1.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/edu/berkeley/nlp/berkeleylm/1.1.2/berkeleylm-1.1.2.pom"/>
+				<metadata-artifact status="no" details="" size="3044" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\edu.berkeley.nlp\berkeleylm\ivy-1.1.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/edu/berkeley/nlp/berkeleylm/1.1.2/berkeleylm-1.1.2.pom"/>
 				<caller organisation="org.languagetool" name="languagetool-core" conf="compile, runtime" rev="1.1.2" rev-constraint-default="1.1.2" rev-constraint-dynamic="1.1.2" callerrev="4.0"/>
 				<artifacts>
-					<artifact name="berkeleylm" type="jar" ext="jar" status="no" details="" size="251359" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\edu.berkeley.nlp\berkeleylm\jars\berkeleylm-1.1.2.jar">
+					<artifact name="berkeleylm" type="jar" ext="jar" status="no" details="" size="251359" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\edu.berkeley.nlp\berkeleylm\jars\berkeleylm-1.1.2.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/edu/berkeley/nlp/berkeleylm/1.1.2/berkeleylm-1.1.2.jar"/>
 					</artifact>
 				</artifacts>
@@ -585,10 +585,10 @@
 		<module organisation="org.apache.lucene" name="lucene-backward-codecs">
 			<revision name="5.5.4" status="release" pubdate="20170214083434" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="48">
 				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="460844" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.apache.lucene\lucene-backward-codecs\ivy-5.5.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/lucene/lucene-backward-codecs/5.5.4/lucene-backward-codecs-5.5.4.pom"/>
+				<metadata-artifact status="no" details="" size="460844" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.apache.lucene\lucene-backward-codecs\ivy-5.5.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/lucene/lucene-backward-codecs/5.5.4/lucene-backward-codecs-5.5.4.pom"/>
 				<caller organisation="org.languagetool" name="languagetool-core" conf="compile, runtime" rev="5.5.4" rev-constraint-default="5.5.4" rev-constraint-dynamic="5.5.4" callerrev="4.0"/>
 				<artifacts>
-					<artifact name="lucene-backward-codecs" type="jar" ext="jar" status="no" details="" size="430824" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.apache.lucene\lucene-backward-codecs\jars\lucene-backward-codecs-5.5.4.jar">
+					<artifact name="lucene-backward-codecs" type="jar" ext="jar" status="no" details="" size="430824" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.apache.lucene\lucene-backward-codecs\jars\lucene-backward-codecs-5.5.4.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/lucene/lucene-backward-codecs/5.5.4/lucene-backward-codecs-5.5.4.jar"/>
 					</artifact>
 				</artifacts>
@@ -597,11 +597,11 @@
 		<module organisation="org.apache.lucene" name="lucene-core">
 			<revision name="5.5.4" status="release" pubdate="20170214084137" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="47">
 				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="459948" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.apache.lucene\lucene-core\ivy-5.5.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/lucene/lucene-core/5.5.4/lucene-core-5.5.4.pom"/>
+				<metadata-artifact status="no" details="" size="459948" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.apache.lucene\lucene-core\ivy-5.5.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/lucene/lucene-core/5.5.4/lucene-core-5.5.4.pom"/>
 				<caller organisation="org.apache.lucene" name="lucene-backward-codecs" conf="compile, runtime" rev="5.5.4" rev-constraint-default="5.5.4" rev-constraint-dynamic="5.5.4" callerrev="5.5.4"/>
 				<caller organisation="org.languagetool" name="languagetool-core" conf="compile, runtime" rev="5.5.4" rev-constraint-default="5.5.4" rev-constraint-dynamic="5.5.4" callerrev="4.0"/>
 				<artifacts>
-					<artifact name="lucene-core" type="jar" ext="jar" status="no" details="" size="2373407" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.apache.lucene\lucene-core\jars\lucene-core-5.5.4.jar">
+					<artifact name="lucene-core" type="jar" ext="jar" status="no" details="" size="2373407" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.apache.lucene\lucene-core\jars\lucene-core-5.5.4.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/lucene/lucene-core/5.5.4/lucene-core-5.5.4.jar"/>
 					</artifact>
 				</artifacts>
@@ -610,10 +610,10 @@
 		<module organisation="com.optimaize.languagedetector" name="language-detector">
 			<revision name="0.6" status="release" pubdate="20161007092117" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/optimaize/language-detector" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="44">
 				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="no" details="" size="4528" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.optimaize.languagedetector\language-detector\ivy-0.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/optimaize/languagedetector/language-detector/0.6/language-detector-0.6.pom"/>
+				<metadata-artifact status="no" details="" size="4528" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.optimaize.languagedetector\language-detector\ivy-0.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/optimaize/languagedetector/language-detector/0.6/language-detector-0.6.pom"/>
 				<caller organisation="org.languagetool" name="languagetool-core" conf="compile, runtime" rev="0.6" rev-constraint-default="0.6" rev-constraint-dynamic="0.6" callerrev="4.0"/>
 				<artifacts>
-					<artifact name="language-detector" type="jar" ext="jar" status="no" details="" size="1879128" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.optimaize.languagedetector\language-detector\jars\language-detector-0.6.jar">
+					<artifact name="language-detector" type="jar" ext="jar" status="no" details="" size="1879128" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.optimaize.languagedetector\language-detector\jars\language-detector-0.6.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/optimaize/languagedetector/language-detector/0.6/language-detector-0.6.jar"/>
 					</artifact>
 				</artifacts>
@@ -622,11 +622,11 @@
 		<module organisation="com.intellij" name="annotations">
 			<revision name="12.0" status="release" pubdate="20130224184859" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.jetbrains.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="46">
 				<license name="Apache License 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="2652" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.intellij\annotations\ivy-12.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/intellij/annotations/12.0/annotations-12.0.pom"/>
+				<metadata-artifact status="no" details="" size="2652" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.intellij\annotations\ivy-12.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/intellij/annotations/12.0/annotations-12.0.pom"/>
 				<caller organisation="org.languagetool" name="languagetool-core" conf="compile, runtime" rev="12.0" rev-constraint-default="12.0" rev-constraint-dynamic="12.0" callerrev="4.0"/>
 				<caller organisation="com.optimaize.languagedetector" name="language-detector" conf="compile, runtime" rev="12.0" rev-constraint-default="12.0" rev-constraint-dynamic="12.0" callerrev="0.6"/>
 				<artifacts>
-					<artifact name="annotations" type="jar" ext="jar" status="no" details="" size="20195" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.intellij\annotations\jars\annotations-12.0.jar">
+					<artifact name="annotations" type="jar" ext="jar" status="no" details="" size="20195" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.intellij\annotations\jars\annotations-12.0.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/intellij/annotations/12.0/annotations-12.0.jar"/>
 					</artifact>
 				</artifacts>
@@ -635,10 +635,10 @@
 		<module organisation="net.arnx" name="jsonic">
 			<revision name="1.2.11" status="release" pubdate="20120408062425" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://jsonic.sourceforge.jp/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="45">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="3103" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\net.arnx\jsonic\ivy-1.2.11.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/arnx/jsonic/1.2.11/jsonic-1.2.11.pom"/>
+				<metadata-artifact status="no" details="" size="3103" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\net.arnx\jsonic\ivy-1.2.11.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/arnx/jsonic/1.2.11/jsonic-1.2.11.pom"/>
 				<caller organisation="com.optimaize.languagedetector" name="language-detector" conf="compile, runtime" rev="1.2.11" rev-constraint-default="1.2.11" rev-constraint-dynamic="1.2.11" callerrev="0.6"/>
 				<artifacts>
-					<artifact name="jsonic" type="jar" ext="jar" status="no" details="" size="161385" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\net.arnx\jsonic\jars\jsonic-1.2.11.jar">
+					<artifact name="jsonic" type="jar" ext="jar" status="no" details="" size="161385" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\net.arnx\jsonic\jars\jsonic-1.2.11.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/net/arnx/jsonic/1.2.11/jsonic-1.2.11.jar"/>
 					</artifact>
 				</artifacts>
@@ -647,10 +647,10 @@
 		<module organisation="net.loomchild" name="segment">
 			<revision name="2.0.0" status="release" pubdate="20150927101951" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/loomchild/segment" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="43">
 				<license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
-				<metadata-artifact status="no" details="" size="3637" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\net.loomchild\segment\ivy-2.0.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/loomchild/segment/2.0.0/segment-2.0.0.pom"/>
+				<metadata-artifact status="no" details="" size="3637" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\net.loomchild\segment\ivy-2.0.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/loomchild/segment/2.0.0/segment-2.0.0.pom"/>
 				<caller organisation="org.languagetool" name="languagetool-core" conf="compile, runtime" rev="2.0.0" rev-constraint-default="2.0.0" rev-constraint-dynamic="2.0.0" callerrev="4.0"/>
 				<artifacts>
-					<artifact name="segment" type="jar" ext="jar" status="no" details="" size="78534" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\net.loomchild\segment\jars\segment-2.0.0.jar">
+					<artifact name="segment" type="jar" ext="jar" status="no" details="" size="78534" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\net.loomchild\segment\jars\segment-2.0.0.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/net/loomchild/segment/2.0.0/segment-2.0.0.jar"/>
 					</artifact>
 				</artifacts>
@@ -659,10 +659,10 @@
 		<module organisation="org.carrot2" name="morfologik-speller">
 			<revision name="2.1.4" status="release" pubdate="20170731134533" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="41">
 				<license name="BSD" url="http://www.opensource.org/licenses/bsd-license.php"/>
-				<metadata-artifact status="no" details="" size="3604" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.carrot2\morfologik-speller\ivy-2.1.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/carrot2/morfologik-speller/2.1.4/morfologik-speller-2.1.4.pom"/>
+				<metadata-artifact status="no" details="" size="3604" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.carrot2\morfologik-speller\ivy-2.1.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/carrot2/morfologik-speller/2.1.4/morfologik-speller-2.1.4.pom"/>
 				<caller organisation="org.languagetool" name="languagetool-core" conf="compile, runtime" rev="2.1.4" rev-constraint-default="2.1.4" rev-constraint-dynamic="2.1.4" callerrev="4.0"/>
 				<artifacts>
-					<artifact name="morfologik-speller" type="bundle" ext="jar" status="no" details="" size="14030" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.carrot2\morfologik-speller\bundles\morfologik-speller-2.1.4.jar">
+					<artifact name="morfologik-speller" type="bundle" ext="jar" status="no" details="" size="14030" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.carrot2\morfologik-speller\bundles\morfologik-speller-2.1.4.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/carrot2/morfologik-speller/2.1.4/morfologik-speller-2.1.4.jar"/>
 					</artifact>
 				</artifacts>
@@ -671,11 +671,11 @@
 		<module organisation="org.carrot2" name="morfologik-stemming">
 			<revision name="2.1.4" status="release" pubdate="20170731134449" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="42">
 				<license name="BSD" url="http://www.opensource.org/licenses/bsd-license.php"/>
-				<metadata-artifact status="no" details="" size="3608" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.carrot2\morfologik-stemming\ivy-2.1.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/carrot2/morfologik-stemming/2.1.4/morfologik-stemming-2.1.4.pom"/>
+				<metadata-artifact status="no" details="" size="3608" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.carrot2\morfologik-stemming\ivy-2.1.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/carrot2/morfologik-stemming/2.1.4/morfologik-stemming-2.1.4.pom"/>
 				<caller organisation="org.carrot2" name="morfologik-speller" conf="compile, runtime" rev="2.1.4" rev-constraint-default="2.1.4" rev-constraint-dynamic="2.1.4" callerrev="2.1.4"/>
 				<caller organisation="org.languagetool" name="languagetool-core" conf="compile, runtime" rev="2.1.4" rev-constraint-default="2.1.4" rev-constraint-dynamic="2.1.4" callerrev="4.0"/>
 				<artifacts>
-					<artifact name="morfologik-stemming" type="bundle" ext="jar" status="no" details="" size="53778" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.carrot2\morfologik-stemming\bundles\morfologik-stemming-2.1.4.jar">
+					<artifact name="morfologik-stemming" type="bundle" ext="jar" status="no" details="" size="53778" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.carrot2\morfologik-stemming\bundles\morfologik-stemming-2.1.4.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/carrot2/morfologik-stemming/2.1.4/morfologik-stemming-2.1.4.jar"/>
 					</artifact>
 				</artifacts>
@@ -684,10 +684,10 @@
 		<module organisation="org.carrot2" name="morfologik-fsa-builders">
 			<revision name="2.1.4" status="release" pubdate="20170731134436" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="39">
 				<license name="BSD" url="http://www.opensource.org/licenses/bsd-license.php"/>
-				<metadata-artifact status="no" details="" size="3771" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.carrot2\morfologik-fsa-builders\ivy-2.1.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/carrot2/morfologik-fsa-builders/2.1.4/morfologik-fsa-builders-2.1.4.pom"/>
+				<metadata-artifact status="no" details="" size="3771" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.carrot2\morfologik-fsa-builders\ivy-2.1.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/carrot2/morfologik-fsa-builders/2.1.4/morfologik-fsa-builders-2.1.4.pom"/>
 				<caller organisation="org.languagetool" name="languagetool-core" conf="compile, runtime" rev="2.1.4" rev-constraint-default="2.1.4" rev-constraint-dynamic="2.1.4" callerrev="4.0"/>
 				<artifacts>
-					<artifact name="morfologik-fsa-builders" type="bundle" ext="jar" status="no" details="" size="32273" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.carrot2\morfologik-fsa-builders\bundles\morfologik-fsa-builders-2.1.4.jar">
+					<artifact name="morfologik-fsa-builders" type="bundle" ext="jar" status="no" details="" size="32273" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.carrot2\morfologik-fsa-builders\bundles\morfologik-fsa-builders-2.1.4.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/carrot2/morfologik-fsa-builders/2.1.4/morfologik-fsa-builders-2.1.4.jar"/>
 					</artifact>
 				</artifacts>
@@ -696,11 +696,11 @@
 		<module organisation="com.carrotsearch" name="hppc">
 			<revision name="0.7.2" status="release" pubdate="20161025123252" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="40">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="7413" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.carrotsearch\hppc\ivy-0.7.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/carrotsearch/hppc/0.7.2/hppc-0.7.2.pom"/>
+				<metadata-artifact status="no" details="" size="7413" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.carrotsearch\hppc\ivy-0.7.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/carrotsearch/hppc/0.7.2/hppc-0.7.2.pom"/>
 				<caller organisation="org.languagetool" name="languagetool-core" conf="compile, runtime" rev="0.7.2" rev-constraint-default="0.7.2" rev-constraint-dynamic="0.7.2" callerrev="4.0"/>
 				<caller organisation="org.carrot2" name="morfologik-fsa-builders" conf="compile, runtime" rev="0.7.2" rev-constraint-default="0.7.2" rev-constraint-dynamic="0.7.2" callerrev="2.1.4"/>
 				<artifacts>
-					<artifact name="hppc" type="bundle" ext="jar" status="no" details="" size="1671083" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.carrotsearch\hppc\bundles\hppc-0.7.2.jar">
+					<artifact name="hppc" type="bundle" ext="jar" status="no" details="" size="1671083" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.carrotsearch\hppc\bundles\hppc-0.7.2.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/carrotsearch/hppc/0.7.2/hppc-0.7.2.jar"/>
 					</artifact>
 				</artifacts>
@@ -709,12 +709,12 @@
 		<module organisation="org.carrot2" name="morfologik-fsa">
 			<revision name="2.1.4" status="release" pubdate="20170731134424" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="38">
 				<license name="BSD" url="http://www.opensource.org/licenses/bsd-license.php"/>
-				<metadata-artifact status="no" details="" size="3436" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.carrot2\morfologik-fsa\ivy-2.1.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/carrot2/morfologik-fsa/2.1.4/morfologik-fsa-2.1.4.pom"/>
+				<metadata-artifact status="no" details="" size="3436" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.carrot2\morfologik-fsa\ivy-2.1.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/carrot2/morfologik-fsa/2.1.4/morfologik-fsa-2.1.4.pom"/>
 				<caller organisation="org.languagetool" name="languagetool-core" conf="compile, runtime" rev="2.1.4" rev-constraint-default="2.1.4" rev-constraint-dynamic="2.1.4" callerrev="4.0"/>
 				<caller organisation="org.carrot2" name="morfologik-fsa-builders" conf="compile, runtime" rev="2.1.4" rev-constraint-default="2.1.4" rev-constraint-dynamic="2.1.4" callerrev="2.1.4"/>
 				<caller organisation="org.carrot2" name="morfologik-stemming" conf="compile, runtime" rev="2.1.4" rev-constraint-default="2.1.4" rev-constraint-dynamic="2.1.4" callerrev="2.1.4"/>
 				<artifacts>
-					<artifact name="morfologik-fsa" type="bundle" ext="jar" status="no" details="" size="20161" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.carrot2\morfologik-fsa\bundles\morfologik-fsa-2.1.4.jar">
+					<artifact name="morfologik-fsa" type="bundle" ext="jar" status="no" details="" size="20161" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.carrot2\morfologik-fsa\bundles\morfologik-fsa-2.1.4.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/carrot2/morfologik-fsa/2.1.4/morfologik-fsa-2.1.4.jar"/>
 					</artifact>
 				</artifacts>
@@ -724,13 +724,13 @@
 			<revision name="4.4.0" status="release" pubdate="20170314193427" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/java-native-access/jna" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="37">
 				<license name="LGPL, version 2.1" url="http://www.gnu.org/licenses/licenses.html"/>
 				<license name="Apache License v2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="2598" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\net.java.dev.jna\jna\ivy-4.4.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/java/dev/jna/jna/4.4.0/jna-4.4.0.pom"/>
+				<metadata-artifact status="no" details="" size="2598" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\net.java.dev.jna\jna\ivy-4.4.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/java/dev/jna/jna/4.4.0/jna-4.4.0.pom"/>
 				<caller organisation="net.sourceforge.tess4j" name="tess4j" conf="default, compile, runtime, master" rev="4.1.0" rev-constraint-default="4.1.0" rev-constraint-dynamic="4.1.0" callerrev="3.4.4"/>
 				<caller organisation="org.languagetool" name="languagetool-core" conf="compile, runtime" rev="4.4.0" rev-constraint-default="4.4.0" rev-constraint-dynamic="4.4.0" callerrev="4.0"/>
 				<caller organisation="org.ghost4j" name="ghost4j" conf="compile, runtime" rev="4.1.0" rev-constraint-default="4.1.0" rev-constraint-dynamic="4.1.0" callerrev="1.0.1"/>
 				<caller organisation="net.sourceforge.lept4j" name="lept4j" conf="compile, runtime" rev="4.1.0" rev-constraint-default="4.1.0" rev-constraint-dynamic="4.1.0" callerrev="1.6.3"/>
 				<artifacts>
-					<artifact name="jna" type="jar" ext="jar" status="no" details="" size="1091208" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\net.java.dev.jna\jna\jars\jna-4.4.0.jar">
+					<artifact name="jna" type="jar" ext="jar" status="no" details="" size="1091208" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\net.java.dev.jna\jna\jars\jna-4.4.0.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/net/java/dev/jna/jna/4.4.0/jna-4.4.0.jar"/>
 					</artifact>
 				</artifacts>
@@ -738,7 +738,7 @@
 			<revision name="4.1.0" status="release" pubdate="20140306155605" resolver="sbt-chain" artresolver="sbt-chain" evicted="latest-revision" evicted-reason="" homepage="https://github.com/twall/jna" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="-1">
 				<license name="LGPL, version 2.1" url="http://www.gnu.org/licenses/licenses.html"/>
 				<license name="ASL, version 2" url="http://www.apache.org/licenses/"/>
-				<metadata-artifact status="no" details="" size="2565" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\net.java.dev.jna\jna\ivy-4.1.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/java/dev/jna/jna/4.1.0/jna-4.1.0.pom"/>
+				<metadata-artifact status="no" details="" size="2565" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\net.java.dev.jna\jna\ivy-4.1.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/java/dev/jna/jna/4.1.0/jna-4.1.0.pom"/>
 				<evicted-by rev="4.4.0"/>
 				<caller organisation="net.sourceforge.tess4j" name="tess4j" conf="default, compile, runtime, master" rev="4.1.0" rev-constraint-default="4.1.0" rev-constraint-dynamic="4.1.0" callerrev="3.4.4"/>
 				<caller organisation="org.ghost4j" name="ghost4j" conf="compile, runtime" rev="4.1.0" rev-constraint-default="4.1.0" rev-constraint-dynamic="4.1.0" callerrev="1.0.1"/>
@@ -750,12 +750,12 @@
 		<module organisation="com.google.guava" name="guava">
 			<revision name="21.0" status="release" pubdate="20170112192249" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="36">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="7231" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.google.guava\guava\ivy-21.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/guava/guava/21.0/guava-21.0.pom"/>
+				<metadata-artifact status="no" details="" size="7231" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.google.guava\guava\ivy-21.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/guava/guava/21.0/guava-21.0.pom"/>
 				<caller organisation="org.languagetool" name="languagetool-core" conf="compile, runtime" rev="21.0" rev-constraint-default="21.0" rev-constraint-dynamic="21.0" callerrev="4.0"/>
 				<caller organisation="com.optimaize.languagedetector" name="language-detector" conf="compile, runtime" rev="18.0" rev-constraint-default="18.0" rev-constraint-dynamic="18.0" callerrev="0.6"/>
 				<caller organisation="org.reflections" name="reflections" conf="compile, runtime" rev="15.0" rev-constraint-default="15.0" rev-constraint-dynamic="15.0" callerrev="0.9.9"/>
 				<artifacts>
-					<artifact name="guava" type="bundle" ext="jar" status="no" details="" size="2521113" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.google.guava\guava\bundles\guava-21.0.jar">
+					<artifact name="guava" type="bundle" ext="jar" status="no" details="" size="2521113" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.google.guava\guava\bundles\guava-21.0.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/guava/guava/21.0/guava-21.0.jar"/>
 					</artifact>
 				</artifacts>
@@ -776,11 +776,11 @@
 		<module organisation="org.apache.commons" name="commons-lang3">
 			<revision name="3.5" status="release" pubdate="20161013205341" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-lang/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="35">
 				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="12480" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.apache.commons\commons-lang3\ivy-3.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.pom"/>
+				<metadata-artifact status="no" details="" size="12480" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.apache.commons\commons-lang3\ivy-3.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.pom"/>
 				<caller organisation="org.languagetool" name="languagetool-core" conf="compile, runtime" rev="3.5" rev-constraint-default="3.5" rev-constraint-dynamic="3.5" callerrev="4.0"/>
 				<caller organisation="net.mabboud.fontverter" name="FontVerter" conf="compile, runtime" rev="3.4" rev-constraint-default="3.4" rev-constraint-dynamic="3.4" callerrev="1.2.20"/>
 				<artifacts>
-					<artifact name="commons-lang3" type="jar" ext="jar" status="no" details="" size="479881" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.5.jar">
+					<artifact name="commons-lang3" type="jar" ext="jar" status="no" details="" size="479881" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.5.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.jar"/>
 					</artifact>
 				</artifacts>
@@ -795,11 +795,11 @@
 		<module organisation="org.odftoolkit" name="odfdom-java">
 			<revision name="0.8.7" status="release" pubdate="20110120173635" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://odftoolkit.org/projects/odfdom/pages/Home" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="32">
 				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="4010" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.odftoolkit\odfdom-java\ivy-0.8.7.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/odftoolkit/odfdom-java/0.8.7/odfdom-java-0.8.7.pom"/>
+				<metadata-artifact status="no" details="" size="4010" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.odftoolkit\odfdom-java\ivy-0.8.7.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/odftoolkit/odfdom-java/0.8.7/odfdom-java-0.8.7.pom"/>
 				<caller organisation="org.odftoolkit" name="simple-odf" conf="default, compile, runtime, master" rev="0.8.7" rev-constraint-default="0.8.7" rev-constraint-dynamic="0.8.7" callerrev="0.6.6"/>
 				<caller organisation="reader" name="reader_2.12" conf="test, compile, provided, test-internal, runtime, optional" rev="0.8.7" rev-constraint-default="0.8.7" rev-constraint-dynamic="0.8.7" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="odfdom-java" type="jar" ext="jar" status="no" details="" size="3350508" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.odftoolkit\odfdom-java\jars\odfdom-java-0.8.7.jar">
+					<artifact name="odfdom-java" type="jar" ext="jar" status="no" details="" size="3350508" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.odftoolkit\odfdom-java\jars\odfdom-java-0.8.7.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/odftoolkit/odfdom-java/0.8.7/odfdom-java-0.8.7.jar"/>
 					</artifact>
 				</artifacts>
@@ -808,10 +808,10 @@
 		<module organisation="org.json4s" name="json4s-native_2.12">
 			<revision name="3.6.0-M2" status="release" pubdate="20171130132517" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/json4s/json4s" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="26">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="no" details="" size="2842" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.json4s\json4s-native_2.12\ivy-3.6.0-M2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/json4s/json4s-native_2.12/3.6.0-M2/json4s-native_2.12-3.6.0-M2.pom"/>
+				<metadata-artifact status="no" details="" size="2842" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.json4s\json4s-native_2.12\ivy-3.6.0-M2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/json4s/json4s-native_2.12/3.6.0-M2/json4s-native_2.12-3.6.0-M2.pom"/>
 				<caller organisation="reader" name="reader_2.12" conf="test, compile, provided, test-internal, runtime, optional" rev="3.6.0-M2" rev-constraint-default="3.6.0-M2" rev-constraint-dynamic="3.6.0-M2" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="json4s-native_2.12" type="jar" ext="jar" status="no" details="" size="92941" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.json4s\json4s-native_2.12\jars\json4s-native_2.12-3.6.0-M2.jar">
+					<artifact name="json4s-native_2.12" type="jar" ext="jar" status="no" details="" size="92941" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.json4s\json4s-native_2.12\jars\json4s-native_2.12-3.6.0-M2.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/json4s/json4s-native_2.12/3.6.0-M2/json4s-native_2.12-3.6.0-M2.jar"/>
 					</artifact>
 				</artifacts>
@@ -820,10 +820,10 @@
 		<module organisation="org.json4s" name="json4s-core_2.12">
 			<revision name="3.6.0-M2" status="release" pubdate="20171130132426" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/json4s/json4s" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="27">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="no" details="" size="3295" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.json4s\json4s-core_2.12\ivy-3.6.0-M2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/json4s/json4s-core_2.12/3.6.0-M2/json4s-core_2.12-3.6.0-M2.pom"/>
+				<metadata-artifact status="no" details="" size="3295" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.json4s\json4s-core_2.12\ivy-3.6.0-M2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/json4s/json4s-core_2.12/3.6.0-M2/json4s-core_2.12-3.6.0-M2.pom"/>
 				<caller organisation="org.json4s" name="json4s-native_2.12" conf="default, compile, runtime, master" rev="3.6.0-M2" rev-constraint-default="3.6.0-M2" rev-constraint-dynamic="3.6.0-M2" callerrev="3.6.0-M2"/>
 				<artifacts>
-					<artifact name="json4s-core_2.12" type="jar" ext="jar" status="no" details="" size="492135" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.json4s\json4s-core_2.12\jars\json4s-core_2.12-3.6.0-M2.jar">
+					<artifact name="json4s-core_2.12" type="jar" ext="jar" status="no" details="" size="492135" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.json4s\json4s-core_2.12\jars\json4s-core_2.12-3.6.0-M2.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/json4s/json4s-core_2.12/3.6.0-M2/json4s-core_2.12-3.6.0-M2.jar"/>
 					</artifact>
 				</artifacts>
@@ -832,12 +832,12 @@
 		<module organisation="org.scala-lang.modules" name="scala-xml_2.12">
 			<revision name="1.0.6" status="release" pubdate="20161101072105" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="31">
 				<license name="BSD 3-clause" url="http://opensource.org/licenses/BSD-3-Clause"/>
-				<metadata-artifact status="no" details="" size="3128" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.scala-lang.modules\scala-xml_2.12\ivy-1.0.6.xml" searched="false" origin-is-local="false" origin-location="file:/C:/Users/Lucas Fischer/.sbt/preloaded/org.scala-lang.modules/scala-xml_2.12/1.0.6/ivys/ivy.xml"/>
+				<metadata-artifact status="no" details="" size="3128" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.scala-lang.modules\scala-xml_2.12\ivy-1.0.6.xml" searched="false" origin-is-local="false" origin-location="file:/C:/Users/Margarida Reis/.sbt/preloaded/org.scala-lang.modules/scala-xml_2.12/1.0.6/ivys/ivy.xml"/>
 				<caller organisation="org.scalatest" name="scalatest_2.12" conf="default, compile, runtime, master" rev="1.0.6" rev-constraint-default="1.0.6" rev-constraint-dynamic="1.0.6" callerrev="3.2.0-SNAP10"/>
 				<caller organisation="org.json4s" name="json4s-core_2.12" conf="compile, runtime" rev="1.0.6" rev-constraint-default="1.0.6" rev-constraint-dynamic="1.0.6" callerrev="3.6.0-M2"/>
 				<artifacts>
-					<artifact name="scala-xml_2.12" type="bundle" ext="jar" status="no" details="" size="547860" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.scala-lang.modules\scala-xml_2.12\bundles\scala-xml_2.12-1.0.6.jar">
-						<origin-location is-local="false" location="file:/C:/Users/Lucas Fischer/.sbt/preloaded/org.scala-lang.modules/scala-xml_2.12/1.0.6/bundles/scala-xml_2.12.jar"/>
+					<artifact name="scala-xml_2.12" type="bundle" ext="jar" status="no" details="" size="547860" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.scala-lang.modules\scala-xml_2.12\bundles\scala-xml_2.12-1.0.6.jar">
+						<origin-location is-local="false" location="file:/C:/Users/Margarida Reis/.sbt/preloaded/org.scala-lang.modules/scala-xml_2.12/1.0.6/bundles/scala-xml_2.12.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
@@ -845,10 +845,10 @@
 		<module organisation="com.thoughtworks.paranamer" name="paranamer">
 			<revision name="2.8" status="release" pubdate="20150826122928" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="30">
 				<license name="BSD" url="LICENSE.txt"/>
-				<metadata-artifact status="no" details="" size="4296" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.thoughtworks.paranamer\paranamer\ivy-2.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.pom"/>
+				<metadata-artifact status="no" details="" size="4296" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.thoughtworks.paranamer\paranamer\ivy-2.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.pom"/>
 				<caller organisation="org.json4s" name="json4s-core_2.12" conf="compile, runtime" rev="2.8" rev-constraint-default="2.8" rev-constraint-dynamic="2.8" callerrev="3.6.0-M2"/>
 				<artifacts>
-					<artifact name="paranamer" type="bundle" ext="jar" status="no" details="" size="34654" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.thoughtworks.paranamer\paranamer\bundles\paranamer-2.8.jar">
+					<artifact name="paranamer" type="bundle" ext="jar" status="no" details="" size="34654" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.thoughtworks.paranamer\paranamer\bundles\paranamer-2.8.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.jar"/>
 					</artifact>
 				</artifacts>
@@ -857,10 +857,10 @@
 		<module organisation="org.json4s" name="json4s-scalap_2.12">
 			<revision name="3.6.0-M2" status="release" pubdate="20171130132439" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/json4s/json4s" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="29">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="no" details="" size="2693" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.json4s\json4s-scalap_2.12\ivy-3.6.0-M2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/json4s/json4s-scalap_2.12/3.6.0-M2/json4s-scalap_2.12-3.6.0-M2.pom"/>
+				<metadata-artifact status="no" details="" size="2693" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.json4s\json4s-scalap_2.12\ivy-3.6.0-M2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/json4s/json4s-scalap_2.12/3.6.0-M2/json4s-scalap_2.12-3.6.0-M2.pom"/>
 				<caller organisation="org.json4s" name="json4s-core_2.12" conf="compile, runtime" rev="3.6.0-M2" rev-constraint-default="3.6.0-M2" rev-constraint-dynamic="3.6.0-M2" callerrev="3.6.0-M2"/>
 				<artifacts>
-					<artifact name="json4s-scalap_2.12" type="jar" ext="jar" status="no" details="" size="346631" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.json4s\json4s-scalap_2.12\jars\json4s-scalap_2.12-3.6.0-M2.jar">
+					<artifact name="json4s-scalap_2.12" type="jar" ext="jar" status="no" details="" size="346631" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.json4s\json4s-scalap_2.12\jars\json4s-scalap_2.12-3.6.0-M2.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/json4s/json4s-scalap_2.12/3.6.0-M2/json4s-scalap_2.12-3.6.0-M2.jar"/>
 					</artifact>
 				</artifacts>
@@ -869,10 +869,10 @@
 		<module organisation="org.json4s" name="json4s-ast_2.12">
 			<revision name="3.6.0-M2" status="release" pubdate="20171130132607" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/json4s/json4s" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="28">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="no" details="" size="2684" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.json4s\json4s-ast_2.12\ivy-3.6.0-M2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/json4s/json4s-ast_2.12/3.6.0-M2/json4s-ast_2.12-3.6.0-M2.pom"/>
+				<metadata-artifact status="no" details="" size="2684" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.json4s\json4s-ast_2.12\ivy-3.6.0-M2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/json4s/json4s-ast_2.12/3.6.0-M2/json4s-ast_2.12-3.6.0-M2.pom"/>
 				<caller organisation="org.json4s" name="json4s-core_2.12" conf="compile, runtime" rev="3.6.0-M2" rev-constraint-default="3.6.0-M2" rev-constraint-dynamic="3.6.0-M2" callerrev="3.6.0-M2"/>
 				<artifacts>
-					<artifact name="json4s-ast_2.12" type="jar" ext="jar" status="no" details="" size="83832" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.json4s\json4s-ast_2.12\jars\json4s-ast_2.12-3.6.0-M2.jar">
+					<artifact name="json4s-ast_2.12" type="jar" ext="jar" status="no" details="" size="83832" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.json4s\json4s-ast_2.12\jars\json4s-ast_2.12-3.6.0-M2.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/json4s/json4s-ast_2.12/3.6.0-M2/json4s-ast_2.12-3.6.0-M2.jar"/>
 					</artifact>
 				</artifacts>
@@ -881,10 +881,10 @@
 		<module organisation="com.lihaoyi" name="scalatags_2.12">
 			<revision name="0.6.7" status="release" pubdate="20170912221752" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/lihaoyi/scalatags" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="24">
 				<license name="MIT license" url="http://www.opensource.org/licenses/mit-license.php"/>
-				<metadata-artifact status="no" details="" size="3388" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.lihaoyi\scalatags_2.12\ivy-0.6.7.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/lihaoyi/scalatags_2.12/0.6.7/scalatags_2.12-0.6.7.pom"/>
+				<metadata-artifact status="no" details="" size="3388" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.lihaoyi\scalatags_2.12\ivy-0.6.7.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/lihaoyi/scalatags_2.12/0.6.7/scalatags_2.12-0.6.7.pom"/>
 				<caller organisation="reader" name="reader_2.12" conf="test, compile, provided, test-internal, runtime, optional" rev="0.6.7" rev-constraint-default="0.6.7" rev-constraint-dynamic="0.6.7" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="scalatags_2.12" type="jar" ext="jar" status="no" details="" size="485532" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.lihaoyi\scalatags_2.12\jars\scalatags_2.12-0.6.7.jar">
+					<artifact name="scalatags_2.12" type="jar" ext="jar" status="no" details="" size="485532" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.lihaoyi\scalatags_2.12\jars\scalatags_2.12-0.6.7.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/lihaoyi/scalatags_2.12/0.6.7/scalatags_2.12-0.6.7.jar"/>
 					</artifact>
 				</artifacts>
@@ -893,10 +893,10 @@
 		<module organisation="com.lihaoyi" name="sourcecode_2.12">
 			<revision name="0.1.4" status="release" pubdate="20170709004037" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/lihaoyi/sourcecode" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="25">
 				<license name="MIT" url="http://www.opensource.org/licenses/mit-license.html"/>
-				<metadata-artifact status="no" details="" size="2997" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.lihaoyi\sourcecode_2.12\ivy-0.1.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/lihaoyi/sourcecode_2.12/0.1.4/sourcecode_2.12-0.1.4.pom"/>
+				<metadata-artifact status="no" details="" size="2997" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.lihaoyi\sourcecode_2.12\ivy-0.1.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/lihaoyi/sourcecode_2.12/0.1.4/sourcecode_2.12-0.1.4.pom"/>
 				<caller organisation="com.lihaoyi" name="scalatags_2.12" conf="default, compile, runtime, master" rev="0.1.4" rev-constraint-default="0.1.4" rev-constraint-dynamic="0.1.4" callerrev="0.6.7"/>
 				<artifacts>
-					<artifact name="sourcecode_2.12" type="bundle" ext="jar" status="no" details="" size="110958" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.lihaoyi\sourcecode_2.12\bundles\sourcecode_2.12-0.1.4.jar">
+					<artifact name="sourcecode_2.12" type="bundle" ext="jar" status="no" details="" size="110958" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.lihaoyi\sourcecode_2.12\bundles\sourcecode_2.12-0.1.4.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/lihaoyi/sourcecode_2.12/0.1.4/sourcecode_2.12-0.1.4.jar"/>
 					</artifact>
 				</artifacts>
@@ -905,10 +905,10 @@
 		<module organisation="com.itextpdf.tool" name="xmlworker">
 			<revision name="5.5.10" status="release" pubdate="20161007130208" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.itextpdf.com/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="22">
 				<license name="GNU Affero General Public License v3" url="http://www.fsf.org/licensing/licenses/agpl-3.0.html"/>
-				<metadata-artifact status="no" details="" size="3610" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.itextpdf.tool\xmlworker\ivy-5.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/itextpdf/tool/xmlworker/5.5.10/xmlworker-5.5.10.pom"/>
+				<metadata-artifact status="no" details="" size="3610" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.itextpdf.tool\xmlworker\ivy-5.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/itextpdf/tool/xmlworker/5.5.10/xmlworker-5.5.10.pom"/>
 				<caller organisation="reader" name="reader_2.12" conf="test, compile, provided, test-internal, runtime, optional" rev="5.5.10" rev-constraint-default="5.5.10" rev-constraint-dynamic="5.5.10" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="xmlworker" type="jar" ext="jar" status="no" details="" size="255586" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.itextpdf.tool\xmlworker\jars\xmlworker-5.5.10.jar">
+					<artifact name="xmlworker" type="jar" ext="jar" status="no" details="" size="255586" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.itextpdf.tool\xmlworker\jars\xmlworker-5.5.10.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/itextpdf/tool/xmlworker/5.5.10/xmlworker-5.5.10.jar"/>
 					</artifact>
 				</artifacts>
@@ -917,10 +917,10 @@
 		<module organisation="com.itextpdf" name="itextpdf">
 			<revision name="5.5.10" status="release" pubdate="20161007130058" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://itextpdf.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="23">
 				<license name="GNU Affero General Public License v3" url="http://www.fsf.org/licensing/licenses/agpl-3.0.html"/>
-				<metadata-artifact status="no" details="" size="4101" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.itextpdf\itextpdf\ivy-5.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/itextpdf/itextpdf/5.5.10/itextpdf-5.5.10.pom"/>
+				<metadata-artifact status="no" details="" size="4101" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.itextpdf\itextpdf\ivy-5.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/itextpdf/itextpdf/5.5.10/itextpdf-5.5.10.pom"/>
 				<caller organisation="reader" name="reader_2.12" conf="test, compile, provided, test-internal, runtime, optional" rev="5.5.10" rev-constraint-default="5.5.10" rev-constraint-dynamic="5.5.10" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="itextpdf" type="jar" ext="jar" status="no" details="" size="2290510" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.itextpdf\itextpdf\jars\itextpdf-5.5.10.jar">
+					<artifact name="itextpdf" type="jar" ext="jar" status="no" details="" size="2290510" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.itextpdf\itextpdf\jars\itextpdf-5.5.10.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/itextpdf/itextpdf/5.5.10/itextpdf-5.5.10.jar"/>
 					</artifact>
 				</artifacts>
@@ -929,10 +929,10 @@
 		<module organisation="net.sourceforge.tess4j" name="tess4j">
 			<revision name="3.4.4" status="release" pubdate="20180222192805" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://tess4j.sourceforge.net" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="3">
 				<license name="Apache License 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="5823" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\net.sourceforge.tess4j\tess4j\ivy-3.4.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/sourceforge/tess4j/tess4j/3.4.4/tess4j-3.4.4.pom"/>
+				<metadata-artifact status="no" details="" size="5823" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\net.sourceforge.tess4j\tess4j\ivy-3.4.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/sourceforge/tess4j/tess4j/3.4.4/tess4j-3.4.4.pom"/>
 				<caller organisation="reader" name="reader_2.12" conf="test, compile, provided, test-internal, runtime, optional" rev="3.4.4" rev-constraint-default="3.4.4" rev-constraint-dynamic="3.4.4" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="tess4j" type="jar" ext="jar" status="no" details="" size="38959017" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\net.sourceforge.tess4j\tess4j\jars\tess4j-3.4.4.jar">
+					<artifact name="tess4j" type="jar" ext="jar" status="no" details="" size="38959017" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\net.sourceforge.tess4j\tess4j\jars\tess4j-3.4.4.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/net/sourceforge/tess4j/tess4j/3.4.4/tess4j-3.4.4.jar"/>
 					</artifact>
 				</artifacts>
@@ -941,10 +941,10 @@
 		<module organisation="org.slf4j" name="jcl-over-slf4j">
 			<revision name="1.7.25" status="release" pubdate="20170316163729" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="20">
 				<license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
-				<metadata-artifact status="no" details="" size="5326" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.slf4j\jcl-over-slf4j\ivy-1.7.25.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/jcl-over-slf4j/1.7.25/jcl-over-slf4j-1.7.25.pom"/>
+				<metadata-artifact status="no" details="" size="5320" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.slf4j\jcl-over-slf4j\ivy-1.7.25.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/jcl-over-slf4j/1.7.25/jcl-over-slf4j-1.7.25.pom"/>
 				<caller organisation="net.sourceforge.tess4j" name="tess4j" conf="default, compile, runtime, master" rev="1.7.25" rev-constraint-default="1.7.25" rev-constraint-dynamic="1.7.25" callerrev="3.4.4"/>
 				<artifacts>
-					<artifact name="jcl-over-slf4j" type="jar" ext="jar" status="no" details="" size="16515" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.25.jar">
+					<artifact name="jcl-over-slf4j" type="jar" ext="jar" status="no" details="" size="16515" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.25.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/slf4j/jcl-over-slf4j/1.7.25/jcl-over-slf4j-1.7.25.jar"/>
 					</artifact>
 				</artifacts>
@@ -954,10 +954,10 @@
 			<revision name="1.2.3" status="release" pubdate="20170331202753" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="16">
 				<license name="Eclipse Public License - v 1.0" url="http://www.eclipse.org/legal/epl-v10.html"/>
 				<license name="GNU Lesser General Public License" url="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html"/>
-				<metadata-artifact status="no" details="" size="10512" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\ch.qos.logback\logback-classic\ivy-1.2.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.pom"/>
+				<metadata-artifact status="no" details="" size="10512" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\ch.qos.logback\logback-classic\ivy-1.2.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.pom"/>
 				<caller organisation="net.sourceforge.tess4j" name="tess4j" conf="default, compile, runtime, master" rev="1.2.3" rev-constraint-default="1.2.3" rev-constraint-dynamic="1.2.3" callerrev="3.4.4"/>
 				<artifacts>
-					<artifact name="logback-classic" type="jar" ext="jar" status="no" details="" size="290339" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.2.3.jar">
+					<artifact name="logback-classic" type="jar" ext="jar" status="no" details="" size="290339" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.2.3.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar"/>
 					</artifact>
 				</artifacts>
@@ -966,10 +966,10 @@
 		<module organisation="org.slf4j" name="jul-to-slf4j">
 			<revision name="1.7.25" status="release" pubdate="20170316163746" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="19">
 				<license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
-				<metadata-artifact status="no" details="" size="5313" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.slf4j\jul-to-slf4j\ivy-1.7.25.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/jul-to-slf4j/1.7.25/jul-to-slf4j-1.7.25.pom"/>
+				<metadata-artifact status="no" details="" size="5307" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.slf4j\jul-to-slf4j\ivy-1.7.25.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/jul-to-slf4j/1.7.25/jul-to-slf4j-1.7.25.pom"/>
 				<caller organisation="net.sourceforge.tess4j" name="tess4j" conf="default, compile, runtime, master" rev="1.7.25" rev-constraint-default="1.7.25" rev-constraint-dynamic="1.7.25" callerrev="3.4.4"/>
 				<artifacts>
-					<artifact name="jul-to-slf4j" type="jar" ext="jar" status="no" details="" size="4596" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.25.jar">
+					<artifact name="jul-to-slf4j" type="jar" ext="jar" status="no" details="" size="4596" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.25.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/slf4j/jul-to-slf4j/1.7.25/jul-to-slf4j-1.7.25.jar"/>
 					</artifact>
 				</artifacts>
@@ -978,19 +978,18 @@
 		<module organisation="org.slf4j" name="log4j-over-slf4j">
 			<revision name="1.7.25" status="release" pubdate="20170316163739" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="21">
 				<license name="Apache Software Licenses" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="5337" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.slf4j\log4j-over-slf4j\ivy-1.7.25.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/log4j-over-slf4j/1.7.25/log4j-over-slf4j-1.7.25.pom"/>
+				<metadata-artifact status="no" details="" size="5331" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.slf4j\log4j-over-slf4j\ivy-1.7.25.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/log4j-over-slf4j/1.7.25/log4j-over-slf4j-1.7.25.pom"/>
 				<caller organisation="net.sourceforge.tess4j" name="tess4j" conf="default, compile, runtime, master" rev="1.7.25" rev-constraint-default="1.7.25" rev-constraint-dynamic="1.7.25" callerrev="3.4.4"/>
 				<artifacts>
-					<artifact name="log4j-over-slf4j" type="jar" ext="jar" status="no" details="" size="23645" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.slf4j\log4j-over-slf4j\jars\log4j-over-slf4j-1.7.25.jar">
+					<artifact name="log4j-over-slf4j" type="jar" ext="jar" status="no" details="" size="23645" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.slf4j\log4j-over-slf4j\jars\log4j-over-slf4j-1.7.25.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/slf4j/log4j-over-slf4j/1.7.25/log4j-over-slf4j-1.7.25.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.slf4j" name="slf4j-api">
-			<revision name="1.7.25" status="release" pubdate="20170316123632" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="18">
-				<license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
-				<metadata-artifact status="no" details="" size="5190" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.slf4j\slf4j-api\ivy-1.7.25.xml" searched="false" origin-is-local="false" origin-location="file:/C:/Users/Lucas Fischer/.sbt/preloaded/org.slf4j/slf4j-api/1.7.25/ivys/ivy.xml"/>
+			<revision name="1.7.25" status="release" pubdate="20170316163632" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="18">
+				<metadata-artifact status="no" details="" size="5340" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.slf4j\slf4j-api\ivy-1.7.25.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.pom"/>
 				<caller organisation="org.slf4j" name="jcl-over-slf4j" conf="compile, runtime" rev="1.7.25" rev-constraint-default="1.7.25" rev-constraint-dynamic="1.7.25" callerrev="1.7.25"/>
 				<caller organisation="com.sksamuel.scrimage" name="scrimage-filters_2.12" conf="default, compile, runtime, master" rev="1.7.7" rev-constraint-default="1.7.7" rev-constraint-dynamic="1.7.7" callerrev="3.0.0-alpha4"/>
 				<caller organisation="com.sksamuel.scrimage" name="scrimage-core_2.12" conf="default, compile, runtime, master" rev="1.7.7" rev-constraint-default="1.7.7" rev-constraint-dynamic="1.7.7" callerrev="3.0.0-alpha4"/>
@@ -1002,8 +1001,8 @@
 				<caller organisation="net.sf.cssbox" name="jstyleparser" conf="compile, runtime" rev="1.7.25" rev-constraint-default="1.7.25" rev-constraint-dynamic="1.7.25" callerrev="3.2"/>
 				<caller organisation="net.sf.cssbox" name="cssbox" conf="compile, runtime" rev="1.7.25" rev-constraint-default="1.7.25" rev-constraint-dynamic="1.7.25" callerrev="4.14"/>
 				<artifacts>
-					<artifact name="slf4j-api" type="jar" ext="jar" status="no" details="" size="41203" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.25.jar">
-						<origin-location is-local="false" location="file:/C:/Users/Lucas Fischer/.sbt/preloaded/org.slf4j/slf4j-api/1.7.25/jars/slf4j-api.jar"/>
+					<artifact name="slf4j-api" type="jar" ext="jar" status="no" details="" size="41203" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.25.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
@@ -1031,10 +1030,10 @@
 			<revision name="1.2.3" status="release" pubdate="20170331202715" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="17">
 				<license name="Eclipse Public License - v 1.0" url="http://www.eclipse.org/legal/epl-v10.html"/>
 				<license name="GNU Lesser General Public License" url="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html"/>
-				<metadata-artifact status="no" details="" size="7994" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\ch.qos.logback\logback-core\ivy-1.2.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.pom"/>
+				<metadata-artifact status="no" details="" size="7994" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\ch.qos.logback\logback-core\ivy-1.2.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.pom"/>
 				<caller organisation="ch.qos.logback" name="logback-classic" conf="compile, runtime" rev="1.2.3" rev-constraint-default="1.2.3" rev-constraint-dynamic="1.2.3" callerrev="1.2.3"/>
 				<artifacts>
-					<artifact name="logback-core" type="jar" ext="jar" status="no" details="" size="471901" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.2.3.jar">
+					<artifact name="logback-core" type="jar" ext="jar" status="no" details="" size="471901" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.2.3.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar"/>
 					</artifact>
 				</artifacts>
@@ -1043,10 +1042,10 @@
 		<module organisation="junit" name="junit">
 			<revision name="4.10" status="release" pubdate="20110929201223" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://junit.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="86">
 				<license name="Common Public License Version 1.0" url="http://www.opensource.org/licenses/cpl1.0.txt"/>
-				<metadata-artifact status="no" details="" size="2932" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\junit\junit\ivy-4.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/junit/junit/4.10/junit-4.10.pom"/>
+				<metadata-artifact status="no" details="" size="2932" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\junit\junit\ivy-4.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/junit/junit/4.10/junit-4.10.pom"/>
 				<caller organisation="reader" name="reader_2.12" conf="test, compile, provided, test-internal, runtime, optional" rev="4.10" rev-constraint-default="4.10" rev-constraint-dynamic="4.10" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="junit" type="jar" ext="jar" status="no" details="" size="253160" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\junit\junit\jars\junit-4.10.jar">
+					<artifact name="junit" type="jar" ext="jar" status="no" details="" size="253160" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\junit\junit\jars\junit-4.10.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/junit/junit/4.10/junit-4.10.jar"/>
 					</artifact>
 				</artifacts>
@@ -1054,10 +1053,10 @@
 		</module>
 		<module organisation="org.hamcrest" name="hamcrest-core">
 			<revision name="1.1" status="release" pubdate="20070718201143" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="87">
-				<metadata-artifact status="no" details="" size="4296" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.hamcrest\hamcrest-core\ivy-1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.pom"/>
+				<metadata-artifact status="no" details="" size="4296" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.hamcrest\hamcrest-core\ivy-1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.pom"/>
 				<caller organisation="junit" name="junit" conf="default, compile, runtime, master" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="4.10"/>
 				<artifacts>
-					<artifact name="hamcrest-core" type="jar" ext="jar" status="no" details="" size="76643" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.hamcrest\hamcrest-core\jars\hamcrest-core-1.1.jar">
+					<artifact name="hamcrest-core" type="jar" ext="jar" status="no" details="" size="76643" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.hamcrest\hamcrest-core\jars\hamcrest-core-1.1.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar"/>
 					</artifact>
 				</artifacts>
@@ -1066,10 +1065,10 @@
 		<module organisation="org.jboss" name="jboss-vfs">
 			<revision name="3.2.12.Final" status="release" pubdate="20160506115713" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.jboss.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="14">
 				<license name="asl" url="http://repository.jboss.org/licenses/apache-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="10799" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.jboss\jboss-vfs\ivy-3.2.12.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/jboss/jboss-vfs/3.2.12.Final/jboss-vfs-3.2.12.Final.pom"/>
+				<metadata-artifact status="no" details="" size="10799" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.jboss\jboss-vfs\ivy-3.2.12.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/jboss/jboss-vfs/3.2.12.Final/jboss-vfs-3.2.12.Final.pom"/>
 				<caller organisation="net.sourceforge.tess4j" name="tess4j" conf="default, compile, runtime, master" rev="3.2.12.Final" rev-constraint-default="3.2.12.Final" rev-constraint-dynamic="3.2.12.Final" callerrev="3.4.4"/>
 				<artifacts>
-					<artifact name="jboss-vfs" type="jar" ext="jar" status="no" details="" size="144240" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.jboss\jboss-vfs\jars\jboss-vfs-3.2.12.Final.jar">
+					<artifact name="jboss-vfs" type="jar" ext="jar" status="no" details="" size="144240" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.jboss\jboss-vfs\jars\jboss-vfs-3.2.12.Final.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/jboss/jboss-vfs/3.2.12.Final/jboss-vfs-3.2.12.Final.jar"/>
 					</artifact>
 				</artifacts>
@@ -1078,10 +1077,10 @@
 		<module organisation="org.jboss.logging" name="jboss-logging">
 			<revision name="3.1.4.GA" status="release" pubdate="20131220184248" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.jboss.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="15">
 				<license name="Apache License, version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="8532" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.jboss.logging\jboss-logging\ivy-3.1.4.GA.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/jboss/logging/jboss-logging/3.1.4.GA/jboss-logging-3.1.4.GA.pom"/>
+				<metadata-artifact status="no" details="" size="8532" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.jboss.logging\jboss-logging\ivy-3.1.4.GA.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/jboss/logging/jboss-logging/3.1.4.GA/jboss-logging-3.1.4.GA.pom"/>
 				<caller organisation="org.jboss" name="jboss-vfs" conf="compile, runtime" rev="3.1.4.GA" rev-constraint-default="3.1.4.GA" rev-constraint-dynamic="3.1.4.GA" callerrev="3.2.12.Final"/>
 				<artifacts>
-					<artifact name="jboss-logging" type="jar" ext="jar" status="no" details="" size="57193" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.1.4.GA.jar">
+					<artifact name="jboss-logging" type="jar" ext="jar" status="no" details="" size="57193" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.1.4.GA.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/jboss/logging/jboss-logging/3.1.4.GA/jboss-logging-3.1.4.GA.jar"/>
 					</artifact>
 				</artifacts>
@@ -1090,10 +1089,10 @@
 		<module organisation="net.sourceforge.lept4j" name="lept4j">
 			<revision name="1.6.3" status="release" pubdate="20180222185909" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/nguyenq/lept4j" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="13">
 				<license name="Apache License 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="3890" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\net.sourceforge.lept4j\lept4j\ivy-1.6.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/sourceforge/lept4j/lept4j/1.6.3/lept4j-1.6.3.pom"/>
+				<metadata-artifact status="no" details="" size="3890" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\net.sourceforge.lept4j\lept4j\ivy-1.6.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/sourceforge/lept4j/lept4j/1.6.3/lept4j-1.6.3.pom"/>
 				<caller organisation="net.sourceforge.tess4j" name="tess4j" conf="default, compile, runtime, master" rev="1.6.3" rev-constraint-default="1.6.3" rev-constraint-dynamic="1.6.3" callerrev="3.4.4"/>
 				<artifacts>
-					<artifact name="lept4j" type="jar" ext="jar" status="no" details="" size="3253518" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\net.sourceforge.lept4j\lept4j\jars\lept4j-1.6.3.jar">
+					<artifact name="lept4j" type="jar" ext="jar" status="no" details="" size="3253518" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\net.sourceforge.lept4j\lept4j\jars\lept4j-1.6.3.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/net/sourceforge/lept4j/lept4j/1.6.3/lept4j-1.6.3.jar"/>
 					</artifact>
 				</artifacts>
@@ -1102,7 +1101,7 @@
 		<module organisation="commons-io" name="commons-io">
 			<revision name="2.6" status="release" pubdate="20171015110052" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-io/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="10">
 				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="12952" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\commons-io\commons-io\ivy-2.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-io/commons-io/2.6/commons-io-2.6.pom"/>
+				<metadata-artifact status="no" details="" size="12952" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\commons-io\commons-io\ivy-2.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-io/commons-io/2.6/commons-io-2.6.pom"/>
 				<caller organisation="com.sksamuel.scrimage" name="scrimage-filters_2.12" conf="default, compile, runtime, master" rev="2.4" rev-constraint-default="2.4" rev-constraint-dynamic="2.4" callerrev="3.0.0-alpha4"/>
 				<caller organisation="com.sksamuel.scrimage" name="scrimage-core_2.12" conf="default, compile, runtime, master" rev="2.4" rev-constraint-default="2.4" rev-constraint-dynamic="2.4" callerrev="3.0.0-alpha4"/>
 				<caller organisation="net.sourceforge.tess4j" name="tess4j" conf="default, compile, runtime, master" rev="2.6" rev-constraint-default="2.6" rev-constraint-dynamic="2.6" callerrev="3.4.4"/>
@@ -1111,7 +1110,7 @@
 				<caller organisation="net.sourceforge.lept4j" name="lept4j" conf="compile, runtime" rev="2.6" rev-constraint-default="2.6" rev-constraint-dynamic="2.6" callerrev="1.6.3"/>
 				<caller organisation="net.mabboud.fontverter" name="FontVerter" conf="compile, runtime" rev="2.4" rev-constraint-default="2.4" rev-constraint-dynamic="2.4" callerrev="1.2.20"/>
 				<artifacts>
-					<artifact name="commons-io" type="jar" ext="jar" status="no" details="" size="214788" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\commons-io\commons-io\jars\commons-io-2.6.jar">
+					<artifact name="commons-io" type="jar" ext="jar" status="no" details="" size="214788" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\commons-io\commons-io\jars\commons-io-2.6.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/commons-io/commons-io/2.6/commons-io-2.6.jar"/>
 					</artifact>
 				</artifacts>
@@ -1135,10 +1134,10 @@
 		<module organisation="org.ghost4j" name="ghost4j">
 			<revision name="1.0.1" status="release" pubdate="20160314232648" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.ghost4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="5">
 				<license name="GNU LESSER GENERAL PUBLIC LICENSE" url="http://www.gnu.org/licenses/lgpl-3.0-standalone.html"/>
-				<metadata-artifact status="no" details="" size="4821" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.ghost4j\ghost4j\ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/ghost4j/ghost4j/1.0.1/ghost4j-1.0.1.pom"/>
+				<metadata-artifact status="no" details="" size="4821" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.ghost4j\ghost4j\ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/ghost4j/ghost4j/1.0.1/ghost4j-1.0.1.pom"/>
 				<caller organisation="net.sourceforge.tess4j" name="tess4j" conf="default, compile, runtime, master" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="3.4.4"/>
 				<artifacts>
-					<artifact name="ghost4j" type="jar" ext="jar" status="no" details="" size="180370" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.ghost4j\ghost4j\jars\ghost4j-1.0.1.jar">
+					<artifact name="ghost4j" type="jar" ext="jar" status="no" details="" size="180370" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.ghost4j\ghost4j\jars\ghost4j-1.0.1.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/ghost4j/ghost4j/1.0.1/ghost4j-1.0.1.jar"/>
 					</artifact>
 				</artifacts>
@@ -1147,10 +1146,10 @@
 		<module organisation="com.lowagie" name="itext">
 			<revision name="2.1.7" status="release" pubdate="20090708233910" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.lowagie.com/iText/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="11">
 				<license name="Mozilla Public License" url="http://www.mozilla.org/MPL/MPL-1.1.html"/>
-				<metadata-artifact status="no" details="" size="3052" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.lowagie\itext\ivy-2.1.7.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/lowagie/itext/2.1.7/itext-2.1.7.pom"/>
+				<metadata-artifact status="no" details="" size="3052" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.lowagie\itext\ivy-2.1.7.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/lowagie/itext/2.1.7/itext-2.1.7.pom"/>
 				<caller organisation="org.ghost4j" name="ghost4j" conf="compile, runtime" rev="2.1.7" rev-constraint-default="2.1.7" rev-constraint-dynamic="2.1.7" callerrev="1.0.1"/>
 				<artifacts>
-					<artifact name="itext" type="jar" ext="jar" status="no" details="" size="1130070" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.lowagie\itext\jars\itext-2.1.7.jar">
+					<artifact name="itext" type="jar" ext="jar" status="no" details="" size="1130070" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.lowagie\itext\jars\itext-2.1.7.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/lowagie/itext/2.1.7/itext-2.1.7.jar"/>
 					</artifact>
 				</artifacts>
@@ -1158,7 +1157,7 @@
 		</module>
 		<module organisation="bouncycastle" name="bctsp-jdk14">
 			<revision name="138" status="release" pubdate="20090903143229" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="12">
-				<metadata-artifact status="no" details="" size="2555" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\bouncycastle\bctsp-jdk14\ivy-138.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/bouncycastle/bctsp-jdk14/138/bctsp-jdk14-138.pom"/>
+				<metadata-artifact status="no" details="" size="2555" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\bouncycastle\bctsp-jdk14\ivy-138.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/bouncycastle/bctsp-jdk14/138/bctsp-jdk14-138.pom"/>
 				<caller organisation="com.lowagie" name="itext" conf="compile, runtime" rev="138" rev-constraint-default="138" rev-constraint-dynamic="138" callerrev="2.1.7"/>
 				<artifacts>
 				</artifacts>
@@ -1167,10 +1166,10 @@
 		<module organisation="org.apache.xmlgraphics" name="xmlgraphics-commons">
 			<revision name="1.4" status="release" pubdate="20100826155218" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://xmlgraphics.apache.org/commons/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="9">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="3097" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.apache.xmlgraphics\xmlgraphics-commons\ivy-1.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/xmlgraphics/xmlgraphics-commons/1.4/xmlgraphics-commons-1.4.pom"/>
+				<metadata-artifact status="no" details="" size="3097" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.apache.xmlgraphics\xmlgraphics-commons\ivy-1.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/xmlgraphics/xmlgraphics-commons/1.4/xmlgraphics-commons-1.4.pom"/>
 				<caller organisation="org.ghost4j" name="ghost4j" conf="compile, runtime" rev="1.4" rev-constraint-default="1.4" rev-constraint-dynamic="1.4" callerrev="1.0.1"/>
 				<artifacts>
-					<artifact name="xmlgraphics-commons" type="jar" ext="jar" status="no" details="" size="569113" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.apache.xmlgraphics\xmlgraphics-commons\jars\xmlgraphics-commons-1.4.jar">
+					<artifact name="xmlgraphics-commons" type="jar" ext="jar" status="no" details="" size="569113" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.apache.xmlgraphics\xmlgraphics-commons\jars\xmlgraphics-commons-1.4.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/xmlgraphics/xmlgraphics-commons/1.4/xmlgraphics-commons-1.4.jar"/>
 					</artifact>
 				</artifacts>
@@ -1179,10 +1178,10 @@
 		<module organisation="commons-beanutils" name="commons-beanutils">
 			<revision name="1.9.2" status="release" pubdate="20140526201928" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-beanutils/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="7">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="10707" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\commons-beanutils\commons-beanutils\ivy-1.9.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-beanutils/commons-beanutils/1.9.2/commons-beanutils-1.9.2.pom"/>
+				<metadata-artifact status="no" details="" size="10707" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\commons-beanutils\commons-beanutils\ivy-1.9.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-beanutils/commons-beanutils/1.9.2/commons-beanutils-1.9.2.pom"/>
 				<caller organisation="org.ghost4j" name="ghost4j" conf="compile, runtime" rev="1.9.2" rev-constraint-default="1.9.2" rev-constraint-dynamic="1.9.2" callerrev="1.0.1"/>
 				<artifacts>
-					<artifact name="commons-beanutils" type="jar" ext="jar" status="no" details="" size="233859" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\commons-beanutils\commons-beanutils\jars\commons-beanutils-1.9.2.jar">
+					<artifact name="commons-beanutils" type="jar" ext="jar" status="no" details="" size="233859" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\commons-beanutils\commons-beanutils\jars\commons-beanutils-1.9.2.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/commons-beanutils/commons-beanutils/1.9.2/commons-beanutils-1.9.2.jar"/>
 					</artifact>
 				</artifacts>
@@ -1191,10 +1190,10 @@
 		<module organisation="commons-collections" name="commons-collections">
 			<revision name="3.2.1" status="release" pubdate="20080415020924" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/collections/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="8">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="4881" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\commons-collections\commons-collections\ivy-3.2.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.pom"/>
+				<metadata-artifact status="no" details="" size="4881" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\commons-collections\commons-collections\ivy-3.2.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.pom"/>
 				<caller organisation="commons-beanutils" name="commons-beanutils" conf="compile, runtime" rev="3.2.1" rev-constraint-default="3.2.1" rev-constraint-dynamic="3.2.1" callerrev="1.9.2"/>
 				<artifacts>
-					<artifact name="commons-collections" type="jar" ext="jar" status="no" details="" size="575389" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\commons-collections\commons-collections\jars\commons-collections-3.2.1.jar">
+					<artifact name="commons-collections" type="jar" ext="jar" status="no" details="" size="575389" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\commons-collections\commons-collections\jars\commons-collections-3.2.1.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar"/>
 					</artifact>
 				</artifacts>
@@ -1203,11 +1202,11 @@
 		<module organisation="org.apache.opennlp" name="opennlp-tools">
 			<revision name="1.8.4" status="release" pubdate="20171221142007" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master, runtime(*), master(compile), compile(*)" position="2">
 				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="6978" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.apache.opennlp\opennlp-tools\ivy-1.8.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/opennlp/opennlp-tools/1.8.4/opennlp-tools-1.8.4.pom"/>
+				<metadata-artifact status="no" details="" size="6978" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.apache.opennlp\opennlp-tools\ivy-1.8.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/opennlp/opennlp-tools/1.8.4/opennlp-tools-1.8.4.pom"/>
 				<caller organisation="reader" name="reader_2.12" conf="test, compile, provided, test-internal, runtime, optional" rev="1.8.4" rev-constraint-default="1.8.4" rev-constraint-dynamic="1.8.4" callerrev="0.1"/>
 				<caller organisation="org.languagetool" name="language-en" conf="default, compile, runtime, master" rev="1.7.2" rev-constraint-default="1.7.2" rev-constraint-dynamic="1.7.2" callerrev="4.0"/>
 				<artifacts>
-					<artifact name="opennlp-tools" type="bundle" ext="jar" status="no" details="" size="1229960" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.apache.opennlp\opennlp-tools\bundles\opennlp-tools-1.8.4.jar">
+					<artifact name="opennlp-tools" type="bundle" ext="jar" status="no" details="" size="1229960" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.apache.opennlp\opennlp-tools\bundles\opennlp-tools-1.8.4.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/opennlp/opennlp-tools/1.8.4/opennlp-tools-1.8.4.jar"/>
 					</artifact>
 				</artifacts>
@@ -1222,11 +1221,11 @@
 		<module organisation="com.github.jai-imageio" name="jai-imageio-core">
 			<revision name="1.3.1" status="release" pubdate="20151109135257" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/jai-imageio/jai-imageio-core" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="4">
 				<license name="BSD 3-clause License w/nuclear disclaimer" url="LICENSE.txt"/>
-				<metadata-artifact status="no" details="" size="3734" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.github.jai-imageio\jai-imageio-core\ivy-1.3.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/github/jai-imageio/jai-imageio-core/1.3.1/jai-imageio-core-1.3.1.pom"/>
+				<metadata-artifact status="no" details="" size="3734" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.github.jai-imageio\jai-imageio-core\ivy-1.3.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/github/jai-imageio/jai-imageio-core/1.3.1/jai-imageio-core-1.3.1.pom"/>
 				<caller organisation="net.sourceforge.tess4j" name="tess4j" conf="default, compile, runtime, master" rev="1.3.1" rev-constraint-default="1.3.1" rev-constraint-dynamic="1.3.1" callerrev="3.4.4"/>
 				<caller organisation="net.sourceforge.lept4j" name="lept4j" conf="compile, runtime" rev="1.3.1" rev-constraint-default="1.3.1" rev-constraint-dynamic="1.3.1" callerrev="1.6.3"/>
 				<artifacts>
-					<artifact name="jai-imageio-core" type="bundle" ext="jar" status="no" details="" size="602022" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\com.github.jai-imageio\jai-imageio-core\bundles\jai-imageio-core-1.3.1.jar">
+					<artifact name="jai-imageio-core" type="bundle" ext="jar" status="no" details="" size="602022" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\com.github.jai-imageio\jai-imageio-core\bundles\jai-imageio-core-1.3.1.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/github/jai-imageio/jai-imageio-core/1.3.1/jai-imageio-core-1.3.1.jar"/>
 					</artifact>
 				</artifacts>
@@ -1235,7 +1234,7 @@
 		<module organisation="commons-logging" name="commons-logging">
 			<revision name="1.2" status="release" pubdate="20140705191228" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-logging/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="1">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="11725" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\commons-logging\commons-logging\ivy-1.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-logging/commons-logging/1.2/commons-logging-1.2.pom"/>
+				<metadata-artifact status="no" details="" size="11725" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\commons-logging\commons-logging\ivy-1.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-logging/commons-logging/1.2/commons-logging-1.2.pom"/>
 				<caller organisation="org.apache.pdfbox" name="fontbox" conf="compile, runtime" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="2.0.8"/>
 				<caller organisation="org.apache.pdfbox" name="pdfbox" conf="default, compile, runtime, master" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="2.0.7"/>
 				<caller organisation="net.loomchild" name="segment" conf="compile, runtime" rev="1.1.1" rev-constraint-default="1.1.1" rev-constraint-dynamic="1.1.1" callerrev="2.0.0"/>
@@ -1244,7 +1243,7 @@
 				<caller organisation="org.apache.pdfbox" name="pdfbox" conf="compile, runtime" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="2.0.8"/>
 				<caller organisation="commons-beanutils" name="commons-beanutils" conf="compile, runtime" rev="1.1.1" rev-constraint-default="1.1.1" rev-constraint-dynamic="1.1.1" callerrev="1.9.2"/>
 				<artifacts>
-					<artifact name="commons-logging" type="jar" ext="jar" status="no" details="" size="61829" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.2.jar">
+					<artifact name="commons-logging" type="jar" ext="jar" status="no" details="" size="61829" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.2.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/commons-logging/commons-logging/1.2/commons-logging-1.2.jar"/>
 					</artifact>
 				</artifacts>
@@ -1267,10 +1266,10 @@
 		<module organisation="log4j" name="log4j">
 			<revision name="1.2.17" status="release" pubdate="20120526104339" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://logging.apache.org/log4j/1.2/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="6">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="3708" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\log4j\log4j\ivy-1.2.17.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/log4j/log4j/1.2.17/log4j-1.2.17.pom"/>
+				<metadata-artifact status="no" details="" size="3708" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\log4j\log4j\ivy-1.2.17.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/log4j/log4j/1.2.17/log4j-1.2.17.pom"/>
 				<caller organisation="org.ghost4j" name="ghost4j" conf="compile, runtime" rev="1.2.17" rev-constraint-default="1.2.17" rev-constraint-dynamic="1.2.17" callerrev="1.0.1"/>
 				<artifacts>
-					<artifact name="log4j" type="bundle" ext="jar" status="no" details="" size="489884" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\log4j\log4j\bundles\log4j-1.2.17.jar">
+					<artifact name="log4j" type="bundle" ext="jar" status="no" details="" size="489884" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\log4j\log4j\bundles\log4j-1.2.17.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/log4j/log4j/1.2.17/log4j-1.2.17.jar"/>
 					</artifact>
 				</artifacts>
@@ -1279,7 +1278,7 @@
 		<module organisation="org.scala-lang" name="scala-library">
 			<revision name="2.12.4" status="release" pubdate="20171011030456" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.4/" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="0">
 				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
-				<metadata-artifact status="no" details="" size="2642" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.scala-lang\scala-library\ivy-2.12.4.xml" searched="false" origin-is-local="false" origin-location="file:/C:/Users/Lucas Fischer/.sbt/preloaded/org.scala-lang/scala-library/2.12.4/ivys/ivy.xml"/>
+				<metadata-artifact status="no" details="" size="2642" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.scala-lang\scala-library\ivy-2.12.4.xml" searched="false" origin-is-local="false" origin-location="file:/C:/Users/Margarida Reis/.sbt/preloaded/org.scala-lang/scala-library/2.12.4/ivys/ivy.xml"/>
 				<caller organisation="com.sksamuel.scrimage" name="scrimage-filters_2.12" conf="default, compile, runtime, master" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="3.0.0-alpha4"/>
 				<caller organisation="org.json4s" name="json4s-scalap_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="3.6.0-M2"/>
 				<caller organisation="org.json4s" name="json4s-native_2.12" conf="default, compile, runtime, master" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="3.6.0-M2"/>
@@ -1294,8 +1293,8 @@
 				<caller organisation="org.json4s" name="json4s-ast_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="3.6.0-M2"/>
 				<caller organisation="org.scalactic" name="scalactic_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="3.2.0-SNAP10"/>
 				<artifacts>
-					<artifact name="scala-library" type="jar" ext="jar" status="no" details="" size="5247152" time="0" location="C:\Users\Lucas Fischer\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.12.4.jar">
-						<origin-location is-local="false" location="file:/C:/Users/Lucas Fischer/.sbt/preloaded/org.scala-lang/scala-library/2.12.4/jars/scala-library.jar"/>
+					<artifact name="scala-library" type="jar" ext="jar" status="no" details="" size="5247152" time="0" location="C:\Users\Margarida Reis\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.12.4.jar">
+						<origin-location is-local="false" location="file:/C:/Users/Margarida Reis/.sbt/preloaded/org.scala-lang/scala-library/2.12.4/jars/scala-library.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
