@@ -6,7 +6,7 @@ import parser.conversion.Converter._
 object Main {
 
   def main(args: Array[String]): Unit = {
-    val filepath = new File("./converter/resources/cv.pdf")
+    val filepath = new File("./converter/src/main/resources/cv.pdf")
     convertPDFtoIMG(filepath, FileType.jpeg)
     convertPDFtoODT(filepath)
   }
