@@ -9,7 +9,7 @@ import Converter._
 @RunWith(classOf[JUnitRunner])
 class ConverterSuite extends FunSuite {
 
-  val validFile = new File("./converter/resources/cv.pdf")
+  val validFile = new File("./converter/src/main/resources/cv.pdf")
 
   /**
     * Tests that sending a valid filePath and fileType to convertPDFtoIMG will return true
