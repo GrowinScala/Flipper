@@ -20,7 +20,7 @@ Flipper is an open-source PDF library written in Scala and that can be integrate
  
 ### Project structure ###
 
-Flipper is divided into 3 different modules that can be used individually: **Reader**, **Generator** and **reader.Converter**.
+Flipper is divided into 3 different modules that can be used individually: **Reader**, **Generator** and **Converter**.
 
 
 ```
@@ -34,7 +34,7 @@ Flipper/
 You can find the individual **README.md** files with examples and documentation here:
 * [Reader](./reader/README.md)
 * [Generator](./generator/README.md)
-* [reader.Converter](./converter/README.md)
+* [Converter](./converter/README.md)
  
  
 ---

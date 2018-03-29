@@ -16,12 +16,18 @@ The present file documents the Reader module.
 ### Module Structure ### 
  
   ```
-  Reader/
-         ├── Extractor.scala       ; Handles the PDF parsing and JSON generation
-         ├── ImageProcessing.scala ; Handles processing the image and extract its text
-         ├── OpenNLP.scala         ; Handles the NLP (natural language processing) functionalities
-         ├── POSTag.scala          ; Enum for the possible Part-Of-Speech tags to be used in when extracting values for keywords
-         └── SpellChecker.scala    ; Handles the spellchecking operations to improve the OCR's accuracy
+  reader/
+         ├── java/parser/extraction/
+         |                          └── ExtractorJava.java     ; Java interface for the API
+         └── scala/parser/
+                         ├── extraction/
+                         |              ├── Extractor.scala    ; Handles the PDF parsing and JSON generation
+                         |              └── FileHandler.scala  ; Handles the file inputs
+                         └── utils/                
+                                   ├── ImageProcessing.scala   ; Handles processing the image and extract its text
+                                   ├── OpenNLP.scala           ; Handles the NLP (natural language processing) functionalities
+                                   ├── POSTag.scala            ; Enum for the possible Part-Of-Speech tags to be used in when extracting values for keywords
+                                   └── SpellChecker.scala      ; Handles the spellchecking operations to improve the OCR's accuracy
   ```
   
 ---
