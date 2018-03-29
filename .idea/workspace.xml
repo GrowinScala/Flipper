@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5115832d-4669-4625-b348-c310af38a585" name="Default" comment="Updating README's">
+    <list default="true" id="5115832d-4669-4625-b348-c310af38a585" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change beforePath="$PROJECT_DIR$/reader/README.md" afterPath="$PROJECT_DIR$/reader/README.md" />
-      <change beforePath="$PROJECT_DIR$/reader/src/main/java/parser/extraction/ExtractorJava.java" afterPath="$PROJECT_DIR$/reader/src/main/java/parser/extraction/ExtractorJava.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -37,15 +35,19 @@
         <entry file="file://$PROJECT_DIR$/reader/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="420">
-                <caret line="44" column="63" lean-forward="true" selection-start-line="44" selection-start-column="63" selection-end-line="44" selection-end-column="63" />
+              <first_editor relative-caret-position="2584">
+                <caret line="175" column="0" lean-forward="true" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
                 <folding>
-                  <marker date="1522313158773" expanded="true" signature="2930:2979" ph="..." />
-                  <marker date="1522313158773" expanded="true" signature="2930:2992" ph="..." />
-                  <marker date="1522313158773" expanded="true" signature="4522:4562" ph="..." />
-                  <marker date="1522313158773" expanded="true" signature="5848:5979" ph="..." />
-                  <marker date="1522313158773" expanded="true" signature="6516:6649" ph="..." />
-                  <marker date="1522313158773" expanded="true" signature="7180:7305" ph="..." />
+                  <marker date="1522313647696" expanded="true" signature="2930:2983" ph="..." />
+                  <marker date="1522313647696" expanded="true" signature="2959:2970" ph="..." />
+                  <marker date="1522313647696" expanded="true" signature="4504:4535" ph="..." />
+                  <marker date="1522313647696" expanded="true" signature="5821:5934" ph="..." />
+                  <marker date="1522313647696" expanded="true" signature="5827:5934" ph="..." />
+                  <marker date="1522313647696" expanded="true" signature="6471:6586" ph="..." />
+                  <marker date="1522313647696" expanded="true" signature="6477:6586" ph="..." />
+                  <marker date="1522313647696" expanded="true" signature="7117:7212" ph="..." />
+                  <marker date="1522313647696" expanded="true" signature="7117:7224" ph="..." />
+                  <marker date="1522313647696" expanded="true" signature="7123:7212" ph="..." />
                 </folding>
               </first_editor>
               <second_editor />
@@ -824,7 +826,14 @@
       <option name="project" value="LOCAL" />
       <updated>1522254939785</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Updating README's">
+      <created>1522313235389</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1522313235389</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1310,15 +1319,19 @@
     <entry file="file://$PROJECT_DIR$/reader/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="420">
-            <caret line="44" column="63" lean-forward="true" selection-start-line="44" selection-start-column="63" selection-end-line="44" selection-end-column="63" />
+          <first_editor relative-caret-position="2584">
+            <caret line="175" column="0" lean-forward="true" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
             <folding>
-              <marker date="1522313158773" expanded="true" signature="2930:2979" ph="..." />
-              <marker date="1522313158773" expanded="true" signature="2930:2992" ph="..." />
-              <marker date="1522313158773" expanded="true" signature="4522:4562" ph="..." />
-              <marker date="1522313158773" expanded="true" signature="5848:5979" ph="..." />
-              <marker date="1522313158773" expanded="true" signature="6516:6649" ph="..." />
-              <marker date="1522313158773" expanded="true" signature="7180:7305" ph="..." />
+              <marker date="1522313647696" expanded="true" signature="2930:2983" ph="..." />
+              <marker date="1522313647696" expanded="true" signature="2959:2970" ph="..." />
+              <marker date="1522313647696" expanded="true" signature="4504:4535" ph="..." />
+              <marker date="1522313647696" expanded="true" signature="5821:5934" ph="..." />
+              <marker date="1522313647696" expanded="true" signature="5827:5934" ph="..." />
+              <marker date="1522313647696" expanded="true" signature="6471:6586" ph="..." />
+              <marker date="1522313647696" expanded="true" signature="6477:6586" ph="..." />
+              <marker date="1522313647696" expanded="true" signature="7117:7212" ph="..." />
+              <marker date="1522313647696" expanded="true" signature="7117:7224" ph="..." />
+              <marker date="1522313647696" expanded="true" signature="7123:7212" ph="..." />
             </folding>
           </first_editor>
           <second_editor />
