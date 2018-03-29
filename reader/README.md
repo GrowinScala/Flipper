@@ -91,7 +91,7 @@ to **`readPDF`** (found in **Extractor.scala** or **ExtractorJava.java**).
     }
 ```
 
-You now have the have the extracted text, wrapped in an `Option[String]` to prevent `null`'s
+You now have the have the extracted text, wrapped in an `Option[String]` (or just a plain `String` if you're using Java's interface) to prevent `null`'s
 in case the file does not exist.
 
 * #### Parsing PDF and returning a List of JSON Objects #### 
