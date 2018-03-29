@@ -57,21 +57,38 @@ to extract text from images applying an OCR (optical character recognition) with
 
 ### Main Methods / Examples ###
 
-In this section we will show some examples of the features above as well as a short API documentation for this module
+In this section we will show some examples (both in **Scala** and **Java**) of the features above as well as a short API documentation for this module
 in order for you to find what you need.
 <br/>
 
 * #### Extracting text from the PDF doc and its images ####
 
 To extract the text from a PDF document using Flipper simply pass the document path
-to **`readPDF`** (found in **Extractor.scala**).
+to **`readPDF`** (found in **Extractor.scala** or **ExtractorJava.java**).
+
+#### Scala
 
 ```scala
     import parser.extraction.Extractor._
     import java.io.File
     
-    val filePath = new File("./path/to/pdf/document")
-    val extractedText = readPDF(filePath)
+    val file = new File("./path/to/pdf/document")
+    val extractedText = readPDF(file)
+```
+
+#### Java
+
+```java
+    import parser.extraction.ExtractorJava;
+    import java.io.File;
+    
+    public class Example {
+         public static void main(String[] args) {
+            ExtractorJava ex = new ExtractorJava();
+            File file = new File("./path/to/pdf/document");
+            String extractedText = ex.readPDF(file);
+         }
+    }
 ```
 
 You now have the have the extracted text, wrapped in an `Option[String]` to prevent `null`'s
@@ -107,6 +124,7 @@ for a given keyword, the possible POSTags can be found bellow:
 You can now implement the following snippet:
 
 
+#### Scala
 
 ```scala
     import parser.extraction.Extractor.{readPDF, getJSONObjects}
@@ -119,7 +137,39 @@ You can now implement the following snippet:
     
     val jsonObjs : List[String] = getJSONObjects(extractedText, keywords)
     
-    //jsonObjs -> List( "{ "name" : "John Doe" , "age" : 21 }" , "{ "name" : "Jane Doe" , "age" : 22 }" )
+    //jsonObjs -> List(
+    //                "{ "name" : "John Doe" , "age" : 21 }",
+    //                "{ "name" : "Jane Doe" , "age" : 22 }"
+    //                )
+```
+
+#### Java
+
+```java
+    import parser.extraction.ExtractorJava;
+    import java.io.File;
+    import parser.utils.POSTag;
+    import java.util.HashMap;
+    import java.util.List;
+    
+    public class Example {
+         public static void main(String[] args) {
+            ExtractorJava ex = new ExtractorJava();
+            File file = new File("./path/to/pdf/document");
+            String extractedText = ex.readPDF(file);
+            
+            HashMap keywords = new HashMap<>();
+            keywords.put("name", POSTag.N);
+            keywords.put("age", POSTag.NUM);
+            
+            List jsonOBjs = ex.getJSONObjects(text, keywords);
+            
+            //jsonOBjs -> List(
+            //                 "{ "name" : "John Doe" , "age" : 21 }",
+            //                 "{ "name" : "Jane Doe" , "age" : 22 }"
+            //                )
+         }
+    }
 ```
 
 You can also send an optional flag to `getJSONObjects` specifying how you want the JSON to be outputed when a keyword has no value:
@@ -139,6 +189,8 @@ which we will see next.
 In case you want to obtain a List Keywords with all the values found for that keyword, Flipper provides you
 with that possibility through **`getAllMatchedValues`**.
 
+#### Scala
+
 ```scala
     import parser.extraction.Extractor.{readPDF, getAllMatchedValues}
     import java.io.File
@@ -149,12 +201,46 @@ with that possibility through **`getAllMatchedValues`**.
     val keywords = List( ("name", POSTag.N), ("age", POSTag.NUM) )
     
     val matchedValues = getAllMatchedValues(extractedText, keywords) 
-    //matchedValues -> List( ("name", List("John Doe", "Jane Doe")), ("age", List("21", "22") )
+    //matchedValues -> List(
+    //                      ("name", List("John Doe", "Jane Doe")),
+    //                      ("age", List("21", "22")
+    //                     )
+```
+
+#### Java
+
+```java
+    import parser.extraction.ExtractorJava;
+    import java.io.File;
+    import parser.utils.POSTag;
+    import java.util.HashMap;
+    import java.util.List;
+    
+    public class Example {
+         public static void main(String[] args) {
+            ExtractorJava ex = new ExtractorJava();
+            File file = new File("./path/to/pdf/document");
+            String extractedText = ex.readPDF(file);
+            
+            HashMap keywords = new HashMap<>();
+            keywords.put("name", POSTag.N);
+            keywords.put("age", POSTag.NUM);
+            
+            List matchedValues = ex.getAllMatchedValues(text, keywords);
+            
+            //matchedValues -> List(
+            //                      Map("name" -> List("John Doe", "Jane Doe")),
+            //                      Map("age" -> List("21", "22"))
+            //                     )
+         }
+    }
 ```
 
 * #### Getting just a single value for each keyword ####
 
 This method works exactly like the one above but instead of returning every value found for a keyword, returns only one.
+
+#### Scala
 
 ```scala
     import parser.extraction.Extractor.{readPDF, getSingleMatchedValue}
@@ -166,13 +252,47 @@ This method works exactly like the one above but instead of returning every valu
     val keywords = List( ("name", POSTag.N), ("age", POSTag.NUM) )
     
     val matchedValues = getSingleMatchedValue(extractedText, keywords) 
-    //matchedValues -> List( ("name", List("John Doe")), ("age", List("21") )
+    //matchedValues -> List(
+    //                      ("name", List("John Doe")),
+    //                      ("age", List("21")
+    //                     )
+```
+
+#### Java
+
+```java
+    import parser.extraction.ExtractorJava;
+    import java.io.File;
+    import parser.utils.POSTag;
+    import java.util.HashMap;
+    import java.util.List;
+    
+    public class Example {
+         public static void main(String[] args) {
+            ExtractorJava ex = new ExtractorJava();
+            File file = new File("./path/to/pdf/document");
+            String extractedText = ex.readPDF(file);
+            
+            HashMap keywords = new HashMap<>();
+            keywords.put("name", POSTag.N);
+            keywords.put("age", POSTag.NUM);
+            
+            List matchedValues = ex.getSingleMatchedValue(text, keywords);
+            
+            //matchedValues -> List(
+            //                       Map("name" -> List("John Doe")),
+            //                       Map("age" -> List("21"))
+            //                     )
+         }
+    }
 ```
 
 * #### Getting all possible pre-JSON objects for the values found ####
 
 This method returns a List containing all the possible pre-JSOn objects for the values found for 
 the given keywords
+
+#### Scala
 
 ```scala
     import parser.extraction.Extractor.{readPDF, getAllObjects}
@@ -184,7 +304,39 @@ the given keywords
     val keywords = List( ("name", POSTag.N), ("age", POSTag.NUM) )
     
     val matchedValues = getAllObjects(extractedText, keywords) 
-    //matchedValues -> List( List(("name", List("John Doe")), ("age", List("21")), List( ("name", "Jane Doe"), ("age", List("22")) ))
+    //matchedValues -> List(
+    //                      List(("name", List("John Doe")), ("age", List("21")),
+    //                      List(("name", "Jane Doe"), ("age", List("22")))
+    //                     )
+```
+
+#### Java
+
+```java
+    import parser.extraction.ExtractorJava;
+    import java.io.File;
+    import parser.utils.POSTag;
+    import java.util.HashMap;
+    import java.util.List;
+    
+    public class Example {
+         public static void main(String[] args) {
+            ExtractorJava ex = new ExtractorJava();
+            File file = new File("./path/to/pdf/document");
+            String extractedText = ex.readPDF(file);
+            
+            HashMap keywords = new HashMap<>();
+            keywords.put("name", POSTag.N);
+            keywords.put("age", POSTag.NUM);
+            
+            List matchedValues = ex.getAllObjects(text, keywords);
+            
+            //matchedValues -> List(
+            //                      List(Map("name" -> List("John Doe")), Map("age" -> List("21")),
+            //                      List(Map("name" -> "Jane Doe")), Map("age" -> List("22")))
+            //                     )
+         }
+    }
 ```
  
 ---
