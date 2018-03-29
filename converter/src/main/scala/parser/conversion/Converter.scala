@@ -34,7 +34,7 @@ object Converter {
       case Some(pdf) =>
         val renderer = new PDFRenderer(pdf)
         val dir = new File("./target/PDFtoIMG")
-        if (!dir.exists) dir.mkdir
+        if (!dir.exists) dir.mkdirs
         try {
           for (i <- 0 until pdf.getNumberOfPages) {
             val image = renderer.renderImage(i)

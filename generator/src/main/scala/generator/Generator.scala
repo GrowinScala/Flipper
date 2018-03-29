@@ -171,7 +171,7 @@ object Generator {
           }
 
         val dir = new File("./target/htmlPages")
-        if (!dir.exists) dir.mkdir
+        if (!dir.exists) dir.mkdirs
         val filePath = "./target/htmlPages/" + System.nanoTime() + ".html"
         val pw = new PrintWriter(new File(filePath)) //prints the HTML code to the html file
         pw.write(htmlString)
