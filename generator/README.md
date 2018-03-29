@@ -16,7 +16,7 @@ The present file documents the Generator module.
 ### Module Structure ### 
   
    ```
-   Generator/
+   generator/
              ├── java/generator/
              |                  └── GeneratorJava.java ; Java interface for this module's API
              └──scala/generator/

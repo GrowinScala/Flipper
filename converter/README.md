@@ -15,8 +15,12 @@ The present file documents the Converter module.
 ### Module Structure ### 
   
    ```
-   Converter/
-             └── Converter.scala ; Handles the conversion of PDF into other file types
+   converter/
+             ├── java/parser/conversion/
+             |                          └── ConverterJava.java  ; Java interface for this module's API
+             └── scala/parser/conversion/
+                                         ├── FileType.scala     ; Enum for the supported file type conversions
+                                         └── Converter.scala    ; Handles the conversion of PDF into other file types
    ```
 ---
 
@@ -32,7 +36,8 @@ Java's **_ImageIO_** we are able to transform each individual page of the docume
 an HTML file using **_Apache's PDFBox_** and converting the resulting HTML into a new ODT using 
 the **_ODF Toolkit Project_**. The reason we first convert to HTML is to maintain the format of the 
 original PDF as much as possible.
- 
+
+  
 ---
 
 ### Main Methods / Examples ###
@@ -44,33 +49,68 @@ for the module in order for you to find what you need.
 * #### Converting a PDF into an image type ####
 
 To convert the PDF document using Flipper you have to pass the document path and the type of file into which 
-you want to convert the original to **`convertPDFtoIMG`** (found in **Converter.scala**), the file type is 
+you want to convert the original to **`convertPDFtoIMG`** (found in **Converter.scala** or **ConverterJava.java**), the file type is 
 chosen from an ENUM which contains the following: png, jpg, jpeg and gif. The output image files will appear 
 in **`./target/PDFtoIMG`**, and the function returns a Boolean saying if the conversion was successful.
 
+### Scala
+
 ```scala
     import java.io.File
-    import ReaderConverter.conversion.Converter._
-    import ReaderConverter.conversion.FileType
+    import parser.conversion.Converter._
+    import parser.conversion.FileType
     
     val file = new File("./path/to/pdf/document")
-    val fileType = FileType.jpg
-    val success = convertPDFtoIMG(file, fileType)
+    val success = convertPDFtoIMG(file, FileType.jpg)
+```
+
+### Java
+
+```java
+    import parser.conversion.ConverterJava;
+    import java.io.File;
+    import parser.conversion.FileType;
+    
+    public class Example {
+         public static void main(String[] args) {
+            ConverterJava cj = new ConverterJava();
+            File file = new File("./path/to/pdf/document");
+            boolean success = cj.convertPDFtoIMG(file, FileType.jpg());
+         }
+    }
 ```
 
  
  * #### Converting a PDF into an Open Document file ####
  
  To convert the PDF document to an ODT document you only have to pass the path of the file you want to convert 
- to **`convertPDFtoODT`** (found in **Converter.scala**). the output will appear in **`./`**, and the functin
+ to **`convertPDFtoODT`** (found in **Converter.scala** or **ConverterJava.java**). the output will appear in **`./`**, and the functin
  returns a Boolean saying if the conversion was successful. 
+ 
+ ### Scala
  
  ```scala
      import java.io.File
-     import ReaderConverter.conversion.Converter._
+     import parser.conversion.Converter._
      
      val file = new File("./path/to/pdf/document")
      val success = convertPDFtoODT(file)
+ ```
+ 
+ ### Java
+ 
+ ```java
+     import parser.conversion.ConverterJava;
+     import java.io.File;
+     import parser.conversion.FileType;
+     
+     public class Example {
+          public static void main(String[] args) {
+             ConverterJava cj = new ConverterJava();
+             File file = new File("./path/to/pdf/document");
+             boolean success = cj.convertPDFtoODT(file);
+          }
+     }
  ```
  
 ---
