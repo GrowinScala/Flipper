@@ -58,7 +58,7 @@ private[parser] object ImageProcessing {
       * Internal method that iterates over the pages in a pdf document
       *
       * @param numPages - The number of pages in a given pdf document
-      * @return a List containg all the image files found in a given pdf document
+      * @return a List containing all the image files found in a given pdf document
       */
     def iteratePages(numPages: Int): List[File] = {
       if (numPages == -1) Nil //stop condition
@@ -74,7 +74,7 @@ private[parser] object ImageProcessing {
       * Internal method that iterates over the page resources object names, in order to find the images in a specific page
       *
       * @param iterator      - Java Iterator to Iterate over the object names
-      * @param pageResources - Resources of the specified page in wich to obtain the types of resources (images, text, graphs, etc.)
+      * @param pageResources - Resources of the specified page in which to obtain the types of resources (images, text, graphs, etc.)
       * @return a List containing all the image files found in a specific page of a given pdf document
       */
     def getFilesList(iterator: Iterator[COSName], pageResources: PDResources): List[File] = {

@@ -8,7 +8,6 @@ The present file documents the Reader module.
 * [Module Structure](#module-structure)
 * [Main Features](#main-features)
 * [Main Methods / Examples](#main-methods-/-examples)
-* [Dependencies](#dependencies)
  
   
 ---
@@ -338,10 +337,4 @@ the given keywords
          }
     }
 ```
- 
----
-
-### Dependencies ### 
-
-To be implemented
  
