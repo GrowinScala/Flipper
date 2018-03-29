@@ -113,7 +113,7 @@ public class ExtractorJava {
     /**
      * Method that will iterate through a list of given keywords and will try to obtain a list containing
      * sub-lists that have all keywords and only one value for each of them (representing a single JSON object for each of the sub-lists)
-     * Method overload representing the useres decision to not pass a regex Map.
+     * Method overload representing the users decision to not pass a regex Map.
      *
      * @param text     - Text in which to look for values for the specified keywords
      * @param keywords - List containing all the keywords we want to find values for

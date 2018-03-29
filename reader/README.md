@@ -16,12 +16,18 @@ The present file documents the Reader module.
 ### Module Structure ### 
  
   ```
-  Reader/
-         ├── Extractor.scala       ; Handles the PDF parsing and JSON generation
-         ├── ImageProcessing.scala ; Handles processing the image and extract its text
-         ├── OpenNLP.scala         ; Handles the NLP (natural language processing) functionalities
-         ├── POSTag.scala          ; Enum for the possible Part-Of-Speech tags to be used in when extracting values for keywords
-         └── SpellChecker.scala    ; Handles the spellchecking operations to improve the OCR's accuracy
+  reader/
+         ├── java/parser/extraction/
+         |                          └── ExtractorJava.java     ; Java interface for the API
+         └── scala/parser/
+                         ├── extraction/
+                         |              ├── Extractor.scala    ; Handles the PDF parsing and JSON generation
+                         |              └── FileHandler.scala  ; Handles the file inputs
+                         └── utils/                
+                                   ├── ImageProcessing.scala   ; Handles processing the image and extract its text
+                                   ├── OpenNLP.scala           ; Handles the NLP (natural language processing) functionalities
+                                   ├── POSTag.scala            ; Enum for the possible Part-Of-Speech tags to be used in when extracting values for keywords
+                                   └── SpellChecker.scala      ; Handles the spellchecking operations to improve the OCR's accuracy
   ```
   
 ---
@@ -61,7 +67,7 @@ To extract the text from a PDF document using Flipper simply pass the document p
 to **`readPDF`** (found in **Extractor.scala**).
 
 ```scala
-    import ReaderConverter.Extraction.Extractor._
+    import parser.extraction.Extractor._
     import java.io.File
     
     val filePath = new File("./path/to/pdf/document")
@@ -103,9 +109,9 @@ You can now implement the following snippet:
 
 
 ```scala
-    import ReaderConverter.Extraction.Extractor.{readPDF, getJSONObjects}
+    import parser.extraction.Extractor.{readPDF, getJSONObjects}
     import java.io.File
-    import ReaderConverter.utils.POSTag
+    import parser.utils.POSTag
     
     val file = new File("./path/to/pdf/document")
     val extractedText = readPDF(file)
@@ -134,9 +140,9 @@ In case you want to obtain a List Keywords with all the values found for that ke
 with that possibility through **`getAllMatchedValues`**.
 
 ```scala
-    import ReaderConverter.Extraction.Extractor.{readPDF, getAllMatchedValues}
+    import parser.extraction.Extractor.{readPDF, getAllMatchedValues}
     import java.io.File
-    import ReaderConverter.utils.POSTag
+    import parser.utils.POSTag
     
     val file = new File("./path/to/pdf/document")
     val extractedText = readPDF(file)
@@ -151,9 +157,9 @@ with that possibility through **`getAllMatchedValues`**.
 This method works exactly like the one above but instead of returning every value found for a keyword, returns only one.
 
 ```scala
-    import ReaderConverter.Extraction.Extractor.{readPDF, getSingleMatchedValue}
+    import parser.extraction.Extractor.{readPDF, getSingleMatchedValue}
     import java.io.File
-    import ReaderConverter.utils.POSTag
+    import parser.utils.POSTag
     
     val file = new File("./path/to/pdf/document")
     val extractedText = readPDF(file)
@@ -169,9 +175,9 @@ This method returns a List containing all the possible pre-JSOn objects for the 
 the given keywords
 
 ```scala
-    import ReaderConverter.Extraction.Extractor.{readPDF, getAllObjects}
+    import parser.extraction.Extractor.{readPDF, getAllObjects}
     import java.io.File
-    import ReaderConverter.utils.POSTag
+    import parser.utils.POSTag
     
     val filePath = new File("./path/to/pdf/document")
     val extractedText = readPDF(filePath)
