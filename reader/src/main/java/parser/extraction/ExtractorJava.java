@@ -208,7 +208,7 @@ public class ExtractorJava {
 
         Option<String> textOpt = (text != null && !text.equals("")) ? Some.apply(text) : Option.apply(null);
         scala.collection.immutable.List result = Extractor.getJSONObjects(textOpt, keywordsToScala(keywords), flag, regexToScala(clientRegEx));
-        return scalaResultToJava(result);
+        return JavaConverters.seqAsJavaList(result);
     }
 
     /**
