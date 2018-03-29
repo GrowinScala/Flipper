@@ -8,7 +8,6 @@ The present file documents the Converter module.
 * [Module Structure](#module-structure)
 * [Main Features](#main-features)
 * [Main Methods / Examples](#main-methods-/-examples)
-* [Dependencies](#dependencies)
  
  
 ---
@@ -112,10 +111,3 @@ in **`./target/PDFtoIMG`**, and the function returns a Boolean saying if the con
           }
      }
  ```
- 
----
-
-### Dependencies ### 
-
-to be implemented 
- 

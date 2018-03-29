@@ -66,7 +66,12 @@ To be implemented
 
 ### Dependencies
 
-To be implemented
+Download the **eng.traineddata** and **por.traineddata** from [here](https://github.com/tesseract-ocr/tessdata) and insert them in a directory named **tessdata** 
+in the root of the project.
+
+Flipper uses **_[Tess4j](http://tess4j.sourceforge.net/)_** (a tesseract for java wrapper) to extract
+text from images (using an algorithm known as _optical character recognition_). In order to improve this algorithms
+accuracy, we must provide Tess4j with a set of **training data**.
 
 <br/>
 

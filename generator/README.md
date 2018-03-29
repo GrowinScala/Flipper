@@ -8,7 +8,6 @@ The present file documents the Generator module.
 * [Module Structure](#module-structure)
 * [Main Features](#main-features)
 * [Main Methods / Examples](#main-methods-/-examples)
-* [Dependencies](#dependencies)
  
  
 ---
@@ -149,11 +148,3 @@ shows in **`./`**.
          }
     }
 ```
-
- 
----
-
-### Dependencies ### 
-
-to be implemented 
- 
