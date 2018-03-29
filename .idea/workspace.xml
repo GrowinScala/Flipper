@@ -8,20 +8,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5115832d-4669-4625-b348-c310af38a585" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/converter/src/main/scala/parser/conversion/Converter.scala" afterPath="$PROJECT_DIR$/converter/src/main/scala/parser/conversion/Converter.scala" />
       <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/classes/Main$.class" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/classes/Main$.class" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/classes/ReaderConverter/conversion/Converter$.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/classes/ReaderConverter/conversion/Converter.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/classes/ReaderConverter/conversion/FileType$.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/classes/ReaderConverter/conversion/FileType.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/test-classes/ReaderConverter/conversion/ConverterSuite.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/generator/src/main/scala/generator/Generator.scala" afterPath="$PROJECT_DIR$/generator/src/main/scala/generator/Generator.scala" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/classes/GenMain.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/classes/generator/Generator$.class" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/classes/generator/Generator$.class" />
-      <change beforePath="$PROJECT_DIR$/reader/src/main/scala/Main.scala" afterPath="$PROJECT_DIR$/reader/src/main/scala/Main.scala" />
-      <change beforePath="$PROJECT_DIR$/reader/src/main/scala/parser/utils/ImageProcessing.scala" afterPath="$PROJECT_DIR$/reader/src/main/scala/parser/utils/ImageProcessing.scala" />
       <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/Main$.class" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/classes/Main$.class" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/MainJava.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/extraction/Extractor$.class" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/extraction/Extractor$.class" />
       <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/extraction/Extractor.class" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/extraction/Extractor.class" />
       <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/utils/ImageProcessing$.class" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/utils/ImageProcessing$.class" />
@@ -71,8 +60,8 @@
       <file leaf-file-name="ImageProcessing.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/utils/ImageProcessing.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
-              <caret line="75" column="16" lean-forward="false" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
+            <state relative-caret-position="436">
+              <caret line="92" column="11" lean-forward="true" selection-start-line="92" selection-start-column="11" selection-end-line="92" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -905,7 +894,14 @@
       <option name="project" value="LOCAL" />
       <updated>1522327361802</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="mkdirs">
+      <created>1522334793920</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1522334793920</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -946,12 +942,12 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32873806" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873806" sideWeight="0.496875" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="sbt" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.50208336" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873806" sideWeight="0.503125" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.49791667" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1014,7 +1010,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added new packages to generator and converter module" />
     <MESSAGE value="Merged with margarida" />
     <MESSAGE value="Implemented FileHandlerSuite.scala" />
     <MESSAGE value="Refactored ExtractorSuite.scala to remove NullPointerException tests" />
@@ -1039,7 +1034,8 @@
     <MESSAGE value="All readmes updated" />
     <MESSAGE value="update" />
     <MESSAGE value="updating extractor" />
-    <option name="LAST_COMMIT_MESSAGE" value="updating extractor" />
+    <MESSAGE value="mkdirs" />
+    <option name="LAST_COMMIT_MESSAGE" value="mkdirs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1422,8 +1418,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/utils/ImageProcessing.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="75" column="16" lean-forward="false" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
+        <state relative-caret-position="436">
+          <caret line="92" column="11" lean-forward="true" selection-start-line="92" selection-start-column="11" selection-end-line="92" selection-end-column="11" />
           <folding />
         </state>
       </provider>
