@@ -66,7 +66,7 @@ in order for you to find what you need.
 To extract the text from a PDF document using Flipper simply pass the document path
 to **`readPDF`** (found in **Extractor.scala** or **ExtractorJava.java**).
 
-#### Scala
+### Scala
 
 ```scala
     import parser.extraction.Extractor._
@@ -76,7 +76,7 @@ to **`readPDF`** (found in **Extractor.scala** or **ExtractorJava.java**).
     val extractedText = readPDF(file)
 ```
 
-#### Java
+### Java
 
 ```java
     import parser.extraction.ExtractorJava;
@@ -124,7 +124,7 @@ for a given keyword, the possible POSTags can be found bellow:
 You can now implement the following snippet:
 
 
-#### Scala
+### Scala
 
 ```scala
     import parser.extraction.Extractor.{readPDF, getJSONObjects}
@@ -143,7 +143,7 @@ You can now implement the following snippet:
     //                )
 ```
 
-#### Java
+### Java
 
 ```java
     import parser.extraction.ExtractorJava;
@@ -189,7 +189,7 @@ which we will see next.
 In case you want to obtain a List Keywords with all the values found for that keyword, Flipper provides you
 with that possibility through **`getAllMatchedValues`**.
 
-#### Scala
+### Scala
 
 ```scala
     import parser.extraction.Extractor.{readPDF, getAllMatchedValues}
@@ -207,7 +207,7 @@ with that possibility through **`getAllMatchedValues`**.
     //                     )
 ```
 
-#### Java
+### Java
 
 ```java
     import parser.extraction.ExtractorJava;
@@ -240,7 +240,7 @@ with that possibility through **`getAllMatchedValues`**.
 
 This method works exactly like the one above but instead of returning every value found for a keyword, returns only one.
 
-#### Scala
+### Scala
 
 ```scala
     import parser.extraction.Extractor.{readPDF, getSingleMatchedValue}
@@ -258,7 +258,7 @@ This method works exactly like the one above but instead of returning every valu
     //                     )
 ```
 
-#### Java
+### Java
 
 ```java
     import parser.extraction.ExtractorJava;
@@ -292,7 +292,7 @@ This method works exactly like the one above but instead of returning every valu
 This method returns a List containing all the possible pre-JSOn objects for the values found for 
 the given keywords
 
-#### Scala
+### Scala
 
 ```scala
     import parser.extraction.Extractor.{readPDF, getAllObjects}
@@ -310,7 +310,7 @@ the given keywords
     //                     )
 ```
 
-#### Java
+### Java
 
 ```java
     import parser.extraction.ExtractorJava;
