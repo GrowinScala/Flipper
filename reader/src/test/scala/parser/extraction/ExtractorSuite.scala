@@ -10,7 +10,7 @@ import parser.utils.POSTag
 @RunWith(classOf[JUnitRunner])
 class ExtractorSuite extends FunSuite {
 
-  val file = new File("./reader/resources/test.pdf")
+  val file = new File("./reader/src/main/resources/test.pdf")
   val text: Option[String] = readPDF(file)
 
   /**

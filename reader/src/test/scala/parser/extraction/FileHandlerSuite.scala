@@ -22,7 +22,7 @@ class FileHandlerSuite extends FunSuite {
     * Tests that calling loadPDF with a valid file will not return None
     */
   test("loadPDF with a valid file") {
-    assert(loadPDF(new File("./reader/resources/something.pdf")).isDefined)
+    assert(loadPDF(new File("./reader/src/main/resources/something.pdf")).isDefined)
   }
 
   /**
@@ -31,7 +31,7 @@ class FileHandlerSuite extends FunSuite {
   test("loadImage with an invalid file") {
     val nullImage = loadImage(null)
     val badImage = loadImage(new File("non existing URI"))
-    val notAnImage = loadImage(new File("./reader/resources/something.pdf"))
+    val notAnImage = loadImage(new File("./reader/src/main/resources/something.pdf"))
 
     assert(nullImage.isEmpty && badImage.isEmpty && notAnImage.isEmpty)
   }
@@ -40,6 +40,6 @@ class FileHandlerSuite extends FunSuite {
     * Tests that calling loadImage with a valid file will not return None
     */
   test("loadImage with a valid file") {
-    assert(loadImage(new File("./reader/resources/testImg.PNG")).isDefined)
+    assert(loadImage(new File("./reader/src/main/resources/testImg.PNG")).isDefined)
   }
 }

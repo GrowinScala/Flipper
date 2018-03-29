@@ -4,7 +4,7 @@
 		module="converter$sources"
 		revision="0.1"
 		status="integration"
-		publication="20180326101719"
+		publication="20180327153641"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>
