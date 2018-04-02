@@ -25,7 +25,7 @@ private[parser] object OpenNLP {
       case "por" => getClass.getResource("/pt-pos-maxent.bin")
       case _ => getClass.getResource("/en-pos-maxent.bin")
     }
-//    val inputStream = new FileInputStream(filepath)
+    //    val inputStream = new FileInputStream(filepath)
     val posModel = new POSModel(filepath)
     val wsTokenizer = WhitespaceTokenizer.INSTANCE
 
@@ -47,7 +47,7 @@ private[parser] object OpenNLP {
     */
   def detectLanguage(text: String): String = {
     val file = getClass.getResource("/langdetect-183.bin")
-//    val file = new File("./reader/resources/langdetect-183.bin")
+    //    val file = new File("./reader/resources/langdetect-183.bin")
     val trainedModel = new LanguageDetectorModel(file)
     val langDect = new LanguageDetectorME(trainedModel)
     langDect.predictLanguage(text).getLang

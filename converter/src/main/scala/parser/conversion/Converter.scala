@@ -160,7 +160,8 @@ object Converter {
         extractImgs(pdf)
         pdf.close()
         val dir = new File("./target/images")
-        val imgs = dir.listFiles.filter(_.isFile).toList.reverse
+
+        val imgs = if (dir.exists)dir.listFiles.filter(_.isFile).toList.reverse else List()
 
         val newOdt = recFunc(htmlLines, "", imgs, TextDocument.newTextDocument())
 
