@@ -8,8 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5115832d-4669-4625-b348-c310af38a585" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/converter/src/main/scala/parser/conversion/Converter.scala" afterPath="$PROJECT_DIR$/converter/src/main/scala/parser/conversion/Converter.scala" />
+      <change beforePath="$PROJECT_DIR$/reader/src/main/scala/parser/utils/OpenNLP.scala" afterPath="$PROJECT_DIR$/reader/src/main/scala/parser/utils/OpenNLP.scala" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/utils/OpenNLP$.class" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/utils/OpenNLP$.class" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -37,11 +37,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Converter.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Converter.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/converter/src/main/scala/parser/conversion/Converter.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="283">
-              <caret line="158" column="23" lean-forward="true" selection-start-line="158" selection-start-column="23" selection-end-line="158" selection-end-column="23" />
+              <caret line="158" column="23" lean-forward="false" selection-start-line="158" selection-start-column="23" selection-end-line="158" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OpenNLP.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/utils/OpenNLP.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="199">
+              <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -111,7 +121,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/generator/src/test/scala/FileHandlerSuite.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/Extraction/FileHandler.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/Extraction/Extractor.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/reader/Extraction/FileHandler.scala" />
@@ -162,6 +171,7 @@
         <option value="$PROJECT_DIR$/reader/README.md" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/converter/src/main/scala/parser/conversion/Converter.scala" />
+        <option value="$PROJECT_DIR$/reader/src/main/scala/parser/utils/OpenNLP.scala" />
       </list>
     </option>
   </component>
@@ -893,7 +903,14 @@
       <option name="project" value="LOCAL" />
       <updated>1522339367408</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Fixed convertPDTtoODT bug">
+      <created>1522658269195</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1522658269196</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1002,7 +1019,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implemented FileHandlerSuite.scala" />
     <MESSAGE value="Refactored ExtractorSuite.scala to remove NullPointerException tests" />
     <MESSAGE value="Refactored ConverterSuite.scala to remove file handling tests (now on reader/FileHandlerSuite.scala)" />
     <MESSAGE value="Refactored ImageProcessingSuite.scala to remove NullPointerException tests and file handling tests" />
@@ -1027,7 +1043,8 @@
     <MESSAGE value="updating extractor" />
     <MESSAGE value="mkdirs" />
     <MESSAGE value="updated readme's" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated readme's" />
+    <MESSAGE value="Fixed convertPDTtoODT bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed convertPDTtoODT bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1261,13 +1278,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/utils/OpenNLP.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="15" column="25" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/converter/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1362,7 +1372,15 @@
     <entry file="file://$PROJECT_DIR$/converter/src/main/scala/parser/conversion/Converter.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
-          <caret line="158" column="23" lean-forward="true" selection-start-line="158" selection-start-column="23" selection-end-line="158" selection-end-column="23" />
+          <caret line="158" column="23" lean-forward="false" selection-start-line="158" selection-start-column="23" selection-end-line="158" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/utils/OpenNLP.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
           <folding />
         </state>
       </provider>
