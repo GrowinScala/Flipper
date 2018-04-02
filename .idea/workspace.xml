@@ -2,14 +2,173 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="Flipper:jar" />
+      <artifact name="flipper:jar" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5115832d-4669-4625-b348-c310af38a585" name="Default" comment="">
+    <list default="true" id="f16c75dc-e210-4cbb-ba55-68950b37574a" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Flipper_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/converter-build.iml" afterPath="$PROJECT_DIR$/.idea/modules/converter-build.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/converter.iml" afterPath="$PROJECT_DIR$/.idea/modules/converter.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/flipper-build.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/flipper.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/generator-build.iml" afterPath="$PROJECT_DIR$/.idea/modules/generator-build.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/generator.iml" afterPath="$PROJECT_DIR$/.idea/modules/generator.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/reader-build.iml" afterPath="$PROJECT_DIR$/.idea/modules/reader-build.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/reader.iml" afterPath="$PROJECT_DIR$/.idea/modules/reader.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/root-build.iml" afterPath="$PROJECT_DIR$/.idea/modules/root-build.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/root.iml" afterPath="$PROJECT_DIR$/.idea/modules/root.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/reader/src/main/scala/parser/utils/OpenNLP.scala" afterPath="$PROJECT_DIR$/reader/src/main/scala/parser/utils/OpenNLP.scala" />
+      <change beforePath="$PROJECT_DIR$/build.sbt" afterPath="$PROJECT_DIR$/build.sbt" />
+      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter$sources/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter$sources/0.1/resolved.xml.properties" />
+      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter$sources/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter$sources/0.1/resolved.xml.xml" />
+      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter_2.12/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter_2.12/0.1/resolved.xml.properties" />
+      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter_2.12/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter_2.12/0.1/resolved.xml.xml" />
+      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-compile-internal.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-compile-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-compile.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-compile.xml" />
+      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-optional.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-optional.xml" />
+      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-plugin.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-plugin.xml" />
+      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-pom.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-pom.xml" />
+      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-provided.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-provided.xml" />
+      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-runtime-internal.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-runtime-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-runtime.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-runtime.xml" />
+      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-scala-tool.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-scala-tool.xml" />
+      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-test-internal.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-test-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-test.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-test.xml" />
+      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-compile-internal.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-compile-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-compile.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-compile.xml" />
+      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-optional.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-optional.xml" />
+      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-plugin.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-plugin.xml" />
+      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-pom.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-pom.xml" />
+      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-provided.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-provided.xml" />
+      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-runtime-internal.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-runtime-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-runtime.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-runtime.xml" />
+      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-scala-tool.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-scala-tool.xml" />
+      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-test-internal.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-test-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-test.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-test.xml" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" afterPath="$PROJECT_DIR$/converter/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/$global/ivyConfiguration/$global/streams/out" afterPath="$PROJECT_DIR$/converter/target/streams/$global/ivyConfiguration/$global/streams/out" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/converter/target/streams/$global/update/$global/streams/out" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterPath="$PROJECT_DIR$/converter/target/streams/$global/update/$global/streams/update_cache_2.12/output" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/$global/updateClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/converter/target/streams/$global/updateClassifiers/$global/streams/out" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator$sources/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator$sources/0.1/resolved.xml.properties" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator$sources/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator$sources/0.1/resolved.xml.xml" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator_2.12/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator_2.12/0.1/resolved.xml.properties" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator_2.12/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator_2.12/0.1/resolved.xml.xml" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-compile-internal.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-compile-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-compile.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-compile.xml" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-optional.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-optional.xml" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-plugin.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-plugin.xml" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-pom.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-pom.xml" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-provided.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-provided.xml" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-runtime-internal.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-runtime-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-runtime.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-runtime.xml" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-scala-tool.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-scala-tool.xml" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-test-internal.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-test-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-test.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-test.xml" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-compile-internal.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-compile-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-compile.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-compile.xml" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-optional.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-optional.xml" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-plugin.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-plugin.xml" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-pom.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-pom.xml" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-provided.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-provided.xml" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-runtime-internal.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-runtime-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-runtime.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-runtime.xml" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-scala-tool.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-scala-tool.xml" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-test-internal.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-test-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-test.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-test.xml" />
+      <change beforePath="$PROJECT_DIR$/generator/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" afterPath="$PROJECT_DIR$/generator/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" />
+      <change beforePath="$PROJECT_DIR$/generator/target/streams/$global/ivyConfiguration/$global/streams/out" afterPath="$PROJECT_DIR$/generator/target/streams/$global/ivyConfiguration/$global/streams/out" />
+      <change beforePath="$PROJECT_DIR$/generator/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/generator/target/streams/$global/update/$global/streams/out" />
+      <change beforePath="$PROJECT_DIR$/generator/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterPath="$PROJECT_DIR$/generator/target/streams/$global/update/$global/streams/update_cache_2.12/output" />
+      <change beforePath="$PROJECT_DIR$/generator/target/streams/$global/updateClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/generator/target/streams/$global/updateClassifiers/$global/streams/out" />
+      <change beforePath="$PROJECT_DIR$/project/target/active.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/flipper-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/flipper-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/flipper-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/flipper-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-compile-internal.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-compile-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-compile.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-compile.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-optional.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-optional.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-plugin.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-plugin.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-pom.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-pom.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-provided.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-provided.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-runtime-internal.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-runtime-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-runtime.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-runtime.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-scala-tool.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-scala-tool.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-test-internal.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-test-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-test.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-test.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/$global/streams/out" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/out" />
+      <change beforePath="$PROJECT_DIR$/reader/src/main/resources/regex/eng.txt" afterPath="$PROJECT_DIR$/reader/src/main/resources/regex/eng.txt" />
+      <change beforePath="$PROJECT_DIR$/reader/src/main/resources/regex/por.txt" afterPath="$PROJECT_DIR$/reader/src/main/resources/regex/por.txt" />
+      <change beforePath="$PROJECT_DIR$/reader/src/main/scala/Main.scala" afterPath="$PROJECT_DIR$/reader/src/main/scala/Main.scala" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/Main$.class" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/classes/Main$.class" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/extraction/Extractor.class" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/extraction/Extractor.class" />
       <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/utils/OpenNLP$.class" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/utils/OpenNLP$.class" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader$sources/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader$sources/0.1/resolved.xml.properties" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader$sources/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader$sources/0.1/resolved.xml.xml" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader_2.12/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader_2.12/0.1/resolved.xml.properties" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader_2.12/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader_2.12/0.1/resolved.xml.xml" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-compile-internal.xml" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-compile-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-compile.xml" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-compile.xml" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-optional.xml" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-optional.xml" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-plugin.xml" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-plugin.xml" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-pom.xml" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-pom.xml" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-provided.xml" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-provided.xml" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-runtime-internal.xml" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-runtime-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-runtime.xml" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-runtime.xml" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-scala-tool.xml" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-scala-tool.xml" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-test-internal.xml" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-test-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-test.xml" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-test.xml" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader_2.12-compile-internal.xml" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader_2.12-compile-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader_2.12-compile.xml" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader_2.12-compile.xml" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader_2.12-optional.xml" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader_2.12-optional.xml" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader_2.12-plugin.xml" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader_2.12-plugin.xml" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader_2.12-pom.xml" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader_2.12-pom.xml" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader_2.12-provided.xml" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader_2.12-provided.xml" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader_2.12-runtime-internal.xml" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader_2.12-runtime-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader_2.12-runtime.xml" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader_2.12-runtime.xml" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader_2.12-scala-tool.xml" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader_2.12-scala-tool.xml" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader_2.12-test-internal.xml" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader_2.12-test-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader_2.12-test.xml" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader_2.12-test.xml" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" afterPath="$PROJECT_DIR$/reader/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/$global/ivyConfiguration/$global/streams/out" afterPath="$PROJECT_DIR$/reader/target/streams/$global/ivyConfiguration/$global/streams/out" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/reader/target/streams/$global/update/$global/streams/out" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterPath="$PROJECT_DIR$/reader/target/streams/$global/update/$global/streams/update_cache_2.12/output" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/$global/updateClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/reader/target/streams/$global/updateClassifiers/$global/streams/out" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/flipper/flipper$sources/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/flipper/flipper$sources/0.1/resolved.xml.properties" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/flipper/flipper$sources/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/flipper/flipper$sources/0.1/resolved.xml.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/flipper/flipper_2.12/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/flipper/flipper_2.12/0.1/resolved.xml.properties" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/flipper/flipper_2.12/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/flipper/flipper_2.12/0.1/resolved.xml.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-compile-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-compile-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-compile.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-compile.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-optional.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-optional.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-plugin.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-plugin.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-pom.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-pom.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-provided.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-provided.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-runtime-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-runtime-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-runtime.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-runtime.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-scala-tool.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-scala-tool.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-test-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-test-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-test.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-test.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper_2.12-compile-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper_2.12-compile-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper_2.12-compile.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper_2.12-compile.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper_2.12-optional.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper_2.12-optional.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper_2.12-plugin.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper_2.12-plugin.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper_2.12-pom.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper_2.12-pom.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper_2.12-provided.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper_2.12-provided.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper_2.12-runtime-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper_2.12-runtime-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper_2.12-runtime.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper_2.12-runtime.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper_2.12-scala-tool.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper_2.12-scala-tool.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper_2.12-test-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper_2.12-test-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper_2.12-test.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper_2.12-test.xml" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -37,35 +196,52 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Converter.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/converter/src/main/scala/parser/conversion/Converter.scala">
+      <file leaf-file-name="build.sbt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.sbt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="158" column="23" lean-forward="false" selection-start-line="158" selection-start-column="23" selection-end-line="158" selection-end-column="23" />
+            <state relative-caret-position="180">
+              <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OpenNLP.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/utils/OpenNLP.scala">
+      <file leaf-file-name="Main.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/reader/src/main/scala/Main.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+            <state relative-caret-position="280">
+              <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConverterJava.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/converter/src/main/java/parser/conversion/ConverterJava.java">
+      <file leaf-file-name="eng.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/reader/src/main/resources/regex/eng.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="27" column="32" lean-forward="false" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-              <folding>
-                <element signature="e#1177#1178#0" expanded="true" />
-                <element signature="e#1231#1232#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="87" lean-forward="true" selection-start-line="0" selection-start-column="87" selection-end-line="0" selection-end-column="87" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="por.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/reader/src/main/resources/regex/por.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="7" column="34" lean-forward="true" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageProcessing.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/utils/ImageProcessing.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="562">
+              <caret line="39" column="44" lean-forward="false" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -103,6 +279,9 @@
       <find>mkdi</find>
       <find>mkdir</find>
     </findStrings>
+    <dirStrings>
+      <dir>C:\Users\Margarida Reis\.ivy2\cache\log4j\log4j\bundles\log4j-1.2.17.jar</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="UPDATE_TYPE" value="MERGE" />
@@ -121,9 +300,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/reader/src/main/scala/Extraction/FileHandler.scala" />
-        <option value="$PROJECT_DIR$/reader/src/main/scala/Extraction/Extractor.scala" />
-        <option value="$PROJECT_DIR$/reader/src/main/scala/reader/Extraction/FileHandler.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/reader/utils/POSTag.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/reader/utils/OpenNLP.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/reader/utils/ImageProcessing.scala" />
@@ -163,7 +339,6 @@
         <option value="$PROJECT_DIR$/generator/src/main/java/generator/GeneratorJava.java" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/java/MainJava.java" />
-        <option value="$PROJECT_DIR$/reader/src/main/scala/Main.scala" />
         <option value="$PROJECT_DIR$/generator/src/main/scala/generator/Generator.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/parser/utils/ImageProcessing.scala" />
         <option value="$PROJECT_DIR$/converter/README.md" />
@@ -172,11 +347,16 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/converter/src/main/scala/parser/conversion/Converter.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/parser/utils/OpenNLP.scala" />
+        <option value="$PROJECT_DIR$/reader/src/main/scala/Main.scala" />
+        <option value="$PROJECT_DIR$/build.sbt" />
+        <option value="$PROJECT_DIR$/reader/src/main/resources/regex/eng.txt" />
+        <option value="$PROJECT_DIR$/reader/src/main/resources/regex/por.txt" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="952" />
+    <option name="x" value="757" />
+    <option name="y" value="-16" />
     <option name="width" value="976" />
     <option name="height" value="1038" />
   </component>
@@ -206,63 +386,61 @@
             <path>
               <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
               <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="converter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="converter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="converter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="converter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="converter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="conversion" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
               <item name="reader" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
               <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="tessdata" type="462c0819:PsiDirectoryNode" />
+              <item name="reader" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
+              <item name="reader" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
+              <item name="reader" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
+              <item name="reader" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="regex" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
+              <item name="reader" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
   </component>
@@ -288,7 +466,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ExtractorSuite">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -496,8 +674,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ExtractorSuite" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ExtractorSuite" />
         <item index="2" class="java.lang.String" itemvalue="Application.MainJava" />
         <item index="3" class="java.lang.String" itemvalue="Application.GenMain" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.ImageProcessingSuite" />
@@ -505,7 +683,7 @@
     </recent_temporary>
   </component>
   <component name="SbtLocalSettings">
-    <option name="lastUpdateTimestamp" value="1522055869939" />
+    <option name="lastUpdateTimestamp" value="1522668384749" />
     <option name="availableProjects">
       <map>
         <entry>
@@ -589,7 +767,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5115832d-4669-4625-b348-c310af38a585" name="Default" comment="" />
+      <changelist id="f16c75dc-e210-4cbb-ba55-68950b37574a" name="Default" comment="" />
       <created>1522055766473</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -914,9 +1092,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ExtractorSuite - 2018.03.27 at 12h 39m 36s.xml">
-      <configuration name="ExtractorSuite" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ExtractorSuite - 2018.03.27 at 13h 58m 00s.xml">
       <configuration name="ExtractorSuite" configurationId="JUnit" />
     </history-entry>
@@ -927,6 +1102,9 @@
       <configuration name="ExtractorSuite" configurationId="JUnit" />
     </history-entry>
     <history-entry file="ExtractorSuite - 2018.03.29 at 15h 32m 48s.xml">
+      <configuration name="ExtractorSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ExtractorSuite - 2018.04.02 at 10h 38m 17s.xml">
       <configuration name="ExtractorSuite" configurationId="JUnit" />
     </history-entry>
     <history-entry file="ImageProcessingSuite - 2018.03.27 at 13h 58m 47s.xml">
@@ -951,34 +1129,34 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873806" sideWeight="0.496875" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839224" sideWeight="0.496875" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="sbt" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873806" sideWeight="0.503125" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839224" sideWeight="0.503125" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.49791667" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Material Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19375" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1557465" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="sbt-shell-toolwindow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2598091" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14446831" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Material Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2598091" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1015,11 +1193,13 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactored ExtractorSuite.scala to remove NullPointerException tests" />
     <MESSAGE value="Refactored ConverterSuite.scala to remove file handling tests (now on reader/FileHandlerSuite.scala)" />
     <MESSAGE value="Refactored ImageProcessingSuite.scala to remove NullPointerException tests and file handling tests" />
     <MESSAGE value="Refactored OpenNLPSuite.scala to remove NullPointerException tests" />
@@ -1044,30 +1224,16 @@
     <MESSAGE value="mkdirs" />
     <MESSAGE value="updated readme's" />
     <MESSAGE value="Fixed convertPDTtoODT bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed convertPDTtoODT bug" />
+    <MESSAGE value="Updated Regex" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Regex" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/FileHandler.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="6" column="3" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/test/scala/ExtractorSuite.scala" />
-    <entry file="file://$PROJECT_DIR$/converter/src/test/scala/ReaderConverter/Converter/ConverterSuite.scala" />
-    <entry file="file://$PROJECT_DIR$/converter/src/main/scala/ReaderConverter/Converter/Converter.scala" />
-    <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/utils/POSTag.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/converter/src/main/scala/ReaderConverter/conversion/FileType$.java" />
     <entry file="file://$PROJECT_DIR$/converter/src/main/scala/ReaderConverter/Converter/FileType.scala" />
     <entry file="file://$PROJECT_DIR$/converter/src/main/scala/Main.scala">
@@ -1183,13 +1349,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/generator/src/main/java/generator/Generator.java" />
     <entry file="file://$PROJECT_DIR$/generator/src/main/scala/Main.scala">
       <provider selected="true" editor-type-id="text-editor">
@@ -1257,24 +1416,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/reader/src/main/java/MainJava.java" />
-    <entry file="jar://$USER_HOME$/.ivy2/cache/net.sourceforge.tess4j/tess4j/srcs/tess4j-3.4.4-sources.jar!/net/sourceforge/tess4j/Tesseract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="226" column="19" lean-forward="true" selection-start-line="226" selection-start-column="19" selection-end-line="226" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="110" column="17" lean-forward="false" selection-start-line="110" selection-start-column="15" selection-end-line="110" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/main/scala/Main.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -1283,19 +1428,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="189">
             <caret line="9" column="53" lean-forward="false" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
-            <folding>
-              <marker date="1522339302533" expanded="true" signature="2221:2312" ph="..." />
-              <marker date="1522339302533" expanded="true" signature="2234:2312" ph="..." />
-              <marker date="1522339302533" expanded="true" signature="2251:2252" ph="..." />
-              <marker date="1522339302533" expanded="true" signature="2251:2263" ph="..." />
-              <marker date="1522339302533" expanded="true" signature="2251:2312" ph="..." />
-              <marker date="1522339302533" expanded="true" signature="2456:2513" ph="..." />
-              <marker date="1522339302533" expanded="true" signature="2456:2552" ph="..." />
-              <marker date="1522339302533" expanded="true" signature="2633:2829" ph="{...}" />
-              <marker date="1522339302533" expanded="true" signature="3248:3302" ph="..." />
-              <marker date="1522339302533" expanded="true" signature="3441:3539" ph="..." />
-              <marker date="1522339302533" expanded="true" signature="3623:3807" ph="{...}" />
-            </folding>
           </first_editor>
           <second_editor />
         </state>
@@ -1326,27 +1458,8 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="21">
             <caret line="68" column="69" lean-forward="false" selection-start-line="68" selection-start-column="69" selection-end-line="68" selection-end-column="69" />
-            <folding />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/utils/ImageProcessing.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="60" column="32" lean-forward="false" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="235" column="55" lean-forward="false" selection-start-line="235" selection-start-column="55" selection-end-line="235" selection-end-column="55" />
-          <folding>
-            <element signature="e#27#46#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1354,7 +1467,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
           <caret line="173" column="34" lean-forward="false" selection-start-line="173" selection-start-column="29" selection-end-line="173" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1362,10 +1474,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
           <caret line="27" column="32" lean-forward="false" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-          <folding>
-            <element signature="e#1177#1178#0" expanded="true" />
-            <element signature="e#1231#1232#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1373,7 +1481,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
           <caret line="158" column="23" lean-forward="false" selection-start-line="158" selection-start-column="23" selection-end-line="158" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1381,6 +1488,89 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
           <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="39" column="55" lean-forward="false" selection-start-line="39" selection-start-column="55" selection-end-line="39" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/net.sourceforge.tess4j/tess4j/srcs/tess4j-3.4.4-sources.jar!/net/sourceforge/tess4j/Tesseract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="226" column="44" lean-forward="true" selection-start-line="226" selection-start-column="44" selection-end-line="226" selection-end-column="44" />
+          <folding>
+            <element signature="e#2810#2818#0" expanded="false" />
+            <element signature="e#20099#20110#0" expanded="false" />
+            <element signature="e#21633#21639#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/utils/ImageProcessing.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="39" column="44" lean-forward="false" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flipper.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="19" lean-forward="true" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flipper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.sbt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/main/scala/Main.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/main/resources/regex/eng.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="87" lean-forward="true" selection-start-line="0" selection-start-column="87" selection-end-line="0" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/main/resources/regex/por.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="34" lean-forward="true" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -1391,7 +1581,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>Flipper:jar</last-edited>
+          <last-edited>flipper:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1428,7 +1618,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>1.8 x64</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1440,11 +1630,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>root</last-edited>
+          <last-edited>converter</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -1452,11 +1643,11 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>sbt: ar.com.hjg:pngj:2.1.0:jar</last-edited>
+          <last-edited>sbt: log4j:log4j:1.2.17:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.3216912" />
               </list>
             </option>
           </splitter-proportions>
