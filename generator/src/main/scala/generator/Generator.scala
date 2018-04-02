@@ -35,7 +35,7 @@ object Generator {
     * @param cssFile - The additional CSS file to be included in the HTML file
     * @return a Boolean saying if the conversion from JSON to PDF was successful or not
     */
-  def convertObjoPDF(jsonMap: Map[String, Any], cssFile: File): Boolean = {
+  def convertObjtoPDF(jsonMap: Map[String, Any], cssFile: File): Boolean = {
     val htmlURI = writeHTML(jsonMap, cssFile).getOrElse("")
     convertHTMLToPDF(htmlURI)
   }
@@ -73,7 +73,11 @@ object Generator {
     * @return a Map[String,Any] with the information parsed from the JSON
     */
   def convertJSONtoObj(json:String): Map[String,Any] = {
-    parse(json).values.asInstanceOf[Map[String, Any]]
+    try {
+      parse(json).values.asInstanceOf[Map[String, Any]]
+    } catch {
+      case e: Exception => e.printStackTrace(); Map()
+    }
   }
 
   /**
@@ -87,6 +91,7 @@ object Generator {
     val objMap = convertJSONtoObj(json)
     val htmlURI = writeHTML(objMap).getOrElse("")
     convertHTMLToPDF(htmlURI)
+
   }
 
   /**
