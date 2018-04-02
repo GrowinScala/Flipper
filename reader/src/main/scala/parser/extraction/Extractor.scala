@@ -137,7 +137,7 @@ object Extractor {
           val (_, mostFound) = getListSizes(matchedValues).maxBy {
             case (_, sizes: Int) => sizes
           } //Gets the size of the pair that has the most values
-          val mappedValues = for (i <- 0 to mostFound; (_, listMatched) <- matchedValues) yield {
+          val mappedValues = for (i <- 0 until mostFound; (_, listMatched) <- matchedValues) yield {
             if (listMatched.size > i) //Prevent array out of bounds exception
               List(listMatched(i))
             else List()
