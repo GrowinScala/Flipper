@@ -158,7 +158,7 @@ object Generator {
     */
   private def createHtml(json: String, cssString: String = ""): Option[String] = {
     try {
-      val jsonMap = parse(json).values.asInstanceOf[Map[String, Any]] //parses JSON string to a Map[String, Any]
+      val jsonMap = parse(json).values.asInstanceOf[Map[String, Any]] //parses JSON string to a Map[String, Any] .values - > case
       if (jsonMap.nonEmpty) {
         val kvParagraph = jsonMap.map { case (k, v) => p(k + " : " + v) }.toList
 

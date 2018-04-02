@@ -18,7 +18,7 @@ import scala.io.Source
 object Extractor {
 
   type Keyword = String
-  type MatchedPair = List[(Keyword, List[String])]
+  type MatchedPair = Map[Keyword, Seq[String]]
 
   /**
     * Method that given a file path (maybe change to a real file) will load that PDF file and read the text from it
@@ -62,7 +62,7 @@ object Extractor {
     * @return List containing pairs of Keywords and a List (non-repeating) of values found for that keyword
     */
   @throws[IllegalArgumentException]
-  def getAllMatchedValues(text: Option[String], keywords: List[(Keyword, POSTag.Value)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
+  def getAllMatchedValues(text: Option[String], keywords: Map[Keyword, POSTag.Value], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
     require(keywords.nonEmpty, "The list of keywords should not be empty")
     text match {
       case Some(t) =>
@@ -78,13 +78,13 @@ object Extractor {
               (key, knownRegEx(key).findAllIn(t).matchData.map(_.group(1)).toList.distinct)
 
             else findKeywordInText(key, tag, t) //to be changed, here we need to manually search for the keywords in the text
-          }
+          }.toMap
           filterNewLines(matched)
         }
         else {
-          List()
+          Map()
         }
-      case None => List()
+      case None => Map()
     }
   }
 
@@ -99,17 +99,17 @@ object Extractor {
     * @return A List containing pairs of keywords with a single matched value
     */
   @throws[IllegalArgumentException]
-  def getSingleMatchedValue(text: Option[String], keywords: List[(Keyword, POSTag.Value)], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
+  def getSingleMatchedValue(text: Option[String], keywords: Map[Keyword, POSTag.Value], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
     require(keywords.nonEmpty, "The list of keywords should not be empty")
     text match {
       case Some(_) =>
         getAllMatchedValues(text, keywords, clientRegEx).map { case (k, v) =>
           v.headOption match {
-            case Some(entry) => (k, List(entry))
-            case None => (k, List())
+            case Some(entry) => (k, Seq(entry))
+            case None => (k, Seq())
           }
         }
-      case _ => List()
+      case _ => Map()
     }
   }
 
@@ -124,26 +124,21 @@ object Extractor {
     * @return A List containing sub-lists of pairs of keywords with single matched values
     */
   @throws[IllegalArgumentException]
-  def getAllObjects(text: Option[String], keywords: List[(Keyword, POSTag.Value)], clientRegEx: Map[Keyword, Regex] = Map()): List[MatchedPair] = {
+  def getAllObjects(text: Option[String], keywords: Map[Keyword, POSTag.Value], clientRegEx: Map[Keyword, Regex] = Map()): List[MatchedPair] = {
     require(keywords.nonEmpty, "The list of keywords should not be empty")
     text match {
       case Some(t) =>
-        def getListSizes(matchedValues: MatchedPair): List[(Keyword, Int)] = {
-          for ((key, listMatched) <- matchedValues) yield (key, listMatched.size)
-        }
-
         if (t.nonEmpty) {
           val matchedValues = getAllMatchedValues(text, keywords, clientRegEx)
-          val (_, mostFound) = getListSizes(matchedValues).maxBy {
-            case (_, sizes: Int) => sizes
-          } //Gets the size of the pair that has the most values
+          val mostFound = matchedValues.maxBy(_._2.size)._2.size //Gets the size of the pair that has the most values
           val mappedValues = for (i <- 0 until mostFound; (_, listMatched) <- matchedValues) yield {
             if (listMatched.size > i) //Prevent array out of bounds exception
               List(listMatched(i))
             else List()
           }
-          val keywordList = keywords.map { case (key, _) => key }
-          mappedValues.zipWithIndex.map { case (key, values) => (keywordList(values % keywords.length), key) }.toList.grouped(keywords.size).toList
+          val keywordList: List[String] = keywords.map { case (key, _) => key }.toList
+          //          mappedValues.zipWithIndex.map { case (key, values) => Map(keywordList(values % keywords.size) -> key) }.toList.grouped(keywords.size).toList
+          mappedValues.zipWithIndex.map { case (key, values) => Map(keywordList(values % keywords.size) -> key) }.toList //TODO Fix this, not the expected result see last ExtractorSuite.scala test
         }
         else {
           List()
@@ -164,7 +159,7 @@ object Extractor {
     * @return a List of Strings representing a JSON object for each MatchedPair type
     */
   @throws[IllegalArgumentException]
-  def getJSONObjects(text: Option[String], keywords: List[(Keyword, POSTag.Value)], flag: String = "empty", clientRegEx: Map[Keyword, Regex] = Map()): List[String] = {
+  def getJSONObjects(text: Option[String], keywords: Map[Keyword, POSTag.Value], flag: String = "empty", clientRegEx: Map[Keyword, Regex] = Map()): List[String] = {
     require(keywords.nonEmpty, "The list of keywords should not be empty")
     val objs = getAllObjects(text, keywords, clientRegEx)
     objs.map(makeJSONString(_, flag))
@@ -236,7 +231,7 @@ object Extractor {
   def getJSONFromForm(text: Option[String]): String = {
     val textContent = text.getOrElse("")
     val formRegex = "(.+):\\s+(.+)".r
-    val form = formRegex.findAllIn(textContent).matchData.map(l => (l.group(1), List(l.group(2)))).toList
+    val form = formRegex.findAllIn(textContent).matchData.map(l => (l.group(1), List(l.group(2)))).toMap
     makeJSONString(form)
   }
 
