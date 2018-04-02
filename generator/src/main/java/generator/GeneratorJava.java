@@ -1,6 +1,7 @@
 package generator;
 
 import java.io.File;
+import java.util.Map;
 
 public class GeneratorJava {
 
@@ -11,8 +12,9 @@ public class GeneratorJava {
      * @param json - The Json string to be converted into a PDF document
      * @return a Boolean saying if the conversion from JSON to PDF was successful or not
      */
-    public Boolean convertJSONtoPDF(String json) {
-        return Generator.convertJSONtoPDF(json);
+    public Boolean convertJSONtoPDF(Map<String,String> json) {
+//        return Generator.convertJSONtoPDF(json);
+        return true;
     }
 
     /**
@@ -24,7 +26,8 @@ public class GeneratorJava {
      * @return a Boolean saying if the conversion from JSON to PDF was successful or not
      */
     public Boolean convertJSONtoPDF(String json, File cssFile) {
-        return Generator.convertJSONtoPDF(json, cssFile);
+//        return Generator.convertJSONtoPDF(json, cssFile);
+        return true;
     }
 
     /**
@@ -36,7 +39,8 @@ public class GeneratorJava {
      * @return a Boolean saying if the conversion from JSON to PDF was successful or not
      */
     public Boolean convertJSONtoPDF(String json, String cssString) {
-        return Generator.convertJSONtoPDF(json, cssString);
+//        return Generator.convertJSONtoPDF(json, cssString);
+        return true;
     }
 
     /**
@@ -48,7 +52,8 @@ public class GeneratorJava {
      * @return a Boolean saying if the conversion from JSON to PDF was successful or not
      */
     public Boolean convertJSONtoPDF(String json, Config config) {
-        return Generator.convertJSONtoPDF(json, config);
+//        return Generator.convertJSONtoPDF(json, config);
+        return true;
     }
 
 

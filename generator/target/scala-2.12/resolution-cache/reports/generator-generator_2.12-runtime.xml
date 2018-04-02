@@ -7,7 +7,7 @@
 		revision="0.1"
 		conf="runtime"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20180328091341"/>
+		date="20180402122539"/>
 	<dependencies>
 		<module organisation="com.sksamuel.scrimage" name="scrimage-filters_2.12">
 			<revision name="3.0.0-alpha4" status="release" pubdate="20170914131224" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/sksamuel/scrimage" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="85">

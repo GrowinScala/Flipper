@@ -6,7 +6,13 @@ object Main {
 
   def main(args: Array[String]): Unit = {
     //    println(convertJSONtoPDF(""" {"name": "Lucas", "age" : 21 }""", new File("test.css")))
-        println(convertJSONtoPDF(""" {"name": "Lucas", "age" : 21 } """, "p { color: green; } "))
+    val objMap: Map[String,Any] = Map("name" -> List("Lucas", "Margarida"), "age" -> 21)
+//    println(objMap)
+    val json = """ {"name": ["Lucas", "Margarida"],  "age" : 21 }"""
+    val jsonMap = convertJSONtoObj("")
+    println(jsonMap)
+    convertJSONtoPDF(json)
+//        println(convertJSONtoPDF(""" {"name": "Lucas", "age" : 21 }""", "p { color: green; } "))
     //    println(convertJSONtoPDF(""" {"name": "Lucas", "age" : 21 }""", Generator.Config("green")))
   }
 
