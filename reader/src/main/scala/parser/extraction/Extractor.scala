@@ -136,9 +136,9 @@ object Extractor {
               List(listMatched(i))
             else List()
           }
-          val keywordList: List[String] = keywords.map { case (key, _) => key }.toList
-          //          mappedValues.zipWithIndex.map { case (key, values) => Map(keywordList(values % keywords.size) -> key) }.toList.grouped(keywords.size).toList
-          mappedValues.zipWithIndex.map { case (key, values) => Map(keywordList(values % keywords.size) -> key) }.toList //TODO Fix this, not the expected result see last ExtractorSuite.scala test
+          val keywordList: List[String] = keywords.keys.toList
+          val joinedValues = mappedValues.zipWithIndex.map { case (key, index) => Map(keywordList(index % keywords.size) -> key) }.grouped(keywords.size).toList
+          joinedValues.map(_.flatten.toMap)
         }
         else {
           List()
