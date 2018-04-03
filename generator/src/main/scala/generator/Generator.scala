@@ -146,7 +146,7 @@ object Generator {
     if (htmlURI.nonEmpty) {
       try {
         val document = new Document()
-        val writer = PdfWriter.getInstance(document, new FileOutputStream("html.pdf")) //TODO change destination folder to something else
+        val writer = PdfWriter.getInstance(document, new FileOutputStream("html.pdf"))
         document.open()
         XMLWorkerHelper.getInstance().parseXHtml(writer, document, new FileInputStream(htmlURI))
         document.close()
