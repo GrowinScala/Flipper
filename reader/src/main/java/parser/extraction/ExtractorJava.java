@@ -2,12 +2,10 @@ package parser.extraction;
 
 import java.util.*;
 
+import parser.utils.Specification;
 import scala.Option;
-import parser.utils.POSTag;
 import scala.Some;
-import scala.Tuple2;
 import scala.util.matching.Regex;
-import scala.collection.mutable.Buffer;
 
 import java.util.List;
 import java.io.File;
@@ -50,7 +48,7 @@ public class ExtractorJava {
      * @return List containing pairs of Keywords and a List (non-repeating) of values found for that keyword
      * @throws IllegalArgumentException If the keywords list is empty
      */
-    public Map getAllMatchedValues(String text, Map<String, POSTag> keywords) throws IllegalArgumentException {
+    public Map getAllMatchedValues(String text, Map<String, Specification> keywords) throws IllegalArgumentException {
         return getAllMatchedValues(text, keywords, new HashMap<>());
     }
 
@@ -64,13 +62,12 @@ public class ExtractorJava {
      * @return List containing pairs of Keywords and a List (non-repeating) of values found for that keyword
      * @throws IllegalArgumentException If the keywords list is empty
      */
-    public Map getAllMatchedValues(String text, Map<String, POSTag> keywords, Map<String, String> clientRegEx) throws IllegalArgumentException {
+    public Map getAllMatchedValues(String text, Map<String, Specification> keywords, Map<String, String> clientRegEx) throws IllegalArgumentException {
         if (keywords.isEmpty())
             throw new IllegalArgumentException("The list of keywords should not be empty");
 
         //Create Option wrapper around extracted text
         Option<String> textOpt = (text != null && !text.equals("")) ? Some.apply(text) : Option.apply(null);
-
 
         //Convert scala.collection.immutable.List to java.util.List
         scala.collection.immutable.Map result = Extractor.getAllMatchedValues(textOpt, keywordsToScala(keywords), regexToScala(clientRegEx));
@@ -87,7 +84,7 @@ public class ExtractorJava {
      * @return A List containing pairs of keywords with a single matched value
      * @throws IllegalArgumentException If the keywords list is empty
      */
-    public Map getSingleMatchedValue(String text, Map<String, POSTag> keywords) throws IllegalArgumentException {
+    public Map getSingleMatchedValue(String text, Map<String, Specification> keywords) throws IllegalArgumentException {
         return getSingleMatchedValue(text, keywords, new HashMap<>());
     }
 
@@ -102,7 +99,7 @@ public class ExtractorJava {
      * @throws IllegalArgumentException If the keywords list is empty
      */
 
-    public Map getSingleMatchedValue(String text, Map<String, POSTag> keywords, Map<String, String> clientRegEx) throws IllegalArgumentException {
+    public Map getSingleMatchedValue(String text, Map<String, Specification> keywords, Map<String, String> clientRegEx) throws IllegalArgumentException {
         if (keywords.isEmpty())
             throw new IllegalArgumentException("The list of keywords should not be empty");
 
@@ -121,7 +118,7 @@ public class ExtractorJava {
      * @return A List containing sub-lists of pairs of keywords with single matched values
      * @throws IllegalArgumentException If the keywords list is empty
      */
-    public List getAllObjects(String text, Map<String, POSTag> keywords) throws IllegalArgumentException {
+    public List getAllObjects(String text, Map<String, Specification> keywords) throws IllegalArgumentException {
         return getAllObjects(text, keywords, new HashMap<>());
 
     }
@@ -136,7 +133,7 @@ public class ExtractorJava {
      * @return A List containing sub-lists of pairs of keywords with single matched values
      * @throws IllegalArgumentException If the keywords list is empty
      */
-    public List getAllObjects(String text, Map<String, POSTag> keywords, Map<String, String> clientRegEx) throws IllegalArgumentException {
+    public List getAllObjects(String text, Map<String, Specification> keywords, Map<String, String> clientRegEx) throws IllegalArgumentException {
         if (keywords.isEmpty())
             throw new IllegalArgumentException("The list of keywords should not be empty");
 
@@ -161,7 +158,7 @@ public class ExtractorJava {
      * @return a List of Strings representing a JSON object for each MatchedPair type
      * @throws IllegalArgumentException If the keywords list is empty
      */
-    public List getJSONObjects(String text, Map<String, POSTag> keywords) throws IllegalArgumentException {
+    public List getJSONObjects(String text, Map<String, Specification> keywords) throws IllegalArgumentException {
         return getJSONObjects(text, keywords, "empty", new HashMap<>());
     }
 
@@ -175,7 +172,7 @@ public class ExtractorJava {
      * @return a List of Strings representing a JSON object for each MatchedPair type
      * @throws IllegalArgumentException If the keywords list is empty
      */
-    public List getJSONObjects(String text, Map<String, POSTag> keywords, Map<String, String> clientRegEx) throws IllegalArgumentException {
+    public List getJSONObjects(String text, Map<String, Specification> keywords, Map<String, String> clientRegEx) throws IllegalArgumentException {
         return getJSONObjects(text, keywords, "empty", clientRegEx);
     }
 
@@ -189,7 +186,7 @@ public class ExtractorJava {
      * @return a List of Strings representing a JSON object for each MatchedPair type
      * @throws IllegalArgumentException If the keywords list is empty
      */
-    public List getJSONObjects(String text, Map<String, POSTag> keywords, String flag) throws IllegalArgumentException {
+    public List getJSONObjects(String text, Map<String, Specification> keywords, String flag) throws IllegalArgumentException {
         return getJSONObjects(text, keywords, flag, new HashMap<>());
     }
 
@@ -203,7 +200,7 @@ public class ExtractorJava {
      * @return a List of Strings representing a JSON object for each MatchedPair type
      * @throws IllegalArgumentException If the keywords list is empty
      */
-    public List getJSONObjects(String text, Map<String, POSTag> keywords, String flag, Map<String, String> clientRegEx) throws IllegalArgumentException {
+    public List getJSONObjects(String text, Map<String, Specification> keywords, String flag, Map<String, String> clientRegEx) throws IllegalArgumentException {
         if (keywords.isEmpty())
             throw new IllegalArgumentException("The list of keywords should not be empty");
 
@@ -271,7 +268,7 @@ public class ExtractorJava {
      * @param keywords - The java.util.Map to be converted
      * @return a scala.collection.immutable.List converted from the input parameter
      */
-    private scala.collection.immutable.Map keywordsToScala(Map<String, POSTag> keywords) {
+    private scala.collection.immutable.Map keywordsToScala(Map<String, Specification> keywords) {
 
         //Convert javaMap to a scala mutable map
         scala.collection.mutable.Map mutableMap = JavaConverters.mapAsScalaMapConverter(keywords).asScala();

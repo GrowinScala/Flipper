@@ -2,13 +2,16 @@ package parser.extraction
 
 import java.io.File
 import java.text.Normalizer
+
 import parser.utils.ImageProcessing._
 import parser.utils.SpellChecker._
 import parser.utils.OpenNLP._
-import parser.utils.POSTag
+import parser.utils.{POSTag, Specification}
 import org.apache.pdfbox.text.PDFTextStripper
+
 import scala.util.matching.Regex
 import FileHandler._
+
 import scala.annotation.tailrec
 import scala.io.Source
 
@@ -62,22 +65,28 @@ object Extractor {
     * @return List containing pairs of Keywords and a List (non-repeating) of values found for that keyword
     */
   @throws[IllegalArgumentException]
-  def getAllMatchedValues(text: Option[String], keywords: Map[Keyword, POSTag.Value], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
+  def getAllMatchedValues(text: Option[String], keywords: Map[Keyword, Specification], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
     require(keywords.nonEmpty, "The list of keywords should not be empty")
     text match {
       case Some(t) =>
         if (t.nonEmpty) {
           val knownRegEx: Map[String, Regex] = importRegExFile(t) //load correct RegEx map
-          val matched: MatchedPair = keywords.map { case (key, tag) =>
-            //If the client sent a custom RegEx to use on this key, use it
-            if (clientRegEx.contains(key)) //&& clientRegEx != null ??
-              (key, clientRegEx(key).findAllIn(t).matchData.map(_.group(1)).toList.distinct)
+          val matched: MatchedPair = keywords.map { case (key, spec) =>
+            spec match {
+              case tag: POSTag =>
 
-            //if we already know a good RegEx for this keyword, use it
-            else if (knownRegEx.contains(key))
-              (key, knownRegEx(key).findAllIn(t).matchData.map(_.group(1)).toList.distinct)
+                //If the client sent a custom RegEx to use on this key, use it
+                if (clientRegEx.contains(key)) //&& clientRegEx != null ??
+                  (key, clientRegEx(key).findAllIn(t).matchData.map(_.group(1)).toList.distinct)
 
-            else findKeywordInText(key, tag, t) //to be changed, here we need to manually search for the keywords in the text
+                //if we already know a good RegEx for this keyword, use it
+                else if (knownRegEx.contains(key))
+                  (key, knownRegEx(key).findAllIn(t).matchData.map(_.group(1)).toList.distinct)
+
+                else findKeywordInText(key, tag, t) //to be changed, here we need to manually search for the keywords in the text
+
+              case _ => ??? //TODO In case the user sent possible values list
+            }
           }
           filterNewLines(matched)
         }
@@ -99,7 +108,7 @@ object Extractor {
     * @return A List containing pairs of keywords with a single matched value
     */
   @throws[IllegalArgumentException]
-  def getSingleMatchedValue(text: Option[String], keywords: Map[Keyword, POSTag.Value], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
+  def getSingleMatchedValue(text: Option[String], keywords: Map[Keyword, Specification], clientRegEx: Map[Keyword, Regex] = Map()): MatchedPair = {
     require(keywords.nonEmpty, "The list of keywords should not be empty")
     text match {
       case Some(_) =>
@@ -124,7 +133,7 @@ object Extractor {
     * @return A List containing sub-lists of pairs of keywords with single matched values
     */
   @throws[IllegalArgumentException]
-  def getAllObjects(text: Option[String], keywords: Map[Keyword, POSTag.Value], clientRegEx: Map[Keyword, Regex] = Map()): List[MatchedPair] = {
+  def getAllObjects(text: Option[String], keywords: Map[Keyword, Specification], clientRegEx: Map[Keyword, Regex] = Map()): List[MatchedPair] = {
     require(keywords.nonEmpty, "The list of keywords should not be empty")
     text match {
       case Some(t) =>
@@ -159,7 +168,7 @@ object Extractor {
     * @return a List of Strings representing a JSON object for each MatchedPair type
     */
   @throws[IllegalArgumentException]
-  def getJSONObjects(text: Option[String], keywords: Map[Keyword, POSTag.Value], flag: String = "empty", clientRegEx: Map[Keyword, Regex] = Map()): List[String] = {
+  def getJSONObjects(text: Option[String], keywords: Map[Keyword, Specification], flag: String = "empty", clientRegEx: Map[Keyword, Regex] = Map()): List[String] = {
     require(keywords.nonEmpty, "The list of keywords should not be empty")
     val objs = getAllObjects(text, keywords, clientRegEx)
     objs.map(makeJSONString(_, flag))
@@ -258,7 +267,7 @@ object Extractor {
     * @param tag     - The POS Tag of the value we want to return
     * @return A pair containing the keyword and a list of values found for that keyword
     */
-  private def findKeywordInText(keyword: Keyword, tag: POSTag.Value, text: String): (Keyword, List[String]) = {
+  private def findKeywordInText(keyword: Keyword, tag: POSTag, text: String): (Keyword, List[String]) = {
     val (splittedWords, tags) = tagText(text)
 
     val arrLength = splittedWords.length
@@ -268,7 +277,7 @@ object Extractor {
     // then search from that point forward for a word whose POS tag matches the one passed by arguments
     val valuesList: List[String] = (for (i <- splittedWords.indices if splittedWords(i).toLowerCase == keyword.toLowerCase) yield {
       if (i < arrLength) {
-        val wordList = for (j <- i + 1 until arrLength if tags(j) == tag.toString) yield splittedWords(j)
+        val wordList = for (j <- i + 1 until arrLength if tags(j) == tag.value) yield splittedWords(j)
         if (wordList.nonEmpty) wordList.head else ""
       } else {
         "" //In case the keyword found is the last word in the text we're not going to find a value for it

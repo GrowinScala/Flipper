@@ -98,9 +98,13 @@ shows in **`./`**.
     public class Example {
          public static void main(String[] args) {
              GeneratorJava gj = new GeneratorJava();
-             HashMap<String,List<String>> jsonMap = new HashMap<>();
-             ArrayList<String> lst = new ArrayList<>();
-             lst.add("25");
+             HashMap<String,List<String>> hm = new HashMap<>();
+             ArrayList<String> l1 = new ArrayList<>();
+             ArrayList<String> l2 = new ArrayList<>();
+             l1.add("FirstName LastName");
+             hm.put("name",l1);
+             l2.add("25");
+             hm.put("age",l2);
              jsonMap.put("FistName LastName",lst);
              boolean success = gj.convertMapToPDF(jsonMap);
          }
@@ -117,10 +121,13 @@ shows in **`./`**.
     public class Example {
          public static void main(String[] args) {
              GeneratorJava gj = new GeneratorJava();
-             HashMap<String,List<String>> jsonMap = new HashMap<>();
-             ArrayList<String> lst = new ArrayList<>();
-             lst.add("25");
-             jsonMap.put("FistName LastName",lst);
+             HashMap<String,List<String>> hm = new HashMap<>();
+             ArrayList<String> l1 = new ArrayList<>();
+             ArrayList<String> l2 = new ArrayList<>();
+             l1.add("FirstName LastName");
+             hm.put("name",l1);
+             l2.add("25");
+             hm.put("age",l2);
              File cssFile = new File("CSSFile.css");
              boolean success = gj.convertMapToPDF(jsonMap, cssFile);
          }
@@ -136,10 +143,13 @@ shows in **`./`**.
     public class Example {
          public static void main(String[] args) {
              GeneratorJava gj = new GeneratorJava();
-             HashMap<String,List<String>> jsonMap = new HashMap<>();
-             ArrayList<String> lst = new ArrayList<>();
-             lst.add("25");
-             jsonMap.put("FistName LastName",lst);
+             HashMap<String,List<String>> hm = new HashMap<>();
+             ArrayList<String> l1 = new ArrayList<>();
+             ArrayList<String> l2 = new ArrayList<>();
+             l1.add("FirstName LastName");
+             hm.put("name",l1);
+             l2.add("25");
+             hm.put("age",l2);
              String cssString = "p { color: green; }";
              boolean success = gj.convertMapToPDF(jsonMap, cssString);
          }
@@ -156,10 +166,13 @@ shows in **`./`**.
     public class Example {
          public static void main(String[] args) {
              GeneratorJava gj = new GeneratorJava();
-             HashMap<String,List<String>> jsonMap = new HashMap<>();
-             ArrayList<String> lst = new ArrayList<>();
-             lst.add("25");
-             jsonMap.put("FistName LastName",lst);
+             HashMap<String,List<String>> hm = new HashMap<>();
+             ArrayList<String> l1 = new ArrayList<>();
+             ArrayList<String> l2 = new ArrayList<>();
+             l1.add("FirstName LastName");
+             hm.put("name",l1);
+             l2.add("25");
+             hm.put("age",l2);
              Config config = new Config("green", 12, "center", "Arial", "bold");
              /*
                 Note all parameters in Config class in java's interface must be initialized.

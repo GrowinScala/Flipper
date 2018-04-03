@@ -1,12 +1,13 @@
 package parser.extraction
 
 import java.io.File
+
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
 import org.scalatest.Matchers._
 import org.scalatest.junit.JUnitRunner
 import parser.extraction.Extractor._
-import parser.utils.POSTag
+import parser.utils.{Noun, Number, ProperNoun}
 
 @RunWith(classOf[JUnitRunner])
 class ExtractorSuite extends FunSuite {
@@ -18,7 +19,7 @@ class ExtractorSuite extends FunSuite {
     * Tests if the result of calling getAllMatchedValues is correct or not
     */
   test("Find Expected Value") {
-    val matchedValues = getAllMatchedValues(text, Map("name" -> POSTag.PN, "age" -> POSTag.NUM))
+    val matchedValues = getAllMatchedValues(text, Map("name" -> ProperNoun(), "age" -> Number()))
     val expectedValue = "Margarida Reis"
     if (matchedValues.isEmpty) fail("getAllMatchedValues returned an empty List")
     else assert(matchedValues.head._2.head == expectedValue)
@@ -37,7 +38,7 @@ class ExtractorSuite extends FunSuite {
     * Tests that passing a null or empty text will return an empty list
     */
   test("Get all matched values with an empty String") {
-    val emptyValues = getAllMatchedValues(Option(""), Map("name" -> POSTag.PN, "age" -> POSTag.NUM))
+    val emptyValues = getAllMatchedValues(Option(""), Map("name" -> ProperNoun(), "age" -> Number()))
     assert(emptyValues.isEmpty)
   }
 
@@ -46,7 +47,7 @@ class ExtractorSuite extends FunSuite {
     * Tests if the result of calling getAllMatchedValues with a keyword that does not exist in the text is empty
     */
   test("Search for non-existing keyword") {
-    val matchedValues = getAllMatchedValues(text, Map("color" -> POSTag.N))
+    val matchedValues = getAllMatchedValues(text, Map("color" -> Noun()))
     if (matchedValues.isEmpty) fail("Matched value came back as an Empty List")
     else assert(matchedValues.head._2.isEmpty)
   }
@@ -55,7 +56,7 @@ class ExtractorSuite extends FunSuite {
     * Tests if getSingleMatchedValue returns only one value for all keys
     */
   test("Search single value") {
-    val matchedValue = getSingleMatchedValue(text, Map("name" -> POSTag.PN, "age" -> POSTag.NUM))
+    val matchedValue = getSingleMatchedValue(text, Map("name" -> ProperNoun(), "age" -> Number()))
     assert(matchedValue.forall(_._2.size == 1))
   }
 
@@ -63,7 +64,7 @@ class ExtractorSuite extends FunSuite {
     * Tests that passing an empty text string to getSingleMatchedValue will return an empty list
     */
   test("Get single value with an empty text string") {
-    val emptyText = getSingleMatchedValue(Option(""), Map("name" -> POSTag.PN, "age" -> POSTag.NUM))
+    val emptyText = getSingleMatchedValue(Option(""), Map("name" -> ProperNoun(), "age" -> Number()))
     assert(emptyText.isEmpty)
   }
 
@@ -82,7 +83,7 @@ class ExtractorSuite extends FunSuite {
     * Tests if getSingleMatchedValue returns an empty value list if the given keyword does not exist in the text
     */
   test("Search single value with an non-existing keyword") {
-    val matchedValue = getSingleMatchedValue(text, Map("color" -> POSTag.N))
+    val matchedValue = getSingleMatchedValue(text, Map("color" -> Noun()))
     if (matchedValue.isEmpty) fail("Matched value came back as an Empty List")
     else assert(matchedValue.head._2.isEmpty)
   }
@@ -91,7 +92,7 @@ class ExtractorSuite extends FunSuite {
     * Tests that passing an empty or null text to getAllObjects will return an empty list
     */
   test("Get all objects with null or empty text") {
-    val emptyObjs = getAllObjects(Option(""), Map("name" -> POSTag.PN))
+    val emptyObjs = getAllObjects(Option(""), Map("name" -> ProperNoun()))
     assert(emptyObjs.isEmpty)
   }
 
@@ -109,7 +110,7 @@ class ExtractorSuite extends FunSuite {
     * Tests if getAllObjects returns a list with the correct information
     */
   test("Gets All Objects") {
-    val pseudoJsonObjs = getAllObjects(text, Map("name" -> POSTag.PN))
+    val pseudoJsonObjs = getAllObjects(text, Map("name" -> ProperNoun()))
     val expected = List(
       Map("name" -> List("Margarida Reis")),
       Map("name" -> List("Lucas")),
@@ -137,13 +138,13 @@ class ExtractorSuite extends FunSuite {
       "{\"name\" : \"Albertina\", \"age\" : \"\"}",
       "{\"name\" : \"Justino Alberto\", \"age\" : \"\"}"
     )
-    //    val matchedValues = getAllObjects(text, Map("name" -> POSTag.PN, "age" -> POSTag.NUM))
+    //    val matchedValues = getAllObjects(text, Map("name" -> ProperNoun(), "age" -> NUM))
     //    if (matchedValues.isEmpty) fail("getAllObjects returned an empty List")
     //    else matchedValues.map(mp => makeJSONString(mp)) should equal(expected)
-    val keys = Map("name" -> POSTag.PN, "age" -> POSTag.NUM)
-    val x = getJSONObjects(text, Map("name" -> POSTag.PN, "age" -> POSTag.NUM))
+    val keys = Map("name" -> ProperNoun(), "age" -> Number())
+    val x = getJSONObjects(text, Map("name" -> ProperNoun(), "age" -> Number()))
     println(x.grouped(keys.size).toList)
 
-    //    getJSONObjects(text, Map("name" -> POSTag.PN, "age" -> POSTag.NUM)) should equal(expected)
+    //    getJSONObjects(text, Map("name" -> PN, "age" -> NUM)) should equal(expected)
   }
 }

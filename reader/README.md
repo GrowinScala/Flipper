@@ -25,7 +25,7 @@ The present file documents the Reader module.
                          └── utils/                
                                    ├── ImageProcessing.scala   ; Handles processing the image and extract its text
                                    ├── OpenNLP.scala           ; Handles the NLP (natural language processing) functionalities
-                                   ├── POSTag.scala            ; Enum for the possible Part-Of-Speech tags to be used in when extracting values for keywords
+                                   ├── Specification.scala     ; Classes that help specify the keywords sent when extracting information
                                    └── SpellChecker.scala      ; Handles the spellchecking operations to improve the OCR's accuracy
   ```
   
@@ -107,17 +107,17 @@ value for a given keyword. This POS tag simply tells Flipper what kind of value 
 for a given keyword, the possible POSTags can be found bellow:
 
 
-| POS Tag        | Meaning                |
-|:--------------:|:----------------------:|
-| ADJ            | Adjective              |
-| PN             | Proper Noun            |
-| N              | Noun                   |
-| NPLR           | Plural Noun            |
-| VB             | Verb - Base Form       |
-| VBN            | Verb - Past Participle |
-| VBG            | Verb - Gerund          |
-| NUM            | Number                 |
-| ADV            | Adverb                 |
+| Possible POSTags    |
+|:-------------------:|
+| Adjective           |
+| ProperNoun          |
+| Noun                |
+| PluralNoun          |
+| Verb                |
+| VerbPastParticiple  |
+| VerbGerund          |
+| Number              |
+| Adverb              |
 
 
 You can now implement the following snippet:
@@ -128,11 +128,11 @@ You can now implement the following snippet:
 ```scala
     import parser.extraction.Extractor.{readPDF, getJSONObjects}
     import java.io.File
-    import parser.utils.POSTag
+    import parser.utils.{ProperNoun, Number}
     
     val file = new File("./path/to/pdf/document")
     val extractedText = readPDF(file)
-    val keywords = Map("name"-> POSTag.PN, "age" -> POSTag.NUM)
+    val keywords = Map("name"-> ProperNoun(), "age" -> Number())
     
     val jsonObjs : List[String] = getJSONObjects(extractedText, keywords)
     
@@ -147,7 +147,8 @@ You can now implement the following snippet:
 ```java
     import parser.extraction.ExtractorJava;
     import java.io.File;
-    import parser.utils.POSTag;
+    import parser.utils.Number;
+    import parser.utils.ProperNoun;
     import java.util.HashMap;
     import java.util.List;
     
@@ -158,8 +159,8 @@ You can now implement the following snippet:
             String extractedText = ex.readPDF(file);
             
             HashMap keywords = new HashMap<>();
-            keywords.put("name", POSTag.PN());
-            keywords.put("age", POSTag.NUM());
+            keywords.put("name", new ProperNoun());
+            keywords.put("age", new Number());
             
             List jsonOBjs = ex.getJSONObjects(text, keywords);
             
@@ -193,11 +194,11 @@ with that possibility through **`getAllMatchedValues`**.
 ```scala
     import parser.extraction.Extractor.{readPDF, getAllMatchedValues}
     import java.io.File
-    import parser.utils.POSTag
+    import parser.utils.{ProperNoun, Number}
     
     val file = new File("./path/to/pdf/document")
     val extractedText = readPDF(file)
-    val keywords = Map("name" -> POSTag.PN, "age" -> POSTag.NUM)
+    val keywords = Map("name" -> ProperNoun(), "age" -> Number())
     
     val matchedValues = getAllMatchedValues(extractedText, keywords) 
     //matchedValues -> Map(
@@ -211,7 +212,8 @@ with that possibility through **`getAllMatchedValues`**.
 ```java
     import parser.extraction.ExtractorJava;
     import java.io.File;
-    import parser.utils.POSTag;
+    import parser.utils.Number;
+    import parser.utils.ProperNoun;
     import java.util.HashMap;
     import java.util.Map;
     
@@ -222,8 +224,8 @@ with that possibility through **`getAllMatchedValues`**.
             String extractedText = ex.readPDF(file);
             
             HashMap keywords = new HashMap<>();
-            keywords.put("name", POSTag.PN());
-            keywords.put("age", POSTag.NUM());
+            keywords.put("name", new ProperNoun());
+            keywords.put("age", new Number());
             
             Map matchedValues = ex.getAllMatchedValues(extractedText, keywords);
             
@@ -244,11 +246,11 @@ This method works exactly like the one above but instead of returning every valu
 ```scala
     import parser.extraction.Extractor.{readPDF, getSingleMatchedValue}
     import java.io.File
-    import parser.utils.POSTag
+    import parser.utils.{ProperNoun, Number}
     
     val file = new File("./path/to/pdf/document")
     val extractedText = readPDF(file)
-    val keywords = Map("name"-> POSTag.PN, "age" -> POSTag.NUM)
+    val keywords = Map("name"-> ProperNoun(), "age" -> Number())
     
     val matchedValues = getSingleMatchedValue(extractedText, keywords) 
     //matchedValues -> Map(
@@ -262,7 +264,8 @@ This method works exactly like the one above but instead of returning every valu
 ```java
     import parser.extraction.ExtractorJava;
     import java.io.File;
-    import parser.utils.POSTag;
+    import parser.utils.Number;
+    import parser.utils.ProperNoun;
     import java.util.HashMap;
     import java.util.Map;
     
@@ -273,8 +276,8 @@ This method works exactly like the one above but instead of returning every valu
             String extractedText = ex.readPDF(file);
             
             HashMap keywords = new HashMap<>();
-            keywords.put("name", POSTag.PN());
-            keywords.put("age", POSTag.NUM());
+            keywords.put("name", new ProperNoun());
+            keywords.put("age", new Number());
             
             Map matchedValues = ex.getSingleMatchedValue(extractedText, keywords);
             
@@ -296,11 +299,11 @@ the given keywords.
 ```scala
     import parser.extraction.Extractor.{readPDF, getAllObjects}
     import java.io.File
-    import parser.utils.POSTag
+    import parser.utils.{ProperNoun, Number}
     
     val filePath = new File("./path/to/pdf/document")
     val extractedText = readPDF(filePath)
-    val keywords = Map("name" -> POSTag.PN, "age" -> POSTag.NUM)
+    val keywords = Map("name"-> ProperNoun(), "age" -> Number())
     
     val matchedValues = getAllObjects(extractedText, keywords) 
     //matchedValues -> List(
@@ -314,7 +317,8 @@ the given keywords.
 ```java
     import parser.extraction.ExtractorJava;
     import java.io.File;
-    import parser.utils.POSTag;
+    import parser.utils.Number;
+    import parser.utils.ProperNoun;
     import java.util.HashMap;
     import java.util.List;
     
@@ -325,8 +329,8 @@ the given keywords.
             String extractedText = ex.readPDF(file);
             
             HashMap keywords = new HashMap<>();
-            keywords.put("name", POSTag.PN());
-            keywords.put("age", POSTag.NUM());
+            keywords.put("name", new ProperNoun());
+            keywords.put("age", new Number());
             
             List matchedValues = ex.getAllObjects(extractedText, keywords);
             
