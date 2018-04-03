@@ -12,48 +12,28 @@ case class Options(keyword: String, possibilities: List[String]) extends Specifi
 /**
   * Enumeration for the standard POS tags which translate to both Portuguese and English
   */
-trait POSTag extends Specification {
-  val value: String
-}
+abstract class POSTag(val value: String) extends Specification
 
 /*
    POSTag Subtypes, represents the different POSTag possibilities
  */
 
-object Adjective extends POSTag {
-  val value = "ADJ"
-}
+case class Adjective() extends POSTag("ADJ")
 
-object ProperNoun extends POSTag {
-  val value = "PN"
-}
+case class ProperNoun() extends POSTag("PN")
 
-object Noun extends POSTag {
-  val value = "N"
-}
+case class Noun() extends POSTag("N")
 
-object PluralNoun extends POSTag {
-  val value = "NPLR"
-}
+case class PluralNoun() extends POSTag("NPLR")
 
-object Verb extends POSTag {
-  val value = "VB"
-}
+case class Verb() extends POSTag("VB")
 
-object VerbPastParticiple extends POSTag {
-  val value = "VBN"
-}
+case class VerbPastParticiple() extends POSTag("VBN")
 
-object VerbGerund extends POSTag {
-  val value = "VBG"
-}
+case class VerbGerund() extends POSTag("VBG")
 
-object Number extends POSTag {
-  val value = "NUM"
-}
+case class Number() extends POSTag("NUM")
 
-object Adverb extends POSTag {
-  val value = "ADV"
-}
+case class Adverb() extends POSTag("ADV")
 
 //TODO Support more POS tags
