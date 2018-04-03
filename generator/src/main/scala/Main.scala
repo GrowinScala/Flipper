@@ -7,7 +7,7 @@ object Main {
   def main(args: Array[String]): Unit = {
     //    println(convertJSONtoPDF(""" {"name": "Lucas", "age" : 21 }""", new File("test.css")))
     val objMap: Map[String,Any] = Map("name" -> List("Lucas", "Margarida"), "age" -> 21)
-    convertObjtoPDF(objMap)
+    convertMapToPDF(objMap)
 //    println(objMap)
     val json = """ {"name": ["Lucas", "Margarida"],  "age" : 21 }"""
     convertJSONtoPDF(json)

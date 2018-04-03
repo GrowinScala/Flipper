@@ -1,7 +1,6 @@
 package generator
 
 import java.io._
-import scala.collection.JavaConverters._
 import com.itextpdf.text.Document
 import com.itextpdf.text.pdf.PdfWriter
 import com.itextpdf.tool.xml.XMLWorkerHelper
@@ -22,8 +21,8 @@ object Generator {
     * @param jsonMap - The Map to be converted into a PDF document
     * @return a Boolean saying if the conversion from JSON to PDF was successful or not
     */
-  def convertObjtoPDF(jsonMap: Map[String, Any]): Boolean = {
-    val htmlURI = writeHTML(jsonMap).getOrElse("")
+  def convertMapToPDF(jsonMap: Map[String, Any]): Boolean = {
+    val htmlURI = writeHTML(Some(jsonMap)).getOrElse("")
     convertHTMLToPDF(htmlURI)
   }
 
@@ -35,8 +34,8 @@ object Generator {
     * @param cssFile - The additional CSS file to be included in the HTML file
     * @return a Boolean saying if the conversion from JSON to PDF was successful or not
     */
-  def convertObjtoPDF(jsonMap: Map[String, Any], cssFile: File): Boolean = {
-    val htmlURI = writeHTML(jsonMap, cssFile).getOrElse("")
+  def convertMapToPDF(jsonMap: Map[String, Any], cssFile: File): Boolean = {
+    val htmlURI = writeHTML(Some(jsonMap), cssFile).getOrElse("")
     convertHTMLToPDF(htmlURI)
   }
 
@@ -48,8 +47,8 @@ object Generator {
     * @param cssString - The additional String containing the the CSS to be included in the HTML file
     * @return a Boolean saying if the conversion from JSON to PDF was successful or not
     */
-  def convertObjtoPDF(jsonMap: Map[String, Any], cssString: String): Boolean = {
-    val htmlURI = writeHTML(jsonMap, cssString).getOrElse("")
+  def convertMapToPDF(jsonMap: Map[String, Any], cssString: String): Boolean = {
+    val htmlURI = writeHTML(Some(jsonMap), cssString).getOrElse("")
     convertHTMLToPDF(htmlURI)
   }
 
@@ -61,8 +60,8 @@ object Generator {
     * @param config  - The config specifying simple styling details to be implemented in the PDF conversion
     * @return a Boolean saying if the conversion from JSON to PDF was successful or not
     */
-  def convertObjtoPDF(jsonMap: Map[String, Any], config: Config): Boolean = {
-    val htmlURI = writeHTML(jsonMap, config).getOrElse("")
+  def convertMapToPDF(jsonMap: Map[String, Any], config: Config): Boolean = {
+    val htmlURI = writeHTML(Some(jsonMap), config).getOrElse("")
     convertHTMLToPDF(htmlURI)
   }
 
@@ -72,11 +71,11 @@ object Generator {
     * @param json - The JSON string to be parsed
     * @return a Map[String,Any] with the information parsed from the JSON
     */
-  def convertJSONtoObj(json:String): Map[String,Any] = {
+  def convertJSONtoMap(json: String): Option[Map[String, Any]] = {
     try {
-      parse(json).values.asInstanceOf[Map[String, Any]]
+      Some(parse(json).values.asInstanceOf[Map[String, Any]])
     } catch {
-      case e: Exception => e.printStackTrace(); Map()
+      case e: Exception => e.printStackTrace(); None
     }
   }
 
@@ -87,9 +86,9 @@ object Generator {
     * @param json - The Json string to be converted into a PDF document
     * @return a Boolean saying if the conversion from JSON to PDF was successful or not
     */
-  def convertJSONtoPDF(json:String): Boolean = {
-    val objMap = convertJSONtoObj(json)
-    val htmlURI = writeHTML(objMap).getOrElse("")
+  def convertJSONtoPDF(json: String): Boolean = {
+    val jsonMap = convertJSONtoMap(json)
+    val htmlURI = writeHTML(jsonMap).getOrElse("")
     convertHTMLToPDF(htmlURI)
 
   }
@@ -102,9 +101,9 @@ object Generator {
     * @param cssFile - The additional CSS file to be included in the HTML file
     * @return a Boolean saying if the conversion from JSON to PDF was successful or not
     */
-  def convertJSONtoPDF(json:String, cssFile: File): Boolean = {
-    val objMap = convertJSONtoObj(json)
-    val htmlURI = writeHTML(objMap, cssFile).getOrElse("")
+  def convertJSONtoPDF(json: String, cssFile: File): Boolean = {
+    val jsonMap = convertJSONtoMap(json)
+    val htmlURI = writeHTML(jsonMap, cssFile).getOrElse("")
     convertHTMLToPDF(htmlURI)
   }
 
@@ -117,8 +116,8 @@ object Generator {
     * @return a Boolean saying if the conversion from JSON to PDF was successful or not
     */
   def convertJSONtoPDF(json: String, cssString: String): Boolean = {
-    val objMap = convertJSONtoObj(json)
-    val htmlURI = writeHTML(objMap, cssString).getOrElse("")
+    val jsonMap = convertJSONtoMap(json)
+    val htmlURI = writeHTML(jsonMap, cssString).getOrElse("")
     convertHTMLToPDF(htmlURI)
   }
 
@@ -131,8 +130,8 @@ object Generator {
     * @return a Boolean saying if the conversion from JSON to PDF was successful or not
     */
   def convertJSONtoPDF(json: String, config: Config): Boolean = {
-    val objMap = convertJSONtoObj(json)
-    val htmlURI = writeHTML(objMap, config).getOrElse("")
+    val jsonMap = convertJSONtoMap(json)
+    val htmlURI = writeHTML(jsonMap, config).getOrElse("")
     convertHTMLToPDF(htmlURI)
   }
 
@@ -165,7 +164,7 @@ object Generator {
     * @param jsonMap - The JSON string to be parsed
     * @return An Option wrapping the URI of the created HTML file. Returns None in case of exception when parsing the JSON String
     */
-  private def writeHTML(jsonMap: Map[String, Any]): Option[String] = {
+  private def writeHTML(jsonMap: Option[Map[String, Any]]): Option[String] = {
     createHtml(jsonMap)
   }
 
@@ -176,7 +175,7 @@ object Generator {
     * @param cssFile - the URI of the created html file
     * @return An Option wrapping the URI of the created HTML file. Returns None in case of exception when parsing the JSON String
     */
-  private def writeHTML(jsonMap: Map[String, Any], cssFile: File): Option[String] = {
+  private def writeHTML(jsonMap: Option[Map[String, Any]], cssFile: File): Option[String] = {
     val bufferedSourceOption = loadCSSFile(cssFile)
     bufferedSourceOption match {
       case Some(bufferedSource) =>
@@ -194,7 +193,7 @@ object Generator {
     * @param cssString - The String containing the desired CSS to be included in the HTML file
     * @return An Option wrapping the URI of the created HTML file. Returns None in case of exception when parsing the JSON String
     */
-  private def writeHTML(jsonMap: Map[String, Any], cssString: String): Option[String] = {
+  private def writeHTML(jsonMap: Option[Map[String, Any]], cssString: String): Option[String] = {
     createHtml(jsonMap, cssString)
   }
 
@@ -202,11 +201,11 @@ object Generator {
     * Method that calls createHTML.
     * This method overload implements the user decision to send an additional Generator.Config object containing simple styling details
     *
-    * @param jsonMap   - The JSON string to be parsed
-    * @param config - The Generator.Config object containing simple styling details
+    * @param jsonMap - The JSON string to be parsed
+    * @param config  - The Generator.Config object containing simple styling details
     * @return An Option wrapping the URI of the created HTML file. Returns None in case of exception when parsing the JSON String
     */
-  private def writeHTML(jsonMap: Map[String, Any], config: Config): Option[String] = {
+  private def writeHTML(jsonMap: Option[Map[String, Any]], config: Config): Option[String] = {
     val cssString =
       "body{" +
         "font-weight: " + config.fontWeight + ";" +
@@ -222,14 +221,13 @@ object Generator {
     * Method that implement's the creation and witting of the html file generated from the passed JSON string
     * This method is used by all writeHTML overloads
     *
-    * @param jsonMap   - The JSON String to be parsed
-    * @param cssString - A String containing all the desired CSS to be included in the HTML (to then be transformed to pdf)
+    * @param jsonMapOpt - An Option wrapping the JSON-Map object
+    * @param cssString  - A String containing all the desired CSS to be included in the HTML (to then be transformed to pdf)
     * @return An Option wrapping the URI of the created HTML file. Returns None in case of exception when parsing the JSON String
     */
-  private def createHtml(jsonMap: Map[String, Any], cssString: String = ""): Option[String] = {
-    try {
-//      val jsonMap = convertJSONtoObj(json) //parses JSON string to a Map[String, Any]
-      if (jsonMap.nonEmpty) {
+  private def createHtml(jsonMapOpt: Option[Map[String, Any]], cssString: String = ""): Option[String] = {
+    jsonMapOpt match {
+      case Some(jsonMap) =>
         val kvParagraph = jsonMap.map { case (k, v) => p(k + " : " + v) }.toList
 
         val htmlString =
@@ -247,16 +245,8 @@ object Generator {
         pw.write(htmlString)
         pw.close()
         Some(filePath)
-      } else None
-    } catch {
-      case e: Exception => e.printStackTrace(); None
+      case None => None
     }
-  }
-
-
-  def javaToScalaMap(javaMap: java.util.Map[String, java.util.List[String]]): Map[String, Any] ={
-    val scalaMap:Map[String,Any] = javaMap.asScala.mapValues(_.asInstanceOf[Any]).toMap
-    scalaMap
   }
 
   /**

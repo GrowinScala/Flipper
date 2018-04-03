@@ -1,5 +1,7 @@
 package generator;
 
+import scala.collection.JavaConverters;
+
 import java.io.File;
 import java.util.List;
 import java.util.Map;
@@ -13,8 +15,8 @@ public class GeneratorJava {
      * @param jsonMap - The Map to be converted into a PDF document
      * @return a Boolean saying if the conversion from Map to PDF was successful or not
      */
-    public Boolean convertObjtoPDF(Map<String, List<String>> jsonMap){
-        return Generator.convertObjtoPDF(Generator.javaToScalaMap(jsonMap));
+    public Boolean convertMapToPDF(Map<String, List<String>> jsonMap){
+        return Generator.convertMapToPDF(javaMapToScala(jsonMap));
     }
 
     /**
@@ -25,8 +27,8 @@ public class GeneratorJava {
      * @param cssFile - The additional CSS file to be included in the HTML file
      * @return a Boolean saying if the conversion from Map to PDF was successful or not
      */
-    public Boolean convertObjtoPDF(Map<String,List<String>> jsonMap, File cssFile) {
-        return Generator.convertObjtoPDF(Generator.javaToScalaMap(jsonMap), cssFile);
+    public Boolean convertMapToPDF(Map<String,List<String>> jsonMap, File cssFile) {
+        return Generator.convertMapToPDF(javaMapToScala(jsonMap), cssFile);
     }
 
     /**
@@ -37,8 +39,8 @@ public class GeneratorJava {
      * @param cssString - The additional String containing the the CSS to be included in the HTML file
      * @return a Boolean saying if the conversion from Map to PDF was successful or not
      */
-    public Boolean convertJSONtoPDF(Map<String,List<String>> jsonMap, String cssString) {
-        return Generator.convertObjtoPDF(Generator.javaToScalaMap(jsonMap), cssString);
+    public Boolean convertMapToPDF(Map<String,List<String>> jsonMap, String cssString) {
+        return Generator.convertMapToPDF(javaMapToScala(jsonMap), cssString);
     }
 
     /**
@@ -49,8 +51,8 @@ public class GeneratorJava {
      * @param config  - The config specifying simple styling details to be implemented in the PDF conversion
      * @return a Boolean saying if the conversion from Map to PDF was successful or not
      */
-    public Boolean convertObjtoPDF(Map<String,List<String>> jsonMap, Config config) {
-        return Generator.convertObjtoPDF(Generator.javaToScalaMap(jsonMap), config);
+    public Boolean convertMapToPDF(Map<String,List<String>> jsonMap, Config config) {
+        return Generator.convertMapToPDF(javaMapToScala(jsonMap), config);
     }
 
     /**
@@ -98,6 +100,19 @@ public class GeneratorJava {
      */
     public Boolean convertJSONtoPDF(String json, Config config) {
         return Generator.convertJSONtoPDF(json, config);
+    }
+
+    /**
+     * Method that converts a Java Map to a scala immutable map using JavaConverters
+     *
+     * @param javaMap - Java method to be converted
+     * @return a scala.collection.immutable.Map converted from the input Java Map
+     */
+    private scala.collection.immutable.Map javaMapToScala (Map<String, List<String>> javaMap){
+        scala.collection.mutable.Map mutableMap = JavaConverters.mapAsScalaMapConverter(javaMap).asScala();
+
+        //Convert scala mutable map to scala immutable map by concatenating it with an empty immutable HashMap
+        return new scala.collection.immutable.HashMap<>().$plus$plus(mutableMap);
     }
 
 
