@@ -71,7 +71,6 @@ public class ExtractorJava {
         //Create Option wrapper around extracted text
         Option<String> textOpt = (text != null && !text.equals("")) ? Some.apply(text) : Option.apply(null);
 
-
         //Convert scala.collection.immutable.List to java.util.List
         scala.collection.immutable.Map result = Extractor.getAllMatchedValues(textOpt, keywordsToScala(keywords), regexToScala(clientRegEx));
         return scalaResultToJava(result);

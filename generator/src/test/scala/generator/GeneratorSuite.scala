@@ -9,7 +9,6 @@ import Generator._
 @RunWith(classOf[JUnitRunner])
 class GeneratorSuite extends FunSuite {
 
-
   /**
     * Tests that calling convertMapToPDF with an invalid JSON Map (null, empty)
     * Or with a non-existing additional CSS file will return false saying the conversion was not successful
