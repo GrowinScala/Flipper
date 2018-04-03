@@ -6,14 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5115832d-4669-4625-b348-c310af38a585" name="Default" comment="Implemented convertObjtoPdf in java">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+    <list default="true" id="5115832d-4669-4625-b348-c310af38a585" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/generator/src/main/java/generator/GeneratorJava.java" afterPath="$PROJECT_DIR$/generator/src/main/java/generator/GeneratorJava.java" />
-      <change beforePath="$PROJECT_DIR$/generator/src/main/scala/Main.scala" afterPath="$PROJECT_DIR$/generator/src/main/scala/Main.scala" />
       <change beforePath="$PROJECT_DIR$/generator/src/main/scala/generator/Generator.scala" afterPath="$PROJECT_DIR$/generator/src/main/scala/generator/Generator.scala" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/classes/Main$.class" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/classes/Main$.class" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/classes/generator/GeneratorJava.class" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/classes/generator/GeneratorJava.class" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -64,8 +59,8 @@
       <file leaf-file-name="Generator.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/Generator.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="13" column="45" lean-forward="true" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
+            <state relative-caret-position="291">
+              <caret line="257" column="50" lean-forward="false" selection-start-line="257" selection-start-column="50" selection-end-line="257" selection-end-column="50" />
               <folding>
                 <element signature="e#19#35#0" expanded="true" />
               </folding>
@@ -197,12 +192,12 @@
         <option value="$PROJECT_DIR$/converter/src/main/scala/parser/conversion/Converter.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/parser/utils/OpenNLP.scala" />
         <option value="$PROJECT_DIR$/reader/README.md" />
-        <option value="$PROJECT_DIR$/generator/src/main/scala/generator/Generator.scala" />
         <option value="$PROJECT_DIR$/generator/src/main/scala/Main.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala" />
         <option value="$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/Main.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/java/parser/extraction/ExtractorJava.java" />
+        <option value="$PROJECT_DIR$/generator/src/main/scala/generator/Generator.scala" />
       </list>
     </option>
   </component>
@@ -1095,7 +1090,14 @@
       <option name="project" value="LOCAL" />
       <updated>1522677404363</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Implemented convertObjtoPdf in java">
+      <created>1522746399616</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1522746399616</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1581,8 +1583,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/Generator.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="45" lean-forward="true" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
+        <state relative-caret-position="291">
+          <caret line="257" column="50" lean-forward="false" selection-start-line="257" selection-start-column="50" selection-end-line="257" selection-end-column="50" />
           <folding>
             <element signature="e#19#35#0" expanded="true" />
           </folding>

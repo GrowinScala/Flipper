@@ -1,7 +1,7 @@
 package generator
 
 import java.io._
-import scala.collection.JavaConversions._
+import scala.collection.JavaConverters._
 import com.itextpdf.text.Document
 import com.itextpdf.text.pdf.PdfWriter
 import com.itextpdf.tool.xml.XMLWorkerHelper
@@ -255,7 +255,7 @@ object Generator {
 
 
   def javaToScalaMap(javaMap: java.util.Map[String, java.util.List[String]]): Map[String, Any] ={
-    val scalaMap:Map[String,Any] = javaMap.mapValues(_.asInstanceOf[Any]).toMap
+    val scalaMap:Map[String,Any] = javaMap.asScala.mapValues(_.asInstanceOf[Any]).toMap
     scalaMap
   }
 
