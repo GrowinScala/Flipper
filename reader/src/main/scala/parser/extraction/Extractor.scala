@@ -78,7 +78,7 @@ object Extractor {
               (key, knownRegEx(key).findAllIn(t).matchData.map(_.group(1)).toList.distinct)
 
             else findKeywordInText(key, tag, t) //to be changed, here we need to manually search for the keywords in the text
-          }.toMap
+          }
           filterNewLines(matched)
         }
         else {
