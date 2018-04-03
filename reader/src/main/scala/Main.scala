@@ -1,6 +1,5 @@
 import java.io.File
-
-import parser.utils.POSTag
+import parser.utils.{Number, ProperNoun}
 
 object Main {
 
@@ -9,7 +8,7 @@ object Main {
   def main(args: Array[String]): Unit = {
     val filepath = new File("./reader/src/main/resources/MegaTester.pdf")
     val text = readPDF(filepath)
-    val l = getAllObjects(text, Map("name" -> POSTag.PN, "age" -> POSTag.NUM))
+    val l = getAllObjects(text, Map("name" -> ProperNoun, "age" -> Number))
 
     println(l)
     //    println(text)
