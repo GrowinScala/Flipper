@@ -13,7 +13,7 @@ public class GeneratorJava {
      * @param jsonMap - The Map to be converted into a PDF document
      * @return a Boolean saying if the conversion from Map to PDF was successful or not
      */
-    public Boolean convertObjtoPDF(Map<String,List<String>> jsonMap){
+    public Boolean convertObjtoPDF(Map<String, List<String>> jsonMap){
         return Generator.convertObjtoPDF(Generator.javaToScalaMap(jsonMap));
     }
 

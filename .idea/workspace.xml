@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="Flipper:jar" />
+      <artifact name="flipper:jar" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5115832d-4669-4625-b348-c310af38a585" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/generator/src/main/scala/generator/Generator.scala" afterPath="$PROJECT_DIR$/generator/src/main/scala/generator/Generator.scala" />
+      <change beforePath="$PROJECT_DIR$/generator/README.md" afterPath="$PROJECT_DIR$/generator/README.md" />
+      <change beforePath="$PROJECT_DIR$/generator/src/main/java/generator/GeneratorJava.java" afterPath="$PROJECT_DIR$/generator/src/main/java/generator/GeneratorJava.java" />
+      <change beforePath="$PROJECT_DIR$/generator/src/main/scala/Main.scala" afterPath="$PROJECT_DIR$/generator/src/main/scala/Main.scala" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -49,17 +51,17 @@
       <file leaf-file-name="Main.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/generator/src/main/scala/Main.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="10" column="68" lean-forward="false" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
+            <state relative-caret-position="240">
+              <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Generator.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Generator.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/Generator.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
+            <state relative-caret-position="339">
               <caret line="257" column="50" lean-forward="false" selection-start-line="257" selection-start-column="50" selection-end-line="257" selection-end-column="50" />
               <folding>
                 <element signature="e#19#35#0" expanded="true" />
@@ -68,10 +70,44 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/generator/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="314">
+                <caret line="145" column="5" lean-forward="true" selection-start-line="145" selection-start-column="5" selection-end-line="145" selection-end-column="5" />
+                <folding>
+                  <marker date="1522750669090" expanded="true" signature="2296:2355" ph="..." />
+                  <marker date="1522750669090" expanded="true" signature="2775:2838" ph="..." />
+                  <marker date="1522750669090" expanded="true" signature="3055:3080" ph="..." />
+                  <marker date="1522750669090" expanded="true" signature="3055:3168" ph="..." />
+                  <marker date="1522750669090" expanded="true" signature="3055:3169" ph="..." />
+                  <marker date="1522750669090" expanded="true" signature="3250:3579" ph="{...}" />
+                  <marker date="1522750669090" expanded="true" signature="3610:3748" ph="..." />
+                  <marker date="1522750669090" expanded="true" signature="3829:4220" ph="{...}" />
+                  <marker date="1522750669090" expanded="true" signature="4251:4364" ph="..." />
+                  <marker date="1522750669090" expanded="true" signature="4445:4840" ph="{...}" />
+                  <marker date="1522750669090" expanded="true" signature="4871:5013" ph="..." />
+                  <marker date="1522750669090" expanded="true" signature="5094:6061" ph="{...}" />
+                  <marker date="1522750669090" expanded="true" signature="6931:6991" ph="..." />
+                  <marker date="1522750669090" expanded="true" signature="7404:7468" ph="..." />
+                  <marker date="1522750669090" expanded="true" signature="7786:7988" ph="{...}" />
+                  <marker date="1522750669090" expanded="true" signature="8019:8068" ph="..." />
+                  <marker date="1522750669090" expanded="true" signature="8149:8413" ph="{...}" />
+                  <marker date="1522750669090" expanded="true" signature="8549:8817" ph="{...}" />
+                  <marker date="1522750669090" expanded="true" signature="8848:8901" ph="..." />
+                  <marker date="1522750669090" expanded="true" signature="8982:9822" ph="{...}" />
+                </folding>
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="GeneratorSuite.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/GeneratorSuite.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
+            <state relative-caret-position="119">
               <caret line="30" column="49" lean-forward="false" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
               <folding />
             </state>
@@ -81,15 +117,16 @@
       <file leaf-file-name="GeneratorJava.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/generator/src/main/java/generator/GeneratorJava.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1720">
-              <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+            <state relative-caret-position="480">
+              <caret line="24" column="63" lean-forward="false" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
               <folding>
-                <element signature="e#3113#3114#0" expanded="true" />
-                <element signature="e#3168#3169#0" expanded="true" />
-                <element signature="e#3735#3736#0" expanded="true" />
-                <element signature="e#3799#3800#0" expanded="true" />
-                <element signature="e#5087#5088#0" expanded="true" />
-                <element signature="e#5150#5151#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#3114#3115#0" expanded="true" />
+                <element signature="e#3169#3170#0" expanded="true" />
+                <element signature="e#3736#3737#0" expanded="true" />
+                <element signature="e#3800#3801#0" expanded="true" />
+                <element signature="e#5088#5089#0" expanded="true" />
+                <element signature="e#5151#5152#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -183,26 +220,27 @@
         <option value="$PROJECT_DIR$/generator/src/main/java/GenMain.java" />
         <option value="$PROJECT_DIR$/converter/src/main/java/ConMain.java" />
         <option value="$PROJECT_DIR$/converter/src/main/java/parser/conversion/ConverterJava.java" />
-        <option value="$PROJECT_DIR$/generator/src/main/java/generator/GeneratorJava.java" />
         <option value="$PROJECT_DIR$/reader/src/main/java/MainJava.java" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/parser/utils/ImageProcessing.scala" />
         <option value="$PROJECT_DIR$/converter/README.md" />
-        <option value="$PROJECT_DIR$/generator/README.md" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/converter/src/main/scala/parser/conversion/Converter.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/parser/utils/OpenNLP.scala" />
         <option value="$PROJECT_DIR$/reader/README.md" />
-        <option value="$PROJECT_DIR$/generator/src/main/scala/Main.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala" />
         <option value="$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/Main.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/java/parser/extraction/ExtractorJava.java" />
         <option value="$PROJECT_DIR$/generator/src/main/scala/generator/Generator.scala" />
+        <option value="$PROJECT_DIR$/generator/src/main/scala/Main.scala" />
+        <option value="$PROJECT_DIR$/generator/src/main/java/generator/GeneratorJava.java" />
+        <option value="$PROJECT_DIR$/generator/README.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="952" />
+    <option name="x" value="757" />
+    <option name="y" value="-16" />
     <option name="width" value="976" />
     <option name="height" value="1038" />
   </component>
@@ -754,13 +792,6 @@
       <option name="presentableId" value="Default" />
       <updated>1522055766473</updated>
     </task>
-    <task id="LOCAL-00001" summary="fixed build.sbt bug">
-      <created>1522056342597</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1522056342597</updated>
-    </task>
     <task id="LOCAL-00002" summary="Improved documentation">
       <created>1522060969932</created>
       <option name="number" value="00002" />
@@ -1097,7 +1128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1522746399616</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Removed JavaConversions(deprecated)">
+      <created>1522746771286</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1522746771287</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1138,7 +1176,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32839224" sideWeight="0.496875" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839224" sideWeight="0.496875" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="sbt" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1150,7 +1188,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1772288" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1772288" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="sbt-shell-toolwindow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1227,7 +1265,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactored OpenNLPSuite.scala to remove NullPointerException tests" />
     <MESSAGE value="Code refactored to hide file handling and try-catch blocks" />
     <MESSAGE value="Implemented generator/FileHandlerSuite.scala" />
     <MESSAGE value="Hide non entry point classes in reader module" />
@@ -1252,7 +1289,8 @@
     <MESSAGE value="Updated reader/README.md" />
     <MESSAGE value="fixed getJSONObjects extra empty object bug" />
     <MESSAGE value="Implemented convertObjtoPdf in java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented convertObjtoPdf in java" />
+    <MESSAGE value="Removed JavaConversions(deprecated)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed JavaConversions(deprecated)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1407,21 +1445,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generator/src/main/java/generator/GeneratorJava.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1720">
-          <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
-          <folding>
-            <element signature="e#3113#3114#0" expanded="true" />
-            <element signature="e#3168#3169#0" expanded="true" />
-            <element signature="e#3735#3736#0" expanded="true" />
-            <element signature="e#3799#3800#0" expanded="true" />
-            <element signature="e#5087#5088#0" expanded="true" />
-            <element signature="e#5150#5151#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/converter/src/test/scala/parser/conversion/ConverterSuite.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -1436,14 +1459,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/GeneratorSuite.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="30" column="49" lean-forward="false" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/reader/src/main/java/MainJava.java" />
     <entry file="jar://$USER_HOME$/.ivy2/cache/net.sourceforge.tess4j/tess4j/srcs/tess4j-3.4.4-sources.jar!/net/sourceforge/tess4j/Tesseract.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1453,16 +1468,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/converter/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="189">
-            <caret line="9" column="53" lean-forward="false" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="189">
@@ -1535,14 +1540,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generator/src/main/scala/Main.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="68" lean-forward="false" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/utils/POSTag.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -1583,11 +1580,75 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/Generator.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
+        <state relative-caret-position="339">
           <caret line="257" column="50" lean-forward="false" selection-start-line="257" selection-start-column="50" selection-end-line="257" selection-end-column="50" />
           <folding>
             <element signature="e#19#35#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/src/main/scala/Main.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/src/main/java/generator/GeneratorJava.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="24" column="63" lean-forward="false" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3114#3115#0" expanded="true" />
+            <element signature="e#3169#3170#0" expanded="true" />
+            <element signature="e#3736#3737#0" expanded="true" />
+            <element signature="e#3800#3801#0" expanded="true" />
+            <element signature="e#5088#5089#0" expanded="true" />
+            <element signature="e#5151#5152#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/GeneratorSuite.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="30" column="49" lean-forward="false" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="314">
+            <caret line="145" column="5" lean-forward="true" selection-start-line="145" selection-start-column="5" selection-end-line="145" selection-end-column="5" />
+            <folding>
+              <marker date="1522750669090" expanded="true" signature="2296:2355" ph="..." />
+              <marker date="1522750669090" expanded="true" signature="2775:2838" ph="..." />
+              <marker date="1522750669090" expanded="true" signature="3055:3080" ph="..." />
+              <marker date="1522750669090" expanded="true" signature="3055:3168" ph="..." />
+              <marker date="1522750669090" expanded="true" signature="3055:3169" ph="..." />
+              <marker date="1522750669090" expanded="true" signature="3250:3579" ph="{...}" />
+              <marker date="1522750669090" expanded="true" signature="3610:3748" ph="..." />
+              <marker date="1522750669090" expanded="true" signature="3829:4220" ph="{...}" />
+              <marker date="1522750669090" expanded="true" signature="4251:4364" ph="..." />
+              <marker date="1522750669090" expanded="true" signature="4445:4840" ph="{...}" />
+              <marker date="1522750669090" expanded="true" signature="4871:5013" ph="..." />
+              <marker date="1522750669090" expanded="true" signature="5094:6061" ph="{...}" />
+              <marker date="1522750669090" expanded="true" signature="6931:6991" ph="..." />
+              <marker date="1522750669090" expanded="true" signature="7404:7468" ph="..." />
+              <marker date="1522750669090" expanded="true" signature="7786:7988" ph="{...}" />
+              <marker date="1522750669090" expanded="true" signature="8019:8068" ph="..." />
+              <marker date="1522750669090" expanded="true" signature="8149:8413" ph="{...}" />
+              <marker date="1522750669090" expanded="true" signature="8549:8817" ph="{...}" />
+              <marker date="1522750669090" expanded="true" signature="8848:8901" ph="..." />
+              <marker date="1522750669090" expanded="true" signature="8982:9822" ph="{...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
