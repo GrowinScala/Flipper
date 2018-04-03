@@ -50,7 +50,7 @@ public class ExtractorJava {
      * @return List containing pairs of Keywords and a List (non-repeating) of values found for that keyword
      * @throws IllegalArgumentException If the keywords list is empty
      */
-    public List getAllMatchedValues(String text, Map<String, POSTag> keywords) throws IllegalArgumentException {
+    public Map getAllMatchedValues(String text, Map<String, POSTag> keywords) throws IllegalArgumentException {
         return getAllMatchedValues(text, keywords, new HashMap<>());
     }
 
@@ -64,15 +64,16 @@ public class ExtractorJava {
      * @return List containing pairs of Keywords and a List (non-repeating) of values found for that keyword
      * @throws IllegalArgumentException If the keywords list is empty
      */
-    public List getAllMatchedValues(String text, Map<String, POSTag> keywords, Map<String, String> clientRegEx) throws IllegalArgumentException {
+    public Map getAllMatchedValues(String text, Map<String, POSTag> keywords, Map<String, String> clientRegEx) throws IllegalArgumentException {
         if (keywords.isEmpty())
             throw new IllegalArgumentException("The list of keywords should not be empty");
 
         //Create Option wrapper around extracted text
         Option<String> textOpt = (text != null && !text.equals("")) ? Some.apply(text) : Option.apply(null);
 
+
         //Convert scala.collection.immutable.List to java.util.List
-        scala.collection.immutable.List result = Extractor.getAllMatchedValues(textOpt, keywordsToScala(keywords), regexToScala(clientRegEx));
+        scala.collection.immutable.Map result = Extractor.getAllMatchedValues(textOpt, keywordsToScala(keywords), regexToScala(clientRegEx));
         return scalaResultToJava(result);
     }
 
@@ -86,7 +87,7 @@ public class ExtractorJava {
      * @return A List containing pairs of keywords with a single matched value
      * @throws IllegalArgumentException If the keywords list is empty
      */
-    public List getSingleMatchedValue(String text, Map<String, POSTag> keywords) throws IllegalArgumentException {
+    public Map getSingleMatchedValue(String text, Map<String, POSTag> keywords) throws IllegalArgumentException {
         return getSingleMatchedValue(text, keywords, new HashMap<>());
     }
 
@@ -101,12 +102,12 @@ public class ExtractorJava {
      * @throws IllegalArgumentException If the keywords list is empty
      */
 
-    public List getSingleMatchedValue(String text, Map<String, POSTag> keywords, Map<String, String> clientRegEx) throws IllegalArgumentException {
+    public Map getSingleMatchedValue(String text, Map<String, POSTag> keywords, Map<String, String> clientRegEx) throws IllegalArgumentException {
         if (keywords.isEmpty())
             throw new IllegalArgumentException("The list of keywords should not be empty");
 
         Option<String> textOpt = (text != null && !text.equals("")) ? Some.apply(text) : Option.apply(null);
-        scala.collection.immutable.List result = Extractor.getSingleMatchedValue(textOpt, keywordsToScala(keywords), regexToScala(clientRegEx));
+        scala.collection.immutable.Map result = Extractor.getSingleMatchedValue(textOpt, keywordsToScala(keywords), regexToScala(clientRegEx));
         return scalaResultToJava(result);
     }
 
@@ -141,12 +142,12 @@ public class ExtractorJava {
 
         Option<String> textOpt = (text != null && !text.equals("")) ? Some.apply(text) : Option.apply(null);
         scala.collection.immutable.List result = Extractor.getAllObjects(textOpt, keywordsToScala(keywords), regexToScala(clientRegEx));
-        List<scala.collection.immutable.List<Tuple2<String, scala.collection.immutable.List<String>>>> javaResult = JavaConverters.seqAsJavaList(result);
+        List<scala.collection.immutable.Map<String, scala.collection.immutable.List<String>>> javaResult = JavaConverters.seqAsJavaList(result);
 
-        //Convert from scala List[List[(String, List[String]]] to java List<Map<String, List<String>>>
+        //Convert from scala List[Map[String, List[String]] to java List<Map<String, List<String>>>
         List returnList = new ArrayList();
-        for (scala.collection.immutable.List<Tuple2<String, scala.collection.immutable.List<String>>> subList : javaResult) {
-            returnList.add(scalaResultToJava(subList));
+        for (scala.collection.immutable.Map subMap : javaResult) {
+            returnList.add(scalaResultToJava(subMap));
         }
         return returnList;
     }
@@ -225,7 +226,7 @@ public class ExtractorJava {
      * @param listJSON - List of pairs of keywords and their respective values
      * @return a JSON string
      */
-    public String makeJSONString(List<Map<String, List<String>>> listJSON) {
+    public String makeJSONString(Map<String, List<String>> listJSON) {
         return makeJSONString(listJSON, "empty");
     }
 
@@ -242,19 +243,15 @@ public class ExtractorJava {
      * @param flag     - Optional flag with information on how to return non-existing values
      * @return a JSON string
      */
-    public String makeJSONString(List<Map<String, List<String>>> listJSON, String flag) {
-        ArrayList tupleList = new ArrayList<>();
+    public String makeJSONString(Map<String, List<String>> listJSON, String flag) {
 
-        for (Map<String, List<String>> pair : listJSON) {
-            Map.Entry<String, List<String>> entry = pair.entrySet().iterator().next();
+        //convert input map to a scala mutable map
+        scala.collection.mutable.Map mutableMap = JavaConverters.mapAsScalaMapConverter(listJSON).asScala();
 
-            Buffer listBuffer = JavaConverters.asScalaBuffer(entry.getValue());
-            tupleList.add(new Tuple2(entry.getKey(), listBuffer.toList()));
-        }
+        //Convert scala mutable map to scala immutable map by concatenating it with an empty immutable HashMap
+        scala.collection.immutable.Map immutableMap = new scala.collection.immutable.HashMap<>().$plus$plus(mutableMap);
 
-        Buffer tupleBuffer = JavaConverters.asScalaBuffer(tupleList);
-        scala.collection.immutable.List scalaList = tupleBuffer.toList();
-        return Extractor.makeJSONString(scalaList, flag);
+        return Extractor.makeJSONString(immutableMap, flag);
     }
 
     /**
@@ -274,19 +271,13 @@ public class ExtractorJava {
      * @param keywords - The java.util.Map to be converted
      * @return a scala.collection.immutable.List converted from the input parameter
      */
-    private scala.collection.immutable.List keywordsToScala(Map<String, POSTag> keywords) {
+    private scala.collection.immutable.Map keywordsToScala(Map<String, POSTag> keywords) {
 
-        //Mimic a scala List[(String, POSTag)]
-        ArrayList<Tuple2<String, POSTag>> keywordList = new ArrayList<>();
+        //Convert javaMap to a scala mutable map
+        scala.collection.mutable.Map mutableMap = JavaConverters.mapAsScalaMapConverter(keywords).asScala();
 
-        //Populate keywordList
-        for (Map.Entry<String, POSTag> entry : keywords.entrySet()) {
-            keywordList.add(new Tuple2<>(entry.getKey(), entry.getValue()));
-        }
-
-        //Convert java.util.ArrayList to scala.collection.mutable.Buffer, then to scala.collection.immutable.List
-        Buffer keywordsBuffer = JavaConverters.asScalaBuffer(keywordList);
-        return keywordsBuffer.toList();
+        //Convert scala mutable map to scala immutable map by concatenating it with an empty immutable HashMap
+        return new scala.collection.immutable.HashMap<>().$plus$plus(mutableMap);
     }
 
     /**
@@ -318,17 +309,8 @@ public class ExtractorJava {
      * @param result - the scala list to be converted
      * @return a java.util.List with all elements capable of being used in java
      */
-    private List<Map<String, List<String>>> scalaResultToJava(scala.collection.immutable.List result) {
-        List<Tuple2<String, scala.collection.immutable.List<String>>> javaResult = JavaConverters.seqAsJavaList(result);
-
-        //Convert List<Tuple2<String, List<String>>> to List<Map<String, List<String>>>
-        List returnList = new ArrayList();
-        for (Tuple2<String, scala.collection.immutable.List<String>> pair : javaResult) {
-            HashMap tupleMimic = new HashMap<>();
-            tupleMimic.put(pair._1(), JavaConverters.seqAsJavaList(pair._2()));
-            returnList.add(tupleMimic);
-        }
-        return returnList;
+    private Map<String, List<String>> scalaResultToJava(scala.collection.immutable.Map result) {
+        return JavaConverters.mapAsJavaMap(result);
     }
 
 }

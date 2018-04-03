@@ -39,16 +39,148 @@ resulting HTML file into the desired PDF file.
 
 ### Main Methods / Examples ###
 
-In this Module there is one single main method that can be called in four different ways. In this section 
+In this Module there are two main methods that can be called in four different ways each. In this section 
 there will be some example on how to call this method.
+
+* #### Generate a PDF from a Map ####
+
+Generating a PDF file from a Map is done by calling the **`convertObjtoPDF`** function, with the Map in the following 
+format **`Map[String,Any]`**. This can be done with one of four ways, by simply passing the Map, by passing the Map and
+a CSS file, by passing the Map and a CSS String, by passing the Map and a Generator.Config. The Generator.Config is a
+class implemented that contains some configurations for the PDF file, these are text color, font size, text alignment,
+font family and font weight. This function returns a Boolean saying if the conversion was successful and the output file
+shows in **`./`**.
+
+### Scala
+
+```scala
+    import generator.Generator.convertObjtoPDF
+    
+    val jsonMap = Map("name" -> "FirstName LastName", "age" -> 25)
+    val success = convertObjtoPDF(jsonMap)
+```
+
+```scala
+    import generator.Generator.convertObjtoPDF
+    import java.io.File
+    
+    val jsonMap = Map("name" -> "FirstName LastName", "age" -> 25)
+    val cssFile = new File("CSSFile.css")
+    val success = convertObjtoPDF(jsonMap, cssFile)
+```
+
+```scala
+    import generator.Generator.convertObjtoPDF
+   
+    val jsonMap = Map("name" -> "FirstName LastName", "age" -> 25)
+    val cssString = "p { color: green; }"
+    val success = convertObjtoPDF(jsonMap, cssString)
+```
+
+```scala
+    import generator.Generator.convertObjtoPDF
+    import generator.Config
+    
+    val jsonMap = Map("name" -> "FirstName LastName", "age" -> 25)
+    val config = Config("green",12,"center","Arial","bold")
+    val success = convertObjtoPDF(jsonMap,config)
+```
+
+### Java
+
+```java
+    import generator.GeneratorJava;
+    import java.util.ArrayList;
+    import java.util.HashMap;
+    import java.util.List;
+
+    
+    public class Example {
+         public static void main(String[] args) {
+             GeneratorJava gj = new GeneratorJava();
+             HashMap<String,List<String>> jsonMap = new HashMap<>();
+             ArrayList<String> lst = new ArrayList<>();
+             lst.add("25");
+             jsonMap.put("FistName LastName",lst);
+             boolean success = gj.convertObjtoPDF(jsonMap);
+         }
+    }
+```
+
+```java
+    import generator.GeneratorJava;
+    import java.util.ArrayList;
+    import java.util.HashMap;
+    import java.util.List;
+    import java.io.File;
+    
+    public class Example {
+         public static void main(String[] args) {
+             GeneratorJava gj = new GeneratorJava();
+             HashMap<String,List<String>> jsonMap = new HashMap<>();
+             ArrayList<String> lst = new ArrayList<>();
+             lst.add("25");
+             jsonMap.put("FistName LastName",lst);
+             File cssFile = new File("CSSFile.css");
+             boolean success = gj.convertObjtoPDF(jsonMap, cssFile);
+         }
+    }
+```
+
+```java
+    import generator.GeneratorJava;
+    import java.util.ArrayList;
+    import java.util.HashMap;
+    import java.util.List;
+    
+    public class Example {
+         public static void main(String[] args) {
+             GeneratorJava gj = new GeneratorJava();
+             HashMap<String,List<String>> jsonMap = new HashMap<>();
+             ArrayList<String> lst = new ArrayList<>();
+             lst.add("25");
+             jsonMap.put("FistName LastName",lst);
+             String cssString = "p { color: green; }";
+             boolean success = gj.convertObjtoPDF(jsonMap, cssString);
+         }
+    }
+```
+
+```java
+    import generator.GeneratorJava;
+    import java.util.ArrayList;
+    import java.util.HashMap;
+    import java.util.List;
+    import generator.Config;
+    
+    public class Example {
+         public static void main(String[] args) {
+             GeneratorJava gj = new GeneratorJava();
+             HashMap<String,List<String>> jsonMap = new HashMap<>();
+             ArrayList<String> lst = new ArrayList<>();
+             lst.add("25");
+             jsonMap.put("FistName LastName",lst);
+             Config config = new Config("green", 12, "center", "Arial", "bold");
+             /*
+                Note all parameters in Config class in java's interface must be initialized.
+                You achieve that by initializing all parameters as empty String (if you don't want to specify a value for them)
+                except fontSize which you initialize it as -1.0 if you don't want to specify a value for it.
+                
+                If you only want to use a green color and leave all rest by default, you'd do:
+                Config config = new Config("green", -1.0, "", "", "");
+              */
+             boolean success = gj.convertObjtoPDF(jsonMap, cssString);
+         }
+    }
+```
 
 * #### Generate a PDF from a JSON ####
 
-To generate a PDF file from a JSON String you need to call the **`convertJSONtoPDF`** function. This function can
-be called by simply passing the JSON String, by passing the JSON String and a CSS file, by passing the JSON 
-String, and a CSS String, by passing the JSON String and a Generator.Config. The Generator.Config is a class implemented that 
-contains some configurations for the PDF file, these are text color, font size, text alignment, font family
-and font weight. This function returns a Boolean saying if the conversion was successful and the output file 
+To generate a PDF file from a JSON String you need to call the **`convertJSONtoPDF`** function. Similarly to the 
+previous function, this can be done by simply passing the JSON String, by passing the JSON String and a CSS file, 
+by passing the JSON String and a CSS String, by passing the JSON String and a Generator.Config. The Generator.Config is
+a class implemented that contains some configurations for the PDF file, these are text color, font size, text alignment,
+font family and font weight. This function returns a Boolean saying if the conversion was successful and the output file 
 shows in **`./`**.
 
 ### Scala

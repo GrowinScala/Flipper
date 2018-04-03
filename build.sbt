@@ -1,5 +1,3 @@
-import sbt.Keys.fork
-
 name := "Flipper"
 
 val basicSettings = Seq(
@@ -22,8 +20,6 @@ val basicSettings = Seq(
   libraryDependencies += "net.sf.cssbox" % "pdf2dom" % "1.7",
   libraryDependencies += "com.sksamuel.scrimage" %% "scrimage-core" % "3.0.0-alpha4",
   libraryDependencies += "com.sksamuel.scrimage" %% "scrimage-filters" % "3.0.0-alpha4",
-  fork := true,
-  baseDirectory in test := file("Flipper")
 )
 
 lazy val root = project.in(file(".")).aggregate(reader, generator, converter).settings(basicSettings)

@@ -132,7 +132,7 @@ You can now implement the following snippet:
     
     val file = new File("./path/to/pdf/document")
     val extractedText = readPDF(file)
-    val keywords = List( ("name", POSTag.N), ("age", POSTag.NUM) )
+    val keywords = List( ("name", POSTag.PN), ("age", POSTag.NUM) )
     
     val jsonObjs : List[String] = getJSONObjects(extractedText, keywords)
     
@@ -158,8 +158,8 @@ You can now implement the following snippet:
             String extractedText = ex.readPDF(file);
             
             HashMap keywords = new HashMap<>();
-            keywords.put("name", POSTag.N);
-            keywords.put("age", POSTag.NUM);
+            keywords.put("name", POSTag.PN());
+            keywords.put("age", POSTag.NUM());
             
             List jsonOBjs = ex.getJSONObjects(text, keywords);
             
@@ -197,7 +197,7 @@ with that possibility through **`getAllMatchedValues`**.
     
     val file = new File("./path/to/pdf/document")
     val extractedText = readPDF(file)
-    val keywords = List( ("name", POSTag.N), ("age", POSTag.NUM) )
+    val keywords = List( ("name", POSTag.PN), ("age", POSTag.NUM) )
     
     val matchedValues = getAllMatchedValues(extractedText, keywords) 
     //matchedValues -> List(
@@ -222,8 +222,8 @@ with that possibility through **`getAllMatchedValues`**.
             String extractedText = ex.readPDF(file);
             
             HashMap keywords = new HashMap<>();
-            keywords.put("name", POSTag.N);
-            keywords.put("age", POSTag.NUM);
+            keywords.put("name", POSTag.PN());
+            keywords.put("age", POSTag.NUM());
             
             List matchedValues = ex.getAllMatchedValues(text, keywords);
             
@@ -248,7 +248,7 @@ This method works exactly like the one above but instead of returning every valu
     
     val file = new File("./path/to/pdf/document")
     val extractedText = readPDF(file)
-    val keywords = List( ("name", POSTag.N), ("age", POSTag.NUM) )
+    val keywords = List( ("name", POSTag.PN), ("age", POSTag.NUM) )
     
     val matchedValues = getSingleMatchedValue(extractedText, keywords) 
     //matchedValues -> List(
@@ -273,8 +273,8 @@ This method works exactly like the one above but instead of returning every valu
             String extractedText = ex.readPDF(file);
             
             HashMap keywords = new HashMap<>();
-            keywords.put("name", POSTag.N);
-            keywords.put("age", POSTag.NUM);
+            keywords.put("name", POSTag.PN());
+            keywords.put("age", POSTag.NUM());
             
             List matchedValues = ex.getSingleMatchedValue(text, keywords);
             
@@ -300,7 +300,7 @@ the given keywords
     
     val filePath = new File("./path/to/pdf/document")
     val extractedText = readPDF(filePath)
-    val keywords = List( ("name", POSTag.N), ("age", POSTag.NUM) )
+    val keywords = List( ("name", POSTag.PN), ("age", POSTag.NUM) )
     
     val matchedValues = getAllObjects(extractedText, keywords) 
     //matchedValues -> List(
@@ -325,8 +325,8 @@ the given keywords
             String extractedText = ex.readPDF(file);
             
             HashMap keywords = new HashMap<>();
-            keywords.put("name", POSTag.N);
-            keywords.put("age", POSTag.NUM);
+            keywords.put("name", POSTag.PN());
+            keywords.put("age", POSTag.NUM());
             
             List matchedValues = ex.getAllObjects(text, keywords);
             

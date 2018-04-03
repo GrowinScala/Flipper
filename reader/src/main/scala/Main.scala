@@ -9,9 +9,9 @@ object Main {
   def main(args: Array[String]): Unit = {
     val filepath = new File("./reader/src/main/resources/MegaTester.pdf")
     val text = readPDF(filepath)
-    val l = getJSONObjects(text, List(("name", POSTag.PN)))
+    val l = getJSONObjects(text, Map("name" -> POSTag.PN, "age" -> POSTag.NUM))
 
-      println (l)
+    println(l)
     //    println(text)
     //    getJSONObjects(text, List(("name", POSTag.PN), ("weight", POSTag.NUM)), "null").foreach(println)
     //    val objs = getAllObjects(text, List(("name", POSTag.PN), ("weight", POSTag.NUM)))
