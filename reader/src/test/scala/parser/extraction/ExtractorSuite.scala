@@ -13,7 +13,7 @@ class ExtractorSuite extends FunSuite {
 
   val file = new File("./reader/src/main/resources/test.pdf")
   val text: Option[String] = readPDF(file)
-/*
+
   /**
     * Tests if the result of calling getAllMatchedValues is correct or not
     */
@@ -126,7 +126,7 @@ class ExtractorSuite extends FunSuite {
   test("Make JSON string with an empty list") {
     assert(makeJSONString(Map()) == "{}")
   }
-*/
+
   /**
     * Tests if the matched values with the given keywords generates the correct JSON strings for all the expected objects
     */
@@ -137,13 +137,13 @@ class ExtractorSuite extends FunSuite {
       "{\"name\" : \"Albertina\", \"age\" : \"\"}",
       "{\"name\" : \"Justino Alberto\", \"age\" : \"\"}"
     )
-//    val matchedValues = getAllObjects(text, Map("name" -> POSTag.PN, "age" -> POSTag.NUM))
-//    if (matchedValues.isEmpty) fail("getAllObjects returned an empty List")
-//    else matchedValues.map(mp => makeJSONString(mp)) should equal(expected)
+    //    val matchedValues = getAllObjects(text, Map("name" -> POSTag.PN, "age" -> POSTag.NUM))
+    //    if (matchedValues.isEmpty) fail("getAllObjects returned an empty List")
+    //    else matchedValues.map(mp => makeJSONString(mp)) should equal(expected)
     val keys = Map("name" -> POSTag.PN, "age" -> POSTag.NUM)
     val x = getJSONObjects(text, Map("name" -> POSTag.PN, "age" -> POSTag.NUM))
     println(x.grouped(keys.size).toList)
 
-//    getJSONObjects(text, Map("name" -> POSTag.PN, "age" -> POSTag.NUM)) should equal(expected)
+    //    getJSONObjects(text, Map("name" -> POSTag.PN, "age" -> POSTag.NUM)) should equal(expected)
   }
 }
