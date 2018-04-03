@@ -6,12 +6,14 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5115832d-4669-4625-b348-c310af38a585" name="Default" comment="">
+    <list default="true" id="5115832d-4669-4625-b348-c310af38a585" name="Default" comment="Updated Generator.scala, GeneratorJava.java and GeneratorSuite.scala, updated generator's readme">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/Flipper_jar.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/reader/src/main/java/parser/extraction/ExtractorJava.java" afterPath="$PROJECT_DIR$/reader/src/main/java/parser/extraction/ExtractorJava.java" />
-      <change beforePath="$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala" afterPath="$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/extraction/Extractor$.class" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/extraction/Extractor$.class" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/extraction/Extractor.class" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/extraction/Extractor.class" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/classes/Main$.class" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/classes/Main$.class" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/classes/generator/Generator$.class" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/classes/generator/Generator$.class" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/classes/generator/Generator.class" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/classes/generator/Generator.class" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/classes/generator/GeneratorJava.class" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/classes/generator/GeneratorJava.class" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/test-classes/generator/GeneratorSuite.class" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/test-classes/generator/GeneratorSuite.class" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -39,37 +41,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Extractor.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Extractor.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="126" column="6" lean-forward="false" selection-start-line="126" selection-start-column="6" selection-end-line="126" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExtractorJava.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/reader/src/main/java/parser/extraction/ExtractorJava.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1816">
-              <caret line="133" column="43" lean-forward="false" selection-start-line="133" selection-start-column="43" selection-end-line="133" selection-end-column="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#661#662#0" expanded="true" />
-                <element signature="e#703#704#0" expanded="true" />
-                <element signature="e#12705#12706#0" expanded="true" />
-                <element signature="e#12761#12762#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reader/src/main/scala/Main.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+            <state relative-caret-position="535">
+              <caret line="137" column="11" lean-forward="true" selection-start-line="137" selection-start-column="11" selection-end-line="137" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -110,6 +86,8 @@
       <find>List</find>
       <find>as</find>
       <find>makeJSOn</find>
+      <find>java.t</find>
+      <find>Map()</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -129,9 +107,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/reader/src/main/scala/Extraction/Extractor.scala" />
-        <option value="$PROJECT_DIR$/reader/src/main/scala/reader/Extraction/FileHandler.scala" />
-        <option value="$PROJECT_DIR$/reader/src/main/scala/reader/utils/POSTag.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/reader/utils/OpenNLP.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/reader/utils/ImageProcessing.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/reader/utils/SpellChecker.scala" />
@@ -165,21 +140,24 @@
         <option value="$PROJECT_DIR$/generator/src/main/java/GenMain.java" />
         <option value="$PROJECT_DIR$/converter/src/main/java/ConMain.java" />
         <option value="$PROJECT_DIR$/converter/src/main/java/parser/conversion/ConverterJava.java" />
-        <option value="$PROJECT_DIR$/generator/src/main/java/generator/GeneratorJava.java" />
         <option value="$PROJECT_DIR$/reader/src/main/java/MainJava.java" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/parser/utils/ImageProcessing.scala" />
         <option value="$PROJECT_DIR$/converter/README.md" />
-        <option value="$PROJECT_DIR$/generator/README.md" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/converter/src/main/scala/parser/conversion/Converter.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/parser/utils/OpenNLP.scala" />
-        <option value="$PROJECT_DIR$/reader/README.md" />
-        <option value="$PROJECT_DIR$/generator/src/main/scala/generator/Generator.scala" />
         <option value="$PROJECT_DIR$/generator/src/main/scala/Main.scala" />
-        <option value="$PROJECT_DIR$/reader/src/main/scala/Main.scala" />
         <option value="$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/java/parser/extraction/ExtractorJava.java" />
+        <option value="$PROJECT_DIR$/reader/src/main/scala/Main.scala" />
+        <option value="$PROJECT_DIR$/reader/README.md" />
+        <option value="$PROJECT_DIR$/reader/src/main/java/readerJavaMain.java" />
+        <option value="$PROJECT_DIR$/generator/src/main/java/generator/GeneratorJava.java" />
+        <option value="$PROJECT_DIR$/generator/README.md" />
+        <option value="$PROJECT_DIR$/generator/src/main/scala/generator/Generator.scala" />
+        <option value="$PROJECT_DIR$/generator/src/test/scala/generator/GeneratorSuite.scala" />
+        <option value="$PROJECT_DIR$/generator/src/main/java/MainJava.java" />
       </list>
     </option>
   </component>
@@ -204,6 +182,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -214,68 +194,59 @@
             <path>
               <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
               <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
+              <item name="reader" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
               <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
+              <item name="reader" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
               <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
+              <item name="reader" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
               <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
+              <item name="reader" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="reader" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
               <item name="Flipper" type="462c0819:PsiDirectoryNode" />
               <item name="reader" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="parser" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
               <item name="Flipper" type="462c0819:PsiDirectoryNode" />
               <item name="reader" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="parser" type="462c0819:PsiDirectoryNode" />
+              <item name="extraction" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="AndroidView" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../scalaTest" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../testJava" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -305,12 +276,9 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/generator/README.md</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/generator/src/main/java/generator/GeneratorJava.java</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/generator/src/main/scala/Main.scala</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/generator/src/main/scala/generator/Generator.scala</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/generator/target/scala-2.12/classes/Main$.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/generator/target/scala-2.12/classes/generator/GeneratorJava.class</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -318,7 +286,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -427,20 +394,6 @@
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
     </configuration>
-    <configuration name="GenMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="GenMain" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="generator" />
-      <envs />
-    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -455,7 +408,7 @@
       <module name="reader" />
       <envs />
     </configuration>
-    <configuration name="MainJava" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="MainJava (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="MainJava" />
       <option name="VM_PARAMETERS" />
@@ -466,7 +419,7 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="reader" />
+      <module name="generator" />
       <envs />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -481,6 +434,20 @@
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
+      <envs />
+    </configuration>
+    <configuration name="readerJavaMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="readerJavaMain" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="reader" />
       <envs />
     </configuration>
     <configuration name="ExtractorSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -533,18 +500,18 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="ImageProcessingSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GeneratorSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="parser.utils.*" />
+          <option name="PATTERN" value="generator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <module name="reader" />
+      <module name="generator" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="parser.utils" />
-      <option name="MAIN_CLASS_NAME" value="parser.utils.ImageProcessingSuite" />
+      <option name="PACKAGE_NAME" value="generator" />
+      <option name="MAIN_CLASS_NAME" value="generator.GeneratorSuite" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -619,19 +586,19 @@
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.ExtractorSuite" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.ImageProcessingSuite" />
-      <item index="2" class="java.lang.String" itemvalue="Application.MainJava" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="4" class="java.lang.String" itemvalue="Application.GenMain" />
+      <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="1" class="java.lang.String" itemvalue="Application.readerJavaMain" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ExtractorSuite" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.GeneratorSuite" />
+      <item index="4" class="java.lang.String" itemvalue="Application.MainJava (1)" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.ExtractorSuite" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="2" class="java.lang.String" itemvalue="Application.MainJava" />
-        <item index="3" class="java.lang.String" itemvalue="Application.GenMain" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ImageProcessingSuite" />
+        <item index="1" class="java.lang.String" itemvalue="Application.MainJava (1)" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.GeneratorSuite" />
+        <item index="3" class="java.lang.String" itemvalue="Application.readerJavaMain" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -725,27 +692,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1522055766473</updated>
-    </task>
-    <task id="LOCAL-00001" summary="fixed build.sbt bug">
-      <created>1522056342597</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1522056342597</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Improved documentation">
-      <created>1522060969932</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1522060969932</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Refactoring try-catch blocks and file handling">
-      <created>1522061887768</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1522061887768</updated>
     </task>
     <task id="LOCAL-00004" summary="Refactoring ImageProcessing.scala try-catches">
       <created>1522062841910</created>
@@ -1069,22 +1015,31 @@
       <option name="project" value="LOCAL" />
       <updated>1522747021081</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Fixed reader's Java interface entrypoint">
+      <created>1522748709276</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1522748709276</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Updated reader's README to newest code-base changes">
+      <created>1522751135419</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1522751135419</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Updated Generator.scala, GeneratorJava.java and GeneratorSuite.scala, updated generator's readme">
+      <created>1522753195489</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1522753195489</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ExtractorSuite - 2018.04.02 at 17h 43m 46s.xml">
-      <configuration name="ExtractorSuite" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ExtractorSuite - 2018.04.02 at 17h 53m 49s.xml">
-      <configuration name="ExtractorSuite" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ExtractorSuite - 2018.04.02 at 17h 55m 50s.xml">
-      <configuration name="ExtractorSuite" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ExtractorSuite - 2018.04.02 at 17h 56m 20s.xml">
-      <configuration name="ExtractorSuite" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ExtractorSuite - 2018.04.02 at 17h 56m 39s.xml">
       <configuration name="ExtractorSuite" configurationId="JUnit" />
     </history-entry>
@@ -1099,6 +1054,18 @@
     </history-entry>
     <history-entry file="ExtractorSuite - 2018.04.03 at 10h 17m 52s.xml">
       <configuration name="ExtractorSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ExtractorSuite - 2018.04.03 at 12h 00m 43s.xml">
+      <configuration name="ExtractorSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GeneratorSuite - 2018.04.03 at 11h 49m 44s.xml">
+      <configuration name="GeneratorSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GeneratorSuite - 2018.04.03 at 11h 52m 14s.xml">
+      <configuration name="GeneratorSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GeneratorSuite - 2018.04.03 at 11h 57m 24s.xml">
+      <configuration name="GeneratorSuite" configurationId="JUnit" />
     </history-entry>
     <history-entry file="OpenNLPSuite - 2018.03.27 at 13h 58m 13s.xml">
       <configuration name="OpenNLPSuite" configurationId="JUnit" />
@@ -1123,7 +1090,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19375" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19375" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="sbt-shell-toolwindow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2598091" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1202,9 +1169,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactored OpenNLPSuite.scala to remove NullPointerException tests" />
-    <MESSAGE value="Code refactored to hide file handling and try-catch blocks" />
-    <MESSAGE value="Implemented generator/FileHandlerSuite.scala" />
     <MESSAGE value="Hide non entry point classes in reader module" />
     <MESSAGE value="Hide non entry API classes from user , modified project structure" />
     <MESSAGE value="Hide non entry API classes from user , modified project structure and readmes" />
@@ -1227,15 +1191,16 @@
     <MESSAGE value="Updated reader/README.md" />
     <MESSAGE value="fixed getJSONObjects extra empty object bug" />
     <MESSAGE value="fixed getJSONObjects and changed everything from List[(String , POSTag)] to Map[String, POSTag]" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed getJSONObjects and changed everything from List[(String , POSTag)] to Map[String, POSTag]" />
+    <MESSAGE value="Fixed reader's Java interface entrypoint" />
+    <MESSAGE value="Updated reader's README to newest code-base changes" />
+    <MESSAGE value="Updated Generator.scala, GeneratorJava.java and GeneratorSuite.scala, updated generator's readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Generator.scala, GeneratorJava.java and GeneratorSuite.scala, updated generator's readme" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/converter/src/test/scala/ReaderConverter/Converter/ConverterSuite.scala" />
-    <entry file="file://$PROJECT_DIR$/converter/src/main/scala/ReaderConverter/Converter/Converter.scala" />
     <entry file="file://$PROJECT_DIR$/converter/src/main/scala/ReaderConverter/conversion/FileType$.java" />
     <entry file="file://$PROJECT_DIR$/converter/src/main/scala/ReaderConverter/Converter/FileType.scala" />
     <entry file="file://$PROJECT_DIR$/converter/src/main/scala/Main.scala">
@@ -1382,13 +1347,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generator/src/main/java/generator/GeneratorJava.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/converter/src/test/scala/parser/conversion/ConverterSuite.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -1403,38 +1361,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/GeneratorSuite.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="19" column="14" lean-forward="false" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/reader/src/main/java/MainJava.java" />
     <entry file="jar://$USER_HOME$/.ivy2/cache/net.sourceforge.tess4j/tess4j/srcs/tess4j-3.4.4-sources.jar!/net/sourceforge/tess4j/Tesseract.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="226" column="19" lean-forward="true" selection-start-line="226" selection-start-column="19" selection-end-line="226" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/converter/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="189">
-            <caret line="9" column="53" lean-forward="false" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="189">
-            <caret line="9" column="53" lean-forward="false" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -1469,24 +1400,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reader/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="484">
-            <caret line="328" column="44" lean-forward="false" selection-start-line="328" selection-start-column="44" selection-end-line="328" selection-end-column="44" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/converter/src/main/scala/parser/conversion/Converter.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3402">
-          <caret line="172" column="3" lean-forward="false" selection-start-line="172" selection-start-column="3" selection-end-line="172" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.12.4-sources.jar!/scala/Enumeration.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -1498,13 +1411,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/Generator.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="160" column="129" lean-forward="false" selection-start-line="160" selection-start-column="129" selection-end-line="160" selection-end-column="129" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1512,6 +1419,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1523,41 +1431,175 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala">
+    <entry file="file://$PROJECT_DIR$/reader/src/main/java/parser/extraction/ExtractorJava.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1785">
-          <caret line="11" column="39" lean-forward="false" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+        <state relative-caret-position="231">
+          <caret line="247" column="8" lean-forward="false" selection-start-line="247" selection-start-column="8" selection-end-line="251" selection-end-column="120" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#661#662#0" expanded="false" />
+            <element signature="e#703#704#0" expanded="false" />
+            <element signature="e#12705#12706#0" expanded="false" />
+            <element signature="e#12761#12762#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="5586">
+            <caret line="291" column="19" lean-forward="false" selection-start-line="291" selection-start-column="19" selection-end-line="291" selection-end-column="19" />
+            <folding>
+              <marker date="1522750982520" expanded="false" signature="2978:3031" ph="..." />
+              <marker date="1522750982520" expanded="false" signature="3159:3216" ph="..." />
+              <marker date="1522750982520" expanded="true" signature="3297:3474" ph="{...}" />
+              <marker date="1522750982520" expanded="true" signature="4889:4997" ph="..." />
+              <marker date="1522750982520" expanded="true" signature="5243:5409" ph="/.../" />
+              <marker date="1522750982520" expanded="false" signature="5444:5590" ph="..." />
+              <marker date="1522750982520" expanded="true" signature="5671:6297" ph="{...}" />
+              <marker date="1522750982520" expanded="true" signature="6094:6286" ph="//..." />
+              <marker date="1522750982520" expanded="false" signature="7248:7361" ph="..." />
+              <marker date="1522750982520" expanded="true" signature="7599:7772" ph="/.../" />
+              <marker date="1522750982520" expanded="true" signature="7807:7948" ph="..." />
+              <marker date="1522750982520" expanded="true" signature="7807:7952" ph="..." />
+              <marker date="1522750982520" expanded="true" signature="8033:8682" ph="{...}" />
+              <marker date="1522750982520" expanded="true" signature="8474:8671" ph="//..." />
+              <marker date="1522750982520" expanded="false" signature="8905:9020" ph="..." />
+              <marker date="1522750982520" expanded="true" signature="9259:9415" ph="/.../" />
+              <marker date="1522750982520" expanded="true" signature="9450:9595" ph="..." />
+              <marker date="1522750982520" expanded="true" signature="9676:10310" ph="{...}" />
+              <marker date="1522750982520" expanded="true" signature="10119:10299" ph="//..." />
+              <marker date="1522750982520" expanded="false" signature="10544:10651" ph="..." />
+              <marker date="1522750982520" expanded="true" signature="10891:11107" ph="/.../" />
+              <marker date="1522750982520" expanded="false" signature="11142:11288" ph="..." />
+              <marker date="1522750982520" expanded="true" signature="11369:12056" ph="{...}" />
+              <marker date="1522750982520" expanded="true" signature="11805:12045" ph="//..." />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/main/java/readerJavaMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/converter/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-1360">
+            <caret line="9" column="53" lean-forward="false" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+            <folding>
+              <marker date="1522744445163" expanded="true" signature="2221:2312" ph="..." />
+              <marker date="1522744445163" expanded="true" signature="2456:2552" ph="..." />
+              <marker date="1522744445163" expanded="true" signature="2633:2829" ph="{...}" />
+              <marker date="1522744445163" expanded="true" signature="3248:3302" ph="..." />
+              <marker date="1522744445163" expanded="true" signature="3441:3539" ph="..." />
+              <marker date="1522744445163" expanded="true" signature="3623:3807" ph="{...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/reader/src/main/scala/Main.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
-          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+          <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/src/main/java/MainJava.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="89">
+            <caret line="248" column="7" lean-forward="true" selection-start-line="248" selection-start-column="7" selection-end-line="248" selection-end-column="7" />
+            <folding>
+              <marker date="1522752532723" expanded="true" signature="2296:2355" ph="..." />
+              <marker date="1522752532723" expanded="true" signature="2775:2838" ph="..." />
+              <marker date="1522752532723" expanded="true" signature="3055:3168" ph="..." />
+              <marker date="1522752532723" expanded="true" signature="3250:3579" ph="{...}" />
+              <marker date="1522752532723" expanded="true" signature="3610:3748" ph="..." />
+              <marker date="1522752532723" expanded="true" signature="3829:4220" ph="{...}" />
+              <marker date="1522752532723" expanded="true" signature="4251:4364" ph="..." />
+              <marker date="1522752532723" expanded="true" signature="4445:4840" ph="{...}" />
+              <marker date="1522752532723" expanded="true" signature="4871:5013" ph="..." />
+              <marker date="1522752532723" expanded="true" signature="5094:6061" ph="{...}" />
+              <marker date="1522752532723" expanded="true" signature="6931:6991" ph="..." />
+              <marker date="1522752532723" expanded="true" signature="7404:7468" ph="..." />
+              <marker date="1522752532723" expanded="true" signature="7786:7988" ph="{...}" />
+              <marker date="1522752532723" expanded="true" signature="8019:8068" ph="..." />
+              <marker date="1522752532723" expanded="true" signature="8149:8413" ph="{...}" />
+              <marker date="1522752532723" expanded="true" signature="8549:8817" ph="{...}" />
+              <marker date="1522752532723" expanded="true" signature="8848:8901" ph="..." />
+              <marker date="1522752532723" expanded="true" signature="8982:9822" ph="{...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/src/main/java/generator/GeneratorJava.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/Generator.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1649">
+          <caret line="230" column="0" lean-forward="false" selection-start-line="230" selection-start-column="0" selection-end-line="230" selection-end-column="0" />
+          <folding>
+            <element signature="e#19#35#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/GeneratorSuite.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="137" column="36" lean-forward="false" selection-start-line="137" selection-start-column="36" selection-end-line="137" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/converter/src/main/scala/parser/conversion/Converter.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="882">
+          <caret line="73" column="8" lean-forward="true" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="126" column="6" lean-forward="false" selection-start-line="126" selection-start-column="6" selection-end-line="126" selection-end-column="6" />
+        <state relative-caret-position="535">
+          <caret line="137" column="11" lean-forward="true" selection-start-line="137" selection-start-column="11" selection-end-line="137" selection-end-column="11" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/main/java/parser/extraction/ExtractorJava.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1816">
-          <caret line="133" column="43" lean-forward="false" selection-start-line="133" selection-start-column="43" selection-end-line="133" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#661#662#0" expanded="true" />
-            <element signature="e#703#704#0" expanded="true" />
-            <element signature="e#12705#12706#0" expanded="true" />
-            <element signature="e#12761#12762#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

@@ -44,7 +44,7 @@ there will be some example on how to call this method.
 
 * #### Generate a PDF from a Map ####
 
-Generating a PDF file from a Map is done by calling the **`convertObjtoPDF`** function, with the Map in the following 
+Generating a PDF file from a Map is done by calling the **`convertMapToPDF`** function, with the Map in the following 
 format **`Map[String,Any]`**. This can be done with one of four ways, by simply passing the Map, by passing the Map and
 a CSS file, by passing the Map and a CSS String, by passing the Map and a Generator.Config. The Generator.Config is a
 class implemented that contains some configurations for the PDF file, these are text color, font size, text alignment,
@@ -54,36 +54,36 @@ shows in **`./`**.
 ### Scala
 
 ```scala
-    import generator.Generator.convertObjtoPDF
+    import generator.Generator.convertMapToPDF
     
     val jsonMap = Map("name" -> "FirstName LastName", "age" -> 25)
-    val success = convertObjtoPDF(jsonMap)
+    val success = convertMapToPDF(jsonMap)
 ```
 
 ```scala
-    import generator.Generator.convertObjtoPDF
+    import generator.Generator.convertMapToPDF
     import java.io.File
     
     val jsonMap = Map("name" -> "FirstName LastName", "age" -> 25)
     val cssFile = new File("CSSFile.css")
-    val success = convertObjtoPDF(jsonMap, cssFile)
+    val success = convertMapToPDF(jsonMap, cssFile)
 ```
 
 ```scala
-    import generator.Generator.convertObjtoPDF
+    import generator.Generator.convertMapToPDF
    
     val jsonMap = Map("name" -> "FirstName LastName", "age" -> 25)
     val cssString = "p { color: green; }"
-    val success = convertObjtoPDF(jsonMap, cssString)
+    val success = convertMapToPDF(jsonMap, cssString)
 ```
 
 ```scala
-    import generator.Generator.convertObjtoPDF
+    import generator.Generator.convertMapToPDF
     import generator.Config
     
     val jsonMap = Map("name" -> "FirstName LastName", "age" -> 25)
     val config = Config("green",12,"center","Arial","bold")
-    val success = convertObjtoPDF(jsonMap,config)
+    val success = convertMapToPDF(jsonMap,config)
 ```
 
 ### Java
@@ -102,7 +102,7 @@ shows in **`./`**.
              ArrayList<String> lst = new ArrayList<>();
              lst.add("25");
              jsonMap.put("FistName LastName",lst);
-             boolean success = gj.convertObjtoPDF(jsonMap);
+             boolean success = gj.convertMapToPDF(jsonMap);
          }
     }
 ```
@@ -122,7 +122,7 @@ shows in **`./`**.
              lst.add("25");
              jsonMap.put("FistName LastName",lst);
              File cssFile = new File("CSSFile.css");
-             boolean success = gj.convertObjtoPDF(jsonMap, cssFile);
+             boolean success = gj.convertMapToPDF(jsonMap, cssFile);
          }
     }
 ```
@@ -141,7 +141,7 @@ shows in **`./`**.
              lst.add("25");
              jsonMap.put("FistName LastName",lst);
              String cssString = "p { color: green; }";
-             boolean success = gj.convertObjtoPDF(jsonMap, cssString);
+             boolean success = gj.convertMapToPDF(jsonMap, cssString);
          }
     }
 ```
@@ -169,7 +169,7 @@ shows in **`./`**.
                 If you only want to use a green color and leave all rest by default, you'd do:
                 Config config = new Config("green", -1.0, "", "", "");
               */
-             boolean success = gj.convertObjtoPDF(jsonMap, cssString);
+             boolean success = gj.convertMapToPDF(jsonMap, cssString);
          }
     }
 ```
