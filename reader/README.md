@@ -96,14 +96,14 @@ in case the file does not exist.
 * #### Parsing PDF and returning a List of JSON Objects #### 
 
 The most straight-forward way to use this module's API is to call `getJSONObjects`. You need
-to supply this method with the **text** you want to extract data from and a **List of keywords** for which
+to supply this method with the **text** you want to extract data from and a **Map of keywords** for which
 you want to obtain values.
 
 <br/>
 
-The keywords list is a pair of Keywords and a POSTag.Value, this is because Flipper is using a 
+The keywords Map is a pair of Keywords and a POSTag.Value, this is because Flipper is using a 
 Natural Language Processor (**_Apache's OpenNLP_**) for improving the odds of finding a useful 
-value for a given keyword. This POS tag simply tells Flipper what kinda of value you want to obtain
+value for a given keyword. This POS tag simply tells Flipper what kind of value you want to obtain
 for a given keyword, the possible POSTags can be found bellow:
 
 
@@ -132,7 +132,7 @@ You can now implement the following snippet:
     
     val file = new File("./path/to/pdf/document")
     val extractedText = readPDF(file)
-    val keywords = List( ("name", POSTag.PN), ("age", POSTag.NUM) )
+    val keywords = Map("name"-> POSTag.PN, "age" -> POSTag.NUM)
     
     val jsonObjs : List[String] = getJSONObjects(extractedText, keywords)
     
@@ -180,12 +180,12 @@ Possibilities:
 * "remove" &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - `{ "name" : "John Doe" }`
 
 This would return you a List of JSON objects in the form of Strings. Flipper also provides
-a more in-depth API in case you want a List of keywords and the values found for them instead of a JSON object
+a more in-depth API in case you want a Map of keywords and the values found for them instead of a JSON object
 which we will see next.
 
-* #### Getting a List of keywords and all the values found for them ####
+* #### Getting a Map of keywords and all the values found for them ####
 
-In case you want to obtain a List Keywords with all the values found for that keyword, Flipper provides you
+In case you want to obtain a Map Keywords with all the values found for that keyword, Flipper provides you
 with that possibility through **`getAllMatchedValues`**.
 
 ### Scala
@@ -197,13 +197,13 @@ with that possibility through **`getAllMatchedValues`**.
     
     val file = new File("./path/to/pdf/document")
     val extractedText = readPDF(file)
-    val keywords = List( ("name", POSTag.PN), ("age", POSTag.NUM) )
+    val keywords = Map("name" -> POSTag.PN, "age" -> POSTag.NUM)
     
     val matchedValues = getAllMatchedValues(extractedText, keywords) 
-    //matchedValues -> List(
-    //                      ("name", List("John Doe", "Jane Doe")),
-    //                      ("age", List("21", "22")
-    //                     )
+    //matchedValues -> Map(
+    //                      "name" -> List("John Doe", "Jane Doe"),
+    //                      "age" -> List("21", "22")
+    //                    )
 ```
 
 ### Java
@@ -213,7 +213,7 @@ with that possibility through **`getAllMatchedValues`**.
     import java.io.File;
     import parser.utils.POSTag;
     import java.util.HashMap;
-    import java.util.List;
+    import java.util.Map;
     
     public class Example {
          public static void main(String[] args) {
@@ -225,12 +225,12 @@ with that possibility through **`getAllMatchedValues`**.
             keywords.put("name", POSTag.PN());
             keywords.put("age", POSTag.NUM());
             
-            List matchedValues = ex.getAllMatchedValues(text, keywords);
+            Map matchedValues = ex.getAllMatchedValues(extractedText, keywords);
             
-            //matchedValues -> List(
-            //                      Map("name" -> List("John Doe", "Jane Doe")),
-            //                      Map("age" -> List("21", "22"))
-            //                     )
+            //matchedValues -> Map(
+            //                      "name" -> List("John Doe", "Jane Doe"),
+            //                      "age" -> List("21", "22")
+            //                    )
          }
     }
 ```
@@ -248,12 +248,12 @@ This method works exactly like the one above but instead of returning every valu
     
     val file = new File("./path/to/pdf/document")
     val extractedText = readPDF(file)
-    val keywords = List( ("name", POSTag.PN), ("age", POSTag.NUM) )
+    val keywords = Map("name"-> POSTag.PN, "age" -> POSTag.NUM)
     
     val matchedValues = getSingleMatchedValue(extractedText, keywords) 
-    //matchedValues -> List(
-    //                      ("name", List("John Doe")),
-    //                      ("age", List("21")
+    //matchedValues -> Map(
+    //                      "name" -> List("John Doe"),
+    //                      "age" -> List("21")
     //                     )
 ```
 
@@ -264,7 +264,7 @@ This method works exactly like the one above but instead of returning every valu
     import java.io.File;
     import parser.utils.POSTag;
     import java.util.HashMap;
-    import java.util.List;
+    import java.util.Map;
     
     public class Example {
          public static void main(String[] args) {
@@ -276,11 +276,11 @@ This method works exactly like the one above but instead of returning every valu
             keywords.put("name", POSTag.PN());
             keywords.put("age", POSTag.NUM());
             
-            List matchedValues = ex.getSingleMatchedValue(text, keywords);
+            Map matchedValues = ex.getSingleMatchedValue(extractedText, keywords);
             
-            //matchedValues -> List(
-            //                       Map("name" -> List("John Doe")),
-            //                       Map("age" -> List("21"))
+            //matchedValues -> Map(
+            //                      "name" -> List("John Doe"),
+            //                      "age" -> List("21")
             //                     )
          }
     }
@@ -288,8 +288,8 @@ This method works exactly like the one above but instead of returning every valu
 
 * #### Getting all possible pre-JSON objects for the values found ####
 
-This method returns a List containing all the possible pre-JSOn objects for the values found for 
-the given keywords
+This method returns a List containing all the possible pre-JSON objects for the values found for 
+the given keywords.
 
 ### Scala
 
@@ -300,12 +300,12 @@ the given keywords
     
     val filePath = new File("./path/to/pdf/document")
     val extractedText = readPDF(filePath)
-    val keywords = List( ("name", POSTag.PN), ("age", POSTag.NUM) )
+    val keywords = Map("name" -> POSTag.PN, "age" -> POSTag.NUM)
     
     val matchedValues = getAllObjects(extractedText, keywords) 
     //matchedValues -> List(
-    //                      List(("name", List("John Doe")), ("age", List("21")),
-    //                      List(("name", "Jane Doe"), ("age", List("22")))
+    //                      Map("name" -> List("John Doe"), "age" -> List("21")),
+    //                      Map("name" -> List("Jane Doe"), "age" -> List("22"))
     //                     )
 ```
 
@@ -328,11 +328,11 @@ the given keywords
             keywords.put("name", POSTag.PN());
             keywords.put("age", POSTag.NUM());
             
-            List matchedValues = ex.getAllObjects(text, keywords);
+            List matchedValues = ex.getAllObjects(extractedText, keywords);
             
             //matchedValues -> List(
-            //                      List(Map("name" -> List("John Doe")), Map("age" -> List("21")),
-            //                      List(Map("name" -> "Jane Doe")), Map("age" -> List("22")))
+            //                      Map("name" -> List("John Doe"), "age" -> List("21")),
+            //                      Map("name" -> List("Jane Doe"), "age" -> List("22"))
             //                     )
          }
     }

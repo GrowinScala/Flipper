@@ -9,7 +9,7 @@ object Main {
   def main(args: Array[String]): Unit = {
     val filepath = new File("./reader/src/main/resources/MegaTester.pdf")
     val text = readPDF(filepath)
-    val l = getJSONObjects(text, Map("name" -> POSTag.PN, "age" -> POSTag.NUM))
+    val l = getAllObjects(text, Map("name" -> POSTag.PN, "age" -> POSTag.NUM))
 
     println(l)
     //    println(text)
