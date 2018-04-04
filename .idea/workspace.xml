@@ -7,227 +7,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5115832d-4669-4625-b348-c310af38a585" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/converter-build.iml" afterPath="$PROJECT_DIR$/.idea/modules/converter-build.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/converter.iml" afterPath="$PROJECT_DIR$/.idea/modules/converter.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/generator-build.iml" afterPath="$PROJECT_DIR$/.idea/modules/generator-build.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/generator.iml" afterPath="$PROJECT_DIR$/.idea/modules/generator.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/reader-build.iml" afterPath="$PROJECT_DIR$/.idea/modules/reader-build.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/reader.iml" afterPath="$PROJECT_DIR$/.idea/modules/reader.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/root-build.iml" afterPath="$PROJECT_DIR$/.idea/modules/root-build.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/root.iml" afterPath="$PROJECT_DIR$/.idea/modules/root.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter$sources/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter$sources/0.1/resolved.xml.properties" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter$sources/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter$sources/0.1/resolved.xml.xml" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter_2.12/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter_2.12/0.1/resolved.xml.properties" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter_2.12/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter_2.12/0.1/resolved.xml.xml" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-compile-internal.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-compile-internal.xml" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-compile.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-compile.xml" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-optional.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-optional.xml" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-plugin.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-plugin.xml" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-pom.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-pom.xml" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-provided.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-provided.xml" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-runtime-internal.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-runtime-internal.xml" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-runtime.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-runtime.xml" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-scala-tool.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-scala-tool.xml" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-test-internal.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-test-internal.xml" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-test.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-test.xml" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-compile-internal.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-compile-internal.xml" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-compile.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-compile.xml" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-optional.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-optional.xml" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-plugin.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-plugin.xml" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-pom.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-pom.xml" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-provided.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-provided.xml" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-runtime-internal.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-runtime-internal.xml" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-runtime.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-runtime.xml" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-scala-tool.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-scala-tool.xml" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-test-internal.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-test-internal.xml" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-test.xml" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter_2.12-test.xml" />
-      <change beforePath="$PROJECT_DIR$/converter/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" afterPath="$PROJECT_DIR$/converter/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" />
-      <change beforePath="$PROJECT_DIR$/converter/target/streams/$global/ivyConfiguration/$global/streams/out" afterPath="$PROJECT_DIR$/converter/target/streams/$global/ivyConfiguration/$global/streams/out" />
-      <change beforePath="$PROJECT_DIR$/converter/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/converter/target/streams/$global/update/$global/streams/out" />
-      <change beforePath="$PROJECT_DIR$/converter/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterPath="$PROJECT_DIR$/converter/target/streams/$global/update/$global/streams/update_cache_2.12/output" />
-      <change beforePath="$PROJECT_DIR$/converter/target/streams/$global/updateClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/converter/target/streams/$global/updateClassifiers/$global/streams/out" />
-      <change beforePath="$PROJECT_DIR$/converter/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/converter/target/streams/compile/externalDependencyClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/converter/target/streams/compile/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/converter/target/streams/compile/managedClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/converter/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/converter/target/streams/runtime/externalDependencyClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/converter/target/streams/runtime/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/converter/target/streams/runtime/managedClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/converter/target/streams/test/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/converter/target/streams/test/externalDependencyClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/converter/target/streams/test/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/converter/target/streams/test/managedClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/generator/README.md" afterPath="$PROJECT_DIR$/generator/README.md" />
-      <change beforePath="$PROJECT_DIR$/generator/src/main/java/generator/GeneratorJava.java" afterPath="$PROJECT_DIR$/generator/src/main/java/generator/GeneratorJava.java" />
-      <change beforePath="$PROJECT_DIR$/generator/src/main/scala/Main.scala" afterPath="$PROJECT_DIR$/generator/src/main/scala/Main.scala" />
-      <change beforePath="$PROJECT_DIR$/generator/src/main/scala/generator/Generator.scala" afterPath="$PROJECT_DIR$/generator/src/main/scala/generator/Generator.scala" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/classes/Main$.class" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/classes/Main$.class" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/classes/generator/Generator$.class" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/classes/generator/Generator$.class" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/classes/generator/Generator.class" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/classes/generator/Generator.class" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/classes/generator/GeneratorJava.class" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/classes/generator/GeneratorJava.class" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator$sources/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator$sources/0.1/resolved.xml.properties" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator$sources/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator$sources/0.1/resolved.xml.xml" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator_2.12/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator_2.12/0.1/resolved.xml.properties" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator_2.12/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator_2.12/0.1/resolved.xml.xml" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-compile-internal.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-compile-internal.xml" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-compile.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-compile.xml" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-optional.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-optional.xml" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-plugin.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-plugin.xml" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-pom.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-pom.xml" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-provided.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-provided.xml" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-runtime-internal.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-runtime-internal.xml" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-runtime.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-runtime.xml" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-scala-tool.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-scala-tool.xml" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-test-internal.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-test-internal.xml" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-test.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-test.xml" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-compile-internal.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-compile-internal.xml" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-compile.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-compile.xml" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-optional.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-optional.xml" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-plugin.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-plugin.xml" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-pom.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-pom.xml" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-provided.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-provided.xml" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-runtime-internal.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-runtime-internal.xml" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-runtime.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-runtime.xml" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-scala-tool.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-scala-tool.xml" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-test-internal.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-test-internal.xml" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-test.xml" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator_2.12-test.xml" />
-      <change beforePath="$PROJECT_DIR$/generator/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" afterPath="$PROJECT_DIR$/generator/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" />
-      <change beforePath="$PROJECT_DIR$/generator/target/streams/$global/ivyConfiguration/$global/streams/out" afterPath="$PROJECT_DIR$/generator/target/streams/$global/ivyConfiguration/$global/streams/out" />
-      <change beforePath="$PROJECT_DIR$/generator/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/generator/target/streams/$global/update/$global/streams/out" />
-      <change beforePath="$PROJECT_DIR$/generator/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterPath="$PROJECT_DIR$/generator/target/streams/$global/update/$global/streams/update_cache_2.12/output" />
-      <change beforePath="$PROJECT_DIR$/generator/target/streams/$global/updateClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/generator/target/streams/$global/updateClassifiers/$global/streams/out" />
-      <change beforePath="$PROJECT_DIR$/generator/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/generator/target/streams/compile/externalDependencyClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/generator/target/streams/compile/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/generator/target/streams/compile/managedClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/generator/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/generator/target/streams/runtime/externalDependencyClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/generator/target/streams/runtime/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/generator/target/streams/runtime/managedClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/generator/target/streams/test/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/generator/target/streams/test/externalDependencyClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/generator/target/streams/test/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/generator/target/streams/test/managedClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/flipper-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/flipper-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/flipper-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/flipper-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-compile-internal.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-compile-internal.xml" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-compile.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-compile.xml" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-optional.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-optional.xml" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-plugin.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-plugin.xml" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-pom.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-pom.xml" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-provided.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-provided.xml" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-runtime-internal.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-runtime-internal.xml" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-runtime.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-runtime.xml" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-scala-tool.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-scala-tool.xml" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-test-internal.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-test-internal.xml" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-test.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-test.xml" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/reader/src/main/scala/Main.scala" afterPath="$PROJECT_DIR$/reader/src/main/scala/Main.scala" />
-      <change beforePath="$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala" afterPath="$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala" />
-      <change beforePath="$PROJECT_DIR$/reader/src/main/scala/parser/utils/POSTag.scala" afterPath="$PROJECT_DIR$/reader/src/main/scala/parser/utils/POSTag.scala" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/Main$.class" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/classes/Main$.class" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/extraction/Extractor$.class" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/extraction/Extractor$.class" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/utils/POSTag.class" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/utils/POSTag.class" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader$sources/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader$sources/0.1/resolved.xml.properties" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader$sources/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader$sources/0.1/resolved.xml.xml" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader_2.12/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader_2.12/0.1/resolved.xml.properties" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader_2.12/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader_2.12/0.1/resolved.xml.xml" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/default-reader_2.12-compile-internal.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/default-reader_2.12-compile.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/default-reader_2.12-optional.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/default-reader_2.12-plugin.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/default-reader_2.12-pom.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/default-reader_2.12-provided.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/default-reader_2.12-runtime-internal.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/default-reader_2.12-runtime.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/default-reader_2.12-scala-tool.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/default-reader_2.12-test-internal.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/default-reader_2.12-test.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/ivy-report.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/ivy-report.xsl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sbt_2.12-compile.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sbt_2.12-optional.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sbt_2.12-provided.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sbt_2.12-runtime.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sbt_2.12-test.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-compile-internal.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-compile.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-optional.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-plugin.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-pom.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-provided.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-runtime-internal.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-runtime.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-scala-tool.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-test-internal.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-test.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources_2.12-compile.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources_2.12-default.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources_2.12-optional.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources_2.12-provided.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources_2.12-runtime.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources_2.12-test.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader_2.12-compile-internal.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader_2.12-compile.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader_2.12-optional.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader_2.12-plugin.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader_2.12-pom.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader_2.12-provided.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader_2.12-runtime-internal.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader_2.12-runtime.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader_2.12-scala-tool.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader_2.12-test-internal.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader_2.12-test.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reader/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" afterPath="$PROJECT_DIR$/reader/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" />
-      <change beforePath="$PROJECT_DIR$/reader/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/reader/target/streams/$global/update/$global/streams/out" />
-      <change beforePath="$PROJECT_DIR$/reader/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterPath="$PROJECT_DIR$/reader/target/streams/$global/update/$global/streams/update_cache_2.12/output" />
-      <change beforePath="$PROJECT_DIR$/reader/target/streams/$global/updateClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/reader/target/streams/$global/updateClassifiers/$global/streams/out" />
-      <change beforePath="$PROJECT_DIR$/reader/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/reader/target/streams/compile/externalDependencyClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/reader/target/streams/compile/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/reader/target/streams/compile/managedClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/reader/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/reader/target/streams/runtime/externalDependencyClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/reader/target/streams/runtime/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/reader/target/streams/runtime/managedClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/reader/target/streams/test/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/reader/target/streams/test/externalDependencyClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/reader/target/streams/test/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/reader/target/streams/test/managedClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/flipper/flipper$sources/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/flipper/flipper$sources/0.1/resolved.xml.properties" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/flipper/flipper$sources/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/flipper/flipper$sources/0.1/resolved.xml.xml" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/flipper/flipper_2.12/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/flipper/flipper_2.12/0.1/resolved.xml.properties" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/flipper/flipper_2.12/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/flipper/flipper_2.12/0.1/resolved.xml.xml" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-compile-internal.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-compile.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-optional.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-plugin.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-pom.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-provided.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-runtime-internal.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-runtime.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-scala-tool.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-test-internal.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-test.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper_2.12-compile-internal.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper_2.12-compile.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper_2.12-optional.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper_2.12-plugin.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper_2.12-pom.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper_2.12-provided.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper_2.12-runtime-internal.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper_2.12-runtime.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper_2.12-scala-tool.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper_2.12-test-internal.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper_2.12-test.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ivy-report.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ivy-report.xsl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/$global/dumpStructure/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/$global/dumpStructure/$global/streams/out" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-compile-internal.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-compile.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-optional.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-plugin.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-pom.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-provided.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-runtime-internal.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-runtime.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-scala-tool.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-test-internal.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-flipper-build-test.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/ivy-report.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/ivy-report.xsl" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -288,8 +81,8 @@
       <file leaf-file-name="Main.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/reader/src/main/scala/Main.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+            <state relative-caret-position="210">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -459,6 +252,27 @@
             <path>
               <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
               <item name="Flipper" type="462c0819:PsiDirectoryNode" />
+              <item name="converter" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
+              <item name="converter" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="scala-2.12" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
+              <item name="converter" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="scala-2.12" type="462c0819:PsiDirectoryNode" />
+              <item name="resolution-cache" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
               <item name="generator" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -477,7 +291,89 @@
             <path>
               <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
               <item name="Flipper" type="462c0819:PsiDirectoryNode" />
+              <item name="generator" type="462c0819:PsiDirectoryNode" />
               <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="scala-2.12" type="462c0819:PsiDirectoryNode" />
+              <item name="resolution-cache" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="scala-2.12" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="scala-2.12" type="462c0819:PsiDirectoryNode" />
+              <item name="sbt-1.0" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="scala-2.12" type="462c0819:PsiDirectoryNode" />
+              <item name="sbt-1.0" type="462c0819:PsiDirectoryNode" />
+              <item name="resolution-cache" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
+              <item name="reader" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
+              <item name="reader" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
+              <item name="reader" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="scala-2.12" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
+              <item name="reader" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="scala-2.12" type="462c0819:PsiDirectoryNode" />
+              <item name="resolution-cache" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="scala-2.12" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="scala-2.12" type="462c0819:PsiDirectoryNode" />
+              <item name="resolution-cache" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -990,20 +886,6 @@
       <option name="presentableId" value="Default" />
       <updated>1522055766473</updated>
     </task>
-    <task id="LOCAL-00007" summary="Refactoring Converter.scala try-catches">
-      <created>1522072637984</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1522072637984</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Refactored project to improve try-catches implementation">
-      <created>1522073680980</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1522073680980</updated>
-    </task>
     <task id="LOCAL-00009" summary="Added new packages to reader module">
       <created>1522076699675</created>
       <option name="number" value="00009" />
@@ -1333,7 +1215,21 @@
       <option name="project" value="LOCAL" />
       <updated>1522773721079</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="removes xlst and xml add on files">
+      <created>1522835691022</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1522835691022</updated>
+    </task>
+    <task id="LOCAL-00057" summary="removes xlst and xml add on files">
+      <created>1522835756939</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1522835756939</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1856,8 +1752,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/reader/src/main/scala/Main.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        <state relative-caret-position="210">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
