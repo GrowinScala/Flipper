@@ -7,9 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5115832d-4669-4625-b348-c310af38a585" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/reader/README.md" afterPath="$PROJECT_DIR$/reader/README.md" />
-      <change beforePath="$PROJECT_DIR$/reader/src/main/scala/Main.scala" afterPath="$PROJECT_DIR$/reader/src/main/scala/Main.scala" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/test-classes/parser/extraction/ExtractorSuite.class" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/test-classes/parser/extraction/ExtractorSuite.class" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -40,18 +41,18 @@
       <file leaf-file-name="Main.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/reader/src/main/scala/Main.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="11" column="87" lean-forward="false" selection-start-line="11" selection-start-column="87" selection-end-line="11" selection-end-column="87" />
+            <state relative-caret-position="231">
+              <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainJava.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reader/src/main/java/MainJava.java">
+      <file leaf-file-name="Extractor.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state relative-caret-position="399">
+              <caret line="149" column="34" lean-forward="false" selection-start-line="149" selection-start-column="34" selection-end-line="149" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -61,37 +62,38 @@
         <entry file="file://$PROJECT_DIR$/reader/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="439">
-                <caret line="179" column="0" lean-forward="true" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
+              <first_editor relative-caret-position="-1157">
+                <caret line="241" column="31" lean-forward="true" selection-start-line="241" selection-start-column="31" selection-end-line="241" selection-end-column="31" />
                 <folding>
-                  <marker date="1522854149753" expanded="false" signature="2958:3011" ph="..." />
-                  <marker date="1522854149753" expanded="false" signature="3139:3196" ph="..." />
-                  <marker date="1522854149753" expanded="true" signature="3277:3454" ph="{...}" />
-                  <marker date="1522854149753" expanded="true" signature="4952:5074" ph="..." />
-                  <marker date="1522854149753" expanded="true" signature="5434:5600" ph="/.../" />
-                  <marker date="1522854149753" expanded="true" signature="5574:5600" ph="/.../" />
-                  <marker date="1522854149753" expanded="true" signature="5635:5817" ph="..." />
-                  <marker date="1522854149753" expanded="true" signature="5898:6529" ph="{...}" />
-                  <marker date="1522854149753" expanded="true" signature="6326:6518" ph="//..." />
-                  <marker date="1522854149753" expanded="true" signature="7770:7911" ph="..." />
-                  <marker date="1522854149753" expanded="true" signature="8299:8506" ph="/.../" />
-                  <marker date="1522854149753" expanded="true" signature="8781:8888" ph="..." />
-                  <marker date="1522854149753" expanded="true" signature="8781:8908" ph="..." />
-                  <marker date="1522854149753" expanded="true" signature="9147:9320" ph="/.../" />
-                  <marker date="1522854149753" expanded="true" signature="9355:9532" ph="..." />
-                  <marker date="1522854149753" expanded="true" signature="9355:9536" ph="..." />
-                  <marker date="1522854149753" expanded="true" signature="9617:10271" ph="{...}" />
-                  <marker date="1522854149753" expanded="true" signature="10063:10260" ph="//..." />
-                  <marker date="1522854149753" expanded="true" signature="10494:10623" ph="..." />
-                  <marker date="1522854149753" expanded="true" signature="10863:11019" ph="/.../" />
-                  <marker date="1522854149753" expanded="true" signature="11054:11235" ph="..." />
-                  <marker date="1522854149753" expanded="true" signature="11316:11955" ph="{...}" />
-                  <marker date="1522854149753" expanded="true" signature="11764:11944" ph="//..." />
-                  <marker date="1522854149753" expanded="true" signature="12189:12310" ph="..." />
-                  <marker date="1522854149753" expanded="true" signature="12550:12766" ph="/.../" />
-                  <marker date="1522854149753" expanded="true" signature="12801:12983" ph="..." />
-                  <marker date="1522854149753" expanded="true" signature="13064:13756" ph="{...}" />
-                  <marker date="1522854149753" expanded="true" signature="13505:13745" ph="//..." />
+                  <marker date="1522857882103" expanded="false" signature="2958:3011" ph="..." />
+                  <marker date="1522857882103" expanded="false" signature="3139:3196" ph="..." />
+                  <marker date="1522857882103" expanded="true" signature="3277:3454" ph="{...}" />
+                  <marker date="1522857882103" expanded="true" signature="4952:5074" ph="..." />
+                  <marker date="1522857882103" expanded="true" signature="5321:5487" ph="/.../" />
+                  <marker date="1522857882103" expanded="true" signature="5522:5704" ph="..." />
+                  <marker date="1522857882103" expanded="true" signature="5785:6416" ph="{...}" />
+                  <marker date="1522857882103" expanded="true" signature="6213:6405" ph="//..." />
+                  <marker date="1522857882103" expanded="true" signature="7657:7798" ph="..." />
+                  <marker date="1522857882103" expanded="true" signature="8186:8393" ph="/.../" />
+                  <marker date="1522857882103" expanded="true" signature="8428:8575" ph="..." />
+                  <marker date="1522857882103" expanded="true" signature="8428:8607" ph="..." />
+                  <marker date="1522857882103" expanded="true" signature="8688:9834" ph="{...}" />
+                  <marker date="1522857882103" expanded="true" signature="9592:9823" ph="//..." />
+                  <marker date="1522857882103" expanded="false" signature="10115:10261" ph="..." />
+                  <marker date="1522857882103" expanded="true" signature="10681:10854" ph="/.../" />
+                  <marker date="1522857882103" expanded="true" signature="10889:11070" ph="..." />
+                  <marker date="1522857882103" expanded="true" signature="11151:11805" ph="{...}" />
+                  <marker date="1522857882103" expanded="true" signature="11597:11794" ph="//..." />
+                  <marker date="1522857882103" expanded="true" signature="12028:12176" ph="..." />
+                  <marker date="1522857882103" expanded="true" signature="12598:12754" ph="/.../" />
+                  <marker date="1522857882103" expanded="true" signature="12789:12970" ph="..." />
+                  <marker date="1522857882103" expanded="true" signature="13051:13690" ph="{...}" />
+                  <marker date="1522857882103" expanded="true" signature="13499:13679" ph="//..." />
+                  <marker date="1522857882103" expanded="true" signature="13924:14064" ph="..." />
+                  <marker date="1522857882103" expanded="true" signature="14486:14702" ph="/.../" />
+                  <marker date="1522857882103" expanded="true" signature="14737:14919" ph="..." />
+                  <marker date="1522857882103" expanded="true" signature="15000:15692" ph="{...}" />
+                  <marker date="1522857882103" expanded="true" signature="15441:15681" ph="//..." />
                 </folding>
               </first_editor>
               <second_editor />
@@ -160,7 +162,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/reader/src/test/scala/reader/Extraction/FileHandlerSuite.scala" />
         <option value="$PROJECT_DIR$/reader/src/test/scala/reader/utils/ImageProcessingSuite.scala" />
         <option value="$PROJECT_DIR$/reader/src/test/scala/reader/utils/OpenNLPSuite.scala" />
         <option value="$PROJECT_DIR$/generator/src/test/scala/Generator/FileHandlerSuite.scala" />
@@ -209,8 +210,9 @@
         <option value="$PROJECT_DIR$/reader/src/main/java/parser/utils/Choices.java" />
         <option value="$PROJECT_DIR$/reader/src/main/java/MainJava.java" />
         <option value="$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala" />
-        <option value="$PROJECT_DIR$/reader/README.md" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/Main.scala" />
+        <option value="$PROJECT_DIR$/reader/src/main/java/Manss.java" />
+        <option value="$PROJECT_DIR$/reader/README.md" />
       </list>
     </option>
   </component>
@@ -249,41 +251,6 @@
             <path>
               <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
               <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
               <item name="reader" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -315,53 +282,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="parser" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="reader" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="parser" type="462c0819:PsiDirectoryNode" />
-              <item name="extraction" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="reader" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="parser" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="reader" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="reader" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="parser" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="reader" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="parser" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -402,74 +322,34 @@
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
           <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/misc.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/modules/converter-build.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/modules/generator-build.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/modules/reader-build.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/modules/root-build.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/build.sbt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/modules/converter.iml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/modules/generator.iml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/modules/reader.iml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/modules/root.iml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/converter/src/main/scala/Main.scala</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter$sources/0.1/resolved.xml.properties</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter$sources/0.1/resolved.xml.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-compile-internal.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-compile.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-optional.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-plugin.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-pom.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-provided.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-runtime-internal.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-runtime.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-scala-tool.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-test-internal.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/reports/converter-converter$sources-test.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/converter/target/streams/$global/ivyConfiguration/$global/streams/out</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/converter/target/streams/$global/update/$global/streams/update_cache_2.12/output</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/converter/target/streams/$global/updateClassifiers/$global/streams/out</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator$sources/0.1/resolved.xml.properties</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator$sources/0.1/resolved.xml.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-compile-internal.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-compile.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-optional.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-plugin.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-pom.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-provided.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-runtime-internal.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-runtime.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-scala-tool.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-test-internal.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/reports/generator-generator$sources-test.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/generator/target/streams/$global/ivyConfiguration/$global/streams/out</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/generator/target/streams/$global/update/$global/streams/update_cache_2.12/output</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/generator/target/streams/$global/updateClassifiers/$global/streams/out</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/reader/README.md</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/reader/src/main/scala/Main.scala</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/reader/src/main/scala/parser/utils/POSTag.scala</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/reader/target/scala-2.12/classes/Main$.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/extraction/Extractor$.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/extraction/Extractor.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/utils/POSTag.class</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader$sources/0.1/resolved.xml.properties</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader$sources/0.1/resolved.xml.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-compile-internal.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-compile.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-optional.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-plugin.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-pom.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-provided.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-runtime-internal.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-runtime.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-scala-tool.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-test-internal.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reports/reader-reader$sources-test.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/reader/target/streams/$global/update/$global/streams/update_cache_2.12/output</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/reader/target/streams/$global/updateClassifiers/$global/streams/out</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/target/scala-2.12/resolution-cache/flipper/flipper$sources/0.1/resolved.xml.properties</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/target/scala-2.12/resolution-cache/flipper/flipper$sources/0.1/resolved.xml.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-compile-internal.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-compile.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-optional.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-plugin.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-pom.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-provided.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-runtime-internal.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-runtime.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-scala-tool.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-test-internal.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/flipper-flipper$sources-test.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/streams/$global/update/$global/streams/out</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
@@ -874,13 +754,6 @@
       <option name="presentableId" value="Default" />
       <updated>1522055766473</updated>
     </task>
-    <task id="LOCAL-00013" summary="Implemented FileHandlerSuite.scala">
-      <created>1522139071201</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1522139071201</updated>
-    </task>
     <task id="LOCAL-00014" summary="Refactored ExtractorSuite.scala to remove NullPointerException tests">
       <created>1522139766496</created>
       <option name="number" value="00014" />
@@ -1217,7 +1090,14 @@
       <option name="project" value="LOCAL" />
       <updated>1522853108811</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="Updated reader/README.md to reflect OneOf/MultipleOf possibility">
+      <created>1522854260679</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1522854260679</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1293,7 +1173,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Java interface for reader module done" />
     <MESSAGE value="Java interface for generator module done" />
     <MESSAGE value="Java interface for converter module done" />
     <MESSAGE value="Updating README's" />
@@ -1318,20 +1197,14 @@
     <MESSAGE value="removes xlst and xml add on files" />
     <MESSAGE value="Implemented tests for newest feature, and corrected bugs in OneOf and MultipleOf" />
     <MESSAGE value="Implemented Choice factory method for creating scala-made OneOf and MultipleOf instace objects" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented Choice factory method for creating scala-made OneOf and MultipleOf instace objects" />
+    <MESSAGE value="Updated reader/README.md to reflect OneOf/MultipleOf possibility" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated reader/README.md to reflect OneOf/MultipleOf possibility" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/reader/src/test/scala/parser/utils/OpenNLPSuite.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="42" column="29" lean-forward="false" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/reader/src/test/scala/parser/utils/ImageProcessingSuite.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -1627,14 +1500,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1843">
-          <caret line="146" column="18" lean-forward="false" selection-start-line="146" selection-start-column="14" selection-end-line="146" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/utils/OpenNLP.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="609">
@@ -1656,9 +1521,9 @@
         <state relative-caret-position="136">
           <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#520#521#0" expanded="true" />
-            <element signature="e#580#581#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#520#521#0" expanded="false" />
+            <element signature="e#580#581#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1671,58 +1536,75 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/main/java/MainJava.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="149" column="34" lean-forward="false" selection-start-line="149" selection-start-column="34" selection-end-line="149" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/main/java/Manss.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/reader/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="439">
-            <caret line="179" column="0" lean-forward="true" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
+          <first_editor relative-caret-position="-1157">
+            <caret line="241" column="31" lean-forward="true" selection-start-line="241" selection-start-column="31" selection-end-line="241" selection-end-column="31" />
             <folding>
-              <marker date="1522854149753" expanded="false" signature="2958:3011" ph="..." />
-              <marker date="1522854149753" expanded="false" signature="3139:3196" ph="..." />
-              <marker date="1522854149753" expanded="true" signature="3277:3454" ph="{...}" />
-              <marker date="1522854149753" expanded="true" signature="4952:5074" ph="..." />
-              <marker date="1522854149753" expanded="true" signature="5434:5600" ph="/.../" />
-              <marker date="1522854149753" expanded="true" signature="5574:5600" ph="/.../" />
-              <marker date="1522854149753" expanded="true" signature="5635:5817" ph="..." />
-              <marker date="1522854149753" expanded="true" signature="5898:6529" ph="{...}" />
-              <marker date="1522854149753" expanded="true" signature="6326:6518" ph="//..." />
-              <marker date="1522854149753" expanded="true" signature="7770:7911" ph="..." />
-              <marker date="1522854149753" expanded="true" signature="8299:8506" ph="/.../" />
-              <marker date="1522854149753" expanded="true" signature="8781:8888" ph="..." />
-              <marker date="1522854149753" expanded="true" signature="8781:8908" ph="..." />
-              <marker date="1522854149753" expanded="true" signature="9147:9320" ph="/.../" />
-              <marker date="1522854149753" expanded="true" signature="9355:9532" ph="..." />
-              <marker date="1522854149753" expanded="true" signature="9355:9536" ph="..." />
-              <marker date="1522854149753" expanded="true" signature="9617:10271" ph="{...}" />
-              <marker date="1522854149753" expanded="true" signature="10063:10260" ph="//..." />
-              <marker date="1522854149753" expanded="true" signature="10494:10623" ph="..." />
-              <marker date="1522854149753" expanded="true" signature="10863:11019" ph="/.../" />
-              <marker date="1522854149753" expanded="true" signature="11054:11235" ph="..." />
-              <marker date="1522854149753" expanded="true" signature="11316:11955" ph="{...}" />
-              <marker date="1522854149753" expanded="true" signature="11764:11944" ph="//..." />
-              <marker date="1522854149753" expanded="true" signature="12189:12310" ph="..." />
-              <marker date="1522854149753" expanded="true" signature="12550:12766" ph="/.../" />
-              <marker date="1522854149753" expanded="true" signature="12801:12983" ph="..." />
-              <marker date="1522854149753" expanded="true" signature="13064:13756" ph="{...}" />
-              <marker date="1522854149753" expanded="true" signature="13505:13745" ph="//..." />
+              <marker date="1522857882103" expanded="false" signature="2958:3011" ph="..." />
+              <marker date="1522857882103" expanded="false" signature="3139:3196" ph="..." />
+              <marker date="1522857882103" expanded="true" signature="3277:3454" ph="{...}" />
+              <marker date="1522857882103" expanded="true" signature="4952:5074" ph="..." />
+              <marker date="1522857882103" expanded="true" signature="5321:5487" ph="/.../" />
+              <marker date="1522857882103" expanded="true" signature="5522:5704" ph="..." />
+              <marker date="1522857882103" expanded="true" signature="5785:6416" ph="{...}" />
+              <marker date="1522857882103" expanded="true" signature="6213:6405" ph="//..." />
+              <marker date="1522857882103" expanded="true" signature="7657:7798" ph="..." />
+              <marker date="1522857882103" expanded="true" signature="8186:8393" ph="/.../" />
+              <marker date="1522857882103" expanded="true" signature="8428:8575" ph="..." />
+              <marker date="1522857882103" expanded="true" signature="8428:8607" ph="..." />
+              <marker date="1522857882103" expanded="true" signature="8688:9834" ph="{...}" />
+              <marker date="1522857882103" expanded="true" signature="9592:9823" ph="//..." />
+              <marker date="1522857882103" expanded="false" signature="10115:10261" ph="..." />
+              <marker date="1522857882103" expanded="true" signature="10681:10854" ph="/.../" />
+              <marker date="1522857882103" expanded="true" signature="10889:11070" ph="..." />
+              <marker date="1522857882103" expanded="true" signature="11151:11805" ph="{...}" />
+              <marker date="1522857882103" expanded="true" signature="11597:11794" ph="//..." />
+              <marker date="1522857882103" expanded="true" signature="12028:12176" ph="..." />
+              <marker date="1522857882103" expanded="true" signature="12598:12754" ph="/.../" />
+              <marker date="1522857882103" expanded="true" signature="12789:12970" ph="..." />
+              <marker date="1522857882103" expanded="true" signature="13051:13690" ph="{...}" />
+              <marker date="1522857882103" expanded="true" signature="13499:13679" ph="//..." />
+              <marker date="1522857882103" expanded="true" signature="13924:14064" ph="..." />
+              <marker date="1522857882103" expanded="true" signature="14486:14702" ph="/.../" />
+              <marker date="1522857882103" expanded="true" signature="14737:14919" ph="..." />
+              <marker date="1522857882103" expanded="true" signature="15000:15692" ph="{...}" />
+              <marker date="1522857882103" expanded="true" signature="15441:15681" ph="//..." />
             </folding>
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/main/java/MainJava.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/reader/src/main/scala/Main.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="11" column="87" lean-forward="false" selection-start-line="11" selection-start-column="87" selection-end-line="11" selection-end-column="87" />
+        <state relative-caret-position="231">
+          <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
           <folding />
         </state>
       </provider>
