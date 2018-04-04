@@ -7,9 +7,9 @@ object Main {
   import parser.extraction.Extractor._
 
   def main(args: Array[String]): Unit = {
-    val filepath = new File("./reader/src/main/resources/MegaTester.pdf")
+    val filepath = new File("./reader/src/main/resources/test.pdf")
     val text = readPDF(filepath)
-    val l = getAllMatchedValues(text, Map("name" -> ProperNoun()))
+    val l = getJSONObjects(text, Map("name" -> MultipleOf(List("Lucas", "Albertina"))))
 
     println(l)
     //    val options = getOptions(text,"skills",List("Bla","Ble","Bli","Blo","Blu"))

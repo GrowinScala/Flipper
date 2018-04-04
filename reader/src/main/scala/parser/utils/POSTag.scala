@@ -12,7 +12,6 @@ trait Specification
 @throws[IllegalArgumentException]
 case class MultipleOf(possibilities: List[String]) extends Specification {
   require(possibilities.nonEmpty)
-  val options: List[String] = possibilities
 }
 
 /**
@@ -25,7 +24,6 @@ case class MultipleOf(possibilities: List[String]) extends Specification {
 @throws[IllegalArgumentException]
 case class OneOf(possibilities: List[String]) extends Specification {
   require(possibilities.nonEmpty)
-  val options: List[String] = possibilities
 }
 
 /**

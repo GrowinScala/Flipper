@@ -134,9 +134,9 @@ You can now implement the following snippet:
     
     val file = new File("./path/to/pdf/document")
     val extractedText = readPDF(file)
-    val oneofLst = List("single","married","divorced")
-    val multiLst = List("java","scala","c","php","sql")
-    val keywords = Map("name"-> ProperNoun(), "age" -> Number(), "marital status" -> OneOf(oneLst), "skills" -> MultipleOf(multiLst))
+    val oneOfList = List("single","married","divorced")
+    val multiList = List("java","scala","c","php","sql")
+    val keywords = Map("name"-> ProperNoun(), "age" -> Number(), "marital status" -> OneOf(oneOfList), "skills" -> MultipleOf(multiList))
     
     val jsonObjs : List[String] = getJSONObjects(extractedText, keywords)
     

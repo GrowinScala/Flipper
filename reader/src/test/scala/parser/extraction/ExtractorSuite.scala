@@ -186,13 +186,6 @@ class ExtractorSuite extends FunSuite {
       "{\"name\" : \"Albertina\", \"age\" : \"\"}",
       "{\"name\" : \"Justino Alberto\", \"age\" : \"\"}"
     )
-    //    val matchedValues = getAllObjects(text, Map("name" -> ProperNoun(), "age" -> NUM))
-    //    if (matchedValues.isEmpty) fail("getAllObjects returned an empty List")
-    //    else matchedValues.map(mp => makeJSONString(mp)) should equal(expected)
-    val keys = Map("name" -> ProperNoun(), "age" -> Number())
-    val x = getJSONObjects(text, Map("name" -> ProperNoun(), "age" -> Number()))
-    println(x.grouped(keys.size).toList)
-
-    //    getJSONObjects(text, Map("name" -> PN, "age" -> NUM)) should equal(expected)
+    getJSONObjects(text, Map("name" -> ProperNoun(), "age" -> Number())) should equal(expected)
   }
 }
