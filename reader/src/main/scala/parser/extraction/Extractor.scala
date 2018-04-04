@@ -88,7 +88,7 @@ object Extractor {
               case multiOp: MultipleOf =>
                 (key,getOptions(text,key,multiOp.possibilities))
               case oneOp: OneOf =>
-                (key,getOptions(text,key,oneOp.possibilities))
+                (key,List(getOptions(text,key,oneOp.possibilities).head))
             }
           }
           filterNewLines(matched)
@@ -338,11 +338,12 @@ object Extractor {
   }
 
   /**
-    * Find in text one or more of the options from keyword
-    * @param text
-    * @param keyword
-    * @param opList
-    * @return
+    * Find in text one or more of the options given by the user realted to the keyword
+    *
+    * @param text    - The text in which to look for the value
+    * @param keyword - The keyword to find the value for
+    * @param opList  - List of options to choose from
+    * @return - A list of all the matched options found
     */
   def getOptions(text: Option[String], keyword: Keyword, opList:List[String]): List[String] = {
     text match {

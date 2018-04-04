@@ -101,10 +101,12 @@ you want to obtain values.
 
 <br/>
 
-The keywords Map is a pair of Keywords and a POSTag.Value, this is because Flipper is using a 
-Natural Language Processor (**_Apache's OpenNLP_**) for improving the odds of finding a useful 
-value for a given keyword. This POS tag simply tells Flipper what kind of value you want to obtain
-for a given keyword, the possible POSTags can be found bellow:
+The keywords Map is a map of Keywords and a Specification, the specification has three different cases,these are
+MultipleOf, in which the user inputs a list of options and the return is a list of the options found in the text,
+OneOf, like the previous case the user inputs a list of choices, but the return is a single option from which to
+choose, and PostTag, this is for the Natural Language Processor (**_Apache's OpenNLP_**) Fliepper uses, in order to
+improve the odds of finding a useful value for a given keyword. This POS tag simply tells Flipper what kind of 
+value you want to obtain for a given keyword, the possible POSTags can be found bellow:
 
 
 | Possible POSTags    |
@@ -128,17 +130,19 @@ You can now implement the following snippet:
 ```scala
     import parser.extraction.Extractor.{readPDF, getJSONObjects}
     import java.io.File
-    import parser.utils.{ProperNoun, Number}
+    import parser.utils.{ProperNoun, Number, OneOf, MultipleOf}
     
     val file = new File("./path/to/pdf/document")
     val extractedText = readPDF(file)
-    val keywords = Map("name"-> ProperNoun(), "age" -> Number())
+    val oneofLst = List("single","married","divorced")
+    val multiLst = List("java","scala","c","php","sql")
+    val keywords = Map("name"-> ProperNoun(), "age" -> Number(), "marital status" -> OneOf(oneLst), "skills" -> MultipleOf(multiLst))
     
     val jsonObjs : List[String] = getJSONObjects(extractedText, keywords)
     
     //jsonObjs -> List(
-    //                "{ "name" : "John Doe" , "age" : 21 }",
-    //                "{ "name" : "Jane Doe" , "age" : 22 }"
+    //                "{ "name" : "John Doe" , "age" : 21 , "marital status" : "single" , "skills" : "java, scala" }",
+    //                "{ "name" : "Jane Doe" , "age" : 22 , "marital status" : "married" , "skills" : "php, sql" }"
     //                )
 ```
 

@@ -4,7 +4,7 @@
 		module="flipper$sources"
 		revision="0.1"
 		status="integration"
-		publication="20180404092507"
+		publication="20180404110442"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>
