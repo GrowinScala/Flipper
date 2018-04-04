@@ -141,7 +141,7 @@ object Extractor {
     text match {
       case Some(t) =>
         if (t.nonEmpty) {
-          val matchedValues = getAllMatchedValues(text, keywords, clientRegEx)
+          val matchedValues /*Map[Keyword,Seq[String]]*/ = getAllMatchedValues(text, keywords, clientRegEx)
           val mostFound = matchedValues.maxBy(_._2.size)._2.size //Gets the size of the pair that has the most values
           val mappedValues = for (i <- 0 until mostFound; (_, listMatched) <- matchedValues) yield {
             if (listMatched.size > i) //Prevent array out of bounds exception
@@ -348,14 +348,46 @@ object Extractor {
   def getOptions(text: Option[String], keyword: Keyword, opList:List[String]): List[String] = {
     text match {
       case Some(t) =>
-        if (t.toLowerCase.contains(keyword.toLowerCase)) {
-          val found = for (op <- opList if t.toLowerCase.contains(op.toLowerCase) ) yield op
-          found
+        val tLower = t.toLowerCase
+        val kLower = keyword.toLowerCase
+        if (tLower.contains(kLower)) {
+            for (op <- opList if t.toLowerCase.contains(op.toLowerCase) ) yield op
         } else {
           List()
         }
       case None => List()
     }
   }
+
+  @throws[IllegalArgumentException]
+  def getAllObjectsMain(text: Option[String], keywords: Map[Keyword, Specification], mainKey: String, clientRegEx: Map[Keyword, Regex] = Map()): List[MatchedPair] = {
+    require(keywords.nonEmpty, "The list of keywords should not be empty")
+    text match {
+      case Some(t) =>
+        if (t.nonEmpty) {
+          val matchedValues /*Map[Keyword,Seq[String]]*/ = getAllMatchedValues(text, keywords, clientRegEx)
+          val mostFound = matchedValues.maxBy(_._2.size)._2.size //Gets the size of the pair that has the most values
+          val mappedValues = for (i <- 0 until mostFound; (_, listMatched) <- matchedValues) yield {
+            if (listMatched.size > i) //Prevent array out of bounds exception
+              List(listMatched(i))
+            else List()
+          }
+          val keywordList: List[String] = keywords.keys.toList
+          val joinedValues = mappedValues.zipWithIndex.map { case (key, index) => Map(keywordList(index % keywords.size) -> key) }.grouped(keywords.size).toList
+          joinedValues.map(_.flatten.toMap)
+        }
+        else {
+          List()
+        }
+      case None => List()
+    }
+  }
+
+  def divideTextByKey(text:String, key: Keyword): List[String] ={
+
+
+    List()
+  }
+
 
 }

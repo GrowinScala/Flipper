@@ -136,7 +136,7 @@ You can now implement the following snippet:
     val extractedText = readPDF(file)
     val oneofLst = List("single","married","divorced")
     val multiLst = List("java","scala","c","php","sql")
-    val keywords = Map("name"-> ProperNoun(), "age" -> Number(), "marital status" -> OneOf(oneLst), "skills" -> MultipleOf(multiLst))
+    val keywords = Map("name"-> ProperNoun(), "age" -> Number(), "marital status" -> OneOf(oneofLst), "skills" -> MultipleOf(multiLst))
     
     val jsonObjs : List[String] = getJSONObjects(extractedText, keywords)
     
@@ -202,7 +202,9 @@ with that possibility through **`getAllMatchedValues`**.
     
     val file = new File("./path/to/pdf/document")
     val extractedText = readPDF(file)
-    val keywords = Map("name" -> ProperNoun(), "age" -> Number())
+    val oneofLst = List("single","married","divorced")
+    val multiLst = List("java","scala","c","php","sql")
+    val keywords = Map("name"-> ProperNoun(), "age" -> Number(), "marital status" -> OneOf(oneofLst), "skills" -> MultipleOf(multiLst))
     
     val matchedValues = getAllMatchedValues(extractedText, keywords) 
     //matchedValues -> Map(
@@ -254,7 +256,9 @@ This method works exactly like the one above but instead of returning every valu
     
     val file = new File("./path/to/pdf/document")
     val extractedText = readPDF(file)
-    val keywords = Map("name"-> ProperNoun(), "age" -> Number())
+    val oneofLst = List("single","married","divorced")
+    val multiLst = List("java","scala","c","php","sql")
+    val keywords = Map("name"-> ProperNoun(), "age" -> Number(), "marital status" -> OneOf(oneofLst), "skills" -> MultipleOf(multiLst))
     
     val matchedValues = getSingleMatchedValue(extractedText, keywords) 
     //matchedValues -> Map(
@@ -307,7 +311,9 @@ the given keywords.
     
     val filePath = new File("./path/to/pdf/document")
     val extractedText = readPDF(filePath)
-    val keywords = Map("name"-> ProperNoun(), "age" -> Number())
+    val oneofLst = List("single","married","divorced")
+    val multiLst = List("java","scala","c","php","sql")
+    val keywords = Map("name"-> ProperNoun(), "age" -> Number(), "marital status" -> OneOf(oneofLst), "skills" -> MultipleOf(multiLst))
     
     val matchedValues = getAllObjects(extractedText, keywords) 
     //matchedValues -> List(

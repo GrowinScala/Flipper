@@ -6,89 +6,39 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5115832d-4669-4625-b348-c310af38a585" name="Default" comment="removes xlst and xml add on files">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/converter-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/converter-build.iml" afterDir="false" />
+    <list default="true" id="5115832d-4669-4625-b348-c310af38a585" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/modules/converter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/converter.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/generator-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/generator-build.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/generator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/generator.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/reader-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/reader-build.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/reader.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/reader.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/root-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/root-build.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/root.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/root.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/src/main/scala/Main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/converter/src/main/scala/Main.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter$sources/0.1/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter$sources/0.1/resolved.xml.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter$sources/0.1/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter$sources/0.1/resolved.xml.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter_2.12/0.1/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter_2.12/0.1/resolved.xml.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter_2.12/0.1/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter_2.12/0.1/resolved.xml.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/converter/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/converter/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/$global/update/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/$global/ivyConfiguration/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/$global/ivyConfiguration/$global/streams/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/converter/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/converter/target/streams/$global/updateClassifiers/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/$global/updateClassifiers/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/converter/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/converter/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/compile/managedClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/converter/target/streams/runtime/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/converter/target/streams/runtime/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/runtime/managedClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/converter/target/streams/test/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/test/externalDependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/converter/target/streams/test/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/test/managedClasspath/$global/streams/export" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator$sources/0.1/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator$sources/0.1/resolved.xml.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator$sources/0.1/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator$sources/0.1/resolved.xml.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator_2.12/0.1/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator_2.12/0.1/resolved.xml.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator_2.12/0.1/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator_2.12/0.1/resolved.xml.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/$global/update/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/streams/$global/ivyConfiguration/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/$global/ivyConfiguration/$global/streams/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generator/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generator/target/streams/$global/updateClassifiers/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/$global/updateClassifiers/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/compile/managedClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/target/streams/runtime/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/target/streams/runtime/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/runtime/managedClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/target/streams/test/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/test/externalDependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/target/streams/test/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/test/managedClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/flipper-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/flipper-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reader/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/reader/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/src/main/scala/Main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/reader/src/main/scala/Main.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala" beforeDir="false" afterPath="$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/Main$.class" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/classes/Main$.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/extraction/Extractor$.class" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/extraction/Extractor$.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader$sources/0.1/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader$sources/0.1/resolved.xml.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader$sources/0.1/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader$sources/0.1/resolved.xml.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader_2.12/0.1/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader_2.12/0.1/resolved.xml.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader_2.12/0.1/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader_2.12/0.1/resolved.xml.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reader/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reader/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/$global/update/$global/streams/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reader/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reader/target/streams/$global/updateClassifiers/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/$global/updateClassifiers/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reader/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reader/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/compile/managedClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reader/target/streams/runtime/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reader/target/streams/runtime/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/runtime/managedClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reader/target/streams/test/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/test/externalDependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reader/target/streams/test/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/test/managedClasspath/$global/streams/export" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/flipper/flipper$sources/0.1/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/flipper/flipper$sources/0.1/resolved.xml.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/flipper/flipper$sources/0.1/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/flipper/flipper$sources/0.1/resolved.xml.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/flipper/flipper_2.12/0.1/resolved.xml.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/flipper/flipper_2.12/0.1/resolved.xml.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/$global/dumpStructure/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/$global/dumpStructure/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -116,50 +66,57 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="POSTag.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/utils/POSTag.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="95" selection-start-line="16" selection-start-column="95" selection-end-line="16" selection-end-column="95" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/generator/src/main/scala/Main.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Generator.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/Generator.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="243" column="5" selection-start-line="243" selection-start-column="5" selection-end-line="243" selection-end-column="5" />
-            </state>
-          </provider>
+      <file leaf-file-name="build.sbt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.sbt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="Main.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/reader/src/main/scala/Main.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="153">
+              <caret line="11" column="54" lean-forward="true" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Extractor.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Extractor.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="90" column="72" lean-forward="true" selection-start-line="90" selection-start-column="72" selection-end-line="90" selection-end-column="72" />
+            <state relative-caret-position="338">
+              <caret line="386" lean-forward="true" selection-start-line="386" selection-end-line="386" />
               <folding>
                 <element signature="e#27#46#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/reader/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="148">
+                <caret line="257" column="10" selection-start-line="257" selection-start-column="10" selection-end-line="257" selection-end-column="10" />
+                <folding>
+                  <element signature="e#4#69#0" expanded="true" />
+                  <element signature="imports" expanded="true" />
+                  <element signature="e#4#71#0" expanded="true" />
+                  <element signature="imports" expanded="true" />
+                  <element signature="e#4#63#0" expanded="true" />
+                  <element signature="imports" expanded="true" />
+                </folding>
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="POSTag.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/utils/POSTag.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-238">
+              <caret line="16" column="95" selection-start-line="16" selection-start-column="95" selection-end-line="16" selection-end-column="95" />
             </state>
           </provider>
         </entry>
@@ -182,7 +139,6 @@
       <find>makeJSON</find>
       <find>Config</find>
       <find>null</find>
-      <find>maxBy</find>
       <find>O</find>
       <find>Option</find>
       <find>Option(</find>
@@ -203,6 +159,8 @@
       <find>Map()</find>
       <find>POST</find>
       <find>P</find>
+      <find>maxBy</find>
+      <find>maxB</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -240,7 +198,6 @@
         <option value="$PROJECT_DIR$/converter/src/main/scala/ReaderConverter/conversion/Converter.scala" />
         <option value="$PROJECT_DIR$/converter/src/test/scala/ReaderConverter/conversion/ConverterSuite.scala" />
         <option value="$PROJECT_DIR$/converter/src/main/scala/ReaderConverter/Converter/FileType.scala" />
-        <option value="$PROJECT_DIR$/converter/src/main/scala/Main.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/java/parser/extraction/Extractor.java" />
         <option value="$PROJECT_DIR$/generator/src/main/java/Generator/Generator.java" />
         <option value="$PROJECT_DIR$/generator/src/main/java/generator/Generator.java" />
@@ -258,7 +215,6 @@
         <option value="$PROJECT_DIR$/reader/src/main/scala/parser/utils/Specification.scala" />
         <option value="$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/java/MainJava.java" />
-        <option value="$PROJECT_DIR$/reader/README.md" />
         <option value="$PROJECT_DIR$/reader/src/main/java/parser/extraction/ExtractorJava.java" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/parser/utils/POSTag.scala" />
         <option value="$PROJECT_DIR$/generator/README.md" />
@@ -266,15 +222,17 @@
         <option value="$PROJECT_DIR$/generator/src/main/scala/Main.scala" />
         <option value="$PROJECT_DIR$/generator/src/main/java/generator/GeneratorJava.java" />
         <option value="$PROJECT_DIR$/generator/src/main/scala/generator/Generator.scala" />
+        <option value="$PROJECT_DIR$/converter/src/main/scala/Main.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/Main.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala" />
+        <option value="$PROJECT_DIR$/reader/README.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="951" />
-    <option name="width" value="977" />
-    <option name="height" value="1039" />
+    <option name="x" value="950" />
+    <option name="width" value="978" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -282,8 +240,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -301,6 +257,8 @@
         </subPane>
       </pane>
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -342,6 +300,11 @@
       <module name="generator" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="converter" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="reader" />
@@ -350,11 +313,6 @@
     <configuration name="MainJava (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainJava" />
       <module name="generator" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
-    <configuration name="MainJava" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MainJava" />
-      <module name="reader" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -463,16 +421,16 @@
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.ExtractorSuite" />
       <item itemvalue="Application.MainJava (1)" />
-      <item itemvalue="Application.MainJava" />
       <item itemvalue="Application.Main (1)" />
+      <item itemvalue="Application.Main (2)" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.MainJava (1)" />
         <item itemvalue="JUnit.ExtractorSuite" />
-        <item itemvalue="Application.MainJava" />
       </list>
     </recent_temporary>
   </component>
@@ -565,13 +523,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1522055766473</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Added new packages to reader module">
-      <created>1522076699675</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1522076699675</updated>
     </task>
     <task id="LOCAL-00010" summary="Added new packages to generator and converter module">
       <created>1522077613741</created>
@@ -909,7 +860,14 @@
       <option name="project" value="LOCAL" />
       <updated>1522835756939</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Updated Documentation">
+      <created>1522839552891</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1522839552892</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -957,38 +915,37 @@
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.503125" side_tool="true" weight="0.32873806" />
       <window_info anchor="right" id="Maven Projects" order="2" />
-      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.32905984" />
-      <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.49791667" weight="0.32979852" />
-      <window_info anchor="bottom" id="Terminal" order="4" />
+      <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.49791667" weight="0.32905984" />
+      <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.32905984" />
+      <window_info anchor="bottom" id="Terminal" order="4" weight="0.32905984" />
       <window_info id="Capture Tool" order="0" />
       <window_info id="Designer" order="1" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.19664429" />
-      <window_info anchor="bottom" id="sbt-shell-toolwindow" order="5" />
-      <window_info anchor="bottom" id="Build" order="1" weight="0.2598091" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.19664429" />
+      <window_info anchor="bottom" id="sbt-shell-toolwindow" order="5" weight="0.32905984" />
+      <window_info anchor="bottom" id="Build" order="1" weight="0.25925925" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="9" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
       <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
       <window_info anchor="right" id="Gradle" order="6" />
       <window_info anchor="right" id="Commander" order="8" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="7" weight="0.32979852" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="right" id="Material Palette" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="10" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="7" weight="0.32979852" />
     </layout>
     <layout-to-restore>
       <window_info anchor="bottom" id="Build" order="1" weight="0.2598091" />
       <window_info id="Designer" order="1" />
       <window_info anchor="right" id="Palette" order="0" />
-      <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.32979852" />
       <window_info anchor="right" id="sbt" order="1" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="5" />
       <window_info id="Image Layers" order="3" />
-      <window_info anchor="right" id="Commander" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.32979852" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="9" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -996,9 +953,9 @@
       <window_info anchor="bottom" id="Terminal" order="4" />
       <window_info id="Capture Tool" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Commander" order="8" weight="0.4" />
       <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.503125" side_tool="true" weight="0.32873806" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="10" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="7" weight="0.32979852" />
       <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.49791667" weight="0.32979852" />
       <window_info anchor="right" id="Maven Projects" order="2" />
       <window_info anchor="right" id="Gradle" order="6" />
@@ -1011,6 +968,7 @@
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Structure" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="7" weight="0.32979852" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
     </layout-to-restore>
   </component>
@@ -1018,7 +976,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Working on implementing a Java interface for the API" />
     <MESSAGE value="Implementing a Java interface for the API on reader module" />
     <MESSAGE value="Java interface for reader module done" />
     <MESSAGE value="Java interface for generator module done" />
@@ -1043,17 +1000,18 @@
     <MESSAGE value="Modified POSTag logic (case classes instead of Enumeration) implemented Specification trait" />
     <MESSAGE value="Refactored POSTag and updated reader/README.md" />
     <MESSAGE value="removes xlst and xml add on files" />
-    <option name="LAST_COMMIT_MESSAGE" value="removes xlst and xml add on files" />
+    <MESSAGE value="Updated Documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Documentation" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/converter/src/main/scala/ReaderConverter/Converter/FileType.scala" />
     <entry file="file://$PROJECT_DIR$/converter/src/main/scala/Main.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
+        <state relative-caret-position="221">
           <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/converter/src/main/scala/ReaderConverter/Converter/FileType.scala" />
     <entry file="file://$PROJECT_DIR$/reader/src/test/scala/parser/utils/OpenNLPSuite.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="882">
@@ -1160,9 +1118,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/generator/src/main/java/generator/Generator.java" />
     <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/utils/SpellChecker.scala">
       <provider selected="true" editor-type-id="text-editor">
@@ -1239,9 +1194,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.sbt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/reader/src/main/java/readerJavaMain.java" />
     <entry file="file://$PROJECT_DIR$/converter/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -1280,19 +1232,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <element signature="e#27#46#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reader/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1282">
-            <caret line="157" column="44" lean-forward="true" selection-start-line="157" selection-start-column="44" selection-end-line="157" selection-end-column="44" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -1321,13 +1260,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/utils/POSTag.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="95" selection-start-line="16" selection-start-column="95" selection-end-line="16" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/Generator.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="73">
@@ -1335,10 +1267,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/main/scala/Main.scala">
+    <entry file="file://$PROJECT_DIR$/converter/src/main/scala/Main.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="119">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -1349,13 +1281,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/build.sbt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/utils/POSTag.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-238">
+          <caret line="16" column="95" selection-start-line="16" selection-start-column="95" selection-end-line="16" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/main/scala/Main.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="54" lean-forward="true" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="90" column="72" lean-forward="true" selection-start-line="90" selection-start-column="72" selection-end-line="90" selection-end-column="72" />
+        <state relative-caret-position="338">
+          <caret line="386" lean-forward="true" selection-start-line="386" selection-end-line="386" />
           <folding>
             <element signature="e#27#46#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="148">
+            <caret line="257" column="10" selection-start-line="257" selection-start-column="10" selection-end-line="257" selection-end-column="10" />
+            <folding>
+              <element signature="e#4#69#0" expanded="true" />
+              <element signature="imports" expanded="true" />
+              <element signature="e#4#71#0" expanded="true" />
+              <element signature="imports" expanded="true" />
+              <element signature="e#4#63#0" expanded="true" />
+              <element signature="imports" expanded="true" />
+            </folding>
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

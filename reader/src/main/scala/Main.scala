@@ -7,11 +7,15 @@ object Main {
   import parser.extraction.Extractor._
 
   def main(args: Array[String]): Unit = {
-    val filepath = new File("./reader/src/main/resources/MegaTester.pdf")
+    val filepath = new File("/Users/Margarida Reis/Desktop/a.pdf")
+    val oneofLst = List("single","married","divorced")
+    val multiLst = List("Bla","Ble","Bli","Blo","Blu")
+    val keywords = Map("name"-> ProperNoun(), "phone" -> Number(), "mail" -> Noun(), "Marital status" -> OneOf(oneofLst), "skills" -> MultipleOf(multiLst))
     val text = readPDF(filepath)
-    val l = getAllMatchedValues(text, Map("name" -> ProperNoun()))
+    val l = getJSONFromForm(text)
 
     println(l)
+//    l.foreach(println)
     //    val options = getOptions(text,"skills",List("Bla","Ble","Bli","Blo","Blu"))
     //    options.foreach(println(_))
 
