@@ -198,7 +198,7 @@ with that possibility through **`getAllMatchedValues`**.
 ```scala
     import parser.extraction.Extractor.{readPDF, getAllMatchedValues}
     import java.io.File
-    import parser.utils.{ProperNoun, Number}
+    import parser.utils.{ProperNoun, Number, OneOf, MultipleOf}
     
     val file = new File("./path/to/pdf/document")
     val extractedText = readPDF(file)
@@ -252,7 +252,7 @@ This method works exactly like the one above but instead of returning every valu
 ```scala
     import parser.extraction.Extractor.{readPDF, getSingleMatchedValue}
     import java.io.File
-    import parser.utils.{ProperNoun, Number}
+    import parser.utils.{ProperNoun, Number, OneOf, MultipleOf}
     
     val file = new File("./path/to/pdf/document")
     val extractedText = readPDF(file)
@@ -307,7 +307,7 @@ the given keywords.
 ```scala
     import parser.extraction.Extractor.{readPDF, getAllObjects}
     import java.io.File
-    import parser.utils.{ProperNoun, Number}
+    import parser.utils.{ProperNoun, Number, OneOf, MultipleOf}
     
     val filePath = new File("./path/to/pdf/document")
     val extractedText = readPDF(filePath)
