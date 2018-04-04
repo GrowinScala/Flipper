@@ -7,15 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5115832d-4669-4625-b348-c310af38a585" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/reader/src/main/java/parser/utils/Choices.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/reader/README.md" afterPath="$PROJECT_DIR$/reader/README.md" />
       <change beforePath="$PROJECT_DIR$/reader/src/main/scala/Main.scala" afterPath="$PROJECT_DIR$/reader/src/main/scala/Main.scala" />
-      <change beforePath="$PROJECT_DIR$/reader/src/main/scala/parser/utils/POSTag.scala" afterPath="$PROJECT_DIR$/reader/src/main/scala/parser/utils/POSTag.scala" />
-      <change beforePath="$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala" afterPath="$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/Main$.class" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/classes/Main$.class" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/utils/POSTag.class" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/utils/POSTag.class" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/test-classes/parser/extraction/ExtractorSuite.class" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/test-classes/parser/extraction/ExtractorSuite.class" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -43,41 +37,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="POSTag.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/utils/POSTag.scala">
+      <file leaf-file-name="Main.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/reader/src/main/scala/Main.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="189">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExtractorSuite.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="187" column="5" lean-forward="false" selection-start-line="187" selection-start-column="5" selection-end-line="187" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Extractor.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1843">
-              <caret line="146" column="18" lean-forward="false" selection-start-line="146" selection-start-column="14" selection-end-line="146" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GeneratorJava.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/generator/src/main/java/generator/GeneratorJava.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="95" column="38" lean-forward="false" selection-start-line="95" selection-start-column="38" selection-end-line="95" selection-end-column="38" />
+              <caret line="11" column="87" lean-forward="false" selection-start-line="11" selection-start-column="87" selection-end-line="11" selection-end-column="87" />
               <folding />
             </state>
           </provider>
@@ -86,44 +50,8 @@
       <file leaf-file-name="MainJava.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/reader/src/main/java/MainJava.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="18" column="33" lean-forward="false" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Choices.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/reader/src/main/java/parser/utils/Choices.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#520#521#0" expanded="true" />
-                <element signature="e#580#581#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OpenNLP.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/utils/OpenNLP.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
-              <caret line="33" column="70" lean-forward="false" selection-start-line="33" selection-start-column="70" selection-end-line="33" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reader/src/main/scala/Main.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="66" />
+            <state relative-caret-position="84">
+              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -133,35 +61,37 @@
         <entry file="file://$PROJECT_DIR$/reader/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="334">
-                <caret line="225" column="13" lean-forward="false" selection-start-line="225" selection-start-column="13" selection-end-line="233" selection-end-column="80" />
+              <first_editor relative-caret-position="439">
+                <caret line="179" column="0" lean-forward="true" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
                 <folding>
-                  <marker date="1522849033305" expanded="false" signature="2958:3011" ph="..." />
-                  <marker date="1522849033305" expanded="false" signature="3139:3196" ph="..." />
-                  <marker date="1522849033305" expanded="true" signature="3277:3454" ph="{...}" />
-                  <marker date="1522849033305" expanded="false" signature="4952:5093" ph="..." />
-                  <marker date="1522849033305" expanded="true" signature="5526:5804" ph="/.../" />
-                  <marker date="1522849033305" expanded="true" signature="5777:5804" ph="/.../" />
-                  <marker date="1522849033305" expanded="true" signature="5839:6021" ph="..." />
-                  <marker date="1522849033305" expanded="true" signature="6102:6733" ph="{...}" />
-                  <marker date="1522849033305" expanded="true" signature="6530:6722" ph="//..." />
-                  <marker date="1522849033305" expanded="true" signature="7684:7791" ph="..." />
-                  <marker date="1522849033305" expanded="true" signature="7684:7811" ph="..." />
-                  <marker date="1522849033305" expanded="true" signature="8050:8223" ph="/.../" />
-                  <marker date="1522849033305" expanded="true" signature="8258:8435" ph="..." />
-                  <marker date="1522849033305" expanded="true" signature="8258:8439" ph="..." />
-                  <marker date="1522849033305" expanded="true" signature="8520:9174" ph="{...}" />
-                  <marker date="1522849033305" expanded="true" signature="8966:9163" ph="//..." />
-                  <marker date="1522849033305" expanded="true" signature="9397:9526" ph="..." />
-                  <marker date="1522849033305" expanded="true" signature="9766:9922" ph="/.../" />
-                  <marker date="1522849033305" expanded="true" signature="9957:10138" ph="..." />
-                  <marker date="1522849033305" expanded="true" signature="10219:10858" ph="{...}" />
-                  <marker date="1522849033305" expanded="true" signature="10667:10847" ph="//..." />
-                  <marker date="1522849033305" expanded="true" signature="11092:11213" ph="..." />
-                  <marker date="1522849033305" expanded="true" signature="11453:11669" ph="/.../" />
-                  <marker date="1522849033305" expanded="true" signature="11704:11886" ph="..." />
-                  <marker date="1522849033305" expanded="true" signature="11967:12659" ph="{...}" />
-                  <marker date="1522849033305" expanded="true" signature="12408:12648" ph="//..." />
+                  <marker date="1522854149753" expanded="false" signature="2958:3011" ph="..." />
+                  <marker date="1522854149753" expanded="false" signature="3139:3196" ph="..." />
+                  <marker date="1522854149753" expanded="true" signature="3277:3454" ph="{...}" />
+                  <marker date="1522854149753" expanded="true" signature="4952:5074" ph="..." />
+                  <marker date="1522854149753" expanded="true" signature="5434:5600" ph="/.../" />
+                  <marker date="1522854149753" expanded="true" signature="5574:5600" ph="/.../" />
+                  <marker date="1522854149753" expanded="true" signature="5635:5817" ph="..." />
+                  <marker date="1522854149753" expanded="true" signature="5898:6529" ph="{...}" />
+                  <marker date="1522854149753" expanded="true" signature="6326:6518" ph="//..." />
+                  <marker date="1522854149753" expanded="true" signature="7770:7911" ph="..." />
+                  <marker date="1522854149753" expanded="true" signature="8299:8506" ph="/.../" />
+                  <marker date="1522854149753" expanded="true" signature="8781:8888" ph="..." />
+                  <marker date="1522854149753" expanded="true" signature="8781:8908" ph="..." />
+                  <marker date="1522854149753" expanded="true" signature="9147:9320" ph="/.../" />
+                  <marker date="1522854149753" expanded="true" signature="9355:9532" ph="..." />
+                  <marker date="1522854149753" expanded="true" signature="9355:9536" ph="..." />
+                  <marker date="1522854149753" expanded="true" signature="9617:10271" ph="{...}" />
+                  <marker date="1522854149753" expanded="true" signature="10063:10260" ph="//..." />
+                  <marker date="1522854149753" expanded="true" signature="10494:10623" ph="..." />
+                  <marker date="1522854149753" expanded="true" signature="10863:11019" ph="/.../" />
+                  <marker date="1522854149753" expanded="true" signature="11054:11235" ph="..." />
+                  <marker date="1522854149753" expanded="true" signature="11316:11955" ph="{...}" />
+                  <marker date="1522854149753" expanded="true" signature="11764:11944" ph="//..." />
+                  <marker date="1522854149753" expanded="true" signature="12189:12310" ph="..." />
+                  <marker date="1522854149753" expanded="true" signature="12550:12766" ph="/.../" />
+                  <marker date="1522854149753" expanded="true" signature="12801:12983" ph="..." />
+                  <marker date="1522854149753" expanded="true" signature="13064:13756" ph="{...}" />
+                  <marker date="1522854149753" expanded="true" signature="13505:13745" ph="//..." />
                 </folding>
               </first_editor>
               <second_editor />
@@ -181,7 +111,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>try</find>
       <find>from Image</find>
       <find>fromFile</find>
       <find>makeJSON</find>
@@ -211,6 +140,7 @@
       <find>OneOf</find>
       <find>One</find>
       <find>most</find>
+      <find>in **</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -272,15 +202,15 @@
         <option value="$PROJECT_DIR$/generator/src/main/scala/Main.scala" />
         <option value="$PROJECT_DIR$/generator/src/main/java/generator/GeneratorJava.java" />
         <option value="$PROJECT_DIR$/generator/src/main/scala/generator/Generator.scala" />
-        <option value="$PROJECT_DIR$/reader/README.md" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/java/parser/utils/OneOf.java" />
-        <option value="$PROJECT_DIR$/reader/src/main/scala/Main.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/parser/utils/POSTag.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/java/parser/utils/OneOfJava.java" />
         <option value="$PROJECT_DIR$/reader/src/main/java/parser/utils/Choices.java" />
         <option value="$PROJECT_DIR$/reader/src/main/java/MainJava.java" />
         <option value="$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala" />
+        <option value="$PROJECT_DIR$/reader/README.md" />
+        <option value="$PROJECT_DIR$/reader/src/main/scala/Main.scala" />
       </list>
     </option>
   </component>
@@ -648,7 +578,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ExtractorSuite">
+  <component name="RunManager" selected="Application.MainJava">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -845,8 +775,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ExtractorSuite" />
-        <item index="1" class="java.lang.String" itemvalue="Application.MainJava" />
+        <item index="0" class="java.lang.String" itemvalue="Application.MainJava" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ExtractorSuite" />
         <item index="2" class="java.lang.String" itemvalue="Application.Main" />
         <item index="3" class="java.lang.String" itemvalue="Application.Main (1)" />
         <item index="4" class="java.lang.String" itemvalue="Application.MainJava (1)" />
@@ -943,13 +873,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1522055766473</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Merged with margarida">
-      <created>1522080376548</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1522080376548</updated>
     </task>
     <task id="LOCAL-00013" summary="Implemented FileHandlerSuite.scala">
       <created>1522139071201</created>
@@ -1287,7 +1210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1522848890994</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="Implemented Choice factory method for creating scala-made OneOf and MultipleOf instace objects">
+      <created>1522853108810</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1522853108811</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1344,9 +1274,9 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.49791667" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19375" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19375" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="sbt-shell-toolwindow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1363,7 +1293,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implementing a Java interface for the API on reader module" />
     <MESSAGE value="Java interface for reader module done" />
     <MESSAGE value="Java interface for generator module done" />
     <MESSAGE value="Java interface for converter module done" />
@@ -1388,7 +1317,8 @@
     <MESSAGE value="Refactored POSTag and updated reader/README.md" />
     <MESSAGE value="removes xlst and xml add on files" />
     <MESSAGE value="Implemented tests for newest feature, and corrected bugs in OneOf and MultipleOf" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented tests for newest feature, and corrected bugs in OneOf and MultipleOf" />
+    <MESSAGE value="Implemented Choice factory method for creating scala-made OneOf and MultipleOf instace objects" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented Choice factory method for creating scala-made OneOf and MultipleOf instace objects" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1689,44 +1619,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reader/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="334">
-            <caret line="225" column="13" lean-forward="false" selection-start-line="225" selection-start-column="13" selection-end-line="233" selection-end-column="80" />
-            <folding>
-              <marker date="1522849033305" expanded="false" signature="2958:3011" ph="..." />
-              <marker date="1522849033305" expanded="false" signature="3139:3196" ph="..." />
-              <marker date="1522849033305" expanded="true" signature="3277:3454" ph="{...}" />
-              <marker date="1522849033305" expanded="false" signature="4952:5093" ph="..." />
-              <marker date="1522849033305" expanded="true" signature="5526:5804" ph="/.../" />
-              <marker date="1522849033305" expanded="true" signature="5777:5804" ph="/.../" />
-              <marker date="1522849033305" expanded="true" signature="5839:6021" ph="..." />
-              <marker date="1522849033305" expanded="true" signature="6102:6733" ph="{...}" />
-              <marker date="1522849033305" expanded="true" signature="6530:6722" ph="//..." />
-              <marker date="1522849033305" expanded="true" signature="7684:7791" ph="..." />
-              <marker date="1522849033305" expanded="true" signature="7684:7811" ph="..." />
-              <marker date="1522849033305" expanded="true" signature="8050:8223" ph="/.../" />
-              <marker date="1522849033305" expanded="true" signature="8258:8435" ph="..." />
-              <marker date="1522849033305" expanded="true" signature="8258:8439" ph="..." />
-              <marker date="1522849033305" expanded="true" signature="8520:9174" ph="{...}" />
-              <marker date="1522849033305" expanded="true" signature="8966:9163" ph="//..." />
-              <marker date="1522849033305" expanded="true" signature="9397:9526" ph="..." />
-              <marker date="1522849033305" expanded="true" signature="9766:9922" ph="/.../" />
-              <marker date="1522849033305" expanded="true" signature="9957:10138" ph="..." />
-              <marker date="1522849033305" expanded="true" signature="10219:10858" ph="{...}" />
-              <marker date="1522849033305" expanded="true" signature="10667:10847" ph="//..." />
-              <marker date="1522849033305" expanded="true" signature="11092:11213" ph="..." />
-              <marker date="1522849033305" expanded="true" signature="11453:11669" ph="/.../" />
-              <marker date="1522849033305" expanded="true" signature="11704:11886" ph="..." />
-              <marker date="1522849033305" expanded="true" signature="11967:12659" ph="{...}" />
-              <marker date="1522849033305" expanded="true" signature="12408:12648" ph="//..." />
-            </folding>
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/generator/src/main/java/generator/GeneratorJava.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="73">
@@ -1751,36 +1643,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/main/scala/Main.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/main/java/MainJava.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="33" lean-forward="false" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/utils/POSTag.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="187" column="5" lean-forward="false" selection-start-line="187" selection-start-column="5" selection-end-line="187" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1794,6 +1660,70 @@
             <element signature="e#520#521#0" expanded="true" />
             <element signature="e#580#581#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="187" column="5" lean-forward="false" selection-start-line="187" selection-start-column="5" selection-end-line="187" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="439">
+            <caret line="179" column="0" lean-forward="true" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
+            <folding>
+              <marker date="1522854149753" expanded="false" signature="2958:3011" ph="..." />
+              <marker date="1522854149753" expanded="false" signature="3139:3196" ph="..." />
+              <marker date="1522854149753" expanded="true" signature="3277:3454" ph="{...}" />
+              <marker date="1522854149753" expanded="true" signature="4952:5074" ph="..." />
+              <marker date="1522854149753" expanded="true" signature="5434:5600" ph="/.../" />
+              <marker date="1522854149753" expanded="true" signature="5574:5600" ph="/.../" />
+              <marker date="1522854149753" expanded="true" signature="5635:5817" ph="..." />
+              <marker date="1522854149753" expanded="true" signature="5898:6529" ph="{...}" />
+              <marker date="1522854149753" expanded="true" signature="6326:6518" ph="//..." />
+              <marker date="1522854149753" expanded="true" signature="7770:7911" ph="..." />
+              <marker date="1522854149753" expanded="true" signature="8299:8506" ph="/.../" />
+              <marker date="1522854149753" expanded="true" signature="8781:8888" ph="..." />
+              <marker date="1522854149753" expanded="true" signature="8781:8908" ph="..." />
+              <marker date="1522854149753" expanded="true" signature="9147:9320" ph="/.../" />
+              <marker date="1522854149753" expanded="true" signature="9355:9532" ph="..." />
+              <marker date="1522854149753" expanded="true" signature="9355:9536" ph="..." />
+              <marker date="1522854149753" expanded="true" signature="9617:10271" ph="{...}" />
+              <marker date="1522854149753" expanded="true" signature="10063:10260" ph="//..." />
+              <marker date="1522854149753" expanded="true" signature="10494:10623" ph="..." />
+              <marker date="1522854149753" expanded="true" signature="10863:11019" ph="/.../" />
+              <marker date="1522854149753" expanded="true" signature="11054:11235" ph="..." />
+              <marker date="1522854149753" expanded="true" signature="11316:11955" ph="{...}" />
+              <marker date="1522854149753" expanded="true" signature="11764:11944" ph="//..." />
+              <marker date="1522854149753" expanded="true" signature="12189:12310" ph="..." />
+              <marker date="1522854149753" expanded="true" signature="12550:12766" ph="/.../" />
+              <marker date="1522854149753" expanded="true" signature="12801:12983" ph="..." />
+              <marker date="1522854149753" expanded="true" signature="13064:13756" ph="{...}" />
+              <marker date="1522854149753" expanded="true" signature="13505:13745" ph="//..." />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/main/java/MainJava.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/main/scala/Main.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="11" column="87" lean-forward="false" selection-start-line="11" selection-start-column="87" selection-end-line="11" selection-end-column="87" />
+          <folding />
         </state>
       </provider>
     </entry>

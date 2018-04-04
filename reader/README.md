@@ -130,19 +130,19 @@ You can now implement the following snippet:
 ```scala
     import parser.extraction.Extractor.{readPDF, getJSONObjects}
     import java.io.File
-    import parser.utils.{ProperNoun, Number, OneOf, MultipleOf}
+    import parser.utils.{ProperNoun, Number}
     
     val file = new File("./path/to/pdf/document")
     val extractedText = readPDF(file)
     val oneOfList = List("single","married","divorced")
     val multiList = List("java","scala","c","php","sql")
-    val keywords = Map("name"-> ProperNoun(), "age" -> Number(), "marital status" -> OneOf(oneOfList), "skills" -> MultipleOf(multiList))
+    val keywords = Map("name"-> ProperNoun(), "age" -> Number())
     
     val jsonObjs : List[String] = getJSONObjects(extractedText, keywords)
     
     //jsonObjs -> List(
-    //                "{ "name" : "John Doe" , "age" : 21 , "marital status" : "single" , "skills" : "java, scala" }",
-    //                "{ "name" : "Jane Doe" , "age" : 22 , "marital status" : "married" , "skills" : "php, sql" }"
+    //                "{ "name" : "John Doe" , "age" : 21 }",
+    //                "{ "name" : "Jane Doe" , "age" : 22 }"
     //                )
 ```
 
@@ -187,6 +187,34 @@ Possibilities:
 This would return you a List of JSON objects in the form of Strings. Flipper also provides
 a more in-depth API in case you want a Map of keywords and the values found for them instead of a JSON object
 which we will see next.
+
+* #### Specifying values to find in the text
+
+In some cases you might want to specify certain possible values to be found in the text, if you want to find only one of 
+those possible values or multiple of them, you can achive that by using the **`OneOf`** / **`MultipleOf`** classes 
+(in **Java** you use the **`Choice`** factory class that has methods for creating these scala classes, but we'll get to that in a second).
+You only have to pass an additional List containing the **possible** values you want to find, like so: 
+
+### Scala
+
+```scala
+    import parser.extraction.Extractor.{readPDF, getJSONObjects}
+    import java.io.File
+    import parser.utils.{ProperNoun, Number, OneOf, MultipleOf}
+    
+    val file = new File("./path/to/pdf/document")
+    val extractedText = readPDF(file)
+    val oneOfList = List("single","married","divorced")
+    val multiList = List("java","scala","c","php","sql")
+    val keywords = Map("civil status"-> OneOf(oneOfList), "skills" -> MultipleOf(multiList))
+    
+    val jsonObjs : List[String] = getJSONObjects(extractedText, keywords)
+    
+    //jsonObjs -> List(
+    //                "{ "civil status" : "married" , "skills" : [java, c] }",
+    //                "{ "civil status" : "single" , "skills" : [scala, php, sql] }"
+    //                )
+```
 
 * #### Getting a Map of keywords and all the values found for them ####
 
