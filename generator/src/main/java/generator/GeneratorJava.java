@@ -3,6 +3,8 @@ package generator;
 import scala.collection.JavaConverters;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -15,7 +17,7 @@ public class GeneratorJava {
      * @param jsonMap - The Map to be converted into a PDF document
      * @return a Boolean saying if the conversion from Map to PDF was successful or not
      */
-    public Boolean convertMapToPDF(Map<String, List<String>> jsonMap){
+    public Boolean convertMapToPDF(Map<String, List<String>> jsonMap) {
         return Generator.convertMapToPDF(javaMapToScala(jsonMap));
     }
 
@@ -27,7 +29,7 @@ public class GeneratorJava {
      * @param cssFile - The additional CSS file to be included in the HTML file
      * @return a Boolean saying if the conversion from Map to PDF was successful or not
      */
-    public Boolean convertMapToPDF(Map<String,List<String>> jsonMap, File cssFile) {
+    public Boolean convertMapToPDF(Map<String, List<String>> jsonMap, File cssFile) {
         return Generator.convertMapToPDF(javaMapToScala(jsonMap), cssFile);
     }
 
@@ -39,7 +41,7 @@ public class GeneratorJava {
      * @param cssString - The additional String containing the the CSS to be included in the HTML file
      * @return a Boolean saying if the conversion from Map to PDF was successful or not
      */
-    public Boolean convertMapToPDF(Map<String,List<String>> jsonMap, String cssString) {
+    public Boolean convertMapToPDF(Map<String, List<String>> jsonMap, String cssString) {
         return Generator.convertMapToPDF(javaMapToScala(jsonMap), cssString);
     }
 
@@ -51,7 +53,7 @@ public class GeneratorJava {
      * @param config  - The config specifying simple styling details to be implemented in the PDF conversion
      * @return a Boolean saying if the conversion from Map to PDF was successful or not
      */
-    public Boolean convertMapToPDF(Map<String,List<String>> jsonMap, Config config) {
+    public Boolean convertMapToPDF(Map<String, List<String>> jsonMap, Config config) {
         return Generator.convertMapToPDF(javaMapToScala(jsonMap), config);
     }
 
@@ -108,8 +110,18 @@ public class GeneratorJava {
      * @param javaMap - Java method to be converted
      * @return a scala.collection.immutable.Map converted from the input Java Map
      */
-    private scala.collection.immutable.Map javaMapToScala (Map<String, List<String>> javaMap){
-        scala.collection.mutable.Map mutableMap = JavaConverters.mapAsScalaMapConverter(javaMap).asScala();
+    private scala.collection.immutable.Map javaMapToScala(Map<String, List<String>> javaMap) {
+        HashMap<String, scala.collection.immutable.List<String>> preScalaMap = new HashMap();
+        for (Map.Entry<String, List<String>> entry : javaMap.entrySet()) {
+
+            //Convert Java List<String> to a scala mutable Buffer
+            scala.collection.mutable.Buffer<String> scalaBuffer = JavaConverters.asScalaBuffer(entry.getValue());
+
+            //Convert scala mutable Buffer to a scala immutable List
+            scala.collection.immutable.List<String> scalaList = scalaBuffer.toList();
+            preScalaMap.put(entry.getKey(), scalaList);
+        }
+        scala.collection.mutable.Map mutableMap = JavaConverters.mapAsScalaMapConverter(preScalaMap).asScala();
 
         //Convert scala mutable map to scala immutable map by concatenating it with an empty immutable HashMap
         return new scala.collection.immutable.HashMap<>().$plus$plus(mutableMap);
