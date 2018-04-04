@@ -7,7 +7,7 @@
 		revision="0.1"
 		conf="compile"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20180403142004"/>
+		date="20180404091635"/>
 	<dependencies>
 		<module organisation="org.languagetool" name="language-pt">
 			<revision name="4.0" status="release" pubdate="20171229093429" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.languagetool.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="78">

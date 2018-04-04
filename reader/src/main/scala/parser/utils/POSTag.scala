@@ -5,8 +5,14 @@ trait Specification
 /**
   * Class that represents the users choice of passing a list of possible values for a given keyword
   */
-case class Options(keyword: String, possibilities: List[String]) extends Specification {
-  //  val selected : List[String]
+case class MultipleChoice(possibilities: List[String]) extends Specification {
+//  vav selected: List[String]  //TODO
+  val options: List[String] = possibilities
+}
+
+case class OneOff(possibilities: List[String]) extends Specification {
+//  val selected: String  //TODO
+  val options: List[String] = possibilities
 }
 
 /**
