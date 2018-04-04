@@ -7,10 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5115832d-4669-4625-b348-c310af38a585" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala" afterPath="$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala" />
-      <change beforePath="$PROJECT_DIR$/reader/src/main/scala/parser/utils/POSTag.scala" afterPath="$PROJECT_DIR$/reader/src/main/scala/parser/utils/POSTag.scala" />
-      <change beforePath="$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala" afterPath="$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/extraction/Extractor$.class" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/extraction/Extractor$.class" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/utils/POSTag.class" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/utils/POSTag.class" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/test-classes/parser/extraction/ExtractorSuite.class" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/test-classes/parser/extraction/ExtractorSuite.class" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -48,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExtractorSuite.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ExtractorSuite.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="640">
-              <caret line="62" column="13" lean-forward="true" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
+              <caret line="62" column="13" lean-forward="false" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
               <folding>
                 <element signature="e#27#46#0" expanded="true" />
               </folding>
@@ -60,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Extractor.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Extractor.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="962">
-              <caret line="94" column="11" lean-forward="false" selection-start-line="94" selection-start-column="11" selection-end-line="94" selection-end-column="11" />
+            <state relative-caret-position="331">
+              <caret line="89" column="29" lean-forward="false" selection-start-line="89" selection-start-column="26" selection-end-line="89" selection-end-column="29" />
               <folding>
                 <element signature="e#27#46#0" expanded="true" />
               </folding>
@@ -112,6 +113,7 @@
       <find>POST</find>
       <find>P</find>
       <find>OneOf</find>
+      <find>One</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -859,13 +861,6 @@
       <option name="presentableId" value="Default" />
       <updated>1522055766473</updated>
     </task>
-    <task id="LOCAL-00010" summary="Added new packages to generator and converter module">
-      <created>1522077613741</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1522077613741</updated>
-    </task>
     <task id="LOCAL-00011" summary="Updates">
       <created>1522078118137</created>
       <option name="number" value="00011" />
@@ -1202,7 +1197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1522835924773</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Implemented tests for newest feature, and corrected bugs in OneOf and MultipleOf">
+      <created>1522848661655</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1522848661655</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1311,7 +1313,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Working on implementing a Java interface for the API" />
     <MESSAGE value="Implementing a Java interface for the API on reader module" />
     <MESSAGE value="Java interface for reader module done" />
     <MESSAGE value="Java interface for generator module done" />
@@ -1336,7 +1337,8 @@
     <MESSAGE value="Modified POSTag logic (case classes instead of Enumeration) implemented Specification trait" />
     <MESSAGE value="Refactored POSTag and updated reader/README.md" />
     <MESSAGE value="removes xlst and xml add on files" />
-    <option name="LAST_COMMIT_MESSAGE" value="removes xlst and xml add on files" />
+    <MESSAGE value="Implemented tests for newest feature, and corrected bugs in OneOf and MultipleOf" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented tests for newest feature, and corrected bugs in OneOf and MultipleOf" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1593,32 +1595,32 @@
           <first_editor relative-caret-position="1282">
             <caret line="157" column="44" lean-forward="true" selection-start-line="157" selection-start-column="44" selection-end-line="157" selection-end-column="44" />
             <folding>
-              <marker date="1522773566586" expanded="false" signature="2958:3011" ph="..." />
-              <marker date="1522773566586" expanded="false" signature="3139:3196" ph="..." />
-              <marker date="1522773566586" expanded="true" signature="3277:3454" ph="{...}" />
-              <marker date="1522773566586" expanded="true" signature="4649:4751" ph="..." />
-              <marker date="1522773566586" expanded="true" signature="4649:4771" ph="..." />
-              <marker date="1522773566586" expanded="true" signature="5018:5184" ph="/.../" />
-              <marker date="1522773566586" expanded="true" signature="5219:5401" ph="..." />
-              <marker date="1522773566586" expanded="true" signature="5482:6113" ph="{...}" />
-              <marker date="1522773566586" expanded="true" signature="5910:6102" ph="//..." />
-              <marker date="1522773566586" expanded="true" signature="7064:7171" ph="..." />
-              <marker date="1522773566586" expanded="true" signature="7064:7191" ph="..." />
-              <marker date="1522773566586" expanded="true" signature="7430:7603" ph="/.../" />
-              <marker date="1522773566586" expanded="true" signature="7638:7815" ph="..." />
-              <marker date="1522773566586" expanded="true" signature="7638:7819" ph="..." />
-              <marker date="1522773566586" expanded="true" signature="7900:8554" ph="{...}" />
-              <marker date="1522773566586" expanded="true" signature="8346:8543" ph="//..." />
-              <marker date="1522773566586" expanded="true" signature="8777:8906" ph="..." />
-              <marker date="1522773566586" expanded="true" signature="9146:9302" ph="/.../" />
-              <marker date="1522773566586" expanded="true" signature="9337:9518" ph="..." />
-              <marker date="1522773566586" expanded="true" signature="9599:10238" ph="{...}" />
-              <marker date="1522773566586" expanded="true" signature="10047:10227" ph="//..." />
-              <marker date="1522773566586" expanded="true" signature="10472:10593" ph="..." />
-              <marker date="1522773566586" expanded="true" signature="10833:11049" ph="/.../" />
-              <marker date="1522773566586" expanded="true" signature="11084:11266" ph="..." />
-              <marker date="1522773566586" expanded="true" signature="11347:12039" ph="{...}" />
-              <marker date="1522773566586" expanded="true" signature="11788:12028" ph="//..." />
+              <marker date="1522848693577" expanded="false" signature="2958:3011" ph="..." />
+              <marker date="1522848693577" expanded="false" signature="3139:3196" ph="..." />
+              <marker date="1522848693577" expanded="true" signature="3277:3454" ph="{...}" />
+              <marker date="1522848693577" expanded="true" signature="4649:4751" ph="..." />
+              <marker date="1522848693577" expanded="true" signature="4649:4771" ph="..." />
+              <marker date="1522848693577" expanded="true" signature="5771:5798" ph="/.../" />
+              <marker date="1522848693577" expanded="true" signature="5833:6015" ph="..." />
+              <marker date="1522848693577" expanded="true" signature="6096:6727" ph="{...}" />
+              <marker date="1522848693577" expanded="true" signature="6524:6716" ph="//..." />
+              <marker date="1522848693577" expanded="true" signature="7678:7785" ph="..." />
+              <marker date="1522848693577" expanded="true" signature="7678:7805" ph="..." />
+              <marker date="1522848693577" expanded="true" signature="8044:8217" ph="/.../" />
+              <marker date="1522848693577" expanded="true" signature="8252:8429" ph="..." />
+              <marker date="1522848693577" expanded="true" signature="8252:8433" ph="..." />
+              <marker date="1522848693577" expanded="true" signature="8514:9168" ph="{...}" />
+              <marker date="1522848693577" expanded="true" signature="8960:9157" ph="//..." />
+              <marker date="1522848693577" expanded="true" signature="9391:9520" ph="..." />
+              <marker date="1522848693577" expanded="true" signature="9760:9916" ph="/.../" />
+              <marker date="1522848693577" expanded="true" signature="9951:10132" ph="..." />
+              <marker date="1522848693577" expanded="true" signature="10213:10852" ph="{...}" />
+              <marker date="1522848693577" expanded="true" signature="10661:10841" ph="//..." />
+              <marker date="1522848693577" expanded="true" signature="11086:11207" ph="..." />
+              <marker date="1522848693577" expanded="true" signature="11447:11663" ph="/.../" />
+              <marker date="1522848693577" expanded="true" signature="11698:11880" ph="..." />
+              <marker date="1522848693577" expanded="true" signature="11961:12653" ph="{...}" />
+              <marker date="1522848693577" expanded="true" signature="12402:12642" ph="//..." />
             </folding>
           </first_editor>
           <second_editor />
@@ -1711,20 +1713,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala">
+    <entry file="file://$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="962">
-          <caret line="94" column="11" lean-forward="false" selection-start-line="94" selection-start-column="11" selection-end-line="94" selection-end-column="11" />
+        <state relative-caret-position="640">
+          <caret line="62" column="13" lean-forward="false" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
           <folding>
             <element signature="e#27#46#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala">
+    <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="62" column="13" lean-forward="true" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
+        <state relative-caret-position="331">
+          <caret line="89" column="29" lean-forward="false" selection-start-line="89" selection-start-column="26" selection-end-line="89" selection-end-column="29" />
           <folding>
             <element signature="e#27#46#0" expanded="true" />
           </folding>
