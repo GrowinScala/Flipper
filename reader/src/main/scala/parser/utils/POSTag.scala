@@ -7,8 +7,11 @@ trait Specification
   * It represents the ability of return one or more values from the input possible values list
   *
   * @param possibilities - List of possible values to be found in the text
+  * @throws IllegalArgumentException If the possibilities list is empty
   */
+@throws[IllegalArgumentException]
 case class MultipleOf(possibilities: List[String]) extends Specification {
+  require(possibilities.nonEmpty)
   val options: List[String] = possibilities
 }
 
@@ -17,8 +20,11 @@ case class MultipleOf(possibilities: List[String]) extends Specification {
   * It represents the ability of returning only one of the values from the possible values list
   *
   * @param possibilities - List of possible values to be found in the text
+  * @throws IllegalArgumentException If the possibilities list is empty
   */
+@throws[IllegalArgumentException]
 case class OneOf(possibilities: List[String]) extends Specification {
+  require(possibilities.nonEmpty)
   val options: List[String] = possibilities
 }
 

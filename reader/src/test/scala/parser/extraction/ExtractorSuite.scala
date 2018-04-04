@@ -7,13 +7,16 @@ import org.scalatest.FunSuite
 import org.scalatest.Matchers._
 import org.scalatest.junit.JUnitRunner
 import parser.extraction.Extractor._
-import parser.utils.{Noun, Number, ProperNoun}
+import parser.utils._
 
 @RunWith(classOf[JUnitRunner])
 class ExtractorSuite extends FunSuite {
 
   val file = new File("./reader/src/main/resources/test.pdf")
   val text: Option[String] = readPDF(file)
+  val colorText = Some("In this example text we will want to find a specific color." +
+    " Here are some of the options: blue , red, green, orange." +
+    " These are just some examples.")
 
   /**
     * Tests if the result of calling getAllMatchedValues is correct or not
@@ -23,6 +26,51 @@ class ExtractorSuite extends FunSuite {
     val expectedValue = "Margarida Reis"
     if (matchedValues.isEmpty) fail("getAllMatchedValues returned an empty List")
     else assert(matchedValues.head._2.head == expectedValue)
+  }
+
+  /**
+    * Tests that passing a list of possible values to getAllMatchedValues will return one of the possibilities passed (assuming it exists in the text)
+    */
+  test("Find expected value from one of possible values") {
+    val matchedValues = getAllMatchedValues(colorText, Map("color" -> OneOf(List("blue", "red"))))
+    val expectedValue = "blue"
+    assert(matchedValues.head._2.head == expectedValue)
+  }
+
+  /**
+    * Tests that passing a list of possible values to getAllMatchedValues will return multiple of the possibilities passed (assuming it exists in the text)
+    */
+  test("Find expected values from multiple of possible values") {
+    val matchedValues = getAllMatchedValues(colorText, Map("color" -> MultipleOf(List("blue", "red"))))
+    val expectedValue = List("blue", "red")
+    matchedValues.head._2 should equal(expectedValue)
+  }
+
+  /**
+    * Tests that passing a list of possible values that don't exist in the text will return an empty list in both OneOf and MultipleOf
+    */
+  test("OneOf/MultipleOf does not find any value") {
+    val oneOfValues = getAllMatchedValues(colorText, Map("color" -> OneOf(List("does not exist"))))
+    val multipleValues = getAllMatchedValues(colorText, Map("color" -> MultipleOf(List("does not exist"))))
+    assert(oneOfValues.head._2.isEmpty && multipleValues.head._2.isEmpty)
+  }
+
+  /**
+    * Tests that passing a OneOf object with an empty possibilities list will result in an IllegalArgumentException
+    */
+  test("OneOf with an empty possibilities list") {
+    assertThrows[IllegalArgumentException] {
+      getAllMatchedValues(colorText, Map("color" -> OneOf(List())))
+    }
+  }
+
+  /**
+    * Tests that passing a MultipleOf object with an empty possibilities list will result in an IllegalArgumentException
+    */
+  test("MultipleOf with an empty possibilities list") {
+    assertThrows[IllegalArgumentException] {
+      getAllMatchedValues(colorText, Map("color" -> MultipleOf(List())))
+    }
   }
 
   /**
