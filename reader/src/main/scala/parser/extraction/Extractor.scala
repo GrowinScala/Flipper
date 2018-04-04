@@ -6,7 +6,7 @@ import java.text.Normalizer
 import parser.utils.ImageProcessing._
 import parser.utils.SpellChecker._
 import parser.utils.OpenNLP._
-import parser.utils.{MultipleChoice, OneOff, POSTag, Specification}
+import parser.utils._
 import org.apache.pdfbox.text.PDFTextStripper
 
 import scala.util.matching.Regex
@@ -85,9 +85,9 @@ object Extractor {
 
                 else findKeywordInText(key, tag, t) //to be changed, here we need to manually search for the keywords in the text
 
-              case multiOp: MultipleChoice =>
+              case multiOp: MultipleOf =>
                 (key,getOptions(text,key,multiOp.possibilities))
-              case oneOp: OneOff =>
+              case oneOp: OneOf =>
                 (key,getOptions(text,key,oneOp.possibilities))
             }
           }

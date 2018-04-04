@@ -3,15 +3,22 @@ package parser.utils
 trait Specification
 
 /**
-  * Class that represents the users choice of passing a list of possible values for a given keyword
+  * Class that represents the users choice of passing a list of possible values for a given keyword.
+  * It represents the ability of return one or more values from the input possible values list
+  *
+  * @param possibilities - List of possible values to be found in the text
   */
-case class MultipleChoice(possibilities: List[String]) extends Specification {
-//  vav selected: List[String]  //TODO
+case class MultipleOf(possibilities: List[String]) extends Specification {
   val options: List[String] = possibilities
 }
 
-case class OneOff(possibilities: List[String]) extends Specification {
-//  val selected: String  //TODO
+/**
+  * Class that represents the users choice of passing a list of possible values and
+  * It represents the ability of returning only one of the values from the possible values list
+  *
+  * @param possibilities - List of possible values to be found in the text
+  */
+case class OneOf(possibilities: List[String]) extends Specification {
   val options: List[String] = possibilities
 }
 

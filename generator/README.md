@@ -106,7 +106,7 @@ shows in **`./`**.
              l2.add("25");
              hm.put("age",l2);
              jsonMap.put("FistName LastName",lst);
-             boolean success = gj.convertMapToPDF(jsonMap);
+             boolean success = gj.convertMapToPDF(hm);
          }
     }
 ```
@@ -129,7 +129,7 @@ shows in **`./`**.
              l2.add("25");
              hm.put("age",l2);
              File cssFile = new File("CSSFile.css");
-             boolean success = gj.convertMapToPDF(jsonMap, cssFile);
+             boolean success = gj.convertMapToPDF(hm, cssFile);
          }
     }
 ```
@@ -151,7 +151,7 @@ shows in **`./`**.
              l2.add("25");
              hm.put("age",l2);
              String cssString = "p { color: green; }";
-             boolean success = gj.convertMapToPDF(jsonMap, cssString);
+             boolean success = gj.convertMapToPDF(hm, cssString);
          }
     }
 ```
@@ -182,7 +182,7 @@ shows in **`./`**.
                 If you only want to use a green color and leave all rest by default, you'd do:
                 Config config = new Config("green", -1.0, "", "", "");
               */
-             boolean success = gj.convertMapToPDF(jsonMap, cssString);
+             boolean success = gj.convertMapToPDF(hm, config);
          }
     }
 ```
@@ -289,7 +289,7 @@ shows in **`./`**.
                 If you only want to use a green color and leave all rest by default, you'd do:
                 Config config = new Config("green", -1.0, "", "", "");
               */
-             boolean success = gj.convertJSONtoPDF(json, cssString);
+             boolean success = gj.convertJSONtoPDF(json, config);
          }
     }
 ```

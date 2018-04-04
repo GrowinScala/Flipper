@@ -228,7 +228,7 @@ object Generator {
   private def createHtml(jsonMapOpt: Option[Map[String, Any]], cssString: String = ""): Option[String] = {
     jsonMapOpt match {
       case Some(jsonMap) =>
-        val kvParagraph = jsonMap.map { case (k, v) => p(k + " : " + v) }.toList
+        val kvParagraph = jsonMap.map { case (k, v) => p(k + " : " + printValue(v)) }.toList
 
         val htmlString =
           if (cssString.isEmpty) html(head(), body(kvParagraph)).toString //generate html code with no css
@@ -238,15 +238,39 @@ object Generator {
             s"$left <style> $cssString </style> $right" //creates the desired HTML code with a <style> tag containing the user-sent css
           }
 
-        val dir = new File("./target/htmlPages")
-        if (!dir.exists) dir.mkdirs
-        val filePath = "./target/htmlPages/" + System.nanoTime() + ".html"
-        val pw = new PrintWriter(new File(filePath)) //prints the HTML code to the html file
-        pw.write(htmlString)
-        pw.close()
+        val filePath = generateDocument(htmlString)
         Some(filePath)
       case None => None
     }
+  }
+
+  //name -> List(Joao, Margarida) , coreFavoritas -> List(List(azul, preto) , List(vermelho, verde))
+
+  /**
+    * Method that handles the writting of the HTML file and returns the file path of the generated file
+    *
+    * @param htmlString - HTML code (in a String) to be placed inside the HTML file
+    * @return the file path of the newly created HTML file
+    */
+  private def generateDocument(htmlString: String): String = {
+    val dir = new File("./target/htmlPages")
+    if (!dir.exists) dir.mkdirs
+    val filePath = "./target/htmlPages/" + System.nanoTime() + ".html"
+    val pw = new PrintWriter(new File(filePath)) //prints the HTML code to the html file
+    pw.write(htmlString)
+    pw.close()
+    filePath
+  }
+
+  /**
+    * Method that handles the output of the value passed in the Map[String, Any]
+    *
+    * @param value the value to be correctly displayed
+    * @return a String with the correct representation of the value passed
+    */
+  private def printValue(value: Any): String = value match {
+    case list: List[Any] => list.mkString("[", ",", "]")
+    case _ => value.toString
   }
 
   /**
