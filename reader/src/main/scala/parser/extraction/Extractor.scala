@@ -144,9 +144,9 @@ object Extractor {
       case Some(t) =>
         if (t.nonEmpty) {
           val matchedValues = getAllMatchedValues(text, keywords, clientRegEx)
-          val mostFound = matchedValues.filter(m => !isMulti(m._1,keywords)).maxBy(_._2.size)._2.size //Gets the size of the pair that has the most values
+          val mostFound = matchedValues.filter(m => !isMulti(m._1, keywords)).maxBy(_._2.size)._2.size //Gets the size of the pair that has the most values
           val mappedValues = for (i <- 0 until mostFound; (key, listMatched) <- matchedValues) yield {
-            if(isMulti(key,keywords) && listMatched.size>mostFound){
+            if (isMulti(key, keywords) && listMatched.size > mostFound) {
               val lst = listMatched.grouped(mostFound).toList
               lst(i)
             } else {
@@ -166,7 +166,7 @@ object Extractor {
     }
   }
 
-  private def isMulti(key: Keyword, keyList: Map[Keyword,Specification]): Boolean = {
+  private def isMulti(key: Keyword, keyList: Map[Keyword, Specification]): Boolean = {
     val spec = keyList.get(key)
     val multi: Boolean = spec match {
       case Some(s) =>
@@ -205,12 +205,12 @@ object Extractor {
     * @param keywords    - List containing all the keywords we want to find values for
     * @param flag        - Optional flag with information on how to return non-existing values
     * @param clientRegEx - Optional parameter - If the client already has a predefined Regular Expression for a given key
-    * @return a Single JSÕN string containing all the information
+    * @return a Single JSON string containing all the information
     */
-  def getJSONSingle(text:Option[String], keywords: Map[Keyword, Specification], flag: String = "empty",clientRegEx: Map[Keyword, Regex] = Map()): String ={
+  def getSingleJSON(text: Option[String], keywords: Map[Keyword, Specification], flag: String = "empty", clientRegEx: Map[Keyword, Regex] = Map()): String = {
     require(keywords.nonEmpty, "The list of keywords should not be empty")
-    val mp = getAllMatchedValues(text,keywords,clientRegEx)
-    makeJSONString(mp,flag)
+    val mp = getAllMatchedValues(text, keywords, clientRegEx)
+    makeJSONString(mp, flag)
   }
 
   /**
@@ -387,7 +387,7 @@ object Extractor {
         val tLower = t.toLowerCase
         val kLower = keyword.toLowerCase
         if (tLower.contains(kLower)) {
-            for (op <- opList if t.toLowerCase.contains(op.toLowerCase) ) yield op
+          for (op <- opList if t.toLowerCase.contains(op.toLowerCase)) yield op
         } else {
           List()
         }

@@ -57,7 +57,7 @@ abstract public class SpecificationJava {
                 return new Adverb(isMultiple);
 
             default:
-                return null; //Unreachle statement
+                return null; //Unreachle statement, means the user sent a null value
         }
     }
 

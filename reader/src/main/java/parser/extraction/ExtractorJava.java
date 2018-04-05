@@ -2,6 +2,7 @@ package parser.extraction;
 
 import java.util.*;
 
+import net.sourceforge.lept4j.ILeptonica;
 import parser.utils.Specification;
 import scala.Option;
 import scala.Some;
@@ -207,6 +208,60 @@ public class ExtractorJava {
         Option<String> textOpt = (text != null && !text.equals("")) ? Some.apply(text) : Option.apply(null);
         scala.collection.immutable.List result = Extractor.getJSONObjects(textOpt, keywordsToScala(keywords), flag, regexToScala(clientRegEx));
         return JavaConverters.seqAsJavaList(result);
+    }
+
+    /**
+     * Method that encapsulates the process of making a single JSON object from all the information found in the text for the given keywords.
+     * Method overload representing the users decision to not pass a String flag and a regex Map
+     *
+     * @param text     - Text in which to look for values for the specified keywords
+     * @param keywords - List containing all the keywords we want to find values for
+     * @return a Single JSON string containing all the information
+     */
+    public String getSingleJSON(String text, Map<String, Specification> keywords) throws IllegalArgumentException {
+        return getSingleJSON(text, keywords, "empty", new HashMap<>());
+    }
+
+    /**
+     * Method that encapsulates the process of making a single JSON object from all the information found in the text for the given keywords.
+     * This method overload represents the user decision to not pass an additional flag specifying how to output the values in case there is none for a given keyword
+     *
+     * @param text        - Text in which to look for values for the specified keywords
+     * @param keywords    - List containing all the keywords we want to find values for
+     * @param clientRegEx - Optional parameter - If the client already has a predefined Regular Expression for a given key
+     * @return a Single JSON string containing all the information
+     */
+    public String getSingleJSON(String text, Map<String, Specification> keywords, Map<String, String> clientRegEx) throws IllegalArgumentException {
+        return getSingleJSON(text, keywords, "empty", clientRegEx);
+    }
+
+    /**
+     * Method that encapsulates the process of making a single JSON object from all the information found in the text for the given keywords.
+     * This method overload represents the user decision of not passing an additional regex Map
+     *
+     * @param text     - Text in which to look for values for the specified keywords
+     * @param keywords - List containing all the keywords we want to find values for
+     * @param flag     - Optional parameter - flag with information on how to return non-existing values
+     * @return a Single JSON string containing all the information
+     */
+    public String getSingleJSON(String text, Map<String, Specification> keywords, String flag) throws IllegalArgumentException {
+        return getSingleJSON(text, keywords, flag, new HashMap<>());
+    }
+
+    /**
+     * Method that encapsulates the process of making a single JSON object from all the information found in the text for the given keywords.
+     *
+     * @param text        - Text in which to look for values for the specified keywords
+     * @param keywords    - List containing all the keywords we want to find values for
+     * @param flag        - Optional parameter - flag with information on how to return non-existing values
+     * @param clientRegEx - Optional parameter - If the client already has a predefined Regular Expression for a given key
+     * @return a Single JSON string containing all the information
+     */
+    public String getSingleJSON(String text, Map<String, Specification> keywords, String flag, Map<String, String> clientRegEx) throws IllegalArgumentException {
+        if (keywords.isEmpty())
+            throw new IllegalArgumentException("The list of keywords should not be empty");
+        Option<String> textOpt = (text != null && !text.equals("")) ? Some.apply(text) : Option.apply(null);
+        return Extractor.getSingleJSON(textOpt, keywordsToScala(keywords), flag, regexToScala(clientRegEx));
     }
 
     /**

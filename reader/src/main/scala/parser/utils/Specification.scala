@@ -39,18 +39,18 @@ case class Adjective(override val isMultiple: Boolean = false) extends POSTag(is
 
 case class ProperNoun(override val isMultiple: Boolean = false) extends POSTag(isMultiple, "PN")
 
-case class Noun(override val isMultiple: Boolean = false) extends POSTag(isMultiple,"N")
+case class Noun(override val isMultiple: Boolean = false) extends POSTag(isMultiple, "N")
 
-case class PluralNoun(override val isMultiple: Boolean = false) extends POSTag(isMultiple,"NPLR")
+case class PluralNoun(override val isMultiple: Boolean = false) extends POSTag(isMultiple, "NPLR")
 
-case class Verb(override val isMultiple: Boolean = false) extends POSTag(isMultiple,"VB")
+case class Verb(override val isMultiple: Boolean = false) extends POSTag(isMultiple, "VB")
 
-case class VerbPastParticiple(override val isMultiple: Boolean = false) extends POSTag(isMultiple,"VBN")
+case class VerbPastParticiple(override val isMultiple: Boolean = false) extends POSTag(isMultiple, "VBN")
 
-case class VerbGerund(override val isMultiple: Boolean = false) extends POSTag(isMultiple,"VBG")
+case class VerbGerund(override val isMultiple: Boolean = false) extends POSTag(isMultiple, "VBG")
 
-case class Number(override val isMultiple: Boolean = false) extends POSTag(isMultiple,"NUM")
+case class Number(override val isMultiple: Boolean = false) extends POSTag(isMultiple, "NUM")
 
-case class Adverb(override val isMultiple: Boolean = false) extends POSTag(isMultiple,"ADV")
+case class Adverb(override val isMultiple: Boolean = false) extends POSTag(isMultiple, "ADV")
 
 //TODO Support more POS tags
