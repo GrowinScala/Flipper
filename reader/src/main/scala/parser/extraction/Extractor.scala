@@ -143,15 +143,20 @@ object Extractor {
     text match {
       case Some(t) =>
         if (t.nonEmpty) {
-          val matchedValues /*Map[Keyword,Seq[String]]*/ = getAllMatchedValues(text, keywords, clientRegEx)
-          val mostFound = matchedValues.maxBy(_._2.size)._2.size //Gets the size of the pair that has the most values
-          val mappedValues = for (i <- 0 until mostFound; (_, listMatched) <- matchedValues) yield {
-            if (listMatched.size > i) //Prevent array out of bounds exception
-              List(listMatched(i))
-            else List()
+          val matchedValues = getAllMatchedValues(text, keywords, clientRegEx)
+          val mostFound = matchedValues.filter(m => !isMulti(m._1,keywords)).maxBy(_._2.size)._2.size //Gets the size of the pair that has the most values
+          val mappedValues = for (i <- 0 until mostFound; (key, listMatched) <- matchedValues) yield {
+            if(isMulti(key,keywords) && listMatched.size>mostFound){
+              val lst = listMatched.grouped(mostFound).toList
+              lst(i)
+            } else {
+              if (listMatched.size > i) //Prevent array out of bounds exception
+                List(listMatched(i))
+              else List()
+            }
           }
           val keywordList: List[String] = keywords.keys.toList
-          val joinedValues = mappedValues.zipWithIndex.map { case (key, index) => Map(keywordList(index % keywords.size) -> key) }.grouped(keywords.size).toList
+          val joinedValues = mappedValues.zipWithIndex.map { case (value, index) => Map(keywordList(index % keywords.size) -> value) }.grouped(keywords.size).toList
           joinedValues.map(_.flatten.toMap)
         }
         else {
@@ -161,6 +166,19 @@ object Extractor {
     }
   }
 
+  private def isMulti(key: Keyword, keyList: Map[Keyword,Specification]): Boolean = {
+    val spec = keyList.get(key)
+    val multi: Boolean = spec match {
+      case Some(s) =>
+        s match {
+          case pos: POSTag => pos.isMultiple
+          case mul: MultipleOf => mul.isMultiple
+          case one: OneOf => one.isMultiple
+        }
+      case None => false
+    }
+    multi
+  }
 
   /**
     * Method that encapsulates the entire process of finding values for the given keywords list and converting the MatchedPair type to a JSON Object

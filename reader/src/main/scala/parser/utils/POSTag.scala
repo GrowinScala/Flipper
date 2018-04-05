@@ -10,7 +10,7 @@ trait Specification
   * @throws IllegalArgumentException If the possibilities list is empty
   */
 @throws[IllegalArgumentException]
-case class MultipleOf(possibilities: List[String]) extends Specification {
+case class MultipleOf(possibilities: List[String], isMultiple: Boolean = false) extends Specification {
   require(possibilities.nonEmpty)
 }
 
@@ -22,35 +22,35 @@ case class MultipleOf(possibilities: List[String]) extends Specification {
   * @throws IllegalArgumentException If the possibilities list is empty
   */
 @throws[IllegalArgumentException]
-case class OneOf(possibilities: List[String]) extends Specification {
+case class OneOf(possibilities: List[String], isMultiple: Boolean = false) extends Specification {
   require(possibilities.nonEmpty)
 }
 
 /**
   * Enumeration for the standard POS tags which translate to both Portuguese and English
   */
-abstract class POSTag(val value: String) extends Specification
+abstract class POSTag(val isMultiple: Boolean, val value: String) extends Specification
 
 /*
    POSTag Subtypes, represents the different POSTag possibilities
  */
 
-case class Adjective() extends POSTag("ADJ")
+case class Adjective(override val isMultiple: Boolean = false) extends POSTag(isMultiple, "ADJ")
 
-case class ProperNoun() extends POSTag("PN")
+case class ProperNoun(override val isMultiple: Boolean = false) extends POSTag(isMultiple, "PN")
 
-case class Noun() extends POSTag("N")
+case class Noun(override val isMultiple: Boolean = false) extends POSTag(isMultiple,"N")
 
-case class PluralNoun() extends POSTag("NPLR")
+case class PluralNoun(override val isMultiple: Boolean = false) extends POSTag(isMultiple,"NPLR")
 
-case class Verb() extends POSTag("VB")
+case class Verb(override val isMultiple: Boolean = false) extends POSTag(isMultiple,"VB")
 
-case class VerbPastParticiple() extends POSTag("VBN")
+case class VerbPastParticiple(override val isMultiple: Boolean = false) extends POSTag(isMultiple,"VBN")
 
-case class VerbGerund() extends POSTag("VBG")
+case class VerbGerund(override val isMultiple: Boolean = false) extends POSTag(isMultiple,"VBG")
 
-case class Number() extends POSTag("NUM")
+case class Number(override val isMultiple: Boolean = false) extends POSTag(isMultiple,"NUM")
 
-case class Adverb() extends POSTag("ADV")
+case class Adverb(override val isMultiple: Boolean = false) extends POSTag(isMultiple,"ADV")
 
 //TODO Support more POS tags

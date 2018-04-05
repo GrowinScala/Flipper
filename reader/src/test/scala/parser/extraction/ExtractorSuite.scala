@@ -50,8 +50,8 @@ class ExtractorSuite extends FunSuite {
     * Tests that passing a list of possible values that don't exist in the text will return an empty list in both OneOf and MultipleOf
     */
   test("OneOf/MultipleOf does not find any value") {
-    val oneOfValues = getAllMatchedValues(colorText, Map("color" -> OneOf(List("does not exist"))))
-    val multipleValues = getAllMatchedValues(colorText, Map("color" -> MultipleOf(List("does not exist"))))
+    val oneOfValues = getAllMatchedValues(colorText, Map("color" -> OneOf( List("does not exist"))))
+    val multipleValues = getAllMatchedValues(colorText, Map("color" -> MultipleOf( List("does not exist"))))
     assert(oneOfValues.head._2.isEmpty && multipleValues.head._2.isEmpty)
   }
 
@@ -60,7 +60,7 @@ class ExtractorSuite extends FunSuite {
     */
   test("OneOf with an empty possibilities list") {
     assertThrows[IllegalArgumentException] {
-      getAllMatchedValues(colorText, Map("color" -> OneOf(List())))
+      getAllMatchedValues(colorText, Map("color" -> OneOf( List())))
     }
   }
 
@@ -69,7 +69,7 @@ class ExtractorSuite extends FunSuite {
     */
   test("MultipleOf with an empty possibilities list") {
     assertThrows[IllegalArgumentException] {
-      getAllMatchedValues(colorText, Map("color" -> MultipleOf(List())))
+      getAllMatchedValues(colorText, Map("color" -> MultipleOf( List())))
     }
   }
 
