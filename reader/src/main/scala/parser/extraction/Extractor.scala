@@ -179,6 +179,22 @@ object Extractor {
     objs.map(makeJSONString(_, flag))
   }
 
+
+  /**
+    * Method that encapsulates the process of making a single JSON object from all the information found in the text for the given keywords.
+    *
+    * @param text        - Text in which to look for values for the specified keywords
+    * @param keywords    - List containing all the keywords we want to find values for
+    * @param flag        - Optional flag with information on how to return non-existing values
+    * @param clientRegEx - Optional parameter - If the client already has a predefined Regular Expression for a given key
+    * @return a Single JSÕN string containing all the information
+    */
+  def getJSONSingle(text:Option[String], keywords: Map[Keyword, Specification], flag: String = "empty",clientRegEx: Map[Keyword, Regex] = Map()): String ={
+    require(keywords.nonEmpty, "The list of keywords should not be empty")
+    val mp = getAllMatchedValues(text,keywords,clientRegEx)
+    makeJSONString(mp,flag)
+  }
+
   /**
     * Method that given a List of pairs of keywords and their respective values will create a string in JSON format
     *
@@ -347,7 +363,7 @@ object Extractor {
     * @param opList  - List of options to choose from
     * @return - A list of all the matched options found
     */
-  def getOptions(text: Option[String], keyword: Keyword, opList: List[String]): List[String] = {
+  private def getOptions(text: Option[String], keyword: Keyword, opList: List[String]): List[String] = {
     text match {
       case Some(t) =>
         val tLower = t.toLowerCase
@@ -360,5 +376,4 @@ object Extractor {
       case None => List()
     }
   }
-
 }
