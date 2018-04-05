@@ -164,7 +164,7 @@ You can now implement the following snippet:
             keywords.put("name", new ProperNoun());
             keywords.put("age", new Number());
             
-            List jsonOBjs = ex.getJSONObjects(text, keywords);
+            List jsonOBjs = ex.getJSONObjects(extractedText, keywords);
             
             //jsonOBjs -> List(
             //                 "{ "name" : "John Doe" , "age" : 21 }",
@@ -219,7 +219,7 @@ You only have to pass an additional List containing the **possible** values you 
 ```java
     import parser.extraction.ExtractorJava;
     import java.io.File;
-    import parser.utils.Choices;
+    import parser.utils.SpecificationJava;
     import java.util.HashMap;
     import java.util.List;
     import java.util.ArrayList;
@@ -248,7 +248,7 @@ You only have to pass an additional List containing the **possible** values you 
             keywords.put("name", Choices.oneOf(oneOfList));
             keywords.put("age", Choices.multipleOf(multiList));
             
-            List jsonOBjs = ex.getJSONObjects(text, keywords);
+            List jsonOBjs = ex.getJSONObjects(extractedText, keywords);
             
             //jsonObjs -> List(
             //                "{ "civil status" : "married" , "skills" : [java, c] }",

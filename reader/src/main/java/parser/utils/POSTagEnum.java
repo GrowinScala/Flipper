@@ -1,0 +1,6 @@
+package parser.utils;
+
+public enum POSTagEnum {
+    ADJECTIVE, PROPERNOUN, NOUN, PLURALNOUN, VERB,
+    VERBPASTPARTICIPLE, VERBGERUND, NUMBER, ADVERB
+}
