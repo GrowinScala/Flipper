@@ -182,8 +182,56 @@ Possibilities:
 * "null" &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - `{ "name" : "John Doe", "age": null }`
 * "remove" &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - `{ "name" : "John Doe" }`
 
-This would return you a List of JSON objects in the form of Strings. Flipper also provides
-a more in-depth API in case you want a Map of keywords and the values found for them instead of a JSON object
+This would return you a List of JSON objects in the form of Strings. If the user wants a single JSON String with all the
+information, found the following function returns all the information found for each defined keyword in one single Json
+String.
+
+### Scala
+
+```scala
+    import parser.extraction.Extractor.{readPDF, getSingleJSON}
+    import java.io.File
+    import parser.utils.{ProperNoun, Number}
+    
+    val file = new File("./path/to/pdf/document")
+    val extractedText = readPDF(file)
+    val keywords = Map("name"-> ProperNoun(), "age" -> Number())
+    
+    val jsonObj : List[String] = getSingleJSON(extractedText, keywords)
+    
+    //jsonObj -> {"name" : ["John Doe", "Jane Doe"], "age" : [21, 25]}
+```
+
+### Java
+
+```java
+    import parser.extraction.ExtractorJava;
+    import java.io.File;
+    import parser.utils.Number;
+    import parser.utils.ProperNoun;
+    import java.util.HashMap;
+    import java.util.List;
+    
+    public class Example {
+         public static void main(String[] args) {
+            ExtractorJava ex = new ExtractorJava();
+            File file = new File("./path/to/pdf/document");
+            String extractedText = ex.readPDF(file);
+            
+            HashMap keywords = new HashMap<>();
+            keywords.put("name", new ProperNoun());
+            keywords.put("age", new Number());
+            
+            
+            List jsonOBjs = ex.getSingleJSON(text, keywords);
+            
+            //jsonOBj -> {"name" : ["John Doe", "Jane Doe"], "age" : [21, 25]}
+         }
+    }
+```
+
+
+Flipper also provides a more in-depth API in case you want a Map of keywords and the values found for them instead of a JSON object
 which we will see next.
 
 * #### Specifying values to find in the text
@@ -272,9 +320,7 @@ with that possibility through **`getAllMatchedValues`**.
     
     val file = new File("./path/to/pdf/document")
     val extractedText = readPDF(file)
-    val oneofLst = List("single","married","divorced")
-    val multiLst = List("java","scala","c","php","sql")
-    val keywords = Map("name"-> ProperNoun(), "age" -> Number(), "marital status" -> OneOf(oneofLst), "skills" -> MultipleOf(multiLst))
+    val keywords = Map("name"-> ProperNoun(), "age" -> Number())
     
     val matchedValues = getAllMatchedValues(extractedText, keywords) 
     //matchedValues -> Map(
@@ -326,9 +372,7 @@ This method works exactly like the one above but instead of returning every valu
     
     val file = new File("./path/to/pdf/document")
     val extractedText = readPDF(file)
-    val oneofLst = List("single","married","divorced")
-    val multiLst = List("java","scala","c","php","sql")
-    val keywords = Map("name"-> ProperNoun(), "age" -> Number(), "marital status" -> OneOf(oneofLst), "skills" -> MultipleOf(multiLst))
+    val keywords = Map("name"-> ProperNoun(), "age" -> Number())
     
     val matchedValues = getSingleMatchedValue(extractedText, keywords) 
     //matchedValues -> Map(
@@ -381,9 +425,7 @@ the given keywords.
     
     val filePath = new File("./path/to/pdf/document")
     val extractedText = readPDF(filePath)
-    val oneofLst = List("single","married","divorced")
-    val multiLst = List("java","scala","c","php","sql")
-    val keywords = Map("name"-> ProperNoun(), "age" -> Number(), "marital status" -> OneOf(oneofLst), "skills" -> MultipleOf(multiLst))
+    val keywords = Map("name"-> ProperNoun(), "age" -> Number())
     
     val matchedValues = getAllObjects(extractedText, keywords) 
     //matchedValues -> List(

@@ -166,7 +166,15 @@ object Extractor {
     }
   }
 
-  private def isMulti(key: Keyword, keyList: Map[Keyword, Specification]): Boolean = {
+
+  /**
+    * Method that chack if a keyword was passed with a isMultiple flag by the user
+    *
+    * @param key     - Keyword to check if the flag was sent with true
+    * @param keyList - Map of the keywords with the original information passed by the user
+    * @return the flag of the keyword
+    */
+  private def isMulti(key: Keyword, keyList: Map[Keyword,Specification]): Boolean = {
     val spec = keyList.get(key)
     val multi: Boolean = spec match {
       case Some(s) =>
