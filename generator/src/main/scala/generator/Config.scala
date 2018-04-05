@@ -16,17 +16,3 @@ private[generator] case class Config(
                                       var fontFamily: String = "",
                                       var fontWeight: String = ""
                                     )
-
-//In case we want Java to act like it has default parameter values
-
-//  this.setTextColor(textColor)
-//  this.setFontSize(fontSize)
-//  this.setTextAlignment(textAlignment)
-//  this.setFontFamily(fontFamily)
-//  this.setFontWeight(fontWeight)
-//
-//  def setTextColor(textColor: String): Unit = if (textColor == null) this.textColor = ""
-//
-//  def setFontSize(fontSize: Double): Unit = if (fontSize == null) this.fontSize = -1.0
-
-

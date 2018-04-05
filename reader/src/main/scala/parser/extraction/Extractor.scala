@@ -86,9 +86,11 @@ object Extractor {
                 else findKeywordInText(key, tag, t) //to be changed, here we need to manually search for the keywords in the text
 
               case multiOp: MultipleOf =>
-                (key,getOptions(text,key,multiOp.possibilities))
+                (key, getOptions(text, key, multiOp.possibilities))
               case oneOp: OneOf =>
-                (key,getOptions(text,key,oneOp.possibilities))
+                val valuesFound = getOptions(text, key, oneOp.possibilities)
+                if (valuesFound.nonEmpty) (key, List(valuesFound.head))
+                else (key, List())
             }
           }
           filterNewLines(matched)
@@ -142,14 +144,19 @@ object Extractor {
       case Some(t) =>
         if (t.nonEmpty) {
           val matchedValues = getAllMatchedValues(text, keywords, clientRegEx)
-          val mostFound = matchedValues.maxBy(_._2.size)._2.size //Gets the size of the pair that has the most values
-          val mappedValues = for (i <- 0 until mostFound; (_, listMatched) <- matchedValues) yield {
-            if (listMatched.size > i) //Prevent array out of bounds exception
-              List(listMatched(i))
-            else List()
+          val mostFound = matchedValues.filter(m => !isMulti(m._1, keywords)).maxBy(_._2.size)._2.size //Gets the size of the pair that has the most values
+          val mappedValues = for (i <- 0 until mostFound; (key, listMatched) <- matchedValues) yield {
+            if (isMulti(key, keywords) && listMatched.size > mostFound) {
+              val lst = listMatched.grouped(mostFound).toList
+              lst(i)
+            } else {
+              if (listMatched.size > i) //Prevent array out of bounds exception
+                List(listMatched(i))
+              else List()
+            }
           }
           val keywordList: List[String] = keywords.keys.toList
-          val joinedValues = mappedValues.zipWithIndex.map { case (key, index) => Map(keywordList(index % keywords.size) -> key) }.grouped(keywords.size).toList
+          val joinedValues = mappedValues.zipWithIndex.map { case (value, index) => Map(keywordList(index % keywords.size) -> value) }.grouped(keywords.size).toList
           joinedValues.map(_.flatten.toMap)
         }
         else {
@@ -159,6 +166,27 @@ object Extractor {
     }
   }
 
+
+  /**
+    * Method that chack if a keyword was passed with a isMultiple flag by the user
+    *
+    * @param key     - Keyword to check if the flag was sent with true
+    * @param keyList - Map of the keywords with the original information passed by the user
+    * @return the flag of the keyword
+    */
+  private def isMulti(key: Keyword, keyList: Map[Keyword,Specification]): Boolean = {
+    val spec = keyList.get(key)
+    val multi: Boolean = spec match {
+      case Some(s) =>
+        s match {
+          case pos: POSTag => pos.isMultiple
+          case mul: MultipleOf => mul.isMultiple
+          case one: OneOf => one.isMultiple
+        }
+      case None => false
+    }
+    multi
+  }
 
   /**
     * Method that encapsulates the entire process of finding values for the given keywords list and converting the MatchedPair type to a JSON Object
@@ -175,6 +203,22 @@ object Extractor {
     require(keywords.nonEmpty, "The list of keywords should not be empty")
     val objs = getAllObjects(text, keywords, clientRegEx)
     objs.map(makeJSONString(_, flag))
+  }
+
+
+  /**
+    * Method that encapsulates the process of making a single JSON object from all the information found in the text for the given keywords.
+    *
+    * @param text        - Text in which to look for values for the specified keywords
+    * @param keywords    - List containing all the keywords we want to find values for
+    * @param flag        - Optional flag with information on how to return non-existing values
+    * @param clientRegEx - Optional parameter - If the client already has a predefined Regular Expression for a given key
+    * @return a Single JSON string containing all the information
+    */
+  def getSingleJSON(text: Option[String], keywords: Map[Keyword, Specification], flag: String = "empty", clientRegEx: Map[Keyword, Regex] = Map()): String = {
+    require(keywords.nonEmpty, "The list of keywords should not be empty")
+    val mp = getAllMatchedValues(text, keywords, clientRegEx)
+    makeJSONString(mp, flag)
   }
 
   /**
@@ -338,23 +382,24 @@ object Extractor {
   }
 
   /**
-    * Find in text one or more of the options from keyword
-    * @param text
-    * @param keyword
-    * @param opList
-    * @return
+    * Find in text one or more of the options given by the user realted to the keyword
+    *
+    * @param text    - The text in which to look for the value
+    * @param keyword - The keyword to find the value for
+    * @param opList  - List of options to choose from
+    * @return - A list of all the matched options found
     */
-  def getOptions(text: Option[String], keyword: Keyword, opList:List[String]): List[String] = {
+  private def getOptions(text: Option[String], keyword: Keyword, opList: List[String]): List[String] = {
     text match {
       case Some(t) =>
-        if (t.toLowerCase.contains(keyword.toLowerCase)) {
-          val found = for (op <- opList if t.toLowerCase.contains(op.toLowerCase) ) yield op
-          found
+        val tLower = t.toLowerCase
+        val kLower = keyword.toLowerCase
+        if (tLower.contains(kLower)) {
+            for (op <- opList if t.toLowerCase.contains(op.toLowerCase) ) yield op
         } else {
           List()
         }
       case None => List()
     }
   }
-
 }
