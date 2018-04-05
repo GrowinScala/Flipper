@@ -19,7 +19,7 @@ object Main {
     //    val options = getOptions(text,"skills",List("Bla","Ble","Bli","Blo","Blu"))
     //    options.foreach(println(_))
 
-    val list = getAllObjects(text,keywords)
+    val list = getJSONSingle(text,keywords)
 
     println(list)
 //    println(("\n").r.findAllMatchIn(text.get).length)

@@ -166,6 +166,14 @@ object Extractor {
     }
   }
 
+
+  /**
+    * Method that chack if a keyword was passed with a isMultiple flag by the user
+    *
+    * @param key     - Keyword to check if the flag was sent with true
+    * @param keyList - Map of the keywords with the original information passed by the user
+    * @return the flag of the keyword
+    */
   private def isMulti(key: Keyword, keyList: Map[Keyword,Specification]): Boolean = {
     val spec = keyList.get(key)
     val multi: Boolean = spec match {
@@ -205,7 +213,7 @@ object Extractor {
     * @param keywords    - List containing all the keywords we want to find values for
     * @param flag        - Optional flag with information on how to return non-existing values
     * @param clientRegEx - Optional parameter - If the client already has a predefined Regular Expression for a given key
-    * @return a Single JSÕN string containing all the information
+    * @return a Single JSON string containing all the information
     */
   def getJSONSingle(text:Option[String], keywords: Map[Keyword, Specification], flag: String = "empty",clientRegEx: Map[Keyword, Regex] = Map()): String ={
     require(keywords.nonEmpty, "The list of keywords should not be empty")
