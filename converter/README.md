@@ -15,11 +15,11 @@ The present file documents the Converter module.
   
    ```
    converter/
-             ├── java/parser/conversion/
-             |                          └── ConverterJava.java  ; Java interface for this module's API
+             ├─── java/parser/conversion/
+             |                           └── ConverterJava.java  ; Java interface for this module's API
              └── scala/parser/conversion/
-                                         ├── FileType.scala     ; Enum for the supported file type conversions
-                                         └── Converter.scala    ; Handles the conversion of PDF into other file types
+                                         ├── FileType.scala      ; Enum for the supported file type conversions
+                                         └── Converter.scala     ; Handles the conversion of PDF into other file types
    ```
 ---
 

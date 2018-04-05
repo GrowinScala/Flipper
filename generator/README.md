@@ -16,12 +16,12 @@ The present file documents the Generator module.
   
    ```
    generator/
-             ├── java/generator/
-             |                  └── GeneratorJava.java ; Java interface for this module's API
-             └──scala/generator/
-                                ├── Config.scala       ; Configuration object for styling the converted PDF
-                                ├── FileHandler.scala  ; Handles the file inputs
-                                └── Generator.scala    ; Handles the generation of PDF documents from JSON
+             ├─── java/generator/
+             |                   └── GeneratorJava.java ; Java interface for this module's API
+             └── scala/generator/
+                                 ├── Config.scala       ; Configuration object for styling the converted PDF
+                                 ├── FileHandler.scala  ; Handles the file inputs
+                                 └── Generator.scala    ; Handles the generation of PDF documents from JSON
    ``` 
    
 ---

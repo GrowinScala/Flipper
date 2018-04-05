@@ -395,7 +395,7 @@ object Extractor {
         val tLower = t.toLowerCase
         val kLower = keyword.toLowerCase
         if (tLower.contains(kLower)) {
-          for (op <- opList if t.toLowerCase.contains(op.toLowerCase)) yield op
+            for (op <- opList if t.toLowerCase.contains(op.toLowerCase) ) yield op
         } else {
           List()
         }
