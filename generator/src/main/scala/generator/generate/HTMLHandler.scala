@@ -1,15 +1,17 @@
-package generator
+package generator.generate
 
-import generator.Generator.Keyword
+import generator.generate.Generator.Keyword
 import scalatags.Text.all._
+import generator.utils._
 
 /**
   * Singleton object that handles all the HTML manipulation functionalities
   */
-private[generator] object HTMLHandler {
+private[generate] object HTMLHandler {
 
   /**
-    * Method used to create the HTML string to be converted into a HTML file and then to a PDF file
+    * Method that calls createHTML, passing to it a Map object with information regarding the content to be displayed
+    * in the HTML/PDF file, and a CSS String with CSS code specifying how that content should be displayed
     *
     * @param content   - An object containing all the keywords and their Content(a object containig fieldName, fieldValue and formattingType)
     * @param cssString - A String containing CSS code to be added to the HTML file
@@ -20,22 +22,37 @@ private[generator] object HTMLHandler {
   }
 
   /**
-    * Method used to create the HTML string to be converted into a HTML file and then to a PDF file
+    * Auxliary method used to create the CSS string from the users input information
     *
-    * @param content    - An object containing all the keywords and their Content(a object containig fieldName, fieldValue and formattingType)
-    * @param formatting - An object containing all the user defined formattings specifying how each keyword in the content object
-    *                   should be displayed
-    * @return a String containing all the HTML code to be converted into an HTML file
+    * @param content    - a Map of keywords and Content objects that describe how that keyword should be represented
+    * @param formatting - a Map of String (formattingID) to Config objects that specify how that particular formattingID should be displayed
+    * @return the CSS String created from the input information
     */
-  def writeHTMLString(content: Map[Keyword, Content], formatting: Map[String, Config]): String = {
-    createHTML(content, createCssString(content, formatting))
+  def createCssString(content: Map[Keyword, Content], formatting: Map[String, Config]): String = {
+    val cssList = for ((_, value) <- content) yield {
+      if (value.cssClass.nonEmpty) {
+        formatting.get(value.cssClass) match {
+          case Some(config) =>
+            "." + value.cssClass + "{" +
+              " color: " + config.textColor + ";" +
+              " text-align: " + config.textAlignment + ";" +
+              " font-weight: " + config.fontWeight + ";" +
+              " font-family: " + config.fontFamily + ";" +
+              " font-size: " + config.fontSize + "pt;" +
+              "} "
+          case None => ""
+        }
+      } else ""
+    }
+    cssList.toList.mkString("")
   }
 
   /**
+    * Method used to create the HTML string to be converted into a HTML file and then to a PDF file
     *
-    * @param content
-    * @param cssString
-    * @return
+    * @param content   - An object containing all the keywords and their Content(a object containig fieldName, fieldValue and formattingType)
+    * @param cssString - A String containing the CSS code to be added to the HTML file
+    * @return a String containing all the HTML code to be converted into an HTML file
     */
   private def createHTML(content: Map[Keyword, Content], cssString: String): String = {
     //Iterate through all the keywords (and their values) and create the respective HTML tag for each of them
@@ -81,32 +98,6 @@ private[generator] object HTMLHandler {
 
       case _: Table => h1() //TODO finish this
     }
-  }
-
-  /**
-    * Auxliary method used to create the CSS string from the users input information
-    *
-    * @param content    - a Map of keywords and Content objects that describe how that keyword should be represented
-    * @param formatting - a Map of String (formattingID) to Config objects that specify how that particular formattingID should be displayed
-    * @return the CSS String created from the input information
-    */
-  private def createCssString(content: Map[Keyword, Content], formatting: Map[String, Config]): String = {
-    val cssList = for ((_, value) <- content) yield {
-      if (value.cssClass.nonEmpty) {
-        formatting.get(value.cssClass) match {
-          case Some(config) =>
-            "." + value.cssClass + "{" +
-              " color: " + config.textColor + ";" +
-              " text-align: " + config.textAlignment + ";" +
-              " font-weight: " + config.fontWeight + ";" +
-              " font-family: " + config.fontFamily + ";" +
-              " font-size: " + config.fontSize + "pt;" +
-              "} "
-          case None => ""
-        }
-      } else ""
-    }
-    cssList.toList.mkString("")
   }
 
   /**

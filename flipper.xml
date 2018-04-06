@@ -11,7 +11,7 @@
   <!-- Compiler options -->
   
   <property name="compiler.debug" value="on"/>
-  <property name="compiler.generate.no.warnings" value="off"/>
+  <property name="compiler.generator.generate.no.warnings" value="off"/>
   <property name="compiler.args" value=""/>
   <property name="compiler.max.memory" value="700m"/>
   <patternset id="ignored.files">
@@ -470,7 +470,7 @@
   
   <!-- Module generator -->
   
-  <dirname property="module.generator.basedir" file="${ant.file}"/>
+  <dirname property="module.generator.generate.basedir" file="${ant.file}"/>
   
   
   <property name="module.jdk.home.generator" value="${project.jdk.home}"/>
@@ -479,14 +479,14 @@
   
   <property name="compiler.args.generator" value="-encoding UTF-8 -source 1.8 -target 1.8 ${compiler.args}"/>
   
-  <property name="generator.output.dir" value="${module.generator.basedir}/generator/target/scala-2.12/classes"/>
-  <property name="generator.testoutput.dir" value="${module.generator.basedir}/generator/target/scala-2.12/test-classes"/>
+  <property name="generator.generate.output.dir" value="${module.generator.basedir}/generator/target/scala-2.12/classes"/>
+  <property name="generator.generate.testoutput.dir" value="${module.generator.basedir}/generator/target/scala-2.12/test-classes"/>
   
-  <path id="generator.module.bootclasspath">
+  <path id="generator.generate.module.bootclasspath">
     <!-- Paths to be included in compilation bootclasspath -->
   </path>
   
-  <path id="generator.module.production.classpath">
+  <path id="generator.generate.module.production.classpath">
     <path refid="${module.jdk.classpath.generator}"/>
     <path refid="library.sbt:_ar.com.hjg:pngj:2.1.0:jar.classpath"/>
     <path refid="library.sbt:_ch.qos.logback:logback-classic:1.2.3:jar.classpath"/>
@@ -575,7 +575,7 @@
     <path refid="library.sbt:_xml-apis:xml-apis:1.4.01:jar.classpath"/>
   </path>
   
-  <path id="generator.runtime.production.module.classpath">
+  <path id="generator.generate.runtime.production.module.classpath">
     <pathelement location="${generator.output.dir}"/>
     <path refid="library.sbt:_ar.com.hjg:pngj:2.1.0:jar.classpath"/>
     <path refid="library.sbt:_ch.qos.logback:logback-classic:1.2.3:jar.classpath"/>
@@ -664,7 +664,7 @@
     <path refid="library.sbt:_xml-apis:xml-apis:1.4.01:jar.classpath"/>
   </path>
   
-  <path id="generator.module.classpath">
+  <path id="generator.generate.module.classpath">
     <path refid="${module.jdk.classpath.generator}"/>
     <pathelement location="${generator.output.dir}"/>
     <path refid="library.sbt:_ar.com.hjg:pngj:2.1.0:jar.classpath"/>
@@ -759,7 +759,7 @@
     <path refid="library.sbt:_xml-apis:xml-apis:1.4.01:jar.classpath"/>
   </path>
   
-  <path id="generator.runtime.module.classpath">
+  <path id="generator.generate.runtime.module.classpath">
     <pathelement location="${generator.testoutput.dir}"/>
     <pathelement location="${generator.output.dir}"/>
     <path refid="library.sbt:_ar.com.hjg:pngj:2.1.0:jar.classpath"/>
@@ -863,13 +863,13 @@
     <patternset refid="excluded.from.module.generator"/>
   </patternset>
   
-  <path id="generator.module.sourcepath">
+  <path id="generator.generate.module.sourcepath">
     <dirset dir="${module.generator.basedir}/generator">
       <include name="src/main/scala"/>
     </dirset>
   </path>
   
-  <path id="generator.module.test.sourcepath">
+  <path id="generator.generate.module.test.sourcepath">
     <dirset dir="${module.generator.basedir}/generator">
       <include name="src/test/scala"/>
     </dirset>
@@ -878,13 +878,13 @@
   
   <target name="compile.module.generator" depends="compile.module.generator.production,compile.module.generator.tests" description="Compile module generator"/>
   
-  <target name="compile.module.generator.production" depends="register.custom.compilers" description="Compile module generator; production classes">
+  <target name="compile.module.generator.generate.production" depends="register.custom.compilers" description="Compile module generator; production classes">
     <mkdir dir="${generator.output.dir}"/>
-    <javac2 destdir="${generator.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.generator}/javac">
+    <javac2 destdir="${generator.generate.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generator.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.generator}/javac">
       <compilerarg line="${compiler.args.generator}"/>
-      <bootclasspath refid="generator.module.bootclasspath"/>
-      <classpath refid="generator.module.production.classpath"/>
-      <src refid="generator.module.sourcepath"/>
+      <bootclasspath refid="generator.generate.module.bootclasspath"/>
+      <classpath refid="generator.generate.module.production.classpath"/>
+      <src refid="generator.generate.module.sourcepath"/>
       <patternset refid="excluded.from.compilation.generator"/>
     </javac2>
     
@@ -896,13 +896,13 @@
     </copy>
   </target>
   
-  <target name="compile.module.generator.tests" depends="register.custom.compilers,compile.module.generator.production" description="compile module generator; test classes" unless="skip.tests">
+  <target name="compile.module.generator.generate.tests" depends="register.custom.compilers,compile.module.generator.production" description="compile module generator; test classes" unless="skip.tests">
     <mkdir dir="${generator.testoutput.dir}"/>
-    <javac2 destdir="${generator.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.generator}/javac">
+    <javac2 destdir="${generator.generate.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generator.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.generator}/javac">
       <compilerarg line="${compiler.args.generator}"/>
-      <bootclasspath refid="generator.module.bootclasspath"/>
-      <classpath refid="generator.module.classpath"/>
-      <src refid="generator.module.test.sourcepath"/>
+      <bootclasspath refid="generator.generate.module.bootclasspath"/>
+      <classpath refid="generator.generate.module.classpath"/>
+      <src refid="generator.generate.module.test.sourcepath"/>
       <patternset refid="excluded.from.compilation.generator"/>
     </javac2>
     
@@ -1332,7 +1332,7 @@
   
   <target name="compile.module.reader.production" depends="register.custom.compilers" description="Compile module reader; production classes">
     <mkdir dir="${reader.output.dir}"/>
-    <javac2 destdir="${reader.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.reader}/javac">
+    <javac2 destdir="${reader.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generator.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.reader}/javac">
       <compilerarg line="${compiler.args.reader}"/>
       <bootclasspath refid="reader.module.bootclasspath"/>
       <classpath refid="reader.module.production.classpath"/>
@@ -1350,7 +1350,7 @@
   
   <target name="compile.module.reader.tests" depends="register.custom.compilers,compile.module.reader.production" description="compile module reader; test classes" unless="skip.tests">
     <mkdir dir="${reader.testoutput.dir}"/>
-    <javac2 destdir="${reader.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.reader}/javac">
+    <javac2 destdir="${reader.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generator.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.reader}/javac">
       <compilerarg line="${compiler.args.reader}"/>
       <bootclasspath refid="reader.module.bootclasspath"/>
       <classpath refid="reader.module.classpath"/>
@@ -2251,7 +2251,7 @@
   
   <target name="compile.module.root-build.production" depends="register.custom.compilers" description="Compile module root-build; production classes">
     <mkdir dir="${root-build.output.dir}"/>
-    <javac2 destdir="${root-build.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.root-build}/javac">
+    <javac2 destdir="${root-build.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generator.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.root-build}/javac">
       <compilerarg line="${compiler.args.root-build}"/>
       <bootclasspath refid="root-build.module.bootclasspath"/>
       <classpath refid="root-build.module.production.classpath"/>
@@ -2692,7 +2692,7 @@
   
   <target name="compile.module.converter.production" depends="register.custom.compilers,compile.module.reader" description="Compile module converter; production classes">
     <mkdir dir="${converter.output.dir}"/>
-    <javac2 destdir="${converter.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.converter}/javac">
+    <javac2 destdir="${converter.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generator.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.converter}/javac">
       <compilerarg line="${compiler.args.converter}"/>
       <bootclasspath refid="converter.module.bootclasspath"/>
       <classpath refid="converter.module.production.classpath"/>
@@ -2710,7 +2710,7 @@
   
   <target name="compile.module.converter.tests" depends="register.custom.compilers,compile.module.converter.production" description="compile module converter; test classes" unless="skip.tests">
     <mkdir dir="${converter.testoutput.dir}"/>
-    <javac2 destdir="${converter.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.converter}/javac">
+    <javac2 destdir="${converter.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generator.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.converter}/javac">
       <compilerarg line="${compiler.args.converter}"/>
       <bootclasspath refid="converter.module.bootclasspath"/>
       <classpath refid="converter.module.classpath"/>

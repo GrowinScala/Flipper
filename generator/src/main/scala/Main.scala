@@ -1,15 +1,19 @@
-import generator._
+import generator.utils._
+import generator.generate.Generator._
 
 object Main {
 
-  import generator.Generator._
 
   def main(args: Array[String]): Unit = {
-    val content = Map("name" -> Content("name", "joni", "bigHeader"), "age" -> Content("age", List(20, 30, 40, 50, 60, 70), "small"))
+    val content = Map("name" -> Content("name", "joni", H1(), "bigHeader"), "age" -> Content("age", List(20, 30, 40, 50, 60, 70), OrderedList(), "small"))
+    val cssString = ".bigHeader{ color: blue; font-size: 20pt; text-align : center; font-family: corbel, font-weight: bold} .small{ color: red; font-size: 10pt}"
     val formatting =
-      Map("bigHeader" -> Config(H1(), "blue", 20, "center", "corbel", "bold"),
-        "small" -> Config(OrderedList(), "red", 10))
+      Map("bigHeader" -> Config("blue", 20, "center", "corbel", "bold"),
+        "small" -> Config("red", 10))
 
-    println(convertMapToPDF(content, formatting))
+    println(convertMapToPDF(content, cssString))
+
+    //    val json = """{ "name" : { "fieldName" : "name", "fieldValue" : "something", "HTMLTag" : "H1", "cssClass" : "asd"}}"""
+    //    println(convertJSONtoMap(json))
   }
 }

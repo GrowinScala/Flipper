@@ -19,14 +19,14 @@ The present file documents the Reader module.
          ├─── java/parser/
          |                ├── extraction/
          |                |              └── ExtractorJava.java      ; Java interface for this module's API
-         |                └─────── utils/
+         |                └─────── generator.utils/
          |                               ├── POSTagEnum.java         ; Enum for the possible POST tag values
          |                               └── SpecificationJava.java  ; Factory class that creates scala-made Sepcification objects
          └── scala/parser/
                           ├── extraction/
                           |              ├── Extractor.scala         ; Handles the PDF parsing and JSON generation
                           |              └── FileHandler.scala       ; Handles the file inputs
-                          └─────── utils/                
+                          └─────── generator.utils/
                                          ├── ImageProcessing.scala   ; Handles processing the image and extract its text
                                          ├── OpenNLP.scala           ; Handles the NLP (natural language processing) functionalities
                                          ├── Specification.scala     ; Classes that help specify the keywords sent when extracting information
@@ -139,7 +139,7 @@ You can now implement the following snippet:
 ```scala
     import parser.extraction.Extractor.{readPDF, getJSONObjects}
     import java.io.File
-    import parser.utils.{ProperNoun, Number}
+    import parser.generator.utils.{ProperNoun, Number}
     
     val file = new File("./path/to/pdf/document")
     val extractedText = readPDF(file)
@@ -158,8 +158,8 @@ You can now implement the following snippet:
 ```java
     import parser.extraction.ExtractorJava;
     import java.io.File;
-    import parser.utils.POSTagEnum;
-    import parser.utils.SpecificationJava;
+    import parser.generator.utils.POSTagEnum;
+    import parser.generator.utils.SpecificationJava;
     import java.util.HashMap;
     import java.util.List;
     
@@ -201,7 +201,7 @@ String.
 ```scala
     import parser.extraction.Extractor.{readPDF, getSingleJSON}
     import java.io.File
-    import parser.utils.{ProperNoun, Number}
+    import parser.generator.utils.{ProperNoun, Number}
     
     val file = new File("./path/to/pdf/document")
     val extractedText = readPDF(file)
@@ -217,8 +217,8 @@ String.
 ```java
     import parser.extraction.ExtractorJava;
     import java.io.File;
-    import parser.utils.POSTagEnum;
-    import parser.utils.SpecificationJava;
+    import parser.generator.utils.POSTagEnum;
+    import parser.generator.utils.SpecificationJava;
     import java.util.HashMap;
     import java.util.List;
     
@@ -256,7 +256,7 @@ You only have to pass an additional List containing the **possible** values you 
 ```scala
     import parser.extraction.Extractor.{readPDF, getJSONObjects}
     import java.io.File
-    import parser.utils.{ProperNoun, Number, OneOf, MultipleOf}
+    import parser.generator.utils.{ProperNoun, Number, OneOf, MultipleOf}
     
     val file = new File("./path/to/pdf/document")
     val extractedText = readPDF(file)
@@ -277,7 +277,7 @@ You only have to pass an additional List containing the **possible** values you 
 ```java
     import parser.extraction.ExtractorJava;
     import java.io.File;
-    import parser.utils.SpecificationJava;
+    import parser.generator.utils.SpecificationJava;
     import java.util.HashMap;
     import java.util.List;
     import java.util.ArrayList;
@@ -326,7 +326,7 @@ with that possibility through **`getAllMatchedValues`**.
 ```scala
     import parser.extraction.Extractor.{readPDF, getAllMatchedValues}
     import java.io.File
-    import parser.utils.{ProperNoun, Number, OneOf, MultipleOf}
+    import parser.generator.utils.{ProperNoun, Number, OneOf, MultipleOf}
     
     val file = new File("./path/to/pdf/document")
     val extractedText = readPDF(file)
@@ -344,8 +344,8 @@ with that possibility through **`getAllMatchedValues`**.
 ```java
     import parser.extraction.ExtractorJava;
     import java.io.File;
-    import parser.utils.POSTagEnum;
-    import parser.utils.SpecificationJava;
+    import parser.generator.utils.POSTagEnum;
+    import parser.generator.utils.SpecificationJava;
     import java.util.HashMap;
     import java.util.Map;
     
@@ -378,7 +378,7 @@ This method works exactly like the one above but instead of returning every valu
 ```scala
     import parser.extraction.Extractor.{readPDF, getSingleMatchedValue}
     import java.io.File
-    import parser.utils.{ProperNoun, Number, OneOf, MultipleOf}
+    import parser.generator.utils.{ProperNoun, Number, OneOf, MultipleOf}
     
     val file = new File("./path/to/pdf/document")
     val extractedText = readPDF(file)
@@ -396,8 +396,8 @@ This method works exactly like the one above but instead of returning every valu
 ```java
     import parser.extraction.ExtractorJava;
     import java.io.File;
-    import parser.utils.POSTagEnum;
-    import parser.utils.SpecificationJava;
+    import parser.generator.utils.POSTagEnum;
+    import parser.generator.utils.SpecificationJava;
     import java.util.HashMap;
     import java.util.Map;
     
@@ -431,7 +431,7 @@ the given keywords.
 ```scala
     import parser.extraction.Extractor.{readPDF, getAllObjects}
     import java.io.File
-    import parser.utils.{ProperNoun, Number, OneOf, MultipleOf}
+    import parser.generator.utils.{ProperNoun, Number, OneOf, MultipleOf}
     
     val filePath = new File("./path/to/pdf/document")
     val extractedText = readPDF(filePath)
@@ -449,8 +449,8 @@ the given keywords.
 ```java
     import parser.extraction.ExtractorJava;
     import java.io.File;
-    import parser.utils.POSTagEnum;
-    import parser.utils.SpecificationJava;
+    import parser.generator.utils.POSTagEnum;
+    import parser.generator.utils.SpecificationJava;
     import java.util.HashMap;
     import java.util.List;
     

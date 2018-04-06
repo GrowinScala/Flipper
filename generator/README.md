@@ -28,7 +28,7 @@ The present file documents the Generator module.
 
 ### Main Features ### 
 
-In this Module it is possible to generate a PDF with the information of a JSON String.
+In this Module it is possible to generator.generate a PDF with the information of a JSON String.
 
 * **Parsing a JSON String and Returning a PDF** - Using **_iText_** and **_JSON4S_** we're able
 to extract all the information given in the JSON String and put it in a PDF document. This is accomplished in
@@ -79,7 +79,7 @@ shows in **`./`**.
 
 ```scala
     import generator.Generator.convertMapToPDF
-    import generator.Config
+    import generator.utils.Config
     
     val jsonMap = Map("name" -> "FirstName LastName", "age" -> 25)
     val config = Config("green",12,"center","Arial","bold")
@@ -161,7 +161,7 @@ shows in **`./`**.
     import java.util.ArrayList;
     import java.util.HashMap;
     import java.util.List;
-    import generator.Config;
+    import generator.utils.Config;
     
     public class Example {
          public static void main(String[] args) {
@@ -189,7 +189,7 @@ shows in **`./`**.
 
 * #### Generate a PDF from a JSON ####
 
-To generate a PDF file from a JSON String you need to call the **`convertJSONtoPDF`** function. Similarly to the 
+To generator.generate a PDF file from a JSON String you need to call the **`convertJSONtoPDF`** function. Similarly to the
 previous function, this can be done by simply passing the JSON String, by passing the JSON String and a CSS file, 
 by passing the JSON String and a CSS String, by passing the JSON String and a Generator.Config. The Generator.Config is
 a class implemented that contains some configurations for the PDF file, these are text color, font size, text alignment,
@@ -224,7 +224,7 @@ shows in **`./`**.
 
 ```scala
     import generator.Generator.convertJSONtoPDF
-    import generator.Config
+    import generator.utils.Config
     
     val json = """ {"name": "FirstName LastName", "age": 25 }"""
     val config = Config("green",12,"center","Arial","bold")
@@ -274,7 +274,7 @@ shows in **`./`**.
 
 ```java
     import generator.GeneratorJava;
-    import generator.Config;
+    import generator.utils.Config;
     
     public class Example {
          public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package generator
+package generator.generate
 
 import java.io.File
 import org.junit.runner.RunWith
