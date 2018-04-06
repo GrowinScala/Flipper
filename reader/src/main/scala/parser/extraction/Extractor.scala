@@ -86,11 +86,11 @@ object Extractor {
                 else findKeywordInText(key, tag, t) //to be changed, here we need to manually search for the keywords in the text
 
               case multiOp: MultipleOf =>
-                (key, getOptions(text, key, multiOp.possibilities))
+                val ext = getOptions(text, key, multiOp.possibilities, true)
+                (key, ext)
               case oneOp: OneOf =>
-                val valuesFound = getOptions(text, key, oneOp.possibilities)
-                if (valuesFound.nonEmpty) (key, List(valuesFound.head))
-                else (key, List())
+                val ext = getOptions(text, key, oneOp.possibilities, false)
+                (key, ext)
             }
           }
           filterNewLines(matched)
@@ -389,13 +389,20 @@ object Extractor {
     * @param opList  - List of options to choose from
     * @return - A list of all the matched options found
     */
-  private def getOptions(text: Option[String], keyword: Keyword, opList: List[String]): List[String] = {
+  private def getOptions(text: Option[String], keyword: Keyword, opList: List[String], multi: Boolean): List[String] = {
     text match {
       case Some(t) =>
         val tLower = t.toLowerCase
         val kLower = keyword.toLowerCase
         if (tLower.contains(kLower)) {
-            for (op <- opList if t.toLowerCase.contains(op.toLowerCase) ) yield op
+          val found = for (op <- opList if t.toLowerCase.contains(op.toLowerCase)) yield op
+          if (multi) {
+            found
+          }
+          else{
+            val count = kLower.r.findAllMatchIn(tLower).length
+            found.take(count)
+          }
         } else {
           List()
         }
