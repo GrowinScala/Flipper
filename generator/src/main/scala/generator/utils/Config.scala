@@ -11,8 +11,20 @@ package generator.utils
   */
 case class Config(
                    textColor: String = "",
-                   fontSize: Double = -1.0,
+                   fontSize: String = "",
                    textAlignment: String = "",
                    fontFamily: String = "",
                    fontWeight: String = ""
-                 )
+                 ) {
+  //  require(isAllDigits(fontSize))
+  //
+  //  private def isAllDigits(fontSize: String): Boolean = {
+  //    if (fontSize.nonEmpty) {
+  //      try {
+  //        fontSize.toDouble; true
+  //      } catch {
+  //        case _: Exception => false
+  //      }
+  //    } else true //In case fontSize is "" (default value) let it pass
+  //  }
+}

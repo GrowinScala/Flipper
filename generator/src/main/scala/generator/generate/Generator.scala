@@ -9,7 +9,7 @@ import org.json4s._
 import FileHandler._
 import HTMLHandler._
 import org.json4s.native.JsonMethods._
-import generator.utils.{Config, Content}
+import generator.utils.{Config, Content, H1}
 
 /**
   * Singleton object that implements the functions regarding the pdf file generation
@@ -70,6 +70,59 @@ object Generator {
     */
   def convertMapToPDF(content: Map[Keyword, Content], formatting: Map[String, Config]): Boolean = {
     internalMapConverter(content, createCssString(content, formatting))
+  }
+
+  def convertJSONtoPDF(contentJSON: String, formattingJSON: String): Boolean = {
+    val convertedContent = jsonToContent(contentJSON)
+    val convertedFormatting = jsonToFormatting(formattingJSON)
+    println(convertedContent)
+    println(convertedFormatting)
+    false
+  }
+
+  private def jsonToContent(contentJSON: String): Option[Map[Keyword, Content]] = {
+    val parsedJSONOpt = convertJSONtoMap(contentJSON)
+    parsedJSONOpt match {
+      case Some(parsedJSON) =>
+        val returnMap = parsedJSON.map { case (keyword, content) =>
+          content match {
+            case contentMap: Map[String, Any] =>
+              val fieldName = contentMap.getOrElse("fieldName", "").toString
+              val fieldValue = contentMap.getOrElse("fieldValue", "")
+              val htmlTag = stringToHTMLTag(contentMap.getOrElse("HTMLTag", "").toString)
+              val cssClass = contentMap.getOrElse("cssClass", "").toString
+
+              (keyword, Content(fieldName, fieldValue, htmlTag, cssClass))
+
+            case _ => ("", Content("", "", H1()))
+          }
+        }.filter(_._1.nonEmpty).toList.toMap
+        Some(returnMap)
+      case None => None
+    }
+  }
+
+  private def jsonToFormatting(formattingJSON: String): Option[Map[Keyword, Config]] = {
+    val parsedJSONOpt = convertJSONtoMap(formattingJSON)
+    parsedJSONOpt match {
+      case Some(parsedJSON) =>
+        val formattingMap = parsedJSON.map { case (keyword, conf) =>
+          conf match {
+            case configMap: Map[String, Any] =>
+              val textColor = configMap.getOrElse("textColor", "").toString
+              val fontSize = configMap.getOrElse("fontSize", "").toString
+              val textAlignment = configMap.getOrElse("textAlignment", "").toString
+              val fontFamily = configMap.getOrElse("fontFamily", "").toString
+              val fontWeight = configMap.getOrElse("fontWeight", "").toString
+
+              (keyword, Config(textColor, fontSize, textAlignment, fontFamily, fontWeight))
+
+            case _ => ("", Config())
+          }
+        }.filter(_._1.nonEmpty).toList.toMap
+        Some(formattingMap)
+      case None => None
+    }
   }
 
   /**

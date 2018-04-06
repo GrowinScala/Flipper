@@ -10,6 +10,25 @@ import generator.utils._
 private[generate] object HTMLHandler {
 
   /**
+    * Method that upon receiving a String containing an HTML entity converts it to a FormattingType
+    *
+    * @param htmlEntity - The HTML entity to be converted to FormattingType
+    * @return A FormattingType object representing the same HTML entity passed as an argument
+    */
+  def stringToHTMLTag(htmlEntity: String): FormattingType = {
+    htmlEntity.toLowerCase match {
+      case "h1" => H1()
+      case "h2" => H2()
+      case "h3" => H3()
+      case "orderedlist" => OrderedList()
+      case "unorderedlist" => UnOrderedList()
+      case "table" => Table()
+      case "p" => P()
+      case _ => Text()
+    }
+  }
+
+  /**
     * Method that calls createHTML, passing to it a Map object with information regarding the content to be displayed
     * in the HTML/PDF file, and a CSS String with CSS code specifying how that content should be displayed
     *
