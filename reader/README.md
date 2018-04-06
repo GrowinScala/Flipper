@@ -23,14 +23,14 @@ The present file documents the Reader module.
          |                               ├── POSTagEnum.java         ; Enum for the possible POST tag values
          |                               └── SpecificationJava.java  ; Factory class that creates scala-made Sepcification objects
          └── scala/parser/
-                         ├── extraction/
-                         |              ├── Extractor.scala          ; Handles the PDF parsing and JSON generation
-                         |              └── FileHandler.scala        ; Handles the file inputs
-                         └─────── utils/                
-                                        ├── ImageProcessing.scala    ; Handles processing the image and extract its text
-                                        ├── OpenNLP.scala            ; Handles the NLP (natural language processing) functionalities
-                                        ├── Specification.scala      ; Classes that help specify the keywords sent when extracting information
-                                        └── SpellChecker.scala       ; Handles the spellchecking operations to improve the OCR's accuracy
+                          ├── extraction/
+                          |              ├── Extractor.scala         ; Handles the PDF parsing and JSON generation
+                          |              └── FileHandler.scala       ; Handles the file inputs
+                          └─────── utils/                
+                                         ├── ImageProcessing.scala   ; Handles processing the image and extract its text
+                                         ├── OpenNLP.scala           ; Handles the NLP (natural language processing) functionalities
+                                         ├── Specification.scala     ; Classes that help specify the keywords sent when extracting information
+                                         └── SpellChecker.scala      ; Handles the spellchecking operations to improve the OCR's accuracy
   ```
   
 ---
