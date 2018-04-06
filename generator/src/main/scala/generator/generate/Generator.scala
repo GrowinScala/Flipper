@@ -72,6 +72,14 @@ object Generator {
     internalMapConverter(content, createCssString(content, formatting))
   }
 
+  /**
+    * Method that converts a JSON string with information regarding the content to be displayed in the PDF file, and a
+    * JSON string with information regarding how that information should be displayed, into a PDF file
+    *
+    * @param contentJSON    - JSON string with information regarding the content to be displayed in the PDF file
+    * @param formattingJSON - JSON string with information regardin how the content should be displayed
+    * @return a Boolean specifying if the conversion was successful or not
+    */
   def convertJSONtoPDF(contentJSON: String, formattingJSON: String): Boolean = {
     val convertedContent = jsonToContent(contentJSON)
     val convertedFormatting = jsonToFormatting(formattingJSON)
@@ -80,6 +88,12 @@ object Generator {
     false
   }
 
+  /**
+    * Method that tries to convert a JSON string into a Map of keywords and Content objects
+    *
+    * @param contentJSON - The JSON string to be converted
+    * @return a Map of keywords and Content objects
+    */
   private def jsonToContent(contentJSON: String): Option[Map[Keyword, Content]] = {
     val parsedJSONOpt = convertJSONtoMap(contentJSON)
     parsedJSONOpt match {
@@ -102,6 +116,12 @@ object Generator {
     }
   }
 
+  /**
+    * Method that tries to convert a JSON string into a Map of keywords and Config objects
+    *
+    * @param formattingJSON - The JSON string to be converted
+    * @return a Map of keywords and Config objects
+    */
   private def jsonToFormatting(formattingJSON: String): Option[Map[Keyword, Config]] = {
     val parsedJSONOpt = convertJSONtoMap(formattingJSON)
     parsedJSONOpt match {
