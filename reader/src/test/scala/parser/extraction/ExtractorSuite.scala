@@ -15,8 +15,8 @@ class ExtractorSuite extends FunSuite {
   val file = new File("./reader/src/main/resources/test.pdf")
   val text: Option[String] = readPDF(file)
   val colorText = Some("In this example text we will want to find a specific color." +
-    " Here are some of the options: blue , red, green, orange." +
-    " These are just some examples.")
+                       " Here are some of the options: blue , red, green, orange." +
+                       " These are just some examples.")
 
   /**
     * Tests if the result of calling getAllMatchedValues is correct or not

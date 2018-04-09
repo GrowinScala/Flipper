@@ -33,6 +33,7 @@ object Converter {
     pdfOption match {
       case Some(pdf) =>
         val renderer = new PDFRenderer(pdf)
+        pdf.close()
         val dir = new File("./target/PDFtoIMG")
         if (!dir.exists) dir.mkdirs
         try {

@@ -30,17 +30,17 @@ private[parser] object ImageProcessing {
 
       case Some(image) =>
         val resized = image.scaleToWidth((image.width * 2.0).toInt) //scale the image to be 100% wider
-      val instance = new Tesseract() //Initialize Tesseract
-      val filterBW = ThresholdFilter(150) //Filter the image to black and white
-      val dir = new File("./target/tempImages")
+        val instance = new Tesseract() //Initialize Tesseract
+        val filterBW = ThresholdFilter(150) //Filter the image to black and white
+        val dir = new File("./target/tempImages")
         if (!dir.exists) dir.mkdirs
 
         //Obtain the processed image file
         val resizedFile = resized.filter(filterBW).output(new File("./target/tempImages/temp_" + System.nanoTime() + ".png"))(PngWriter.MaxCompression)
         val extractedText = Some(instance.doOCR(resizedFile)) //Apply the OCR to the processed image
+
         cleanImageDir()
         extractedText
-
       case _ => None
     }
   }
@@ -97,6 +97,7 @@ private[parser] object ImageProcessing {
     }
 
     val mutableFilesList: List[File] = iteratePages(document.getNumberOfPages - 1)
+    document.close()
     Some(mutableFilesList)
   }
 
