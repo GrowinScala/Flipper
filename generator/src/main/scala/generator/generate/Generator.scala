@@ -19,6 +19,7 @@ object Generator {
   type Keyword = String
   type ContentMap = Map[Keyword, Content]
   type ConfigMap = Map[String, Config]
+  type JSONString = String
 
 
   /**
@@ -27,7 +28,7 @@ object Generator {
     * @param json - The JSON string to be parsed
     * @return a Map[String,Any] with the information parsed from the JSON
     */
-  def convertJSONtoMap(json: String): Option[Map[Keyword, Any]] = {
+  def convertJSONtoMap(json: JSONString): Option[Map[Keyword, Any]] = { //TODO Maybe change this to private
     try {
       Some(parse(json).values.asInstanceOf[Map[String, Any]])
     } catch {
@@ -43,13 +44,7 @@ object Generator {
     * @return a Boolean with information specifying if the conversion was successful or not
     */
   def convertMapToPDF(content: ContentMap, cssFile: File): Boolean = {
-    val bufferedSourceOption = loadCSSFile(cssFile)
-    bufferedSourceOption match {
-      case Some(bufferedSource) =>
-        val cssString = bufferedSource.getLines.mkString
-        internalMapConverter(content, cssString)
-      case _ => false
-    }
+    convertWithFile(content, cssFile)
   }
 
   /**
@@ -82,7 +77,7 @@ object Generator {
     * @param formattingJSON - JSON string with information regarding how the content should be displayed
     * @return a Boolean specifying if the conversion was successful or not
     */
-  def convertJSONtoPDF(contentJSON: String, formattingJSON: String): Boolean = {
+  def convertJSONtoPDF(contentJSON: JSONString, formattingJSON: JSONString): Boolean = {
     val convertedContentOpt = jsonToContent(contentJSON) //Try to convert the JSON content into a ContentMap
     val convertedFormattingOpt = jsonToFormatting(formattingJSON) //Try to convert the JSON formatting into a ContentFormatting
     if (convertedContentOpt.isDefined && convertedFormattingOpt.isDefined) { //If both Options are defined (Some) then proceed with conversion
@@ -92,12 +87,62 @@ object Generator {
   }
 
   /**
+    * Method that converts a JSON string with information regarding the content to be displayed in the PDF file, and a
+    * JSON string with information regarding how that information should be displayed, into a PDF file
+    *
+    * @param contentJSON - JSON string with information regarding the content to be displayed in the PDF file
+    * @param cssFile     - A CSS file containing all the CSS code to be added to the HTML file
+    * @return a Boolean specifying if the conversion was successful or not
+    */
+  def convertJSONtoPDF(contentJSON: JSONString, cssFile: File): Boolean = {
+    val convertedContentOpt = jsonToContent(contentJSON) //Try to convert the JSON content into a ContentMap
+    convertedContentOpt match {
+      case Some(convertedContent) => convertWithFile(convertedContent, cssFile)
+      case _ => false
+    }
+  }
+
+  /**
+    * Method that converts a JSON string with information regarding the content to be displayed in the PDF file, and a
+    * JSON string with information regarding how that information should be displayed, into a PDF file
+    *
+    * @param contentJSON - JSON string with information regarding the content to be displayed in the PDF file
+    * @param cssString   - A String containing all the CSS code to be added to the HTML file
+    * @return a Boolean specifying if the conversion was successful or not
+    */
+  def convertJSONtoPDFWithCSS(contentJSON: JSONString, cssString: String): Boolean = { //TODO how do i remove the unnecessary withCSS part with out conflict with line 80
+    val convertedContentOpt = jsonToContent(contentJSON) //Try to convert the JSON content into a ContentMap
+    convertedContentOpt match {
+      case Some(convertedContent) => internalMapConverter(convertedContent, cssString)
+      case _ => false
+    }
+  }
+
+  /**
+    * Method that takes a ContentMap and a CSS file, reads the CSS file and then converts the ContentMap and CSS code
+    * into a PDF file
+    *
+    * @param content - An object containing all the keywords and their Content(a object containig fieldName, fieldValue and formattingType)
+    * @param cssFile - A CSS file containing all the CSS code to be added to the HTML file
+    * @return a Boolean with information specifying if the conversion was successful or not
+    */
+  private def convertWithFile(content: ContentMap, cssFile: File): Boolean = {
+    val bufferedSourceOption = loadCSSFile(cssFile)
+    bufferedSourceOption match {
+      case Some(bufferedSource) =>
+        val cssString = bufferedSource.getLines.mkString
+        internalMapConverter(content, cssString)
+      case _ => false
+    }
+  }
+
+  /**
     * Method that tries to convert a JSON string into a Map of keywords and Content objects
     *
     * @param contentJSON - The JSON string to be converted
     * @return a Map of keywords and Content objects
     */
-  private def jsonToContent(contentJSON: String): Option[ContentMap] = {
+  private def jsonToContent(contentJSON: JSONString): Option[ContentMap] = {
     val parsedJSONOpt = convertJSONtoMap(contentJSON)
     parsedJSONOpt match {
       case Some(parsedJSON) =>
@@ -125,7 +170,7 @@ object Generator {
     * @param formattingJSON - The JSON string to be converted
     * @return a Map of keywords and Config objects
     */
-  private def jsonToFormatting(formattingJSON: String): Option[ConfigMap] = {
+  private def jsonToFormatting(formattingJSON: JSONString): Option[ConfigMap] = {
     val parsedJSONOpt = convertJSONtoMap(formattingJSON)
     parsedJSONOpt match {
       case Some(parsedJSON) =>
