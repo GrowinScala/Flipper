@@ -7,8 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5115832d-4669-4625-b348-c310af38a585" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/generator/src/test/scala/generator/generate/HTMLHandlerSuite.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/src/test/scala/generator/generate/HTMLHandlerSuite.scala" beforeDir="false" afterPath="$PROJECT_DIR$/generator/src/test/scala/generator/generate/HTMLHandlerSuite.scala" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -38,11 +38,23 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+          <file leaf-file-name="GeneratorSuite.scala" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="112">
+                  <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+                  <folding>
+                    <element signature="e#19#38#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="HTMLHandlerSuite.scala" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/generate/HTMLHandlerSuite.scala">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="384">
-                  <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+                <state relative-caret-position="372">
+                  <caret line="51" column="51" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="51" />
                   <folding>
                     <element signature="e#28#59#0" expanded="true" />
                   </folding>
@@ -57,8 +69,8 @@
           <file leaf-file-name="HTMLHandler.scala" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/generate/HTMLHandler.scala">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="304">
-                  <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+                <state relative-caret-position="593">
+                  <caret line="75" column="4" lean-forward="true" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="4" />
                 </state>
               </provider>
             </entry>
@@ -525,13 +537,13 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$/build.sbt" value="2091804870" />
+        <entry key="$PROJECT_DIR$/build.sbt" value="2540558361" />
         <entry key="$PROJECT_DIR$/project/build.properties" value="3801438840" />
+        <entry key="$PROJECT_DIR$/project/plugins.sbt" value="1084681035" />
       </map>
     </option>
     <option name="projectSyncType">
       <map>
-        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
         <entry key="$PROJECT_DIR$/../coursera/barneshut" value="PREVIEW" />
         <entry key="$PROJECT_DIR$/../coursera/calculator" value="PREVIEW" />
         <entry key="$PROJECT_DIR$/../coursera/example" value="PREVIEW" />
@@ -564,20 +576,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1522055766473</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Working on implementing a Java interface for the API">
-      <created>1522161763907</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1522161763907</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Working on implementing a Java interface for the API">
-      <created>1522168698563</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1522168698563</updated>
     </task>
     <task id="LOCAL-00029" summary="Implementing a Java interface for the API on reader module">
       <created>1522241332615</created>
@@ -908,38 +906,52 @@
       <option name="project" value="LOCAL" />
       <updated>1523270449995</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="Implementing HTMLHandlerSuite.scala">
+      <created>1523273618174</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1523273618174</updated>
+    </task>
+    <task id="LOCAL-00077" summary="Implementing HTMLHandlerSuite.scala">
+      <created>1523273839179</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1523273839179</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ExtractorSuite - 2018.04.04 at 15h 01m 03s.xml">
-      <configuration name="ExtractorSuite" configurationId="JUnit" />
+    <history-entry file="HTMLHandlerSuite - 2018.04.09 at 14h 21m 21s.xml">
+      <configuration name="HTMLHandlerSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ExtractorSuite - 2018.04.04 at 15h 43m 27s.xml">
-      <configuration name="ExtractorSuite" configurationId="JUnit" />
+    <history-entry file="HTMLHandlerSuite - 2018.04.09 at 14h 21m 45s.xml">
+      <configuration name="HTMLHandlerSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GeneratorSuite - 2018.04.09 at 10h 19m 04s.xml">
-      <configuration name="GeneratorSuite" configurationId="JUnit" />
+    <history-entry file="HTMLHandlerSuite - 2018.04.09 at 14h 22m 32s.xml">
+      <configuration name="HTMLHandlerSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GeneratorSuite - 2018.04.09 at 10h 19m 39s.xml">
-      <configuration name="GeneratorSuite" configurationId="JUnit" />
+    <history-entry file="HTMLHandlerSuite - 2018.04.09 at 14h 23m 07s.xml">
+      <configuration name="HTMLHandlerSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GeneratorSuite - 2018.04.09 at 10h 32m 21s.xml">
-      <configuration name="GeneratorSuite" configurationId="JUnit" />
+    <history-entry file="HTMLHandlerSuite - 2018.04.09 at 14h 24m 46s.xml">
+      <configuration name="HTMLHandlerSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GeneratorSuite - 2018.04.09 at 10h 33m 08s.xml">
-      <configuration name="GeneratorSuite" configurationId="JUnit" />
+    <history-entry file="HTMLHandlerSuite - 2018.04.09 at 14h 26m 21s.xml">
+      <configuration name="HTMLHandlerSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GeneratorSuite - 2018.04.09 at 11h 26m 28s.xml">
-      <configuration name="GeneratorSuite" configurationId="JUnit" />
+    <history-entry file="HTMLHandlerSuite - 2018.04.09 at 14h 26m 51s.xml">
+      <configuration name="HTMLHandlerSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GeneratorSuite - 2018.04.09 at 11h 27m 58s.xml">
-      <configuration name="GeneratorSuite" configurationId="JUnit" />
+    <history-entry file="HTMLHandlerSuite - 2018.04.09 at 14h 27m 39s.xml">
+      <configuration name="HTMLHandlerSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GeneratorSuite - 2018.04.09 at 11h 40m 01s.xml">
-      <configuration name="GeneratorSuite" configurationId="JUnit" />
+    <history-entry file="HTMLHandlerSuite - 2018.04.09 at 14h 27m 52s.xml">
+      <configuration name="HTMLHandlerSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HTMLHandlerSuite - 2018.04.09 at 12h 30m 35s.xml">
+    <history-entry file="HTMLHandlerSuite - 2018.04.09 at 14h 28m 04s.xml">
       <configuration name="HTMLHandlerSuite" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -1017,7 +1029,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="updated readme's" />
     <MESSAGE value="Fixed convertPDTtoODT bug" />
     <MESSAGE value="Updated reader/README.md" />
     <MESSAGE value="fixed getJSONObjects extra empty object bug" />
@@ -1042,10 +1053,10 @@
     <MESSAGE value="Added more use cases to convertJSONtoPDF" />
     <MESSAGE value="Implementing GeneratorSuite.scala" />
     <MESSAGE value="GeneratorSuite.scala implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="GeneratorSuite.scala implemented" />
+    <MESSAGE value="Implementing HTMLHandlerSuite.scala" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementing HTMLHandlerSuite.scala" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/generator/src/main/java/generator/Generator.java" />
     <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/utils/SpellChecker.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="664">
@@ -1276,24 +1287,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.12.4-sources.jar!/scala/collection/immutable/StringLike.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="181" column="6" selection-start-line="181" selection-start-column="6" selection-end-line="181" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="6" selection-end-column="38" />
+        <state relative-caret-position="112">
+          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+          <folding>
+            <element signature="e#19#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/generate/HTMLHandler.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+        <state relative-caret-position="593">
+          <caret line="75" column="4" lean-forward="true" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/generate/HTMLHandlerSuite.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+        <state relative-caret-position="372">
+          <caret line="51" column="51" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="51" />
           <folding>
             <element signature="e#28#59#0" expanded="true" />
           </folding>
