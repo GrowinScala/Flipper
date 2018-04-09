@@ -1,67 +1,139 @@
-//package generator
-//
-//import java.io.File
-//import org.junit.runner.RunWith
-//import org.scalatest.FunSuite
-//import org.scalatest.junit.JUnitRunner
-//import Generator._
-//
-//@RunWith(classOf[JUnitRunner])
-//class GeneratorSuite extends FunSuite {
-//
-//  /**
-//    * Tests that calling convertMapToPDF with an invalid JSON Map (null, empty)
-//    * Or with a non-existing additional CSS file will return false saying the conversion was not successful
-//    */
-//  test("Calling convertMapToPDF with invalid Map") {
-//
-//    val emptyMap = convertMapToPDF(Map())
-//    val nonExistingCSS = convertMapToPDF(Map("name" -> List("Lucas", "Margarida"), "age" -> 21), new File("non-existing URI"))
-//    assert(!emptyMap && !nonExistingCSS)
-//  }
-//
-//  /**
-//    * Tests that calling convertMapToPDF with a null Map (in case something went wrong with the Java interface) will
-//    * result in a NullPointerException
-//    */
-//  test("Calling convertMapToPDF with null Map") {
-//    assertThrows[NullPointerException] {
-//      convertMapToPDF(null)
-//    }
-//  }
-//
-//  /**
-//    * Tests that calling convertMapToPDF with a valid JSON Map, and an additional CSS will return true saying the conversion was successful
-//    */
-//  test("calling convertMapToPDF with a valid Map") {
-//    val validURI = convertMapToPDF(Map("name" -> List("Lucas", "Margarida")))
-//    val validCSSFile = convertMapToPDF(Map("name" -> List("Lucas", "Margarida")), new File("test.css"))
-//    val validCSSString = convertMapToPDF(Map("name" -> List("Lucas", "Margarida")), "p { color : green }")
-//    val validConfig = convertMapToPDF(Map("name" -> List("Lucas", "Margarida")), Config("green"))
-//    assert(validURI && validCSSFile && validCSSString && validConfig)
-//  }
-//
-//  /**
-//    * Tests that calling convertJSONtoPDF with an invalid JSON String (null, empty, or badly formatted)
-//    * Or with a non-existing additional CSS file will return an empty String
-//    */
-//  test("Calling convertJSONtoPDF with invalid JSON String") {
-//    val nullJson = convertJSONtoPDF(null)
-//    val emptyJson = convertJSONtoPDF("")
-//    val badJson1 = convertJSONtoPDF("{}")
-//    val badJson2 = convertJSONtoPDF(""" {"name" :  """)
-//    val nonExistingCSS = convertJSONtoPDF(""" {"name":"Lucas"}  """, new File("non-existing URI"))
-//    assert(!nullJson && !emptyJson && !badJson1 && !badJson2 && !nonExistingCSS)
-//  }
-//
-//  /**
-//    * Tests that calling convertJSONtoPDF with a valid JSON String, and an additional CSS will return a valid URI for the generated html file
-//    */
-//  test("calling convertJSONtoPDF with a valid JSON String") {
-//    val validURI = convertJSONtoPDF(""" {"name":"Lucas"}  """)
-//    val validCSSFile = convertJSONtoPDF(""" {"name":"Lucas"}  """, new File("test.css"))
-//    val validCSSString = convertJSONtoPDF(""" {"name":"Lucas"}  """, "p { color : green }")
-//    val validConfig = convertJSONtoPDF(""" {"name":"Lucas"}  """, Config("green"))
-//    assert(validURI && validCSSFile && validCSSString && validConfig)
-//  }
-//}
+package generator
+
+import java.io.File
+
+import org.junit.runner.RunWith
+import org.scalatest.FunSuite
+import org.scalatest.junit.JUnitRunner
+import generate.Generator._
+import generator.utils._
+
+
+@RunWith(classOf[JUnitRunner])
+class GeneratorSuite extends FunSuite {
+
+  val content =
+    Map(
+      "name" -> Content("name", "John Doe", H1(), "bigHeader"),
+      "age" -> Content("age", List(20, 30), OrderedList(), "small")
+    )
+  val cssFile = new File("test.css")
+  val cssString =
+    """.bigHeader{
+      |           color: blue;
+      |           font-size: 20pt;
+      |           text-align : center;
+      |           font-family: corbel;
+      |           font-weight: bold;
+      |}
+      |.small{
+      |       color: red;
+      |       font-size: 10pt;
+      |}
+      |""".stripMargin
+
+  /**
+    * Tests that passing a correct ContentMap and a correct CSS file/CSS String/ConfigMap
+    * to convertMapToPDF will return true saying the conversion was successful
+    */
+  test("Correcty call convertMapToPDF") {
+    val emptyCSS = ""
+    val emptyConfig: ConfigMap = Map()
+
+    val configMap =
+      Map(
+        "bigHeader" -> Config("blue", "20", "center", "corbel", "bold"),
+        "small" -> Config("red", "10")
+      )
+    val convertWithCSSFile = convertMapToPDF(content, cssFile)
+    val convertWithCSSStr = convertMapToPDF(content, cssString)
+    val convertWithConfigMap = convertMapToPDF(content, configMap)
+    val convertWithEmptyConf = convertMapToPDF(content, emptyConfig)
+    val convertWithEmptyCSS = convertMapToPDF(content, emptyCSS)
+
+    assert(
+      convertWithConfigMap &&
+        convertWithCSSStr &&
+        convertWithCSSFile &&
+        convertWithEmptyConf &&
+        convertWithEmptyCSS
+    )
+  }
+
+  /**
+    * Tests that calling convertMapToPDF with an incorrect ContentMap/CSS File will return false saying the conversion was not successful
+    */
+  test("Incorrectly call convertMapToPDF") {
+    val incorrectFile = new File("non-existing-file")
+    val emptyContent: ContentMap = Map()
+
+    assert(!convertMapToPDF(content, incorrectFile) && !convertMapToPDF(emptyContent, cssFile))
+  }
+
+  /**
+    * Tests that calling converJSONtoPDF (and convertJSONtoPDFWithCSS) with correct input parameters will return true
+    * saying the conversion was successful
+    */
+  test("Correctly call convertJSONtoPDF") {
+    val contentJSON =
+      """
+        |{ "name" : {
+        |             "fieldName" : "name",
+        |             "fieldValue" : "something",
+        |             "HTMLTag" : "H1",
+        |             "cssClass" : "bigHeader"
+        |           }
+        |}
+      """.stripMargin
+    val configJSON =
+      """
+        |{ "asd" : {
+        |             "textColor" : "red",
+        |             "fontSize"  : "20",
+        |             "textAlignment" : "center",
+        |             "fontFamily"  : "corbel",
+        |             "fontWeight"  : "bold"
+        |           }
+        |}
+      """.stripMargin
+    val convertWithConf = convertJSONtoPDF(contentJSON, configJSON)
+    val convertWithCSSStr = convertJSONtoPDFWithCSS(contentJSON, cssString)
+    val convertWithEmptyCSS = convertJSONtoPDFWithCSS(contentJSON, "")
+    val convertWithCSSFile = convertJSONtoPDF(contentJSON, cssFile)
+    assert(convertWithConf && convertWithCSSStr && convertWithCSSFile && convertWithEmptyCSS)
+  }
+
+  /**
+    * Tests that incorrectly calling convertJSONtoPDF (empty content, empty config, wrong css file) will return false
+    * saying the conversion was not successful
+    */
+  test("Incorrectly call convertJSONtoPDF") {
+    val contentJSON =
+      """
+        |{ "name" : {
+        |             "fieldName" : "name",
+        |             "fieldValue" : "something",
+        |             "HTMLTag" : "H1",
+        |             "cssClass" : "bigHeader"
+        |           }
+        |}
+      """.stripMargin
+
+    val configJSON =
+      """
+        |{ "asd" : {
+        |             "textColor" : "red",
+        |             "fontSize"  : "20",
+        |             "textAlignment" : "center",
+        |             "fontFamily"  : "corbel",
+        |             "fontWeight"  : "bold"
+        |           }
+        |}
+      """.stripMargin
+    val emptyConfig = convertJSONtoPDF(contentJSON, "")
+    val emptyContent = convertJSONtoPDF("", configJSON)
+    val invalidFile = convertJSONtoPDF(contentJSON, new File("invalid-file"))
+
+    assert(!emptyConfig && !emptyContent && !invalidFile)
+  }
+}
