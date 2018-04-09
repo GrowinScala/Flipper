@@ -1,9 +1,7 @@
 sonatypeProfileName := "com.growin"
 
-// To sync with Maven central, you need to supply the following information:
-  publishMavenStyle := true
+publishMavenStyle := true
 
-// License of your choice
 licenses := Seq("APL2" -> url("http://www.apache.org/licenses/LICENSE-2.0.txt"))
 
 homepage := Some(url("https://github.com/GrowinScala/Flipper"))

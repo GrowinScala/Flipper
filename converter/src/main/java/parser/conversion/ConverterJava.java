@@ -12,7 +12,7 @@ public class ConverterJava {
      * @return - A Boolean saying if the conversion was successful
      * @throws IllegalArgumentException if the specified fileType did not equal the supported file types
      */
-    public Boolean convertPDFtoIMG(File file, scala.Enumeration.Value fileType) throws IllegalArgumentException {   //TODO Not sure if 2nd argument will work on a purely java project
+    public Boolean convertPDFtoIMG(File file, FileType fileType) throws IllegalArgumentException {   //TODO Not sure if 2nd argument will work on a purely java project
         if (fileType == null)
             throw new IllegalArgumentException("File type must be one of png, jpg, gif or jpeg");
         return Converter.convertPDFtoIMG(file, fileType);
