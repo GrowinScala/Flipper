@@ -20,7 +20,7 @@ object Main {
         |             "fieldName" : "name",
         |             "fieldValue" : "something",
         |             "HTMLTag" : "H1",
-        |             "cssClass" : "bigHeader"
+        |             "cssClass" : "asd"
         |           }
         |}
       """.stripMargin
@@ -36,6 +36,8 @@ object Main {
         |           }
         |}
       """.stripMargin
-    println(convertJSONtoPDF("", fjson))
+
+    println(convertJSONtoPDF(contentJSON, fjson))
+
   }
 }
