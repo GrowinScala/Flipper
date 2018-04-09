@@ -13,5 +13,6 @@ scmInfo := Some(
 )
 developers := List(
   Developer(id="megidio", name="Margarida Reis", email="mreis@growin.pt", url=url("https://github.com/megidio")),
-  Developer(id="MrLucasFischer", name="Lucas Fischer", email="lfischer@growin.pt", url=url("https://github.com/MrLucasFischer"))
+  Developer(id="MrLucasFischer", name="Lucas Fischer", email="lfischer@growin.pt", url=url("https://github.com/MrLucasFischer")),
+  Developer(id="valterfernandes", name="Valter Fernandes", email="vfernandes@growin.pt", url=url("https://github.com/valterfernandes"))
 )

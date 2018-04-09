@@ -3,6 +3,7 @@ name := "Flipper"
 val basicSettings = Seq(
   version := "0.1",
   scalaVersion := "2.12.4",
+  publishTo := sonatypePublishTo.value,
   libraryDependencies += "org.apache.pdfbox" % "pdfbox" % "2.0.5" exclude ("commons-logging", "commons-logging"),
   libraryDependencies += "org.apache.pdfbox" % "fontbox" % "2.0.5" exclude ("commons-logging", "commons-logging"),
   libraryDependencies += "junit" % "junit" % "4.10" % Test,
@@ -22,8 +23,6 @@ val basicSettings = Seq(
   libraryDependencies += "com.sksamuel.scrimage" %% "scrimage-core" % "3.0.0-alpha4",
   libraryDependencies += "com.sksamuel.scrimage" %% "scrimage-filters" % "3.0.0-alpha4"
 )
-
-publishTo := sonatypePublishTo.value
 
 lazy val root = project.in(file(".")).aggregate(reader, generator, converter).settings(basicSettings)
 
