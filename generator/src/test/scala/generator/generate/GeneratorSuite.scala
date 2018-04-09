@@ -108,6 +108,32 @@ class GeneratorSuite extends FunSuite {
     * saying the conversion was not successful
     */
   test("Incorrectly call convertJSONtoPDF") {
-    true
+    val contentJSON =
+      """
+        |{ "name" : {
+        |             "fieldName" : "name",
+        |             "fieldValue" : "something",
+        |             "HTMLTag" : "H1",
+        |             "cssClass" : "bigHeader"
+        |           }
+        |}
+      """.stripMargin
+
+    val configJSON =
+      """
+        |{ "asd" : {
+        |             "textColor" : "red",
+        |             "fontSize"  : "20",
+        |             "textAlignment" : "center",
+        |             "fontFamily"  : "corbel",
+        |             "fontWeight"  : "bold"
+        |           }
+        |}
+      """.stripMargin
+    val emptyConfig = convertJSONtoPDF(contentJSON, "")
+    val emptyContent = convertJSONtoPDF("", configJSON)
+    val invalidFile = convertJSONtoPDF(contentJSON, new File("invalid-file"))
+
+    assert(!emptyConfig && !emptyContent && !invalidFile)
   }
 }
