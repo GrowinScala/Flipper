@@ -36,12 +36,10 @@ object Extractor {
         val document: PDFTextStripper = new PDFTextStripper
         val str = Normalizer.normalize(document.getText(pdf), Normalizer.Form.NFD)
           .replaceAll("[\\p{InCombiningDiacriticalMarks}]", "")
-
         val imgText =
           if (readImages) {
             val imageList = extractImgs(pdf).getOrElse(List())
             val imageTexts = imageList.map(img => readImageText(img).getOrElse("")).mkString
-
             correctText(imageTexts)
           } else ""
 
@@ -86,10 +84,10 @@ object Extractor {
                 else findKeywordInText(key, tag, t) //to be changed, here we need to manually search for the keywords in the text
 
               case multiOp: MultipleOf =>
-                val ext = getOptions(text, key, multiOp.possibilities, true)
+                val ext = getOptions(text, key, multiOp.possibilities, multi = true)
                 (key, ext)
               case oneOp: OneOf =>
-                val ext = getOptions(text, key, oneOp.possibilities, false)
+                val ext = getOptions(text, key, oneOp.possibilities, multi = false)
                 (key, ext)
             }
           }
