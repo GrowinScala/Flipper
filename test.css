@@ -1,7 +1,12 @@
-p {
-    color: red;
+.bigHeader {
+             color: blue;
+             font-size: 20pt;
+             text-align : center;
+             font-family: corbel;
+             font-weight: bold;
 }
 
-body {
-    font-size: 30
+.small {
+            color: red;
+            font-size: 10pt;
 }

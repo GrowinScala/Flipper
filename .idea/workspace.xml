@@ -7,35 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5115832d-4669-4625-b348-c310af38a585" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules/converter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/converter.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/generator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/generator.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/reader.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/reader.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/root.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/root.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter$sources/0.1/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter$sources/0.1/resolved.xml.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter$sources/0.1/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter$sources/0.1/resolved.xml.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/converter/target/streams/$global/ivyConfiguration/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/$global/ivyConfiguration/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/converter/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/converter/target/streams/$global/updateClassifiers/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/$global/updateClassifiers/$global/streams/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generator/src/main/scala/Main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/generator/src/main/scala/Main.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/src/main/scala/generator/generate/Generator.scala" beforeDir="false" afterPath="$PROJECT_DIR$/generator/src/main/scala/generator/generate/Generator.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/src/main/scala/generator/utils/Config.scala" beforeDir="false" afterPath="$PROJECT_DIR$/generator/src/main/scala/generator/utils/Config.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/classes/Main$.class" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/classes/Main$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator$sources/0.1/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator$sources/0.1/resolved.xml.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator$sources/0.1/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator$sources/0.1/resolved.xml.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/target/streams/$global/ivyConfiguration/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/$global/ivyConfiguration/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/target/streams/$global/updateClassifiers/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/$global/updateClassifiers/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader$sources/0.1/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader$sources/0.1/resolved.xml.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader$sources/0.1/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader$sources/0.1/resolved.xml.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reader/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reader/target/streams/$global/updateClassifiers/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/$global/updateClassifiers/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/flipper/flipper$sources/0.1/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/flipper/flipper$sources/0.1/resolved.xml.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/flipper/flipper$sources/0.1/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/flipper/flipper$sources/0.1/resolved.xml.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala" beforeDir="false" afterPath="$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.css" beforeDir="false" afterPath="$PROJECT_DIR$/test.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -62,47 +37,49 @@
     </projectState>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Generator.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/generate/Generator.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-949">
-              <caret line="90" column="16" selection-start-line="90" selection-start-column="16" selection-end-line="90" selection-end-column="16" />
-              <folding>
-                <element signature="e#28#44#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HTMLHandler.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/generate/HTMLHandler.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/generator/src/main/scala/Main.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Config.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/utils/Config.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="26" column="11" lean-forward="true" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+          <file leaf-file-name="GeneratorSuite.scala" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="224">
+                  <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+                  <folding>
+                    <element signature="e#19#38#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Main.scala" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/generator/src/main/scala/Main.scala">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="411">
+                  <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="37" selection-end-column="21" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="Generator.scala" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/generate/Generator.scala">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="64">
+                  <caret line="67" column="78" selection-start-line="67" selection-start-column="78" selection-end-line="67" selection-end-column="78" />
+                  <folding>
+                    <element signature="e#28#44#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -115,7 +92,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>null</find>
       <find>maxBy</find>
       <find>O</find>
       <find>Option</find>
@@ -145,6 +121,7 @@
       <find>getA</find>
       <find>getAllObj</find>
       <find>isAll</find>
+      <find>convertJSONtoMap</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -159,8 +136,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/converter/src/main/scala/ReaderConverter/conversion/FileType.scala" />
-        <option value="$PROJECT_DIR$/converter/src/main/scala/ReaderConverter/conversion/Converter.scala" />
         <option value="$PROJECT_DIR$/converter/src/test/scala/ReaderConverter/conversion/ConverterSuite.scala" />
         <option value="$PROJECT_DIR$/converter/src/main/scala/ReaderConverter/Converter/FileType.scala" />
         <option value="$PROJECT_DIR$/converter/src/main/scala/Main.scala" />
@@ -208,8 +183,10 @@
         <option value="$PROJECT_DIR$/flipper.xml" />
         <option value="$PROJECT_DIR$/generator/src/main/scala/generator/generate/HTMLHandler.scala" />
         <option value="$PROJECT_DIR$/generator/src/main/scala/generator/utils/Config.scala" />
-        <option value="$PROJECT_DIR$/generator/src/main/scala/generator/generate/Generator.scala" />
+        <option value="$PROJECT_DIR$/test.css" />
         <option value="$PROJECT_DIR$/generator/src/main/scala/Main.scala" />
+        <option value="$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala" />
+        <option value="$PROJECT_DIR$/generator/src/main/scala/generator/generate/Generator.scala" />
       </list>
     </option>
   </component>
@@ -279,6 +256,40 @@
               <item name="generator" type="462c0819:PsiDirectoryNode" />
               <item name="generate" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
+              <item name="generator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
+              <item name="generator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
+              <item name="generator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="generator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
+              <item name="generator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="generator" type="462c0819:PsiDirectoryNode" />
+              <item name="generate" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -288,11 +299,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ChangesTree.GroupingKeys" value="directory&#10;module" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../testJava" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -316,18 +327,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="JUnit.GeneratorSuite">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="generator" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="reader" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
     <configuration name="MainJava" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -391,6 +397,29 @@
       <envs />
       <patterns />
     </configuration>
+    <configuration name="GeneratorSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="generator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="generator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="generator.generate" />
+      <option name="MAIN_CLASS_NAME" value="generator.GeneratorSuite" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -443,19 +472,19 @@
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.ExtractorSuite" />
       <item itemvalue="Application.MainJava" />
       <item itemvalue="Application.Main (1)" />
       <item itemvalue="Application.Man" />
+      <item itemvalue="JUnit.ExtractorSuite" />
+      <item itemvalue="JUnit.GeneratorSuite" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GeneratorSuite" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Man" />
         <item itemvalue="Application.MainJava" />
         <item itemvalue="JUnit.ExtractorSuite" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -548,20 +577,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1522055766473</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Implemented generator/FileHandlerSuite.scala">
-      <created>1522145920690</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1522145920690</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Hide non entry point classes in reader module">
-      <created>1522147638387</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1522147638387</updated>
     </task>
     <task id="LOCAL-00025" summary="Hide non entry API classes from user , modified project structure and readmes">
       <created>1522150819945</created>
@@ -892,25 +907,24 @@
       <option name="project" value="LOCAL" />
       <updated>1523033272931</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="convertingJSONtoPDF core is done, working on testing it and adding more use cases">
+      <created>1523263223455</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1523263223455</updated>
+    </task>
+    <task id="LOCAL-00073" summary="Added more use cases to convertJSONtoPDF">
+      <created>1523264373420</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1523264373420</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ExtractorSuite - 2018.04.04 at 12h 37m 11s.xml">
-      <configuration name="ExtractorSuite" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ExtractorSuite - 2018.04.04 at 12h 40m 40s.xml">
-      <configuration name="ExtractorSuite" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ExtractorSuite - 2018.04.04 at 12h 41m 23s.xml">
-      <configuration name="ExtractorSuite" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ExtractorSuite - 2018.04.04 at 14h 15m 47s.xml">
-      <configuration name="ExtractorSuite" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ExtractorSuite - 2018.04.04 at 14h 20m 18s.xml">
-      <configuration name="ExtractorSuite" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ExtractorSuite - 2018.04.04 at 14h 20m 52s.xml">
       <configuration name="ExtractorSuite" configurationId="JUnit" />
     </history-entry>
@@ -925,6 +939,21 @@
     </history-entry>
     <history-entry file="ExtractorSuite - 2018.04.04 at 15h 43m 27s.xml">
       <configuration name="ExtractorSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GeneratorSuite - 2018.04.09 at 10h 19m 04s.xml">
+      <configuration name="GeneratorSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GeneratorSuite - 2018.04.09 at 10h 19m 39s.xml">
+      <configuration name="GeneratorSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GeneratorSuite - 2018.04.09 at 10h 32m 21s.xml">
+      <configuration name="GeneratorSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GeneratorSuite - 2018.04.09 at 10h 33m 08s.xml">
+      <configuration name="GeneratorSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GeneratorSuite - 2018.04.09 at 11h 26m 28s.xml">
+      <configuration name="GeneratorSuite" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -941,12 +970,12 @@
       <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.50390625" side_tool="true" weight="0.17460318" />
       <window_info anchor="right" id="Maven Projects" order="2" />
       <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.49791667" weight="0.32979852" />
-      <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.32936507" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.32936507" />
       <window_info anchor="right" id="Material Palette" order="3" />
       <window_info anchor="bottom" id="Terminal" order="4" />
       <window_info id="Capture Tool" order="0" />
       <window_info id="Designer" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.17317708" />
+      <window_info content_ui="combo" id="Project" order="5" weight="0.17317708" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="5" />
       <window_info anchor="bottom" id="Build" order="1" weight="0.2598091" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
@@ -1001,8 +1030,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="All readmes updated" />
-    <MESSAGE value="update" />
     <MESSAGE value="updating extractor" />
     <MESSAGE value="mkdirs" />
     <MESSAGE value="updated readme's" />
@@ -1026,16 +1053,11 @@
     <MESSAGE value="Working on updating Generator" />
     <MESSAGE value="Refactoring generator module, working on interface for user to specify configurations" />
     <MESSAGE value="Implementing convertingJSONtoPDF" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementing convertingJSONtoPDF" />
+    <MESSAGE value="convertingJSONtoPDF core is done, working on testing it and adding more use cases" />
+    <MESSAGE value="Added more use cases to convertJSONtoPDF" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added more use cases to convertJSONtoPDF" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.12.4-sources.jar!/scala/collection/convert/DecorateAsScala.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.12.4-sources.jar!/scala/collection/immutable/List.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -1171,13 +1193,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
@@ -1236,13 +1251,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/utils/Config.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="26" column="11" lean-forward="true" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/utils/Content.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
@@ -1257,16 +1265,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/generate/Generator.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-949">
-          <caret line="90" column="16" selection-start-line="90" selection-start-column="16" selection-end-line="90" selection-end-column="16" />
-          <folding>
-            <element signature="e#28#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/generate/HTMLHandler.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1274,10 +1272,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/utils/Config.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/generator/src/main/scala/Main.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+        <state relative-caret-position="411">
+          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="37" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/generate/Generator.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="67" column="78" selection-start-line="67" selection-start-column="78" selection-end-line="67" selection-end-column="78" />
+          <folding>
+            <element signature="e#28#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+          <folding>
+            <element signature="e#19#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
