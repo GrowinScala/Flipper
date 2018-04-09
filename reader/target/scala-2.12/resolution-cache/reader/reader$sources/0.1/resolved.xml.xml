@@ -4,7 +4,7 @@
 		module="reader$sources"
 		revision="0.1"
 		status="integration"
-		publication="20180406100556"
+		publication="20180409091028"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>

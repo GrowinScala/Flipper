@@ -14,11 +14,20 @@ object Main {
     //
     //    println(convertMapToPDF(content, cssString))
 
-    val contentJSON = """{ "name" : { "fieldName" : "name", "fieldValue" : "something", "HTMLTag" : "H1", "cssClass" : "asd"}}"""
+    val contentJSON =
+      """
+        |{ "name" : {
+        |             "fieldName" : "name",
+        |             "fieldValue" : "something",
+        |             "HTMLTag" : "H1",
+        |             "cssClass" : "asd"
+        |           }
+        |}
+      """.stripMargin
 
     val fjson =
       """
-        |{ "name" : {
+        |{ "asd" : {
         |             "textColor" : "red",
         |             "fontSize"  : "20",
         |             "textAlignment" : "center",
@@ -27,7 +36,7 @@ object Main {
         |           }
         |}
       """.stripMargin
-    convertJSONtoPDF(contentJSON, fjson)
+    println(convertJSONtoPDF(contentJSON, fjson))
 
   }
 }

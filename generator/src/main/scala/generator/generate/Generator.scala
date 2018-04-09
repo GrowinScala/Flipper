@@ -17,6 +17,8 @@ import generator.utils.{Config, Content, H1}
 object Generator {
 
   type Keyword = String
+  type ContentMap = Map[Keyword, Content]
+  type ConfigMap = Map[String, Config]
 
 
   /**
@@ -34,13 +36,13 @@ object Generator {
   }
 
   /**
-    * Method that converts an object (Map[Keyword, Content])) into a PDF by calling the a common method internalMapConverter
+    * Method that converts an object (ContentMap) into a PDF by calling the a common method internalMapConverter
     *
     * @param content - An object containing all the keywords and their Content(a object containig fieldName, fieldValue and formattingType)
     * @param cssFile - A CSS file containing all the CSS code to be added to the HTML file
     * @return a Boolean with information specifying if the conversion was successful or not
     */
-  def convertMapToPDF(content: Map[Keyword, Content], cssFile: File): Boolean = {
+  def convertMapToPDF(content: ContentMap, cssFile: File): Boolean = {
     val bufferedSourceOption = loadCSSFile(cssFile)
     bufferedSourceOption match {
       case Some(bufferedSource) =>
@@ -51,24 +53,24 @@ object Generator {
   }
 
   /**
-    * Method that converts an object (Map[Keyword, Content])) into a PDF by calling the a common method internalMapConverter
+    * Method that converts an object (ContentMap) into a PDF by calling the a common method internalMapConverter
     *
     * @param content   - An object containing all the keywords and their Content(a object containig fieldName, fieldValue and formattingType)
     * @param cssString - A String containing all the CSS code to be added to the HTML file
     * @return a Boolean with information specifying if the conversion was successful or not
     */
-  def convertMapToPDF(content: Map[Keyword, Content], cssString: String): Boolean = {
+  def convertMapToPDF(content: ContentMap, cssString: String): Boolean = {
     internalMapConverter(content, cssString)
   }
 
   /**
-    * Method that converts an object (Map[Keyword, Content])) into a PDF by calling the a common method internalMapConverter
+    * Method that converts an object (ContentMap) into a PDF by calling the a common method internalMapConverter
     *
     * @param content    - An object containing all the keywords and their Content(a object containig fieldName, fieldValue and formattingType)
     * @param formatting - An object containing all the user defined formattings specifying how each keyword in the content object
     * @return a Boolean with information specifying if the conversion was successful or not
     */
-  def convertMapToPDF(content: Map[Keyword, Content], formatting: Map[String, Config]): Boolean = {
+  def convertMapToPDF(content: ContentMap, formatting: ConfigMap): Boolean = {
     internalMapConverter(content, createCssString(content, formatting))
   }
 
@@ -77,15 +79,16 @@ object Generator {
     * JSON string with information regarding how that information should be displayed, into a PDF file
     *
     * @param contentJSON    - JSON string with information regarding the content to be displayed in the PDF file
-    * @param formattingJSON - JSON string with information regardin how the content should be displayed
+    * @param formattingJSON - JSON string with information regarding how the content should be displayed
     * @return a Boolean specifying if the conversion was successful or not
     */
   def convertJSONtoPDF(contentJSON: String, formattingJSON: String): Boolean = {
-    val convertedContent = jsonToContent(contentJSON)
-    val convertedFormatting = jsonToFormatting(formattingJSON)
-    println(convertedContent)
-    println(convertedFormatting)
-    false
+    val convertedContentOpt = jsonToContent(contentJSON) //Try to convert the JSON content into a ContentMap
+    val convertedFormattingOpt = jsonToFormatting(formattingJSON) //Try to convert the JSON formatting into a ContentFormatting
+    if (convertedContentOpt.isDefined && convertedFormattingOpt.isDefined) { //If both Options are defined (Some) then proceed with conversion
+      val convertedContent = convertedContentOpt.get
+      internalMapConverter(convertedContent, createCssString(convertedContent, convertedFormattingOpt.get))
+    } else false
   }
 
   /**
@@ -94,16 +97,16 @@ object Generator {
     * @param contentJSON - The JSON string to be converted
     * @return a Map of keywords and Content objects
     */
-  private def jsonToContent(contentJSON: String): Option[Map[Keyword, Content]] = {
+  private def jsonToContent(contentJSON: String): Option[ContentMap] = {
     val parsedJSONOpt = convertJSONtoMap(contentJSON)
     parsedJSONOpt match {
       case Some(parsedJSON) =>
         val returnMap = parsedJSON.map { case (keyword, content) =>
           content match {
             case contentMap: Map[String, Any] =>
-              val fieldName = contentMap.getOrElse("fieldName", "").toString
-              val fieldValue = contentMap.getOrElse("fieldValue", "")
-              val htmlTag = stringToHTMLTag(contentMap.getOrElse("HTMLTag", "").toString)
+              val fieldName = contentMap.getOrElse("fieldName", "N/A").toString
+              val fieldValue = contentMap.getOrElse("fieldValue", "N/A") //TODO Maybe change N/A ??
+            val htmlTag = stringToHTMLTag(contentMap.getOrElse("HTMLTag", "").toString)
               val cssClass = contentMap.getOrElse("cssClass", "").toString
 
               (keyword, Content(fieldName, fieldValue, htmlTag, cssClass))
@@ -122,7 +125,7 @@ object Generator {
     * @param formattingJSON - The JSON string to be converted
     * @return a Map of keywords and Config objects
     */
-  private def jsonToFormatting(formattingJSON: String): Option[Map[Keyword, Config]] = {
+  private def jsonToFormatting(formattingJSON: String): Option[ConfigMap] = {
     val parsedJSONOpt = convertJSONtoMap(formattingJSON)
     parsedJSONOpt match {
       case Some(parsedJSON) =>
@@ -153,7 +156,7 @@ object Generator {
     * @param cssString - A String containing all the CSS code to be added to the HTML file
     * @return a Boolean with information specifying if the conversion was successful or not
     */
-  private def internalMapConverter(content: Map[Keyword, Content], cssString: String): Boolean = {
+  private def internalMapConverter(content: ContentMap, cssString: String): Boolean = {
     val htmlString = writeHTMLString(content, cssString) //generator.generate the HTML String
     val filePath = generateDocument(htmlString) //Create a HTML file from that HTML String
     convertHTMLToPDF(filePath) //Convert the HTML file into a PDF file
