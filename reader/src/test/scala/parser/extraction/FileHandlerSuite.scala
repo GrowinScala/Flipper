@@ -16,6 +16,7 @@ class FileHandlerSuite extends FunSuite {
     val nullPDF = loadPDF(null)
     val badPDF = loadPDF(new File("non existing URI"))
     assert(nullPDF.isEmpty && badPDF.isEmpty)
+
   }
 
   /**

@@ -4,7 +4,7 @@
 		module="flipper$sources"
 		revision="0.1"
 		status="integration"
-		publication="20180405150701"
+		publication="20180409123604"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>
@@ -50,7 +50,7 @@
 			<artifact name="sourcecode_2.12" type="src" ext="jar" conf="*" e:classifier="sources"/>
 			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
 		</dependency>
-		<dependency org="org.apache.pdfbox" name="fontbox" rev="2.0.8" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
+		<dependency org="org.apache.pdfbox" name="fontbox" rev="2.0.8" transitive="false" conf="compile->default,compile,runtime(*),master(compile),runtime,compile(*),master,default(compile);runtime->compile,runtime(*),master(compile),runtime,compile(*),master,default,default(compile);test->compile,runtime(*),master(compile),runtime,compile(*),master,default,default(compile);compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master,default,default(compile);runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master,default,default(compile);test-internal->compile,runtime(*),master(compile),runtime,compile(*),master,default,default(compile)">
 			<artifact name="fontbox" type="src" ext="jar" conf="*" e:classifier="sources"/>
 			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
 		</dependency>

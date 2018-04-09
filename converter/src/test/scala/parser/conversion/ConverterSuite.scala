@@ -16,7 +16,7 @@ class ConverterSuite extends FunSuite {
     * This means that the method successfully converted the pdf to the specified file type
     */
   test("convertPDFtoIMG with a valid filePath and fileType") {
-    assert(convertPDFtoIMG(validFile, FileType.png))
+    assert(convertPDFtoIMG(validFile, PNG()))
   }
 
   /**

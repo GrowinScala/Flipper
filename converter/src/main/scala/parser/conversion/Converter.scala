@@ -26,7 +26,7 @@ object Converter {
     * @throws IllegalArgumentException if the specified fileType did not equal the supported file types
     */
   @throws[IllegalArgumentException]
-  def convertPDFtoIMG(file: File, fileType: FileType.Value): Boolean = {
+  def convertPDFtoIMG(file: File, fileType: FileType): Boolean = {
     require(fileType != null, "File type must be one of png, jpg, gif or jpeg")
 
     val pdfOption = loadPDF(file)

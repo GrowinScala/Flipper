@@ -29,6 +29,7 @@ class ImageProcessingSuite extends FunSuite {
     val fp = "./reader/src/main/resources/test.pdf"
     val pdf = PDDocument.load(new File(fp))
     assert(extractImgs(pdf).getOrElse(List()).isEmpty)
+    pdf.close()
     cleanImageDir()
   }
 
@@ -37,6 +38,7 @@ class ImageProcessingSuite extends FunSuite {
     */
   test("extractImgs returns correct number of images") {
     assert(extractImgs(pdf).getOrElse(List()).size == 2)
+    pdf.close()
     cleanImageDir()
   }
 
@@ -46,6 +48,7 @@ class ImageProcessingSuite extends FunSuite {
   test("readImageText returns a close guess of the images text") {
     val growinLogo = extractImgs(pdf).getOrElse(List()).head
     assert(readImageText(growinLogo).getOrElse("").substring(0, 5) == "growi")
+    pdf.close()
     cleanImageDir()
   }
 

@@ -1,6 +1,6 @@
 package parser.utils
 
-import java.io.{File, FileInputStream}
+import java.io.{File}
 
 import opennlp.tools.langdetect.{LanguageDetectorME, LanguageDetectorModel}
 import opennlp.tools.postag.{POSModel, POSTaggerME}
@@ -48,7 +48,7 @@ private[parser] object OpenNLP {
   def detectLanguage(text: String): String = {
     val file = getClass.getResource("/langdetect-183.bin")
     //    val file = new File("./reader/resources/langdetect-183.bin")
-    val trainedModel = new LanguageDetectorModel(file)
+    val trainedModel = new LanguageDetectorModel(file) // ScratchFileBuffer not closed!
     val langDect = new LanguageDetectorME(trainedModel)
     langDect.predictLanguage(text).getLang
   }

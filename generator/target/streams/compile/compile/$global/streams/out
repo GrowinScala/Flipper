@@ -1,0 +1,7 @@
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\Margarida Reis\Documents\Flipper\generator\src\main\scala\generator\generate\Generator.scala:151:30: non-variable type argument String in type pattern scala.collection.immutable.Map[String,Any] (the underlying of Map[String,Any]) is unchecked since it is eliminated by erasure[0m
+[0m[[0m[33mwarn[0m] [0m[0m            case contentMap: Map[String, Any] =>[0m
+[0m[[0m[33mwarn[0m] [0m[0m                             ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\Margarida Reis\Documents\Flipper\generator\src\main\scala\generator\generate\Generator.scala:179:29: non-variable type argument String in type pattern scala.collection.immutable.Map[String,Any] (the underlying of Map[String,Any]) is unchecked since it is eliminated by erasure[0m
+[0m[[0m[33mwarn[0m] [0m[0m            case configMap: Map[String, Any] =>[0m
+[0m[[0m[33mwarn[0m] [0m[0m                            ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mtwo warnings found[0m
