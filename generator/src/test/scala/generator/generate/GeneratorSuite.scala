@@ -45,6 +45,7 @@ class GeneratorSuite extends FunSuite {
         "bigHeader" -> Config("blue", "20", "center", "corbel", "bold"),
         "small" -> Config("red", "10")
       )
+    val noConfig = convertMapToPDF(content)
     val convertWithCSSFile = convertMapToPDF(content, cssFile)
     val convertWithCSSStr = convertMapToPDF(content, cssString)
     val convertWithConfigMap = convertMapToPDF(content, configMap)
@@ -52,7 +53,8 @@ class GeneratorSuite extends FunSuite {
     val convertWithEmptyCSS = convertMapToPDF(content, emptyCSS)
 
     assert(
-      convertWithConfigMap &&
+      noConfig &&
+        convertWithConfigMap &&
         convertWithCSSStr &&
         convertWithCSSFile &&
         convertWithEmptyConf &&
@@ -96,11 +98,13 @@ class GeneratorSuite extends FunSuite {
         |           }
         |}
       """.stripMargin
+
+    val noConfig = convertJSONtoPDF(contentJSON)
     val convertWithConf = convertJSONtoPDF(contentJSON, configJSON)
     val convertWithCSSStr = convertJSONtoPDFWithCSS(contentJSON, cssString)
     val convertWithEmptyCSS = convertJSONtoPDFWithCSS(contentJSON, "")
     val convertWithCSSFile = convertJSONtoPDF(contentJSON, cssFile)
-    assert(convertWithConf && convertWithCSSStr && convertWithCSSFile && convertWithEmptyCSS)
+    assert(noConfig && convertWithConf && convertWithCSSStr && convertWithCSSFile && convertWithEmptyCSS)
   }
 
   /**

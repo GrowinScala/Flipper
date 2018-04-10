@@ -26,15 +26,15 @@ class HTMLHandlerSuite extends FunSuite {
     */
   test("Calling stringToHTMLTag with correct HTML Entity") {
     assert(
-      stringToHTMLTag("h1") == H1() &&
-        stringToHTMLTag("h2") == H2() &&
-        stringToHTMLTag("H3") == H3() &&
-        stringToHTMLTag("orderedList") == OrderedList() &&
-        stringToHTMLTag("UnOrDerEdlIsT") == UnOrderedList() &&
-        stringToHTMLTag("table") == Table() &&
-        stringToHTMLTag("p") == P() &&
-        stringToHTMLTag("span") == Text() &&
-        stringToHTMLTag("somethin-else") == Text()
+      stringToHTMLEntity("h1") == H1() &&
+        stringToHTMLEntity("h2") == H2() &&
+        stringToHTMLEntity("H3") == H3() &&
+        stringToHTMLEntity("orderedList") == OrderedList() &&
+        stringToHTMLEntity("UnOrDerEdlIsT") == UnorderedList() &&
+        stringToHTMLEntity("table") == Table() &&
+        stringToHTMLEntity("p") == P() &&
+        stringToHTMLEntity("span") == Text() &&
+        stringToHTMLEntity("somethin-else") == Text()
     )
   }
 
@@ -48,7 +48,7 @@ class HTMLHandlerSuite extends FunSuite {
       )
 
     val expected = ".bigHeader{ color: blue; text-align: center; font-weight: bold; font-family: corbel; font-size: 20pt;} "
-    val expected2 = ".bigHeader{ color: blue; text-align: ; font-weight: ; font-family: ; font-size: pt;} "
+    val expected2 = ".bigHeader{ color: blue; text-align: ; font-weight: ; font-family: ; font-size: -1pt;} "
     val result = createCssString(content, configMap)
     val result2 = createCssString(content, config2)
     assert(result.equals(expected) && result2.equals(expected2))
