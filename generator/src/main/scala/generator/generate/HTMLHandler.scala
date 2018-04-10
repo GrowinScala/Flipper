@@ -90,15 +90,15 @@ private[generate] object HTMLHandler {
     */
   private def writeHTMLTag(value: Content): scalatags.Text.TypedTag[String] = {
     value.htmlEntity match {
-      case _: H1 => h1(`class` := value.cssClass)(value.fieldName + " : " + printValue(value.fieldValue)) //TODO maybe remove printValue
+      case _: H1 => h1(`class` := value.cssClass)(printValue(value.fieldValue)) //TODO maybe remove printValue
 
-      case _: H2 => h2(`class` := value.cssClass)(value.fieldName + " : " + printValue(value.fieldValue))
+      case _: H2 => h2(`class` := value.cssClass)(printValue(value.fieldValue))
 
-      case _: H3 => h3(`class` := value.cssClass)(value.fieldName + " : " + printValue(value.fieldValue))
+      case _: H3 => h3(`class` := value.cssClass)(printValue(value.fieldValue))
 
-      case _: P => p(`class` := value.cssClass)(value.fieldName + " : " + printValue(value.fieldValue))
+      case _: P => p(`class` := value.cssClass)(printValue(value.fieldValue))
 
-      case _: Text => span(`class` := value.cssClass)(value.fieldName + " : " + printValue(value.fieldValue))
+      case _: Text => span(`class` := value.cssClass)(printValue(value.fieldValue))
 
       case _: OrderedList => value.fieldValue match {
         case javaList: java.util.List[Object] =>
