@@ -1,7 +1,0 @@
-[0m[[0m[31merror[0m] [0m[0mjava.lang.NoClassDefFoundError: org/scalacheck/Test$TestCallback[0m
-[0m[[0m[31merror[0m] [0m[0m	at java.lang.Class.getDeclaredFields0(Native Method)[0m
-[0m[[0m[31merror[0m] [0m[0m	at java.lang.Class.privateGetDeclaredFields(Unknown Source)[0m
-[0m[[0m[31merror[0m] [0m[0m	at java.lang.Class.getDeclaredFields(Unknown Source)[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.reflect.runtime.JavaMirrors$JavaMirror$FromJavaClassCompleter.$anonfun$completeRest$4(JavaMirrors.scala:787)[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.reflect.runtime.JavaMirrors$JavaMirror$FromJavaClassCompleter.$anonfun$completeRest$1(JavaMirrors.scala:797)[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.reflect.runtime.JavaMirrors$JavaMirror$FromJavaClassCompleter.completeRest(JavaMirrors.scala:755)[0m
