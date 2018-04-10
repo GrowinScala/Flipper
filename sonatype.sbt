@@ -8,7 +8,7 @@ homepage := Some(url("https://github.com/GrowinScala/Flipper"))
 scmInfo := Some(
   ScmInfo(
     url("https://github.com/GrowinScala/Flipper"),
-    "scm:mreis@growin.pt:GrowinScala/Flipper.git"
+    "scm:git@github.com:GrowinScala/Flipper.git"
   )
 )
 developers := List(

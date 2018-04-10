@@ -40,6 +40,16 @@ object Generator {
     * Method that converts an object (ContentMap) into a PDF by calling the a common method internalMapConverter
     *
     * @param content - An object containing all the keywords and their Content(a object containig fieldName, fieldValue and formattingType)
+    * @return a Boolean with information specifying if the conversion was successful or not
+    */
+  def convertMapToPDF(content: ContentMap): Boolean = {
+    internalMapConverter(content, "")
+  }
+
+  /**
+    * Method that converts an object (ContentMap) into a PDF by calling the a common method internalMapConverter
+    *
+    * @param content - An object containing all the keywords and their Content(a object containig fieldName, fieldValue and formattingType)
     * @param cssFile - A CSS file containing all the CSS code to be added to the HTML file
     * @return a Boolean with information specifying if the conversion was successful or not
     */
@@ -67,6 +77,20 @@ object Generator {
     */
   def convertMapToPDF(content: ContentMap, formatting: ConfigMap): Boolean = {
     internalMapConverter(content, createCssString(content, formatting))
+  }
+
+  /**
+    * Method that converts a JSON string, with information regarding the content to be displayed in the PDF file, into a PDF file
+    *
+    * @param contentJSON - JSON string with information regarding the content to be displayed in the PDF file
+    * @return a Boolean specifying if the conversion was successful or not
+    */
+  def convertJSONtoPDF(contentJSON: JSONString): Boolean = {
+    val convertedContentOpt = jsonToContent(contentJSON) //Try to convert the JSON content into a ContentMap
+    convertedContentOpt match {
+      case Some(convertContent) => internalMapConverter(convertContent, "")
+      case _ => false
+    }
   }
 
   /**
@@ -151,10 +175,10 @@ object Generator {
             case contentMap: Map[String, Any] =>
               val fieldName = contentMap.getOrElse("fieldName", "N/A").toString
               val fieldValue = contentMap.getOrElse("fieldValue", "N/A") //TODO Maybe change N/A ??
-            val htmlTag = stringToHTMLTag(contentMap.getOrElse("HTMLTag", "").toString)
+            val htmlEntity = stringToHTMLEntity(contentMap.getOrElse("htmlEntity", "").toString)
               val cssClass = contentMap.getOrElse("cssClass", "").toString
 
-              (keyword, Content(fieldName, fieldValue, htmlTag, cssClass))
+              (keyword, Content(fieldName, fieldValue, htmlEntity, cssClass))
 
             case _ => ("", Content("", "", H1()))
           }
@@ -177,13 +201,13 @@ object Generator {
         val formattingMap = parsedJSON.map { case (keyword, conf) =>
           conf match {
             case configMap: Map[String, Any] =>
-              val textColor = configMap.getOrElse("textColor", "").toString
+              val color = configMap.getOrElse("color", "").toString
               val fontSize = configMap.getOrElse("fontSize", "").toString
               val textAlignment = configMap.getOrElse("textAlignment", "").toString
               val fontFamily = configMap.getOrElse("fontFamily", "").toString
               val fontWeight = configMap.getOrElse("fontWeight", "").toString
 
-              (keyword, Config(textColor, fontSize, textAlignment, fontFamily, fontWeight))
+              (keyword, Config(color, fontSize, textAlignment, fontFamily, fontWeight))
 
             case _ => ("", Config())
           }

@@ -13,15 +13,15 @@ private[generate] object HTMLHandler {
     * Method that upon receiving a String containing an HTML entity converts it to a FormattingType
     *
     * @param htmlEntity - The HTML entity to be converted to FormattingType
-    * @return A FormattingType object representing the same HTML entity passed as an argument
+    * @return A HTMLEntity object representing the same HTML entity passed as an argument
     */
-  def stringToHTMLTag(htmlEntity: String): FormattingType = {
+  def stringToHTMLEntity(htmlEntity: String): HTMLEntity = {
     htmlEntity.toLowerCase match {
       case "h1" => H1()
       case "h2" => H2()
       case "h3" => H3()
       case "orderedlist" => OrderedList()
-      case "unorderedlist" => UnOrderedList()
+      case "unorderedlist" => UnorderedList()
       case "table" => Table()
       case "p" => P()
       case _ => Text()
@@ -53,11 +53,11 @@ private[generate] object HTMLHandler {
         formatting.get(value.cssClass) match {
           case Some(config) =>
             "." + value.cssClass + "{" +
-              " color: " + config.textColor + ";" +
+              " color: " + config.color + ";" +
               " text-align: " + config.textAlignment + ";" +
               " font-weight: " + config.fontWeight + ";" +
               " font-family: " + config.fontFamily + ";" +
-              " font-size: " + config.fontSize + "pt;" +
+              s" font-size: ${if (config.fontSize.isEmpty) -1 else config.fontSize}pt;" +
               "} "
           case None => ""
         }
@@ -89,8 +89,7 @@ private[generate] object HTMLHandler {
     *         no formatting a given value
     */
   private def writeHTMLTag(value: Content): scalatags.Text.TypedTag[String] = {
-    value.HTMLTag match {
-
+    value.htmlEntity match {
       case _: H1 => h1(`class` := value.cssClass)(value.fieldName + " : " + printValue(value.fieldValue)) //TODO maybe remove printValue
 
       case _: H2 => h2(`class` := value.cssClass)(value.fieldName + " : " + printValue(value.fieldValue))
@@ -102,13 +101,25 @@ private[generate] object HTMLHandler {
       case _: Text => span(`class` := value.cssClass)(value.fieldName + " : " + printValue(value.fieldValue))
 
       case _: OrderedList => value.fieldValue match {
+        case javaList: java.util.List[Object] =>
+          val listItems = for (i <- 0 until javaList.size()) yield {
+            li(javaList.get(i).toString)
+          }
+          ol(`class` := value.cssClass)(listItems.toList)
+
         case list: List[Any] =>
           val listItems = list.map(elem => li(elem.toString))
           ol(`class` := value.cssClass)(listItems)
         case _ => ol(`class` := value.cssClass)(li(value.fieldValue.toString))
       }
 
-      case _: UnOrderedList => value.fieldValue match {
+      case _: UnorderedList => value.fieldValue match {
+        case javaList: java.util.List[Object] =>
+          val listItems = for (i <- 0 until javaList.size()) yield {
+            li(javaList.get(i).toString)
+          }
+          ol(`class` := value.cssClass)(listItems.toList)
+
         case list: List[Any] =>
           val listItems = list.map(elem => li(elem.toString))
           ul(`class` := value.cssClass)(listItems)

@@ -13,3 +13,19 @@ run
 package
 compile
 package
+publishSigned
+plugins
+check-pgp-signatures
+pgp
+gpg
+console
+plugins
+pgp -cmd 
+publishSigned
+pgp-cmd gen-key
+publishSigned
+clc
+clear
+close
+sbt
+publishSigned
