@@ -1,20 +1,17 @@
-import java.util
-
 import generator.generate.Generator._
 import generator.utils._
-import java.util.ArrayList
 
 object Main {
 
   def main(args: Array[String]): Unit = {
-    val table = Map("Country" -> List("Portugal", "Spain", "UK"), "Language" -> List("Portuguese", "English"), "Weather" -> List("Sunny", "Rainning"))
-    val tableList = List("Portugal", "Spain", "UK")
-    val somethingElse = "heeeey"
+    //    val table = Map("Country" -> List("Portugal", "Spain", "UK"), "Language" -> List("Portuguese", "English"), "Weather" -> List("Sunny", "Rainning"))
+    //    val tableList = List("Portugal", "Spain", "UK")
+    //    val somethingElse = "heeeey"
     val contentMap =
-      Map(
-        "name" -> Content("name", "John Doe", H1(), "bigHeader"),
-        "countries" -> Content("countries", somethingElse, Table(), "list")
-      )
+    Map(
+      "name" -> Content("name", "John Doe", H1(), "bigHeader"),
+      "countries" -> Content("countries", List(123, 321), UnorderedList(), "list")
+    )
 
     val cssString =
       """

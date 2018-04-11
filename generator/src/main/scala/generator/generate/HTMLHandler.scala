@@ -105,7 +105,6 @@ private[generate] object HTMLHandler {
       case _: UnorderedList => createHtmlList(ordered = false, value)
 
       case _: Table => createHtmlTable(value)
-      //If its a Map[Header, List[Values for that header]] print as a table, if its a List print just one column with fieldName as its header
     }
   }
 
@@ -118,6 +117,8 @@ private[generate] object HTMLHandler {
     *
     * 2 - value.fieldValue comes in the form of List[Any], in this case Flipper uses the value.fieldName (if it exists) as
     * the table's header and the content of the list as the values to be put under the header.
+    *
+    * In all other cases Flipper just encapsulates the value.fieldValue in a HTML table with one row and one data cell
     *
     * @param value - The content value to be placed inside the HTML table
     * @return a scalatags HTMl table containing the value passed as parameter
