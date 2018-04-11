@@ -3,10 +3,12 @@ name := "Flipper"
 val basicSettings = Seq(
   version := "0.1",
   scalaVersion := "2.12.4",
+
   publishTo := sonatypePublishTo.value,
   useGpg := true,
   pgpReadOnly := false,
   publishMavenStyle := true,
+
   libraryDependencies += "org.apache.pdfbox" % "pdfbox" % "2.0.5" exclude ("commons-logging", "commons-logging"),
   libraryDependencies += "org.apache.pdfbox" % "fontbox" % "2.0.5" exclude ("commons-logging", "commons-logging"),
   libraryDependencies += "junit" % "junit" % "4.10" % Test,

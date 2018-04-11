@@ -203,3 +203,66 @@ publishSigned
 exit
 show gpgCommand
 publishSigned
+exit
+publishSigned
+exit
+show gpgCommand
+publishSigned
+exit
+show gpgCommand
+exit
+show gpgCommand
+publishSigned
+exit
+show gpgCommand
+publishSigned
+exit
+publishSigned
+^Z
+publishSigned
+exit
+publishSigned
+exit
+publishSigned
+exit
+publishSigned
+pgp-cmd gen-key
+pgp-cmd
+pgp-cmd list-keys
+exit
+pgp-cmd list-keys
+publishSigned
+pgp-cmd search-keys Margarida Reis
+pgp-cmd keys
+pgp-cmd recv-key
+pgp-cmd recv-key Margarida Reis
+pgp-cmd import-pub-key
+gpg
+show pgpSogner
+show pgpSigner
+show pgpSigningKey
+pgp-cmd list-keys
+publishSigned
+exit
+show gpgCommand
+publishSigned
+exit
+gpg --version
+pgp-cmd version
+exit
+publishSigned
+exit
+pgp-cmd list-keys
+publishSigned
+sonatypeList
+sonatypeOpen comgrowin-1001
+sonatypeRelease
+sonatypeReleaseAll com.growin
+sonatypeStagingProfiles
+sonatypeRelease
+exit
+sonatypeReleaseAll com.growin
+sonatypeList
+sonatypeOpen
+sonatypeOpen com.growin.flipper
+sonatypeRelease

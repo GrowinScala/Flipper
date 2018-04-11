@@ -1,7 +1,15 @@
-[0m[[0m[33mwarn[0m] [0m[0mC:\Users\Margarida Reis\Documents\Flipper\generator\src\main\scala\generator\generate\Generator.scala:151:30: non-variable type argument String in type pattern scala.collection.immutable.Map[String,Any] (the underlying of Map[String,Any]) is unchecked since it is eliminated by erasure[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\Margarida Reis\Documents\Flipper\generator\src\main\scala\generator\generate\Generator.scala:175:30: non-variable type argument String in type pattern scala.collection.immutable.Map[String,Any] (the underlying of Map[String,Any]) is unchecked since it is eliminated by erasure[0m
 [0m[[0m[33mwarn[0m] [0m[0m            case contentMap: Map[String, Any] =>[0m
 [0m[[0m[33mwarn[0m] [0m[0m                             ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mC:\Users\Margarida Reis\Documents\Flipper\generator\src\main\scala\generator\generate\Generator.scala:179:29: non-variable type argument String in type pattern scala.collection.immutable.Map[String,Any] (the underlying of Map[String,Any]) is unchecked since it is eliminated by erasure[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\Margarida Reis\Documents\Flipper\generator\src\main\scala\generator\generate\Generator.scala:203:29: non-variable type argument String in type pattern scala.collection.immutable.Map[String,Any] (the underlying of Map[String,Any]) is unchecked since it is eliminated by erasure[0m
 [0m[[0m[33mwarn[0m] [0m[0m            case configMap: Map[String, Any] =>[0m
 [0m[[0m[33mwarn[0m] [0m[0m                            ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mtwo warnings found[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\Margarida Reis\Documents\Flipper\generator\src\main\scala\generator\generate\HTMLHandler.scala:104:34: non-variable type argument Object in type pattern java.util.List[Object] is unchecked since it is eliminated by erasure[0m
+[0m[[0m[33mwarn[0m] [0m[0m        case javaList: java.util.List[Object] =>[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                 ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\Margarida Reis\Documents\Flipper\generator\src\main\scala\generator\generate\HTMLHandler.scala:117:34: non-variable type argument Object in type pattern java.util.List[Object] is unchecked since it is eliminated by erasure[0m
+[0m[[0m[33mwarn[0m] [0m[0m        case javaList: java.util.List[Object] =>[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                 ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mfour warnings found[0m
+[0m[[0m[0minfo[0m] [0m[0mNote: C:\Users\Margarida Reis\Documents\Flipper\generator\src\main\java\generator\generate\GeneratorJava.java uses unchecked or unsafe operations.[0m
+[0m[[0m[0minfo[0m] [0m[0mNote: Recompile with -Xlint:unchecked for details.[0m
