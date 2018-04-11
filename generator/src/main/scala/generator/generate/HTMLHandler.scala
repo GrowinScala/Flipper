@@ -104,7 +104,52 @@ private[generate] object HTMLHandler {
 
       case _: UnorderedList => createHtmlList(ordered = false, value)
 
-      case _: Table => h1() //TODO finish this
+      case _: Table => createHtmlTable(value)
+      //If its a Map[Header, List[Values for that header]] print as a table, if its a List print just one column with fieldName as its header
+    }
+  }
+
+  /**
+    * Method that creates a HTML table with the correct content value inside it.
+    * The value.fieldValue passed can take any form but to Flipper supports 2 special cases:
+    *
+    * 1 - value.fieldValue comes in the form of Map[String, List[Any] ], in this case we assume that the key of the map
+    * is the table's header and that the values are of the map are the values to be put under said header.
+    *
+    * 2 - value.fieldValue comes in the form of List[Any], in this case Flipper uses the value.fieldName (if it exists) as
+    * the table's header and the content of the list as the values to be put under the header.
+    *
+    * @param value - The content value to be placed inside the HTML table
+    * @return a scalatags HTMl table containing the value passed as parameter
+    */
+  private def createHtmlTable(value: Content): scalatags.Text.TypedTag[String] = {
+    def getMaxSize(map: Map[String, List[Any]]): Int = map.maxBy(_._2.size)._2.size
+
+    def getTableBody(map: Map[String, List[Any]], counter: Int): List[scalatags.Text.TypedTag[String]] =
+      (for (i <- 0 until counter) yield {
+
+        val tdList = map.mapValues(valuesList =>
+          //In case there's  no more values inside the current valuesList return an empty table data
+          //If not return a table data with the information at the "i" index of the list
+          if (i < valuesList.size) td(valuesList(i).toString) else td()
+        ).toList.map(_._2)
+
+        tr(tdList) //For each iteration return a table row containing the correct table data inside each of them
+      }).toList //return a list of table rows representing the body of the HTML table
+
+
+    value.fieldValue match {
+      case map: Map[String, List[Any]] =>
+        val headerRow = tr(th(map.keys.toList)) //create the row of headers
+      val tableBody = getTableBody(map, getMaxSize(map)) //create a list of table rows representing the body of HTML table
+        table(`class` := value.cssClass)(headerRow, tableBody)
+
+      case list: List[Any] =>
+        val header = if (value.fieldName.nonEmpty) value.fieldName else "N/A" //TODO maybe change this ?
+      val tableData = list.map(elem => tr(td(elem.toString)))
+        table(`class` := value.cssClass)(tr(th(header)), tableData)
+
+      case _ => table(`class` := value.cssClass)(tr(td(value.fieldValue.toString)))
     }
   }
 
@@ -112,7 +157,7 @@ private[generate] object HTMLHandler {
     * Method that creates both HTML lists (ol and ul) with the correct informationg inside it
     *
     * @param ordered - Boolean value specifying if the list should be an ordered one (ol) or unordered (ul)
-    * @param value   - The content value to be placed inside the list
+    * @param value   - The content value to be placed inside the HTML list
     * @return a scalatags HTML list tag containing the value passed as parameter
     */
   private def createHtmlList(ordered: Boolean, value: Content): scalatags.Text.TypedTag[String] = {

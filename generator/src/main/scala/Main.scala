@@ -7,13 +7,13 @@ import java.util.ArrayList
 object Main {
 
   def main(args: Array[String]): Unit = {
-    val s = new util.ArrayList[String]()
-    s.add("1234")
-    s.add("4321")
+    val table = Map("Country" -> List("Portugal", "Spain", "UK"), "Language" -> List("Portuguese", "English"), "Weather" -> List("Sunny", "Rainning"))
+    val tableList = List("Portugal", "Spain", "UK")
+    val somethingElse = "heeeey"
     val contentMap =
       Map(
         "name" -> Content("name", "John Doe", H1(), "bigHeader"),
-        "phones" -> Content("phones", s, H1(), "list")
+        "countries" -> Content("countries", somethingElse, Table(), "list")
       )
 
     val cssString =
