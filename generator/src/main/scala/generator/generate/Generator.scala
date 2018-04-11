@@ -226,7 +226,7 @@ object Generator {
     * @return a Boolean with information specifying if the conversion was successful or not
     */
   private def internalMapConverter(content: ContentMap, cssString: String): Boolean = {
-    val htmlString = writeHTMLString(content, cssString) //generator.generate the HTML String
+    val htmlString = writeHTMLString(content, cssString) //Generate the HTML String
     val filePath = generateDocument(htmlString) //Create a HTML file from that HTML String
     convertHTMLToPDF(filePath) //Convert the HTML file into a PDF file
   }

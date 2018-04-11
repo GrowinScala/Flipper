@@ -75,7 +75,7 @@ private[generate] object HTMLHandler {
     */
   private def createHTML(content: Map[Keyword, Content], cssString: String): String = {
     //Iterate through all the keywords (and their values) and create the respective HTML tag for each of them
-    val htmlBody = content.map { case (key, singleContent) => writeHTMLTag(singleContent) }
+    val htmlBody = content.map { case (_, singleContent) => writeHTMLTag(singleContent) }
     val htmlString = html(head(), body(htmlBody.toList)).toString
     val (left, right) = htmlString.splitAt(12) //split html string at index 12, right in between the <head> tag
     s"$left <style> $cssString </style> $right" //creates the desired HTML code with a <style> tag containing the user-sent css
@@ -90,45 +90,57 @@ private[generate] object HTMLHandler {
     */
   private def writeHTMLTag(value: Content): scalatags.Text.TypedTag[String] = {
     value.htmlEntity match {
-      case _: H1 => h1(`class` := value.cssClass)(printValue(value.fieldValue)) //TODO maybe remove printValue
+      case _: H1 => h1(`class` := value.cssClass)(displayInfo(value.fieldName, value.fieldValue))
 
-      case _: H2 => h2(`class` := value.cssClass)(printValue(value.fieldValue))
+      case _: H2 => h2(`class` := value.cssClass)(displayInfo(value.fieldName, value.fieldValue))
 
-      case _: H3 => h3(`class` := value.cssClass)(printValue(value.fieldValue))
+      case _: H3 => h3(`class` := value.cssClass)(displayInfo(value.fieldName, value.fieldValue))
 
-      case _: P => p(`class` := value.cssClass)(printValue(value.fieldValue))
+      case _: P => p(`class` := value.cssClass)(displayInfo(value.fieldName, value.fieldValue))
 
-      case _: Text => span(`class` := value.cssClass)(printValue(value.fieldValue))
+      case _: Text => span(`class` := value.cssClass)(displayInfo(value.fieldName, value.fieldValue))
 
-      case _: OrderedList => value.fieldValue match {
-        case javaList: java.util.List[Object] =>
-          val listItems = for (i <- 0 until javaList.size()) yield {
-            li(javaList.get(i).toString)
-          }
-          ol(`class` := value.cssClass)(listItems.toList)
+      case _: OrderedList => createHtmlList(ordered = true, value)
 
-        case list: List[Any] =>
-          val listItems = list.map(elem => li(elem.toString))
-          ol(`class` := value.cssClass)(listItems)
-        case _ => ol(`class` := value.cssClass)(li(value.fieldValue.toString))
-      }
-
-      case _: UnorderedList => value.fieldValue match {
-        case javaList: java.util.List[Object] =>
-          val listItems = for (i <- 0 until javaList.size()) yield {
-            li(javaList.get(i).toString)
-          }
-          ol(`class` := value.cssClass)(listItems.toList)
-
-        case list: List[Any] =>
-          val listItems = list.map(elem => li(elem.toString))
-          ul(`class` := value.cssClass)(listItems)
-        case _ => ul(`class` := value.cssClass)(li(value.fieldValue.toString))
-      }
+      case _: UnorderedList => createHtmlList(ordered = false, value)
 
       case _: Table => h1() //TODO finish this
     }
   }
+
+  /**
+    * Method that creates both HTML lists (ol and ul) with the correct informationg inside it
+    *
+    * @param ordered - Boolean value specifying if the list should be an ordered one (ol) or unordered (ul)
+    * @param value   - The content value to be placed inside the list
+    * @return a scalatags HTML list tag containing the value passed as parameter
+    */
+  private def createHtmlList(ordered: Boolean, value: Content): scalatags.Text.TypedTag[String] = {
+    value.fieldValue match {
+      case javaList: java.util.List[Object] =>
+        val listItems = for (i <- 0 until javaList.size()) yield {
+          li(javaList.get(i).toString)
+        }
+        if (ordered) ol(`class` := value.cssClass)(listItems.toList) else ul(`class` := value.cssClass)(listItems.toList)
+
+      case list: List[Any] =>
+        val listItems = list.map(elem => li(elem.toString))
+        if (ordered) ol(`class` := value.cssClass)(listItems) else ul(`class` := value.cssClass)(listItems)
+
+      case _ => if (ordered) ol(`class` := value.cssClass)(li(value.fieldValue.toString)) else ul(`class` := value.cssClass)(li(value.fieldValue.toString))
+    }
+  }
+
+  /**
+    * Method that displays the information correctly. If fieldName is empty then display just the value, if not
+    * then display the information as Key : Value
+    *
+    * @param fieldName  - The name of the field of a specific information (the key)
+    * @param fieldValue - The value of the field (the value)
+    * @return a String containing the correctly displayed information
+    */
+  private def displayInfo(fieldName: String, fieldValue: Any): String =
+    if (fieldName.isEmpty) printValue(fieldValue) else fieldName + " : " + printValue(fieldValue) //TODO maybe remove printValue
 
   /**
     * Method that handles the output of the value passed in the Map[String, Any]
