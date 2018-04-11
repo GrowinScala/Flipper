@@ -1,5 +1,6 @@
 package generator.generate
 
+import collection.JavaConverters._
 import generator.generate.Generator.Keyword
 import scalatags.Text.all._
 import generator.utils._
@@ -145,9 +146,22 @@ private[generate] object HTMLHandler {
       val tableBody = getTableBody(map, getMaxSize(map)) //create a list of table rows representing the body of HTML table
         table(`class` := value.cssClass)(headerRow, tableBody)
 
+
+      case javaMap: java.util.Map[String, java.util.List[Object]] =>
+        val scalaMap = javaMapToScala(javaMap) //convert to a scala Map
+      val headerRow = tr(th(scalaMap.keys.toList)) //create the row of headers
+      val tableBody = getTableBody(scalaMap, getMaxSize(scalaMap)) //create a list of table rows representing the body of HTML table
+        table(`class` := value.cssClass)(headerRow, tableBody)
+
       case list: List[Any] =>
         val header = if (value.fieldName.nonEmpty) value.fieldName else "N/A" //TODO maybe change this ?
       val tableData = list.map(elem => tr(td(elem.toString)))
+        table(`class` := value.cssClass)(tr(th(header)), tableData)
+
+      case javaList: java.util.List[Object] =>
+        val scalaList = javaList.asScala.toList
+        val header = if (value.fieldName.nonEmpty) value.fieldName else "N/A" //TODO maybe change this ?
+      val tableData = scalaList.map(elem => tr(td(elem.toString)))
         table(`class` := value.cssClass)(tr(th(header)), tableData)
 
       case _ => table(`class` := value.cssClass)(tr(td(value.fieldValue.toString)))
@@ -198,4 +212,17 @@ private[generate] object HTMLHandler {
     case list: List[Any] => list.mkString("[", ",", "]")
     case _ => value.toString
   }
+
+  /**
+    * Method that converts a java Map of Strings to java Lists , into a scala Map[String, List[Any] ]
+    *
+    * @param javaMap - The java map to be converted
+    * @return a scala Map[String, List[Any] ] converted from the java map passed as parameter
+    */
+  private def javaMapToScala(javaMap: java.util.Map[String, java.util.List[Object]]): Map[String, List[Any]] = {
+    val mutableMap = javaMap.asScala
+    val mutableWithLists = mutableMap.map { case (key, value) => (key, value.asScala.toList) }
+    mutableWithLists.toMap
+  }
+
 }
