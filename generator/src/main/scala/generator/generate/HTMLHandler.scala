@@ -75,7 +75,7 @@ private[generate] object HTMLHandler {
     */
   private def createHTML(content: Map[Keyword, Content], cssString: String): String = {
     //Iterate through all the keywords (and their values) and create the respective HTML tag for each of them
-    val htmlBody = content.map { case (key, singleContent) => writeHTMLTag(singleContent) }
+    val htmlBody = content.map { case (_, singleContent) => writeHTMLTag(singleContent) }
     val htmlString = html(head(), body(htmlBody.toList)).toString
     val (left, right) = htmlString.splitAt(12) //split html string at index 12, right in between the <head> tag
     s"$left <style> $cssString </style> $right" //creates the desired HTML code with a <style> tag containing the user-sent css
@@ -90,45 +90,103 @@ private[generate] object HTMLHandler {
     */
   private def writeHTMLTag(value: Content): scalatags.Text.TypedTag[String] = {
     value.htmlEntity match {
-      case _: H1 => h1(`class` := value.cssClass)(value.fieldName + " : " + printValue(value.fieldValue)) //TODO maybe remove printValue
+      case _: H1 => h1(`class` := value.cssClass)(displayInfo(value.fieldName, value.fieldValue))
 
-      case _: H2 => h2(`class` := value.cssClass)(value.fieldName + " : " + printValue(value.fieldValue))
+      case _: H2 => h2(`class` := value.cssClass)(displayInfo(value.fieldName, value.fieldValue))
 
-      case _: H3 => h3(`class` := value.cssClass)(value.fieldName + " : " + printValue(value.fieldValue))
+      case _: H3 => h3(`class` := value.cssClass)(displayInfo(value.fieldName, value.fieldValue))
 
-      case _: P => p(`class` := value.cssClass)(value.fieldName + " : " + printValue(value.fieldValue))
+      case _: P => p(`class` := value.cssClass)(displayInfo(value.fieldName, value.fieldValue))
 
-      case _: Text => span(`class` := value.cssClass)(value.fieldName + " : " + printValue(value.fieldValue))
+      case _: Text => span(`class` := value.cssClass)(displayInfo(value.fieldName, value.fieldValue))
 
-      case _: OrderedList => value.fieldValue match {
-        case javaList: java.util.List[Object] =>
-          val listItems = for (i <- 0 until javaList.size()) yield {
-            li(javaList.get(i).toString)
-          }
-          ol(`class` := value.cssClass)(listItems.toList)
+      case _: OrderedList => createHtmlList(ordered = true, value)
 
-        case list: List[Any] =>
-          val listItems = list.map(elem => li(elem.toString))
-          ol(`class` := value.cssClass)(listItems)
-        case _ => ol(`class` := value.cssClass)(li(value.fieldValue.toString))
-      }
+      case _: UnorderedList => createHtmlList(ordered = false, value)
 
-      case _: UnorderedList => value.fieldValue match {
-        case javaList: java.util.List[Object] =>
-          val listItems = for (i <- 0 until javaList.size()) yield {
-            li(javaList.get(i).toString)
-          }
-          ol(`class` := value.cssClass)(listItems.toList)
-
-        case list: List[Any] =>
-          val listItems = list.map(elem => li(elem.toString))
-          ul(`class` := value.cssClass)(listItems)
-        case _ => ul(`class` := value.cssClass)(li(value.fieldValue.toString))
-      }
-
-      case _: Table => h1() //TODO finish this
+      case _: Table => createHtmlTable(value)
     }
   }
+
+  /**
+    * Method that creates a HTML table with the correct content value inside it.
+    * The value.fieldValue passed can take any form but to Flipper supports 2 special cases:
+    *
+    * 1 - value.fieldValue comes in the form of Map[String, List[Any] ], in this case we assume that the key of the map
+    * is the table's header and that the values are of the map are the values to be put under said header.
+    *
+    * 2 - value.fieldValue comes in the form of List[Any], in this case Flipper uses the value.fieldName (if it exists) as
+    * the table's header and the content of the list as the values to be put under the header.
+    *
+    * In all other cases Flipper just encapsulates the value.fieldValue in a HTML table with one row and one data cell
+    *
+    * @param value - The content value to be placed inside the HTML table
+    * @return a scalatags HTMl table containing the value passed as parameter
+    */
+  private def createHtmlTable(value: Content): scalatags.Text.TypedTag[String] = {
+    def getMaxSize(map: Map[String, List[Any]]): Int = map.maxBy(_._2.size)._2.size
+
+    def getTableBody(map: Map[String, List[Any]], counter: Int): List[scalatags.Text.TypedTag[String]] =
+      (for (i <- 0 until counter) yield {
+
+        val tdList = map.mapValues(valuesList =>
+          //In case there's  no more values inside the current valuesList return an empty table data
+          //If not return a table data with the information at the "i" index of the list
+          if (i < valuesList.size) td(valuesList(i).toString) else td()
+        ).toList.map(_._2)
+
+        tr(tdList) //For each iteration return a table row containing the correct table data inside each of them
+      }).toList //return a list of table rows representing the body of the HTML table
+
+
+    value.fieldValue match {
+      case map: Map[String, List[Any]] =>
+        val headerRow = tr(th(map.keys.toList)) //create the row of headers
+      val tableBody = getTableBody(map, getMaxSize(map)) //create a list of table rows representing the body of HTML table
+        table(`class` := value.cssClass)(headerRow, tableBody)
+
+      case list: List[Any] =>
+        val header = if (value.fieldName.nonEmpty) value.fieldName else "N/A" //TODO maybe change this ?
+      val tableData = list.map(elem => tr(td(elem.toString)))
+        table(`class` := value.cssClass)(tr(th(header)), tableData)
+
+      case _ => table(`class` := value.cssClass)(tr(td(value.fieldValue.toString)))
+    }
+  }
+
+  /**
+    * Method that creates both HTML lists (ol and ul) with the correct informationg inside it
+    *
+    * @param ordered - Boolean value specifying if the list should be an ordered one (ol) or unordered (ul)
+    * @param value   - The content value to be placed inside the HTML list
+    * @return a scalatags HTML list tag containing the value passed as parameter
+    */
+  private def createHtmlList(ordered: Boolean, value: Content): scalatags.Text.TypedTag[String] = {
+    value.fieldValue match {
+      case javaList: java.util.List[Object] =>
+        val listItems = for (i <- 0 until javaList.size()) yield {
+          li(javaList.get(i).toString)
+        }
+        if (ordered) ol(`class` := value.cssClass)(listItems.toList) else ul(`class` := value.cssClass)(listItems.toList)
+
+      case list: List[Any] =>
+        val listItems = list.map(elem => li(elem.toString))
+        if (ordered) ol(`class` := value.cssClass)(listItems) else ul(`class` := value.cssClass)(listItems)
+
+      case _ => if (ordered) ol(`class` := value.cssClass)(li(value.fieldValue.toString)) else ul(`class` := value.cssClass)(li(value.fieldValue.toString))
+    }
+  }
+
+  /**
+    * Method that displays the information correctly. If fieldName is empty then display just the value, if not
+    * then display the information as Key : Value
+    *
+    * @param fieldName  - The name of the field of a specific information (the key)
+    * @param fieldValue - The value of the field (the value)
+    * @return a String containing the correctly displayed information
+    */
+  private def displayInfo(fieldName: String, fieldValue: Any): String =
+    if (fieldName.isEmpty) printValue(fieldValue) else fieldName + " : " + printValue(fieldValue) //TODO maybe remove printValue
 
   /**
     * Method that handles the output of the value passed in the Map[String, Any]

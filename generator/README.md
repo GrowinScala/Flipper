@@ -85,7 +85,7 @@ To specify what should be displayed we use the `Content` class. This class has t
 To specify customize the styling of the information displayed we can use the `Config` class (or plain old CSS). Here are the fields this class supports. Note: This class is to be used for basic styling or for those how don't feel to used to CSS, if you're a CSS master, go right ahead and create your CSS file/CSS String and suply the methods with it!
 
 | Field               | Meaning                                            |
-|:-------------------:|:---------------------------------------------------| 
+|:-------------------:|:--------------------------------------------------:|
 | color               | The color to be used in that specific HTML entity  |
 | fontSize            | The size of the font, in points (pt)               |
 | textAlignment       | The text alignment to take effect                  |

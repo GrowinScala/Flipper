@@ -29,3 +29,240 @@ clear
 close
 sbt
 publishSigned
+^Z
+publishSigned
+"sonatypeReleaseAll com.growin"
+sonatypeReleaseAll com.growin
+publishSigned
+gpg
+publishSigned
+pgp -help
+pgp -h
+pgp-cmd gen-key
+last
+pgp-cmd gen-key
+set pgpReadOnly := false
+pgp-cmd gen-key
+set pgpReadOnly := false
+pgp-cmd set pgpReadOnly := false
+pgp-cmd pgpReadOnly := false
+set pgpReadOnly := false
+show */*:pgpPublicRing
+show */*:pgpSecretRing
+pgp-cmd gen-key
+set pgpReadOnly := false
+pgp-cmd gen-key
+set pgpReadOnly := false
+show useGpg
+show pgpReadOnly
+pgpReadOnly := false
+show pgpReadOnly
+false
+set pgpReadOnly
+show useGpg
+show pgpReadOnly
+--debug
+-debug 
+exit
+show pgpReadOnly
+pgp-cmd gen-key
+publishSigned
+pgp-cmd gen-key
+publishSigned
+pgp-cmd gen-key
+exit
+pgp-cmd gen-key
+publishSigned
+exit
+publishSigned
+exit
+publishSigned
+clean
+clear
+close
+clean
+publishSigned
+check-pgp-signatures
+publishSigned
+exit
+publishSigned
+exit
+publishSigned
+exit
+pgp-cmd -list-keys
+pgp-cmd list-keys
+pgp-cmd list-secret-keys
+pgp-cmd list-keys
+pgp-cmd list-secret-keys
+pgp-cmd list-sigs
+pgp-cmd check-trustdb
+pgp-cmd -h
+pgp-cmd h
+pgp-cmd help
+pgp-cmd --help
+pgp-cmd --h
+pgp-cmd 
+pgp-cmd sign-key
+pgp-cmd sign-key 
+pgp --help
+pgp-cmd help
+pgp-cmd export-pub-key
+pgp-cmd list-keys
+pgp-cmd export-pub-key 041c3d67
+pgp-cmd list-keys
+publishSigned
+exit
+publishSigned
+exit
+publishSigned
+exit
+publishSigned
+exit
+publishSigned
+pgp-cmd list-keys
+pgp-cmd send-key 041c3d67 hkp://pool.sks-keyservers.net
+publishSigned
+pgp-cmd list-keys
+pgp-cmd send-key 041c3d67 hkp://pool.sks-keyservers.net
+publishSigned
+pgp-cmd locate-keys
+pgp-cmd list-packets
+pgp-cmd
+pgp-cmd list
+pgp-cmd packets
+pgp-cmd update-trustdb
+pgp-cmd check-trustdb
+check-pgp-signatures
+checkPgpSignatures
+updatePgpSignatures
+exit
+updatePgpSignatures
+checkPgpSignatures
+publishSigned
+checkPgpSignatures
+publishSigned
+signedArtifacts
+exit
+pgp-cmd list-keys
+pgp-cmd gen-key
+pgp-cmd import
+pgp-cmd import-pub-key
+pgp-cmd import-pub-key 041c3d67
+pgp-cmd list-secret-keys
+pgp-cmd list-keys
+pgp-cmd send-key 041c3d67 hkp://pool.sks-keyservers.net
+exit
+sonatypeOpen com.growin Flipper
+publishSigned
+exit
+sonatype list
+sonatypeList
+sonatypeClose Flipper
+sonatypeClose 3aaf87d0ed692f
+sonatypeClose com.growin
+sonatypeList
+sonatypeClose 3aaf84679f0c99
+sonatypeStagingRepositoryProfile com.growin
+sonatypeStagingRepositoryProfile
+sonatypeStagingRepositoryProfiles
+sonatypeClose comgrowin-1000
+sonatypeOpen com.growin Flipper
+publishSigned
+sonatypeReleaseAll com.growin
+sonatypeList
+sonatypeRelease
+publishSigned
+set PgpKeys.useGpg in Global := true
+publish-local-signed
+publishLocalSigned
+set PgpKeys.gpgCommand in Global := "gpg2"
+publishLocalSigned
+set PgpKeys.gpgCommand in Global := "gpg"
+publishLocalSigned
+exit
+pgp-cmd gen-key
+exit
+pgp-cmd gen-key
+pgp-cmd list-keys
+pgp-cmd send-key 27fbb11a hkp://pool.sks-keyservers.net
+publishSigned
+^Z
+publishSigned
+show gpgCommand
+publishSigned
+exit
+publishSigned
+exit
+show gpgCommand
+publishSigned
+set gpgCommand "C:/Program Files/GnuPG"
+set gpgCommand "Program Files/GnuPG"
+set gpgCommand "/GnuPG"
+set gpgCommand "GnuPG"
+publishSigned
+exit
+show gpgCommand
+publishSigned
+exit
+publishSigned
+exit
+show gpgCommand
+publishSigned
+exit
+show gpgCommand
+exit
+show gpgCommand
+publishSigned
+exit
+show gpgCommand
+publishSigned
+exit
+publishSigned
+^Z
+publishSigned
+exit
+publishSigned
+exit
+publishSigned
+exit
+publishSigned
+pgp-cmd gen-key
+pgp-cmd
+pgp-cmd list-keys
+exit
+pgp-cmd list-keys
+publishSigned
+pgp-cmd search-keys Margarida Reis
+pgp-cmd keys
+pgp-cmd recv-key
+pgp-cmd recv-key Margarida Reis
+pgp-cmd import-pub-key
+gpg
+show pgpSogner
+show pgpSigner
+show pgpSigningKey
+pgp-cmd list-keys
+publishSigned
+exit
+show gpgCommand
+publishSigned
+exit
+gpg --version
+pgp-cmd version
+exit
+publishSigned
+exit
+pgp-cmd list-keys
+publishSigned
+sonatypeList
+sonatypeOpen comgrowin-1001
+sonatypeRelease
+sonatypeReleaseAll com.growin
+sonatypeStagingProfiles
+sonatypeRelease
+exit
+sonatypeReleaseAll com.growin
+sonatypeList
+sonatypeOpen
+sonatypeOpen com.growin.flipper
+sonatypeRelease
