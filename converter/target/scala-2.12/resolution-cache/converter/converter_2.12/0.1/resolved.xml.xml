@@ -4,7 +4,7 @@
 		module="converter_2.12"
 		revision="0.1"
 		status="integration"
-		publication="20180411115938"
+		publication="20180412145342"
 	>
 		<description>
 		converter
@@ -46,6 +46,7 @@
 		<dependency org="com.itextpdf.tool" name="xmlworker" rev="5.5.10" conf="compile->default(compile)"/>
 		<dependency org="com.itextpdf" name="itextpdf" rev="5.5.10" conf="compile->default(compile)"/>
 		<dependency org="com.lihaoyi" name="scalatags_2.12" rev="0.6.7" conf="compile->default(compile)"/>
+		<dependency org="org.json4s" name="json4s-ext_2.12" rev="3.5.0" conf="compile->default(compile)"/>
 		<dependency org="org.json4s" name="json4s-native_2.12" rev="3.6.0-M2" conf="compile->default(compile)"/>
 		<dependency org="org.odftoolkit" name="odfdom-java" rev="0.8.7" conf="compile->default(compile)"/>
 		<dependency org="org.languagetool" name="language-en" rev="4.0" conf="compile->default(compile)"/>

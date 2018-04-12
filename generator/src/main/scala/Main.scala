@@ -9,9 +9,30 @@ object Main {
     //    val somethingElse = "heeeey"
     val contentMap =
     Map(
-      "name" -> Content("name", "John Doe", H1(), "bigHeader"),
-      "countries" -> Content("countries", List(123, 321), UnorderedList(), "list")
+      "name" -> Content("name", "John Doe", Header1(), "bigHeader"),
+      "countries" -> Content("countries", "This is a piece of code ", Code(), "list")
     )
+
+
+    val contentJSON =
+      """
+        |{
+        |   "name"  : {
+        |             "fieldName" : "name",
+        |             "fieldValue" : "John Doe",
+        |             "fieldType" : {
+        |                             "link": "www.growin.pt"
+        |                          },
+        |             "cssClass" : "bigHeader"
+        |            },
+        |  "phones" : {
+        |             "fieldName" : "phones",
+        |             "fieldValue" : [12345, 54321],
+        |             "fieldType" : "UnorderedList",
+        |             "cssClass" : "list"
+        |           },
+        |}
+      """.stripMargin
 
     val cssString =
       """
@@ -33,6 +54,6 @@ object Main {
       """.stripMargin
 
 
-    convertMapToPDF(contentMap, cssString)
+    convertJSONtoPDF(contentJSON)
   }
 }

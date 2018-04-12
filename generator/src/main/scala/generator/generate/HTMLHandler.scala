@@ -11,23 +11,32 @@ import generator.utils._
 private[generate] object HTMLHandler {
 
   /**
-    * Method that upon receiving a String containing an HTML tag converts it to a HTMLTag
+    * Method that converts a value (of type Any) parsed from the input JSON and converts it into one of the supported HTML tags
     *
-    * @param htmlTag - The HTML tag to be converted to HTMLTag
-    * @return A HTMLTag object representing the same HTML tag passed as an argument
+    * The input param might be a String in case the user sent a JSON as { "link" : "H1" } and in this case we call
+    * stringToHTMLTag to convert the input tag.
+    *
+    * The input param might also be a Map[String, String] in case the user sent  a JSON as { "fieldType" : { "link" : "something" } }
+    * and in this case we create an HTML anchor with the specified href. If the user sent something other then "A" in
+    * the "tag" field, then we call stringToHTMLTag to try and create the specified tag.
+    *
+    * @param jsonObject - The value parsed from the JSON object
+    * @throws IllegalArgumentException if the user passed a value for fieldType that is not supported
+    * @return A HTMLTag representing the converted HTMLTag
     */
-  def stringToHTMLTag(htmlTag: String): HTMLTag = {
-    htmlTag.toLowerCase match {
-      case "h1" => H1()
-      case "h2" => H2()
-      case "h3" => H3()
-      case "orderedlist" => OrderedList()
-      case "unorderedlist" => UnorderedList()
-      case "table" => Table()
-      case "p" => P()
-      case _ => Text()
-    }
+  @throws[IllegalArgumentException]
+  def extractHTMLTag(jsonObject: Any): FieldType = jsonObject match {
+    case tagStr: String => stringToHTMLTag(tagStr)
+    case jObject: Map[String, String] =>
+      val href = jObject.getOrElse("link", "")
+      if (href.nonEmpty) {
+        Link(href)
+      } else {
+        throw new IllegalArgumentException("You must supply fieldType with a link attribute")
+      }
+    case _ => throw new IllegalArgumentException("The value specified for fieldType is not supported") //throw illegal argument exception
   }
+
 
   /**
     * Method that calls createHTML, passing to it a Map object with information regarding the content to be displayed
@@ -68,6 +77,32 @@ private[generate] object HTMLHandler {
   }
 
   /**
+    * Method that upon receiving a String containing an HTML tag converts it to a HTMLTag
+    *
+    * @param htmlTag - The HTML tag to be converted to HTMLTag
+    * @throws IllegalArgumentException if the user passed a value for fieldType that is not supported
+    * @return A HTMLTag object representing the same HTML tag passed as an argument
+    */
+  @throws[IllegalArgumentException]
+  private def stringToHTMLTag(htmlTag: String): FieldType = { //TODO change this to receive a fieldType ("Header", "List", etc.) instead of HTML tags
+    htmlTag.toLowerCase match {
+      case "h1" => Header1()
+      case "h2" => Header2()
+      case "h3" => Header3()
+      case "h4" => Header4()
+      case "h5" => Header5()
+      case "h6" => Header6()
+      case "orderedlist" => OrderedList()
+      case "unorderedlist" => UnorderedList()
+      case "table" => Table()
+      case "p" => Paragraph()
+      case "code" => Code()
+      case "span" => Text()
+      case _ => throw new IllegalArgumentException("The value specified for fieldType is not supported")
+    }
+  }
+
+  /**
     * Method used to create the HTML string to be converted into a HTML file and then to a PDF file
     *
     * @param content   - An object containing all the keywords and their Content(a object containig fieldName, fieldValue and formattingType)
@@ -90,16 +125,27 @@ private[generate] object HTMLHandler {
     *         no formatting a given value
     */
   private def writeHTMLTag(value: Content): scalatags.Text.TypedTag[String] = {
-    value.htmlTag match {
-      case _: H1 => h1(`class` := value.cssClass)(displayInfo(value.fieldName, value.fieldValue))
+    val displayVal = displayInfo(value.fieldName, value.fieldValue)
+    value.fieldType match {
+      case _: Header1 => h1(`class` := value.cssClass)(displayVal)
 
-      case _: H2 => h2(`class` := value.cssClass)(displayInfo(value.fieldName, value.fieldValue))
+      case _: Header2 => h2(`class` := value.cssClass)(displayVal)
 
-      case _: H3 => h3(`class` := value.cssClass)(displayInfo(value.fieldName, value.fieldValue))
+      case _: Header3 => h3(`class` := value.cssClass)(displayVal)
 
-      case _: P => p(`class` := value.cssClass)(displayInfo(value.fieldName, value.fieldValue))
+      case _: Header4 => h4(`class` := value.cssClass)(displayVal)
 
-      case _: Text => span(`class` := value.cssClass)(displayInfo(value.fieldName, value.fieldValue))
+      case _: Header5 => h5(`class` := value.cssClass)(displayVal)
+
+      case _: Header6 => h6(`class` := value.cssClass)(displayVal)
+
+      case _: Paragraph => p(`class` := value.cssClass)(displayVal)
+
+      case _: Text => span(`class` := value.cssClass)(displayVal)
+
+      case _: Code => code(`class` := value.cssClass)(displayVal)
+
+      case anchor: Link => a(href := anchor.link, `class` := value.cssClass)(displayVal)
 
       case _: OrderedList => createHtmlList(ordered = true, value)
 

@@ -14,7 +14,7 @@ class GeneratorSuite extends FunSuite {
 
   val content =
     Map(
-      "name" -> Content("name", "John Doe", H1(), "bigHeader"),
+      "name" -> Content("name", "John Doe", Header1(), "bigHeader"),
       "age" -> Content("age", List(20, 30), OrderedList(), "small")
     )
   val cssFile = new File("test.css")

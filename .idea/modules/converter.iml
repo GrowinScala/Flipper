@@ -112,5 +112,8 @@
     <orderEntry type="library" name="sbt: ch.qos.logback:logback-core:1.2.3:jar" level="project" />
     <orderEntry type="library" name="sbt: ch.qos.logback:logback-classic:1.2.3:jar" level="project" />
     <orderEntry type="library" name="sbt: ar.com.hjg:pngj:2.1.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: joda-time:joda-time:2.9.5:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.joda:joda-convert:1.8.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.json4s:json4s-ext_2.12:3.5.0:jar" level="project" />
   </component>
 </module>

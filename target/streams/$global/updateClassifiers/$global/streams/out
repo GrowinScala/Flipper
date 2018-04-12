@@ -1,3 +1,5 @@
+[debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
+[debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
 [debug] :: resolving dependencies :: flipper#flipper$sources;0.1
 [debug] 	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool]
 [debug] 	validate = true
@@ -23,6 +25,21 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [compile->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [compile->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [compile->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->default]
+[debug] sbt-chain: Checking cache for: dependency: org.json4s#json4s-ext_2.12;3.5.0 {compile=[default, compile, runtime, default(compile), master], runtime=[default, compile, runtime, default(compile), master], test=[default, compile, runtime, default(compile), master], compile-internal=[default, compile, runtime, default(compile), master], runtime-internal=[default, compile, runtime, default(compile), master], test-internal=[default, compile, runtime, default(compile), master]}
+[debug] sbt-chain: module revision found in cache: org.json4s#json4s-ext_2.12;3.5.0
+[debug] 	found org.json4s#json4s-ext_2.12;3.5.0 in sbt-chain
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->default(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [compile->compile]
 [debug] sbt-chain: Checking cache for: dependency: com.thoughtworks.paranamer#paranamer;2.8 {compile=[compile, runtime(*), master(compile), runtime, compile(*), master], runtime=[compile, runtime(*), master(compile), runtime, compile(*), master], test=[compile, runtime(*), master(compile), runtime, compile(*), master], compile-internal=[compile, runtime(*), master(compile), runtime, compile(*), master], runtime-internal=[compile, runtime(*), master(compile), runtime, compile(*), master], test-internal=[compile, runtime(*), master(compile), runtime, compile(*), master]}
 [debug] sbt-chain: module revision found in cache: com.thoughtworks.paranamer#paranamer;2.8
@@ -97,6 +114,17 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [compile->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [compile->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [compile->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->compile]
+[debug] sbt-chain: Checking cache for: dependency: joda-time#joda-time;2.9.5 {compile=[compile, runtime(*), master(compile), runtime, compile(*), master], runtime=[compile, runtime(*), master(compile), runtime, compile(*), master], test=[compile, runtime(*), master(compile), runtime, compile(*), master], compile-internal=[compile, runtime(*), master(compile), runtime, compile(*), master], runtime-internal=[compile, runtime(*), master(compile), runtime, compile(*), master], test-internal=[compile, runtime(*), master(compile), runtime, compile(*), master]}
+[debug] sbt-chain: module revision found in cache: joda-time#joda-time;2.9.5
+[debug] 	found joda-time#joda-time;2.9.5 in sbt-chain
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->runtime(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->master(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->compile(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [compile->default]
 [debug] sbt-chain: Checking cache for: dependency: net.htmlparser.jericho#jericho-html;3.4 {compile=[default, compile, runtime, default(compile), master], runtime=[default, compile, runtime, default(compile), master], test=[default, compile, runtime, default(compile), master], compile-internal=[default, compile, runtime, default(compile), master], runtime-internal=[default, compile, runtime, default(compile), master], test-internal=[default, compile, runtime, default(compile), master]}
 [debug] sbt-chain: module revision found in cache: net.htmlparser.jericho#jericho-html;3.4
@@ -409,6 +437,17 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [compile->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [compile->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [compile->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->compile]
+[debug] sbt-chain: Checking cache for: dependency: org.joda#joda-convert;1.8.1 {compile=[compile, runtime(*), master(compile), runtime, compile(*), master], runtime=[compile, runtime(*), master(compile), runtime, compile(*), master], test=[compile, runtime(*), master(compile), runtime, compile(*), master], compile-internal=[compile, runtime(*), master(compile), runtime, compile(*), master], runtime-internal=[compile, runtime(*), master(compile), runtime, compile(*), master], test-internal=[compile, runtime(*), master(compile), runtime, compile(*), master]}
+[debug] sbt-chain: module revision found in cache: org.joda#joda-convert;1.8.1
+[debug] 	found org.joda#joda-convert;1.8.1 in sbt-chain
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->runtime(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->master(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->compile(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [compile->compile]
 [debug] sbt-chain: Checking cache for: dependency: org.reflections#reflections;0.9.9 {compile=[compile, runtime(*), master(compile), runtime, compile(*), master], runtime=[compile, runtime(*), master(compile), runtime, compile(*), master], test=[compile, runtime(*), master(compile), runtime, compile(*), master], compile-internal=[compile, runtime(*), master(compile), runtime, compile(*), master], runtime-internal=[compile, runtime(*), master(compile), runtime, compile(*), master], test-internal=[compile, runtime(*), master(compile), runtime, compile(*), master]}
 [debug] sbt-chain: module revision found in cache: org.reflections#reflections;0.9.9
@@ -1040,6 +1079,18 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [compile->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [compile->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [compile->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->default]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->default(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [compile->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [compile->runtime(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [compile->compile]
@@ -1096,6 +1147,14 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [compile->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [compile->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [compile->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->runtime(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->master(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->compile(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [compile->default]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [compile->runtime]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [compile->compile]
@@ -1332,6 +1391,14 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [compile->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [compile->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [compile->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->runtime(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->master(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->compile(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [compile->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [compile->runtime(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [compile->compile]
@@ -1804,6 +1871,18 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [runtime->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [runtime->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [runtime->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->default]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->default(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [runtime->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [runtime->runtime(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [runtime->compile]
@@ -1860,6 +1939,14 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [runtime->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [runtime->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [runtime->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime->runtime(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime->master(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime->compile(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [runtime->default]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [runtime->runtime]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [runtime->compile]
@@ -2096,6 +2183,14 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [runtime->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [runtime->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [runtime->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime->runtime(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime->master(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime->compile(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [runtime->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [runtime->runtime(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [runtime->compile]
@@ -2572,6 +2667,18 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [compile->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [compile->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [compile->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->default]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->default(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [compile->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [compile->runtime(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [compile->compile]
@@ -2628,6 +2735,14 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [compile->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [compile->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [compile->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->runtime(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->master(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->compile(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [compile->default]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [compile->runtime]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [compile->compile]
@@ -2864,6 +2979,14 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [compile->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [compile->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [compile->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->runtime(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->master(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->compile(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [compile->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [compile->runtime(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [compile->compile]
@@ -3336,6 +3459,18 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [runtime->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [runtime->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [runtime->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->default]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->default(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [runtime->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [runtime->runtime(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [runtime->compile]
@@ -3392,6 +3527,14 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [runtime->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [runtime->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [runtime->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime->runtime(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime->master(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime->compile(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [runtime->default]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [runtime->runtime]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [runtime->compile]
@@ -3628,6 +3771,14 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [runtime->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [runtime->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [runtime->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime->runtime(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime->master(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime->compile(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [runtime->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [runtime->runtime(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [runtime->compile]
@@ -4100,6 +4251,18 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [test->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [test->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [test->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test->default]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test->default(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [test->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [test->runtime(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [test->compile]
@@ -4182,6 +4345,14 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.scalactic#scalactic_2.12;3.2.0-SNAP10 [test->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.scalactic#scalactic_2.12;3.2.0-SNAP10 [test->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.scalactic#scalactic_2.12;3.2.0-SNAP10 [test->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [test->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [test->runtime(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [test->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [test->master(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [test->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [test->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [test->compile(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [test->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [test->default]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [test->runtime]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [test->compile]
@@ -4429,6 +4600,14 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [test->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [test->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [test->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [test->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [test->runtime(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [test->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [test->master(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [test->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [test->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [test->compile(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [test->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [test->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [test->runtime(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [test->compile]
@@ -4935,6 +5114,18 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [compile->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [compile->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [compile->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->default]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->default(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [compile->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [compile->runtime(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [compile->compile]
@@ -4991,6 +5182,14 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [compile->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [compile->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [compile->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->runtime(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->master(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->compile(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [compile->default]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [compile->runtime]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [compile->compile]
@@ -5227,6 +5426,14 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [compile->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [compile->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [compile->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->runtime(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->master(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->compile(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [compile->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [compile->runtime(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [compile->compile]
@@ -5701,6 +5908,18 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [compile-internal->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [compile-internal->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [compile-internal->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile-internal->default]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile-internal->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile-internal->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile-internal->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile-internal->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile-internal->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile-internal->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile-internal->default(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile-internal->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile-internal->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile-internal->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile-internal->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [compile-internal->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [compile-internal->runtime(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [compile-internal->compile]
@@ -5757,6 +5976,14 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [compile-internal->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [compile-internal->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [compile-internal->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile-internal->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile-internal->runtime(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile-internal->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile-internal->master(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile-internal->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile-internal->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile-internal->compile(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile-internal->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [compile-internal->default]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [compile-internal->runtime]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [compile-internal->compile]
@@ -5993,6 +6220,14 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [compile-internal->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [compile-internal->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [compile-internal->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile-internal->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile-internal->runtime(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile-internal->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile-internal->master(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile-internal->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile-internal->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile-internal->compile(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile-internal->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [compile-internal->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [compile-internal->runtime(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [compile-internal->compile]
@@ -6469,6 +6704,18 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [compile->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [compile->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [compile->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->default]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->default(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [compile->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [compile->runtime(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [compile->compile]
@@ -6525,6 +6772,14 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [compile->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [compile->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [compile->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->runtime(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->master(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->compile(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [compile->default]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [compile->runtime]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [compile->compile]
@@ -6761,6 +7016,14 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [compile->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [compile->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [compile->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->runtime(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->master(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->compile(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [compile->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [compile->runtime(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [compile->compile]
@@ -7233,6 +7496,18 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [runtime->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [runtime->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [runtime->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->default]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->default(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [runtime->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [runtime->runtime(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [runtime->compile]
@@ -7289,6 +7564,14 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [runtime->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [runtime->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [runtime->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime->runtime(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime->master(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime->compile(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [runtime->default]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [runtime->runtime]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [runtime->compile]
@@ -7525,6 +7808,14 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [runtime->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [runtime->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [runtime->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime->runtime(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime->master(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime->compile(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [runtime->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [runtime->runtime(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [runtime->compile]
@@ -7998,6 +8289,18 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [runtime-internal->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [runtime-internal->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [runtime-internal->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime-internal->default]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime-internal->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime-internal->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime-internal->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime-internal->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime-internal->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime-internal->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime-internal->default(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime-internal->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime-internal->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime-internal->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime-internal->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [runtime-internal->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [runtime-internal->runtime(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [runtime-internal->compile]
@@ -8054,6 +8357,14 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [runtime-internal->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [runtime-internal->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [runtime-internal->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime-internal->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime-internal->runtime(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime-internal->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime-internal->master(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime-internal->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime-internal->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime-internal->compile(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime-internal->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [runtime-internal->default]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [runtime-internal->runtime]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [runtime-internal->compile]
@@ -8290,6 +8601,14 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [runtime-internal->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [runtime-internal->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [runtime-internal->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime-internal->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime-internal->runtime(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime-internal->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime-internal->master(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime-internal->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime-internal->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime-internal->compile(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime-internal->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [runtime-internal->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [runtime-internal->runtime(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [runtime-internal->compile]
@@ -8767,6 +9086,18 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [compile->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [compile->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [compile->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->default]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->default(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [compile->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [compile->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [compile->runtime(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [compile->compile]
@@ -8823,6 +9154,14 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [compile->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [compile->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [compile->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->runtime(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->master(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->compile(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [compile->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [compile->default]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [compile->runtime]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [compile->compile]
@@ -9059,6 +9398,14 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [compile->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [compile->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [compile->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->runtime(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->master(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->compile(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [compile->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [compile->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [compile->runtime(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [compile->compile]
@@ -9531,6 +9878,18 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [runtime->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [runtime->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [runtime->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->default]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->default(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [runtime->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [runtime->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [runtime->runtime(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [runtime->compile]
@@ -9587,6 +9946,14 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [runtime->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [runtime->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#fontbox;2.0.8 [runtime->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime->runtime(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime->master(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime->compile(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [runtime->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [runtime->default]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [runtime->runtime]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [runtime->compile]
@@ -9823,6 +10190,14 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [runtime->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [runtime->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [runtime->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime->runtime(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime->master(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime->compile(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [runtime->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [runtime->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [runtime->runtime(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [runtime->compile]
@@ -10295,6 +10670,18 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [test->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [test->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [test->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test->default]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test->default(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [test->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [test->runtime(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [test->compile]
@@ -10371,6 +10758,14 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.scalactic#scalactic_2.12;3.2.0-SNAP10 [test->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.scalactic#scalactic_2.12;3.2.0-SNAP10 [test->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.scalactic#scalactic_2.12;3.2.0-SNAP10 [test->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [test->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [test->runtime(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [test->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [test->master(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [test->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [test->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [test->compile(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [test->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [test->default]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [test->runtime]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [test->compile]
@@ -10615,6 +11010,14 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [test->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [test->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [test->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [test->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [test->runtime(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [test->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [test->master(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [test->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [test->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [test->compile(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [test->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [test->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [test->runtime(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [test->compile]
@@ -11109,6 +11512,18 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [test-internal->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [test-internal->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.apache.pdfbox#pdfbox;2.0.8 [test-internal->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test-internal->default]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test-internal->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test-internal->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test-internal->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test-internal->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test-internal->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test-internal->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test-internal->default(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test-internal->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test-internal->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test-internal->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.json4s#json4s-ext_2.12;3.5.0 [test-internal->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [test-internal->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [test-internal->runtime(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->com.thoughtworks.paranamer#paranamer;2.8 [test-internal->compile]
@@ -11185,6 +11600,14 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.scalactic#scalactic_2.12;3.2.0-SNAP10 [test-internal->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.scalactic#scalactic_2.12;3.2.0-SNAP10 [test-internal->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.scalactic#scalactic_2.12;3.2.0-SNAP10 [test-internal->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [test-internal->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [test-internal->runtime(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [test-internal->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [test-internal->master(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [test-internal->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [test-internal->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [test-internal->compile(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->joda-time#joda-time;2.9.5 [test-internal->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [test-internal->default]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [test-internal->runtime]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->net.htmlparser.jericho#jericho-html;3.4 [test-internal->compile]
@@ -11429,6 +11852,14 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [test-internal->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [test-internal->compile(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->log4j#log4j;1.2.17 [test-internal->master]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [test-internal->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [test-internal->runtime(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [test-internal->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [test-internal->master(compile)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [test-internal->runtime]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [test-internal->compile]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [test-internal->compile(*)]
+[debug] == resolving dependencies flipper#flipper$sources;0.1->org.joda#joda-convert;1.8.1 [test-internal->master]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [test-internal->compile]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [test-internal->runtime(*)]
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.reflections#reflections;0.9.9 [test-internal->compile]
@@ -11963,325 +12394,25 @@
 [debug] == resolving dependencies flipper#flipper$sources;0.1->org.scala-lang#scala-compiler;2.12.4 [scala-tool->master]
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
-[debug] 	[NOT REQUIRED] org.apache.pdfbox#pdfbox;2.0.8!pdfbox.jar(src)
-[debug] 	[NOT REQUIRED] ch.qos.logback#logback-classic;1.2.3!logback-classic.jar(src)
-[debug] 	[NOT REQUIRED] com.thoughtworks.paranamer#paranamer;2.8!paranamer.jar(src)
-[debug] 	[NOT REQUIRED] org.unbescape#unbescape;1.1.5.RELEASE!unbescape.jar(src)
-[debug] 	[NOT REQUIRED] org.apache.xmlgraphics#xmlgraphics-commons;1.4!xmlgraphics-commons.jar(src)
-[debug] no default ivy user dir defined: set to C:\Users\Lucas Fischer\.ivy2
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (7ms)
-[debug] 	default cache: C:\Users\Lucas Fischer\.ivy2\cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] 	[NOT REQUIRED] com.sksamuel.scrimage#scrimage-core_2.12;3.0.0-alpha4!scrimage-core_2.12.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(src)
-[debug] 	[NOT REQUIRED] com.carrotsearch#hppc;0.7.2!hppc.jar(src)
-[debug] 	[NOT REQUIRED] javax.xml.bind#jaxb-api;2.3.0!jaxb-api.jar(src)
-[debug] 	[NOT REQUIRED] com.lowagie#itext;2.1.7!itext.jar(src)
-[debug] 	[NOT REQUIRED] com.twelvemonkeys.imageio#imageio-jpeg;3.3.2!imageio-jpeg.jar(src)
-[debug] no default ivy user dir defined: set to C:\Users\Lucas Fischer\.ivy2
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (7ms)
-[debug] 	default cache: C:\Users\Lucas Fischer\.ivy2\cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] 	[NOT REQUIRED] com.lihaoyi#scalatags_2.12;0.6.7!scalatags_2.12.jar(src)
-[debug] 	[NOT REQUIRED] net.mabboud.fontverter#FontVerter;1.2.20!FontVerter.jar(src)
-[debug] no default ivy user dir defined: set to C:\Users\Lucas Fischer\.ivy2
-[debug] 	[NOT REQUIRED] net.sf.cssbox#pdf2dom;1.7!pdf2dom.jar(src)
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] no default ivy user dir defined: set to C:\Users\Lucas Fischer\.ivy2
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (10ms)
-[debug] 	default cache: C:\Users\Lucas Fischer\.ivy2\cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (72ms)
-[debug] 	default cache: C:\Users\Lucas Fischer\.ivy2\cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] 	[NOT REQUIRED] org.languagetool#hunspell-native-libs;2.9!hunspell-native-libs.jar(src)
-[debug] no default ivy user dir defined: set to C:\Users\Lucas Fischer\.ivy2
-[debug] 	[NOT REQUIRED] org.carrot2#morfologik-speller;2.1.4!morfologik-speller.jar(src)
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] no default ivy user dir defined: set to C:\Users\Lucas Fischer\.ivy2
-[debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (6ms)
-[debug] 	default cache: C:\Users\Lucas Fischer\.ivy2\cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (70ms)
-[debug] 	default cache: C:\Users\Lucas Fischer\.ivy2\cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] 	[NOT REQUIRED] org.jboss#jboss-vfs;3.2.12.Final!jboss-vfs.jar(src)
-[debug] 	[NOT REQUIRED] com.optimaize.languagedetector#language-detector;0.6!language-detector.jar(src)
-[debug] 	[NOT REQUIRED] org.jboss.logging#jboss-logging;3.1.4.GA!jboss-logging.jar(src)
-[debug] 	[NOT REQUIRED] net.sourceforge.lept4j#lept4j;1.6.3!lept4j.jar(src)
-[debug] 	[NOT REQUIRED] org.languagetool#language-en;4.0!language-en.jar(src)
-[debug] 	[NOT REQUIRED] org.odftoolkit#odfdom-java;0.8.7!odfdom-java.jar(src)
-[debug] no default ivy user dir defined: set to C:\Users\Lucas Fischer\.ivy2
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (105ms)
-[debug] 	default cache: C:\Users\Lucas Fischer\.ivy2\cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] 	[NOT REQUIRED] net.java.dev.jna#jna;4.4.0!jna.jar(src)
-[debug] 	[NOT REQUIRED] org.ghost4j#ghost4j;1.0.1!ghost4j.jar(src)
-[debug] no default ivy user dir defined: set to C:\Users\Lucas Fischer\.ivy2
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (7ms)
-[debug] 	default cache: C:\Users\Lucas Fischer\.ivy2\cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] 	[NOT REQUIRED] xml-apis#xml-apis;1.4.01!xml-apis.jar(src)
-[debug] 	[NOT REQUIRED] ch.qos.logback#logback-core;1.2.3!logback-core.jar(src)
-[debug] 	[NOT REQUIRED] log4j#log4j;1.2.17!log4j.jar(src)
-[debug] 	[NOT REQUIRED] ar.com.hjg#pngj;2.1.0!pngj.jar(src)
-[debug] 	[NOT REQUIRED] net.sf.cssbox#cssbox;4.14!cssbox.jar(src)
-[debug] 	[NOT REQUIRED] org.reflections#reflections;0.9.9!reflections.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.12.4!scala-reflect.jar(src)
-[debug] 	[NOT REQUIRED] org.json4s#json4s-native_2.12;3.6.0-M2!json4s-native_2.12.jar(src)
-[debug] 	[NOT REQUIRED] com.twelvemonkeys.imageio#imageio-core;3.3.2!imageio-core.jar(src)
-[debug] 	[NOT REQUIRED] com.itextpdf.tool#xmlworker;5.5.10!xmlworker.jar(src)
-[debug] no default ivy user dir defined: set to C:\Users\Lucas Fischer\.ivy2
-[debug] no default ivy user dir defined: set to C:\Users\Lucas Fischer\.ivy2
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (9ms)
-[debug] 	default cache: C:\Users\Lucas Fischer\.ivy2\cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] settings loaded (9ms)
-[debug] 	default cache: C:\Users\Lucas Fischer\.ivy2\cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] 	[NOT REQUIRED] commons-collections#commons-collections;3.2.1!commons-collections.jar(src)
-[debug] 	[NOT REQUIRED] org.json4s#json4s-scalap_2.12;3.6.0-M2!json4s-scalap_2.12.jar(src)
-[debug] no default ivy user dir defined: set to C:\Users\Lucas Fischer\.ivy2
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (8ms)
-[debug] 	default cache: C:\Users\Lucas Fischer\.ivy2\cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] 	[NOT REQUIRED] com.twelvemonkeys.imageio#imageio-metadata;3.3.2!imageio-metadata.jar(src)
-[debug] 	[NOT REQUIRED] com.github.jai-imageio#jai-imageio-core;1.3.1!jai-imageio-core.jar(src)
-[debug] 	[NOT REQUIRED] com.itextpdf#itextpdf;5.5.10!itextpdf.jar(src)
-[debug] 	[NOT REQUIRED] net.sf.cssbox#jstyleparser;3.2!jstyleparser.jar(src)
-[debug] 	[NOT REQUIRED] net.sourceforge.tess4j#tess4j;3.4.4!tess4j.jar(src)
-[debug] 	[NOT REQUIRED] org.slf4j#slf4j-api;1.7.25!slf4j-api.jar(src)
-[debug] 	[NOT REQUIRED] org.scalactic#scalactic_2.12;3.2.0-SNAP10!scalactic_2.12.jar(src)
-[debug] no default ivy user dir defined: set to C:\Users\Lucas Fischer\.ivy2
-[debug] 	[NOT REQUIRED] org.apache.opennlp#opennlp-tools;1.8.4!opennlp-tools.jar(src)
-[debug] no default ivy user dir defined: set to C:\Users\Lucas Fischer\.ivy2
-[debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.12.4!scala-library.jar(src)
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] 	[NOT REQUIRED] xerces#xercesImpl;2.11.0!xercesImpl.jar(src)
-[debug] 	[NOT REQUIRED] com.twelvemonkeys.common#common-image;3.3.2!common-image.jar(src)
-[debug] 	[NOT REQUIRED] org.apache.lucene#lucene-backward-codecs;5.5.4!lucene-backward-codecs.jar(src)
-[debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
-[debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] 	[NOT REQUIRED] edu.washington.cs.knowitall#opennlp-chunk-models;1.5!opennlp-chunk-models.jar(src)
-[debug] 	[NOT REQUIRED] com.intellij#annotations;12.0!annotations.jar(src)
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] 	[NOT REQUIRED] com.drewnoakes#metadata-extractor;2.10.1!metadata-extractor.jar(src)
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] 	[NOT REQUIRED] com.twelvemonkeys.common#common-io;3.3.2!common-io.jar(src)
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (10ms)
-[debug] settings loaded (10ms)
-[debug] 	default cache: C:\Users\Lucas Fischer\.ivy2\cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] 	default cache: C:\Users\Lucas Fischer\.ivy2\cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] 	[NOT REQUIRED] org.odftoolkit#simple-odf;0.6.6!simple-odf.jar(src)
-[debug] 	[NOT REQUIRED] commons-logging#commons-logging;1.2!commons-logging.jar(src)
-[debug] 	[NOT REQUIRED] org.carrot2#morfologik-fsa;2.1.4!morfologik-fsa.jar(src)
-[debug] 	[NOT REQUIRED] org.slf4j#jcl-over-slf4j;1.7.25!jcl-over-slf4j.jar(src)
-[debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-databind;2.8.4!jackson-databind.jar(src)
-[debug] 	[NOT REQUIRED] org.json4s#json4s-ast_2.12;3.6.0-M2!json4s-ast_2.12.jar(src)
-[debug] 	[NOT REQUIRED] com.google.guava#guava;21.0!guava.jar(src)
-[debug] 	[NOT REQUIRED] org.slf4j#log4j-over-slf4j;1.7.25!log4j-over-slf4j.jar(src)
-[debug] no default ivy user dir defined: set to C:\Users\Lucas Fischer\.ivy2
-[debug] 	[NOT REQUIRED] org.languagetool#languagetool-core;4.0!languagetool-core.jar(src)
-[debug] 	[NOT REQUIRED] com.sksamuel.scrimage#scrimage-filters_2.12;3.0.0-alpha4!scrimage-filters_2.12.jar(src)
-[debug] 	[NOT REQUIRED] org.apache.commons#commons-lang3;3.5!commons-lang3.jar(src)
-[debug] 	[NOT REQUIRED] org.antlr#antlr4-runtime;4.5.3!antlr4-runtime.jar(src)
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] 	[NOT REQUIRED] com.twelvemonkeys.common#common-lang;3.3.2!common-lang.jar(src)
-[debug] 	[NOT REQUIRED] com.adobe.xmp#xmpcore;5.1.3!xmpcore.jar(src)
-[debug] 	[NOT REQUIRED] net.arnx#jsonic;1.2.11!jsonic.jar(src)
-[debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] 	[NOT REQUIRED] org.json4s#json4s-core_2.12;3.6.0-M2!json4s-core_2.12.jar(src)
-[debug] 	[NOT REQUIRED] org.javassist#javassist;3.18.2-GA!javassist.jar(src)
-[debug] 	[NOT REQUIRED] edu.washington.cs.knowitall#opennlp-postag-models;1.5!opennlp-postag-models.jar(src)
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] 	[NOT REQUIRED] org.apache.lucene#lucene-core;5.5.4!lucene-core.jar(src)
-[debug] 	[NOT REQUIRED] org.carrot2#morfologik-fsa-builders;2.1.4!morfologik-fsa-builders.jar(src)
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] no default ivy user dir defined: set to C:\Users\Lucas Fischer\.ivy2
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] 	[NOT REQUIRED] org.languagetool#language-pt;4.0!language-pt.jar(src)
-[debug] settings loaded (10ms)
-[debug] 	default cache: C:\Users\Lucas Fischer\.ivy2\cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] 	[NOT REQUIRED] edu.berkeley.nlp#berkeleylm;1.1.2!berkeleylm.jar(src)
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] 	[NOT REQUIRED] commons-io#commons-io;2.6!commons-io.jar(src)
-[debug] 	[NOT REQUIRED] org.slf4j#jul-to-slf4j;1.7.25!jul-to-slf4j.jar(src)
-[debug] 	[NOT REQUIRED] org.hamcrest#hamcrest-core;1.1!hamcrest-core.jar(src)
-[debug] 	[NOT REQUIRED] net.sourceforge.nekohtml#nekohtml;1.9.22!nekohtml.jar(src)
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] 	[NOT REQUIRED] org.scalatest#scalatest_2.12;3.2.0-SNAP10!scalatest_2.12.jar(src)
-[debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-annotations;2.8.0!jackson-annotations.jar(src)
-[debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-core;2.8.4!jackson-core.jar(src)
 [debug] 	[NOT REQUIRED] org.carrot2#morfologik-stemming;2.1.4!morfologik-stemming.jar(src)
-[debug] 	[NOT REQUIRED] net.loomchild#segment;2.0.0!segment.jar(src)
-[debug] 	[NOT REQUIRED] jline#jline;2.14.5!jline.jar(src)
-[debug] 	[NOT REQUIRED] com.lihaoyi#sourcecode_2.12;0.1.4!sourcecode_2.12.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.12.4!scala-compiler.jar(src)
-[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] 	[NOT REQUIRED] edu.washington.cs.knowitall#opennlp-tokenize-models;1.5!opennlp-tokenize-models.jar(src)
 [debug] no default ivy user dir defined: set to C:\Users\Lucas Fischer\.ivy2
+[debug] 	[NOT REQUIRED] com.intellij#annotations;12.0!annotations.jar(src)
+[debug] no default ivy user dir defined: set to C:\Users\Lucas Fischer\.ivy2
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] 	[NOT REQUIRED] org.languagetool#languagetool-core;4.0!languagetool-core.jar(src)
+[debug] no default ivy user dir defined: set to C:\Users\Lucas Fischer\.ivy2
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] 	[NOT REQUIRED] org.apache.pdfbox#pdfbox;2.0.8!pdfbox.jar(src)
+[debug] no default ivy user dir defined: set to C:\Users\Lucas Fischer\.ivy2
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
 [debug] settings loaded (29ms)
 [debug] 	default cache: C:\Users\Lucas Fischer\.ivy2\cache
 [debug] 	default resolver: default
@@ -12291,8 +12422,265 @@
 [debug] 	public [ibiblio]
 [debug] 	main [chain] [shared, public]
 [debug] 	local [file]
-[debug] 	[NOT REQUIRED] commons-beanutils#commons-beanutils;1.9.2!commons-beanutils.jar(src)
-[debug] 	[NOT REQUIRED] junit#junit;4.10!junit.jar(src)
+[debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] settings loaded (75ms)
+[debug] 	default cache: C:\Users\Lucas Fischer\.ivy2\cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] settings loaded (82ms)
+[debug] 	default cache: C:\Users\Lucas Fischer\.ivy2\cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] settings loaded (152ms)
+[debug] 	default cache: C:\Users\Lucas Fischer\.ivy2\cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] 	[NOT REQUIRED] org.json4s#json4s-ext_2.12;3.5.0!json4s-ext_2.12.jar(src)
+[debug] 	[NOT REQUIRED] com.github.jai-imageio#jai-imageio-core;1.3.1!jai-imageio-core.jar(src)
+[debug] no default ivy user dir defined: set to C:\Users\Lucas Fischer\.ivy2
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] settings loaded (18ms)
+[debug] 	default cache: C:\Users\Lucas Fischer\.ivy2\cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] 	[NOT REQUIRED] commons-io#commons-io;2.6!commons-io.jar(src)
+[debug] no default ivy user dir defined: set to C:\Users\Lucas Fischer\.ivy2
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] settings loaded (88ms)
+[debug] 	default cache: C:\Users\Lucas Fischer\.ivy2\cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] 	[NOT REQUIRED] javax.xml.bind#jaxb-api;2.3.0!jaxb-api.jar(src)
+[debug] no default ivy user dir defined: set to C:\Users\Lucas Fischer\.ivy2
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.12.4!scala-library.jar(src)
+[debug] no default ivy user dir defined: set to C:\Users\Lucas Fischer\.ivy2
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] 	[NOT REQUIRED] com.carrotsearch#hppc;0.7.2!hppc.jar(src)
+[debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] settings loaded (24ms)
+[debug] 	default cache: C:\Users\Lucas Fischer\.ivy2\cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] settings loaded (146ms)
+[debug] 	default cache: C:\Users\Lucas Fischer\.ivy2\cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] 	[NOT REQUIRED] com.sksamuel.scrimage#scrimage-filters_2.12;3.0.0-alpha4!scrimage-filters_2.12.jar(src)
+[debug] no default ivy user dir defined: set to C:\Users\Lucas Fischer\.ivy2
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] 	[NOT REQUIRED] org.json4s#json4s-scalap_2.12;3.6.0-M2!json4s-scalap_2.12.jar(src)
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] settings loaded (135ms)
+[debug] 	default cache: C:\Users\Lucas Fischer\.ivy2\cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] 	[NOT REQUIRED] org.slf4j#jcl-over-slf4j;1.7.25!jcl-over-slf4j.jar(src)
+[debug] 	[NOT REQUIRED] net.sourceforge.nekohtml#nekohtml;1.9.22!nekohtml.jar(src)
+[debug] 	[NOT REQUIRED] com.google.guava#guava;21.0!guava.jar(src)
+[debug] no default ivy user dir defined: set to C:\Users\Lucas Fischer\.ivy2
+[debug] 	[NOT REQUIRED] org.languagetool#language-en;4.0!language-en.jar(src)
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] 	[NOT REQUIRED] org.ghost4j#ghost4j;1.0.1!ghost4j.jar(src)
+[debug] 	[NOT REQUIRED] edu.washington.cs.knowitall#opennlp-tokenize-models;1.5!opennlp-tokenize-models.jar(src)
+[debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] 	[NOT REQUIRED] org.odftoolkit#simple-odf;0.6.6!simple-odf.jar(src)
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] 	[NOT REQUIRED] com.thoughtworks.paranamer#paranamer;2.8!paranamer.jar(src)
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] settings loaded (44ms)
+[debug] 	default cache: C:\Users\Lucas Fischer\.ivy2\cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] 	[NOT REQUIRED] org.apache.lucene#lucene-backward-codecs;5.5.4!lucene-backward-codecs.jar(src)
+[debug] 	[NOT REQUIRED] net.sf.cssbox#pdf2dom;1.7!pdf2dom.jar(src)
+[debug] 	[NOT REQUIRED] com.twelvemonkeys.common#common-lang;3.3.2!common-lang.jar(src)
+[debug] 	[NOT REQUIRED] org.apache.lucene#lucene-core;5.5.4!lucene-core.jar(src)
+[debug] 	[NOT REQUIRED] com.twelvemonkeys.imageio#imageio-core;3.3.2!imageio-core.jar(src)
+[debug] no default ivy user dir defined: set to C:\Users\Lucas Fischer\.ivy2
+[debug] 	[NOT REQUIRED] com.twelvemonkeys.common#common-io;3.3.2!common-io.jar(src)
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] 	[NOT REQUIRED] org.javassist#javassist;3.18.2-GA!javassist.jar(src)
+[debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] no default ivy user dir defined: set to C:\Users\Lucas Fischer\.ivy2
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] settings loaded (14ms)
+[debug] 	default cache: C:\Users\Lucas Fischer\.ivy2\cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] settings loaded (22ms)
+[debug] 	default cache: C:\Users\Lucas Fischer\.ivy2\cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] 	[NOT REQUIRED] net.arnx#jsonic;1.2.11!jsonic.jar(src)
+[debug] no default ivy user dir defined: set to C:\Users\Lucas Fischer\.ivy2
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] settings loaded (97ms)
+[debug] 	default cache: C:\Users\Lucas Fischer\.ivy2\cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] 	[NOT REQUIRED] com.optimaize.languagedetector#language-detector;0.6!language-detector.jar(src)
+[debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-databind;2.8.4!jackson-databind.jar(src)
+[debug] 	[NOT REQUIRED] org.json4s#json4s-ast_2.12;3.6.0-M2!json4s-ast_2.12.jar(src)
+[debug] no default ivy user dir defined: set to C:\Users\Lucas Fischer\.ivy2
+[debug] 	[NOT REQUIRED] org.reflections#reflections;0.9.9!reflections.jar(src)
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] 	[NOT REQUIRED] org.slf4j#log4j-over-slf4j;1.7.25!log4j-over-slf4j.jar(src)
+[debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] settings loaded (19ms)
+[debug] 	default cache: C:\Users\Lucas Fischer\.ivy2\cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] 	[NOT REQUIRED] org.carrot2#morfologik-fsa;2.1.4!morfologik-fsa.jar(src)
+[debug] 	[NOT REQUIRED] xerces#xercesImpl;2.11.0!xercesImpl.jar(src)
+[debug] 	[NOT REQUIRED] org.json4s#json4s-core_2.12;3.6.0-M2!json4s-core_2.12.jar(src)
+[debug] 	[NOT REQUIRED] com.twelvemonkeys.imageio#imageio-jpeg;3.3.2!imageio-jpeg.jar(src)
+[debug] 	[NOT REQUIRED] org.unbescape#unbescape;1.1.5.RELEASE!unbescape.jar(src)
+[debug] 	[NOT REQUIRED] org.languagetool#hunspell-native-libs;2.9!hunspell-native-libs.jar(src)
+[debug] no default ivy user dir defined: set to C:\Users\Lucas Fischer\.ivy2
+[debug] 	[NOT REQUIRED] org.antlr#antlr4-runtime;4.5.3!antlr4-runtime.jar(src)
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] settings loaded (11ms)
+[debug] 	default cache: C:\Users\Lucas Fischer\.ivy2\cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] 	[NOT REQUIRED] edu.washington.cs.knowitall#opennlp-chunk-models;1.5!opennlp-chunk-models.jar(src)
+[debug] 	[NOT REQUIRED] com.lowagie#itext;2.1.7!itext.jar(src)
+[debug] 	[NOT REQUIRED] org.jboss.logging#jboss-logging;3.1.4.GA!jboss-logging.jar(src)
+[debug] 	[NOT REQUIRED] com.drewnoakes#metadata-extractor;2.10.1!metadata-extractor.jar(src)
+[debug] 	[NOT REQUIRED] com.itextpdf.tool#xmlworker;5.5.10!xmlworker.jar(src)
+[debug] 	[NOT REQUIRED] xml-apis#xml-apis;1.4.01!xml-apis.jar(src)
+[debug] no default ivy user dir defined: set to C:\Users\Lucas Fischer\.ivy2
 [debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
 [debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
 [debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
@@ -12308,9 +12696,103 @@
 [debug] 	public [ibiblio]
 [debug] 	main [chain] [shared, public]
 [debug] 	local [file]
+[debug] 	[NOT REQUIRED] edu.washington.cs.knowitall#opennlp-postag-models;1.5!opennlp-postag-models.jar(src)
+[debug] 	[NOT REQUIRED] edu.berkeley.nlp#berkeleylm;1.1.2!berkeleylm.jar(src)
+[debug] 	[NOT REQUIRED] org.odftoolkit#odfdom-java;0.8.7!odfdom-java.jar(src)
+[debug] 	[NOT REQUIRED] net.java.dev.jna#jna;4.4.0!jna.jar(src)
+[debug] 	[NOT REQUIRED] org.carrot2#morfologik-speller;2.1.4!morfologik-speller.jar(src)
+[debug] 	[NOT REQUIRED] com.itextpdf#itextpdf;5.5.10!itextpdf.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.12.4!scala-reflect.jar(src)
+[debug] no default ivy user dir defined: set to C:\Users\Lucas Fischer\.ivy2
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] settings loaded (22ms)
+[debug] 	default cache: C:\Users\Lucas Fischer\.ivy2\cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] 	[NOT REQUIRED] joda-time#joda-time;2.9.5!joda-time.jar(src)
+[debug] 	[NOT REQUIRED] com.twelvemonkeys.imageio#imageio-metadata;3.3.2!imageio-metadata.jar(src)
+[debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-core;2.8.4!jackson-core.jar(src)
+[debug] 	[NOT REQUIRED] org.slf4j#jul-to-slf4j;1.7.25!jul-to-slf4j.jar(src)
+[debug] 	[NOT REQUIRED] com.lihaoyi#scalatags_2.12;0.6.7!scalatags_2.12.jar(src)
+[debug] 	[NOT REQUIRED] ar.com.hjg#pngj;2.1.0!pngj.jar(src)
+[debug] 	[NOT REQUIRED] com.adobe.xmp#xmpcore;5.1.3!xmpcore.jar(src)
+[debug] 	[NOT REQUIRED] org.scalactic#scalactic_2.12;3.2.0-SNAP10!scalactic_2.12.jar(src)
+[debug] no default ivy user dir defined: set to C:\Users\Lucas Fischer\.ivy2
+[debug] 	[NOT REQUIRED] net.mabboud.fontverter#FontVerter;1.2.20!FontVerter.jar(src)
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] settings loaded (16ms)
+[debug] 	default cache: C:\Users\Lucas Fischer\.ivy2\cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] 	[NOT REQUIRED] ch.qos.logback#logback-core;1.2.3!logback-core.jar(src)
+[debug] 	[NOT REQUIRED] log4j#log4j;1.2.17!log4j.jar(src)
+[debug] 	[NOT REQUIRED] commons-collections#commons-collections;3.2.1!commons-collections.jar(src)
+[debug] 	[NOT REQUIRED] org.apache.commons#commons-lang3;3.5!commons-lang3.jar(src)
+[debug] no default ivy user dir defined: set to C:\Users\Lucas Fischer\.ivy2
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] no default cache defined: set to C:\Users\Lucas Fischer\.ivy2\cache
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/C:/Users/Lucas%20Fischer/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.1/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] settings loaded (9ms)
+[debug] 	default cache: C:\Users\Lucas Fischer\.ivy2\cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] 	[NOT REQUIRED] ch.qos.logback#logback-classic;1.2.3!logback-classic.jar(src)
+[debug] 	[NOT REQUIRED] org.hamcrest#hamcrest-core;1.1!hamcrest-core.jar(src)
+[debug] 	[NOT REQUIRED] org.json4s#json4s-native_2.12;3.6.0-M2!json4s-native_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.scalatest#scalatest_2.12;3.2.0-SNAP10!scalatest_2.12.jar(src)
+[debug] 	[NOT REQUIRED] com.sksamuel.scrimage#scrimage-core_2.12;3.0.0-alpha4!scrimage-core_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.joda#joda-convert;1.8.1!joda-convert.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.languagetool#language-pt;4.0!language-pt.jar(src)
+[debug] 	[NOT REQUIRED] net.sf.cssbox#cssbox;4.14!cssbox.jar(src)
+[debug] 	[NOT REQUIRED] net.sourceforge.lept4j#lept4j;1.6.3!lept4j.jar(src)
+[debug] 	[NOT REQUIRED] com.lihaoyi#sourcecode_2.12;0.1.4!sourcecode_2.12.jar(src)
+[debug] 	[NOT REQUIRED] net.sourceforge.tess4j#tess4j;3.4.4!tess4j.jar(src)
 [debug] 	[NOT REQUIRED] org.apache.pdfbox#fontbox;2.0.8!fontbox.jar(src)
+[debug] 	[NOT REQUIRED] org.apache.xmlgraphics#xmlgraphics-commons;1.4!xmlgraphics-commons.jar(src)
+[debug] 	[NOT REQUIRED] org.slf4j#slf4j-api;1.7.25!slf4j-api.jar(src)
 [debug] 	[NOT REQUIRED] net.htmlparser.jericho#jericho-html;3.4!jericho-html.jar(src)
-[debug] :: resolution report :: resolve 2689ms :: artifacts dl 3859ms
+[debug] 	[NOT REQUIRED] jline#jline;2.14.5!jline.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.12.4!scala-compiler.jar(src)
+[debug] 	[NOT REQUIRED] org.apache.opennlp#opennlp-tools;1.8.4!opennlp-tools.jar(src)
+[debug] 	[NOT REQUIRED] commons-logging#commons-logging;1.2!commons-logging.jar(src)
+[debug] 	[NOT REQUIRED] com.twelvemonkeys.common#common-image;3.3.2!common-image.jar(src)
+[debug] 	[NOT REQUIRED] org.carrot2#morfologik-fsa-builders;2.1.4!morfologik-fsa-builders.jar(src)
+[debug] 	[NOT REQUIRED] net.sf.cssbox#jstyleparser;3.2!jstyleparser.jar(src)
+[debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-annotations;2.8.0!jackson-annotations.jar(src)
+[debug] 	[NOT REQUIRED] commons-beanutils#commons-beanutils;1.9.2!commons-beanutils.jar(src)
+[debug] 	[NOT REQUIRED] junit#junit;4.10!junit.jar(src)
+[debug] 	[NOT REQUIRED] net.loomchild#segment;2.0.0!segment.jar(src)
+[debug] 	[NOT REQUIRED] org.jboss#jboss-vfs;3.2.12.Final!jboss-vfs.jar(src)
+[debug] :: resolution report :: resolve 5724ms :: artifacts dl 4515ms
 [debug] 	report for flipper#flipper$sources;0.1 compile produced in C:\Users\Lucas Fischer\Documents\Flipper\target\scala-2.12\resolution-cache\reports\flipper-flipper$sources-compile.xml
 [debug] 	report for flipper#flipper$sources;0.1 runtime produced in C:\Users\Lucas Fischer\Documents\Flipper\target\scala-2.12\resolution-cache\reports\flipper-flipper$sources-runtime.xml
 [debug] 	report for flipper#flipper$sources;0.1 test produced in C:\Users\Lucas Fischer\Documents\Flipper\target\scala-2.12\resolution-cache\reports\flipper-flipper$sources-test.xml
@@ -12322,4 +12804,4 @@
 [debug] 	report for flipper#flipper$sources;0.1 plugin produced in C:\Users\Lucas Fischer\Documents\Flipper\target\scala-2.12\resolution-cache\reports\flipper-flipper$sources-plugin.xml
 [debug] 	report for flipper#flipper$sources;0.1 pom produced in C:\Users\Lucas Fischer\Documents\Flipper\target\scala-2.12\resolution-cache\reports\flipper-flipper$sources-pom.xml
 [debug] 	report for flipper#flipper$sources;0.1 scala-tool produced in C:\Users\Lucas Fischer\Documents\Flipper\target\scala-2.12\resolution-cache\reports\flipper-flipper$sources-scala-tool.xml
-[debug] 	resolve done (2689ms resolve - 3859ms download)
+[debug] 	resolve done (5724ms resolve - 4515ms download)

@@ -9,7 +9,7 @@ import org.json4s._
 import FileHandler._
 import HTMLHandler._
 import org.json4s.native.JsonMethods._
-import generator.utils.{Config, Content, H1}
+import generator.utils.{Config, Content, Header1, FieldType}
 
 /**
   * Singleton object that implements the functions regarding the pdf file generation
@@ -21,6 +21,7 @@ object Generator {
   type ConfigMap = Map[String, Config]
   type JSONString = String
 
+  implicit val formats = DefaultFormats // Brings in default date formats etc.
 
   /**
     * Method that receives a JSON string and parses it into a Map[String,Any]
@@ -103,7 +104,7 @@ object Generator {
     */
   def convertJSONtoPDF(contentJSON: JSONString, formattingJSON: JSONString): Boolean = {
     val convertedContentOpt = jsonToContent(contentJSON) //Try to convert the JSON content into a ContentMap
-    val convertedFormattingOpt = jsonToFormatting(formattingJSON) //Try to convert the JSON formatting into a ContentFormatting
+    val convertedFormattingOpt = jsonToConfig(formattingJSON) //Try to convert the JSON formatting into a ContentFormatting
     if (convertedContentOpt.isDefined && convertedFormattingOpt.isDefined) { //If both Options are defined (Some) then proceed with conversion
       val convertedContent = convertedContentOpt.get
       internalMapConverter(convertedContent, createCssString(convertedContent, convertedFormattingOpt.get))
@@ -167,35 +168,39 @@ object Generator {
     * @return a Map of keywords and Content objects
     */
   private def jsonToContent(contentJSON: JSONString): Option[ContentMap] = {
-    val parsedJSONOpt = convertJSONtoMap(contentJSON)
-    parsedJSONOpt match {
+    convertJSONtoMap(contentJSON) match {
+
       case Some(parsedJSON) =>
         val returnMap = parsedJSON.map { case (keyword, content) =>
           content match {
             case contentMap: Map[String, Any] =>
+
+              val fieldType = extractHTMLTag(contentMap.getOrElse("fieldType", ""))
               val fieldName = contentMap.getOrElse("fieldName", "N/A").toString
               val fieldValue = contentMap.getOrElse("fieldValue", "N/A") //TODO Maybe change N/A ??
-            val htmlTag = stringToHTMLTag(contentMap.getOrElse("htmlTag", "").toString)
-              val cssClass = contentMap.getOrElse("cssClass", "").toString
+            val cssClass = contentMap.getOrElse("cssClass", "").toString
 
-              (keyword, Content(fieldName, fieldValue, htmlTag, cssClass))
+              (keyword, Content(fieldName, fieldValue, fieldType, cssClass))
 
-            case _ => ("", Content("", "", H1()))
+
+            case _ => ("", Content("", "", Header1()))
           }
-        }.filter(_._1.nonEmpty).toList.toMap
+        }.filter(_._1.nonEmpty)
         Some(returnMap)
-      case None => None
+
+      case _ => None
     }
   }
+
 
   /**
     * Method that tries to convert a JSON string into a Map of keywords and Config objects
     *
-    * @param formattingJSON - The JSON string to be converted
+    * @param configJSON - The JSON string to be converted
     * @return a Map of keywords and Config objects
     */
-  private def jsonToFormatting(formattingJSON: JSONString): Option[ConfigMap] = {
-    val parsedJSONOpt = convertJSONtoMap(formattingJSON)
+  private def jsonToConfig(configJSON: JSONString): Option[ConfigMap] = {
+    val parsedJSONOpt = convertJSONtoMap(configJSON)
     parsedJSONOpt match {
       case Some(parsedJSON) =>
         val formattingMap = parsedJSON.map { case (keyword, conf) =>
