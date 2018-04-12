@@ -11,13 +11,13 @@ import generator.utils._
 private[generate] object HTMLHandler {
 
   /**
-    * Method that upon receiving a String containing an HTML entity converts it to a FormattingType
+    * Method that upon receiving a String containing an HTML tag converts it to a HTMLTag
     *
-    * @param htmlEntity - The HTML entity to be converted to FormattingType
-    * @return A HTMLEntity object representing the same HTML entity passed as an argument
+    * @param htmlTag - The HTML tag to be converted to HTMLTag
+    * @return A HTMLTag object representing the same HTML tag passed as an argument
     */
-  def stringToHTMLEntity(htmlEntity: String): HTMLEntity = {
-    htmlEntity.toLowerCase match {
+  def stringToHTMLTag(htmlTag: String): HTMLTag = {
+    htmlTag.toLowerCase match {
       case "h1" => H1()
       case "h2" => H2()
       case "h3" => H3()
@@ -90,7 +90,7 @@ private[generate] object HTMLHandler {
     *         no formatting a given value
     */
   private def writeHTMLTag(value: Content): scalatags.Text.TypedTag[String] = {
-    value.htmlEntity match {
+    value.htmlTag match {
       case _: H1 => h1(`class` := value.cssClass)(displayInfo(value.fieldName, value.fieldValue))
 
       case _: H2 => h2(`class` := value.cssClass)(displayInfo(value.fieldName, value.fieldValue))

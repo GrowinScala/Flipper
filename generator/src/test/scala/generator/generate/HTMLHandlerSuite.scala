@@ -22,19 +22,19 @@ class HTMLHandlerSuite extends FunSuite {
 
 
   /**
-    * Tests that passing a supported/corrected HTML entity will return the corresponding FormattingType eqiuvelant
+    * Tests that passing a supported/corrected HTML tag will return the corresponding HTMLTag eqiuvelant
     */
-  test("Calling stringToHTMLTag with correct HTML Entity") {
+  test("Calling stringToHTMLTag with correct HTMLTag") {
     assert(
-      stringToHTMLEntity("h1") == H1() &&
-        stringToHTMLEntity("h2") == H2() &&
-        stringToHTMLEntity("H3") == H3() &&
-        stringToHTMLEntity("orderedList") == OrderedList() &&
-        stringToHTMLEntity("UnOrDerEdlIsT") == UnorderedList() &&
-        stringToHTMLEntity("table") == Table() &&
-        stringToHTMLEntity("p") == P() &&
-        stringToHTMLEntity("span") == Text() &&
-        stringToHTMLEntity("somethin-else") == Text()
+      stringToHTMLTag("h1") == H1() &&
+        stringToHTMLTag("h2") == H2() &&
+        stringToHTMLTag("H3") == H3() &&
+        stringToHTMLTag("orderedList") == OrderedList() &&
+        stringToHTMLTag("UnOrDerEdlIsT") == UnorderedList() &&
+        stringToHTMLTag("table") == Table() &&
+        stringToHTMLTag("p") == P() &&
+        stringToHTMLTag("span") == Text() &&
+        stringToHTMLTag("somethin-else") == Text()
     )
   }
 

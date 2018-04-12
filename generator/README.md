@@ -25,8 +25,8 @@ The present file documents the Generator module.
                                  |            └── Generator.scala       ; Handles the generation of PDF documents from JSON/Maps
                                  └───── utils/
                                               ├── Config.scala          ; Configuration object for styling the converted PDF
-                                              ├── Content.scala         ; Object that describes the content to be displayed (field name, field value, HTML Entity)
-                                              └── HTMLEntity.scala  ; Classes that enumerate the possible HTML entities Flipper supports
+                                              ├── Content.scala         ; Object that describes the content to be displayed (field name, field value, HTML tag)
+                                              └── HTMLTag.scala  ; Classes that enumerate the possible HTML entities Flipper supports
    ``` 
    
 ---
@@ -50,9 +50,9 @@ there will be some examples on how to call this methods.
 
 ### HTML Entities ###
 
-For both methods you can supply them with information regarding what HTML entity they should represent, this way you have a better control on how the converted PDF should look like.The way you achive this is by using one of HTMLEntity sub-classes. The supported HTML entities so far are:
+For both methods you can supply them with information regarding what HTML tag they should represent, this way you have a better control on how the converted PDF should look like.The way you achive this is by using one of HTMLTag sub-classes. The supported HTML entities so far are:
 
-| HTMLEntity          | Actual HTML Entity  |
+| HTMLTag             | Actual HTML Tag     |
 |:-------------------:|:-------------------:| 
 | H1                  | h1                  |
 | H2                  | h2                  |
@@ -76,7 +76,7 @@ To specify what should be displayed we use the `Content` class. This class has t
 |:-------------------:|:--------------------------------------------------------:| 
 | fieldName           | The name of the keyword to be displayed                  |
 | fieldValue          | The actual value of the keyword to be displayed          |
-| htmlEntity          | The HTML entity this keyword-value pair should represent |
+| htmlTag             | The HTML tag this keyword-value pair should represent |
 | cssClass            | **Optional** In case you want to customize the styling of this keyword-value pair you can do so specifying a CSS class name for it and then create the styling for the CSS class using:  **`Config` class / CSS File / CSS String**             |
 
 
@@ -86,7 +86,7 @@ To specify customize the styling of the information displayed we can use the `Co
 
 | Field               | Meaning                                            |
 |:-------------------:|:--------------------------------------------------:|
-| color               | The color to be used in that specific HTML entity  |
+| color               | The color to be used in that specific HTML tag  |
 | fontSize            | The size of the font, in points (pt)               |
 | textAlignment       | The text alignment to take effect                  |
 | fontFamily          | The font to be used in the text elements           |
@@ -289,13 +289,13 @@ shows in the **root folder** (**`./`**).
         |   "name"  : {
         |             "fieldName" : "name",
         |             "fieldValue" : "John Doe",
-        |             "htmlEntity" : "H1",
+        |             "htmlTag" : "H1",
         |             "cssClass" : "bigHeader"
         |            },
         |  "phones" : {
         |             "fieldName" : "phones",
         |             "fieldValue" : [12345, 54321],
-        |             "htmlEntity" : "UnorderedList",
+        |             "htmlTag" : "UnorderedList",
         |             "cssClass" : "list"
         |           },
         |}
@@ -313,13 +313,13 @@ shows in the **root folder** (**`./`**).
         |   "name"  : {
         |             "fieldName" : "name",
         |             "fieldValue" : "John Doe",
-        |             "htmlEntity" : "H1",
+        |             "htmlTag" : "H1",
         |             "cssClass" : "bigHeader"
         |            },
         |  "phones" : {
         |             "fieldName" : "phones",
         |             "fieldValue" : [12345, 54321],
-        |             "htmlEntity" : "UnorderedList",
+        |             "htmlTag" : "UnorderedList",
         |             "cssClass" : "list"
         |           },
         |}
@@ -337,13 +337,13 @@ shows in the **root folder** (**`./`**).
         |   "name"  : {
         |             "fieldName" : "name",
         |             "fieldValue" : "John Doe",
-        |             "htmlEntity" : "H1",
+        |             "htmlTag" : "H1",
         |             "cssClass" : "bigHeader"
         |            },
         |  "phones" : {
         |             "fieldName" : "phones",
         |             "fieldValue" : [12345, 54321],
-        |             "htmlEntity" : "UnorderedList",
+        |             "htmlTag" : "UnorderedList",
         |             "cssClass" : "list"
         |           },
         |}
@@ -361,14 +361,14 @@ shows in the **root folder** (**`./`**).
         |   "name" : {
         |             "fieldName" : "name",
         |             "fieldValue" : "John Doe",
-        |             "htmlEntity" : "H1",
+        |             "htmlTag" : "H1",
         |             "cssClass" : "bigHeader"
         |            },
         |
         |  "phones" : {
         |             "fieldName" : "phones",
         |             "fieldValue" : [12345, 54321],
-        |             "htmlEntity" : "UnorderedList",
+        |             "htmlTag" : "UnorderedList",
         |             "cssClass" : "list"
         |           },
         |}
@@ -406,12 +406,12 @@ shows in the **root folder** (**`./`**).
             "  \"name\" : {" +
             "               \"fieldName\" : \"name\"," +
             "               \"fieldValue\" : \"John Doe\"," +
-            "               \"htmlEntity\" : \"H1\"" +
+            "               \"htmlTag\" : \"H1\"" +
             "             },"+
             "  \"phones\" : {" +
             "               \"fieldName\" : \"phones\"," +
             "               \"fieldValue\" : [12345, 54321]," +
-            "               \"htmlEntity\" : \"UnorderedList\"" +
+            "               \"htmlTag\" : \"UnorderedList\"" +
             "             }"+
             "}";
 
@@ -433,13 +433,13 @@ shows in the **root folder** (**`./`**).
             "  \"name\" : {" +
             "               \"fieldName\" : \"name\"," +
             "               \"fieldValue\" : \"John Doe\"," +
-            "               \"htmlEntity\" : \"H1\"," +
+            "               \"htmlTag\" : \"H1\"," +
             "               \"cssClass\" : \"bigHeader\"" +
             "             },"+
             "  \"phones\" : {" +
             "               \"fieldName\" : \"phones\"," +
             "               \"fieldValue\" : [12345, 54321]," +
-            "               \"htmlEntity\" : \"UnorderedList\"," +
+            "               \"htmlTag\" : \"UnorderedList\"," +
             "               \"cssClass\" : \"list\"" +
             "             }"+
             "}";
@@ -461,13 +461,13 @@ shows in the **root folder** (**`./`**).
             "  \"name\" : {" +
             "               \"fieldName\" : \"name\"," +
             "               \"fieldValue\" : \"John Doe\"," +
-            "               \"htmlEntity\" : \"H1\"," +
+            "               \"htmlTag\" : \"H1\"," +
             "               \"cssClass\" : \"bigHeader\"" +
             "             },"+
             "  \"phones\" : {" +
             "               \"fieldName\" : \"phones\"," +
             "               \"fieldValue\" : [12345, 54321]," +
-            "               \"htmlEntity\" : \"UnorderedList\"," +
+            "               \"htmlTag\" : \"UnorderedList\"," +
             "               \"cssClass\" : \"list\"" +
             "             }"+
             "}";
@@ -492,13 +492,13 @@ shows in the **root folder** (**`./`**).
             "  \"name\" : {" +
             "               \"fieldName\" : \"name\"," +
             "               \"fieldValue\" : \"John Doe\"," +
-            "               \"htmlEntity\" : \"H1\"," +
+            "               \"htmlTag\" : \"H1\"," +
             "               \"cssClass\" : \"bigHeader\"" +
             "             },"+
             "  \"phones\" : {" +
             "               \"fieldName\" : \"phones\"," +
             "               \"fieldValue\" : [12345, 54321]," +
-            "               \"htmlEntity\" : \"UnorderedList\"," +
+            "               \"htmlTag\" : \"UnorderedList\"," +
             "               \"cssClass\" : \"list\"" +
             "             }"+
             "}";

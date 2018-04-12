@@ -175,10 +175,10 @@ object Generator {
             case contentMap: Map[String, Any] =>
               val fieldName = contentMap.getOrElse("fieldName", "N/A").toString
               val fieldValue = contentMap.getOrElse("fieldValue", "N/A") //TODO Maybe change N/A ??
-            val htmlEntity = stringToHTMLEntity(contentMap.getOrElse("htmlEntity", "").toString)
+            val htmlTag = stringToHTMLTag(contentMap.getOrElse("htmlTag", "").toString)
               val cssClass = contentMap.getOrElse("cssClass", "").toString
 
-              (keyword, Content(fieldName, fieldValue, htmlEntity, cssClass))
+              (keyword, Content(fieldName, fieldValue, htmlTag, cssClass))
 
             case _ => ("", Content("", "", H1()))
           }

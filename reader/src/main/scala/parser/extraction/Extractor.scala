@@ -172,7 +172,7 @@ object Extractor {
     * @param keyList - Map of the keywords with the original information passed by the user
     * @return the flag of the keyword
     */
-  private def isMulti(key: Keyword, keyList: Map[Keyword,Specification]): Boolean = {
+  private def isMulti(key: Keyword, keyList: Map[Keyword, Specification]): Boolean = {
     val spec = keyList.get(key)
     val multi: Boolean = spec match {
       case Some(s) =>
@@ -397,7 +397,7 @@ object Extractor {
           if (multi) {
             found
           }
-          else{
+          else {
             val count = kLower.r.findAllMatchIn(tLower).length
             found.take(count)
           }
