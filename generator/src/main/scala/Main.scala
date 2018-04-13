@@ -23,13 +23,13 @@ object Main {
         |             "fieldType" : {
         |                             "link": "www.growin.pt"
         |                          },
-        |             "cssClass" : "bigHeader"
+        |             "formattingID" : "bigHeader"
         |            },
         |  "phones" : {
         |             "fieldName" : "phones",
         |             "fieldValue" : [12345, 54321],
         |             "fieldType" : "UnorderedList",
-        |             "cssClass" : "list"
+        |             "formattingID" : "list"
         |           },
         |}
       """.stripMargin

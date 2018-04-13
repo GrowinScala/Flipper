@@ -21,8 +21,6 @@ object Generator {
   type ConfigMap = Map[String, Config]
   type JSONString = String
 
-  implicit val formats = DefaultFormats // Brings in default date formats etc.
-
   /**
     * Method that receives a JSON string and parses it into a Map[String,Any]
     *
@@ -178,12 +176,11 @@ object Generator {
               val fieldType = extractHTMLTag(contentMap.getOrElse("fieldType", ""))
               val fieldName = contentMap.getOrElse("fieldName", "N/A").toString
               val fieldValue = contentMap.getOrElse("fieldValue", "N/A") //TODO Maybe change N/A ??
-            val cssClass = contentMap.getOrElse("cssClass", "").toString
+            val formattingID = contentMap.getOrElse("formattingID", "").toString
 
-              (keyword, Content(fieldName, fieldValue, fieldType, cssClass))
+              (keyword, Content(fieldName, fieldValue, fieldType, formattingID))
 
-
-            case _ => ("", Content("", "", Header1()))
+            case _ => ("", Content("", "", Header1())) //These entries will be removed
           }
         }.filter(_._1.nonEmpty)
         Some(returnMap)
@@ -191,7 +188,6 @@ object Generator {
       case _ => None
     }
   }
-
 
   /**
     * Method that tries to convert a JSON string into a Map of keywords and Config objects

@@ -40,27 +40,28 @@ class HTMLHandlerSuite extends FunSuite {
   }
 
   /**
-    * Tests that passing an unsupported value to extractHTMLTag will result in a IllegalArgumentException.
-    * Example : User sending an unsupported fieldType when creating the content JSON
+    * Tests that passing an unsupported value to extractHTMLTag (unsupported FieldType tag) will result in a IllegalArgumentException.
+    * Example: { "fieldType" : "header20" }
     */
-  test("Calling extractHTMLTag with unsupported value") {
+  test("Calling extractHTMLTag with unsupported value - 1") {
     val caught =
       intercept[IllegalArgumentException] {
         extractHTMLTag("h11")
       }
-    assert(caught.getMessage == "The value specified for fieldType is not supported")
+    assert(caught.getMessage equals "The value specified for fieldType is not supported")
   }
 
   /**
-    * Tests that passing an unsupported value to extractHTMLTag will result in a IllegalArgumentException.
-    * Example: User sending a fieldType as an object but with no "link" attribute. { "fieldType" : { "unsuportedAttribute" : "www.growin.pt" } }
+    * Tests that passing an unsupported value to extractHTMLTag (not passing a link attribute when passing a fieldType object)
+    * will result in a IllegalArgumentException.
+    * Example: { "fieldType" : { "unsuportedAttribute" : "www.growin.pt" } }
     */
-  test("Calling extractHTMLTag with unsupported attribute inside its fieldType value") {
+  test("Calling extractHTMLTag with unsupported value - 2") {
     val caught =
       intercept[IllegalArgumentException] {
         extractHTMLTag(Map("unsuportedAttribute" -> "www.growin.pt"))
       }
-    assert(caught.getMessage == "You must supply fieldType with a link attribute")
+    assert(caught.getMessage equals "You must supply fieldType with a link attribute")
   }
 
   /**
