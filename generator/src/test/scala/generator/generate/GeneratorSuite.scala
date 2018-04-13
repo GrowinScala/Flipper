@@ -14,7 +14,7 @@ class GeneratorSuite extends FunSuite {
 
   val content =
     Map(
-      "name" -> Content("name", "John Doe", H1(), "bigHeader"),
+      "name" -> Content("name", "John Doe", Header1(), "bigHeader"),
       "age" -> Content("age", List(20, 30), OrderedList(), "small")
     )
   val cssFile = new File("test.css")
@@ -43,7 +43,7 @@ class GeneratorSuite extends FunSuite {
     val configMap =
       Map(
         "bigHeader" -> Config("blue", "20", "center", "corbel", "bold"),
-        "small" -> Config("red", "10")
+        "small" -> SmallHeader()
       )
     val noConfig = convertMapToPDF(content)
     val convertWithCSSFile = convertMapToPDF(content, cssFile)
@@ -82,8 +82,8 @@ class GeneratorSuite extends FunSuite {
         |{ "name" : {
         |             "fieldName" : "name",
         |             "fieldValue" : "something",
-        |             "HTMLTag" : "H1",
-        |             "cssClass" : "bigHeader"
+        |             "fieldType" : "Header1",
+        |             "formattingID" : "bigHeader"
         |           }
         |}
       """.stripMargin
@@ -108,6 +108,50 @@ class GeneratorSuite extends FunSuite {
   }
 
   /**
+    * Tests that calling convertJSONtoPDF with an invalid fieldType (unsupported FieldType tag)
+    * will result in a IllegalArgumentException.
+    */
+  test("Calling convertJSONtoPDF with an invalid fieldType - 1") {
+    val contentJSON =
+      """
+        |{ "name" : {
+        |             "fieldName" : "name",
+        |             "fieldValue" : "something",
+        |             "fieldType" : "Header20",
+        |             "formattingID" : "bigHeader"
+        |           }
+        |}
+      """.stripMargin
+    val caught =
+      intercept[IllegalArgumentException] {
+        convertJSONtoPDF(contentJSON)
+      }
+    assert(caught.getMessage equals "The value specified for fieldType is not supported")
+  }
+
+  /**
+    * Tests that calling convertJSONtoPDF with an invalid fieldType (not passing a link attribute when passing a fieldType object)
+    * will result in a IllegalArgumentException.
+    */
+  test("Calling convertJSONtoPDF with an invalid fieldType - 2") {
+    val contentJSON =
+      """
+        |{ "name" : {
+        |             "fieldName" : "name",
+        |             "fieldValue" : "something",
+        |             "fieldType" : { "unsupportedAttr" : "someValue" },
+        |             "formattingID" : "bigHeader"
+        |           }
+        |}
+      """.stripMargin
+    val caught =
+      intercept[IllegalArgumentException] {
+        convertJSONtoPDF(contentJSON)
+      }
+    assert(caught.getMessage equals "You must supply fieldType with a link attribute")
+  }
+
+  /**
     * Tests that incorrectly calling convertJSONtoPDF (empty content, empty config, wrong css file) will return false
     * saying the conversion was not successful
     */
@@ -117,8 +161,8 @@ class GeneratorSuite extends FunSuite {
         |{ "name" : {
         |             "fieldName" : "name",
         |             "fieldValue" : "something",
-        |             "HTMLTag" : "H1",
-        |             "cssClass" : "bigHeader"
+        |             "fieldType" : "Header1",
+        |             "formattingID" : "bigHeader"
         |           }
         |}
       """.stripMargin

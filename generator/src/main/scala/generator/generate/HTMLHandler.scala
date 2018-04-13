@@ -1,6 +1,7 @@
 package generator.generate
 
-import generator.generate.Generator.Keyword
+import collection.JavaConverters._
+import generator.generate.Generator.{ConfigMap, ContentMap}
 import scalatags.Text.all._
 import generator.utils._
 
@@ -10,22 +11,32 @@ import generator.utils._
 private[generate] object HTMLHandler {
 
   /**
-    * Method that upon receiving a String containing an HTML entity converts it to a FormattingType
+    * Method that converts a value (of type Any) parsed from the input JSON and converts it into one of the supported HTML tags
     *
-    * @param htmlEntity - The HTML entity to be converted to FormattingType
-    * @return A HTMLEntity object representing the same HTML entity passed as an argument
+    * The input param might be a String in case the user sent a JSON as { "link" : "H1" } and in this case we call
+    * stringToHTMLTag to convert the input tag.
+    *
+    * The input param might also be a Map[String, String] in case the user sent  a JSON as { "fieldType" : { "link" : "something" } }
+    * and in this case we create an HTML anchor with the specified href. If the user sent something other then "A" in
+    * the "tag" field, then we call stringToHTMLTag to try and create the specified tag.
+    *
+    * In all cases this method throws an IllegalArgumentException saying the value passed to fieldType is not supported
+    *
+    * @param jsonObject - The value parsed from the JSON object
+    * @throws IllegalArgumentException if the user passed a value for fieldType that is not supported
+    * @return A HTMLTag representing the converted HTMLTag
     */
-  def stringToHTMLEntity(htmlEntity: String): HTMLEntity = {
-    htmlEntity.toLowerCase match {
-      case "h1" => H1()
-      case "h2" => H2()
-      case "h3" => H3()
-      case "orderedlist" => OrderedList()
-      case "unorderedlist" => UnorderedList()
-      case "table" => Table()
-      case "p" => P()
-      case _ => Text()
-    }
+  @throws[IllegalArgumentException]
+  def extractFieldType(jsonObject: Any): FieldType = jsonObject match {
+    case tagStr: String => stringToHTMLTag(tagStr)
+    case jObject: Map[String, String] =>
+      val href = jObject.getOrElse("link", "")
+      if (href.nonEmpty)
+        Link(href)
+      else
+        throw new IllegalArgumentException("You must supply fieldType with a link attribute")
+
+    case _ => throw new IllegalArgumentException("The value specified for fieldType is not supported")
   }
 
   /**
@@ -36,7 +47,7 @@ private[generate] object HTMLHandler {
     * @param cssString - A String containing CSS code to be added to the HTML file
     * @return a String containing all the HTML code to be converted into an HTML file
     */
-  def writeHTMLString(content: Map[Keyword, Content], cssString: String): String = {
+  def writeHTMLString(content: ContentMap, cssString: String): String = {
     createHTML(content, cssString)
   }
 
@@ -47,23 +58,53 @@ private[generate] object HTMLHandler {
     * @param formatting - a Map of String (formattingID) to Config objects that specify how that particular formattingID should be displayed
     * @return the CSS String created from the input information
     */
-  def createCssString(content: Map[Keyword, Content], formatting: Map[String, Config]): String = {
+  def createCssString(content: ContentMap, formatting: ConfigMap): String = {
     val cssList = for ((_, value) <- content) yield {
-      if (value.cssClass.nonEmpty) {
-        formatting.get(value.cssClass) match {
+      if (value.formattingID.nonEmpty) {
+        formatting.get(value.formattingID) match {
           case Some(config) =>
-            "." + value.cssClass + "{" +
-              " color: " + config.color + ";" +
-              " text-align: " + config.textAlignment + ";" +
-              " font-weight: " + config.fontWeight + ";" +
-              " font-family: " + config.fontFamily + ";" +
-              s" font-size: ${if (config.fontSize.isEmpty) -1 else config.fontSize}pt;" +
-              "} "
+            config match {
+              case configuration: Config =>
+                "." + value.formattingID + "{" +
+                  " color: " + configuration.color + ";" +
+                  " text-align: " + configuration.textAlignment + ";" +
+                  " font-weight: " + configuration.fontWeight + ";" +
+                  " font-family: " + configuration.fontFamily + ";" +
+                  s" font-size: ${if (configuration.fontSize.isEmpty) -1 else configuration.fontSize}pt;" +
+                  "} "
+              case _ => ""
+            }
           case None => ""
         }
       } else ""
     }
     cssList.toList.mkString("")
+  }
+
+  /**
+    * Method that upon receiving a String containing an HTML tag converts it to a HTMLTag
+    *
+    * @param fieldType - The HTML tag to be converted to HTMLTag
+    * @throws IllegalArgumentException if the user passed a value for fieldType that is not supported
+    * @return A HTMLTag object representing the same HTML tag passed as an argument
+    */
+  @throws[IllegalArgumentException]
+  private def stringToHTMLTag(fieldType: String): FieldType = { //TODO change this to receive a fieldType ("Header", "List", etc.) instead of HTML tags
+    fieldType.toLowerCase match {
+      case "header1" => Header1()
+      case "header2" => Header2()
+      case "header3" => Header3()
+      case "header4" => Header4()
+      case "header5" => Header5()
+      case "header6" => Header6()
+      case "orderedlist" => OrderedList()
+      case "unorderedlist" => UnorderedList()
+      case "table" => Table()
+      case "paragraph" => Paragraph()
+      case "code" => Code()
+      case "span" => Text()
+      case _ => throw new IllegalArgumentException("The value specified for fieldType is not supported")
+    }
   }
 
   /**
@@ -73,7 +114,7 @@ private[generate] object HTMLHandler {
     * @param cssString - A String containing the CSS code to be added to the HTML file
     * @return a String containing all the HTML code to be converted into an HTML file
     */
-  private def createHTML(content: Map[Keyword, Content], cssString: String): String = {
+  private def createHTML(content: ContentMap, cssString: String): String = {
     //Iterate through all the keywords (and their values) and create the respective HTML tag for each of them
     val htmlBody = content.map { case (_, singleContent) => writeHTMLTag(singleContent) }
     val htmlString = html(head(), body(htmlBody.toList)).toString
@@ -89,16 +130,27 @@ private[generate] object HTMLHandler {
     *         no formatting a given value
     */
   private def writeHTMLTag(value: Content): scalatags.Text.TypedTag[String] = {
-    value.htmlEntity match {
-      case _: H1 => h1(`class` := value.cssClass)(displayInfo(value.fieldName, value.fieldValue))
+    val displayVal = displayInfo(value.fieldName, value.fieldValue)
+    value.fieldType match {
+      case _: Header1 => h1(`class` := value.formattingID)(displayVal)
 
-      case _: H2 => h2(`class` := value.cssClass)(displayInfo(value.fieldName, value.fieldValue))
+      case _: Header2 => h2(`class` := value.formattingID)(displayVal)
 
-      case _: H3 => h3(`class` := value.cssClass)(displayInfo(value.fieldName, value.fieldValue))
+      case _: Header3 => h3(`class` := value.formattingID)(displayVal)
 
-      case _: P => p(`class` := value.cssClass)(displayInfo(value.fieldName, value.fieldValue))
+      case _: Header4 => h4(`class` := value.formattingID)(displayVal)
 
-      case _: Text => span(`class` := value.cssClass)(displayInfo(value.fieldName, value.fieldValue))
+      case _: Header5 => h5(`class` := value.formattingID)(displayVal)
+
+      case _: Header6 => h6(`class` := value.formattingID)(displayVal)
+
+      case _: Paragraph => p(`class` := value.formattingID)(displayVal)
+
+      case _: Text => span(`class` := value.formattingID)(displayVal)
+
+      case _: Code => code(`class` := value.formattingID)(displayVal)
+
+      case anchor: Link => a(href := anchor.link, `class` := value.formattingID)(displayVal)
 
       case _: OrderedList => createHtmlList(ordered = true, value)
 
@@ -143,14 +195,27 @@ private[generate] object HTMLHandler {
       case map: Map[String, List[Any]] =>
         val headerRow = tr(th(map.keys.toList)) //create the row of headers
       val tableBody = getTableBody(map, getMaxSize(map)) //create a list of table rows representing the body of HTML table
-        table(`class` := value.cssClass)(headerRow, tableBody)
+        table(`class` := value.formattingID)(headerRow, tableBody)
+
+
+      case javaMap: java.util.Map[String, java.util.List[Object]] =>
+        val scalaMap = javaMapToScala(javaMap) //convert to a scala Map
+      val headerRow = tr(th(scalaMap.keys.toList)) //create the row of headers
+      val tableBody = getTableBody(scalaMap, getMaxSize(scalaMap)) //create a list of table rows representing the body of HTML table
+        table(`class` := value.formattingID)(headerRow, tableBody)
 
       case list: List[Any] =>
         val header = if (value.fieldName.nonEmpty) value.fieldName else "N/A" //TODO maybe change this ?
       val tableData = list.map(elem => tr(td(elem.toString)))
-        table(`class` := value.cssClass)(tr(th(header)), tableData)
+        table(`class` := value.formattingID)(tr(th(header)), tableData)
 
-      case _ => table(`class` := value.cssClass)(tr(td(value.fieldValue.toString)))
+      case javaList: java.util.List[Object] =>
+        val scalaList = javaList.asScala.toList
+        val header = if (value.fieldName.nonEmpty) value.fieldName else "N/A" //TODO maybe change this ?
+      val tableData = scalaList.map(elem => tr(td(elem.toString)))
+        table(`class` := value.formattingID)(tr(th(header)), tableData)
+
+      case _ => table(`class` := value.formattingID)(tr(td(value.fieldValue.toString)))
     }
   }
 
@@ -167,13 +232,13 @@ private[generate] object HTMLHandler {
         val listItems = for (i <- 0 until javaList.size()) yield {
           li(javaList.get(i).toString)
         }
-        if (ordered) ol(`class` := value.cssClass)(listItems.toList) else ul(`class` := value.cssClass)(listItems.toList)
+        if (ordered) ol(`class` := value.formattingID)(listItems.toList) else ul(`class` := value.formattingID)(listItems.toList)
 
       case list: List[Any] =>
         val listItems = list.map(elem => li(elem.toString))
-        if (ordered) ol(`class` := value.cssClass)(listItems) else ul(`class` := value.cssClass)(listItems)
+        if (ordered) ol(`class` := value.formattingID)(listItems) else ul(`class` := value.formattingID)(listItems)
 
-      case _ => if (ordered) ol(`class` := value.cssClass)(li(value.fieldValue.toString)) else ul(`class` := value.cssClass)(li(value.fieldValue.toString))
+      case _ => if (ordered) ol(`class` := value.formattingID)(li(value.fieldValue.toString)) else ul(`class` := value.formattingID)(li(value.fieldValue.toString))
     }
   }
 
@@ -198,4 +263,17 @@ private[generate] object HTMLHandler {
     case list: List[Any] => list.mkString("[", ",", "]")
     case _ => value.toString
   }
+
+  /**
+    * Method that converts a java Map of Strings to java Lists , into a scala Map[String, List[Any] ]
+    *
+    * @param javaMap - The java map to be converted
+    * @return a scala Map[String, List[Any] ] converted from the java map passed as parameter
+    */
+  private def javaMapToScala(javaMap: java.util.Map[String, java.util.List[Object]]): Map[String, List[Any]] = {
+    val mutableMap = javaMap.asScala
+    val mutableWithLists = mutableMap.map { case (key, value) => (key, value.asScala.toList) }
+    mutableWithLists.toMap
+  }
+
 }

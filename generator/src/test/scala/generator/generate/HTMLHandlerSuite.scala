@@ -12,7 +12,7 @@ class HTMLHandlerSuite extends FunSuite {
 
   val content =
     Map(
-      "name" -> Content("name", "John Doe", H1(), "bigHeader"),
+      "name" -> Content("name", "John Doe", Header1(), "bigHeader"),
     )
 
   val configMap =
@@ -22,20 +22,46 @@ class HTMLHandlerSuite extends FunSuite {
 
 
   /**
-    * Tests that passing a supported/corrected HTML entity will return the corresponding FormattingType eqiuvelant
+    * Tests that passing a supported/corrected HTML tag will return the corresponding HTMLTag equivelant
     */
-  test("Calling stringToHTMLTag with correct HTML Entity") {
+  test("Calling extractHTMLTag with correct HTMLTag") {
     assert(
-      stringToHTMLEntity("h1") == H1() &&
-        stringToHTMLEntity("h2") == H2() &&
-        stringToHTMLEntity("H3") == H3() &&
-        stringToHTMLEntity("orderedList") == OrderedList() &&
-        stringToHTMLEntity("UnOrDerEdlIsT") == UnorderedList() &&
-        stringToHTMLEntity("table") == Table() &&
-        stringToHTMLEntity("p") == P() &&
-        stringToHTMLEntity("span") == Text() &&
-        stringToHTMLEntity("somethin-else") == Text()
+      extractFieldType("h1") == Header1() &&
+        extractFieldType("h2") == Header2() &&
+        extractFieldType("H3") == Header3() &&
+        extractFieldType("orderedList") == OrderedList() &&
+        extractFieldType("UnOrDerEdlIsT") == UnorderedList() &&
+        extractFieldType("table") == Table() &&
+        extractFieldType("p") == Paragraph() &&
+        extractFieldType("span") == Text() &&
+        extractFieldType("code") == Code() &&
+        extractFieldType(Map("link" -> "www.growin.pt")) == Link("www.growin.pt")
     )
+  }
+
+  /**
+    * Tests that passing an unsupported value to extractHTMLTag (unsupported FieldType tag) will result in a IllegalArgumentException.
+    * Example: { "fieldType" : "header20" }
+    */
+  test("Calling extractHTMLTag with unsupported value - 1") {
+    val caught =
+      intercept[IllegalArgumentException] {
+        extractFieldType("h11")
+      }
+    assert(caught.getMessage equals "The value specified for fieldType is not supported")
+  }
+
+  /**
+    * Tests that passing an unsupported value to extractHTMLTag (not passing a link attribute when passing a fieldType object)
+    * will result in a IllegalArgumentException.
+    * Example: { "fieldType" : { "unsuportedAttribute" : "www.growin.pt" } }
+    */
+  test("Calling extractHTMLTag with unsupported value - 2") {
+    val caught =
+      intercept[IllegalArgumentException] {
+        extractFieldType(Map("unsuportedAttribute" -> "www.growin.pt"))
+      }
+    assert(caught.getMessage equals "You must supply fieldType with a link attribute")
   }
 
   /**

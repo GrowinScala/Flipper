@@ -34,7 +34,6 @@ private[parser] object ImageProcessing {
         val filterBW = ThresholdFilter(150) //Filter the image to black and white
         val dir = new File("./target/tempImages")
         if (!dir.exists) dir.mkdirs
-
         //Obtain the processed image file
         val resizedFile = resized.filter(filterBW).output(new File("./target/tempImages/temp_" + System.nanoTime() + ".png"))(PngWriter.MaxCompression)
         val extractedText = Some(instance.doOCR(resizedFile)) //Apply the OCR to the processed image
