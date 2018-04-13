@@ -9,7 +9,7 @@ import org.json4s._
 import FileHandler._
 import HTMLHandler._
 import org.json4s.native.JsonMethods._
-import generator.utils.{Config, Content, Header1, FieldType}
+import generator.utils.{Config, Configuration, Content, Header1}
 
 /**
   * Singleton object that implements the functions regarding the pdf file generation
@@ -18,7 +18,7 @@ object Generator {
 
   type Keyword = String
   type ContentMap = Map[Keyword, Content]
-  type ConfigMap = Map[String, Config]
+  type ConfigMap = Map[String, Configuration]
   type JSONString = String
 
   /**
@@ -167,22 +167,17 @@ object Generator {
     */
   private def jsonToContent(contentJSON: JSONString): Option[ContentMap] = {
     convertJSONtoMap(contentJSON) match {
-
       case Some(parsedJSON) =>
-        val returnMap = parsedJSON.map { case (keyword, content) =>
-          content match {
-            case contentMap: Map[String, Any] =>
 
-              val fieldType = extractHTMLTag(contentMap.getOrElse("fieldType", ""))
-              val fieldName = contentMap.getOrElse("fieldName", "N/A").toString
-              val fieldValue = contentMap.getOrElse("fieldValue", "N/A") //TODO Maybe change N/A ??
-            val formattingID = contentMap.getOrElse("formattingID", "").toString
+        val returnMap = parsedJSON.collect {
+          case (keyword: Keyword, content: Map[String, Any]) =>
+            val fieldType = extractFieldType(content.getOrElse("fieldType", ""))
+            val fieldName = content.getOrElse("fieldName", "N/A").toString
+            val fieldValue = content.getOrElse("fieldValue", "N/A") //TODO Maybe change N/A ??
+          val formattingID = content.getOrElse("formattingID", "").toString
 
-              (keyword, Content(fieldName, fieldValue, fieldType, formattingID))
-
-            case _ => ("", Content("", "", Header1())) //These entries will be removed
-          }
-        }.filter(_._1.nonEmpty)
+            (keyword, Content(fieldName, fieldValue, fieldType, formattingID))
+        }
         Some(returnMap)
 
       case _ => None
@@ -190,10 +185,10 @@ object Generator {
   }
 
   /**
-    * Method that tries to convert a JSON string into a Map of keywords and Config objects
+    * Method that tries to convert a JSON string into a Map of keywords and Configuration objects
     *
     * @param configJSON - The JSON string to be converted
-    * @return a Map of keywords and Config objects
+    * @return a Map of keywords and Configuration objects
     */
   private def jsonToConfig(configJSON: JSONString): Option[ConfigMap] = {
     val parsedJSONOpt = convertJSONtoMap(configJSON)
@@ -212,8 +207,9 @@ object Generator {
 
             case _ => ("", Config())
           }
-        }.filter(_._1.nonEmpty).toList.toMap
+        }.filter(_._1.nonEmpty)
         Some(formattingMap)
+
       case None => None
     }
   }

@@ -330,7 +330,7 @@ object Extractor {
     }).toList
 
     val badStr = " .,;:"
-    val cleanList: List[String] = valuesList.filter(_ != "").map(s => strClean(s, badStr))
+    val cleanList: List[String] = valuesList.filter(_ != "").map(strClean(_, badStr))
 
     (keyword, cleanList)
   }

@@ -26,16 +26,16 @@ class HTMLHandlerSuite extends FunSuite {
     */
   test("Calling extractHTMLTag with correct HTMLTag") {
     assert(
-      extractHTMLTag("h1") == Header1() &&
-        extractHTMLTag("h2") == Header2() &&
-        extractHTMLTag("H3") == Header3() &&
-        extractHTMLTag("orderedList") == OrderedList() &&
-        extractHTMLTag("UnOrDerEdlIsT") == UnorderedList() &&
-        extractHTMLTag("table") == Table() &&
-        extractHTMLTag("p") == Paragraph() &&
-        extractHTMLTag("span") == Text() &&
-        extractHTMLTag("code") == Code() &&
-        extractHTMLTag(Map("link" -> "www.growin.pt")) == Link("www.growin.pt")
+      extractFieldType("h1") == Header1() &&
+        extractFieldType("h2") == Header2() &&
+        extractFieldType("H3") == Header3() &&
+        extractFieldType("orderedList") == OrderedList() &&
+        extractFieldType("UnOrDerEdlIsT") == UnorderedList() &&
+        extractFieldType("table") == Table() &&
+        extractFieldType("p") == Paragraph() &&
+        extractFieldType("span") == Text() &&
+        extractFieldType("code") == Code() &&
+        extractFieldType(Map("link" -> "www.growin.pt")) == Link("www.growin.pt")
     )
   }
 
@@ -46,7 +46,7 @@ class HTMLHandlerSuite extends FunSuite {
   test("Calling extractHTMLTag with unsupported value - 1") {
     val caught =
       intercept[IllegalArgumentException] {
-        extractHTMLTag("h11")
+        extractFieldType("h11")
       }
     assert(caught.getMessage equals "The value specified for fieldType is not supported")
   }
@@ -59,7 +59,7 @@ class HTMLHandlerSuite extends FunSuite {
   test("Calling extractHTMLTag with unsupported value - 2") {
     val caught =
       intercept[IllegalArgumentException] {
-        extractHTMLTag(Map("unsuportedAttribute" -> "www.growin.pt"))
+        extractFieldType(Map("unsuportedAttribute" -> "www.growin.pt"))
       }
     assert(caught.getMessage equals "You must supply fieldType with a link attribute")
   }

@@ -7,11 +7,18 @@ object Main {
     //    val table = Map("Country" -> List("Portugal", "Spain", "UK"), "Language" -> List("Portuguese", "English"), "Weather" -> List("Sunny", "Rainning"))
     //    val tableList = List("Portugal", "Spain", "UK")
     //    val somethingElse = "heeeey"
+
     val contentMap =
     Map(
       "name" -> Content("name", "John Doe", Header1(), "bigHeader"),
       "countries" -> Content("countries", "This is a piece of code ", Code(), "list")
     )
+
+    val configMap =
+      Map(
+        "bigHeader" -> BigHeader(),
+        "list" -> Config("red")
+      )
 
 
     val contentJSON =
@@ -54,6 +61,6 @@ object Main {
       """.stripMargin
 
 
-    convertJSONtoPDF(contentJSON)
+    convertMapToPDF(contentMap, configMap)
   }
 }

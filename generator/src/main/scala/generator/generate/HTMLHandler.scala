@@ -1,7 +1,7 @@
 package generator.generate
 
 import collection.JavaConverters._
-import generator.generate.Generator.Keyword
+import generator.generate.Generator.{ConfigMap, Keyword, ContentMap}
 import scalatags.Text.all._
 import generator.utils._
 
@@ -27,7 +27,7 @@ private[generate] object HTMLHandler {
     * @return A HTMLTag representing the converted HTMLTag
     */
   @throws[IllegalArgumentException]
-  def extractHTMLTag(jsonObject: Any): FieldType = jsonObject match {
+  def extractFieldType(jsonObject: Any): FieldType = jsonObject match {
     case tagStr: String => stringToHTMLTag(tagStr)
     case jObject: Map[String, String] =>
       val href = jObject.getOrElse("link", "")
@@ -47,7 +47,7 @@ private[generate] object HTMLHandler {
     * @param cssString - A String containing CSS code to be added to the HTML file
     * @return a String containing all the HTML code to be converted into an HTML file
     */
-  def writeHTMLString(content: Map[Keyword, Content], cssString: String): String = {
+  def writeHTMLString(content: ContentMap, cssString: String): String = {
     createHTML(content, cssString)
   }
 
@@ -58,18 +58,22 @@ private[generate] object HTMLHandler {
     * @param formatting - a Map of String (formattingID) to Config objects that specify how that particular formattingID should be displayed
     * @return the CSS String created from the input information
     */
-  def createCssString(content: Map[Keyword, Content], formatting: Map[String, Config]): String = {
+  def createCssString(content: ContentMap, formatting: ConfigMap): String = {
     val cssList = for ((_, value) <- content) yield {
       if (value.formattingID.nonEmpty) {
         formatting.get(value.formattingID) match {
           case Some(config) =>
-            "." + value.formattingID + "{" +
-              " color: " + config.color + ";" +
-              " text-align: " + config.textAlignment + ";" +
-              " font-weight: " + config.fontWeight + ";" +
-              " font-family: " + config.fontFamily + ";" +
-              s" font-size: ${if (config.fontSize.isEmpty) -1 else config.fontSize}pt;" +
-              "} "
+            config match {
+              case configuration: Config =>
+                "." + value.formattingID + "{" +
+                  " color: " + configuration.color + ";" +
+                  " text-align: " + configuration.textAlignment + ";" +
+                  " font-weight: " + configuration.fontWeight + ";" +
+                  " font-family: " + configuration.fontFamily + ";" +
+                  s" font-size: ${if (configuration.fontSize.isEmpty) -1 else configuration.fontSize}pt;" +
+                  "} "
+              case _ => ""
+            }
           case None => ""
         }
       } else ""
@@ -110,7 +114,7 @@ private[generate] object HTMLHandler {
     * @param cssString - A String containing the CSS code to be added to the HTML file
     * @return a String containing all the HTML code to be converted into an HTML file
     */
-  private def createHTML(content: Map[Keyword, Content], cssString: String): String = {
+  private def createHTML(content: ContentMap, cssString: String): String = {
     //Iterate through all the keywords (and their values) and create the respective HTML tag for each of them
     val htmlBody = content.map { case (_, singleContent) => writeHTMLTag(singleContent) }
     val htmlString = html(head(), body(htmlBody.toList)).toString
