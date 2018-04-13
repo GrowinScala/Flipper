@@ -167,8 +167,8 @@ object Generator {
     */
   private def jsonToContent(contentJSON: JSONString): Option[ContentMap] = {
     convertJSONtoMap(contentJSON) match {
-      case Some(parsedJSON) =>
 
+      case Some(parsedJSON) =>
         val returnMap = parsedJSON.collect {
           case (keyword: Keyword, content: Map[String, Any]) =>
             val fieldType = extractFieldType(content.getOrElse("fieldType", ""))

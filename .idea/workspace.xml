@@ -8,13 +8,12 @@
   <component name="ChangeListManager">
     <list default="true" id="5115832d-4669-4625-b348-c310af38a585" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/generator/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generator/src/main/scala/Main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/generator/src/main/scala/Main.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generator/src/main/scala/generator/generate/Generator.scala" beforeDir="false" afterPath="$PROJECT_DIR$/generator/src/main/scala/generator/generate/Generator.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generator/src/main/scala/generator/generate/HTMLHandler.scala" beforeDir="false" afterPath="$PROJECT_DIR$/generator/src/main/scala/generator/generate/HTMLHandler.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generator/src/main/scala/generator/utils/Config.scala" beforeDir="false" afterPath="$PROJECT_DIR$/generator/src/main/scala/generator/utils/Config.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/src/test/scala/generator/generate/HTMLHandlerSuite.scala" beforeDir="false" afterPath="$PROJECT_DIR$/generator/src/test/scala/generator/generate/HTMLHandlerSuite.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/classes/Main$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala" beforeDir="false" afterPath="$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala" beforeDir="false" afterPath="$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -42,11 +41,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Main.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/generator/src/main/scala/Main.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="423">
+              <caret line="63" selection-start-line="63" selection-end-line="63" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -54,35 +53,50 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Generator.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/generate/Generator.scala">
+      <file leaf-file-name="GeneratorJava.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/generator/src/main/java/generator/generate/GeneratorJava.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="177" lean-forward="true" selection-start-line="177" selection-end-line="177" />
+            <state relative-caret-position="139">
+              <caret line="87" column="7" lean-forward="true" selection-start-line="87" selection-start-column="7" selection-end-line="87" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainJ.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/generator/src/main/java/MainJ.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="21" column="51" lean-forward="true" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
               <folding>
-                <element signature="e#28#44#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HTMLHandler.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/generate/HTMLHandler.scala">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/generator/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2757">
-              <caret line="67" column="48" lean-forward="true" selection-start-line="67" selection-start-column="48" selection-end-line="67" selection-end-column="48" />
-              <folding>
-                <element signature="e#28#62#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="448">
+              <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Config.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FieldType.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/utils/FieldType.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="16">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Config.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/utils/Config.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+            <state relative-caret-position="144">
+              <caret line="9" column="96" selection-start-line="9" selection-start-column="96" selection-end-line="9" selection-end-column="96" />
             </state>
           </provider>
         </entry>
@@ -144,7 +158,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/reader/src/main/scala/parser/utils/OpenNLP.scala" />
         <option value="$PROJECT_DIR$/reader/src/main/java/readerJavaMain.java" />
         <option value="$PROJECT_DIR$/reader/src/main/java/parser/utils/OneOf.java" />
         <option value="$PROJECT_DIR$/reader/src/main/java/parser/utils/OneOfJava.java" />
@@ -183,18 +196,19 @@
         <option value="$PROJECT_DIR$/reader/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/Main.scala" />
         <option value="$PROJECT_DIR$/generator/src/main/scala/generator/utils/HTMLEntity.scala" />
-        <option value="$PROJECT_DIR$/generator/README.md" />
         <option value="$PROJECT_DIR$/build.sbt" />
         <option value="$PROJECT_DIR$/generator/src/main/scala/generator/utils/HTMLTag.scala" />
         <option value="$PROJECT_DIR$/generator/src/main/scala/generator/utils/FieldType.scala" />
         <option value="$PROJECT_DIR$/generator/src/main/scala/generator/utils/Content.scala" />
         <option value="$PROJECT_DIR$/generator/src/test/scala/generator/generate/HTMLHandlerSuite.scala" />
+        <option value="$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala" />
+        <option value="$PROJECT_DIR$/generator/src/main/scala/generator/utils/Config.scala" />
+        <option value="$PROJECT_DIR$/generator/src/main/scala/generator/generate/Generator.scala" />
         <option value="$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala" />
         <option value="$PROJECT_DIR$/generator/src/main/scala/generator/generate/HTMLHandler.scala" />
-        <option value="$PROJECT_DIR$/generator/src/main/scala/generator/generate/Generator.scala" />
-        <option value="$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala" />
+        <option value="$PROJECT_DIR$/generator/README.md" />
+        <option value="$PROJECT_DIR$/generator/src/main/java/MainJ.java" />
         <option value="$PROJECT_DIR$/generator/src/main/scala/Main.scala" />
-        <option value="$PROJECT_DIR$/generator/src/main/scala/generator/utils/Config.scala" />
       </list>
     </option>
   </component>
@@ -233,6 +247,23 @@
               <item name="generator" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
+              <item name="generator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
+              <item name="generator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="generate" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
@@ -328,8 +359,8 @@
       <module name="reader" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="MainJava (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MainJava" />
+    <configuration name="MainJ" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainJ" />
       <module name="generator" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -435,18 +466,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main (1)" />
-      <item itemvalue="Application.MainJava (1)" />
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.HTMLHandlerSuite" />
       <item itemvalue="JUnit.GeneratorSuite" />
+      <item itemvalue="Application.MainJ" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.MainJ" />
         <item itemvalue="JUnit.GeneratorSuite" />
         <item itemvalue="JUnit.HTMLHandlerSuite" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.MainJava (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -541,13 +572,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1522055766473</updated>
-    </task>
-    <task id="LOCAL-00041" summary="updating extractor">
-      <created>1522327361802</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1522327361802</updated>
     </task>
     <task id="LOCAL-00042" summary="mkdirs">
       <created>1522334793920</created>
@@ -885,13 +909,17 @@
       <option name="project" value="LOCAL" />
       <updated>1523612845959</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="Implemented some default styling options">
+      <created>1523626988659</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1523626988659</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="HTMLHandlerSuite - 2018.04.09 at 16h 50m 35s.xml">
-      <configuration name="HTMLHandlerSuite" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="HTMLHandlerSuite - 2018.04.09 at 17h 00m 20s.xml">
       <configuration name="HTMLHandlerSuite" configurationId="JUnit" />
     </history-entry>
@@ -919,6 +947,9 @@
     <history-entry file="GeneratorSuite - 2018.04.13 at 10h 29m 36s.xml">
       <configuration name="GeneratorSuite" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="GeneratorSuite - 2018.04.13 at 14h 47m 06s.xml">
+      <configuration name="GeneratorSuite" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -934,12 +965,12 @@
       <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.50065106" side_tool="true" weight="0.17460318" />
       <window_info anchor="right" id="Maven Projects" order="2" />
       <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.49791667" weight="0.32979852" />
-      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49934897" weight="0.28439152" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.49934897" visible="true" weight="0.3227513" />
       <window_info anchor="right" id="Material Palette" order="3" />
       <window_info anchor="bottom" id="Terminal" order="4" />
       <window_info id="Capture Tool" order="0" />
       <window_info id="Designer" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.17317708" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.17317708" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="5" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="9" weight="0.25" />
@@ -994,7 +1025,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactored POSTag and updated reader/README.md" />
     <MESSAGE value="removes xlst and xml add on files" />
     <MESSAGE value="Implemented tests for newest feature, and corrected bugs in OneOf and MultipleOf" />
     <MESSAGE value="Implemented Choice factory method for creating scala-made OneOf and MultipleOf instace objects" />
@@ -1019,16 +1049,10 @@
     <MESSAGE value="Updated HTMLHandler and generator README.md, working on addind more HTMLTags" />
     <MESSAGE value="Working on refactoring HTMLHandler and changing DSL to be not so HTML specific and more generic" />
     <MESSAGE value="Corrected generator test suites. Working on implementing default styling options" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrected generator test suites. Working on implementing default styling options" />
+    <MESSAGE value="Implemented some default styling options" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented some default styling options" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/utils/FieldType.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="21" column="44" lean-forward="true" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/reader/src/main/java/m.java" />
     <entry file="file://$PROJECT_DIR$/converter/README.md" />
     <entry file="file://$PROJECT_DIR$/README.md" />
@@ -1147,13 +1171,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generator/src/main/java/generator/generate/GeneratorJava.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="100" column="8" selection-start-line="100" selection-start-column="8" selection-end-line="100" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/generate/FileHandler.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="427">
@@ -1225,13 +1242,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generator/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="52" column="228" selection-start-line="52" selection-start-column="228" selection-end-line="52" selection-end-column="228" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.sbt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1253,27 +1263,6 @@
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/utils/FieldType.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/generate/HTMLHandlerSuite.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="39" column="3" lean-forward="true" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-645">
-          <caret line="107" column="3" lean-forward="true" selection-start-line="107" selection-start-column="3" selection-end-line="107" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -1312,40 +1301,82 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/generate/HTMLHandlerSuite.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="39" column="3" lean-forward="true" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="36" column="51" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/generate/HTMLHandler.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" column="46" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/generate/Generator.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="177" lean-forward="true" selection-start-line="177" selection-end-line="177" />
+        <state>
+          <caret line="40" column="6" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
           <folding>
             <element signature="e#28#44#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generator/src/main/scala/Main.scala">
+    <entry file="file://$PROJECT_DIR$/generator/src/main/java/MainJ.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="336">
+          <caret line="21" column="51" lean-forward="true" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/generate/HTMLHandler.scala">
+    <entry file="file://$PROJECT_DIR$/generator/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2757">
-          <caret line="67" column="48" lean-forward="true" selection-start-line="67" selection-start-column="48" selection-end-line="67" selection-end-column="48" />
-          <folding>
-            <element signature="e#28#62#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="448">
+          <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/utils/FieldType.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/utils/Config.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+        <state relative-caret-position="144">
+          <caret line="9" column="96" selection-start-line="9" selection-start-column="96" selection-end-line="9" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/src/main/java/generator/generate/GeneratorJava.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="87" column="7" lean-forward="true" selection-start-line="87" selection-start-column="7" selection-end-line="87" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/src/main/scala/Main.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

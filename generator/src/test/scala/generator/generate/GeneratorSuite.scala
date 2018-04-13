@@ -43,7 +43,7 @@ class GeneratorSuite extends FunSuite {
     val configMap =
       Map(
         "bigHeader" -> Config("blue", "20", "center", "corbel", "bold"),
-        "small" -> Config("red", "10")
+        "small" -> SmallHeader()
       )
     val noConfig = convertMapToPDF(content)
     val convertWithCSSFile = convertMapToPDF(content, cssFile)

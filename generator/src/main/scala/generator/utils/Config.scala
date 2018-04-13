@@ -7,7 +7,7 @@ package generator.utils
   * @param fontSize      - The size of the text to be displayed. Ex:. "10"; "20.2"
   * @param textAlignment - The alignment the displayed text should take. Ex:. "center"; "justify"
   * @param fontFamily    - The desired font to be used in the displayed text. Ex:. "Arial"; "Times New Roman"
-  * @param fontWeight    - The desired font weight to be used in the displayed text. Ex:. "bold"; "italic"
+  * @param fontWeight    - The desired font weight to be used in the displayed text. Ex:. "bold"
   */
 abstract class Configuration(
                               color: String,

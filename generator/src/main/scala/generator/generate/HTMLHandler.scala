@@ -1,7 +1,7 @@
 package generator.generate
 
 import collection.JavaConverters._
-import generator.generate.Generator.{ConfigMap, Keyword, ContentMap}
+import generator.generate.Generator.{ConfigMap, ContentMap}
 import scalatags.Text.all._
 import generator.utils._
 

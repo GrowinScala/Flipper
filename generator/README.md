@@ -26,7 +26,7 @@ The present file documents the Generator module.
                                  └───── utils/
                                               ├── Config.scala          ; Configuration object for styling the converted PDF
                                               ├── Content.scala         ; Object that describes the content to be displayed (field name, field value, HTML tag)
-                                              └── HTMLTag.scala  ; Classes that enumerate the possible HTML entities Flipper supports
+                                              └── FieldType.scala  ; Classes that enumerate the possible types Flipper supports
    ``` 
    
 ---
@@ -50,19 +50,20 @@ there will be some examples on how to call this methods.
 
 ### HTML Entities ###
 
-For both methods you can supply them with information regarding what HTML tag they should represent, this way you have a better control on how the converted PDF should look like.The way you achive this is by using one of HTMLTag sub-classes. The supported HTML entities so far are:
+For both methods you can supply them with information regarding what field type they should take, this way you have a better control on how the converted PDF should look like.The way you achive this is by using one of FieldType's sub-classes. The supported HTML entities so far are:
 
-| HTMLTag             | Actual HTML Tag     |
+| FieldType           | Actual HTML Tag     |
 |:-------------------:|:-------------------:| 
-| H1                  | h1                  |
-| H2                  | h2                  |
-| H3                  | h3                  |
+| Header1             | h1                  |
+| Header2             | h2                  |
+| Header3             | h3                  |
 | OrderedList         | ol                  |
 | UnorderedList       | ul                  |
 | Table               | table               |
-| P                   | p                   |
+| Paragraph           | p                   |
 | Text                | span                |
-| Everything else     | span                |
+| Code                | code                |
+| Link                | a                   |
 
 ### The `Content` and `Config` Classes ###
 
@@ -76,8 +77,8 @@ To specify what should be displayed we use the `Content` class. This class has t
 |:-------------------:|:--------------------------------------------------------:| 
 | fieldName           | The name of the keyword to be displayed                  |
 | fieldValue          | The actual value of the keyword to be displayed          |
-| htmlTag             | The HTML tag this keyword-value pair should represent |
-| cssClass            | **Optional** In case you want to customize the styling of this keyword-value pair you can do so specifying a CSS class name for it and then create the styling for the CSS class using:  **`Config` class / CSS File / CSS String**             |
+| fieldType           | The type of text the keyword-value pair should represent |
+| formattingID        | **Optional** In case you want to customize the styling of this keyword-value pair you can do so specifying a formattingID for it and then create the styling for that formatting using either a:  **`Config` class / CSS File / CSS String**             |
 
 
 * #### `Config` class #### 
@@ -86,11 +87,17 @@ To specify customize the styling of the information displayed we can use the `Co
 
 | Field               | Meaning                                            |
 |:-------------------:|:--------------------------------------------------:|
-| color               | The color to be used in that specific HTML tag  |
+| color               | The color to be used in that specific HTML tag     |
 | fontSize            | The size of the font, in points (pt)               |
 | textAlignment       | The text alignment to take effect                  |
 | fontFamily          | The font to be used in the text elements           |
 | fontWeight          | The font weight to be used in the text elements    |
+
+
+<br/>
+
+There's also some predefined styling options supported by Flipper wich you can use by using the 
+**`BigHeader`**, **`SmallHeader`**, **`BigHeader`**, **`JustifiedText`** and **`BoldText`**
 
 ---
 
@@ -100,8 +107,8 @@ To specify customize the styling of the information displayed we can use the `Co
 
 Generating a PDF file from a Map is done by calling the **`convertMapToPDF`** function, with the Map in the following 
 format **`Map[String,Content]`**. This can be done with one of four ways, by simply passing the Map, by passing the Map and
-a CSS file, by passing the Map and a CSS String, by passing the Map and a ConfigMap (**`Map[String, Config]`**). The ConfigMap is a
-Map that contains some configurations for each CSS class defined in the **`Map[String, Content]`** object, these are text color, font size, text alignment,
+a CSS file, by passing the Map and a CSS String, by passing the Map and a ConfigMap (**`Map[String, Configuration]`**). The ConfigMap is a
+Map that contains some configurations for each `formattingID` defined in the **`Map[String, Content]`** object, these are text color, font size, text alignment,
 font family and font weight. This function returns a Boolean saying if the conversion was successful and the output file shows in the **root folder** (**`./`**).
 
 ### Scala
@@ -112,8 +119,9 @@ font family and font weight. This function returns a Boolean saying if the conve
     
     val contentMap = 
     Map(
-        "name" -> Content("name", "John Doe", H1()),
-        "phones" -> Content("phones", List(12345, 54321), UnorderedList())
+        "name" -> Content("name", "John Doe", Header1()),
+        "phones" -> Content("phones", List(12345, 54321), UnorderedList()),
+        "webSite" -> Content("webSite", "Great place to work", Link("www.growin.pt"))
         )
     val success = convertMapToPDF(contentMap)
 ```
@@ -125,8 +133,9 @@ font family and font weight. This function returns a Boolean saying if the conve
     
     val contentMap = 
     Map(
-        "name" -> Content("name", "John Doe", H1(), "bigHeader"),
-        "phones" -> Content("phones", List(12345, 54321), UnorderedList(), "list")
+        "name" -> Content("name", "John Doe", Header1(), "bigHeader"),
+        "phones" -> Content("phones", List(12345, 54321), UnorderedList(), "list"),
+        "webSite" -> Content("webSite", "Great place to work", Link("www.growin.pt"))
         )
     val cssFile = new File("CSSFile.css")
     val success = convertMapToPDF(contentMap, cssFile)
@@ -138,8 +147,9 @@ font family and font weight. This function returns a Boolean saying if the conve
    
     val contentMap = 
     Map(
-        "name" -> Content("name", "John Doe", H1(), "bigHeader"),
-        "phones" -> Content("phones", List(12345, 54321), UnorderedList(), "list")
+        "name" -> Content("name", "John Doe", Header1(), "bigHeader"),
+        "phones" -> Content("phones", List(12345, 54321), UnorderedList(), "list"),
+        "webSite" -> Content("webSite", "Great place to work", Link("www.growin.pt"))
         )
     val cssString = ".bigHeader { color: green; font-size: 30px; text-align: center; } .list{ color: red; font-size: 10px; }"
     val success = convertMapToPDF(contentMap, cssString)
@@ -151,13 +161,15 @@ font family and font weight. This function returns a Boolean saying if the conve
     
     val contentMap = 
     Map(
-        "name" -> Content("name", "John Doe", H1(), "bigHeader"),
-        "phones" -> Content("phones", List(12345, 54321), UnorderedList(), "list")
+        "name" -> Content("name", "John Doe", Header1(), "bigHeader"),
+        "phones" -> Content("phones", List(12345, 54321), UnorderedList(), "list"),
+        "webSite" -> Content("webSite", "Great place to work", Link("www.growin.pt"), "link")
         )
     val configMap = 
     Map(
         "bigHeader" -> Config("green", "30", "center"),
-        "list" -> Config("red", "10")
+        "list" -> Config("red", "10"),
+        "link" -> JustifiedText() //Using Flipper's predefined styling options
     )
     val success = convertMapToPDF(contentMap,configMap)
 ```
@@ -179,8 +191,9 @@ font family and font weight. This function returns a Boolean saying if the conve
              phoneNumbers.add(54321);
 
              HashMap<String, Content> contentMap = new HashMap<>();
-             contentMap.put("name", new Content("name", "John Doe", new H1()))
-             contentMap.put("phones", new Content("phones", phoneNumbers, new UnorderedList()))
+             contentMap.put("name", new Content("name", "John Doe", new Header1(), ""));
+             contentMap.put("phones", new Content("phones", phoneNumbers, new UnorderedList(), ""));
+             contentMap.put("webSite", new Content("webSite", "Great place to work", new Link("www.growin.pt"), ""));
 
              boolean success = gj.convertMapToPDF(contentMap);
          }
@@ -203,8 +216,9 @@ font family and font weight. This function returns a Boolean saying if the conve
              phoneNumbers.add(54321);
 
              HashMap<String, Content> contentMap = new HashMap<>();
-             contentMap.put("name", new Content("name", "John Doe", new H1(), "bigHeader"));
+             contentMap.put("name", new Content("name", "John Doe", new Header1(), "bigHeader"));
              contentMap.put("phones", new Content("phones", phoneNumbers, new UnorderedList(), "list"));
+             contentMap.put("webSite", new Content("webSite", "Great place to work", new Link("www.growin.pt"), ""));
 
             File cssFile = new File("CSSFile.css");
 
@@ -228,8 +242,9 @@ font family and font weight. This function returns a Boolean saying if the conve
              phoneNumbers.add(54321);
 
              HashMap<String, Content> contentMap = new HashMap<>();
-             contentMap.put("name", new Content("name", "John Doe", new H1(), "bigHeader"));
+             contentMap.put("name", new Content("name", "John Doe", new Header1(), "bigHeader"));
              contentMap.put("phones", new Content("phones", phoneNumbers, new UnorderedList(), "list"));
+             contentMap.put("webSite", new Content("webSite", "Great place to work", new Link("www.growin.pt"), ""));
 
             String cssString = ".bigHeader { color: green; font-size: 30px; text-align: center; } .list{ color: red; font-size: 10px; }";
 
@@ -253,16 +268,18 @@ font family and font weight. This function returns a Boolean saying if the conve
              phoneNumbers.add(54321);
 
              HashMap<String, Content> contentMap = new HashMap<>();
-             contentMap.put("name", new Content("name", "John Doe", new H1(), "bigHeader"));
+             contentMap.put("name", new Content("name", "John Doe", new Header1(), "bigHeader"));
              contentMap.put("phones", new Content("phones", phoneNumbers, new UnorderedList(), "list"));
+             contentMap.put("webSite", new Content("webSite", "Great place to work", new Link("www.growin.pt"), "link"));
 
-            HashMap<String, Config> configMap = new HashMap<>();
+            HashMap<String, Configuration> configMap = new HashMap<>();
             configMap.put("bigHeader", new Config("green", "30", "center", "", "");
             configMap.put("list", new Config("red", "10", "", "", ""));
+            configMap.put("link", new JustifiedText());
 
              boolean success = gj.convertMapToPDF(contentMap, configMap);
              /*
-                Note all parameters in Config class in java's interface must be initialized.
+                Note: all parameters in Config class in java's interface must be initialized.
                 You achieve that by initializing all parameters as empty String (if you don't want to specify a value for them)
                 
                 If you only want to use a green color and leave all rest by default, you'd do:
@@ -289,15 +306,20 @@ shows in the **root folder** (**`./`**).
         |   "name"  : {
         |             "fieldName" : "name",
         |             "fieldValue" : "John Doe",
-        |             "htmlTag" : "H1",
-        |             "cssClass" : "bigHeader"
+        |             "fieldType" : "Header1"
         |            },
         |  "phones" : {
         |             "fieldName" : "phones",
         |             "fieldValue" : [12345, 54321],
-        |             "htmlTag" : "UnorderedList",
-        |             "cssClass" : "list"
+        |             "fieldType" : "UnorderedList"
         |           },
+        |  "webSite" : {
+        |             "fieldName" : "webSite",
+        |             "fieldValue" : "Greate place to work",
+        |             "fieldType" : { 
+        |                               "link" : "www.growin.pt"
+        |                           }
+        |           }
         |}
       """.stripMargin
     val success = convertJSONtoPDF(contentJSON)
@@ -313,15 +335,23 @@ shows in the **root folder** (**`./`**).
         |   "name"  : {
         |             "fieldName" : "name",
         |             "fieldValue" : "John Doe",
-        |             "htmlTag" : "H1",
-        |             "cssClass" : "bigHeader"
+        |             "fieldType" : "Header1",
+        |             "formattingID" : "bigHeader"
         |            },
         |  "phones" : {
         |             "fieldName" : "phones",
         |             "fieldValue" : [12345, 54321],
-        |             "htmlTag" : "UnorderedList",
-        |             "cssClass" : "list"
+        |             "fieldType" : "UnorderedList",
+        |             "formattingID" : "list"
         |           },
+        |  "webSite" : {
+        |             "fieldName" : "webSite",
+        |             "fieldValue" : "Greate place to work",
+        |             "fieldType" : { 
+        |                               "link" : "www.growin.pt"
+        |                           },
+        |             "formattingID" : "link"
+        |           }
         |}
       """.stripMargin
     val cssFile = new File("CSSFile.css")
@@ -337,15 +367,23 @@ shows in the **root folder** (**`./`**).
         |   "name"  : {
         |             "fieldName" : "name",
         |             "fieldValue" : "John Doe",
-        |             "htmlTag" : "H1",
-        |             "cssClass" : "bigHeader"
+        |             "fieldType" : "Header1",
+        |             "formattingID" : "bigHeader"
         |            },
         |  "phones" : {
         |             "fieldName" : "phones",
         |             "fieldValue" : [12345, 54321],
-        |             "htmlTag" : "UnorderedList",
-        |             "cssClass" : "list"
+        |             "fieldType" : "UnorderedList",
+        |             "formattingID" : "list"
         |           },
+        |  "webSite" : {
+        |             "fieldName" : "webSite",
+        |             "fieldValue" : "Greate place to work",
+        |             "fieldType" : { 
+        |                               "link" : "www.growin.pt"
+        |                           },
+        |             "formattingID" : "link"
+        |           }
         |}
       """.stripMargin
     val cssString = ".bigHeader { color: green; font-size: 30px; text-align: center; } .list{ color: red; font-size: 10px; }"
@@ -358,19 +396,26 @@ shows in the **root folder** (**`./`**).
     val contentJSON =
       """
         |{ 
-        |   "name" : {
+        |   "name"  : {
         |             "fieldName" : "name",
         |             "fieldValue" : "John Doe",
-        |             "htmlTag" : "H1",
-        |             "cssClass" : "bigHeader"
+        |             "fieldType" : "Header1",
+        |             "formattingID" : "bigHeader"
         |            },
-        |
         |  "phones" : {
         |             "fieldName" : "phones",
         |             "fieldValue" : [12345, 54321],
-        |             "htmlTag" : "UnorderedList",
-        |             "cssClass" : "list"
+        |             "fieldType" : "UnorderedList",
+        |             "formattingID" : "list"
         |           },
+        |  "webSite" : {
+        |             "fieldName" : "webSite",
+        |             "fieldValue" : "Greate place to work",
+        |             "fieldType" : { 
+        |                               "link" : "www.growin.pt"
+        |                           },
+        |             "formattingID" : "link"
+        |           }
         |}
       """.stripMargin
     
@@ -406,12 +451,19 @@ shows in the **root folder** (**`./`**).
             "  \"name\" : {" +
             "               \"fieldName\" : \"name\"," +
             "               \"fieldValue\" : \"John Doe\"," +
-            "               \"htmlTag\" : \"H1\"" +
+            "               \"fieldType\" : \"Header1\"" +
             "             },"+
             "  \"phones\" : {" +
             "               \"fieldName\" : \"phones\"," +
             "               \"fieldValue\" : [12345, 54321]," +
-            "               \"htmlTag\" : \"UnorderedList\"" +
+            "               \"fieldType\" : \"UnorderedList\"" +
+            "             },"+
+            "  \"webSite\" : {" +
+            "               \"fieldName\" : \"webSite\"," +
+            "               \"fieldValue\" : \"Great place to work\"," +
+            "               \"fieldType\" : { "+
+            "                                   \"link\": \"www.growin.pt\""+
+            "                                }" +
             "             }"+
             "}";
 
@@ -433,14 +485,22 @@ shows in the **root folder** (**`./`**).
             "  \"name\" : {" +
             "               \"fieldName\" : \"name\"," +
             "               \"fieldValue\" : \"John Doe\"," +
-            "               \"htmlTag\" : \"H1\"," +
-            "               \"cssClass\" : \"bigHeader\"" +
+            "               \"fieldType\" : \"Header1\"," +
+            "               \"formattingID\" : \"bigHeader\"" +
             "             },"+
             "  \"phones\" : {" +
             "               \"fieldName\" : \"phones\"," +
             "               \"fieldValue\" : [12345, 54321]," +
-            "               \"htmlTag\" : \"UnorderedList\"," +
-            "               \"cssClass\" : \"list\"" +
+            "               \"fieldType\" : \"UnorderedList\"," +
+            "               \"formattingID\" : \"list\"" +
+            "             },"+
+            "  \"webSite\" : {" +
+            "               \"fieldName\" : \"webSite\"," +
+            "               \"fieldValue\" : \"Great place to work\"," +
+            "               \"fieldType\" : { "+
+            "                                   \"link\": \"www.growin.pt\""+
+            "                                }," +
+            "               \"formattingID\" : \"link\"" +
             "             }"+
             "}";
             File cssFile = new File("CSSFile.css");
@@ -461,14 +521,22 @@ shows in the **root folder** (**`./`**).
             "  \"name\" : {" +
             "               \"fieldName\" : \"name\"," +
             "               \"fieldValue\" : \"John Doe\"," +
-            "               \"htmlTag\" : \"H1\"," +
-            "               \"cssClass\" : \"bigHeader\"" +
+            "               \"fieldType\" : \"Header1\"," +
+            "               \"formattingID\" : \"bigHeader\"" +
             "             },"+
             "  \"phones\" : {" +
             "               \"fieldName\" : \"phones\"," +
             "               \"fieldValue\" : [12345, 54321]," +
-            "               \"htmlTag\" : \"UnorderedList\"," +
-            "               \"cssClass\" : \"list\"" +
+            "               \"fieldType\" : \"UnorderedList\"," +
+            "               \"formattingID\" : \"list\"" +
+            "             },"+
+            "  \"webSite\" : {" +
+            "               \"fieldName\" : \"webSite\"," +
+            "               \"fieldValue\" : \"Great place to work\"," +
+            "               \"fieldType\" : { "+
+            "                                   \"link\": \"www.growin.pt\""+
+            "                                }," +
+            "               \"formattingID\" : \"link\"" +
             "             }"+
             "}";
              
@@ -492,14 +560,22 @@ shows in the **root folder** (**`./`**).
             "  \"name\" : {" +
             "               \"fieldName\" : \"name\"," +
             "               \"fieldValue\" : \"John Doe\"," +
-            "               \"htmlTag\" : \"H1\"," +
-            "               \"cssClass\" : \"bigHeader\"" +
+            "               \"fieldType\" : \"Header1\"," +
+            "               \"formattingID\" : \"bigHeader\"" +
             "             },"+
             "  \"phones\" : {" +
             "               \"fieldName\" : \"phones\"," +
             "               \"fieldValue\" : [12345, 54321]," +
-            "               \"htmlTag\" : \"UnorderedList\"," +
-            "               \"cssClass\" : \"list\"" +
+            "               \"fieldType\" : \"UnorderedList\"," +
+            "               \"formattingID\" : \"list\"" +
+            "             },"+
+            "  \"webSite\" : {" +
+            "               \"fieldName\" : \"webSite\"," +
+            "               \"fieldValue\" : \"Great place to work\"," +
+            "               \"fieldType\" : { "+
+            "                                   \"link\": \"www.growin.pt\""+
+            "                                }," +
+            "               \"formattingID\" : \"link\"" +
             "             }"+
             "}";
 
