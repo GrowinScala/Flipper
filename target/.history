@@ -266,3 +266,44 @@ sonatypeList
 sonatypeOpen
 sonatypeOpen com.growin.flipper
 sonatypeRelease
+exit
+sonatypeOpen com.growin
+sonatypeRelease
+publishSigned
+publishLocalSigned
+sonatypeOpen com.growin flipper
+sonatypeRelease
+make-pom
+makePom
+makeJar
+exit
+run
+exit
+package
+jar tvf 
+exit
+package
+makePom
+deploy
+jar
+jar:jar
+clean
+package
+makePom
+package -deprecation
+-deprecation
+package deprecation
+deprecation
+build deprecation
+loadedBluid
+loadedBuild
+package
+makePom
+clean
+package
+makePom
+sbt doc
+doc
+package-doc
+packageDoc
+packageSrc

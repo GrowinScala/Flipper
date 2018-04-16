@@ -40,7 +40,7 @@ object Main {
     val cssString =
       """
         |body {
-        |       background-color: lightgreen;
+        |       background-color: black;
         |     }
         |
         |.bigHeader {
