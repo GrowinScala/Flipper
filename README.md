@@ -1,20 +1,21 @@
 # Flipper
 ### What is Flipper? ###
 
-Flipper is an open-source PDF library written in Scala and that can be integrated in any Java/Scala environment developed by the good people at Growin. It has some really usefull features such as: 
+Flipper is an open-source PDF library written in Scala and that can be integrated in any Java/Scala environment 
+developed by the good people at Growin. It has some really usefull features such as: 
 * **Parsing a PDF document and returning a JSON object** - Flipper is able to parse the text in a PDF document,
- as well as recognize text in images inside the PDF document,
- and return a JSON object with the extracted information. You simply specify the type of value you want to obtain
- for a given keyword (A noun, a verb, a number etc.), and Flipper will do the rest!
+ as well as recognize text in images inside the PDF document, and return a JSON object with the extracted information. 
+ You simply specify the type of value you want to obtain for a given keyword (A noun, a verb, a number etc.), and 
+ Flipper will do the rest!
  
  * **Convert JSON to PDF** - Flipper does not content itself with just parsing a PDF file, that's easy!
  Flipper also converts a given JSON object to a PDF document. You can also customize the outputted document
  with CSS.
  
  * **Convert PDF to other file types** - We also support the conversion from PDF to other popular
- formats such as: .png; .jpeg; .gif; .odt
+ formats: .png; .jpeg/jpg; .gif; .odt.
  
- Current version: 0.0.1
+ Current version: 0.2
  
  ---
  
@@ -66,8 +67,8 @@ To be implemented
 
 ### Dependencies
 
-Download the **eng.traineddata** and **por.traineddata** from [here](https://github.com/tesseract-ocr/tessdata) and insert them in a directory named **tessdata** 
-in the **root** of the project.
+Download the **eng.traineddata** and **por.traineddata** from [here](https://github.com/tesseract-ocr/tessdata) and
+insert them in a directory named **tessdata** in the **root** of the project.
 
 Flipper uses **_[Tess4j](http://tess4j.sourceforge.net/)_** (a tesseract for java wrapper) to extract
 text from images (using an algorithm known as _optical character recognition_). In order to improve this algorithms
@@ -98,6 +99,4 @@ Flipper is an Open-Source project developed at Growin in our offices in Lisbon.
  * Margarida Reis   &nbsp; &nbsp; &nbsp; - mreis@growin.pt
  * Lucas Fischer    &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - lfischer@growin.pt
 
-Or visit our website: [www.growin.pt](https://www.growin.pt/)
-
-
+Or visit our website: [www.growin.com](https://www.growin.com/)
