@@ -297,6 +297,8 @@ shows in the **root folder** (**`./`**).
 
 ### Scala
  
+ * Not specifying any styling details
+
 ```scala
     import generator.generate.Generator.convertJSONtoPDF
     
@@ -324,6 +326,8 @@ shows in the **root folder** (**`./`**).
       """.stripMargin
     val success = convertJSONtoPDF(contentJSON)
 ```
+
+* Specifying styling details with a CSS file
 
 ```scala
     import generator.generate.Generator.convertJSONtoPDF
@@ -358,6 +362,8 @@ shows in the **root folder** (**`./`**).
     val success = convertJSONtoPDF(contentJSON, cssFile)
 ```
 
+* Specifying styling details with a CSS String
+
 ```scala
     import generator.generate.Generator.convertJSONtoPDFWithCSS
    
@@ -389,6 +395,7 @@ shows in the **root folder** (**`./`**).
     val cssString = ".bigHeader { color: green; font-size: 30px; text-align: center; } .list{ color: red; font-size: 10px; }"
     val success = convertJSONtoPDF(contentJSON, cssString)
 ```
+* Specifying styling details with a confinguration JSON
 
 ```scala
     import generator.generate.Generator.convertJSONtoPDF

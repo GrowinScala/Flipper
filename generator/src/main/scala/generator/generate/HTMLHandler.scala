@@ -30,11 +30,14 @@ private[generate] object HTMLHandler {
   def extractFieldType(jsonObject: Any): FieldType = jsonObject match {
     case tagStr: String => stringToHTMLTag(tagStr)
     case jObject: Map[String, String] =>
-      val href = jObject.getOrElse("link", "")
-      if (href.nonEmpty)
-        Link(href)
-      else
-        throw new IllegalArgumentException("You must supply fieldType with a link attribute")
+
+      val link = jObject.getOrElse("link", "")
+      jObject.getOrElse("type", "").toLowerCase match {
+        case str: String if str.isEmpty => throw new IllegalArgumentException("You must supply fieldType object with a type attribute")
+        case "link" => if (link.nonEmpty) Link(link) else throw new IllegalArgumentException("You must supply fieldType object with a link attribute")
+        case "image" => if (link.nonEmpty) Image(link) else throw new IllegalArgumentException("You must supply fieldType object with a link attribute")
+        case str: String => stringToHTMLTag(str)
+      }
 
     case _ => throw new IllegalArgumentException("The value specified for fieldType is not supported")
   }
@@ -151,6 +154,8 @@ private[generate] object HTMLHandler {
       case _: Code => code(`class` := value.formattingID)(displayVal)
 
       case anchor: Link => a(href := anchor.link, `class` := value.formattingID)(displayVal)
+
+      case image: Image => img(src := image.link, `class` := value.formattingID)(displayVal)
 
       case _: OrderedList => createHtmlList(ordered = true, value)
 

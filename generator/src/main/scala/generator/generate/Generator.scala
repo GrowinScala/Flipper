@@ -133,7 +133,7 @@ object Generator {
     * @param cssString   - A String containing all the CSS code to be added to the HTML file
     * @return a Boolean specifying if the conversion was successful or not
     */
-  def convertJSONtoPDFWithCSS(contentJSON: JSONString, cssString: String): Boolean = { //TODO how do i remove the unnecessary withCSS part with out conflict with line 80
+  def convertJSONtoPDFWithCSS(contentJSON: JSONString, cssString: String): Boolean = { //TODO how do i remove the unnecessary "withCSS" part with out conflict with line 80
     val convertedContentOpt = jsonToContent(contentJSON) //Try to convert the JSON content into a ContentMap
     convertedContentOpt match {
       case Some(convertedContent) => internalMapConverter(convertedContent, cssString)
