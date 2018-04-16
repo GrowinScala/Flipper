@@ -7,7 +7,8 @@ import org.scalatest.junit.JUnitRunner
 import Converter._
 
 @RunWith(classOf[JUnitRunner])
-class ConverterSuite extends FunSuite {
+class
+ConverterSuite extends FunSuite {
 
   val validFile = new File("./converter/src/main/resources/cv.pdf")
 
