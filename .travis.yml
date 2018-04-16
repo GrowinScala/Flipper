@@ -3,8 +3,8 @@ matrix:
     - language: scala
       scala: 2.12.4
       before_script:
-       # - sudo apt update
-        - sudo apt install tesseract-ocr
-        - sudo apt install libtesseract-dev
+        - sudo apt-get update -qq
+        - sudo apt-get install -y tesseract-ocr
+        - sudo apt-get install -y libtesseract-dev
       script:
         - sbt clean "++ 2.12.4 testOnly *ExtractorSuite *FileHandlerSuite *ImageProcessingSuite *OpenNLPSuite *FileHandlerGenSuite *GeneratorSuite *HTMLHandlerSuite *ConverterSuite"
