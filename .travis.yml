@@ -2,7 +2,7 @@ matrix:
   include:
     - language: scala
       scala: 2.12.4
-      before_script:
+      before_install:
         - sudo apt-get update -qq
         - sudo apt-get install -y tesseract-ocr
         - sudo apt-get install -y libtesseract-dev
