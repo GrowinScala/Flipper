@@ -39,8 +39,8 @@
       <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="8" column="58" lean-forward="true" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
+            <state relative-caret-position="64">
+              <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -58,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="16">
-              <caret line="130" column="6" selection-start-line="130" selection-start-column="6" selection-end-line="130" selection-end-column="6" />
+              <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
               <folding>
                 <element signature="e#19#38#0" expanded="true" />
               </folding>
@@ -596,34 +596,6 @@
       <option name="presentableId" value="Default" />
       <updated>1522055766473</updated>
     </task>
-    <task id="LOCAL-00058" summary="removes xlst and xml add on files">
-      <created>1522835924773</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1522835924773</updated>
-    </task>
-    <task id="LOCAL-00059" summary="Implemented tests for newest feature, and corrected bugs in OneOf and MultipleOf">
-      <created>1522848661655</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1522848661655</updated>
-    </task>
-    <task id="LOCAL-00060" summary="Implemented tests for newest feature, and corrected bugs in OneOf and MultipleOf">
-      <created>1522848890994</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1522848890994</updated>
-    </task>
-    <task id="LOCAL-00061" summary="Implemented Choice factory method for creating scala-made OneOf and MultipleOf instace objects">
-      <created>1522853108810</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1522853108811</updated>
-    </task>
     <task id="LOCAL-00062" summary="Updated reader/README.md to reflect OneOf/MultipleOf possibility">
       <created>1522854260679</created>
       <option name="number" value="00062" />
@@ -939,7 +911,35 @@
       <option name="project" value="LOCAL" />
       <updated>1523886833431</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="Update">
+      <created>1523887728219</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1523887728219</updated>
+    </task>
+    <task id="LOCAL-00108" summary="testing travis">
+      <created>1523887810738</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1523887810738</updated>
+    </task>
+    <task id="LOCAL-00109" summary="updating travis">
+      <created>1523888480034</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1523888480034</updated>
+    </task>
+    <task id="LOCAL-00110" summary="updating travis">
+      <created>1523888565898</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1523888565898</updated>
+    </task>
+    <option name="localTasksCounter" value="111" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1048,8 +1048,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="convertingJSONtoPDF core is done, working on testing it and adding more use cases" />
-    <MESSAGE value="Added more use cases to convertJSONtoPDF" />
     <MESSAGE value="Implementing GeneratorSuite.scala" />
     <MESSAGE value="GeneratorSuite.scala implemented" />
     <MESSAGE value="Implementing HTMLHandlerSuite.scala" />
@@ -1072,8 +1070,10 @@
     <MESSAGE value="Updated travis, working now" />
     <MESSAGE value="testing travis CI" />
     <MESSAGE value="Updating travis" />
+    <MESSAGE value="Update" />
     <MESSAGE value="testing travis" />
-    <option name="LAST_COMMIT_MESSAGE" value="testing travis" />
+    <MESSAGE value="updating travis" />
+    <option name="LAST_COMMIT_MESSAGE" value="updating travis" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/flipper.xml" />
@@ -1421,7 +1421,7 @@
     <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16">
-          <caret line="130" column="6" selection-start-line="130" selection-start-column="6" selection-end-line="130" selection-end-column="6" />
+          <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
           <folding>
             <element signature="e#19#38#0" expanded="true" />
           </folding>
@@ -1430,8 +1430,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="58" lean-forward="true" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
+        <state relative-caret-position="64">
+          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
         </state>
       </provider>
     </entry>
