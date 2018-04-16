@@ -4,7 +4,7 @@
 		module="generator_2.12"
 		revision="0.1"
 		status="integration"
-		publication="20180412145337"
+		publication="20180416142113"
 	>
 		<description>
 		generator
@@ -32,14 +32,14 @@
 	<dependencies>
 		<dependency org="org.scala-lang" name="scala-compiler" rev="2.12.4" conf="scala-tool->default,optional(default)"/>
 		<dependency org="org.scala-lang" name="scala-library" rev="2.12.4" conf="scala-tool->default,optional(default);compile->default(compile)"/>
-		<dependency org="org.apache.pdfbox" name="pdfbox" rev="2.0.5" conf="compile->default(compile)">
-			<exclude org="commons-logging" module="commons-logging" name="*" type="*" ext="*" conf="" matcher="exact"/>
-		</dependency>
-		<dependency org="org.apache.pdfbox" name="fontbox" rev="2.0.5" conf="compile->default(compile)">
-			<exclude org="commons-logging" module="commons-logging" name="*" type="*" ext="*" conf="" matcher="exact"/>
-		</dependency>
+		<dependency org="org.apache.pdfbox" name="pdfbox" rev="2.0.5" conf="compile->default(compile)"/>
+		<dependency org="org.apache.pdfbox" name="fontbox" rev="2.0.5" conf="compile->default(compile)"/>
 		<dependency org="junit" name="junit" rev="4.10" conf="test->default(compile)"/>
-		<dependency org="org.scalatest" name="scalatest_2.12" rev="3.2.0-SNAP10" conf="test->default(compile)"/>
+		<dependency org="org.scalatest" name="scalatest_2.12" rev="3.2.0-SNAP10" conf="test->default(compile)">
+			<artifact name="scalatest_2.12" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<artifact name="scalatest_2.12" type="jar" ext="jar" conf="*"/>
+		</dependency>
+		<dependency org="org.scalacheck" name="scalacheck_2.12" rev="1.13.4" conf="test->default(compile)"/>
 		<dependency org="org.apache.opennlp" name="opennlp-tools" rev="1.8.4" conf="compile->default(compile)"/>
 		<dependency org="net.sourceforge.tess4j" name="tess4j" rev="3.4.4" conf="compile->default(compile)"/>
 		<dependency org="com.itextpdf.tool" name="xmlworker" rev="5.5.10" conf="compile->default(compile)"/>

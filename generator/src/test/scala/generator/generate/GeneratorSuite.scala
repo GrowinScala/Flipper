@@ -148,7 +148,7 @@ class GeneratorSuite extends FunSuite {
       intercept[IllegalArgumentException] {
         convertJSONtoPDF(contentJSON)
       }
-    assert(caught.getMessage equals "You must supply fieldType with a link attribute")
+    assert(caught.getMessage equals "You must supply fieldType object with a type attribute")
   }
 
   /**
