@@ -3,7 +3,7 @@ matrix:
     - language: scala
       scala: 2.12.4
       before_install:
-        - sudo add-apt-repository ppa:alex-p/tesseract-ocr
+        - sudo add-apt-repository ppa:alex-p/tesseract-ocr -y
         - sudo apt-get update -qq
         - sudo apt-get install -y leptonlib openjpeg2 tesseract tesseract-lang tesseract-ocr-grc
       script:

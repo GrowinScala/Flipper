@@ -40,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="112">
-              <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+              <caret line="7" column="96" selection-start-line="7" selection-start-column="96" selection-end-line="7" selection-end-column="96" />
             </state>
           </provider>
         </entry>
@@ -48,7 +48,7 @@
       <file leaf-file-name="build.sbt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.sbt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-9">
+            <state relative-caret-position="139">
               <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
@@ -58,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="16">
-              <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
+              <caret line="130" column="7" selection-start-line="130" selection-start-column="7" selection-end-line="130" selection-end-column="7" />
               <folding>
                 <element signature="e#19#38#0" expanded="true" />
               </folding>
@@ -596,20 +596,6 @@
       <option name="presentableId" value="Default" />
       <updated>1522055766473</updated>
     </task>
-    <task id="LOCAL-00066" summary="Updated readme's">
-      <created>1522940307964</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1522940307964</updated>
-    </task>
-    <task id="LOCAL-00067" summary="Working on updating Generator">
-      <created>1523014128402</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1523014128402</updated>
-    </task>
     <task id="LOCAL-00068" summary="Refactoring generator module, working on interface for user to specify configurations">
       <created>1523022535524</created>
       <option name="number" value="00068" />
@@ -939,7 +925,21 @@
       <option name="project" value="LOCAL" />
       <updated>1523891919206</updated>
     </task>
-    <option name="localTasksCounter" value="115" />
+    <task id="LOCAL-00115" summary="testing travis">
+      <created>1523892025144</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1523892025144</updated>
+    </task>
+    <task id="LOCAL-00116" summary="updating travis 2">
+      <created>1523893352113</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1523893352113</updated>
+    </task>
+    <option name="localTasksCounter" value="117" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1048,7 +1048,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implementing HTMLHandlerSuite.scala" />
     <MESSAGE value="HTMLHandlerSuite.scala implemented, Generator module tests updated" />
     <MESSAGE value="Updated Generator/Config/HTMLHandler files and generators README.MD" />
     <MESSAGE value="Refactoring HTMLHandler" />
@@ -1069,11 +1068,12 @@
     <MESSAGE value="testing travis CI" />
     <MESSAGE value="Updating travis" />
     <MESSAGE value="Update" />
-    <MESSAGE value="testing travis" />
     <MESSAGE value="updating travis" />
     <MESSAGE value="updating travis 1" />
     <MESSAGE value="updating travis 1.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="updating travis 1.1" />
+    <MESSAGE value="testing travis" />
+    <MESSAGE value="updating travis 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="updating travis 2" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/flipper.xml" />
@@ -1404,13 +1404,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.sbt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/generator/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4800">
@@ -1418,17 +1411,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/build.sbt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
-          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <caret line="7" column="96" selection-start-line="7" selection-start-column="96" selection-end-line="7" selection-end-column="96" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16">
-          <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
+          <caret line="130" column="7" selection-start-line="130" selection-start-column="7" selection-end-line="130" selection-end-column="7" />
           <folding>
             <element signature="e#19#38#0" expanded="true" />
           </folding>
