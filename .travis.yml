@@ -3,8 +3,8 @@ matrix:
     - language: scala
       scala: 2.12.4
       before_install:
+        - sudo add-apt-repository ppa:alex-p/tesseract-ocr
         - sudo apt-get update -qq
-        - sudo apt-get install -y tesseract-ocr libtesseract-dev libleptonica-dev
-        - ulimit -c unlimited
+        - sudo apt-get install -y leptonlib openjpeg2 tesseract tesseract-lang tesseract-ocr-grc
       script:
         - sbt clean "++ 2.12.4 testOnly *ExtractorSuite *FileHandlerSuite *ImageProcessingSuite *OpenNLPSuite *FileHandlerGenSuite *GeneratorSuite *HTMLHandlerSuite *ConverterSuite"
