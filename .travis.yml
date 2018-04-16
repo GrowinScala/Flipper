@@ -2,5 +2,9 @@ matrix:
   include:
     - language: scala
       scala: 2.12.4
+      before_script:
+        - composer install --dev
+        - sudo apt-get update -qq
+        - sudo apt-get install -qq tesseract-ocr tesseract-ocr-nld
       script:
         - sbt clean "++ 2.12.4 testOnly *ExtractorSuite *FileHandlerSuite *ImageProcessingSuite *OpenNLPSuite *FileHandlerGenSuite *GeneratorSuite *HTMLHandlerSuite *ConverterSuite"
