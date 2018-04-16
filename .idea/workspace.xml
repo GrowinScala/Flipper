@@ -39,8 +39,8 @@
       <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="7" column="96" selection-start-line="7" selection-start-column="96" selection-end-line="7" selection-end-column="96" />
+            <state relative-caret-position="80">
+              <caret line="5" column="61" selection-start-line="5" selection-start-column="61" selection-end-line="5" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -58,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="16">
-              <caret line="130" column="7" selection-start-line="130" selection-start-column="7" selection-end-line="130" selection-end-column="7" />
+              <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
               <folding>
                 <element signature="e#19#38#0" expanded="true" />
               </folding>
@@ -596,20 +596,6 @@
       <option name="presentableId" value="Default" />
       <updated>1522055766473</updated>
     </task>
-    <task id="LOCAL-00068" summary="Refactoring generator module, working on interface for user to specify configurations">
-      <created>1523022535524</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1523022535524</updated>
-    </task>
-    <task id="LOCAL-00069" summary="Implementing convertingJSONtoPDF">
-      <created>1523030151070</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1523030151070</updated>
-    </task>
     <task id="LOCAL-00070" summary="Implementing convertingJSONtoPDF">
       <created>1523032768074</created>
       <option name="number" value="00070" />
@@ -939,7 +925,21 @@
       <option name="project" value="LOCAL" />
       <updated>1523893352113</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL-00117" summary="testing travis 2">
+      <created>1523893443117</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1523893443117</updated>
+    </task>
+    <task id="LOCAL-00118" summary="updating travis 2.5">
+      <created>1523893601029</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1523893601029</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1048,8 +1048,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="HTMLHandlerSuite.scala implemented, Generator module tests updated" />
-    <MESSAGE value="Updated Generator/Config/HTMLHandler files and generators README.MD" />
     <MESSAGE value="Refactoring HTMLHandler" />
     <MESSAGE value="Added support for HTML table, working on improving its configurations" />
     <MESSAGE value="update" />
@@ -1073,7 +1071,9 @@
     <MESSAGE value="updating travis 1.1" />
     <MESSAGE value="testing travis" />
     <MESSAGE value="updating travis 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="updating travis 2" />
+    <MESSAGE value="testing travis 2" />
+    <MESSAGE value="updating travis 2.5" />
+    <option name="LAST_COMMIT_MESSAGE" value="updating travis 2.5" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/flipper.xml" />
@@ -1420,15 +1420,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="96" selection-start-line="7" selection-start-column="96" selection-end-line="7" selection-end-column="96" />
+        <state relative-caret-position="80">
+          <caret line="5" column="61" selection-start-line="5" selection-start-column="61" selection-end-line="5" selection-end-column="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16">
-          <caret line="130" column="7" selection-start-line="130" selection-start-column="7" selection-end-line="130" selection-end-column="7" />
+          <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
           <folding>
             <element signature="e#19#38#0" expanded="true" />
           </folding>
