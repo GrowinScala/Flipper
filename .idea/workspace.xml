@@ -9,12 +9,6 @@
     <list default="true" id="5115832d-4669-4625-b348-c310af38a585" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generator/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/generator/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/src/main/scala/Main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/generator/src/main/scala/Main.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/src/main/scala/generator/generate/Generator.scala" beforeDir="false" afterPath="$PROJECT_DIR$/generator/src/main/scala/generator/generate/Generator.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/src/main/scala/generator/generate/HTMLHandler.scala" beforeDir="false" afterPath="$PROJECT_DIR$/generator/src/main/scala/generator/generate/HTMLHandler.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/src/main/scala/generator/utils/FieldType.scala" beforeDir="false" afterPath="$PROJECT_DIR$/generator/src/main/scala/generator/utils/FieldType.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/src/test/scala/generator/generate/HTMLHandlerSuite.scala" beforeDir="false" afterPath="$PROJECT_DIR$/generator/src/test/scala/generator/generate/HTMLHandlerSuite.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/classes/Main$.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -45,8 +39,8 @@
       <file leaf-file-name="Main.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/generator/src/main/scala/Main.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="27" column="45" lean-forward="true" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
+            <state relative-caret-position="139">
+              <caret line="31" column="23" lean-forward="true" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -54,35 +48,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HTMLHandlerSuite.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/generate/HTMLHandlerSuite.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Generator.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/generate/Generator.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="173" column="41" lean-forward="true" selection-start-line="173" selection-start-column="41" selection-end-line="173" selection-end-column="41" />
-              <folding>
-                <element signature="e#28#44#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="16">
+              <caret line="173" column="41" selection-start-line="173" selection-start-column="41" selection-end-line="173" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HTMLHandler.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HTMLHandler.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/generate/HTMLHandler.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="108" selection-start-line="108" selection-end-line="108" />
-              <folding>
-                <element signature="e#28#62#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="80">
+              <caret line="112" column="5" selection-start-line="112" selection-start-column="5" selection-end-line="112" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -209,7 +188,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -223,61 +201,12 @@
               <item name="Flipper" type="462c0819:PsiDirectoryNode" />
               <item name="generator" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
-              <item name="generate" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -541,13 +470,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1522055766473</updated>
-    </task>
-    <task id="LOCAL-00043" summary="mkdirs">
-      <created>1522334841590</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1522334841590</updated>
     </task>
     <task id="LOCAL-00044" summary="updated readme's">
       <created>1522339367408</created>
@@ -885,13 +807,17 @@
       <option name="project" value="LOCAL" />
       <updated>1523632790884</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="Added &lt;img&gt; support and updated HTMLHandlerSuite.scala to reflect changes">
+      <created>1523869661581</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1523869661581</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GeneratorSuite - 2018.04.09 at 17h 00m 46s.xml">
-      <configuration name="GeneratorSuite" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="HTMLHandlerSuite - 2018.04.12 at 17h 43m 14s.xml">
       <configuration name="HTMLHandlerSuite" configurationId="JUnit" />
     </history-entry>
@@ -919,6 +845,9 @@
     <history-entry file="HTMLHandlerSuite - 2018.04.16 at 09h 54m 27s.xml">
       <configuration name="HTMLHandlerSuite" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="HTMLHandlerSuite - 2018.04.16 at 10h 06m 13s.xml">
+      <configuration name="HTMLHandlerSuite" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -926,7 +855,6 @@
     <layout>
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="bottom" id="TODO" order="12" />
-      <window_info anchor="bottom" id="Messages" order="2" sideWeight="0.49609375" weight="0.32804233" />
       <window_info anchor="right" id="sbt" order="1" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="3" />
@@ -934,36 +862,38 @@
       <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.50065106" side_tool="true" weight="0.17460318" />
       <window_info anchor="right" id="Maven Projects" order="2" />
       <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.49791667" weight="0.32979852" />
-      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.49934897" visible="true" weight="0.3227513" />
       <window_info anchor="right" id="Material Palette" order="3" />
       <window_info anchor="bottom" id="Terminal" order="4" />
       <window_info id="Capture Tool" order="0" />
       <window_info id="Designer" order="1" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.17317708" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.17317708" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="5" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="9" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="2" sideWeight="0.49609375" weight="0.32804233" />
       <window_info anchor="right" id="Gradle" order="6" />
       <window_info anchor="right" id="Commander" order="8" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="7" weight="0.32936507" />
+      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49934897" weight="0.3227513" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Build" order="1" weight="0.25925925" />
       <window_info anchor="bottom" id="Message" order="6" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="10" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="7" weight="0.32936507" />
     </layout>
     <layout-to-restore>
       <window_info anchor="bottom" id="Build" order="1" weight="0.25925925" />
       <window_info id="Designer" order="1" />
       <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49934897" weight="0.32936507" />
       <window_info anchor="right" id="sbt" order="1" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="5" />
       <window_info id="Image Layers" order="3" />
-      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49934897" weight="0.32936507" />
+      <window_info anchor="bottom" id="Find" order="7" weight="0.32936507" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="9" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -986,7 +916,6 @@
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="7" weight="0.32936507" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
     </layout-to-restore>
   </component>
@@ -994,7 +923,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implemented tests for newest feature, and corrected bugs in OneOf and MultipleOf" />
     <MESSAGE value="Implemented Choice factory method for creating scala-made OneOf and MultipleOf instace objects" />
     <MESSAGE value="Updated reader/README.md to reflect OneOf/MultipleOf possibility" />
     <MESSAGE value="Fixed java interface in reader module, changed logic in Choice.java (now called SpecificationJava.java)" />
@@ -1019,7 +947,8 @@
     <MESSAGE value="Corrected generator test suites. Working on implementing default styling options" />
     <MESSAGE value="Implemented some default styling options" />
     <MESSAGE value="Updated generator README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated generator README.md" />
+    <MESSAGE value="Added &lt;img&gt; support and updated HTMLHandlerSuite.scala to reflect changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added &lt;img&gt; support and updated HTMLHandlerSuite.scala to reflect changes" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/reader/src/main/java/m.java" />
@@ -1267,13 +1196,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generator/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/generator/src/main/java/MainJ.java" />
     <entry file="file://$PROJECT_DIR$/generator/src/main/java/generator/generate/GeneratorJava.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1296,16 +1218,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generator/src/main/scala/Main.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="27" column="45" lean-forward="true" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/utils/FieldType.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
@@ -1313,30 +1225,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/generate/HTMLHandler.scala">
+    <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/generate/HTMLHandlerSuite.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        <state relative-caret-position="226">
+          <caret line="47" column="46" lean-forward="true" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="50" column="21" lean-forward="true" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/src/main/scala/Main.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="31" column="23" lean-forward="true" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
           <folding>
-            <element signature="e#28#62#0" expanded="true" />
+            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/generate/Generator.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="173" column="41" lean-forward="true" selection-start-line="173" selection-start-column="41" selection-end-line="173" selection-end-column="41" />
-          <folding>
-            <element signature="e#28#44#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="16">
+          <caret line="173" column="41" selection-start-line="173" selection-start-column="41" selection-end-line="173" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/generate/HTMLHandlerSuite.scala">
+    <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/generate/HTMLHandler.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+        <state relative-caret-position="80">
+          <caret line="112" column="5" selection-start-line="112" selection-start-column="5" selection-end-line="112" selection-end-column="5" />
         </state>
       </provider>
     </entry>
