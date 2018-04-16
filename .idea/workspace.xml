@@ -8,7 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5115832d-4669-4625-b348-c310af38a585" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala" beforeDir="false" afterPath="$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -36,11 +36,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="6" column="81" selection-start-line="6" selection-start-column="81" selection-end-line="6" selection-end-column="81" />
+            <state relative-caret-position="112">
+              <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -54,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GeneratorSuite.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GeneratorSuite.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="16">
-              <caret line="130" column="7" selection-start-line="130" selection-start-column="7" selection-end-line="130" selection-end-column="7" />
+              <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
               <folding>
                 <element signature="e#19#38#0" expanded="true" />
               </folding>
@@ -184,8 +184,8 @@
         <option value="$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala" />
         <option value="$PROJECT_DIR$/build.sbt" />
         <option value="$PROJECT_DIR$/converter/src/test/scala/parser/conversion/ConverterSuite.scala" />
-        <option value="$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala" />
         <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala" />
       </list>
     </option>
   </component>
@@ -596,20 +596,6 @@
       <option name="presentableId" value="Default" />
       <updated>1522055766473</updated>
     </task>
-    <task id="LOCAL-00064" summary="Fixed java interface in reader module, changed logic in Choice.java (now called SpecificationJava.java)">
-      <created>1522937388657</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1522937388657</updated>
-    </task>
-    <task id="LOCAL-00065" summary="Added getSingleJSON entry in Java's interface">
-      <created>1522938315730</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1522938315730</updated>
-    </task>
     <task id="LOCAL-00066" summary="Updated readme's">
       <created>1522940307964</created>
       <option name="number" value="00066" />
@@ -939,7 +925,21 @@
       <option name="project" value="LOCAL" />
       <updated>1523888787346</updated>
     </task>
-    <option name="localTasksCounter" value="113" />
+    <task id="LOCAL-00113" summary="updating travis 1">
+      <created>1523891798157</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1523891798157</updated>
+    </task>
+    <task id="LOCAL-00114" summary="updating travis 1.1">
+      <created>1523891919206</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1523891919206</updated>
+    </task>
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -980,7 +980,7 @@
     <layout>
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="sbt" order="1" />
-      <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.50065106" side_tool="true" weight="0.17460318" />
+      <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.50130206" side_tool="true" weight="0.3227513" />
       <window_info anchor="right" id="Maven Projects" order="2" />
       <window_info anchor="right" id="Material Palette" order="3" />
       <window_info id="Capture Tool" order="0" />
@@ -996,9 +996,9 @@
       <window_info id="Image Layers" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.49791667" weight="0.32979852" />
-      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49934897" visible="true" weight="0.3227513" />
+      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.4986979" weight="0.3227513" />
       <window_info anchor="bottom" id="Terminal" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.19661458" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.19661458" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="5" weight="0.32936507" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32936507" />
       <window_info anchor="right" id="Theme Preview" order="7" />
@@ -1048,8 +1048,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implementing GeneratorSuite.scala" />
-    <MESSAGE value="GeneratorSuite.scala implemented" />
     <MESSAGE value="Implementing HTMLHandlerSuite.scala" />
     <MESSAGE value="HTMLHandlerSuite.scala implemented, Generator module tests updated" />
     <MESSAGE value="Updated Generator/Config/HTMLHandler files and generators README.MD" />
@@ -1073,7 +1071,9 @@
     <MESSAGE value="Update" />
     <MESSAGE value="testing travis" />
     <MESSAGE value="updating travis" />
-    <option name="LAST_COMMIT_MESSAGE" value="updating travis" />
+    <MESSAGE value="updating travis 1" />
+    <MESSAGE value="updating travis 1.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="updating travis 1.1" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/flipper.xml" />
@@ -1411,16 +1411,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="130" column="7" selection-start-line="130" selection-start-column="7" selection-end-line="130" selection-end-column="7" />
-          <folding>
-            <element signature="e#19#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/generator/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4800">
@@ -1430,8 +1420,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" column="81" selection-start-line="6" selection-start-column="81" selection-end-line="6" selection-end-column="81" />
+        <state relative-caret-position="112">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
+          <folding>
+            <element signature="e#19#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
