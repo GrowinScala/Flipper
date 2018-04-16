@@ -48,6 +48,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/generator/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="69" column="141" selection-start-line="69" selection-start-column="141" selection-end-line="69" selection-end-column="141" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Generator.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/generate/Generator.scala">
           <provider selected="true" editor-type-id="text-editor">
@@ -57,7 +66,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HTMLHandler.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HTMLHandler.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/generate/HTMLHandler.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="80">
@@ -167,13 +176,13 @@
         <option value="$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala" />
         <option value="$PROJECT_DIR$/generator/src/main/scala/generator/utils/Config.scala" />
         <option value="$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala" />
-        <option value="$PROJECT_DIR$/generator/README.md" />
         <option value="$PROJECT_DIR$/generator/src/main/java/MainJ.java" />
         <option value="$PROJECT_DIR$/generator/src/main/scala/generator/generate/Generator.scala" />
         <option value="$PROJECT_DIR$/generator/src/main/scala/generator/utils/FieldType.scala" />
         <option value="$PROJECT_DIR$/generator/src/main/scala/Main.scala" />
         <option value="$PROJECT_DIR$/generator/src/main/scala/generator/generate/HTMLHandler.scala" />
         <option value="$PROJECT_DIR$/generator/src/test/scala/generator/generate/HTMLHandlerSuite.scala" />
+        <option value="$PROJECT_DIR$/generator/README.md" />
       </list>
     </option>
   </component>
@@ -470,20 +479,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1522055766473</updated>
-    </task>
-    <task id="LOCAL-00044" summary="updated readme's">
-      <created>1522339367408</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1522339367408</updated>
-    </task>
-    <task id="LOCAL-00045" summary="Fixed convertPDTtoODT bug">
-      <created>1522658269195</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1522658269196</updated>
     </task>
     <task id="LOCAL-00046" summary="Fixed convertPDTtoODT bug">
       <created>1522658711228</created>
@@ -814,7 +809,21 @@
       <option name="project" value="LOCAL" />
       <updated>1523869661581</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="Updated generator/README.md">
+      <created>1523872037183</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1523872037184</updated>
+    </task>
+    <task id="LOCAL-00094" summary="Updated generator/README.md">
+      <created>1523872281365</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1523872281365</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -923,7 +932,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implemented Choice factory method for creating scala-made OneOf and MultipleOf instace objects" />
     <MESSAGE value="Updated reader/README.md to reflect OneOf/MultipleOf possibility" />
     <MESSAGE value="Fixed java interface in reader module, changed logic in Choice.java (now called SpecificationJava.java)" />
     <MESSAGE value="Added getSingleJSON entry in Java's interface" />
@@ -948,7 +956,8 @@
     <MESSAGE value="Implemented some default styling options" />
     <MESSAGE value="Updated generator README.md" />
     <MESSAGE value="Added &lt;img&gt; support and updated HTMLHandlerSuite.scala to reflect changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added &lt;img&gt; support and updated HTMLHandlerSuite.scala to reflect changes" />
+    <MESSAGE value="Updated generator/README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated generator/README.md" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/reader/src/main/java/m.java" />
@@ -1232,13 +1241,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generator/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="50" column="21" lean-forward="true" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/generator/src/main/scala/Main.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
@@ -1260,6 +1262,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="112" column="5" selection-start-line="112" selection-start-column="5" selection-end-line="112" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="69" column="141" selection-start-line="69" selection-start-column="141" selection-end-line="69" selection-end-column="141" />
         </state>
       </provider>
     </entry>

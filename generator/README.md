@@ -67,7 +67,7 @@ For both methods you can supply them with information regarding what field type 
 | Text                | span                | <span>Text</span>                                                                              |
 | Code                | code                | <code>Code</code>                                                                              |
 | Link                | a                   | <a>www.growin.pt</a>                                                                           |
-| Image               | img                 | <img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png">Image</img> |                                      |
+| Image               | img                 | <img src="http://growin.pt/wp-content/themes/growin-1.9/img/growin-logo.png">Image</img>       |                                      |
 
 <br/>
 
