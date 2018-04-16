@@ -1,3 +1,6 @@
-language: scala
-scala:
-  - 2.12.4
+matrix:
+  include:
+    - language: scala
+      scala: 2.12.4
+      script:
+        - sbt clean "++ 2.12.4 test-only *ExtractorSuite* *FileHandlerSuite* *ImageProcessingSuite* *OpenNLPSuite* *FileHandlerGenSuite* *GeneratorSuite* *HTMLHandlerSuite* *ConverterSuite*"
