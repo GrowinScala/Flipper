@@ -51,8 +51,8 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/generator/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="69" column="141" selection-start-line="69" selection-start-column="141" selection-end-line="69" selection-end-column="141" />
+            <state relative-caret-position="-227">
+              <caret line="277" column="51" selection-start-line="277" selection-start-column="51" selection-end-line="277" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -480,20 +480,6 @@
       <option name="presentableId" value="Default" />
       <updated>1522055766473</updated>
     </task>
-    <task id="LOCAL-00046" summary="Fixed convertPDTtoODT bug">
-      <created>1522658711228</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1522658711229</updated>
-    </task>
-    <task id="LOCAL-00047" summary="Updated reader/README.md">
-      <created>1522668539958</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1522668539958</updated>
-    </task>
     <task id="LOCAL-00048" summary="fixed getJSONObjects extra empty object bug">
       <created>1522677404363</created>
       <option name="number" value="00048" />
@@ -823,7 +809,21 @@
       <option name="project" value="LOCAL" />
       <updated>1523872281365</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="Updated generator/README.md">
+      <created>1523872422249</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1523872422249</updated>
+    </task>
+    <task id="LOCAL-00096" summary="Updated generator/README.md">
+      <created>1523872495392</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1523872495392</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1267,8 +1267,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/generator/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="69" column="141" selection-start-line="69" selection-start-column="141" selection-end-line="69" selection-end-column="141" />
+        <state relative-caret-position="-227">
+          <caret line="277" column="51" selection-start-line="277" selection-start-column="51" selection-end-line="277" selection-end-column="51" />
         </state>
       </provider>
     </entry>

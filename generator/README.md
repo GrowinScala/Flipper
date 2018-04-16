@@ -121,6 +121,8 @@ font family and font weight. This function returns a Boolean saying if the conve
 
 ### Scala
 
+* Not specifying any styling details
+
 ```scala
     import generator.generate.Generator.convertMapToPDF
     import generator.utils._
@@ -133,6 +135,8 @@ font family and font weight. This function returns a Boolean saying if the conve
         )
     val success = convertMapToPDF(contentMap)
 ```
+
+* Specifying styling details with CSS File
 
 ```scala
     import generator.generate.Generator.convertMapToPDF
@@ -149,6 +153,8 @@ font family and font weight. This function returns a Boolean saying if the conve
     val success = convertMapToPDF(contentMap, cssFile)
 ```
 
+* Specifying styling details with CSS String
+
 ```scala
     import generator.generate.Generator.convertMapToPDF
     import generator.utils._
@@ -162,6 +168,8 @@ font family and font weight. This function returns a Boolean saying if the conve
     val cssString = ".bigHeader { color: green; font-size: 30px; text-align: center; } .list{ color: red; font-size: 10px; }"
     val success = convertMapToPDF(contentMap, cssString)
 ```
+
+* Specifying styling details with configuration Map
 
 ```scala
     import generator.generate.Generator.convertMapToPDF
@@ -183,6 +191,8 @@ font family and font weight. This function returns a Boolean saying if the conve
 ```
 
 ### Java
+
+* Not specifying any styling details
 
 ```java
     import generator.generate.GeneratorJava;
@@ -207,6 +217,8 @@ font family and font weight. This function returns a Boolean saying if the conve
          }
     }
 ```
+
+* Specifying styling details with CSS File
 
 ```java
     import generator.generate.GeneratorJava;
@@ -235,6 +247,8 @@ font family and font weight. This function returns a Boolean saying if the conve
     }
 ```
 
+* Specifying styling details with CSS String
+
 ```java
     import generator.generate.GeneratorJava;
     import generator.utils.*;
@@ -260,6 +274,8 @@ font family and font weight. This function returns a Boolean saying if the conve
          }
     }
 ```
+
+* Specifying styling details with configuration Map
 
 ```java
     import generator.generate.GeneratorJava;
@@ -459,6 +475,8 @@ shows in the **root folder** (**`./`**).
 
 ### Java
 
+* Not specifying any styling details
+
 ```java
     import generator.generate.GeneratorJava;
     
@@ -491,6 +509,8 @@ shows in the **root folder** (**`./`**).
          }
     }
 ```
+
+* Specifying styling details with CSS File
 
 ```java
     import generator.generate.GeneratorJava;
@@ -529,6 +549,7 @@ shows in the **root folder** (**`./`**).
          }
     }
 ```
+* Specifying styling details with CSS String
 
 ```java
     import generator.generate.GeneratorJava;
@@ -568,6 +589,8 @@ shows in the **root folder** (**`./`**).
          }
     }
 ```
+
+* Specifying styling details with a confinguration JSON
 
 ```java
     import generator.generate.GeneratorJava;
