@@ -5,13 +5,9 @@ object Main {
 
   def main(args: Array[String]): Unit = {
 
-    val table = Map("Country" -> List("Portugal", "Spain", "UK"), "Language" -> List("Portuguese", "English"), "Weather" -> List("Sunny", "Rainning"))
-    val tableList = List("Portugal", "Spain", "UK")
-    val somethingElse = "heeeey"
-
     val contentMap =
       Map(
-        "name" -> Content("name", "John Doe", Header1(), "bigHeader"),
+        "name" -> Content("name", "John Doe", Code(), "bigHeader"),
         "countries" -> Content("countries", "This is a piece of code ", Code(), "list")
       )
 
@@ -29,6 +25,7 @@ object Main {
         |             "fieldName" : "name",
         |             "fieldValue" : "John Doe",
         |             "fieldType" : {
+        |                             "type":
         |                             "link": "www.growin.pt"
         |                          }
         |            }
@@ -60,6 +57,6 @@ object Main {
       """.stripMargin
 
 
-    convertJSONtoPDFWithCSS(contentJSON, cssString)
+    convertMapToPDF(contentMap, cssString)
   }
 }

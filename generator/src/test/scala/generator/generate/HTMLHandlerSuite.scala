@@ -26,16 +26,18 @@ class HTMLHandlerSuite extends FunSuite {
     */
   test("Calling extractHTMLTag with correct HTMLTag") {
     assert(
-      extractFieldType("h1") == Header1() &&
-        extractFieldType("h2") == Header2() &&
-        extractFieldType("H3") == Header3() &&
+      extractFieldType("header1") == Header1() &&
+        extractFieldType("header2") == Header2() &&
+        extractFieldType("Header3") == Header3() &&
         extractFieldType("orderedList") == OrderedList() &&
         extractFieldType("UnOrDerEdlIsT") == UnorderedList() &&
         extractFieldType("table") == Table() &&
-        extractFieldType("p") == Paragraph() &&
+        extractFieldType("paragraph") == Paragraph() &&
         extractFieldType("span") == Text() &&
         extractFieldType("code") == Code() &&
-        extractFieldType(Map("link" -> "www.growin.pt")) == Link("www.growin.pt")
+        extractFieldType(Map("type" -> "link", "link" -> "www.growin.pt")) == Link("www.growin.pt") &&
+        extractFieldType(Map("type" -> "image", "link" -> "www.growin.pt")) == Image("www.growin.pt") &&
+        extractFieldType(Map("type" -> "Header1")) == Header1()
     )
   }
 
@@ -52,7 +54,7 @@ class HTMLHandlerSuite extends FunSuite {
   }
 
   /**
-    * Tests that passing an unsupported value to extractHTMLTag (not passing a link attribute when passing a fieldType object)
+    * Tests that passing an unsupported value to extractHTMLTag (not passing a type attribute when passing a fieldType object)
     * will result in a IllegalArgumentException.
     * Example: { "fieldType" : { "unsuportedAttribute" : "www.growin.pt" } }
     */
@@ -61,7 +63,21 @@ class HTMLHandlerSuite extends FunSuite {
       intercept[IllegalArgumentException] {
         extractFieldType(Map("unsuportedAttribute" -> "www.growin.pt"))
       }
-    assert(caught.getMessage equals "You must supply fieldType with a link attribute")
+    assert(caught.getMessage equals "You must supply fieldType object with a type attribute")
+  }
+
+  /**
+    * Tests that passing an unsupported value to extractHTMLTag (not passing a link attribute when passing a fieldType object,
+    * and type is either image or link)
+    * will result in a IllegalArgumentException.
+    * Example: { "fieldType" : { "type": "image",  "not-a-link" : "www.growin.pt" } }
+    */
+  test("Calling extractHTMLTag with unsupported value - 3") {
+    val caught =
+      intercept[IllegalArgumentException] {
+        extractFieldType(Map("type" -> "image", "not-a-link" -> "www.growin.pt"))
+      }
+    assert(caught.getMessage equals "You must supply fieldType object with a link attribute")
   }
 
   /**

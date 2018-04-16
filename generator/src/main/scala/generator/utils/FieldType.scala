@@ -30,3 +30,5 @@ case class Text() extends FieldType
 case class Code() extends FieldType
 
 case class Link(link: String) extends FieldType
+
+case class Image(link: String) extends FieldType

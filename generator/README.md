@@ -52,18 +52,26 @@ there will be some examples on how to call this methods.
 
 For both methods you can supply them with information regarding what field type they should take, this way you have a better control on how the converted PDF should look like.The way you achive this is by using one of FieldType's sub-classes. The supported HTML entities so far are:
 
-| FieldType           | Actual HTML Tag     |
-|:-------------------:|:-------------------:| 
-| Header1             | h1                  |
-| Header2             | h2                  |
-| Header3             | h3                  |
-| OrderedList         | ol                  |
-| UnorderedList       | ul                  |
-| Table               | table               |
-| Paragraph           | p                   |
-| Text                | span                |
-| Code                | code                |
-| Link                | a                   |
+| FieldType           | Actual HTML Tag     | Output                                                        |
+|:-------------------:|:-------------------:|:-------------------------------------------------------------:|
+| Header1             | h1                  | <h1>Header1</h1>                                              |
+| Header2             | h2                  | <h2>Header2</h2>                                              |
+| Header3             | h3                  | <h3>Header3</h3>                                              |
+| Header4             | h4                  | <h4>Header4</h4>                                              |
+| Header5             | h5                  | <h5>Header5</h5>                                              |
+| Header6             | h6                  | <h6>Header6</h6>                                              |
+| OrderedList         | ol                  | <ol><li>first item</li> <li>second item</li></ol>             |
+| UnorderedList       | ul                  | <ul><li>first item</li> <li>second item</li></ul>             |
+| Table               | table               | <table><tr><th>Header</th></tr><tr><td>item</td></tr></table> |
+| Paragraph           | p                   | <p>Paragraph</p>                                              |
+| Text                | span                | <span>Text</span>                                             |
+| Code                | code                | <code>Code</code>                                             |
+| Link                | a                   | <a>www.growin.pt</a>                                          |
+| Image               | img                 | <img src="">Image</img>                                       |
+
+<br/>
+
+**Note** that both `Link` and `Image` must be supplied with a `link` attribute in order to identify the resource to display.
 
 ### The `Content` and `Config` Classes ###
 
@@ -297,6 +305,8 @@ shows in the **root folder** (**`./`**).
 
 ### Scala
  
+ * Not specifying any styling details
+
 ```scala
     import generator.generate.Generator.convertJSONtoPDF
     
@@ -316,7 +326,8 @@ shows in the **root folder** (**`./`**).
         |  "webSite" : {
         |             "fieldName" : "webSite",
         |             "fieldValue" : "Greate place to work",
-        |             "fieldType" : { 
+        |             "fieldType" : {
+        |                               "type" : "link", 
         |                               "link" : "www.growin.pt"
         |                           }
         |           }
@@ -324,6 +335,8 @@ shows in the **root folder** (**`./`**).
       """.stripMargin
     val success = convertJSONtoPDF(contentJSON)
 ```
+
+* Specifying styling details with a CSS file
 
 ```scala
     import generator.generate.Generator.convertJSONtoPDF
@@ -347,7 +360,8 @@ shows in the **root folder** (**`./`**).
         |  "webSite" : {
         |             "fieldName" : "webSite",
         |             "fieldValue" : "Greate place to work",
-        |             "fieldType" : { 
+        |             "fieldType" : {
+        |                               "type" : "link", 
         |                               "link" : "www.growin.pt"
         |                           },
         |             "formattingID" : "link"
@@ -357,6 +371,8 @@ shows in the **root folder** (**`./`**).
     val cssFile = new File("CSSFile.css")
     val success = convertJSONtoPDF(contentJSON, cssFile)
 ```
+
+* Specifying styling details with a CSS String
 
 ```scala
     import generator.generate.Generator.convertJSONtoPDFWithCSS
@@ -379,7 +395,8 @@ shows in the **root folder** (**`./`**).
         |  "webSite" : {
         |             "fieldName" : "webSite",
         |             "fieldValue" : "Greate place to work",
-        |             "fieldType" : { 
+        |             "fieldType" : {
+        |                               "type" : "link", 
         |                               "link" : "www.growin.pt"
         |                           },
         |             "formattingID" : "link"
@@ -389,6 +406,7 @@ shows in the **root folder** (**`./`**).
     val cssString = ".bigHeader { color: green; font-size: 30px; text-align: center; } .list{ color: red; font-size: 10px; }"
     val success = convertJSONtoPDF(contentJSON, cssString)
 ```
+* Specifying styling details with a confinguration JSON
 
 ```scala
     import generator.generate.Generator.convertJSONtoPDF
@@ -411,7 +429,8 @@ shows in the **root folder** (**`./`**).
         |  "webSite" : {
         |             "fieldName" : "webSite",
         |             "fieldValue" : "Greate place to work",
-        |             "fieldType" : { 
+        |             "fieldType" : {
+        |                               "type" : "link", 
         |                               "link" : "www.growin.pt"
         |                           },
         |             "formattingID" : "link"
@@ -462,6 +481,7 @@ shows in the **root folder** (**`./`**).
             "               \"fieldName\" : \"webSite\"," +
             "               \"fieldValue\" : \"Great place to work\"," +
             "               \"fieldType\" : { "+
+            "                                   \"type\": \"link\","+
             "                                   \"link\": \"www.growin.pt\""+
             "                                }" +
             "             }"+
@@ -498,6 +518,7 @@ shows in the **root folder** (**`./`**).
             "               \"fieldName\" : \"webSite\"," +
             "               \"fieldValue\" : \"Great place to work\"," +
             "               \"fieldType\" : { "+
+            "                                   \"type\": \"link\","+
             "                                   \"link\": \"www.growin.pt\""+
             "                                }," +
             "               \"formattingID\" : \"link\"" +
@@ -534,6 +555,7 @@ shows in the **root folder** (**`./`**).
             "               \"fieldName\" : \"webSite\"," +
             "               \"fieldValue\" : \"Great place to work\"," +
             "               \"fieldType\" : { "+
+            "                                   \"type\": \"link\","+
             "                                   \"link\": \"www.growin.pt\""+
             "                                }," +
             "               \"formattingID\" : \"link\"" +
@@ -573,6 +595,7 @@ shows in the **root folder** (**`./`**).
             "               \"fieldName\" : \"webSite\"," +
             "               \"fieldValue\" : \"Great place to work\"," +
             "               \"fieldType\" : { "+
+            "                                   \"type\": \"link\","+
             "                                   \"link\": \"www.growin.pt\""+
             "                                }," +
             "               \"formattingID\" : \"link\"" +
