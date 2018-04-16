@@ -1,3 +1,5 @@
+import sbt.util
+
 name := "Flipper"
 
 val basicSettings = Seq(
