@@ -1,7 +1,7 @@
 package generator.utils
 
 /**
-  *
+  *Enumeration for the type of fields possible for the content in the PDF generation
   */
 trait FieldType
 
