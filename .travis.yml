@@ -3,9 +3,14 @@ language: scala
 scala:
   -2.12.4
 
-sudo: required
-dist: trusty
-
+addons:
+  apt:
+    packages:
+      - libtesseract-dev
+      - libleptonica-dev
+      - tesseract-ocr-eng
+      - libpoppler-cpp-dev
+      - libmagick++-dev
 
 before_install:
   - sudo apt-get update -qq
