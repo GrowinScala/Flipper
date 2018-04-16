@@ -1,10 +1,15 @@
-matrix:
-  include:
-    - language: scala
-      scala: 2.12.4
-      install: true
-      before_install:
-        - sudo apt-get update -qq
-        - sudo apt-get install -y tesseract-ocr
-      script:
-        - sbt clean "++ 2.12.4 testOnly *ExtractorSuite *FileHandlerSuite *ImageProcessingSuite *OpenNLPSuite *FileHandlerGenSuite *GeneratorSuite *HTMLHandlerSuite *ConverterSuite"
+language: scala
+
+scala:
+  -2.12.4
+
+sudo: required
+dist: trusty
+
+
+before_install:
+  - sudo apt-get update -qq
+  - sudo apt-get install -y tesseract-ocr
+
+script:
+  - sbt clean "++ 2.12.4 testOnly *ExtractorSuite *FileHandlerSuite *ImageProcessingSuite *OpenNLPSuite *FileHandlerGenSuite *GeneratorSuite *HTMLHandlerSuite *ConverterSuite"
