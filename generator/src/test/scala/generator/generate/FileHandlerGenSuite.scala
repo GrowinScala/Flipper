@@ -7,7 +7,7 @@ import org.scalatest.junit.JUnitRunner
 import FileHandler._
 
 @RunWith(classOf[JUnitRunner])
-class FileHandlerSuite extends FunSuite {
+class FileHandlerGenSuite extends FunSuite {
   /**
     * Tests that calling loadCSSFile with an invalid file will return None
     */
