@@ -362,7 +362,16 @@ public class ExtractorJava {
      * @return a java.util.List with all elements capable of being used in java
      */
     private Map<String, List<String>> scalaResultToJava(scala.collection.immutable.Map result) {
-        return JavaConverters.mapAsJavaMap(result);
+        HashMap<String, List<String>> returnMap = new HashMap<>();
+
+        //convert scala map to java map
+        Map<String, scala.collection.immutable.List<String>> preScalaMap = JavaConverters.mapAsJavaMap(result);
+
+        for (Map.Entry<String, scala.collection.immutable.List<String>> entry : preScalaMap.entrySet()) {
+            List javaList = JavaConverters.seqAsJavaList(entry.getValue()); //conver inner scala list to Java
+            returnMap.put(entry.getKey(), javaList);
+        }
+        return returnMap;
     }
 
 }
