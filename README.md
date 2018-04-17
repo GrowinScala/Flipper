@@ -45,12 +45,10 @@ You can find the individual **README.md** files with examples and documentation 
 
 This part of the documentation will guide you on the simple process of setting up Flipper for yourself.
 
-* [Summary of set up](#summary-of-set-up)
 * [Configuration](#configuration)
 * [Dependencies](#dependencies)
 * [How to test Flipper](#how-to-test-flipper)
 * [Deployment instructions](#deployment-instructions)
-
 <br/>
 
 ### Configuration
@@ -73,7 +71,7 @@ Or Maven:
 </dependency>
 ```
 
-For the most current version can access the **_[maven repository](https://mvnrepository.com/artifact/com.growin/flipper_2.12)_**. There you will also find other
+For the most current version can access the [maven repository](https://mvnrepository.com/artifact/com.growin/flipper_2.12). There you will also find other
 ways of including Flipper into your project that aren't  SBT or Maven
 <br/>
 
