@@ -15,7 +15,7 @@ developed by the good people at Growin. It has some really usefull features such
  * **Convert PDF to other file types** - We also support the conversion from PDF to other popular
  formats: .png; .jpeg/jpg; .gif; .odt.
  
- Current version: 0.2
+ Current version: 0.3
  
  ---
  
@@ -58,7 +58,7 @@ Flipper is available on maven central, so to use it you simply need to add the l
 If you are using SBT:
 
 ```scala
-libraryDependencies += "com.growin" %% "flipper" % "0.2"
+libraryDependencies += "com.growin" %% "flipper" % "0.3"
 ```
 
 Or Maven:
@@ -67,11 +67,11 @@ Or Maven:
 <dependency>
     <groupId>com.growin</groupId>
     <artifactId>flipper_2.12</artifactId>
-    <version>0.2</version>
+    <version>0.3</version>
 </dependency>
 ```
 
-For the most current version can access the [maven repository](https://mvnrepository.com/artifact/com.growin/flipper_2.12). There you will also find other ways of including Flipper into your project that aren't  SBT or Maven.
+For other versions you can access the [maven repository](https://mvnrepository.com/artifact/com.growin/flipper_2.12). There you will also find other ways of including Flipper into your project that aren't  SBT or Maven.
 
 <br/>
 
