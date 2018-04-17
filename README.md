@@ -71,8 +71,7 @@ Or Maven:
 </dependency>
 ```
 
-For the most current version can access the [maven repository](https://mvnrepository.com/artifact/com.growin/flipper_2.12). There you will also find other
-ways of including Flipper into your project that aren't  SBT or Maven.
+For the most current version can access the [maven repository](https://mvnrepository.com/artifact/com.growin/flipper_2.12). There you will also find other ways of including Flipper into your project that aren't  SBT or Maven.
 
 <br/>
 
@@ -105,3 +104,11 @@ Flipper is an Open-Source project developed at Growin in our offices in Lisbon.
  * Lucas Fischer    &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - lfischer@growin.pt
 
 Or visit our website: [www.growin.com](https://www.growin.com/)
+
+<br/>
+
+---
+
+### License ###
+
+Open source licensed under the [MIT License](https://opensource.org/licenses/MIT)

@@ -2,7 +2,7 @@ sonatypeProfileName := "com.growin"
 
 publishMavenStyle := true
 
-licenses := Seq("APL2" -> url("http://www.apache.org/licenses/LICENSE-2.0.txt"))
+licenses := Seq("MIT" -> url("http://www.opensource.org/licenses/mit-license.php"))
 
 homepage := Some(url("https://github.com/GrowinScala/Flipper"))
 scmInfo := Some(
