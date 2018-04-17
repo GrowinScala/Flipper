@@ -12,8 +12,8 @@ before_install:
 #  - export TESSDATA_PREFIX = pwd
 #  - cd ..
 #  - sudo add-apt-repository ppa:alex-p/tesseract-ocr -y
-#  - sudo apt-get update -qq
-#  - sudo apt-get install -y tesseract-ocr tesseract-ocr-eng tesseract-ocr-por libtesseract-dev
+  - sudo apt-get update -qq
+  - sudo apt-get install -y tesseract-ocr
 
 script:
   - sbt clean "++ 2.12.4 testOnly *ExtractorSuite *FileHandlerSuite *ImageProcessingSuite *OpenNLPSuite *FileHandlerGenSuite *GeneratorSuite *HTMLHandlerSuite *ConverterSuite"
