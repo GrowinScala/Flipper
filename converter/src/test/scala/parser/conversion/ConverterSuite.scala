@@ -21,10 +21,26 @@ ConverterSuite extends FunSuite {
   }
 
   /**
+    * Tests that sending an invalid filePath convertPDFtoIMG will return false
+    * This means that the method did not convert the pdf to the specified file type
+    */
+  test("convertPDFtoIMG with invalid filePath") {
+    assert(!convertPDFtoIMG(new File(""), PNG()))
+  }
+
+  /**
     * Tests that sending a valid filePath to convertPDFtoODF will return true
     * meaning it successfully converted the PDF to ODF
     */
   test("convertPDFtoODT with valid filePath") {
     assert(convertPDFtoODT(validFile))
+  }
+
+  /**
+    * Tests that sending an invalid filePath to convertPDFtoODF will return false
+    * meaning it did not convert the PDF to ODF
+    */
+  test("convertPDFtoODT with invalid filePath") {
+    assert(!convertPDFtoODT(new File("")))
   }
 }
