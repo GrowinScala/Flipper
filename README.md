@@ -77,7 +77,7 @@ For other versions you can access the [maven repository](https://mvnrepository.c
 
 ### Dependencies
 
-Download the **eng.traineddata** and **por.traineddata** from [here](https://github.com/tesseract-ocr/tessdata) and
+Download the **eng.traineddata** and **por.traineddata** from [here](https://github.com/tesseract-ocr/tesseract/wiki/Data-Files#data-files-for-version-304305) and
 insert them in a directory named **tessdata** in the **root** of the project.
 
 Flipper uses **_[Tess4j](http://tess4j.sourceforge.net/)_** (a tesseract for java wrapper) to extract
