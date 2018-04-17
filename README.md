@@ -45,23 +45,34 @@ You can find the individual **README.md** files with examples and documentation 
 
 This part of the documentation will guide you on the simple process of setting up Flipper for yourself.
 
-* [Summary of set up](#summary-of-set-up)
 * [Configuration](#configuration)
 * [Dependencies](#dependencies)
 * [How to test Flipper](#how-to-test-flipper)
-* [Deployment instructions](#deployment-instructions)
-
-<br/>
-
-### Summary of set up
-
-To be implemented
 
 <br/>
 
 ### Configuration
 
-To be implemented
+Flipper is available on maven central, so to use it you simply need to add the lines bellow to your own project.
+
+If you are using SBT:
+
+```scala
+libraryDependencies += "com.growin" %% "flipper" % "0.2"
+```
+
+Or Maven:
+
+```xml
+<dependency>
+    <groupId>com.growin</groupId>
+    <artifactId>flipper_2.12</artifactId>
+    <version>0.2</version>
+</dependency>
+```
+
+For the most current version can access the [maven repository](https://mvnrepository.com/artifact/com.growin/flipper_2.12). There you will also find other
+ways of including Flipper into your project that aren't  SBT or Maven.
 
 <br/>
 
@@ -82,12 +93,6 @@ To be implemented
 
 <br/>
 
-### Deployment instructions
-
-To be implemented
-
-<br/>
- 
 ---
 
 ### Who do I talk to? ###
