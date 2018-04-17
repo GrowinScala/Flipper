@@ -15,7 +15,7 @@ public class GeneratorJava {
      * @param contentMap - The content map to be converted into a PDF document
      * @return a Boolean saying if the conversion from Map to PDF was successful or not
      */
-    public Boolean convertMapToPDF(Map<String, Content> contentMap) {
+    public boolean convertMapToPDF(Map<String, Content> contentMap) {
         return Generator.convertMapToPDF(contentMapToScala(contentMap));
     }
 
@@ -27,7 +27,7 @@ public class GeneratorJava {
      * @param cssFile    - The additional CSS file to be included in the HTML file
      * @return a Boolean saying if the conversion from Map to PDF was successful or not
      */
-    public Boolean convertMapToPDF(Map<String, Content> contentMap, File cssFile) {
+    public boolean convertMapToPDF(Map<String, Content> contentMap, File cssFile) {
         return Generator.convertMapToPDF(contentMapToScala(contentMap), cssFile);
     }
 
@@ -39,7 +39,7 @@ public class GeneratorJava {
      * @param cssString  - The additional String containing the the CSS to be included in the HTML file
      * @return a Boolean saying if the conversion from Map to PDF was successful or not
      */
-    public Boolean convertMapToPDF(Map<String, Content> contentMap, String cssString) {
+    public boolean convertMapToPDF(Map<String, Content> contentMap, String cssString) {
         return Generator.convertMapToPDF(contentMapToScala(contentMap), cssString);
     }
 
@@ -51,7 +51,7 @@ public class GeneratorJava {
      * @param config     - The config map specifying simple styling details to be implemented in the PDF conversion
      * @return a Boolean saying if the conversion from Map to PDF was successful or not
      */
-    public Boolean convertMapToPDF(Map<String, Content> contentMap, Map<String, Configuration> config) {
+    public boolean convertMapToPDF(Map<String, Content> contentMap, Map<String, Configuration> config) {
         return Generator.convertMapToPDF(contentMapToScala(contentMap), configMapToScala(config));
     }
 
@@ -62,8 +62,11 @@ public class GeneratorJava {
      * @param contentJSON - The Json string to be converted into a PDF document
      * @return a Boolean saying if the conversion from JSON to PDF was successful or not
      */
-    public Boolean convertJSONtoPDF(String contentJSON) {
-        return Generator.convertJSONtoPDF(contentJSON);
+    public boolean convertJSONtoPDF(String contentJSON) {
+        if (contentJSON.isEmpty())
+            return false;
+        else
+            return Generator.convertJSONtoPDF(contentJSON);
     }
 
     /**
@@ -74,8 +77,26 @@ public class GeneratorJava {
      * @param cssFile     - The additional CSS file to be included in the HTML file
      * @return a Boolean saying if the conversion from JSON to PDF was successful or not
      */
-    public Boolean convertJSONtoPDF(String contentJSON, File cssFile) {
-        return Generator.convertJSONtoPDF(contentJSON, cssFile);
+    public boolean convertJSONtoPDF(String contentJSON, File cssFile) {
+        if (contentJSON.isEmpty())
+            return false;
+        else
+            return Generator.convertJSONtoPDF(contentJSON, cssFile);
+    }
+
+    /**
+     * Method that receives a JSON string to be parsed and converted into a HTML file, and then into a PDF file.
+     * This method overload implements the user decision to send an additional String containing a configuration object in JSON format.
+     *
+     * @param contentJSON - The Json string to be converted into a PDF document
+     * @param configJSON  - The additional configuration object to specify styling details in the PDF
+     * @return a Boolean saying if the conversion from JSON to PDF was successful or not
+     */
+    public boolean convertJSONtoPDF(String contentJSON, String configJSON) {
+        if (contentJSON.isEmpty() || configJSON.isEmpty())
+            return false;
+        else
+            return Generator.convertJSONtoPDF(contentJSON, configJSON);
     }
 
     /**
@@ -83,11 +104,14 @@ public class GeneratorJava {
      * This method overload implements the user decision to send an additional String containing the desired CSS to be included
      *
      * @param contentJSON - The Json string to be converted into a PDF document
-     * @param cssString   - The additional String containing the the CSS to be included in the HTML file
+     * @param cssString   - The additional CSS String to specify styling details in the PDF document
      * @return a Boolean saying if the conversion from JSON to PDF was successful or not
      */
-    public Boolean convertJSONtoPDF(String contentJSON, String cssString) {
-        return Generator.convertJSONtoPDF(contentJSON, cssString);
+    public boolean convertJSONtoPDFWithCSS(String contentJSON, String cssString) {
+        if (contentJSON.isEmpty())
+            return false;
+        else
+            return Generator.convertJSONtoPDFWithCSS(contentJSON, cssString);
     }
 
     /**

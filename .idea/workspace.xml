@@ -7,60 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5115832d-4669-4625-b348-c310af38a585" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/generator/src/test/java/generator/generate/GeneratorJavaSuite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/converter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/converter.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/generator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/generator.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/reader.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/reader.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/root.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/root.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter_2.12/0.1/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter_2.12/0.1/resolved.xml.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter_2.12/0.1/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter_2.12/0.1/resolved.xml.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/converter/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/converter/target/streams/$global/ivyConfiguration/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/$global/ivyConfiguration/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/converter/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/$global/update/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/converter/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/converter/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/converter/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/compile/managedClasspath/$global/streams/export" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generator/src/main/java/generator/generate/GeneratorJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/generator/src/main/java/generator/generate/GeneratorJava.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator_2.12/0.1/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator_2.12/0.1/resolved.xml.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator_2.12/0.1/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator_2.12/0.1/resolved.xml.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/target/streams/$global/ivyConfiguration/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/$global/ivyConfiguration/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/$global/update/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/compile/managedClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/ivyConfiguration/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/ivyConfiguration/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader_2.12/0.1/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader_2.12/0.1/resolved.xml.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader_2.12/0.1/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader_2.12/0.1/resolved.xml.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reader/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reader/target/streams/$global/ivyConfiguration/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/$global/ivyConfiguration/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reader/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/$global/update/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reader/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reader/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reader/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/compile/managedClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/src/main/scala/generator/generate/Generator.scala" beforeDir="false" afterPath="$PROJECT_DIR$/generator/src/main/scala/generator/generate/Generator.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/src/test/java/generator/generate/GeneratorJavaSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/generator/src/test/java/generator/generate/GeneratorJavaSuite.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -87,49 +37,29 @@
     </projectState>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file leaf-file-name="GeneratorJavaSuite.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/generator/src/test/java/generator/generate/GeneratorJavaSuite.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="304">
-                  <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="GeneratorJava.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/generator/src/main/java/generator/generate/GeneratorJava.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1680">
-                  <caret line="111" column="78" selection-start-line="111" selection-start-column="72" selection-end-line="111" selection-end-column="78" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="GeneratorSuite.scala" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="699">
-                  <caret line="130" selection-start-line="130" selection-end-line="130" />
-                  <folding>
-                    <element signature="e#19#38#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="GeneratorJavaSuite.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/generator/src/test/java/generator/generate/GeneratorJavaSuite.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="331">
+              <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GeneratorJava.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/generator/src/main/java/generator/generate/GeneratorJava.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="95" column="57" selection-start-line="95" selection-start-column="57" selection-end-line="95" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -221,7 +151,6 @@
         <option value="$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala" />
         <option value="$PROJECT_DIR$/generator/src/main/scala/generator/utils/Config.scala" />
         <option value="$PROJECT_DIR$/generator/src/main/java/MainJ.java" />
-        <option value="$PROJECT_DIR$/generator/src/main/scala/generator/generate/Generator.scala" />
         <option value="$PROJECT_DIR$/generator/src/main/scala/generator/utils/FieldType.scala" />
         <option value="$PROJECT_DIR$/generator/src/main/scala/Main.scala" />
         <option value="$PROJECT_DIR$/generator/src/main/scala/generator/generate/HTMLHandler.scala" />
@@ -232,11 +161,12 @@
         <option value="$PROJECT_DIR$/converter/src/test/scala/parser/conversion/ConverterSuite.scala" />
         <option value="$PROJECT_DIR$/reader/src/test/scala/parser/utils/ImageProcessingSuite.scala" />
         <option value="$PROJECT_DIR$/.travis.yml" />
-        <option value="$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala" />
         <option value="$PROJECT_DIR$/License.md" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala" />
+        <option value="$PROJECT_DIR$/generator/src/main/scala/generator/generate/Generator.scala" />
         <option value="$PROJECT_DIR$/generator/src/main/java/generator/generate/GeneratorJava.java" />
         <option value="$PROJECT_DIR$/generator/src/test/java/generator/generate/GeneratorJavaSuite.java" />
-        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -436,7 +366,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="GeneratorJavaSuite.correctlyCallConvertMapToPDF" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GeneratorJavaSuite.testCallingConvertJSONtoPDFNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="generator" />
       <extension name="coverage">
         <pattern>
@@ -448,7 +378,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="generator.generate" />
       <option name="MAIN_CLASS_NAME" value="generator.generate.GeneratorJavaSuite" />
-      <option name="METHOD_NAME" value="correctlyCallConvertMapToPDF" />
+      <option name="METHOD_NAME" value="testCallingConvertJSONtoPDFNull" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -459,7 +389,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="GeneratorJavaSuite.correctlyCallConvertMapToPDFTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GeneratorJavaSuite.testCallingJSONToPDFInvalid_1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="generator" />
       <extension name="coverage">
         <pattern>
@@ -471,7 +401,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="generator.generate" />
       <option name="MAIN_CLASS_NAME" value="generator.generate.GeneratorJavaSuite" />
-      <option name="METHOD_NAME" value="correctlyCallConvertMapToPDFTest" />
+      <option name="METHOD_NAME" value="testCallingJSONToPDFInvalid_1" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -482,7 +412,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="GeneratorJavaSuite.testCorrectlyCallConvertMapToPDF" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GeneratorJavaSuite.testCorrectlyCallConvertJSONtoPDF" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="generator" />
       <extension name="coverage">
         <pattern>
@@ -494,34 +424,34 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="generator.generate" />
       <option name="MAIN_CLASS_NAME" value="generator.generate.GeneratorJavaSuite" />
-      <option name="METHOD_NAME" value="testCorrectlyCallConvertMapToPDF" />
+      <option name="METHOD_NAME" value="testCorrectlyCallConvertJSONtoPDF" />
       <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="GeneratorSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="generator" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="generator.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="generator.generate" />
-      <option name="MAIN_CLASS_NAME" value="generator.GeneratorSuite" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="GeneratorJavaSuite.testIncorrectlyCallConvertJSONtoPDF" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="generator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="generator.generate.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="generator.generate" />
+      <option name="MAIN_CLASS_NAME" value="generator.generate.GeneratorJavaSuite" />
+      <option name="METHOD_NAME" value="testIncorrectlyCallConvertJSONtoPDF" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
@@ -580,19 +510,19 @@
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.GeneratorSuite" />
       <item itemvalue="JUnit.GeneratorJavaSuite" />
-      <item itemvalue="JUnit.GeneratorJavaSuite.correctlyCallConvertMapToPDF" />
-      <item itemvalue="JUnit.GeneratorJavaSuite.correctlyCallConvertMapToPDFTest" />
-      <item itemvalue="JUnit.GeneratorJavaSuite.testCorrectlyCallConvertMapToPDF" />
+      <item itemvalue="JUnit.GeneratorJavaSuite.testCorrectlyCallConvertJSONtoPDF" />
+      <item itemvalue="JUnit.GeneratorJavaSuite.testCallingConvertJSONtoPDFNull" />
+      <item itemvalue="JUnit.GeneratorJavaSuite.testIncorrectlyCallConvertJSONtoPDF" />
+      <item itemvalue="JUnit.GeneratorJavaSuite.testCallingJSONToPDFInvalid_1" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.GeneratorJavaSuite" />
-        <item itemvalue="JUnit.GeneratorJavaSuite.testCorrectlyCallConvertMapToPDF" />
-        <item itemvalue="JUnit.GeneratorJavaSuite.correctlyCallConvertMapToPDFTest" />
-        <item itemvalue="JUnit.GeneratorJavaSuite.correctlyCallConvertMapToPDF" />
-        <item itemvalue="JUnit.GeneratorSuite" />
+        <item itemvalue="JUnit.GeneratorJavaSuite.testCallingJSONToPDFInvalid_1" />
+        <item itemvalue="JUnit.GeneratorJavaSuite.testIncorrectlyCallConvertJSONtoPDF" />
+        <item itemvalue="JUnit.GeneratorJavaSuite.testCallingConvertJSONtoPDFNull" />
+        <item itemvalue="JUnit.GeneratorJavaSuite.testCorrectlyCallConvertJSONtoPDF" />
       </list>
     </recent_temporary>
   </component>
@@ -686,20 +616,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1522055766473</updated>
-    </task>
-    <task id="LOCAL-00100" summary="updated travis 2">
-      <created>1523876301794</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1523876301794</updated>
-    </task>
-    <task id="LOCAL-00101" summary="Updated travis, working now">
-      <created>1523885148737</created>
-      <option name="number" value="00101" />
-      <option name="presentableId" value="LOCAL-00101" />
-      <option name="project" value="LOCAL" />
-      <updated>1523885148737</updated>
     </task>
     <task id="LOCAL-00102" summary="testing travis CI">
       <created>1523885347030</created>
@@ -1030,38 +946,52 @@
       <option name="project" value="LOCAL" />
       <updated>1523963671390</updated>
     </task>
-    <option name="localTasksCounter" value="149" />
+    <task id="LOCAL-00149" summary="added travis build status badge">
+      <created>1523972833906</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1523972833908</updated>
+    </task>
+    <task id="LOCAL-00150" summary="added travis build status badge">
+      <created>1523972954154</created>
+      <option name="number" value="00150" />
+      <option name="presentableId" value="LOCAL-00150" />
+      <option name="project" value="LOCAL" />
+      <updated>1523972954154</updated>
+    </task>
+    <option name="localTasksCounter" value="151" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GeneratorJavaSuite_correctlyCallConvertMapToPDF - 2018.04.17 at 13h 55m 02s.xml">
-      <configuration name="GeneratorJavaSuite.correctlyCallConvertMapToPDF" configurationId="JUnit" />
+    <history-entry file="GeneratorJavaSuite_testIncorrectlyCallConvertJSONtoPDF - 2018.04.17 at 16h 09m 45s.xml">
+      <configuration name="GeneratorJavaSuite.testIncorrectlyCallConvertJSONtoPDF" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GeneratorJavaSuite_correctlyCallConvertMapToPDFTest - 2018.04.17 at 13h 55m 23s.xml">
-      <configuration name="GeneratorJavaSuite.correctlyCallConvertMapToPDFTest" configurationId="JUnit" />
+    <history-entry file="GeneratorJavaSuite_testIncorrectlyCallConvertJSONtoPDF - 2018.04.17 at 16h 10m 29s.xml">
+      <configuration name="GeneratorJavaSuite.testIncorrectlyCallConvertJSONtoPDF" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GeneratorJavaSuite_testCorrectlyCallConvertMapToPDF - 2018.04.17 at 13h 55m 41s.xml">
-      <configuration name="GeneratorJavaSuite.testCorrectlyCallConvertMapToPDF" configurationId="JUnit" />
+    <history-entry file="GeneratorJavaSuite_testIncorrectlyCallConvertJSONtoPDF - 2018.04.17 at 16h 12m 37s.xml">
+      <configuration name="GeneratorJavaSuite.testIncorrectlyCallConvertJSONtoPDF" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GeneratorJavaSuite - 2018.04.17 at 14h 02m 04s.xml">
+    <history-entry file="GeneratorJavaSuite_testIncorrectlyCallConvertJSONtoPDF - 2018.04.17 at 16h 13m 09s.xml">
+      <configuration name="GeneratorJavaSuite.testIncorrectlyCallConvertJSONtoPDF" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GeneratorJavaSuite_testIncorrectlyCallConvertJSONtoPDF - 2018.04.17 at 16h 13m 54s.xml">
+      <configuration name="GeneratorJavaSuite.testIncorrectlyCallConvertJSONtoPDF" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GeneratorJavaSuite_testIncorrectlyCallConvertJSONtoPDF - 2018.04.17 at 16h 14m 21s.xml">
+      <configuration name="GeneratorJavaSuite.testIncorrectlyCallConvertJSONtoPDF" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GeneratorJavaSuite_testIncorrectlyCallConvertJSONtoPDF - 2018.04.17 at 16h 28m 47s.xml">
+      <configuration name="GeneratorJavaSuite.testIncorrectlyCallConvertJSONtoPDF" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GeneratorJavaSuite - 2018.04.17 at 16h 34m 45s.xml">
       <configuration name="GeneratorJavaSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GeneratorJavaSuite_testCorrectlyCallConvertMapToPDF - 2018.04.17 at 14h 05m 52s.xml">
-      <configuration name="GeneratorJavaSuite.testCorrectlyCallConvertMapToPDF" configurationId="JUnit" />
+    <history-entry file="GeneratorJavaSuite_testCallingJSONToPDFInvalid_1 - 2018.04.17 at 16h 39m 25s.xml">
+      <configuration name="GeneratorJavaSuite.testCallingJSONToPDFInvalid_1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GeneratorJavaSuite_testCorrectlyCallConvertMapToPDF - 2018.04.17 at 14h 07m 32s.xml">
-      <configuration name="GeneratorJavaSuite.testCorrectlyCallConvertMapToPDF" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GeneratorJavaSuite_testCorrectlyCallConvertMapToPDF - 2018.04.17 at 14h 09m 01s.xml">
-      <configuration name="GeneratorJavaSuite.testCorrectlyCallConvertMapToPDF" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GeneratorJavaSuite - 2018.04.17 at 14h 39m 51s.xml">
-      <configuration name="GeneratorJavaSuite" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GeneratorJavaSuite - 2018.04.17 at 14h 40m 19s.xml">
-      <configuration name="GeneratorJavaSuite" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GeneratorJavaSuite - 2018.04.17 at 14h 40m 54s.xml">
+    <history-entry file="GeneratorJavaSuite - 2018.04.17 at 16h 41m 34s.xml">
       <configuration name="GeneratorJavaSuite" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -1071,6 +1001,7 @@
     <layout>
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="bottom" id="TODO" order="12" />
+      <window_info anchor="bottom" id="Messages" order="2" sideWeight="0.49609375" weight="0.32804233" />
       <window_info anchor="right" id="sbt" order="1" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="3" />
@@ -1078,6 +1009,7 @@
       <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.50130206" side_tool="true" weight="0.3227513" />
       <window_info anchor="right" id="Maven Projects" order="2" />
       <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.49791667" weight="0.32979852" />
+      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.4986979" weight="0.3227513" />
       <window_info anchor="right" id="Material Palette" order="3" />
       <window_info anchor="bottom" id="Terminal" order="4" />
       <window_info id="Capture Tool" order="0" />
@@ -1090,12 +1022,10 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="2" sideWeight="0.49609375" weight="0.32804233" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="10" weight="0.25" />
       <window_info anchor="right" id="Gradle" order="6" />
       <window_info anchor="right" id="Commander" order="8" weight="0.4" />
-      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.4986979" weight="0.3227513" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="6" />
@@ -1139,7 +1069,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="updating travis 4" />
     <MESSAGE value="testing travis 4" />
     <MESSAGE value="testing travis 4.5" />
     <MESSAGE value="updating travis 5" />
@@ -1164,7 +1093,8 @@
     <MESSAGE value="testing travis 16" />
     <MESSAGE value="travis working properly !!!" />
     <MESSAGE value="Added MIT license, might be changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added MIT license, might be changed" />
+    <MESSAGE value="added travis build status badge" />
+    <option name="LAST_COMMIT_MESSAGE" value="added travis build status badge" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test.css">
@@ -1380,13 +1310,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/generate/Generator.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="173" column="41" selection-start-line="173" selection-start-column="41" selection-end-line="173" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/generate/HTMLHandler.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -1480,36 +1403,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generator/src/main/java/generator/generate/GeneratorJava.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1680">
-          <caret line="111" column="78" selection-start-line="111" selection-start-column="72" selection-end-line="111" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" column="121" selection-start-line="2" selection-start-column="121" selection-end-line="2" selection-end-column="121" />
+        <state relative-caret-position="208">
+          <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generator/src/test/java/generator/generate/GeneratorJavaSuite.java">
+    <entry file="file://$PROJECT_DIR$/generator/src/main/scala/generator/generate/Generator.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="162">
+          <caret line="192" column="14" selection-start-line="192" selection-start-column="14" selection-end-line="192" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/src/main/java/generator/generate/GeneratorJava.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="95" column="57" selection-start-line="95" selection-start-column="57" selection-end-line="95" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="699">
-          <caret line="130" selection-start-line="130" selection-end-line="130" />
+        <state relative-caret-position="29">
+          <caret line="150" column="91" selection-start-line="150" selection-start-column="37" selection-end-line="150" selection-end-column="91" />
           <folding>
             <element signature="e#19#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/src/test/java/generator/generate/GeneratorJavaSuite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
