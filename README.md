@@ -48,7 +48,7 @@ This part of the documentation will guide you on the simple process of setting u
 * [Configuration](#configuration)
 * [Dependencies](#dependencies)
 * [How to test Flipper](#how-to-test-flipper)
-* [Deployment instructions](#deployment-instructions)
+
 <br/>
 
 ### Configuration
@@ -72,7 +72,8 @@ Or Maven:
 ```
 
 For the most current version can access the [maven repository](https://mvnrepository.com/artifact/com.growin/flipper_2.12). There you will also find other
-ways of including Flipper into your project that aren't  SBT or Maven
+ways of including Flipper into your project that aren't  SBT or Maven.
+
 <br/>
 
 ### Dependencies
@@ -92,12 +93,6 @@ To be implemented
 
 <br/>
 
-### Deployment instructions
-
-To be implemented
-
-<br/>
- 
 ---
 
 ### Who do I talk to? ###
