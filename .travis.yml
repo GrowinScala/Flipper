@@ -7,16 +7,14 @@ sudo: required
 
 dist: trusty
 
-#addons:
-#  apt:
-#    packages:
-#      - libtesseract-dev
-#      - libleptonica-dev
-#      - tesseract-ocr-eng
-#      - libpoppler-cpp-dev
-#      - libmagick++-dev
-
 before_install:
+  - ls
+  - cd /home/usr
+  - mkdir tessdata
+  - wget -P /home/usr/tessdata https://github.com/tesseract-ocr/tessdata/blob/3.04.00/eng.traineddata?raw=true
+  - wget -P /home/usr/tessdata https://github.com/tesseract-ocr/tessdata/blob/3.04.00/por.traineddata?raw=true
+
+  - TESSDATA_PREFIX = /home/usr/tessdata
   - sudo add-apt-repository ppa:alex-p/tesseract-ocr -y
   - sudo apt-get update -qq
   - sudo apt-get install -y tesseract-ocr tesseract-ocr-eng tesseract-ocr-por libtesseract-dev
