@@ -128,7 +128,7 @@ class GeneratorSuite extends FunSuite {
       }
     assert(caught.getMessage equals "The value specified for fieldType is not supported")
   }
-//Test
+
   /**
     * Tests that calling convertJSONtoPDF with an invalid fieldType (not passing a link attribute when passing a fieldType object)
     * will result in a IllegalArgumentException.
