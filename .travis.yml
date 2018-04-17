@@ -13,7 +13,7 @@ before_install:
 #  - wget -P /home/usr/tessdata https://github.com/tesseract-ocr/tessdata/blob/3.04.00/eng.traineddata?raw=true
 #  - wget -P /home/usr/tessdata https://github.com/tesseract-ocr/tessdata/blob/3.04.00/por.traineddata?raw=true
   - cd tessdata
-  - TESSDATA_PREFIX = pwd
+  - export TESSDATA_PREFIX = pwd
   - cd ..
   - sudo add-apt-repository ppa:alex-p/tesseract-ocr -y
   - sudo apt-get update -qq
