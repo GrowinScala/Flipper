@@ -51,7 +51,7 @@ public class GeneratorJava {
      * @param config     - The config map specifying simple styling details to be implemented in the PDF conversion
      * @return a Boolean saying if the conversion from Map to PDF was successful or not
      */
-    public Boolean convertMapToPDF(Map<String, Content> contentMap, Map<String, Config> config) {
+    public Boolean convertMapToPDF(Map<String, Content> contentMap, Map<String, Configuration> config) {
         return Generator.convertMapToPDF(contentMapToScala(contentMap), configMapToScala(config));
     }
 
@@ -109,7 +109,7 @@ public class GeneratorJava {
      * @param javaMap - Java config map to be converted
      * @return a scala.collection.immutable.Map converted from the input Java Map
      */
-    private scala.collection.immutable.Map configMapToScala(Map<String, Config> javaMap) {
+    private scala.collection.immutable.Map configMapToScala(Map<String, Configuration> javaMap) {
         scala.collection.mutable.Map mutableMap = JavaConverters.mapAsScalaMapConverter(javaMap).asScala();
 
         //Convert scala mutable map to scala immutable map by concatenating it with an empty immutable HashMap
