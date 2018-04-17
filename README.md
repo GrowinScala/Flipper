@@ -1,4 +1,7 @@
 # Flipper
+
+[![Build Status](https://travis-ci.org/GrowinScala/Flipper.svg?branch=master)](https://travis-ci.org/GrowinScala/Flipper)
+
 ### What is Flipper? ###
 
 Flipper is an open-source PDF library written in Scala and that can be integrated in any Java/Scala environment 
