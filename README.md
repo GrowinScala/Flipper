@@ -1,6 +1,4 @@
-# Flipper
-
-[![Build Status](https://travis-ci.org/GrowinScala/Flipper.svg?branch=master)](https://travis-ci.org/GrowinScala/Flipper)
+# Flipper &middot; [![Build Status](https://travis-ci.org/GrowinScala/Flipper.svg?branch=master)](https://travis-ci.org/GrowinScala/Flipper)
 
 ### What is Flipper? ###
 
