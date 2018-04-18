@@ -146,7 +146,7 @@ class ExtractorSuite extends FunSuite {
 
 
   /**
-    * Tests that passing an empty list to getAllObjects will result in a IllegalArgumentException
+    * Tests that passing an empty map to getAllObjects will result in a IllegalArgumentException
     */
   test("Get all objects with an empty keywords map") {
     assertThrows[IllegalArgumentException] {
@@ -170,7 +170,7 @@ class ExtractorSuite extends FunSuite {
   }
 
   /**
-    * Tests that making a JSON String with an empty list will return an empty JSON object ("{}")
+    * Tests that making a JSON String with an empty map will return an empty JSON object ("{}")
     */
   test("Make JSON string with an empty list") {
     assert(makeJSONString(Map()) == "{}")

@@ -97,12 +97,12 @@ object Generator {
     * JSON string with information regarding how that information should be displayed, into a PDF file
     *
     * @param contentJSON    - JSON string with information regarding the content to be displayed in the PDF file
-    * @param formattingJSON - JSON string with information regarding how the content should be displayed
+    * @param configJSON - JSON string with information regarding how the content should be displayed
     * @return a Boolean specifying if the conversion was successful or not
     */
-  def convertJSONtoPDF(contentJSON: JSONString, formattingJSON: JSONString): Boolean = {
+  def convertJSONtoPDF(contentJSON: JSONString, configJSON: JSONString): Boolean = {
     val convertedContentOpt = jsonToContent(contentJSON) //Try to convert the JSON content into a ContentMap
-    val convertedFormattingOpt = jsonToConfig(formattingJSON) //Try to convert the JSON formatting into a ContentFormatting
+    val convertedFormattingOpt = jsonToConfig(configJSON) //Try to convert the JSON formatting into a ContentFormatting
     if (convertedContentOpt.isDefined && convertedFormattingOpt.isDefined) { //If both Options are defined (Some) then proceed with conversion
       val convertedContent = convertedContentOpt.get
       internalMapConverter(convertedContent, createCssString(convertedContent, convertedFormattingOpt.get))

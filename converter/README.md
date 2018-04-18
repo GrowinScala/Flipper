@@ -56,25 +56,23 @@ in **`./target/PDFtoIMG`**, and the function returns a Boolean saying if the con
 
 ```scala
     import java.io.File
-    import parser.conversion.Converter._
-    import parser.conversion.FileType
+    import parser.conversion._
     
     val file = new File("./path/to/pdf/document")
-    val success = convertPDFtoIMG(file, FileType.jpg)
+    val success = convertPDFtoIMG(file, PNG())
 ```
 
 ### Java
 
 ```java
-    import parser.conversion.ConverterJava;
+    import parser.conversion.*;
     import java.io.File;
-    import parser.conversion.FileType;
     
     public class Example {
          public static void main(String[] args) {
             ConverterJava cj = new ConverterJava();
             File file = new File("./path/to/pdf/document");
-            boolean success = cj.convertPDFtoIMG(file, FileType.jpg());
+            boolean success = cj.convertPDFtoIMG(file, new JPG());
          }
     }
 ```
@@ -101,7 +99,6 @@ in **`./target/PDFtoIMG`**, and the function returns a Boolean saying if the con
  ```java
      import parser.conversion.ConverterJava;
      import java.io.File;
-     import parser.conversion.FileType;
      
      public class Example {
           public static void main(String[] args) {

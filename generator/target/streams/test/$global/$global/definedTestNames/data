@@ -1,1 +1,1 @@
-["generator.GeneratorSuite","generator.generate.HTMLHandlerSuite","generator.generate.FileHandlerGenSuite"]
+["generator.generate.FileHandlerGenSuite","generator.generate.GeneratorJavaSuite","generator.generate.HTMLHandlerSuite","generator.GeneratorSuite"]
