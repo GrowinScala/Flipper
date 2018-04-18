@@ -11,9 +11,13 @@ val basicSettings = Seq(
   pgpReadOnly := false,
   publishMavenStyle := true,
 
+  testOptions += Tests.Argument(TestFrameworks.JUnit, "-q", "-v"),
+  crossPaths := false,
+
   libraryDependencies += "org.apache.pdfbox" % "pdfbox" % "2.0.5",
   libraryDependencies += "org.apache.pdfbox" % "fontbox" % "2.0.5",
   libraryDependencies += "junit" % "junit" % "4.10" % Test,
+  libraryDependencies += "com.novocode" % "junit-interface" % "0.11" % "test",
   libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.0-SNAP10" % Test withSources(),
   libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.13.4" % Test,
   libraryDependencies += "org.apache.opennlp" % "opennlp-tools" % "1.8.4",
