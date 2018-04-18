@@ -7,10 +7,64 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5115832d-4669-4625-b348-c310af38a585" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/converter/src/test/java/parser/conversion/ConverterJavaSuite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/converter-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/converter-build.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/converter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/converter.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/generator-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/generator-build.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/generator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/generator.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/reader-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/reader-build.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/reader.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/reader.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/root-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/root-build.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/root.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/root.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/converter/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/converter/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/converter/src/test/scala/parser/conversion/ConverterSuite.scala" beforeDir="false" afterPath="$PROJECT_DIR$/converter/src/test/scala/parser/conversion/ConverterSuite.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter_2.12/0.1/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter_2.12/0.1/resolved.xml.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter_2.12/0.1/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter_2.12/0.1/resolved.xml.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/$global/update/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/compile/managedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/test/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/test/externalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/test/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/test/managedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator_2.12/0.1/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator_2.12/0.1/resolved.xml.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator_2.12/0.1/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator_2.12/0.1/resolved.xml.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/$global/update/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/compile/managedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/streams/test/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/test/externalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/streams/test/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/test/managedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/src/test/java/parser/extraction/ExtractorJavaSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/reader/src/test/java/parser/extraction/ExtractorJavaSuite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala" beforeDir="false" afterPath="$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader_2.12/0.1/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader_2.12/0.1/resolved.xml.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader_2.12/0.1/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader_2.12/0.1/resolved.xml.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/$global/update/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/compile/managedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/test/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/test/externalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/test/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/test/managedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -40,36 +94,35 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file leaf-file-name="ConverterJavaSuite.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/converter/src/test/java/parser/conversion/ConverterJavaSuite.java">
+          <file leaf-file-name="build.sbt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/build.sbt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="301">
-                  <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+                <state relative-caret-position="108">
+                  <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ExtractorJava.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/reader/src/main/java/parser/extraction/ExtractorJava.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="142">
+                  <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
                   <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#387#388#0" expanded="true" />
-                    <element signature="e#449#450#0" expanded="true" />
-                    <element signature="e#1322#1323#0" expanded="true" />
-                    <element signature="e#1376#1377#0" expanded="true" />
+                    <element signature="e#649#650#0" expanded="true" />
+                    <element signature="e#691#692#0" expanded="true" />
+                    <element signature="e#16335#16336#0" expanded="true" />
+                    <element signature="e#16391#16392#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/converter/README.md">
+          <file leaf-file-name="ExtractorJavaSuite.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/reader/src/test/java/parser/extraction/ExtractorJavaSuite.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-211">
-                  <caret line="57" column="23" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ConverterJava.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/converter/src/main/java/parser/conversion/ConverterJava.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="199">
-                  <caret line="16" column="46" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="46" />
+                <state relative-caret-position="5049">
+                  <caret line="305" column="86" selection-start-line="305" selection-start-column="86" selection-end-line="305" selection-end-column="86" />
                 </state>
               </provider>
             </entry>
@@ -77,12 +130,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
-          <file leaf-file-name="ConverterSuite.scala" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/converter/src/test/scala/parser/conversion/ConverterSuite.scala">
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="ExtractorSuite.scala" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="313">
-                  <caret line="42" column="36" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
+                <state relative-caret-position="170">
+                  <caret line="176" column="3" lean-forward="true" selection-start-line="176" selection-start-column="3" selection-end-line="176" selection-end-column="3" />
                 </state>
               </provider>
             </entry>
@@ -146,7 +199,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/reader/src/main/java/parser/utils/POSTagEnum.java" />
         <option value="$PROJECT_DIR$/reader/src/main/java/mainz.java" />
         <option value="$PROJECT_DIR$/reader/src/main/java/parser/utils/SpecificationJava.java" />
         <option value="$PROJECT_DIR$/reader/src/main/scala/parser/utils/Specification.scala" />
@@ -183,7 +235,6 @@
         <option value="$PROJECT_DIR$/generator/src/main/scala/generator/generate/HTMLHandler.scala" />
         <option value="$PROJECT_DIR$/generator/src/test/scala/generator/generate/HTMLHandlerSuite.scala" />
         <option value="$PROJECT_DIR$/generator/README.md" />
-        <option value="$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala" />
         <option value="$PROJECT_DIR$/build.sbt" />
         <option value="$PROJECT_DIR$/reader/src/test/scala/parser/utils/ImageProcessingSuite.scala" />
         <option value="$PROJECT_DIR$/.travis.yml" />
@@ -197,12 +248,14 @@
         <option value="$PROJECT_DIR$/converter/README.md" />
         <option value="$PROJECT_DIR$/converter/src/test/java/parser/conversion/ConverterJavaSuite.java" />
         <option value="$PROJECT_DIR$/converter/src/test/scala/parser/conversion/ConverterSuite.scala" />
+        <option value="$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala" />
+        <option value="$PROJECT_DIR$/reader/src/test/java/parser/extraction/ExtractorJavaSuite.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="400" />
-    <option name="y" value="-19" />
+    <option name="y" value="-20" />
     <option name="width" value="980" />
     <option name="height" value="1040" />
   </component>
@@ -343,6 +396,119 @@
       <recent name="C:\Users\Lucas Fischer\Documents\Flipper\reader\resources" />
     </key>
   </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/converter/README.md</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/converter/src/test/scala/parser/conversion/ConverterSuite.scala</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/converter/src/test/java/parser/conversion/ConverterJavaSuite.java</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -355,25 +521,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ConverterSuite">
+  <component name="RunManager" selected="JUnit.ExtractorJavaSuite">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="ConverterJavaSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="converter" />
+    <configuration name="ExtractorJavaSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="reader" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="parser.conversion.*" />
+          <option name="PATTERN" value="parser.extraction.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="parser.conversion" />
-      <option name="MAIN_CLASS_NAME" value="parser.conversion.ConverterJavaSuite" />
+      <option name="PACKAGE_NAME" value="parser.extraction" />
+      <option name="MAIN_CLASS_NAME" value="parser.extraction.ExtractorJavaSuite" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -385,89 +551,89 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="ConverterJavaSuite.testExceptionConvertPDFtoIMG" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="converter" />
+    <configuration name="ExtractorJavaSuite.testGetAllMatchedValuesMultiEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="reader" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="parser.conversion.*" />
+          <option name="PATTERN" value="parser.extraction.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="parser.conversion" />
-      <option name="MAIN_CLASS_NAME" value="parser.conversion.ConverterJavaSuite" />
-      <option name="METHOD_NAME" value="testExceptionConvertPDFtoIMG" />
+      <option name="PACKAGE_NAME" value="parser.extraction" />
+      <option name="MAIN_CLASS_NAME" value="parser.extraction.ExtractorJavaSuite" />
+      <option name="METHOD_NAME" value="testGetAllMatchedValuesMultiEmpty" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
       <patterns />
     </configuration>
-    <configuration name="ConverterJavaSuite.testInvalidConvertPDFtoIMG" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="converter" />
+    <configuration name="ExtractorJavaSuite.testGetAllMatchedValuesOneEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="reader" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="parser.conversion.*" />
+          <option name="PATTERN" value="parser.extraction.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="parser.conversion" />
-      <option name="MAIN_CLASS_NAME" value="parser.conversion.ConverterJavaSuite" />
-      <option name="METHOD_NAME" value="testInvalidConvertPDFtoIMG" />
+      <option name="PACKAGE_NAME" value="parser.extraction" />
+      <option name="MAIN_CLASS_NAME" value="parser.extraction.ExtractorJavaSuite" />
+      <option name="METHOD_NAME" value="testGetAllMatchedValuesOneEmpty" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
       <patterns />
     </configuration>
-    <configuration name="ConverterJavaSuite.testInvalidConvertPDFtoODT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="converter" />
+    <configuration name="ExtractorJavaSuite.testMakeJsonStringEmptyMap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="reader" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="parser.conversion.*" />
+          <option name="PATTERN" value="parser.extraction.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="parser.conversion" />
-      <option name="MAIN_CLASS_NAME" value="parser.conversion.ConverterJavaSuite" />
-      <option name="METHOD_NAME" value="testInvalidConvertPDFtoODT" />
+      <option name="PACKAGE_NAME" value="parser.extraction" />
+      <option name="MAIN_CLASS_NAME" value="parser.extraction.ExtractorJavaSuite" />
+      <option name="METHOD_NAME" value="testMakeJsonStringEmptyMap" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
       <patterns />
     </configuration>
-    <configuration name="ConverterSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="converter" />
+    <configuration name="ExtractorJavaSuite.testMakeJsonStringNullMap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="reader" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="parser.conversion.*" />
+          <option name="PATTERN" value="parser.extraction.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="parser.conversion" />
-      <option name="MAIN_CLASS_NAME" value="parser.conversion.ConverterSuite" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="parser.extraction" />
+      <option name="MAIN_CLASS_NAME" value="parser.extraction.ExtractorJavaSuite" />
+      <option name="METHOD_NAME" value="testMakeJsonStringNullMap" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -529,19 +695,19 @@
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.ConverterSuite" />
-      <item itemvalue="JUnit.ConverterJavaSuite.testInvalidConvertPDFtoODT" />
-      <item itemvalue="JUnit.ConverterJavaSuite.testInvalidConvertPDFtoIMG" />
-      <item itemvalue="JUnit.ConverterJavaSuite.testExceptionConvertPDFtoIMG" />
-      <item itemvalue="JUnit.ConverterJavaSuite" />
+      <item itemvalue="JUnit.ExtractorJavaSuite.testMakeJsonStringNullMap" />
+      <item itemvalue="JUnit.ExtractorJavaSuite" />
+      <item itemvalue="JUnit.ExtractorJavaSuite.testGetAllMatchedValuesOneEmpty" />
+      <item itemvalue="JUnit.ExtractorJavaSuite.testGetAllMatchedValuesMultiEmpty" />
+      <item itemvalue="JUnit.ExtractorJavaSuite.testMakeJsonStringEmptyMap" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ConverterSuite" />
-        <item itemvalue="JUnit.ConverterJavaSuite" />
-        <item itemvalue="JUnit.ConverterJavaSuite.testExceptionConvertPDFtoIMG" />
-        <item itemvalue="JUnit.ConverterJavaSuite.testInvalidConvertPDFtoIMG" />
-        <item itemvalue="JUnit.ConverterJavaSuite.testInvalidConvertPDFtoODT" />
+        <item itemvalue="JUnit.ExtractorJavaSuite" />
+        <item itemvalue="JUnit.ExtractorJavaSuite.testMakeJsonStringEmptyMap" />
+        <item itemvalue="JUnit.ExtractorJavaSuite.testGetAllMatchedValuesMultiEmpty" />
+        <item itemvalue="JUnit.ExtractorJavaSuite.testGetAllMatchedValuesOneEmpty" />
+        <item itemvalue="JUnit.ExtractorJavaSuite.testMakeJsonStringNullMap" />
       </list>
     </recent_temporary>
   </component>
@@ -983,35 +1149,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ConverterSuite - 2018.04.17 at 17h 12m 09s.xml">
-      <configuration name="ConverterSuite" configurationId="JUnit" />
+    <history-entry file="ExtractorJavaSuite - 2018.04.18 at 10h 33m 45s.xml">
+      <configuration name="ExtractorJavaSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConverterJavaSuite_testInvalidConvertPDFtoODT - 2018.04.17 at 18h 02m 54s.xml">
-      <configuration name="ConverterJavaSuite.testInvalidConvertPDFtoODT" configurationId="JUnit" />
+    <history-entry file="ExtractorJavaSuite_testGetAllMatchedValuesOneEmpty - 2018.04.18 at 10h 33m 56s.xml">
+      <configuration name="ExtractorJavaSuite.testGetAllMatchedValuesOneEmpty" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConverterJavaSuite_testInvalidConvertPDFtoIMG - 2018.04.17 at 18h 03m 54s.xml">
-      <configuration name="ConverterJavaSuite.testInvalidConvertPDFtoIMG" configurationId="JUnit" />
+    <history-entry file="ExtractorJavaSuite_testGetAllMatchedValuesOneEmpty - 2018.04.18 at 10h 34m 13s.xml">
+      <configuration name="ExtractorJavaSuite.testGetAllMatchedValuesOneEmpty" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConverterJavaSuite_testInvalidConvertPDFtoIMG - 2018.04.17 at 18h 06m 06s.xml">
-      <configuration name="ConverterJavaSuite.testInvalidConvertPDFtoIMG" configurationId="JUnit" />
+    <history-entry file="ExtractorJavaSuite_testGetAllMatchedValuesOneEmpty - 2018.04.18 at 10h 35m 32s.xml">
+      <configuration name="ExtractorJavaSuite.testGetAllMatchedValuesOneEmpty" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConverterJavaSuite_testExceptionConvertPDFtoIMG - 2018.04.17 at 18h 07m 47s.xml">
-      <configuration name="ConverterJavaSuite.testExceptionConvertPDFtoIMG" configurationId="JUnit" />
+    <history-entry file="ExtractorJavaSuite_testGetAllMatchedValuesOneEmpty - 2018.04.18 at 10h 36m 04s.xml">
+      <configuration name="ExtractorJavaSuite.testGetAllMatchedValuesOneEmpty" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConverterJavaSuite_testExceptionConvertPDFtoIMG - 2018.04.17 at 18h 08m 38s.xml">
-      <configuration name="ConverterJavaSuite.testExceptionConvertPDFtoIMG" configurationId="JUnit" />
+    <history-entry file="ExtractorJavaSuite - 2018.04.18 at 10h 36m 51s.xml">
+      <configuration name="ExtractorJavaSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConverterJavaSuite_testExceptionConvertPDFtoIMG - 2018.04.17 at 18h 09m 09s.xml">
-      <configuration name="ConverterJavaSuite.testExceptionConvertPDFtoIMG" configurationId="JUnit" />
+    <history-entry file="ExtractorJavaSuite_testGetAllMatchedValuesMultiEmpty - 2018.04.18 at 10h 41m 05s.xml">
+      <configuration name="ExtractorJavaSuite.testGetAllMatchedValuesMultiEmpty" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConverterJavaSuite - 2018.04.17 at 18h 10m 02s.xml">
-      <configuration name="ConverterJavaSuite" configurationId="JUnit" />
+    <history-entry file="ExtractorJavaSuite_testGetAllMatchedValuesMultiEmpty - 2018.04.18 at 10h 41m 21s.xml">
+      <configuration name="ExtractorJavaSuite.testGetAllMatchedValuesMultiEmpty" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConverterJavaSuite - 2018.04.17 at 18h 10m 29s.xml">
-      <configuration name="ConverterJavaSuite" configurationId="JUnit" />
+    <history-entry file="ExtractorJavaSuite_testMakeJsonStringEmptyMap - 2018.04.18 at 10h 49m 31s.xml">
+      <configuration name="ExtractorJavaSuite.testMakeJsonStringEmptyMap" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConverterSuite - 2018.04.17 at 18h 10m 37s.xml">
-      <configuration name="ConverterSuite" configurationId="JUnit" />
+    <history-entry file="ExtractorJavaSuite_testMakeJsonStringEmptyMap - 2018.04.18 at 10h 49m 45s.xml">
+      <configuration name="ExtractorJavaSuite.testMakeJsonStringEmptyMap" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -1020,20 +1186,19 @@
     <layout>
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="bottom" id="TODO" order="12" />
-      <window_info anchor="bottom" id="Messages" order="2" sideWeight="0.49609375" weight="0.32804233" />
+      <window_info anchor="bottom" id="Messages" order="2" sideWeight="0.49609375" weight="0.32763532" />
       <window_info anchor="right" id="sbt" order="1" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.50130206" side_tool="true" weight="0.3227513" />
       <window_info anchor="right" id="Maven Projects" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.49791667" weight="0.32979852" />
-      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.4986979" visible="true" weight="0.3227513" />
-      <window_info anchor="right" id="Material Palette" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.49791667" weight="0.32905984" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.4986979" visible="true" weight="0.32193732" />
       <window_info anchor="bottom" id="Terminal" order="4" />
       <window_info id="Capture Tool" order="0" />
       <window_info id="Designer" order="1" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.19661458" />
+      <window_info content_ui="combo" id="Project" order="5" weight="0.19661458" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="5" weight="0.32936507" />
       <window_info anchor="bottom" id="Build" order="1" weight="0.25925925" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
@@ -1042,14 +1207,70 @@
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="10" weight="0.25" />
-      <window_info anchor="right" id="Gradle" order="6" />
-      <window_info anchor="right" id="Commander" order="8" weight="0.4" />
-      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.50130206" side_tool="true" weight="0.3227513" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.19661458" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="right" id="Ant Build" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="4" />
+      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="2" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="right" id="sbt" order="1" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="10" weight="0.25" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info id="Capture Tool" order="0" />
+      <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.49791667" weight="0.32979852" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="bottom" id="TODO" order="12" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="right" id="Gradle" order="6" />
+      <window_info anchor="bottom" id="sbt-shell-toolwindow" order="5" weight="0.32936507" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32936507" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.4986979" visible="true" weight="0.3227513" />
+      <window_info anchor="bottom" id="Build" order="1" weight="0.25925925" />
+      <window_info anchor="right" id="Material Palette" order="3" />
+      <window_info anchor="right" id="Commander" order="8" weight="0.4" />
+      <window_info id="Designer" order="1" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="bottom" id="Build" order="1" weight="0.25925925" />
+      <window_info id="Designer" order="1" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49934897" weight="0.32936507" />
+      <window_info anchor="right" id="sbt" order="1" />
+      <window_info anchor="bottom" id="sbt-shell-toolwindow" order="5" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="bottom" id="Find" order="7" weight="0.32936507" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="9" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="4" />
+      <window_info id="Capture Tool" order="0" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Commander" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.50065106" side_tool="true" weight="0.17460318" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="10" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.49791667" weight="0.32979852" />
+      <window_info anchor="right" id="Maven Projects" order="2" />
+      <window_info anchor="right" id="Gradle" order="6" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.17317708" />
+      <window_info anchor="bottom" id="Messages" order="2" sideWeight="0.49609375" weight="0.32804233" />
+      <window_info anchor="bottom" id="Message" order="6" />
+      <window_info anchor="right" id="Material Palette" order="3" />
+      <window_info anchor="bottom" id="TODO" order="12" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -1083,6 +1304,13 @@
     <option name="LAST_COMMIT_MESSAGE" value="generator's Java interface tests done" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/reader/src/test/java/parser/extraction/ExtractorJavaSuite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="104" column="12" lean-forward="true" selection-start-line="104" selection-start-column="12" selection-end-line="104" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/com.lihaoyi/scalatags_2.12/srcs/scalatags_2.12-0.6.7-sources.jar!/scalatags/text/Tags.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
@@ -1257,14 +1485,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#28#47#0" expanded="true" />
-          </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/test/scala/parser/extraction/FileHandlerSuite.scala">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/reader/src/test/scala/parser/utils/OpenNLPSuite.scala">
       <provider selected="true" editor-type-id="text-editor">
@@ -1273,27 +1495,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="24" column="96" selection-start-line="24" selection-start-column="96" selection-end-line="24" selection-end-column="96" />
-          <folding>
-            <element signature="e#27#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/generator/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4800">
           <caret line="306" column="68" selection-start-line="306" selection-start-column="68" selection-end-line="306" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/test/java/parser/extraction/ExtractorJavaSuite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1322,16 +1527,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16">
           <caret line="65" column="91" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="91" />
-          <folding>
-            <element signature="e#28#87#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.sbt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+        <state relative-caret-position="108">
+          <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -1360,9 +1562,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="29">
           <caret line="150" column="91" selection-start-line="150" selection-start-column="37" selection-end-line="150" selection-end-column="91" />
-          <folding>
-            <element signature="e#19#38#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1373,23 +1572,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generator/src/test/java/generator/generate/GeneratorJavaSuite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="189" column="36" lean-forward="true" selection-start-line="189" selection-start-column="36" selection-end-line="189" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/main/java/parser/extraction/ExtractorJava.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="161" column="69" selection-start-line="161" selection-start-column="56" selection-end-line="161" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/converter/src/main/scala/parser/conversion/FileType.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -1397,23 +1579,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/converter/src/main/java/ma.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/converter/src/main/java/ma.java" />
     <entry file="file://$PROJECT_DIR$/converter/src/main/scala/Main.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1431,24 +1601,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/converter/src/test/java/parser/conversion/ConverterJavaSuite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#387#388#0" expanded="true" />
-            <element signature="e#449#450#0" expanded="true" />
-            <element signature="e#1322#1323#0" expanded="true" />
-            <element signature="e#1376#1377#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/converter/src/test/scala/parser/conversion/ConverterSuite.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
           <caret line="42" column="36" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/src/test/java/generator/generate/GeneratorJavaSuite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3213">
+          <caret line="189" column="36" lean-forward="true" selection-start-line="189" selection-start-column="36" selection-end-line="189" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/converter/src/test/java/parser/conversion/ConverterJavaSuite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/main/java/parser/extraction/ExtractorJava.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+          <folding>
+            <element signature="e#649#650#0" expanded="true" />
+            <element signature="e#691#692#0" expanded="true" />
+            <element signature="e#16335#16336#0" expanded="true" />
+            <element signature="e#16391#16392#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="176" column="3" lean-forward="true" selection-start-line="176" selection-start-column="3" selection-end-line="176" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/test/java/parser/extraction/ExtractorJavaSuite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5049">
+          <caret line="305" column="86" selection-start-line="305" selection-start-column="86" selection-end-line="305" selection-end-column="86" />
         </state>
       </provider>
     </entry>
