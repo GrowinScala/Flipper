@@ -42,9 +42,7 @@ You can find the individual **README.md** files with examples and documentation 
 ---
 
 
-### How do I get set up? ###
-
-This part of the documentation will guide you on the simple process of setting up Flipper for yourself.
+### Table of contents ###
 
 * [Configuration](#configuration)
 * [Dependencies](#dependencies)
@@ -56,13 +54,13 @@ This part of the documentation will guide you on the simple process of setting u
 
 Flipper is available on maven central, so to use it you simply need to add the lines bellow to your own project.
 
-If you are using SBT:
+If you are using SBT, add the following line to your **`build.sbt`**:
 
 ```scala
 libraryDependencies += "com.growin" %% "flipper" % "0.3"
 ```
 
-Or Maven:
+Or Maven, add these lines to your **`pom.xml`**:
 
 ```xml
 <dependency>
@@ -72,7 +70,7 @@ Or Maven:
 </dependency>
 ```
 
-For other versions you can access the [maven repository](https://mvnrepository.com/artifact/com.growin/flipper_2.12). There you will also find other ways of including Flipper into your project that aren't  SBT or Maven.
+For other versions you can access the [maven repository](https://mvnrepository.com/artifact/com.growin/flipper_2.12). There you will also find other ways of including Flipper into your project without using SBT or Maven.
 
 <br/>
 
@@ -89,7 +87,19 @@ accuracy, we must provide Tess4j with a set of **training data**.
 
 ### How to test Flipper
 
-To be implemented
+If you want to make sure for your self that Flipper is in fact amazing and working properly you can the folowing steps to test it (**using sbt**):
+
+* Start by cloning this repository 
+ 
+ `git clone https://github.com/GrowinScala/Flipper.git`
+
+* Then **`cd`** into it
+
+`cd Flipper`
+
+* And run the unit tests using sbt
+
+`sbt test`
 
 <br/>
 

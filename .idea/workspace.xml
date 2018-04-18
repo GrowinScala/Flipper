@@ -6,17 +6,160 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5115832d-4669-4625-b348-c310af38a585" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="5115832d-4669-4625-b348-c310af38a585" name="Default" comment="Java tests and scala tests done">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_novocode_junit_interface_0_11_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__junit_junit_4_10_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__junit_junit_4_11_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_hamcrest_hamcrest_core_1_1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_hamcrest_hamcrest_core_1_3_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/converter-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/converter-build.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/converter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/converter.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/generator-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/generator-build.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/generator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/generator.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/reader-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/reader-build.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/reader.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/reader.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/root-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/root-build.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/root.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/root.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter_2.12/0.1/resolved.xml.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/target/scala-2.12/resolution-cache/converter/converter_2.12/0.1/resolved.xml.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/input_dsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/converter/target/streams/$global/ivyConfiguration/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/$global/ivyConfiguration/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/converter/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/$global/projectDescriptors/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/$global/projectDescriptors/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/$global/update/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/compile/compileIncSetup/$global/streams/inc_compile_2.12.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/compile/compileIncremental/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/compile/compileIncremental/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/compile/compileIncremental/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/compile/compileIncremental/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/compile/copyResources/$global/streams/copy-resources" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/compile/copyResources/$global/streams/copy-resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/compile/copyResources/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/compile/copyResources/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/compile/dependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/compile/dependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/compile/internalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/compile/internalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/compile/managedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/compile/unmanagedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/compile/unmanagedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/compile/unmanagedJars/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/compile/unmanagedJars/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/runtime/unmanagedJars/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/runtime/unmanagedJars/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/test/$global/$global/definedTestNames/data" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/test/$global/$global/definedTestNames/data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/test/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/test/externalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/test/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/test/managedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/test/unmanagedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/test/unmanagedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/converter/target/streams/test/unmanagedJars/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/converter/target/streams/test/unmanagedJars/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/classes/Main$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/classes/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator_2.12/0.1/resolved.xml.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/scala-2.12/resolution-cache/generator/generator_2.12/0.1/resolved.xml.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/input_dsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/generator/target/streams/$global/ivyConfiguration/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/$global/ivyConfiguration/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/$global/update/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/streams/compile/compile/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/compile/compile/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/streams/compile/compileIncSetup/$global/streams/inc_compile_2.12.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/streams/compile/compileIncremental/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/compile/compileIncremental/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/streams/compile/compileIncremental/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/compile/compileIncremental/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/streams/compile/copyResources/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/compile/copyResources/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/streams/compile/dependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/compile/dependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/streams/compile/internalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/compile/internalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/compile/managedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/streams/compile/unmanagedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/compile/unmanagedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/streams/compile/unmanagedJars/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/compile/unmanagedJars/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/streams/runtime/unmanagedJars/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/runtime/unmanagedJars/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/streams/test/$global/$global/definedTestNames/data" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/test/$global/$global/definedTestNames/data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/streams/test/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/test/externalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/streams/test/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/test/managedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/streams/test/unmanagedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/test/unmanagedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/streams/test/unmanagedJars/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/streams/test/unmanagedJars/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/ivyConfiguration/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/ivyConfiguration/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reader/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/internalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/internalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/unmanagedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/unmanagedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/unmanagedJars/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/unmanagedJars/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/unmanagedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/unmanagedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/unmanagedJars/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/unmanagedJars/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/src/test/java/parser/extraction/ExtractorJavaSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/reader/src/test/java/parser/extraction/ExtractorJavaSuite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/Main$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/extraction/Extractor$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/extraction/Extractor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/extraction/FileHandler$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/extraction/FileHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/utils/ImageProcessing$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/utils/ImageProcessing.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/utils/OpenNLP$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/utils/OpenNLP.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/utils/POSTag.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/utils/SpellChecker$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/classes/parser/utils/SpellChecker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader_2.12/0.1/resolved.xml.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/resolution-cache/reader/reader_2.12/0.1/resolved.xml.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/test-classes/parser/extraction/ExtractorSuite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/test-classes/parser/extraction/FileHandlerSuite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/test-classes/parser/utils/ImageProcessingSuite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/scala-2.12/test-classes/parser/utils/OpenNLPSuite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/input_dsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/$global/ivyConfiguration/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/$global/ivyConfiguration/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/$global/update/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/compile/compile/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/compile/compile/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/compile/compileIncSetup/$global/streams/inc_compile_2.12.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/compile/compileIncremental/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/compile/compileIncremental/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/compile/compileIncremental/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/compile/compileIncremental/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/compile/copyResources/$global/streams/copy-resources" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/compile/copyResources/$global/streams/copy-resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/compile/copyResources/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/compile/copyResources/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/compile/dependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/compile/dependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/compile/exportedProducts/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/compile/exportedProducts/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/compile/internalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/compile/internalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/compile/managedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/compile/unmanagedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/compile/unmanagedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/compile/unmanagedJars/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/compile/unmanagedJars/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/runtime/unmanagedJars/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/runtime/unmanagedJars/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/test/$global/$global/definedTestNames/data" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/test/$global/$global/definedTestNames/data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/test/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/test/externalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/test/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/test/managedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/test/unmanagedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/test/unmanagedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader/target/streams/test/unmanagedJars/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/reader/target/streams/test/unmanagedJars/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/input_dsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/copyResources/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/copyResources/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/dependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/dependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/internalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/internalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/unmanagedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/unmanagedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/unmanagedJars/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/unmanagedJars/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/runtime/unmanagedJars/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/runtime/unmanagedJars/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/unmanagedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/unmanagedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/unmanagedJars/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/unmanagedJars/$global/streams/export" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -47,8 +190,8 @@
       <file leaf-file-name="ExtractorJavaSuite.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/reader/src/test/java/parser/extraction/ExtractorJavaSuite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="67" column="18" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
+            <state relative-caret-position="235">
+              <caret line="51" column="9" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -56,11 +199,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GeneratorJavaSuite.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/generator/src/test/java/generator/generate/GeneratorJavaSuite.java">
+      <file leaf-file-name="GeneratorSuite.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="587">
-              <caret line="193" column="9" selection-start-line="193" selection-start-column="9" selection-end-line="193" selection-end-column="9" />
+            <state relative-caret-position="251">
+              <caret line="97" column="21" lean-forward="true" selection-start-line="97" selection-start-column="21" selection-end-line="97" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExtractorJava.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/reader/src/main/java/parser/extraction/ExtractorJava.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="66" selection-start-line="66" selection-end-line="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.sbt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.sbt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExtractorSuite.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="34" column="64" selection-start-line="34" selection-start-column="64" selection-end-line="34" selection-end-column="64" />
+              <folding>
+                <element signature="e#27#46#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -159,12 +332,10 @@
         <option value="$PROJECT_DIR$/generator/src/test/scala/generator/generate/HTMLHandlerSuite.scala" />
         <option value="$PROJECT_DIR$/generator/README.md" />
         <option value="$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala" />
-        <option value="$PROJECT_DIR$/build.sbt" />
         <option value="$PROJECT_DIR$/reader/src/test/scala/parser/utils/ImageProcessingSuite.scala" />
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/License.md" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala" />
         <option value="$PROJECT_DIR$/generator/src/main/scala/generator/generate/Generator.scala" />
         <option value="$PROJECT_DIR$/generator/src/main/java/generator/generate/GeneratorJava.java" />
         <option value="$PROJECT_DIR$/generator/src/test/java/generator/generate/GeneratorJavaSuite.java" />
@@ -172,6 +343,8 @@
         <option value="$PROJECT_DIR$/converter/README.md" />
         <option value="$PROJECT_DIR$/converter/src/test/java/parser/conversion/ConverterJavaSuite.java" />
         <option value="$PROJECT_DIR$/converter/src/test/scala/parser/conversion/ConverterSuite.scala" />
+        <option value="$PROJECT_DIR$/build.sbt" />
+        <option value="$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala" />
         <option value="$PROJECT_DIR$/reader/src/test/java/parser/extraction/ExtractorJavaSuite.java" />
       </list>
     </option>
@@ -199,48 +372,6 @@
             <path>
               <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
               <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="generate" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
               <item name="reader" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -248,40 +379,6 @@
               <item name="Flipper" type="462c0819:PsiDirectoryNode" />
               <item name="reader" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="reader" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="reader" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="reader" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="parser" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="reader" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="parser" type="462c0819:PsiDirectoryNode" />
-              <item name="extraction" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
@@ -306,38 +403,6 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="extraction" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="reader" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="reader" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="parser" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="reader" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="parser" type="462c0819:PsiDirectoryNode" />
-              <item name="extraction" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Flipper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flipper" type="462c0819:PsiDirectoryNode" />
-              <item name="tessdata" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -548,104 +613,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ConverterSuite">
+  <component name="RunManager" selected="JUnit.GeneratorSuite">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
-    <configuration name="ConverterJavaSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="converter" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="parser.conversion.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="parser.conversion" />
-      <option name="MAIN_CLASS_NAME" value="parser.conversion.ConverterJavaSuite" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="ConverterJavaSuite.testExceptionConvertPDFtoIMG" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="converter" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="parser.conversion.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="parser.conversion" />
-      <option name="MAIN_CLASS_NAME" value="parser.conversion.ConverterJavaSuite" />
-      <option name="METHOD_NAME" value="testExceptionConvertPDFtoIMG" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="ConverterJavaSuite.testInvalidConvertPDFtoIMG" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="converter" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="parser.conversion.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="parser.conversion" />
-      <option name="MAIN_CLASS_NAME" value="parser.conversion.ConverterJavaSuite" />
-      <option name="METHOD_NAME" value="testInvalidConvertPDFtoIMG" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="ConverterJavaSuite.testInvalidConvertPDFtoODT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="converter" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="parser.conversion.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="parser.conversion" />
-      <option name="MAIN_CLASS_NAME" value="parser.conversion.ConverterJavaSuite" />
-      <option name="METHOD_NAME" value="testInvalidConvertPDFtoODT" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
     </configuration>
     <configuration name="ConverterSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="converter" />
@@ -659,6 +632,98 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="parser.conversion" />
       <option name="MAIN_CLASS_NAME" value="parser.conversion.ConverterSuite" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="ExtractorJavaSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="reader" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="parser.extraction.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="parser.extraction" />
+      <option name="MAIN_CLASS_NAME" value="parser.extraction.ExtractorJavaSuite" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="ExtractorJavaSuite.testReadPDFNullFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="reader" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="parser.extraction.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="parser.extraction" />
+      <option name="MAIN_CLASS_NAME" value="parser.extraction.ExtractorJavaSuite" />
+      <option name="METHOD_NAME" value="testReadPDFNullFile" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="ExtractorSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="reader" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="parser.extraction.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="parser.extraction" />
+      <option name="MAIN_CLASS_NAME" value="parser.extraction.ExtractorSuite" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="GeneratorSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="generator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="generator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="generator.generate" />
+      <option name="MAIN_CLASS_NAME" value="generator.GeneratorSuite" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -723,18 +788,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.ConverterSuite" />
-      <item itemvalue="JUnit.ConverterJavaSuite.testInvalidConvertPDFtoODT" />
-      <item itemvalue="JUnit.ConverterJavaSuite.testInvalidConvertPDFtoIMG" />
-      <item itemvalue="JUnit.ConverterJavaSuite.testExceptionConvertPDFtoIMG" />
-      <item itemvalue="JUnit.ConverterJavaSuite" />
+      <item itemvalue="JUnit.ExtractorSuite" />
+      <item itemvalue="JUnit.ExtractorJavaSuite.testReadPDFNullFile" />
+      <item itemvalue="JUnit.ExtractorJavaSuite" />
+      <item itemvalue="JUnit.GeneratorSuite" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GeneratorSuite" />
+        <item itemvalue="JUnit.ExtractorJavaSuite" />
+        <item itemvalue="JUnit.ExtractorJavaSuite.testReadPDFNullFile" />
+        <item itemvalue="JUnit.ExtractorSuite" />
         <item itemvalue="JUnit.ConverterSuite" />
-        <item itemvalue="JUnit.ConverterJavaSuite" />
-        <item itemvalue="JUnit.ConverterJavaSuite.testExceptionConvertPDFtoIMG" />
-        <item itemvalue="JUnit.ConverterJavaSuite.testInvalidConvertPDFtoIMG" />
-        <item itemvalue="JUnit.ConverterJavaSuite.testInvalidConvertPDFtoODT" />
       </list>
     </recent_temporary>
   </component>
@@ -789,7 +854,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$/build.sbt" value="4267755747" />
+        <entry key="$PROJECT_DIR$/build.sbt" value="2582561170" />
         <entry key="$PROJECT_DIR$/project/build.properties" value="3801438840" />
         <entry key="$PROJECT_DIR$/project/plugins.sbt" value="1084681035" />
       </map>
@@ -828,13 +893,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1522055766473</updated>
-    </task>
-    <task id="LOCAL-00104" summary="testing travis CI">
-      <created>1523886634012</created>
-      <option name="number" value="00104" />
-      <option name="presentableId" value="LOCAL-00104" />
-      <option name="project" value="LOCAL" />
-      <updated>1523886634012</updated>
     </task>
     <task id="LOCAL-00105" summary="Updating travis">
       <created>1523886725315</created>
@@ -1172,39 +1230,46 @@
       <option name="project" value="LOCAL" />
       <updated>1523985091656</updated>
     </task>
-    <option name="localTasksCounter" value="153" />
+    <task id="LOCAL-00153" summary="Java tests and scala tests done">
+      <created>1524045538511</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1524045538511</updated>
+    </task>
+    <option name="localTasksCounter" value="154" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ConverterJavaSuite_testInvalidConvertPDFtoODT - 2018.04.17 at 18h 02m 54s.xml">
-      <configuration name="ConverterJavaSuite.testInvalidConvertPDFtoODT" configurationId="JUnit" />
+    <history-entry file="ExtractorJavaSuite_testReadPDFNullFile - 2018.04.18 at 11h 39m 22s.xml">
+      <configuration name="ExtractorJavaSuite.testReadPDFNullFile" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConverterJavaSuite_testInvalidConvertPDFtoIMG - 2018.04.17 at 18h 03m 54s.xml">
-      <configuration name="ConverterJavaSuite.testInvalidConvertPDFtoIMG" configurationId="JUnit" />
+    <history-entry file="ExtractorJavaSuite - 2018.04.18 at 11h 39m 32s.xml">
+      <configuration name="ExtractorJavaSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConverterJavaSuite_testInvalidConvertPDFtoIMG - 2018.04.17 at 18h 06m 06s.xml">
-      <configuration name="ConverterJavaSuite.testInvalidConvertPDFtoIMG" configurationId="JUnit" />
+    <history-entry file="ExtractorJavaSuite - 2018.04.18 at 11h 40m 41s.xml">
+      <configuration name="ExtractorJavaSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConverterJavaSuite_testExceptionConvertPDFtoIMG - 2018.04.17 at 18h 07m 47s.xml">
-      <configuration name="ConverterJavaSuite.testExceptionConvertPDFtoIMG" configurationId="JUnit" />
+    <history-entry file="ExtractorJavaSuite_testReadPDFNullFile - 2018.04.18 at 11h 44m 41s.xml">
+      <configuration name="ExtractorJavaSuite.testReadPDFNullFile" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConverterJavaSuite_testExceptionConvertPDFtoIMG - 2018.04.17 at 18h 08m 38s.xml">
-      <configuration name="ConverterJavaSuite.testExceptionConvertPDFtoIMG" configurationId="JUnit" />
+    <history-entry file="ExtractorJavaSuite - 2018.04.18 at 14h 19m 37s.xml">
+      <configuration name="ExtractorJavaSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConverterJavaSuite_testExceptionConvertPDFtoIMG - 2018.04.17 at 18h 09m 09s.xml">
-      <configuration name="ConverterJavaSuite.testExceptionConvertPDFtoIMG" configurationId="JUnit" />
+    <history-entry file="ExtractorJavaSuite - 2018.04.18 at 14h 28m 34s.xml">
+      <configuration name="ExtractorJavaSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConverterJavaSuite - 2018.04.17 at 18h 10m 02s.xml">
-      <configuration name="ConverterJavaSuite" configurationId="JUnit" />
+    <history-entry file="ExtractorJavaSuite - 2018.04.18 at 14h 45m 16s.xml">
+      <configuration name="ExtractorJavaSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConverterJavaSuite - 2018.04.17 at 18h 10m 29s.xml">
-      <configuration name="ConverterJavaSuite" configurationId="JUnit" />
+    <history-entry file="GeneratorSuite - 2018.04.18 at 14h 55m 41s.xml">
+      <configuration name="GeneratorSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConverterSuite - 2018.04.17 at 18h 10m 37s.xml">
-      <configuration name="ConverterSuite" configurationId="JUnit" />
+    <history-entry file="GeneratorSuite - 2018.04.18 at 14h 56m 21s.xml">
+      <configuration name="GeneratorSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConverterSuite - 2018.04.17 at 18h 11m 03s.xml">
-      <configuration name="ConverterSuite" configurationId="JUnit" />
+    <history-entry file="GeneratorSuite - 2018.04.18 at 15h 33m 12s.xml">
+      <configuration name="GeneratorSuite" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -1213,6 +1278,7 @@
     <layout>
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="bottom" id="TODO" order="12" />
+      <window_info anchor="bottom" id="Messages" order="2" sideWeight="0.49609375" weight="0.32804233" />
       <window_info anchor="right" id="sbt" order="1" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="3" />
@@ -1220,11 +1286,12 @@
       <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.50130206" side_tool="true" weight="0.3227513" />
       <window_info anchor="right" id="Maven Projects" order="2" />
       <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.49791667" weight="0.32979852" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.4986979" visible="true" weight="0.3227513" />
       <window_info anchor="right" id="Material Palette" order="3" />
       <window_info anchor="bottom" id="Terminal" order="4" />
       <window_info id="Capture Tool" order="0" />
       <window_info id="Designer" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.19661458" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.19661458" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="5" weight="0.32936507" />
       <window_info anchor="bottom" id="Build" order="1" weight="0.25925925" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
@@ -1232,12 +1299,10 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="2" sideWeight="0.49609375" weight="0.32804233" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="10" weight="0.25" />
       <window_info anchor="right" id="Gradle" order="6" />
       <window_info anchor="right" id="Commander" order="8" weight="0.4" />
-      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.4986979" weight="0.3227513" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="6" />
@@ -1248,7 +1313,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="updating travis 5" />
     <MESSAGE value="testing travis 5" />
     <MESSAGE value="updating travis 6" />
     <MESSAGE value="testing travis 6" />
@@ -1273,16 +1337,14 @@
     <MESSAGE value="added travis build status badge" />
     <MESSAGE value="generator's Java interface tests done" />
     <MESSAGE value="converter java interface tests done" />
-    <option name="LAST_COMMIT_MESSAGE" value="converter java interface tests done" />
+    <MESSAGE value="Java tests and scala tests done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Java tests and scala tests done" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/reader/src/test/java/parser/extraction/ExtractorJavaSuite.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="640">
           <caret line="40" column="5" lean-forward="true" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1498,13 +1560,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.sbt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -1523,27 +1578,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="95" column="57" selection-start-line="95" selection-start-column="57" selection-end-line="95" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="150" column="91" selection-start-line="150" selection-start-column="37" selection-end-line="150" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/main/java/parser/utils/SpecificationJava.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1077">
-          <caret line="9" column="41" lean-forward="true" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/main/java/parser/extraction/ExtractorJava.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="161" column="69" selection-start-line="161" selection-start-column="56" selection-end-line="161" selection-end-column="69" />
         </state>
       </provider>
     </entry>
@@ -1583,16 +1617,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-597">
-          <caret line="24" column="96" selection-start-line="24" selection-start-column="96" selection-end-line="24" selection-end-column="96" />
-          <folding>
-            <element signature="e#27#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/reader/src/main/scala/parser/extraction/Extractor.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2000">
@@ -1614,10 +1638,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/test/scala/parser/extraction/ExtractorSuite.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="34" column="64" selection-start-line="34" selection-start-column="64" selection-end-line="34" selection-end-column="64" />
+          <folding>
+            <element signature="e#27#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.sbt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/main/java/parser/extraction/ExtractorJava.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/src/main/java/parser/utils/SpecificationJava.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="29" column="24" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="24" />
+          <folding>
+            <element signature="e#587#588#0" expanded="true" />
+            <element signature="e#629#630#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/src/test/scala/generator/generate/GeneratorSuite.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="97" column="21" lean-forward="true" selection-start-line="97" selection-start-column="21" selection-end-line="97" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/reader/src/test/java/parser/extraction/ExtractorJavaSuite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="67" column="18" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
+        <state relative-caret-position="235">
+          <caret line="51" column="9" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
